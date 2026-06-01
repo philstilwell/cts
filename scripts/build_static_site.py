@@ -263,15 +263,17 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>The 2026 project will begin with prior CTS participants who indicated that email follow-up is welcome. If you are a Christian minister or ministry leader and would like to be considered for later invitations, participant voting, future question suggestions, or data/citation questions, use the form below.</p>
+  <p>The 2026 project will begin with prior CTS participants who indicated that email follow-up is welcome. If you are currently or previously engaged in full-time ministry and would like to be considered for later invitations, participant voting, future question suggestions, or data/citation questions, use the form below.</p>
 
   <p>Each Weekly Survey will include one new CTS-administered topic with 12 related items, 3 participant-selected questions once previous-week voting exists, a ballot of last week's suggested items, and a text box for future question suggestions.</p>
+
+  <p class="callout"><strong>Participation note:</strong> CTS weekly survey participation is intended for people who are currently or previously engaged in full-time ministry.</p>
 
   <div class="surveyol-embed">
     <iframe title="CTS 2026 Participation Request" src="{surveyol_embed_url}" loading="lazy"></iframe>
   </div>
 
-  <p class="form-note">If the embedded form does not load, <a href="{surveyol_form_url}">open the SurveyOL form in a new tab</a>.</p>
+  <p class="form-note">If the embedded form does not load, <a href="{surveyol_form_url}">open the SurveyOL form in a new tab</a>. The same full-time ministry participation note applies.</p>
 </div>
 """,
     ),
