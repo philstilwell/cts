@@ -4,6 +4,15 @@ Default response format for all items: 0 = strongly disagree, 50 = unsure/mixed,
 
 Wording protocol: each item is intended to be answered as a standalone proposition. Unless an item says otherwise, respondents should answer according to their own current theological and pastoral judgment, not merely according to denominational policy.
 
+For items involving civil law, education systems, public policy, or national identity, respondents should answer with reference to the country or region they know best unless the item names a specific place.
+
+Weekly survey assembly:
+
+1. Select one new CTS-administered topic from this bank and use 12 related survey items provided by the CTS administration.
+2. Add 3 participant-generated questions selected from the previous week's active-participant vote once that voting cycle is underway.
+3. Include a ballot of last week's suggested items so active participants can vote on future participant-generated questions.
+4. Include a text box where participants can suggest future questions for a later ballot.
+
 ## 1. Divorce and Remarriage
 1. In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce.
 2. In ordinary cases, a spouse's persistent physical abuse constitutes biblically legitimate grounds for divorce even if sexual adultery has not occurred.
@@ -15,6 +24,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Churches should normally require pastoral review before affirming the remarriage of a divorced Christian.
 9. Churches should use formal discipline when members knowingly pursue a biblically illegitimate divorce.
 10. In my ministry context, churches are generally too permissive about divorce and remarriage.
+11. Churches should treat immediate physical safety as a priority before pursuing marital reconciliation in abusive marriages.
+12. Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce.
 
 ## 2. Pornography and the Church
 1. Pornography use is among the most spiritually damaging hidden sins currently affecting churches.
@@ -27,6 +38,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Pastors should address pornography from the pulpit more often than most churches currently do.
 9. Churches should treat habitual pornography use as both moral sin and a behavioral health concern.
 10. In my ministry context, churches are currently losing more ground than they are gaining against pornography.
+11. Churches should provide pastoral care for spouses harmed by a partner's persistent pornography use.
+12. Churches should teach young people how pornography shapes desire before they are likely to encounter it.
 
 ## 3. Pastoral Authority and Accountability
 1. In many churches, pastors exercise less legitimate spiritual authority than Scripture assigns to church leaders.
@@ -39,6 +52,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. In my ministry context, genuinely abusive pastoral leadership is more common than churches publicly acknowledge.
 9. Pastoral authority should include giving moral counsel about members' major life decisions outside formal church programs.
 10. Churches should publish clear procedures for bringing complaints against pastors, elders, or other leaders.
+11. Pastors should have meaningful accountability for how they use church finances, staff authority, and confidential information.
+12. Churches should distinguish between biblical submission to leaders and unquestioning compliance with leaders.
 
 ## 4. Women in Church Leadership
 1. Scripture permits women to preach to mixed adult congregations in the gathered church.
@@ -51,6 +66,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Churches should normally separate from one another over incompatible positions on women serving as elders.
 9. Even in complementarian churches, women should have meaningful involvement in major church decision-making.
 10. Over the next 20 years, evangelical churches will become substantially more egalitarian in practice.
+11. Churches should clearly define which teaching roles are reserved for elders before restricting women from those roles.
+12. Churches should evaluate leadership gifts in women with the same seriousness they apply to leadership gifts in men.
 
 ## 5. Doubt, Deconstruction, and Faith Loss
 1. Serious intellectual doubt can coexist with genuine saving faith.
@@ -63,6 +80,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Apologetics training reduces the likelihood that young adults will abandon Christianity.
 9. Churches often intensify doubt by discouraging honest questions.
 10. The number of Christians publicly deconstructing or leaving the faith will increase over the next decade.
+11. Pastors should distinguish between honest doubt, hardened unbelief, and reaction to personal harm when caring for those who are deconstructing.
+12. Public stories of faith loss should be addressed with compassion without treating them as morally neutral.
 
 ## 6. Assurance of Salvation
 1. Christians can have complete certainty that they are saved.
@@ -75,6 +94,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Many church members have stronger assurance of salvation than their spiritual condition warrants.
 9. Many church members have weaker assurance of salvation than the promises of the gospel warrant.
 10. In my ministry context, assurance of salvation is often taught with insufficient precision.
+11. Assurance teaching should warn against both despairing introspection and careless presumption.
+12. Church membership and baptism practices can unintentionally give false assurance to some people.
 
 ## 7. Hell, Judgment, and Final Punishment
 1. Eternal conscious torment is the most biblically faithful understanding of final punishment.
@@ -87,6 +108,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Christians should feel deep grief over the final judgment of the lost.
 9. Some historic Christian teaching about hell has been expressed in pastorally harmful ways.
 10. A church's doctrine of hell significantly affects its evangelistic urgency.
+11. Teaching about hell should emphasize God's justice without portraying God as cruel or arbitrary.
+12. Pastors should address common objections to hell before people encounter those objections elsewhere.
 
 ## 8. LGBTQ Ethics and Pastoral Care
 1. Same-sex sexual activity is always sinful.
@@ -99,6 +122,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Churches can consistently maintain traditional sexual ethics while treating LGBTQ people with genuine compassion.
 9. On LGBTQ-related issues, churches are currently more likely to compromise biblical truth than to lack compassion.
 10. On LGBTQ-related issues, churches are currently more likely to lack compassion than to compromise biblical truth.
+11. Churches should provide clear pastoral pathways for Christians who experience same-sex attraction and desire faithful discipleship.
+12. Churches should speak about gender identity with enough precision to distinguish biological sex, social gender norms, and personal distress.
 
 ## 9. Artificial Intelligence and Ministry
 1. AI tools can legitimately assist pastors with sermon research.
@@ -111,18 +136,22 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. AI will make plagiarism and authorship harder to define in ministry contexts.
 9. Churches should adopt written policies governing staff use of AI tools.
 10. AI will substantially change ordinary pastoral ministry within the next five years.
+11. Pastors should verify AI-generated theological claims against Scripture and trusted sources before using them publicly.
+12. AI tools should not be used to simulate personal pastoral care without clearly identifying that no human pastor is responding.
 
 ## 10. Christian Nationalism and Political Identity
 1. The term Christian nationalism is currently too imprecise to be useful without careful definition.
 2. Many Christians have connected their Christian identity too closely to national identity.
-3. The United States has a distinctive providential role in God's purposes for world history.
+3. No modern nation should be described as having a covenantal status comparable to biblical Israel.
 4. Churches should explicitly warn members against political idolatry.
 5. Pastors should not endorse political candidates while acting in their pastoral role.
 6. Pastors should address public policy issues when those issues involve clear moral teaching.
 7. Political polarization is currently damaging discipleship more than theological disagreement is.
-8. Christians should prioritize visible unity with believers across political party lines.
+8. Christians should prioritize visible unity with believers across political factions or parties.
 9. Public accusations of Christian nationalism are often used unfairly against theologically conservative Christians.
 10. In my ministry context, political loyalty functions as a rival religion for some Christians.
+11. Christians may rightly express gratitude for good features of their nation without treating national loyalty as sacred.
+12. Churches should form members to evaluate political movements by Christian doctrine rather than by group identity.
 
 ## 11. Biblical Inerrancy and Authority
 1. The Bible is without error in everything it affirms.
@@ -135,6 +164,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Many claims that the Bible contains errors rely on unfair or anachronistic standards.
 9. Defending inerrancy can sometimes distract churches from the Bible's central message.
 10. Biblical inerrancy will become more contested within evangelical churches over the next decade.
+11. Christians should distinguish between the Bible's authority and their own interpretation of difficult passages.
+12. Different faithful models of inerrancy can produce different expectations about historical, scientific, or literary precision.
 
 ## 12. Creation, Evolution, and Human Origins
 1. Genesis teaches that God created the earth in six ordinary 24-hour days.
@@ -147,6 +178,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Scientific consensus should influence how Christians interpret contested details in Genesis.
 9. Most ministers are underprepared to discuss human origins with scientifically informed congregants.
 10. Disagreement over the age of the earth should rarely be a basis for church division.
+11. The literary genre of Genesis 1 should significantly influence how Christians interpret its creation chronology.
+12. Christian teaching on human origins should protect the doctrines of human dignity, sin, and redemption.
 
 ## 13. Charismatic Gifts, Healing, and Miracles
 1. Miraculous spiritual gifts continue in the church today.
@@ -159,6 +192,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Continuationism is more exegetically persuasive than cessationism.
 9. Misuse of charismatic gifts has caused substantial harm in churches.
 10. Fear of charismatic abuse causes many churches to neglect biblical teaching about the Holy Spirit.
+11. Claims of prophecy should be evaluated by Scripture, church leaders, and the moral fruit of the messenger.
+12. Churches should teach that God may heal miraculously while also affirming ordinary medical care.
 
 ## 14. Prayer, Providence, and Divine Guidance
 1. Petitionary prayer can change what happens in the world.
@@ -171,6 +206,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Churches often promise more specific prayer outcomes than Scripture warrants.
 9. Churches often underemphasize the real efficacy of prayer.
 10. Statistical studies of prayer can provide meaningful evidence about some claims regarding prayer.
+11. Christians should normally seek wise counsel before treating an inner impression as divine guidance for a major decision.
+12. Prayer requests should be framed in ways that encourage trust in God rather than confidence in a guaranteed outcome.
 
 ## 15. Church Discipline
 1. Churches today practice formal church discipline less often than Scripture requires.
@@ -183,6 +220,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Churches should have written discipline procedures before specific conflicts arise.
 9. Poorly handled church discipline can cause more harm than no formal discipline.
 10. Many churches lack the relational depth necessary to practice discipline well.
+11. Church discipline should distinguish between repentant struggle against sin and settled refusal to repent.
+12. Appeals or review processes should be available when formal discipline is contested.
 
 ## 16. Mental Health and Discipleship
 1. Depression should usually be addressed as both a spiritual concern and a medical or psychological concern.
@@ -195,6 +234,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Ministers need more training in trauma-informed pastoral care.
 9. Mental health language is sometimes used to avoid moral responsibility.
 10. Mental health struggles among church leaders are increasing.
+11. Churches should reduce stigma around mental illness without treating every emotional struggle as illness.
+12. Pastors should know the limits of their competence when caring for people at risk of self-harm.
 
 ## 17. Evangelism and Apologetics
 1. Ordinary church members today feel less confident evangelizing than ordinary church members did in previous generations.
@@ -207,6 +248,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Fear of social offense is a major reason Christians avoid evangelism.
 9. Digital evangelism is a meaningful opportunity for local churches.
 10. Current evangelistic methods need substantial revision for post-Christian contexts.
+11. Churches should train members to explain the gospel without relying on insider Christian vocabulary.
+12. Effective evangelism requires both confidence in Christian truth and genuine curiosity about the other person.
 
 ## 18. Youth, Young Adults, and Church Retention
 1. Most churches are not discipling young adults effectively.
@@ -219,6 +262,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Churches should give spiritually mature young adults more leadership responsibility.
 9. Campus ministries are essential partners in retaining Christian young adults.
 10. Young adult church attendance will continue to decline over the next decade.
+11. Intergenerational friendships are more important for youth retention than age-specific programming alone.
+12. Churches should prepare young people to face moral and intellectual pressure before they leave home.
 
 ## 19. Worship, Entertainment, and Formation
 1. Many worship services are shaped more by entertainment culture than by biblical formation.
@@ -231,6 +276,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. High production quality can remove unnecessary distractions from worship.
 9. Worship services should ordinarily allow more emotional expression than they currently do.
 10. Worship services should ordinarily cultivate more reverence and restraint than they currently do.
+11. Worship planning should prioritize congregational participation over platform performance.
+12. Churches should explain the theological purpose of recurring worship practices.
 
 ## 20. Money, Giving, and Stewardship
 1. Christians are biblically obligated to give at least 10 percent of their income.
@@ -243,18 +290,22 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Wealthy Christians have greater moral obligations with respect to generosity than middle-income Christians do.
 9. Consumer debt is a major discipleship problem in many churches.
 10. Churches often speak about money either too rarely or too apologetically.
+11. Churches should teach generosity in ways that are sensitive to poverty and unstable income.
+12. Members should be able to see how a church's spending aligns with its stated mission and theology.
 
 ## 21. Clergy Compensation and Ministry Labor
 1. Pastors are generally underpaid relative to their education, responsibilities, and workload.
 2. Some pastors are paid excessively relative to the economic circumstances of their congregations.
 3. Churches should disclose pastoral salary ranges to members.
-4. Housing allowance, insurance, retirement, and other benefits should be included when evaluating pastoral compensation.
+4. Housing, health coverage, retirement contributions, and other benefits should be included when evaluating pastoral compensation.
 5. Bivocational ministry will become increasingly common over the next decade.
 6. Bivocational ministry can be healthier than full-time paid ministry in some church contexts.
 7. Churches often expect pastors' spouses to perform unpaid ministry labor.
 8. Pastors should normally receive periodic sabbaticals after sustained seasons of ministry.
 9. Unrealistic ministry workload expectations are a major cause of pastoral burnout.
 10. Congregations often underestimate the emotional labor required in pastoral ministry.
+11. Part-time or bivocational pastors should have ministry expectations that match their paid hours and available capacity.
+12. Churches should review pastoral compensation regularly through a process that protects both generosity and accountability.
 
 ## 22. Preaching Philosophy and Sermon Practice
 1. Sequential expository preaching should be the normal pattern of a church's pulpit ministry.
@@ -267,6 +318,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Preaching should include more practical life guidance than most churches currently provide.
 9. Congregants should have ordinary opportunities to ask pastors follow-up questions about sermons.
 10. Online sermon access has significantly changed how congregants evaluate preaching.
+11. Sermons should make the main point of the biblical text clear before moving to application.
+12. Preachers should avoid using a biblical text mainly as a starting point for their own opinions.
 
 ## 23. Baptism and Communion
 1. Baptism should be administered only to those who personally profess faith in Christ.
@@ -279,6 +332,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Children should be admitted to communion earlier than many churches currently allow.
 9. Churches often underteach the theological meaning of baptism and communion.
 10. Differences over baptism should rarely prevent ministry cooperation between churches.
+11. Churches should explain who may receive communion before communion is served.
+12. Baptism should normally be a public act connected to a visible Christian community.
 
 ## 24. Church Membership and Ecclesiology
 1. Formal church membership is biblically necessary for ordinary Christian discipleship.
@@ -291,6 +346,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Independent churches are more vulnerable to unhealthy leadership patterns.
 9. Many Christians treat local church membership too casually.
 10. The local church is more central to discipleship than parachurch ministries can be.
+11. Churches should maintain accurate membership records rather than keeping inactive people on membership rolls indefinitely.
+12. Church membership should include meaningful pastoral care, not only formal affiliation.
 
 ## 25. Online Church and Digital Discipleship
 1. Online worship can count as real church attendance for Christians who are physically unable to gather.
@@ -303,6 +360,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Online church weakens embodied community more than it expands mission.
 9. Digital discipleship tools should supplement rather than replace embodied local church relationships.
 10. The pandemic permanently changed expectations about church attendance.
+11. Churches should develop pastoral expectations for people who participate online but rarely gather in person.
+12. Digital ministry is especially valuable for people isolated by disability, illness, distance, or persecution.
 
 ## 26. Race, Ethnicity, and Reconciliation
 1. Racial reconciliation should be a major discipleship priority in churches.
@@ -313,8 +372,10 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 6. Churches should intentionally cultivate ethnically diverse leadership where the congregation and community make this possible.
 7. Ethnic-specific churches can be faithful and pastorally necessary.
 8. Political ideology has made racial reconciliation harder in churches.
-9. White Christians and minority Christians often experience the same church differently.
+9. Ethnic majority Christians and ethnic minority Christians often experience the same church differently.
 10. Churches have made meaningful progress on racial reconciliation over the past 20 years.
+11. Churches should address ethnic, tribal, caste, or racial prejudice in the forms most relevant to their own context.
+12. Pursuing reconciliation should include repentance for present partiality, not only discussion of past injustice.
 
 ## 27. Gender, Family, and Household Roles
 1. Husbands have a unique biblical headship responsibility in marriage.
@@ -327,11 +388,13 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Churches should teach household roles more directly than they currently do.
 9. Christians today are often more shaped by feminism than by Scripture on family roles.
 10. Christians today are often more shaped by reaction against feminism than by Scripture on family roles.
+11. Biblical headship should never be used to justify coercion, intimidation, or neglect.
+12. Churches should teach unmarried adults how household-role debates relate, and do not relate, to their discipleship.
 
 ## 28. Abortion and Reproductive Ethics
 1. Elective abortion is morally equivalent to the intentional killing of an already-born human.
-2. Abortion should be legally prohibited except when necessary to save the mother's life.
-3. Abortion should be legally prohibited except in cases of rape, incest, or serious threat to the mother's life.
+2. Abortion should be legally prohibited except when necessary to save the pregnant woman's life.
+3. Abortion should be legally prohibited except in cases of rape, incest, or serious threat to the pregnant woman's life.
 4. Churches should provide more practical support for women and families facing crisis pregnancies.
 5. Christians should give more attention to reducing demand for abortion, not only to changing abortion law.
 6. In vitro fertilization commonly raises serious moral concerns for Christians.
@@ -339,6 +402,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Some forms of contraception raise serious moral concerns for Christians.
 9. Pastors are generally underprepared to counsel couples about reproductive technologies.
 10. Abortion has become a major test of Christian moral consistency.
+11. Churches should care for people who have participated in abortion without minimizing the moral seriousness of abortion.
+12. Christian teaching on reproductive technology should address embryo creation, embryo destruction, and parental desire separately.
 
 ## 29. War, Violence, and Self-Defense
 1. Just war theory is the most biblically faithful Christian approach to military ethics.
@@ -349,20 +414,24 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 6. Churches should be more cautious about patriotic rituals within worship services.
 7. Christians should oppose torture in all circumstances.
 8. Armed church security teams are prudent in many church contexts.
-9. The state may legitimately use capital punishment in some circumstances.
+9. Civil government may legitimately use capital punishment in some circumstances.
 10. Christians are often too comfortable with violence when it serves their political goals.
+11. Churches should care for soldiers, police, and others whose work exposes them to moral injury or trauma.
+12. Christians should distinguish legitimate defense of others from personal vengeance.
 
 ## 30. Creation Care and Climate
 1. Climate change is a serious moral concern for Christians.
 2. Human activity is the primary driver of current climate change.
 3. Churches should teach environmental stewardship more often.
-4. Concern for creation care is often unfairly dismissed as merely liberal politics.
+4. Concern for creation care is often unfairly dismissed as merely partisan politics.
 5. Environmental activism often becomes functionally idolatrous.
 6. Wealthy Christians have special responsibility to reduce environmental harm.
 7. Creation care should be connected to pro-life ethics.
 8. Some end-times beliefs reduce environmental concern among Christians.
 9. Churches should make practical changes to reduce waste and energy use.
 10. Climate change will significantly affect missions and pastoral ministry over the next 25 years.
+11. Local environmental damage that harms poor communities should be treated as a Christian justice concern.
+12. Churches should distinguish biblical creation care from political programs that may carry other assumptions.
 
 ## 31. Spiritual Abuse and Safeguarding
 1. Spiritual abuse is a widespread problem in churches.
@@ -375,6 +444,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Some abuse allegations are mishandled because churches presume guilt too quickly.
 9. Training on authority, coercion, and power dynamics should be required for pastors and elders.
 10. Spiritual abuse has caused many people to leave otherwise orthodox churches.
+11. Churches should define spiritual abuse by identifiable patterns of coercion, manipulation, or misuse of authority.
+12. People who report spiritual abuse should be protected from retaliation while claims are examined fairly.
 
 ## 32. Sexual Abuse Response
 1. Churches should report every credible allegation of child sexual abuse to civil authorities immediately.
@@ -382,11 +453,13 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 3. A confessed sexual abuser may be forgiven while still being permanently barred from ministry with minors.
 4. Churches should inform the congregation when a current or former leader has committed sexual abuse.
 5. Restoration to church leadership after sexual abuse should almost never occur.
-6. A registered sex offender should be permitted to attend church only under strict written safeguards.
+6. A person known to have committed sexual abuse should be permitted to attend church only under strict written safeguards.
 7. Churches should require background checks for all adults serving with minors.
 8. Abuse prevention policies should be reviewed periodically by outside experts.
 9. Care for victims should be prioritized over institutional legal or reputational risk.
 10. The church's public credibility has been deeply damaged by sexual abuse scandals.
+11. Churches should not handle allegations of criminal sexual abuse only through internal pastoral processes.
+12. Congregations should receive age-appropriate training on abuse prevention and reporting.
 
 ## 33. Religious Pluralism and Other Faiths
 1. Conscious faith in Christ is ordinarily necessary for salvation.
@@ -399,6 +472,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Respectful relationships with leaders of other religions can be pastorally and missionally valuable.
 9. Christians often caricature other religions in ways that weaken witness.
 10. Mission strategy should be adapted for religiously plural societies.
+11. Christians should affirm truth wherever it appears in other religions without treating those religions as saving paths.
+12. Churches should prepare members to maintain Christian conviction while showing respect to neighbors of other faiths.
 
 ## 34. Bible Translation and Original Languages
 1. Pastors should learn Greek and Hebrew if they have reasonable opportunity.
@@ -411,6 +486,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Bible translation debates sometimes distract Christians from obeying Scripture.
 9. Pastors should identify meaningful translation uncertainty more often in sermons.
 10. AI tools will make original-language resources more accessible to ordinary Christians.
+11. Preachers should not base major doctrinal claims on a disputed translation without explaining the uncertainty.
+12. Churches should give more attention to Bible translation for languages that still lack adequate Scripture access.
 
 ## 35. Seminary, Training, and Ordination
 1. Seminary education should normally be required for pastoral ordination.
@@ -423,30 +500,36 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Pastoral candidates should be formally evaluated for emotional maturity.
 9. Online theological education can adequately prepare pastors for ministry.
 10. Churches should invest more directly in identifying and training future ministers.
+11. Ordination processes should test doctrine, character, teaching ability, and pastoral judgment.
+12. Ministry training should be made more accessible to qualified candidates who cannot relocate or take on large debt.
 
 ## 36. Religious Liberty and Public Speech
-1. Religious liberty is under serious threat in the United States.
-2. Christians should defend religious liberty for non-Christian religions as strongly as they defend it for Christians.
-3. Churches should be willing to lose tax benefits rather than restrict biblical teaching.
+1. Religious liberty is under serious threat in my country or region.
+2. Christians should defend religious liberty for non-Christian faith communities as strongly as they defend it for Christians.
+3. Churches should be willing to lose state benefits or legal privileges rather than restrict biblical teaching.
 4. Christian institutions should be legally permitted to require employees to affirm institutional beliefs.
 5. Anti-discrimination law and religious liberty will increasingly conflict.
 6. Pastors should prepare congregations for social or legal costs associated with Christian conviction.
-7. Christians sometimes exaggerate persecution in Western countries.
+7. Christians sometimes exaggerate persecution when they experience ordinary social disagreement.
 8. Free speech protections are essential for Christian witness.
 9. Churches should be cautious about partisan rhetoric when discussing religious liberty.
 10. Religious liberty will be a defining ministry issue over the next decade.
+11. Christians should defend religious liberty for unpopular groups even when they reject those groups' beliefs.
+12. Churches should distinguish loss of cultural influence from actual legal restriction.
 
 ## 37. Missions and Global Christianity
 1. Local churches should prioritize unreached people groups in missions giving.
 2. Short-term mission trips usually benefit the sending church more than the receiving community.
-3. Western churches should send fewer missionaries and fund more local leaders.
+3. Churches in historically missionary-sending countries should send fewer missionaries and fund more local leaders.
 4. Missionaries should receive stronger theological training before deployment.
 5. Social service and evangelism should be integrated in missions strategy.
 6. Evangelism should remain the central priority of Christian missions.
-7. Partnerships with indigenous churches are usually more effective than Western-led efforts.
+7. Partnerships with churches led by local believers are usually more effective than outside-led efforts.
 8. Mission agencies should report goals, finances, and outcomes more transparently to supporting churches.
 9. Global South Christianity will increasingly shape global Christian theology.
 10. Churches in wealthy countries should listen more humbly to churches in poorer countries.
+11. Mission partnerships should avoid creating long-term financial dependency where local sustainability is possible.
+12. Mission strategy should take seriously the theological maturity of churches outside historically dominant Christian centers.
 
 ## 38. Prosperity Teaching, Suffering, and Blessing
 1. Prosperity gospel assumptions are widespread even in churches that explicitly reject the prosperity gospel.
@@ -458,7 +541,9 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 7. Promises of guaranteed health or wealth are among the most damaging distortions of Christianity.
 8. A person's faith can sometimes affect whether God grants healing or material provision.
 9. Pastors should avoid implying that suffering people lack faith.
-10. Western Christians need a stronger theology of suffering.
+10. Christians in affluent societies need a stronger theology of suffering.
+11. Teaching about blessing should include both God's material gifts and the possibility of faithful suffering.
+12. Churches should make space for lament without rushing sufferers toward optimistic conclusions.
 
 ## 39. Satan, Demons, and Spiritual Warfare
 1. Demonic activity is common in ordinary church life.
@@ -469,8 +554,10 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 6. Pastors should consider mental illness before attributing unusual behavior to demonic activity.
 7. Satan directly influences false teaching in the church.
 8. Spiritual warfare language is sometimes used to avoid ordinary moral responsibility.
-9. Western churches generally underbelieve in demonic activity.
+9. Churches in secularized societies generally underbelieve in demonic activity.
 10. Some churches overattribute ordinary hardship to demonic activity.
+11. Deliverance ministry should be practiced only under mature pastoral oversight.
+12. Teaching on spiritual warfare should emphasize Christ's victory more than demonic power.
 
 ## 40. Eschatology and End Times
 1. Premillennialism is the most biblically faithful view of the millennium.
@@ -483,11 +570,13 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Eschatology significantly affects Christian political behavior.
 9. Eschatology significantly affects Christian concern for environmental stewardship.
 10. Disagreement over the millennium should rarely be a basis for church division.
+11. Teaching on Christ's return should produce hope and holiness more than fear or speculation.
+12. A church's eschatology should shape its theology of suffering and perseverance.
 
 ## 41. Science, Medicine, and Bioethics
 1. Christians should generally trust medical consensus outside their own areas of expertise.
 2. Churches should teach members how to evaluate scientific and medical claims responsibly.
-3. Vaccine debates revealed serious discipleship failures in many churches.
+3. Recent public-health controversies revealed serious discipleship failures in many churches.
 4. Genetic editing of human embryos is morally dangerous.
 5. Life-extension technologies will create major pastoral challenges.
 6. Physician-assisted suicide should always be opposed.
@@ -495,6 +584,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Faith-healing teaching sometimes leads people to neglect necessary medical care.
 9. Scientific discoveries generally strengthen rather than weaken Christian belief.
 10. Pastors are underprepared for coming bioethical questions.
+11. Churches should distinguish legitimate medical caution from generalized suspicion of science.
+12. Bioethical teaching should address disability, aging, and human dignity, not only beginning-of-life issues.
 
 ## 42. Dating, Cohabitation, and Marriage Preparation
 1. Sexual cohabitation before marriage is always sinful.
@@ -507,6 +598,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Marriages between Christians from substantially different theological traditions often create serious spiritual challenges.
 9. A Christian knowingly marrying a non-Christian is a serious act of disobedience.
 10. Marriage preparation should include direct discussion of sexual ethics, finances, conflict, and family history.
+11. Churches should distinguish biblical commands about marriage from cultural expectations about dating.
+12. Marriage preparation should address expectations about extended family involvement where that is culturally relevant.
 
 ## 43. Singleness, Celibacy, and Friendship
 1. Churches often unintentionally treat marriage as spiritually superior to singleness.
@@ -519,6 +612,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Churches often treat sexual desire too negatively.
 9. Churches often treat sexual desire too permissively.
 10. Loneliness is a major pastoral issue for ministers today.
+11. Churches should not assume that mature adult discipleship normally includes marriage and children.
+12. Single adults should be encouraged toward meaningful service without being treated as a flexible labor pool.
 
 ## 44. Children, Parenting, and Family Discipleship
 1. Parents have the primary responsibility for discipling their children.
@@ -527,10 +622,12 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 4. Children should remain in the main worship service more often than they currently do.
 5. Churches should train parents to discuss sexuality with their children.
 6. Parents should restrict children's smartphone access more aggressively.
-7. Christian schooling or homeschooling is preferable to public schooling for most Christian families.
-8. Public schooling can be a faithful choice for Christian families.
+7. Christian schooling or homeschooling is preferable to government-run schooling for most Christian families.
+8. Government-run schooling can be a faithful choice for Christian families.
 9. Children's ministry should include more doctrinal instruction than it usually does.
 10. Parents often make decisions about children more from fear than from faith.
+11. Churches should help parents disciple children without treating one schooling model as universally required.
+12. Churches should take children's professions of faith seriously while avoiding pressure for premature certainty.
 
 ## 45. Church Growth, Size, and Health
 1. Numerical growth is usually a meaningful indicator of church health.
@@ -543,6 +640,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Seeker-sensitive practices can be faithful when doctrine and discipleship remain clear.
 9. Churches should track indicators of spiritual formation, not only attendance and giving.
 10. Declining attendance can sometimes reflect faithfulness rather than failure.
+11. Churches should distinguish growth by conversion from growth by transfer from other churches.
+12. Healthy churches should be willing to send capable members and leaders to strengthen other churches.
 
 ## 46. Liturgy, Tradition, and Ancient Practices
 1. Evangelical churches need deeper engagement with historic Christian tradition.
@@ -555,6 +654,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Ancient spiritual practices should be recovered cautiously and tested by Scripture.
 9. Tradition should have real authority while remaining subordinate to Scripture.
 10. Younger Christians are increasingly attracted to liturgical forms of worship.
+11. Churches should explain inherited practices so that tradition forms understanding rather than mere habit.
+12. Recovering ancient practices can help correct the individualism of much contemporary discipleship.
 
 ## 47. Social Media and Christian Witness
 1. Social media has harmed Christian public witness more than it has helped it.
@@ -567,6 +668,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Social media rewards theological certainty more than humility.
 9. Many Christians would be spiritually healthier if they substantially reduced social media use.
 10. Social media conflict is now a major pastoral burden.
+11. Pastors should distinguish clearly between personal opinions and pastoral teaching when posting online.
+12. Churches should set expectations for staff and leaders about public online behavior.
 
 ## 48. Denominations, Unity, and Fragmentation
 1. Denominations remain valuable for church accountability and cooperation.
@@ -579,6 +682,8 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Denominational decline will continue over the next decade.
 9. Informal networks will increasingly replace traditional denominations.
 10. Churches should cooperate across denominational lines more often.
+11. Shared confessions or doctrinal standards are important for durable church cooperation.
+12. Church separation can be an act of faithfulness when essential doctrine or serious moral integrity is at stake.
 
 ## 49. Pastoral Burnout, Sabbath, and Longevity
 1. Pastoral burnout is increasing.
@@ -591,10 +696,12 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Ministry success metrics contribute significantly to pastoral burnout.
 9. Pastors should receive regular counseling, mentoring, or spiritual direction.
 10. Pastoral burnout is often caused more by church systems than by individual weakness.
+11. Elders or governing boards should actively protect pastors from unreasonable access expectations.
+12. Pastors are responsible to practice sustainable rhythms rather than treating exhaustion as faithfulness.
 
 ## 50. Truth, Conspiracy Thinking, and Misinformation
 1. Conspiracy thinking is a serious discipleship problem in churches.
-2. Christians should be especially cautious about claims that mainstream sources are always deceptive.
+2. Christians should be especially cautious about claims that widely used news, academic, or civic sources are always deceptive.
 3. Widespread distrust of institutions has made pastoral leadership harder.
 4. Some official institutions have earned public distrust through dishonesty or incompetence.
 5. Churches should teach epistemic humility and responsible evaluation of evidence.
@@ -603,3 +710,5 @@ Wording protocol: each item is intended to be answered as a standalone propositi
 8. Pastors should publicly correct false claims that are circulating widely in their congregations.
 9. Belief in conspiracy theories damages evangelistic credibility.
 10. The ability to assess truth claims responsibly is now a core discipleship issue.
+11. Churches should teach members to verify claims before sharing them publicly.
+12. Christians should cultivate warranted trust without becoming naive about institutional failure.

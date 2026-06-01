@@ -2,6 +2,10 @@
 
 This project uses the WordPress.com REST API for automated publishing to the Christian Thought Survey site.
 
+## Weekly Survey Content Rule
+
+When WordPress pages or posts describe a Weekly Survey, they should match the GitHub Pages language: one new CTS-administered topic with 12 related survey items, 3 participant-selected questions from the previous week's active-participant vote once available, a ballot of last week's suggested items, and a text box for future question suggestions.
+
 ## Authentication Model
 
 WordPress.com requires OAuth2 bearer tokens for authenticated API requests. For a personal automation that publishes only to our own site, the practical setup is:

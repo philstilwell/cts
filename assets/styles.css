@@ -344,6 +344,19 @@ h3 {
   margin-top: 0.68rem;
 }
 
+.process-list {
+  padding-left: 1.6rem;
+}
+
+.process-list li {
+  padding-left: 0.2rem;
+}
+
+.process-list li::marker {
+  color: var(--brick);
+  font-weight: 800;
+}
+
 .wp-content strong {
   color: var(--ink);
 }
