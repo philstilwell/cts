@@ -15,7 +15,7 @@ Do not send to the full `CTS Participants` group until the closed test is review
 
 ## Email 1: Heads-Up
 
-Timing: 24-48 hours before the survey-link email.
+Timing: Monday before the Thursday survey-link email.
 
 Subject:
 
@@ -27,16 +27,18 @@ Hello,
 
 Christian Thought Survey is being revived as a shorter weekly survey for people who are currently or previously engaged in full-time ministry.
 
-The first weekly survey will include one CTS-administered topic, 12 related credence-slider items, 3 participant-vote-determined items, a participant-nominated item ballot, a suggestion text box, and a previous-results link.
+The first weekly survey will focus on Divorce and Remarriage. It will include one CTS-administered topic, 12 related credence-slider items, 3 participant-vote-determined items, a participant-nominated item ballot, a suggestion text box, a preview of the next 3 planned general topics, and a previous-results link.
 
-You will receive the first survey link in a separate email. Participation is optional, and you can unsubscribe from future CTS emails at any time.
+Looking ahead, the next 3 planned CTS-administered topics are Pornography and the Church, Pastoral Authority and Accountability, and Women in Church Leadership.
+
+You will receive the first survey link on Thursday in a separate email. Participation is optional, and you can unsubscribe from future CTS emails at any time.
 
 Thank you,
 Christian Thought Survey
 
 ## Email 2: Survey Link
 
-Timing: survey open day.
+Timing: Thursday survey open day.
 
 Subject:
 
@@ -51,14 +53,14 @@ The first CTS weekly survey is ready for review.
 Survey link:
 https://www.surveyol.com/r/9A4F55F
 
-This survey is intended for people who are currently or previously engaged in full-time ministry. It uses 0-100 credence sliders for live survey items. The participant-nominated item ballot and suggestion text box help prepare future weekly surveys.
+This survey is intended for people who are currently or previously engaged in full-time ministry. It uses 0-100 credence sliders for live survey items. The participant-nominated item ballot and suggestion text box help prepare future weekly surveys, and the survey includes a preview of the next 3 planned general topics.
 
 Thank you,
 Christian Thought Survey
 
 ## Email 3: Reminder
 
-Timing: 24-48 hours after the survey-link email, only if appropriate.
+Timing: 24-48 hours after the Thursday survey-link email, only if appropriate.
 
 Subject:
 

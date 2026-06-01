@@ -8,6 +8,8 @@ SurveyOL closed-test respondent link: https://www.surveyol.com/r/9A4F55F
 
 SurveyOL design/preview GUID: 528d1b8c-8c12-4634-9a7e-3ad9110df08d
 
+Week 1 send cadence: Monday heads-up email, Thursday SurveyOL survey-link email.
+
 Eligibility note to display inside SurveyOL:
 
 > CTS weekly survey participation is intended for people who are currently or previously engaged in full-time ministry. Please continue only if that describes you.
@@ -18,6 +20,12 @@ Default live-item response format:
 - 50 = unsure/mixed
 - 100 = strongly agree
 
+Next-three-topic preview for Week 1:
+
+- Week 2: Pornography and the Church
+- Week 3: Pastoral Authority and Accountability
+- Week 4: Women in Church Leadership
+
 ## Survey Sections
 
 1. Eligibility note and optional confirmation.
@@ -25,7 +33,8 @@ Default live-item response format:
 3. Three Week 1 seeded participant-vote-determined live items, also credence sliders.
 4. A Week 1 seeded participant-nominated item ballot for pilot testing.
 5. A suggestion text box for future participant-nominated survey items.
-6. A previous-results placeholder with a link to the CTS reports page.
+6. A next-three-topic preview.
+7. A previous-results placeholder with a link to the CTS reports page.
 
 ## A. CTS-Administered Topic
 
@@ -75,7 +84,13 @@ Prompt:
 
 Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100.
 
-## E. Previous-Results Placeholder
+## E. Next-Three-Topic Preview
+
+Text:
+
+Looking ahead: the next 3 planned CTS-administered weekly topics are Pornography and the Church; Pastoral Authority and Accountability; and Women in Church Leadership. Topics may shift if participant feedback or administrative needs require it.
+
+## F. Previous-Results Placeholder
 
 Text:
 
@@ -167,6 +182,9 @@ Pastors should avoid pressuring separated spouses to reconcile before safety and
 
 [Comment Box]
 Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100.
+
+[Text]
+Looking ahead: the next 3 planned CTS-administered weekly topics are Pornography and the Church; Pastoral Authority and Accountability; and Women in Church Leadership. Topics may shift if participant feedback or administrative needs require it.
 
 [Text]
 There are no previous weekly CTS 2026 results yet. For the closed test, please check that this placeholder is clear and that the reports link works: https://christianthoughtsurvey.wordpress.com/weekly-survey-reports/
