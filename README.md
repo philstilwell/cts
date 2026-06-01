@@ -6,13 +6,12 @@ Static GitHub Pages mirror for the revived Christian Thought Survey site.
 
 Each Weekly Survey is designed to include:
 
-1. One CTS-administered topic with 12 related survey items from the already-generated topic bank.
-2. Three participant-vote-determined questions. The first week is seeded by AI; later weeks use the previous week's active-participant vote.
-3. A ballot of participant-nominated survey items from the previous week. These nominations are cleaned up by AI before release, and the top 3 vote-getters become live survey items the following week.
-4. Links to the primary CTS website page containing the previous week's results.
-5. A compact sample of the previous week's results, such as an infographic-style summary.
+1. One CTS-administered topic with 12 related survey items supplied by the CTS administration.
+2. Three participant-selected questions. Once the weekly cycle is underway, these will be chosen by active participants' votes from the previous week; the first week will be seeded by the CTS administration.
+3. A ballot of last week's participant-suggested items, refined for clarity, that active participants can vote on for possible use the following week.
+4. A future-question text box where participants can suggest questions or items for later ballots.
 
-All survey items are credence-based slider items. The participant-nominated survey item fields are text boxes because they collect possible future items rather than survey-item responses.
+The 15 live survey items use credence sliders. The participant ballot and future-question text box are administrative inputs rather than survey-item responses.
 
 The generated pages reflect the new WordPress pages updated on June 1, 2026:
 
