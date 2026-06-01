@@ -4,7 +4,9 @@ This project uses the WordPress.com REST API for automated publishing to the Chr
 
 ## Weekly Survey Content Rule
 
-When WordPress pages or posts describe a Weekly Survey, they should match the GitHub Pages language: one new CTS-administered topic with 12 related survey items, 3 participant-selected questions from the previous week's active-participant vote once available, a ballot of last week's suggested items, and a text box for future question suggestions.
+When WordPress pages or posts describe a Weekly Survey, they should match the GitHub Pages language: one CTS-administered topic with 12 related survey items from the already-generated topic bank; 3 participant-vote-determined questions, seeded by AI the first week and later chosen from the previous week's active-participant vote; a ballot of participant-nominated survey items cleaned up by AI before release; links to the primary CTS website page containing the previous week's results; and a compact sample, such as an infographic-style summary, of the previous week's results.
+
+All live survey items should be credence-based slider items. The only non-slider inputs should be the participant-nominated survey item text boxes.
 
 ## Authentication Model
 

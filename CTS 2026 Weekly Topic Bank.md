@@ -9,9 +9,12 @@ For items involving civil law, education systems, public policy, or national ide
 Weekly survey assembly:
 
 1. Select one new CTS-administered topic from this bank and use 12 related survey items provided by the CTS administration.
-2. Add 3 participant-generated questions selected from the previous week's active-participant vote once that voting cycle is underway.
-3. Include a ballot of last week's suggested items so active participants can vote on future participant-generated questions.
-4. Include a text box where participants can suggest future questions for a later ballot.
+2. Add 3 participant-vote-determined questions. Seed these by AI in the first week; after that, select them from the previous week's active-participant vote.
+3. Include a ballot of participant-nominated survey items from the previous week. Clean these nominations up by AI before release, then feature the top 3 vote-getters as live survey items in the following week.
+4. Include links to the primary CTS website page containing the previous week's results.
+5. Include a compact sample of the previous week's results, such as an infographic-style summary.
+
+All survey items should be credence-based slider items. The participant-nominated survey item fields are text boxes because they collect possible future survey items rather than survey-item responses.
 
 ## 1. Divorce and Remarriage
 1. In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce.
