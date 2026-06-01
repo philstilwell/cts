@@ -380,6 +380,29 @@ h3 {
   background: #fff8e8;
 }
 
+.surveyol-embed {
+  min-height: 1540px;
+  margin-top: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--wash);
+  box-shadow: var(--shadow);
+}
+
+.surveyol-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 1540px;
+  border: 0;
+}
+
+.form-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
 .site-footer {
   padding: 2.5rem 0;
   color: #d6e4e0;
@@ -459,6 +482,11 @@ h3 {
 
   .page-heading {
     padding: 3.2rem 0;
+  }
+
+  .surveyol-embed,
+  .surveyol-embed iframe {
+    min-height: 1840px;
   }
 
   .footer-inner {

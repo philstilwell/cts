@@ -11,6 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
 UPDATED = "June 1, 2026"
+SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
+SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 
 
 @dataclass(frozen=True)
@@ -232,9 +234,11 @@ PAGES = [
 
   <p>Weekly surveys are intended to be short: usually no more than ten items on one issue, plus a vote on the following week's topic.</p>
 
-  <div class="button-row">
-    <a class="button light" href="https://christianthoughtsurvey.wordpress.com/contact/">Submit a form</a>
+  <div class="surveyol-embed">
+    <iframe title="CTS 2026 Participation Request" src="{surveyol_embed_url}" loading="lazy"></iframe>
   </div>
+
+  <p class="form-note">If the embedded form does not load, <a href="{surveyol_form_url}">open the SurveyOL form in a new tab</a>.</p>
 </div>
 """,
     ),
@@ -264,6 +268,8 @@ def fill_links(html: str, prefix: str) -> str:
         "archive_url": page_url(prefix, "previous-results-archive/index.html"),
         "overview_url": page_url(prefix, "overview/index.html"),
         "contact_url": page_url(prefix, "contact/index.html"),
+        "surveyol_form_url": SURVEYOL_FORM_URL,
+        "surveyol_embed_url": SURVEYOL_EMBED_URL,
     }
     return html.format(**links)
 
