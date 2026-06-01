@@ -21,6 +21,13 @@ The generated pages reflect the new WordPress pages updated on June 1, 2026:
 - Previous Results Archive
 - Legacy Survey Overview
 - Contact & Weekly Survey Participation
+- Privacy & Data Release
+
+Internal launch planning files:
+
+- `WEEK_1_SURVEY_TEMPLATE.md`
+- `WEEKLY_RUNBOOK.md`
+- `MAILERLITE_SEND_PLAN.md`
 
 Run the static build with:
 

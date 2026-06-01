@@ -13,6 +13,7 @@ WP_SITE = "https://christianthoughtsurvey.wordpress.com"
 UPDATED = "June 1, 2026"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
+CLOUDFLARE_ANALYTICS = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"b86c3e7a273f47648ae70f08866f9ec5\"}'></script><!-- End Cloudflare Web Analytics -->"
 WEEKLY_STRUCTURE_LIST = """<ol class="process-list" type="A">
   <li><strong>One CTS-administered topic:</strong> 12 related survey items from the CTS topic bank.</li>
   <li><strong>Three participant-vote-determined questions:</strong> 3 additional live survey items chosen based on the previous week's participant vote.</li>
@@ -116,6 +117,10 @@ PAGES = [
         <strong>Contact &amp; Participation</strong>
         <span>Invitation notes for ministers, topic suggestions, and data questions.</span>
       </a>
+      <a class="path-card" href="{privacy_url}">
+        <strong>Privacy &amp; Data Release</strong>
+        <span>Participant protections, public reporting rules, and raw-data handling.</span>
+      </a>
     </div>
   </div>
 </section>
@@ -182,7 +187,7 @@ PAGES = [
     </table>
   </figure>
 
-  <p class="callout">Raw data will not include direct email identifiers in public files. Participant attributes may be grouped or suppressed when needed to avoid accidental identification. Free-text suggestions may be edited, grouped, or withheld before publication to protect privacy and keep item wording usable.</p>
+  <p class="callout">Raw data will not include direct email identifiers in public files. Participant attributes may be grouped or suppressed when needed to avoid accidental identification. Free-text suggestions may be edited, grouped, or withheld before publication to protect privacy and keep item wording usable. See the <a href="{privacy_url}">Privacy &amp; Data Release</a> page for the current policy.</p>
 </div>
 """,
     ),
@@ -220,6 +225,52 @@ PAGES = [
   </ul>
 
   <p>Individual 2022-2023 item pages remain published and can still be reached through their direct URLs and tags.</p>
+</div>
+""",
+    ),
+    Page(
+        key="privacy",
+        output="privacy-data-release/index.html",
+        nav_label="Privacy",
+        title="Privacy &amp; Data Release",
+        eyebrow="Participant protection",
+        description=(
+            "How Christian Thought Survey handles participant contact information, "
+            "survey responses, free-text suggestions, and public data releases."
+        ),
+        content="""
+<div class="wp-content">
+  <p>Christian Thought Survey collects responses from people who are currently or previously engaged in full-time ministry. The project is designed for public reporting, but participant contact information and identifying details should not be exposed in public files.</p>
+
+  <h2>Contact information</h2>
+  <ul>
+    <li>Email addresses are used for survey invitations, reminders, follow-up questions, and opt-out handling.</li>
+    <li>Email addresses, names, and direct contact details are not included in public results files.</li>
+    <li>Participants may unsubscribe from MailerLite emails or ask CTS to remove them from future invitations.</li>
+  </ul>
+
+  <h2>Survey responses</h2>
+  <ul>
+    <li>Live survey items use 0-100 credence sliders unless a future survey clearly says otherwise.</li>
+    <li>Weekly reports may summarize aggregate results, distribution shapes, and subgroup comparisons when sample size permits.</li>
+    <li>Subgroups may be combined, suppressed, or withheld when reporting them could make participants identifiable.</li>
+  </ul>
+
+  <h2>Participant-nominated items</h2>
+  <ul>
+    <li>Free-text suggestions are treated as administrative inputs, not as public survey responses.</li>
+    <li>Suggestions may be corrected, combined, clarified, shortened, or withheld before appearing on a participant-nominated item ballot.</li>
+    <li>CTS will not intentionally publish a suggestion in a way that identifies the participant who submitted it.</li>
+  </ul>
+
+  <h2>Data releases</h2>
+  <ul>
+    <li>Public data releases will remove direct email identifiers before publication.</li>
+    <li>Prepared datasets may group participant attributes such as role, tradition, or ministry experience to reduce identification risk.</li>
+    <li>Raw exports should be reviewed before release for accidental identifiers in free-text fields or small subgroups.</li>
+  </ul>
+
+  <p class="callout">The practical rule is simple: report results openly, protect participants carefully, and do not publish raw contact information.</p>
 </div>
 """,
     ),
@@ -284,6 +335,7 @@ PAGES = [
   </div>
 
   <p class="form-note">If the embedded form does not load, <a href="{surveyol_form_url}">open the SurveyOL form in a new tab</a>. The same full-time ministry participation note applies.</p>
+  <p class="form-note">Contact information is used for CTS participation and follow-up only. See <a href="{privacy_url}">Privacy &amp; Data Release</a> for the current data handling policy.</p>
 </div>
 """,
     ),
@@ -311,6 +363,7 @@ def fill_links(html: str, prefix: str) -> str:
         "home_url": page_url(prefix, "index.html"),
         "weekly_url": page_url(prefix, "weekly-survey-reports/index.html"),
         "archive_url": page_url(prefix, "previous-results-archive/index.html"),
+        "privacy_url": page_url(prefix, "privacy-data-release/index.html"),
         "overview_url": page_url(prefix, "overview/index.html"),
         "contact_url": page_url(prefix, "contact/index.html"),
         "surveyol_form_url": SURVEYOL_FORM_URL,
@@ -341,6 +394,7 @@ def render_head(page: Page, prefix: str) -> str:
   <meta name="description" content="{description}">
   <link rel="icon" href="{prefix}assets/cts-logo.png">
   <link rel="stylesheet" href="{prefix}assets/styles.css">
+  {CLOUDFLARE_ANALYTICS}
 </head>"""
 
 
