@@ -6,7 +6,7 @@ Use this runbook for each weekly CTS cycle.
 
 - Monday: send the MailerLite heads-up email for the Thursday survey, naming the current CTS-administered topic and previewing the next 3 planned general topics.
 - Tuesday: finalize the SurveyOL survey, including any AI-cleaned participant-nominated ballot items.
-- Wednesday: test the SurveyOL link, MailerLite copy, previous-results link, and next-three-topic preview.
+- Wednesday: test the SurveyOL link, MailerLite copy, previous-results link, and preview of upcoming topics.
 - Thursday: send the actual SurveyOL survey-link email.
 - Friday: export results, publish public summary, and prepare next week's participant-vote items.
 
@@ -17,8 +17,8 @@ Use this runbook for each weekly CTS cycle.
 3. Add 3 participant-vote-determined live survey items from the previous week's ballot. For Week 1 only, use the seeded items in `WEEK_1_SURVEY_TEMPLATE.md`.
 4. Add the participant-nominated item ballot. Clean nominations for clarity before release, but do not change their substantive direction.
 5. Add a text box for future participant-nominated survey items.
-6. Add a brief preview of the next 3 planned general CTS-administered topics.
-7. Add a brief previous-results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
+6. Add a brief previous-results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
+7. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
 8. Confirm the eligibility note appears inside SurveyOL: participation is intended for people currently or previously engaged in full-time ministry.
 
 ## Send The Survey
@@ -42,7 +42,7 @@ Use this runbook for each weekly CTS cycle.
 1. Rank the participant-nominated ballot results.
 2. Select the top 3 eligible items for the next week's live participant-vote-determined questions.
 3. Clean new text-box nominations into ballot-ready wording.
-4. Update the next-three-topic preview from the topic bank before the Monday heads-up email.
+4. Update the preview of upcoming topics from the topic bank before the Monday heads-up email.
 5. Save the next survey draft before sending any email.
 
 ## Minimum Launch Checklist
@@ -50,7 +50,7 @@ Use this runbook for each weekly CTS cycle.
 - SurveyOL survey link works.
 - MailerLite test email renders correctly.
 - Eligibility note appears on the website and inside SurveyOL.
-- Next-three-topic preview appears inside SurveyOL and in the email copy.
+- Preview of upcoming topics appears inside SurveyOL and in the email copy.
 - Privacy & Data Release page is public.
 - Previous-results link points to a public page.
 - Test recipients can complete the survey.

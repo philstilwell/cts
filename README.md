@@ -9,15 +9,15 @@ Each Weekly Survey is designed to include:
 1. One CTS-administered topic: 12 related survey items from the CTS topic bank.
 2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote.
 3. A participant-nominated item ballot: a list of 'purified' participant-nominated survey items from the previous week that active participants can vote on for the following week.
-4. A text box to suggest survey items to be voted on next week and possibly featured in the following week's survey.
-5. A next-three-topic preview: a brief preview of the general CTS-administered topics planned for the next three weekly surveys.
-6. A previous-results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results.
+4. **A text box:** to suggest survey items to be voted on next week and possibly featured in the following week's survey.
+5. A previous-results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results.
+6. A preview of upcoming topics: The topics for the next three weeks will be featured to allow for mental preparation.
 
 The 15 live survey items use credence sliders. The participant-nominated item ballot and suggestion text box are administrative inputs rather than survey-item responses.
 
 ## Weekly Cadence
 
-The regular send rhythm is a Monday heads-up email followed by the actual SurveyOL survey-link email on Thursday. The Monday email names the current topic and previews the next 3 planned general topics; the Thursday survey includes that same next-three-topic preview inside the survey itself.
+The regular send rhythm is a Monday heads-up email followed by the actual SurveyOL survey-link email on Thursday. The Monday email names the current topic and previews the next 3 planned general topics; the Thursday survey includes that same preview of upcoming topics inside the survey itself.
 
 The generated pages reflect the new WordPress pages updated on June 1, 2026:
 

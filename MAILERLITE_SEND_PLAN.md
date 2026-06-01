@@ -27,7 +27,7 @@ Hello,
 
 Christian Thought Survey is being revived as a shorter weekly survey for people who are currently or previously engaged in full-time ministry.
 
-The first weekly survey will focus on Divorce and Remarriage. It will include one CTS-administered topic, 12 related credence-slider items, 3 participant-vote-determined items, a participant-nominated item ballot, a suggestion text box, a preview of the next 3 planned general topics, and a previous-results link.
+The first weekly survey will focus on Divorce and Remarriage. It will include one CTS-administered topic, 12 related credence-slider items, 3 participant-vote-determined items, a participant-nominated item ballot, a suggestion text box, a previous-results link, and a preview of the next 3 planned general topics.
 
 Looking ahead, the next 3 planned CTS-administered topics are Pornography and the Church, Pastoral Authority and Accountability, and Women in Church Leadership.
 
