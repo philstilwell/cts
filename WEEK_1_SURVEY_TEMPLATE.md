@@ -104,6 +104,11 @@ Looking ahead: the next 3 planned CTS-administered weekly topics are Pornography
 
 SurveyOL limits copy/paste imports to 3500 characters. Use these blocks in order if importing through "Create Survey with Copy/Paste." After import, confirm each live item is a Slider and required.
 
+Add the narrow section header images before the matching sections:
+
+- Featured topic header: `https://christianthoughtsurvey.com/assets/featured-topic-header.png`
+- Independent items header: `https://christianthoughtsurvey.com/assets/independent-items-header.png`
+
 ### Block 1
 
 ```text
