@@ -321,6 +321,36 @@ Use the sparkline in public results when there is enough data to make the distri
 - Slope charts when a recurring item is asked again in a later survey.
 - Ballot rank charts showing Borda score, first-place votes, and top-3 frequency.
 
+## Scatterplot And Correlation Reports
+
+Scatterplots should be available as a higher-value reporting tool when the sample size and data quality support them. They should not be a default element in every weekly report, because correlations can easily look more meaningful than they are.
+
+Best CTS use cases:
+
+- Item-to-item relationships among the 15 live credence-slider items.
+- A topic item compared with ministry years, age band, education years, or congregation size.
+- Repeated-item change over time when the same or similar item appears in later surveys.
+- Participant-nominated ballot preference compared with a related live survey item.
+- Consensus/disagreement maps where each point is an item, with median on one axis and spread on the other.
+
+Recommended thresholds:
+
+- Overall scatterplot: show at `n >= 50`; prefer `n >= 100`.
+- Subgroup scatterplot: show only when each displayed subgroup has `n >= 30`; prefer `n >= 50`.
+- Trendline or correlation coefficient: show only when the relationship is visually clear enough to interpret and the variables are suitable.
+- Sensitive or identifying outliers: suppress, aggregate, jitter, or omit the chart.
+
+Recommended public presentation:
+
+- Show `n` directly on the chart.
+- Use transparent points, small point size, and optional jitter so overlapping 0-100 responses remain visible.
+- Add a simple trendline only when it clarifies rather than decorates.
+- Prefer Spearman correlation for bounded credence sliders and ordinal-ish variables; use Pearson only when the relationship is plausibly linear.
+- Include a plain-language caveat that correlations are descriptive and not causal.
+- Avoid publishing large fishing-expedition correlation grids without a clear interpretive purpose.
+
+Google Sheets is sufficient for early scatterplot screenshots, especially for one or two carefully chosen relationships. HTML5/JavaScript scatterplots become more valuable when the report needs hover details, filtering, subgroup toggles, point transparency, marginal distributions, or multiple coordinated views. For GitHub Pages, Observable Plot or Plotly can both produce polished interactive scatterplots from prepared public summary data.
+
 ### Avoid As Primary Evidence
 
 - Word clouds as the main result for free-text material.
@@ -374,6 +404,7 @@ Recommended public outputs:
 - A one-page dashboard screenshot for the weekly report.
 - A 15-item sparkline distribution grid.
 - A top-consensus/top-disagreement panel.
+- A scatterplot or correlation panel when the sample supports a useful relationship.
 - A ballot results panel.
 - A respondent composition panel when sample size permits.
 
