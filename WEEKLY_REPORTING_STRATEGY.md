@@ -198,13 +198,71 @@ Google Sheets' [`SPARKLINE`](https://support.google.com/docs/answer/3093289) fun
 =SPARKLINE(AL18:AL27,{"charttype","column";"ymax",120;"ymin",0;"color","charcoal"})
 ```
 
+Important distinction: the `SPARKLINE` formula is mainly the display layer. The more important and more carefully honed formulas are the formulas that produce the values in `AL18:AL27`. Those cells transform raw 0-100 credence responses into a compact, smoothed percentage distribution. Preserve that distribution-series method as a first-class part of the reporting system, not as incidental helper-cell logic.
+
 What it does:
 
-- `AL18:AL27` supplies the plotted data. In context, this appears to be 10 binned counts for a single survey item, not the raw 0-100 credence responses themselves.
+- `AL18:AL27` supplies the plotted data. It is a carefully designed 10-value distribution series for a single survey item, not the raw 0-100 credence responses themselves.
 - `"charttype","column"` makes the sparkline a tiny vertical-column histogram inside one cell.
 - `"ymin",0` forces the chart baseline to zero.
 - `"ymax",120` forces a shared vertical scale. This is important because it lets item sparklines be compared visually. Without a shared `ymax`, every sparkline auto-scales and weak patterns can look as strong as major patterns.
 - `"color","charcoal"` sets the column color. A hex value such as `"#334155"` can be used if a named color is inconsistent.
+
+### Preserve The Distribution-Series Formula
+
+The `Filt` tab in the old `S23 — CTS` workbook uses this formula architecture for item column `AL`:
+
+```gs
+AL17 = COUNT(AL33:AL)
+```
+
+Rows `AL6:AL15` count responses into 10-point credence buckets while splitting exact boundary values across neighboring buckets. For example:
+
+```gs
+AL6  = COUNTIFS(AL$33:AL,">="&$AK5,AL$33:AL,"<"&$AK6)
+       +(COUNTIF(AL$33:AL,"="&$AK5)/2)
+       +(COUNTIF(AL$33:AL,"="&$AK6)/2)
+
+AL7  = COUNTIFS(AL$33:AL,">"&$AK6,AL$33:AL,"<"&$AK7)
+       +(COUNTIF(AL$33:AL,"="&$AK6)/2)
+       +(COUNTIF(AL$33:AL,"="&$AK7)/2)
+
+...
+
+AL15 = COUNTIFS(AL$33:AL,">"&$AK14,AL$33:AL,"<="&$AK15)
+       +(COUNTIF(AL$33:AL,"="&$AK14)/2)
+       +(COUNTIF(AL$33:AL,"="&$AK15)/2)
+```
+
+Rows `AL5` and `AL16` pad the endpoints:
+
+```gs
+AL5  = AL6
+AL16 = AL15
+```
+
+Rows `AL18:AL27` then create the actual sparkline series by converting each bucket to a percentage of total responses and adding 3% of the neighboring bucket values:
+
+```gs
+AL18 = ((AL5*0.03+AL6+AL7*0.03)/AL$17)*100
+AL19 = ((AL6*0.03+AL7+AL8*0.03)/AL$17)*100
+AL20 = ((AL7*0.03+AL8+AL9*0.03)/AL$17)*100
+AL21 = ((AL8*0.03+AL9+AL10*0.03)/AL$17)*100
+AL22 = ((AL9*0.03+AL10+AL11*0.03)/AL$17)*100
+AL23 = ((AL10*0.03+AL11+AL12*0.03)/AL$17)*100
+AL24 = ((AL11*0.03+AL12+AL13*0.03)/AL$17)*100
+AL25 = ((AL12*0.03+AL13+AL14*0.03)/AL$17)*100
+AL26 = ((AL13*0.03+AL14+AL15*0.03)/AL$17)*100
+AL27 = ((AL14*0.03+AL15+AL16*0.03)/AL$17)*100
+```
+
+Why this is worth preserving:
+
+- Exact boundary responses such as 10, 20, 50, and 100 are handled gracefully instead of being forced awkwardly into one bucket.
+- Endpoint padding keeps the first and last visible buckets from behaving differently just because they have only one natural neighbor.
+- The 3% adjacent-bucket smoothing keeps the mini-chart readable without erasing strong distribution features.
+- The values become percentages, so the shape can be compared across items with different response counts.
+- The method preserves the "pulse" of all credences much better than a mean or median alone.
 
 For revived CTS reports, keep this idea but avoid hardcoding `120` unless that value fits the current response count. Use a shared report-level maximum instead:
 
@@ -220,7 +278,7 @@ Where `$B$2` contains a fixed maximum for the whole report, for example:
 
 This gives all 15 item sparklines the same scale while leaving a little visual headroom.
 
-If the bucket counts need to be generated directly from one raw item-response column, use a helper table whenever possible. A direct formula is possible, but it is harder to audit:
+When creating the revived CTS reporting sheet, reuse the recovered S23 formula architecture rather than replacing it with a plain bucket formula. If SurveyOL exports require a different table shape, adapt the same principles: 10-point buckets, 50/50 handling of exact boundary responses, endpoint padding, and 3% adjacent-bucket smoothing. A direct generic formula is possible, but it is less valuable than the honed S23 approach and harder to audit:
 
 ```gs
 =SPARKLINE(
@@ -232,18 +290,21 @@ If the bucket counts need to be generated directly from one raw item-response co
 )
 ```
 
-Recommended bucket structure for 0-100 credence sliders:
+Recommended cut points for 0-100 credence sliders:
 
-- 0-9
-- 10-19
-- 20-29
-- 30-39
-- 40-49
-- 50-59
-- 60-69
-- 70-79
-- 80-89
-- 90-100
+- 0
+- 10
+- 20
+- 30
+- 40
+- 50
+- 60
+- 70
+- 80
+- 90
+- 100
+
+Exact cut-point responses should be split between neighboring buckets as in the S23 workbook.
 
 Use the sparkline in public results when there is enough data to make the distribution meaningful. Recommended minimums:
 
