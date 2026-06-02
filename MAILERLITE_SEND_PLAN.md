@@ -65,12 +65,12 @@ Body:
 
 Hello,
 
-The first CTS weekly survey is ready for review.
+The first revived Christian Thought Survey weekly survey is now ready. If you have a few minutes, I would be grateful for your participation.
 
 Survey link:
 https://www.surveyol.com/r/9A4F55F
 
-This survey is intended for people who are currently or previously engaged in full-time ministry. It uses 0-100 credence sliders for live survey items. The participant-nominated item ballot and suggestion text box help prepare future weekly surveys, and the survey includes a preview of the next 3 planned general topics.
+This week's topic is Divorce and Remarriage. The survey is intended for people who are currently or previously engaged in full-time ministry and should take fewer than ten minutes to complete. It uses 0-100 credence sliders for the live survey items. You will also have a chance to vote on nominated items for future surveys, suggest additional items, and preview the next 3 planned general topics.
 
 Thank you,
 
