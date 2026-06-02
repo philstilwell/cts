@@ -10,7 +10,7 @@ Each Weekly Survey is designed to include:
 2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote.
 3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.
 4. **A text box:** to suggest survey items to be voted on next week and possibly featured in the following week's survey.
-5. A previous-results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results.
+5. Last week's results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results and reports.
 6. A preview of upcoming topics: The topics for the next three weeks will be featured to allow for mental preparation.
 
 The 15 live survey items use credence sliders. The participant-nominated item ballot and suggestion text box are administrative inputs rather than survey-item responses.
