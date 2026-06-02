@@ -28,10 +28,11 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 ## Send The Survey
 
-1. Send the MailerLite heads-up email on Monday before the Thursday survey-link email.
+1. Send the MailerLite heads-up email on Monday before the Thursday survey-link email. For full survey launches, target only the `CTS Participants` group. For closed tests, target only `CTS Closed Test`.
 2. Send the Thursday survey-link email only after testing the SurveyOL link in a private browser/session.
 3. Send one reminder to non-respondents 24-48 hours after the Thursday survey-link email when appropriate. Do not over-message the list.
-4. Keep unsubscribe handling in MailerLite. Do not manually re-add unsubscribed contacts.
+4. Keep newsletter-only subscribers in the separate `CTS Newsletter` group. Use that group for report notices, topic previews, and general CTS updates; do not send weekly survey links to newsletter-only subscribers.
+5. Keep unsubscribe handling in MailerLite. Do not manually re-add unsubscribed contacts.
 
 ## Export And Report
 

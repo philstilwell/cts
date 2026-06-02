@@ -23,6 +23,14 @@ Independent live items and participant-nominated ballot items should be orthogon
 
 The regular send rhythm is a Monday heads-up email followed by the actual SurveyOL survey-link email on Thursday. The Monday email names the current topic and previews the next 3 planned general topics; the Thursday survey includes that same preview of upcoming topics inside the survey itself.
 
+## MailerLite Audience Groups
+
+- `CTS Participants`: survey participants who may receive weekly heads-up emails, survey links, and participant reminders.
+- `CTS Newsletter`: newsletter-only subscribers who may receive report notices, topic previews, and general CTS updates.
+- `CTS Closed Test`: temporary/internal test recipients.
+
+Do not send weekly survey links to `CTS Newsletter` unless a subscriber is also intentionally included in `CTS Participants`.
+
 The generated pages reflect the new WordPress pages updated on June 1, 2026:
 
 - Christian Thought Survey 2026

@@ -1,6 +1,16 @@
 # CTS MailerLite Send Plan
 
-Audience for full launch: `CTS Participants` group.
+## Audience Groups
+
+Current live MailerLite groups, verified June 2, 2026:
+
+- `CTS Participants`: 396 subscribers. Use for weekly survey heads-up emails, survey-link emails, and participant reminders.
+- `CTS Newsletter`: 0 subscribers. Use for newsletter-only subscribers who want CTS updates, report notices, and general project news but should not receive weekly survey links unless they also join the participant group.
+- `CTS Closed Test`: 2 subscribers. Use only for closed-test sends and internal verification.
+
+Full-launch survey audience: `CTS Participants` group.
+
+Newsletter/update audience: `CTS Newsletter` group. A person may belong to both `CTS Participants` and `CTS Newsletter`, but newsletter-only subscribers should not be added to `CTS Participants` unless they explicitly opt into weekly survey participation and fit the full-time ministry participation focus.
 
 Closed test recipients:
 
