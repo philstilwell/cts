@@ -90,6 +90,7 @@ Recommended sections:
 - A 15-item overview: 12 CTS-administered topic items plus 3 participant-vote-determined items.
 - Item cards with mean, median, sample size, and distribution.
 - A short "what ministers may notice" interpretation section.
+- A "Key tensions" section naming the items or themes where participants significantly disagree.
 - Ballot results showing which participant-nominated items were ranked highest.
 - The next 3 planned topics.
 - Methodology and privacy note.
@@ -115,7 +116,7 @@ Recommended content:
 - Topic name and week number.
 - Total completed responses.
 - Top 3 strongest consensus items.
-- Top 3 most contested items.
+- Top 3 key tensions or most contested items.
 - Mini distribution strips for all 15 live items.
 - Ballot winner list.
 - Respondent composition snapshot.
@@ -321,6 +322,27 @@ Use the sparkline in public results when there is enough data to make the distri
 - Slope charts when a recurring item is asked again in a later survey.
 - Ballot rank charts showing Borda score, first-place votes, and top-3 frequency.
 
+## Key Tensions
+
+Each weekly report should include a short "Key tensions" section when the data shows meaningful disagreement. This section should be descriptive and pastoral rather than combative: the point is to help ministers see where thoughtful participants are divided, not to manufacture controversy.
+
+Good candidates for "Key tensions":
+
+- Items with high interquartile range or standard deviation.
+- Items with visibly bimodal or multi-peaked distributions.
+- Items where a large share of responses cluster near both low and high credence values.
+- Items where subgroup medians diverge meaningfully and the subgroup counts pass privacy thresholds.
+- Items where the written interpretation reveals an unresolved practical or doctrinal tension.
+
+Recommended presentation:
+
+- Name 2-4 key tensions when they exist.
+- Pair each tension with one compact distribution chart.
+- Include the relevant `n`, median, and disagreement score.
+- Use neutral wording such as "Participants divided over..." or "A notable tension appeared around..."
+- Avoid implying that disagreement is bad; disagreement may identify an area where ministers need more careful categories.
+- If the week shows strong consensus and no major tension, say that directly instead of forcing a "Key tensions" section.
+
 ## Scatterplot And Correlation Reports
 
 Scatterplots should be available as a higher-value reporting tool when the sample size and data quality support them. They should not be a default element in every weekly report, because correlations can easily look more meaningful than they are.
@@ -382,7 +404,7 @@ Recommended workbook tabs:
 - `Raw Export`: private SurveyOL export pasted/imported without public identifiers removed yet.
 - `Clean Responses`: cleaned response table with names, emails, and direct identifiers removed or hidden.
 - `Buckets`: 10-bin counts for each 0-100 credence item.
-- `Stats`: n, mean, median, interquartile range, standard deviation, and disagreement score for each item.
+- `Stats`: n, mean, median, interquartile range, standard deviation, disagreement score, and key-tension flag for each item.
 - `Ballot`: ranked-choice or Borda-style summary for the participant-nominated ballot.
 - `Subgroups`: aggregate subgroup summaries that pass suppression thresholds.
 - `Public Charts`: screenshot-ready chart panels only.
@@ -403,7 +425,7 @@ Recommended public outputs:
 
 - A one-page dashboard screenshot for the weekly report.
 - A 15-item sparkline distribution grid.
-- A top-consensus/top-disagreement panel.
+- A top-consensus/key-tensions panel.
 - A scatterplot or correlation panel when the sample supports a useful relationship.
 - A ballot results panel.
 - A respondent composition panel when sample size permits.
@@ -433,7 +455,7 @@ Recommended visual direction:
 - Keep the CTS logo visible but modest.
 - Use the old blue section-bar motif as a subtle inheritance, not as the whole design language.
 - Use a restrained palette: dark text, white/light backgrounds, CTS blue, red accent, and one or two neutral comparison colors.
-- Make the first screen communicate the topic, n, strongest finding, and most contested finding.
+- Make the first screen communicate the topic, n, strongest finding, and most important key tension.
 - Use tight dashboard typography rather than oversized marketing-style headings.
 - Keep charts legible on mobile.
 - Use downloadable chart images for readers who want to share or quote one result.
@@ -450,6 +472,7 @@ Executive Summary
 - Key finding 1
 - Key finding 2
 - Key finding 3
+- Key tension, if one is significant enough to name early
 
 Participant Context
 - Current/former full-time ministry participant note
@@ -464,7 +487,7 @@ Participant Context
 Topic Analysis
 - Strongest agreement
 - Strongest disagreement
-- Most contested items
+- Key tensions / most contested items
 - Distribution patterns
 
 Subgroup Notes
