@@ -7,14 +7,14 @@ This project uses the WordPress.com REST API for automated publishing to the Chr
 When WordPress pages or posts describe a Weekly Survey, they should match the GitHub Pages language:
 
 1. One CTS-administered topic: 12 related survey items from the CTS topic bank.
-2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote.
-3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.
+2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote. These should be independent from the weekly CTS-administered topic.
+3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot. Ballot items should be clear, relevant, novel, independent from the weekly topic, and likely to generate meaningful disagreement or spread.
 4. A text box to suggest survey items to be voted on next week and possibly featured in the following week's survey.
 5. Last week's results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results and reports.
 
 All live survey items should be credence-based slider items. The only non-slider inputs should be the participant-nominated item ballot and suggestion text boxes.
 
-When describing the participant-nominated ballot, make clear that CTS reviews suggestions with AI assistance, polishes them for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance, and presents 7 ballot items for active participants to rank. The top 3 ranked items become live survey items in the following week's survey.
+When describing the participant-nominated ballot, make clear that CTS reviews suggestions with AI assistance, polishes them for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance, and presents 7 ballot items for active participants to rank. The top 3 ranked eligible items become live survey items in the following week's survey. The older 200-item CTS survey may be indexed as a reference pool for themes or seed ideas when useful, but current weekly items should be rewritten for clarity rather than copied mechanically.
 
 ## Authentication Model
 

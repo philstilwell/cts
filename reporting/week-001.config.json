@@ -115,22 +115,22 @@
       "id": "W001-Q13",
       "number": 13,
       "section": "participant_vote_seeded",
-      "source_columns": ["Q13", "Churches should provide written guidance explaining when separation may be pastorally appropriate even before a final divorce decision is made."],
-      "text": "Churches should provide written guidance explaining when separation may be pastorally appropriate even before a final divorce decision is made."
+      "source_columns": ["Q13", "Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise."],
+      "text": "Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise."
     },
     {
       "id": "W001-Q14",
       "number": 14,
       "section": "participant_vote_seeded",
-      "source_columns": ["Q14", "Pastors should normally consult trained counselors or abuse specialists before advising an abused spouse to pursue reconciliation."],
-      "text": "Pastors should normally consult trained counselors or abuse specialists before advising an abused spouse to pursue reconciliation."
+      "source_columns": ["Q14", "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship."],
+      "text": "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship."
     },
     {
       "id": "W001-Q15",
       "number": 15,
       "section": "participant_vote_seeded",
-      "source_columns": ["Q15", "Churches should distinguish between biblical forgiveness and restoring full marital trust after serious betrayal."],
-      "text": "Churches should distinguish between biblical forgiveness and restoring full marital trust after serious betrayal."
+      "source_columns": ["Q15", "Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox."],
+      "text": "Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox."
     }
   ]
 }

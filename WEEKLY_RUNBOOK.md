@@ -16,8 +16,8 @@ For the detailed participant-nominated ballot scoring and tie-breaking protocol,
 
 1. Select one CTS-administered topic from `CTS 2026 Weekly Topic Bank.md`.
 2. Add the narrow Featured Topic header image, then add the topic's 12 survey items as required 0-100 credence sliders.
-3. Add the narrow Independent Items header image, then add 3 participant-vote-determined live survey items from the previous week's ballot. For Week 1 only, use the seeded items in `WEEK_1_SURVEY_TEMPLATE.md`.
-4. Add the participant-nominated item ballot. Review participant suggestions with AI assistance, polish them for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance, and reduce them to 7 ballot items. If fewer than 7 suitable participant nominations are available, add AI-created seed items to complete the ballot.
+3. Add the narrow Independent Items header image, then add 3 participant-vote-determined live survey items from the previous week's ballot. These items should be semantically clear, orthogonal to the weekly CTS-administered topic, not copied from the current topic bank, and likely to generate meaningful tension or spread. For Week 1 only, use the seeded items in `WEEK_1_SURVEY_TEMPLATE.md`.
+4. Add the participant-nominated item ballot. Review participant suggestions with AI assistance, polish them for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance, and reduce them to 7 ballot items. If fewer than 7 suitable participant nominations are available, add AI-created seed items to complete the ballot. The older 200-item CTS survey may be indexed as a reference pool for themes or seed ideas, but ballot items should be rewritten for current clarity and should not be copied mechanically.
 5. Add a text box for future participant-nominated survey items.
 6. Add a brief previous-results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
 7. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
@@ -47,7 +47,7 @@ For the detailed participant-nominated ballot scoring and tie-breaking protocol,
 
 1. Rank the participant-nominated ballot results.
 2. Select the top 3 eligible ranked ballot items for the next week's live participant-vote-determined questions.
-3. Clean new text-box nominations into ballot-ready wording using the AI-assisted CTS review rubric: clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance.
+3. Clean new text-box nominations into ballot-ready wording using the AI-assisted CTS review rubric: clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance.
 4. Update the preview of upcoming topics from the topic bank before the Monday heads-up email.
 5. Save the next survey draft before sending any email.
 
@@ -55,6 +55,7 @@ For the detailed participant-nominated ballot scoring and tie-breaking protocol,
 
 - SurveyOL survey link works.
 - The first 15 live survey items are marked required in SurveyOL.
+- The 3 independent live items and 7 participant-nominated ballot items are orthogonal to the weekly topic, non-duplicative, clear, and likely to produce meaningful disagreement or spread.
 - MailerLite test email renders correctly.
 - Full-time ministry participation note appears on the website/contact materials and email copy.
 - Preview of upcoming topics appears inside SurveyOL and in the email copy.

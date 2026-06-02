@@ -25,8 +25,8 @@ Preview of upcoming topics for Week 1:
 ## Survey Sections
 
 1. One CTS-administered topic: Divorce and Remarriage, 12 credence slider items.
-2. Three Week 1 seeded participant-vote-determined live items, also credence sliders.
-3. A Week 1 seeded 7-item participant-nominated item ballot for pilot testing.
+2. Three Week 1 seeded independent live items, also credence sliders. These are intentionally orthogonal to the weekly topic and are not drawn from the CTS topic bank.
+3. A Week 1 seeded 7-item participant-nominated item ballot for pilot testing. Ballot items are intentionally orthogonal to the weekly topic and are not drawn from the CTS topic bank.
 4. A suggestion text box for future participant-nominated survey items.
 5. A previous-results placeholder with a link to the CTS reports page.
 6. A preview of upcoming topics.
@@ -48,13 +48,13 @@ Topic: Divorce and Remarriage
 11. Churches should treat immediate physical safety as a priority before pursuing marital reconciliation in abusive marriages.
 12. Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce.
 
-## B. Week 1 Seeded Participant-Vote-Determined Items
+## B. Week 1 Seeded Independent Items
 
-These are seeded for the closed test because there was no previous weekly participant vote.
+These are seeded for the closed test because there was no previous weekly participant vote. They are intentionally orthogonal to the Divorce and Remarriage topic and are not drawn from the CTS topic bank.
 
-13. Churches should provide written guidance explaining when separation may be pastorally appropriate even before a final divorce decision is made.
-14. Pastors should normally consult trained counselors or abuse specialists before advising an abused spouse to pursue reconciliation.
-15. Churches should distinguish between biblical forgiveness and restoring full marital trust after serious betrayal.
+13. Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise.
+14. Churches should encourage regular fasting as a normal expectation for mature Christian discipleship.
+15. Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox.
 
 ## C. Week 1 Seeded Participant-Nominated Item Ballot
 
@@ -62,21 +62,21 @@ Use a ranking question with 7 ballot items.
 
 Ballot process rule:
 
-Participant suggestions are reviewed by CTS with AI assistance, polished for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance, and reduced to a 7-item ballot. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot. Active participants rank the 7 ballot items; the top 3 ranked items become live participant-vote-determined survey items in the following week's survey.
+Participant suggestions are reviewed by CTS with AI assistance, polished for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance, and reduced to a 7-item ballot. Ballot items are not drawn from the CTS topic bank. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot. Active participants rank the 7 ballot items; the top 3 ranked items become live participant-vote-determined survey items in the following week's survey.
 
 Prompt:
 
-Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, and survey suitability. Each week's ballot will include the top 7 polished participant-nominated items; if fewer than 7 suitable participant nominations are available, CTS will add AI-created seed items to complete the ballot.
+Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Divorce and Remarriage topic and are not drawn from the CTS topic bank. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension. Each week's ballot will include the top 7 polished participant-nominated items; if fewer than 7 suitable participant nominations are available, CTS will add AI-created seed items to complete the ballot.
 
 Seeded ballot items:
 
-1. Churches should require premarital counseling that explicitly addresses abuse, coercion, and divorce.
-2. Pastors should teach more often on the difference between repentance and merely apologizing.
-3. Churches should maintain a written care process for spouses harmed by infidelity.
-4. Divorce and remarriage policies should be explained publicly before individual cases arise.
-5. Churches should provide confidential reporting paths for marital abuse concerns.
-6. Pastors should avoid pressuring separated spouses to reconcile before safety and trust have been addressed.
-7. Churches should clearly distinguish pastoral care for divorced members from automatic restoration to ministry leadership.
+1. A church should require formal membership before a person serves in any public ministry role.
+2. Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.
+3. Christians should avoid recreational marijuana use even where it is legal.
+4. Christian parents should consider a school's moral and religious formation more important than its academic quality.
+5. Churches should publicly repent for institutional failures even when current leaders were not personally involved.
+6. A church should refuse to host community events sponsored by groups that publicly oppose Christian sexual ethics.
+7. Pastors should avoid platforming guest speakers whose doctrine differs from the church on secondary issues.
 
 ## D. Suggestion Text Box
 
@@ -158,32 +158,30 @@ Churches should treat immediate physical safety as a priority before pursuing ma
 Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce.
 
 [Text]
-------------------------------
-Independent items
-The next 3 survey items are independent items rather than part of the main Divorce and Remarriage topic bank.
+The next 3 survey items are independent items. They are intentionally orthogonal to this week's Divorce and Remarriage topic and are not drawn from the CTS topic bank.
 
 [Slider][Required]
-Churches should provide written guidance explaining when separation may be pastorally appropriate even before a final divorce decision is made.
+Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise.
 
 [Slider][Required]
-Pastors should normally consult trained counselors or abuse specialists before advising an abused spouse to pursue reconciliation.
+Churches should encourage regular fasting as a normal expectation for mature Christian discipleship.
 
 [Slider][Required]
-Churches should distinguish between biblical forgiveness and restoring full marital trust after serious betrayal.
+Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox.
 ```
 
 ### Block 3
 
 ```text
 [Ranking][Required]
-Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, and survey suitability. Each week's ballot will include the top 7 polished participant-nominated items; if fewer than 7 suitable participant nominations are available, CTS will add AI-created seed items to complete the ballot.
-Churches should require premarital counseling that explicitly addresses abuse, coercion, and divorce.
-Pastors should teach more often on the difference between repentance and merely apologizing.
-Churches should maintain a written care process for spouses harmed by infidelity.
-Divorce and remarriage policies should be explained publicly before individual cases arise.
-Churches should provide confidential reporting paths for marital abuse concerns.
-Pastors should avoid pressuring separated spouses to reconcile before safety and trust have been addressed.
-Churches should clearly distinguish pastoral care for divorced members from automatic restoration to ministry leadership.
+Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Divorce and Remarriage topic and are not drawn from the CTS topic bank. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension. Each week's ballot will include the top 7 polished participant-nominated items; if fewer than 7 suitable participant nominations are available, CTS will add AI-created seed items to complete the ballot.
+A church should require formal membership before a person serves in any public ministry role.
+Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.
+Christians should avoid recreational marijuana use even where it is legal.
+Christian parents should consider a school's moral and religious formation more important than its academic quality.
+Churches should publicly repent for institutional failures even when current leaders were not personally involved.
+A church should refuse to host community events sponsored by groups that publicly oppose Christian sexual ethics.
+Pastors should avoid platforming guest speakers whose doctrine differs from the church on secondary issues.
 
 [Comment Box]
 Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100.

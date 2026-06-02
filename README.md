@@ -17,6 +17,8 @@ The 15 live survey items use credence sliders. The participant-nominated item ba
 
 Participant suggestions are reviewed by CTS with AI assistance, polished for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance, and reduced to a 7-item ballot. Active participants rank those 7 items; the top 3 ranked items become live participant-vote-determined survey items in the following week's survey.
 
+Independent live items and participant-nominated ballot items should be orthogonal to the weekly CTS-administered topic, non-duplicative, semantically clear, and likely to produce meaningful disagreement or spread. The older 200-item CTS survey may be indexed as a reference pool for themes or seed ideas when useful, but current weekly items should be rewritten for clarity rather than copied mechanically.
+
 ## Weekly Cadence
 
 The regular send rhythm is a Monday heads-up email followed by the actual SurveyOL survey-link email on Thursday. The Monday email names the current topic and previews the next 3 planned general topics; the Thursday survey includes that same preview of upcoming topics inside the survey itself.
@@ -37,6 +39,7 @@ Internal launch planning files:
 - `DATA_PIPELINE_PLAN.md`
 - `WEEKLY_REPORTING_STRATEGY.md`
 - `PARTICIPANT_NOMINATED_BALLOT_PROTOCOL.md`
+- `TOPIC_BANK_TENSION_REVIEW.md`
 - `MAILERLITE_SEND_PLAN.md`
 
 Run the static build with:

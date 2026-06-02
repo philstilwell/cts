@@ -9,15 +9,15 @@ For items involving civil law, education systems, public policy, or national ide
 Weekly survey assembly:
 
 1. One CTS-administered topic: 12 related survey items from the CTS topic bank.
-2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote.
-3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.
+2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote. These should be orthogonal to the weekly CTS-administered topic, non-duplicative, semantically clear, and likely to produce meaningful disagreement or spread.
+3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot. Ballot items should be orthogonal to the weekly topic and should not be copied from this topic bank.
 4. **A text box:** to suggest survey items to be voted on next week and possibly featured in the following week's survey.
 5. Last week's results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results and reports.
 6. A preview of upcoming topics: The topics for the next three weeks will be featured to allow for mental preparation.
 
 All survey items should be credence-based slider items. The participant-nominated item ballot and suggestion text box are administrative inputs rather than survey-item responses.
 
-Participant-nominated ballot protocol: CTS reviews participant suggestions with AI assistance, polishes nominations for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance, and reduces them to a 7-item ballot. Active participants rank those 7 items; the top 3 ranked items become live participant-vote-determined survey items in the following week's survey.
+Participant-nominated ballot protocol: CTS reviews participant suggestions with AI assistance, polishes nominations for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance, and reduces them to a 7-item ballot. Active participants rank those 7 items; the top 3 ranked items become live participant-vote-determined survey items in the following week's survey. The older 200-item CTS survey may be indexed as a reference pool for themes or seed ideas when needed, but current weekly ballot items should be rewritten for clarity rather than copied mechanically.
 
 ## 1. Divorce and Remarriage
 1. In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce.
