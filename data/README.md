@@ -1,0 +1,37 @@
+# CTS Data Pipeline Directories
+
+This directory separates private inputs from public report outputs.
+
+## Directory Layout
+
+- `data/private/`: ignored by git. Put raw SurveyOL exports, contact-level files, raw participant suggestions, and internal QA notes here.
+- `data/fixtures/`: committed synthetic files used to test the pipeline before real data exists.
+- `data/public/`: privacy-safe generated summaries and public chart data. These files may be committed when they are intended for GitHub Pages/public reporting.
+
+## Weekly Input Convention
+
+Put real weekly SurveyOL exports in:
+
+```text
+data/private/surveyol/week-001.csv
+```
+
+Then generate a public summary:
+
+```bash
+python3 scripts/cts_report_pipeline.py summarize \
+  --config reporting/week-001.config.json \
+  --input data/private/surveyol/week-001.csv \
+  --output data/public/week-001-summary.json
+```
+
+The generated summary should contain aggregate slider statistics and distribution series only. It must not contain names, email addresses, participant IDs, or raw free-text suggestions.
+
+## Dry Run With Synthetic Data
+
+```bash
+python3 scripts/cts_report_pipeline.py summarize \
+  --config reporting/week-001.config.json \
+  --input data/fixtures/week-001-surveyol-synthetic.csv \
+  --output /tmp/week-001-summary.synthetic.json
+```

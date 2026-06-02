@@ -33,11 +33,15 @@ For the detailed participant-nominated ballot scoring and tie-breaking protocol,
 ## Export And Report
 
 1. Export SurveyOL responses after the response window closes.
-2. Remove or separate names, email addresses, and direct identifiers before preparing public files.
-3. Summarize all 15 live slider items with count, mean, median, and distribution shape.
-4. Suppress or combine subgroup comparisons when counts are too small.
-5. Review free-text suggestions for accidental identifiers before using or publishing them.
-6. Publish the report on the primary CTS website and link it from the reports index.
+2. Save the private raw export in `data/private/surveyol/week-###.csv`. Do not commit raw exports.
+3. Generate the public summary JSON with `scripts/cts_report_pipeline.py` and the matching `reporting/week-###.config.json`.
+4. Review the generated summary's `quality` section for missing columns, non-numeric values, out-of-range values, and unexpectedly low counts.
+5. Remove or separate names, email addresses, and direct identifiers before preparing public files.
+6. Summarize all 15 live slider items with count, mean, median, and distribution shape, including the S23-style smoothed sparkline series when sample size permits.
+7. Identify key tensions where item-level disagreement is significant.
+8. Suppress or combine subgroup comparisons when counts are too small.
+9. Review free-text suggestions for accidental identifiers before using or publishing them.
+10. Publish the report on the primary CTS website and link it from the reports index.
 
 ## Prepare Next Week
 

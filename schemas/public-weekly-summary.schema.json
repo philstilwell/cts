@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://christianthoughtsurvey.com/schemas/public-weekly-summary.schema.json",
+  "title": "CTS Public Weekly Summary",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "week",
+    "topic",
+    "response_count",
+    "items",
+    "quality",
+    "private_data_excluded"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cts-weekly-summary-v0.1"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "week": {
+      "type": "string"
+    },
+    "title": {
+      "type": ["string", "null"]
+    },
+    "topic": {
+      "type": ["string", "null"]
+    },
+    "field_dates": {
+      "type": "object"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "slider_scale": {
+      "type": "object"
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "response_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "text", "n", "distribution", "key_tension"],
+        "properties": {
+          "id": {"type": "string"},
+          "number": {"type": ["integer", "null"]},
+          "section": {"type": ["string", "null"]},
+          "text": {"type": ["string", "null"]},
+          "source_column": {"type": ["string", "null"]},
+          "n": {"type": "integer", "minimum": 0},
+          "mean": {"type": ["number", "null"]},
+          "median": {"type": ["number", "null"]},
+          "min": {"type": ["number", "null"]},
+          "max": {"type": ["number", "null"]},
+          "q1": {"type": ["number", "null"]},
+          "q3": {"type": ["number", "null"]},
+          "iqr": {"type": ["number", "null"]},
+          "standard_deviation": {"type": ["number", "null"]},
+          "disagreement_score": {"type": ["number", "null"]},
+          "key_tension": {
+            "type": "object",
+            "required": ["flag", "reasons"],
+            "properties": {
+              "flag": {"type": "boolean"},
+              "reasons": {
+                "type": "array",
+                "items": {"type": "string"}
+              }
+            }
+          },
+          "distribution": {
+            "type": "object",
+            "required": ["cut_points", "simple_counts", "s23_bucket_counts", "s23_smoothed_percentages"],
+            "properties": {
+              "cut_points": {
+                "type": "array",
+                "items": {"type": "integer"}
+              },
+              "simple_counts": {
+                "type": "array",
+                "items": {"type": "integer"}
+              },
+              "s23_bucket_counts": {
+                "type": "array",
+                "items": {"type": "number"}
+              },
+              "s23_smoothed_percentages": {
+                "type": "array",
+                "items": {"type": "number"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "participant_nominations": {
+      "type": "object"
+    },
+    "quality": {
+      "type": "object"
+    },
+    "private_data_excluded": {
+      "const": true
+    }
+  }
+}
