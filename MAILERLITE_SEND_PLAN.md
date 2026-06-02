@@ -40,7 +40,7 @@ I've decided to revive the CTS project in a less demanding, more sustainable, an
 
 The expectation is that this weekly rhythm will provide timely insights to participating ministers in a dynamic age of shifting Christian doctrines and practices. Your responses will also help reflect the pulse of Christianity today.
 
-Our first weekly survey will focus on Divorce and Remarriage. It will include 12 related credence-slider items, three additional items on other relevant topics that will eventually be chosen by participants, a chance to vote on nominated items for future surveys, an item nomination text box, a previous-results link as the weekly cycle develops, and a preview of the next 3 planned general topics.
+Our first weekly survey will focus on Divorce and Remarriage. It will include 12 related credence-slider items, three independent items chosen for relevance and meaningful participant spread, a chance to vote on nominated items for future surveys, an item nomination text box, a previous-results link as the weekly cycle develops, and a preview of the next 3 planned general topics.
 
 Looking ahead, the next 3 planned CTS-administered topics are Pornography and the Church, Pastoral Authority and Accountability, and Women in Church Leadership.
 
@@ -72,7 +72,7 @@ https://www.surveyol.com/r/9A4F55F
 
 This week's topic is Divorce and Remarriage.
 
-The weekly surveys are intended for people who are currently or previously engaged in full-time ministry. We'll use 0-100 credence sliders for the survey items. You will also have a chance to vote on nominated items for future surveys, suggest additional items, and preview the next 3 planned general topics.
+The weekly surveys are intended for people who are currently or previously engaged in full-time ministry. We'll use 0-100 credence sliders for the survey items. You will also see three independent items chosen for relevance and meaningful participant spread, have a chance to vote on nominated items for future surveys, suggest additional items, and preview the next 3 planned general topics.
 
 Much appreciated,
 

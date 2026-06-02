@@ -8,6 +8,8 @@ This directory separates private inputs from public report outputs.
 - `data/fixtures/`: committed synthetic files used to test the pipeline before real data exists.
 - `data/public/`: privacy-safe generated summaries and public chart data. These files may be committed when they are intended for GitHub Pages/public reporting.
 
+`data/public/legacy-200-items.json` is a public reference index generated from the original WordPress item pages. It is used for seed-theme research, not for mechanically copying old items into the weekly survey cycle.
+
 ## Weekly Input Convention
 
 Put real weekly SurveyOL exports in:

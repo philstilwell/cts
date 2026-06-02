@@ -6,7 +6,7 @@ Use this protocol for the participant-nominated item ballot in each weekly CTS s
 
 The ballot keeps participant-generated questions in the weekly survey cycle while preserving CTS standards for clarity, neutrality, theological/pastoral relevance, and credence-slider suitability.
 
-Ballot items should also be intentionally orthogonal to the weekly CTS-administered topic. They should not be copied from the current 50-topic bank or from recent live survey items, though the older 200-item CTS survey may be indexed as a reference pool for possible themes or seed ideas when needed.
+Ballot items should also be intentionally orthogonal to the weekly CTS-administered topic. They should not be copied from the current 50-topic bank or from recent live survey items, though the older 200-item CTS survey may be indexed as a reference pool for possible themes or seed ideas when needed. Use `LEGACY_200_ITEM_INDEX.md` or `data/public/legacy-200-items.json` for that reference pool.
 
 ## Weekly Rule
 

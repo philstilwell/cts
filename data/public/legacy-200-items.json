@@ -1,0 +1,3239 @@
+[
+  {
+    "number": 1,
+    "title": "Item 1",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-1/",
+    "statement": "Less than 100% belief (full certainty) in the Gospel will not secure redemption.",
+    "tags": [
+      "Belief",
+      "Gospel",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "Do believers have a mechanism that can legitimately provide them full certainty on propositions outside their immediate sensations? What is that mechanism, and how was the reliability of that mechanism assessed?",
+      "Does salvific belief require going beyond the available evidence for the Gospel in some cases, and is this epistemic \"leaping\" beyond the evidence outside the bounds of rationality?",
+      "If salvific belief in the Gospel can be accomplished at less than full certainty, what is the epistemic threshold at which redemption is rewarded?",
+      "If someone honestly admits a sliver of doubt in the Gospel, is this person unredeemed?"
+    ],
+    "modified": "2022-12-30T23:06:06-05:00"
+  },
+  {
+    "number": 2,
+    "title": "Item 2",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-2/",
+    "statement": "The explosion in the availability of porn is the greatest single spiritual threat facing young Christians today.",
+    "tags": [
+      "Apostasy",
+      "Pleasure",
+      "Sin",
+      "Youth"
+    ],
+    "suggested_questions": [
+      "What damage does porn do to young believers?",
+      "Do Christians struggle less with pornography than non-believers?",
+      "What can Christians do to effectively combat the temptation of porn?",
+      "Does habitual porn consumption warrant the spouse's serious contemplation of divorce? [See item #152 ]"
+    ],
+    "modified": "2022-12-30T23:06:31-05:00"
+  },
+  {
+    "number": 3,
+    "title": "Item 3",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-3/",
+    "statement": "Christians who are doubting their faith should avoid examining arguments and evidence against Christianity.",
+    "tags": [
+      "Apostasy",
+      "Christianity",
+      "Doubt",
+      "Evidence",
+      "Faith"
+    ],
+    "suggested_questions": [
+      "Can doubt on any issue be a legitimate and rational permanent position, or does doubt always need to be resolved?",
+      "Is there any tension in the position of a Christian who maintains Muslims should read more about the Christian Gospel while encouraging their Christian friends to avoid Muslim books and proselytizers?",
+      "What kind of diet of books, publications, and media contrary to Christianity should Christians maintain if they wish to be both honest seekers and strong Christians?",
+      "Is it unhealthy to regularly (provisionally) discard the foundations of Christianity to see whether it can be successfully reconstructed?"
+    ],
+    "modified": "2023-01-06T16:00:55-05:00"
+  },
+  {
+    "number": 4,
+    "title": "Item 4",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-4/",
+    "statement": "Differences in moral opinions among Christians are due to our sinful natures and would not exist were everyone right with God.",
+    "tags": [
+      "Morality",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "What is the composition or balance of the various sources of moral knowledge available to us? (These sources might include the Holy Spirit, the Bible, or an innate moral sense.)",
+      "Can a Christian be truly blind to sin that may be producing their incorrect moral conclusions?",
+      "Are improper moral conclusions a reliable indicator of sin in the individual holding the improper conclusion, or are they more an indicator of poor shepherding or disciplining?"
+    ],
+    "modified": "2023-01-06T16:04:22-05:00"
+  },
+  {
+    "number": 5,
+    "title": "Item 5",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-5/",
+    "statement": "For Christians right with God, the guidance of the Holy Spirit cannot be confused with the deceptions of Satan.",
+    "tags": [
+      "Belief",
+      "Holy Spirit"
+    ],
+    "suggested_questions": [
+      "What is the process required to distinguish between the Holy Spirit and Satan? Is this process fool-proof?",
+      "What is the best biblical source for the proper procedure to rigorously \"try the spirits\"?"
+    ],
+    "modified": "2023-01-06T16:08:16-05:00"
+  },
+  {
+    "number": 6,
+    "title": "Item 6",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-6/",
+    "statement": "Humans can secure, but then later lose their salvation.",
+    "tags": [
+      "Apostasy",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "For those who lean affirmative on this item, do these humans clearly know both when they secure their salvation and lose their salvation?",
+      "What is the particular threshold at which a true believer will lose their salvation?",
+      "Is the threshold at which one will lose their salvation based on behaviors or based on the degree of belief?"
+    ],
+    "modified": "2023-01-06T16:12:51-05:00"
+  },
+  {
+    "number": 7,
+    "title": "Item 7",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-7/",
+    "statement": "It is rational to first explore whether a particular God and his alleged actions are moral before believing in and worshiping that God.",
+    "tags": [
+      "Morality",
+      "Rational",
+      "Seekers"
+    ],
+    "suggested_questions": [
+      "Are honest seekers bound by their commitment to rationality to first morally assess candidate Gods before believing in any of them?",
+      "Is there a legitimate standard of morality that we can use to assess candidate Gods for their moral character prior to believing in any of the candidate Gods? What is the source of that standard?",
+      "If a candidate God is known to have His followers throw living infants off the tops of mountains, can this candidate God be rationally rejected on some kind of clear and rigorous moral basis?"
+    ],
+    "modified": "2023-01-06T16:20:55-05:00"
+  },
+  {
+    "number": 8,
+    "title": "Item 8",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-8/",
+    "statement": "Unborn humans and born humans have equal value and deserve equal rights.",
+    "tags": [
+      "Abortion",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "Are the rights given to unborn humans derived from the Christian God, or are there secular arguments granting unborn humans their rights?",
+      "Is there any instance in which an unborn human can be killed, such as if/when other moral considerations take precedence?"
+    ],
+    "modified": "2023-01-06T16:25:49-05:00"
+  },
+  {
+    "number": 9,
+    "title": "Item 9",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-9/",
+    "statement": "An immersion-in-water baptism is essential for redemption.",
+    "tags": [
+      "Baptism",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "For those who lean affirmative on this item, does God make exceptions for believers who have little access to water?",
+      "If immersion-in-water baptism is merely a post-redemption command by God, what method and timeliness would constitute obedience to this command?"
+    ],
+    "modified": "2023-01-06T16:31:17-05:00"
+  },
+  {
+    "number": 10,
+    "title": "Item 10",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-10/",
+    "statement": "My understanding and practice of Christianity have become less conservative over the past five years.",
+    "tags": [
+      "Christianity",
+      "Conservative",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "Has your move to a less/more conservative understanding and practice of Christianity been caused by or resulted in a move to a less/more conservative congregation of believers?",
+      "Which of the following domains of belief have been trending more/less conservative? Inerrancy of Scriptures",
+      "Sexuality",
+      "Lifestyles (E.g., Alcohol, modesty, language)",
+      "Doctrinal orthodoxy/traditions",
+      "Sacraments/Ecclesiastical practices (E.g., Women in church leadership)",
+      "Notions of divine punishment (E.g., A literal burning Hell)",
+      "Requirements of redemption"
+    ],
+    "modified": "2023-01-16T16:49:06-05:00"
+  },
+  {
+    "number": 11,
+    "title": "Item 11",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-11/",
+    "statement": "We must sometimes ignore our moral intuitions to act truly morally.",
+    "tags": [
+      "Morality"
+    ],
+    "suggested_questions": [
+      "Can moral intuitions be wrong?",
+      "In spite of being occasionally wrong, are our moral intuitions useful?",
+      "How do moral intuitions fit into the constellation of moral tools that allow us to uncover moral facts?",
+      "What is the best way to distinguish moral intuition form mere emotions?"
+    ],
+    "modified": "2023-01-06T17:37:08-05:00"
+  },
+  {
+    "number": 12,
+    "title": "Item 12",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-12/",
+    "statement": "Most young people who abandon Christianity do so because they want to sin.",
+    "tags": [
+      "Apostasy",
+      "Rebellion",
+      "Sin",
+      "Youth"
+    ],
+    "suggested_questions": [
+      "Is there statistical data to demonstrate young people abandoning Christianity do so to satisfy their sinful desires?",
+      "If there is currently no available statistical data to uncover the reasons for apostasy among young people, how might we design a legitimate survey to reveal actual reasons for apostasy?",
+      "How might we respond to Muslims who claim Christians choose Christianity because they want to sin instead of following the high moral standards of Allah?"
+    ],
+    "modified": "2023-01-06T17:42:40-05:00"
+  },
+  {
+    "number": 13,
+    "title": "Item 13",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-13/",
+    "statement": "A high though not absolute (100%) degree of belief in the Gospel is sufficient for redemption.",
+    "tags": [
+      "Belief",
+      "Gospel",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "We may want to keep comments for this item and the three related items in the comments section for item #1."
+    ],
+    "modified": "2023-01-06T17:46:28-05:00"
+  },
+  {
+    "number": 14,
+    "title": "Item 14",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-14/",
+    "statement": "The pursuit of pleasure in this life while aware that millions within reach remain unGospelled is sinful.",
+    "tags": [
+      "Evangelism",
+      "Lifestyle",
+      "Pleasure",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Is the recent apparent decreasing passion for souls due to the recent move away from the notion of a literal burning Hell?",
+      "Should the lifestyles of the Apostles serve as an example to those who have a passion for souls today?",
+      "What degree of pursuit for earthly comforts and pleasures while millions are perishing clearly constitutes sin?"
+    ],
+    "modified": "2023-01-06T17:52:12-05:00"
+  },
+  {
+    "number": 15,
+    "title": "Item 15",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-15/",
+    "statement": "An eternally painful punishment for even one sin is justified due to God's perfect righteousness.",
+    "tags": [
+      "Punishment",
+      "Righteousness",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Does perfect righteousness logically require eternal painful punishment for sinners?",
+      "How do we answer the common refrain that infinite punishment for finite sins is intrinsically unjust?"
+    ],
+    "modified": "2023-01-06T17:57:59-05:00"
+  },
+  {
+    "number": 16,
+    "title": "Item 16",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-16/",
+    "statement": "Being made in the \"image of God\" refers to humans' moral perception reflecting God's moral standard.",
+    "tags": [
+      "God&#039;s Image",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "Can our moral perception, given the degree of its inaccuracy, be considered a reflection of God's moral perception?"
+    ],
+    "modified": "2023-01-14T16:21:49-05:00"
+  },
+  {
+    "number": 17,
+    "title": "Item 17",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-17/",
+    "statement": "Learning the original biblical languages, such as Hebrew and Greek, is necessary for a proper interpretation of the Scriptures.",
+    "tags": [
+      "Bible",
+      "Doctrines"
+    ],
+    "suggested_questions": [
+      "Is it reasonable to expect every pastor to have a grasp of the original languages?",
+      "Do those well-versed in the original languages more commonly converge on single doctrinal positions?"
+    ],
+    "modified": "2023-01-06T18:03:55-05:00"
+  },
+  {
+    "number": 18,
+    "title": "Item 18",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-18/",
+    "statement": "Setting up a theocracy in a country would be contrary to God's plan today.",
+    "tags": [
+      "Government"
+    ],
+    "suggested_questions": [
+      "What degree of political involvement is proper for Christians today?",
+      "How should Christians respond to governments that attempt to set up a Christian theocracy?",
+      "Should Christians or Muslims attempt to establish as law their standards of modesty or decency?"
+    ],
+    "modified": "2023-01-06T18:07:32-05:00"
+  },
+  {
+    "number": 19,
+    "title": "Item 19",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-19/",
+    "statement": "Over 50% of genuine Christians today attend religious services primarily to be entertained.",
+    "tags": [
+      "Believers",
+      "Church",
+      "Pleasure"
+    ],
+    "suggested_questions": [
+      "Should aesthetics be considered when a congregation is 1) planning the construction of a building in which to meet, 2) hiring a pastor, or when buying musical instruments?",
+      "All things being equal, is it better to have a good-looking and humorous pastor who will attract more people to the services?"
+    ],
+    "modified": "2023-01-06T18:14:05-05:00"
+  },
+  {
+    "number": 20,
+    "title": "Item 20",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-20/",
+    "statement": "Intentionally consuming alcohol is sinful.",
+    "tags": [
+      "Lifestyle",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Not that many decades ago, many Christians condemned the consumption of alcohol. What changed?",
+      "Is intoxication the proper threshold at which drinking becomes sinful?"
+    ],
+    "modified": "2023-01-06T18:16:46-05:00"
+  },
+  {
+    "number": 21,
+    "title": "Item 21",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-21/",
+    "statement": "Homosexual acts are always sinful.",
+    "tags": [
+      "Lifestyle",
+      "Sex",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "In the Bible, homosexuality was causally tied to the destruction of the offending society. Can we make testable predictions today based on the increase in homosexuality?",
+      "Are modern Christian correct in their acceptance of those with homosexual desires who do not act on their desires?"
+    ],
+    "modified": "2023-01-06T18:25:17-05:00"
+  },
+  {
+    "number": 22,
+    "title": "Item 22",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-22/",
+    "statement": "A sudden rapture of Christians into Heaven will occur within 20 years.",
+    "tags": [
+      "Believers",
+      "Future",
+      "Heaven"
+    ],
+    "suggested_questions": [
+      "Will the bodies of those raptured be transformed into something different from their earthly bodies prior to their ascension?",
+      "What signs are most indicative of the return of Jesus?",
+      "What has led to the apparent recent drop in the number of prophecies of an end-times date?",
+      "Are the perennial expectations of the return of Jesus across generations a reason to doubt the promise or the interpretation of the promise?"
+    ],
+    "modified": "2023-01-06T18:38:57-05:00"
+  },
+  {
+    "number": 23,
+    "title": "Item 23",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-23/",
+    "statement": "Musical performances are overused in Christian churches today.",
+    "tags": [
+      "Church",
+      "Pleasure"
+    ],
+    "suggested_questions": [
+      "Is the evoking of emotions with music and other aesthetics to complement the moving of the Holy Spirit proper?",
+      "Are there musical genres that are intrinsically satanic or ungodly?",
+      "Is it proper to introduce music to the congregation that was produced by someone who was during the creation of the music or who is now an apostate?"
+    ],
+    "modified": "2023-01-06T18:39:41-05:00"
+  },
+  {
+    "number": 24,
+    "title": "Item 24",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-24/",
+    "statement": "It is possible that what I feel are moral intuitions are merely my emotions.",
+    "tags": [
+      "Emotions",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "Are there passages in Scripture that instruct us how to distinguish between our emotions and the moving of the Holy Spirit?",
+      "Many of the Israelite soldiers likely had to ignore or block out their moral intuitions when asked to kill Canaanite kids. What might be an effective technique or approach to use when we also have to violate our moral intuitions?",
+      "Is there a process through which one can exercise their moral faculties to eliminate emotional bias to arrive at clear moral knowledge?"
+    ],
+    "modified": "2023-01-06T18:47:03-05:00"
+  },
+  {
+    "number": 25,
+    "title": "Item 25",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-25/",
+    "statement": "There are fewer incidences of illnesses and early deaths among true Christians than among non-Christians.",
+    "tags": [
+      "Believers",
+      "Health",
+      "Promises"
+    ],
+    "suggested_questions": [
+      "Will the recent COVID crisis eventually reveal that fewer Christians or more devoted Christians died at much lower rates than did the general population?",
+      "To what degree and in what way is the promise that God's eye is on both the sparrow and those he loves detectable?"
+    ],
+    "modified": "2023-01-06T18:51:29-05:00"
+  },
+  {
+    "number": 26,
+    "title": "Item 26",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-26/",
+    "statement": "I have found no argument against the God of the Bible worth taking seriously.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "What is the significance of those with more years in ministry being more likely to encounter arguments against the Bible worth taking seriously?",
+      "Should the average Christian be more exposed or less exposed to arguments against the God of the Bible?"
+    ],
+    "modified": "2023-01-06T19:03:22-05:00"
+  },
+  {
+    "number": 27,
+    "title": "Item 27",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-27/",
+    "statement": "God does not publicly heal amputees in order to avoid the elimination of our free will to choose or reject Him.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Free will",
+      "Health"
+    ],
+    "suggested_questions": [
+      "Does undeniable evidence of God take away our free will to refuse to follow God? Or can someone convinced that God exists still reject God?",
+      "Why do miracles seem to be confined to the boundary of what is physically possible such as a remission or elimination of cancer, instead of the healing of amputees or the resurrection of someone dead for several weeks?",
+      "Are healings tightly tied to the degree of faith in the one praying for healing? If so, can this correlation be made rigorous in a study?"
+    ],
+    "modified": "2023-01-06T19:10:20-05:00"
+  },
+  {
+    "number": 28,
+    "title": "Item 28",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-28/",
+    "statement": "Introducing sex toys and costumes into a Christian marriage is sinful.",
+    "tags": [
+      "Marriage",
+      "Sex",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "For those leaning towards the affirmative on this item, what is the source of your moral code on this?",
+      "Is dressing your spouse up to appear very distant from who they actually are to make them more sexually appealing sinful?"
+    ],
+    "modified": "2023-01-06T19:15:23-05:00"
+  },
+  {
+    "number": 29,
+    "title": "Item 29",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-29/",
+    "statement": "Unbelievers without the cosmic meaning the Christian God provides feel hopeless and emotionally unsatisfied.",
+    "tags": [
+      "Emotions",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "How can we rigorously test this notion? Or is such a test impossible since it cannot be known when unbelievers are lying?",
+      "Is it possible that personal meaning derived from children or the compassionate assistance of others can eliminate the longing for cosmic meaning?"
+    ],
+    "modified": "2023-01-06T19:21:20-05:00"
+  },
+  {
+    "number": 30,
+    "title": "Item 30",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-30/",
+    "statement": "Had God the Father not resurrected Jesus until 100 days after his death, He would have been unjust.",
+    "tags": [
+      "Jesus",
+      "Justice",
+      "Redemption",
+      "Resurrection"
+    ],
+    "suggested_questions": [
+      "How long could God have kept Jesus dead before He would have been unjust?",
+      "Had God kept Jesus eternally dead, would He have been unjust?",
+      "Is the critical notion here the need for Jesus to die? Could he have been resurrected minutes after his death and still have accomplished redemption for sinners?",
+      "What is the actual calculus for redemption? What was the debt, and what was the payment?"
+    ],
+    "modified": "2023-01-06T19:26:26-05:00"
+  },
+  {
+    "number": 31,
+    "title": "Item 31",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-31/",
+    "statement": "The Earth is flat, not spherical.",
+    "tags": [
+      "Evidence",
+      "Science"
+    ],
+    "suggested_questions": [
+      "It might be interesting to imagine responses to this item 1,500 years ago. What might have been the reasoning offered by those believing in a flat Earth?"
+    ],
+    "modified": "2023-01-10T15:40:49-05:00"
+  },
+  {
+    "number": 32,
+    "title": "Item 32",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-32/",
+    "statement": "The ethnic distribution in my local congregation largely reflects the ethnic balance found in my community.",
+    "tags": [
+      "Church"
+    ],
+    "suggested_questions": [
+      "Is it proper and expected that ethnic groups would form their own environments of worship, even though they are worshiping the same God?",
+      "What advantages does a more integrated church have?"
+    ],
+    "modified": "2023-01-10T15:42:25-05:00"
+  },
+  {
+    "number": 33,
+    "title": "Item 33",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-33/",
+    "statement": "Christians in Heaven will not shed tears for the damned because they will have the perfectly just mind of God.",
+    "tags": [
+      "Emotions",
+      "Heaven",
+      "Justice",
+      "Suffering"
+    ],
+    "suggested_questions": [
+      "Some skeptics of an excruciatingly painful Hell might claim the longer that your loved one is tormented in Hell, the more difficult it will be to hold back tears and the notion that there is something unjust about the punishment. Will God transform our minds to experience the same wrath towards sinners that He experiences? If not, how might Heaven remain enjoyable?"
+    ],
+    "modified": "2023-01-10T15:48:35-05:00"
+  },
+  {
+    "number": 34,
+    "title": "Item 34",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-34/",
+    "statement": "The large number of professed Christians is a good argument for the truth of the Gospel.",
+    "tags": [
+      "Evidence",
+      "Gospel"
+    ],
+    "suggested_questions": [
+      "Is the popularity of Christianity ever a good argument for its veracity?",
+      "What implication does the notion that \"narrow is the way\" have on the claim that Christianity's popularity speaks to its truth?"
+    ],
+    "modified": "2023-01-10T15:51:15-05:00"
+  },
+  {
+    "number": 35,
+    "title": "Item 35",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-35/",
+    "statement": "Anal sex is sinful, even with a spouse.",
+    "tags": [
+      "Marriage",
+      "Sex",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Why are Christian men and Christian women so split on this moral question?",
+      "Is there a clear and unequivocal moral standard that might quickly resolve this moral quandary?"
+    ],
+    "modified": "2023-01-10T16:01:33-05:00"
+  },
+  {
+    "number": 36,
+    "title": "Item 36",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-36/",
+    "statement": "Refusing to fight for one's country in a justified war is sinful.",
+    "tags": [
+      "Government",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Are we morally obliged to fight for our country in a just war?",
+      "What is the moral calculus that would ground this moral obligation?"
+    ],
+    "modified": "2023-01-10T16:17:59-05:00"
+  },
+  {
+    "number": 37,
+    "title": "Item 37",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-37/",
+    "statement": "I adjust my degree of belief in God up and down to map to the degree of the confirming/disconfirming evidence for God I encounter.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Personal",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "We adjust our degree of certainty up and down based on confirming and disconfirming evidence in other inquiries in life. What makes the inquiry into considerations of candidate Gods or of the Christian God different?",
+      "Is there any other domain of life in which a binary \"I believe\" or \"I disbelieve\" yields better results than the more nuanced mapping of our degree of belief to the degree of the evidence?",
+      "Would the author of rationality ask us to give up rational belief in which we adjust our degree of belief to map to the degree of the relevant evidence in respect to our belief in Him?"
+    ],
+    "modified": "2023-01-10T16:29:52-05:00"
+  },
+  {
+    "number": 38,
+    "title": "Item 38",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-38/",
+    "statement": "The satisfaction of human emotions, such as the hope for an afterlife and the desire for forgiveness, is evidence of the Gospel's truth.",
+    "tags": [
+      "Emotions",
+      "Evidence",
+      "Gospel"
+    ],
+    "suggested_questions": [
+      "Some writers, such as CS Lewis, have suggested that the existence of our emotions implies the necessity of the fulfillment of our emotions. What is the rigorous argument behind this idea?",
+      "Other religions competing with Christianity have often been accused of promoting their religion by highlighting all the emotional needs their religion can allegedly fulfill. Could they also use a formulation of the argument that the existence of emotions implies a necessary fulfillment of those emotions?"
+    ],
+    "modified": "2023-01-10T16:35:19-05:00"
+  },
+  {
+    "number": 39,
+    "title": "Item 39",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-39/",
+    "statement": "I have doubts about the truth of Christianity about once a month.",
+    "tags": [
+      "Belief",
+      "Christianity",
+      "Doubt",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "Is there something intrinsically sinful or irrational about doubting the existence of God?",
+      "Is it healthy to regularly review from the foundation of one's faith? Or is it something to be avoided?"
+    ],
+    "modified": "2023-01-10T16:37:40-05:00"
+  },
+  {
+    "number": 40,
+    "title": "Item 40",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-40/",
+    "statement": "Christianity becomes more likely true if a major competing ideology is demonstrated to be false.",
+    "tags": [
+      "Christianity",
+      "Evidence",
+      "Gospel"
+    ],
+    "suggested_questions": [
+      "Does the possibly infinite number of ideologies in competition with Christianity make this notion logically/mathematically untrue?",
+      "Do you think Christian apologists too often lean on this notion (either explicitly or implicitly) when focusing on the flaws in major competing ideologies today? In other words, do they believe they have defended Christianity if they simply point out the transparent incoherencies in other ideologies?"
+    ],
+    "modified": "2023-01-10T16:54:21-05:00"
+  },
+  {
+    "number": 41,
+    "title": "Item 41",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-41/",
+    "statement": "It is sinful to attempt to statistically test the promises God gave Christians for this earthly life.",
+    "tags": [
+      "Believers",
+      "Evidence",
+      "Promises"
+    ],
+    "suggested_questions": [
+      "Since the continued faithfulness of God (an inductive result) is often invoked as evidence for God, is there anything that would make a rigorous quantification of this continued faithfulness of God sinful?",
+      "Many characters in the Bible explicitly tested God in some way. Has such testing become anathema to God for post-Jesus believers?",
+      "Did Elijah violate any divine injunction not to test God when he set up the contest with the false prophets?"
+    ],
+    "modified": "2023-01-10T17:03:05-05:00"
+  },
+  {
+    "number": 42,
+    "title": "Item 42",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-42/",
+    "statement": "Acupuncture and homeopathy have real medicinal value.",
+    "tags": [
+      "Evidence",
+      "Lifestyle",
+      "Science"
+    ],
+    "suggested_questions": [
+      "Do Christian need more education in proper standards of evidence?",
+      "Are Christians more inclined to follow alternative medicine? If so, why?"
+    ],
+    "modified": "2023-01-10T17:04:28-05:00"
+  },
+  {
+    "number": 43,
+    "title": "Item 43",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-43/",
+    "statement": "There will be a rapture of Christians to Heaven before serious tribulation is unleashed on the Earth.",
+    "tags": [
+      "Believers",
+      "Future",
+      "Heaven"
+    ],
+    "suggested_questions": [
+      "Will Jesus and the Saints travel through literal space to Heaven? If not, why would there need to be a meeting in the air?",
+      "Was there an improper translation of \"quickly\" in Revelations 22:12? Could not the word have instead been \"slowly\" if \"a day is like a thousand years\"? Would this not have provided more or equivalent exegetical content?",
+      "Under what conditions can a generation of Christians honestly believe Christ will return within their generation?"
+    ],
+    "modified": "2023-01-10T17:16:18-05:00"
+  },
+  {
+    "number": 44,
+    "title": "Item 44",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-44/",
+    "statement": "Christian parents should completely sever ties with their apostate children.",
+    "tags": [
+      "Family",
+      "Unbelievers",
+      "Youth"
+    ],
+    "suggested_questions": [
+      "Are the injunctions to refrain from eating and fellowshipping with apostate Christians also applicable to apostate children? Why or why not?"
+    ],
+    "modified": "2023-01-10T18:08:15-05:00"
+  },
+  {
+    "number": 45,
+    "title": "Item 45",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-45/",
+    "statement": "The absurdity of a universe with no moral standard makes the existence of a moral law-giver logically necessary.",
+    "tags": [
+      "Evidence",
+      "Logic",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "What logical argument makes a moral law-giver logically necessary? Could God have created a universe in which he found no need to impose morality on the creatures within that universe?",
+      "Is it just the existence of humans in our universe that makes morality necessary, or would a universe with only lesser animals require a moral law-giver? If so, what is the critical distinction?"
+    ],
+    "modified": "2023-01-10T18:12:53-05:00"
+  },
+  {
+    "number": 46,
+    "title": "Item 46",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-46/",
+    "statement": "Civil marriages performed without reference to God are legitimate marriages in the eyes of God.",
+    "tags": [
+      "Government",
+      "Marriage",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "What elements comprise the full set of requisites that would legitimate a marriage?",
+      "If invoking God in the ceremony is not necessary, what authority or principle could be invoked that would legitimize the commitment?"
+    ],
+    "modified": "2023-01-10T18:29:42-05:00"
+  },
+  {
+    "number": 47,
+    "title": "Item 47",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-47/",
+    "statement": "Most teens in Christian families should be sent to a Christian high school or be home-schooled.",
+    "tags": [
+      "Family",
+      "Youth"
+    ],
+    "suggested_questions": [
+      "What are the primary reasons for church schools or home-schooling today?",
+      "What negative consequences are there for children who are church schooled or home-schooled?"
+    ],
+    "modified": "2023-01-10T18:31:13-05:00"
+  },
+  {
+    "number": 48,
+    "title": "Item 48",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-48/",
+    "statement": "The main weekly service should primarily be a time for evangelism.",
+    "tags": [
+      "Church",
+      "Evangelism"
+    ],
+    "suggested_questions": [
+      "When and where are legitimate times and places for evangelism?",
+      "Should congregation members invite unbelievers to worship with them?"
+    ],
+    "modified": "2023-01-16T16:06:23-05:00"
+  },
+  {
+    "number": 49,
+    "title": "Item 49",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-49/",
+    "statement": "All of the Gospels were written within twenty years of the crucifixion.",
+    "tags": [
+      "Bible",
+      "Evidence"
+    ],
+    "suggested_questions": [
+      "Is understanding the history of the written Gospels at all important to the decision whether or not to believe in the Gospel?",
+      "Do ministers spend enough time teaching the history of the Gospels?"
+    ],
+    "modified": "2023-01-10T18:39:26-05:00"
+  },
+  {
+    "number": 50,
+    "title": "Item 50",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-50/",
+    "statement": "Humans can sincerely believe they have been redeemed when they have not been.",
+    "tags": [
+      "Belief",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "How might it be possible for an sincere person to fail to realize they have not actually been redeemed?",
+      "Does an affirmative response to this item entail that someone can \"know\" in their heart they are redeemed, and yet be wrong?",
+      "How can we detect those who are certain they are redeemed, yet who are actually not?",
+      "How can we convince someone who is certain they are redeemed that they are actually not?"
+    ],
+    "modified": "2023-01-10T18:54:16-05:00"
+  },
+  {
+    "number": 51,
+    "title": "Item 51",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-51/",
+    "statement": "Church leaders should study philosophy in addition to the Bible.",
+    "tags": [
+      "Bible",
+      "Pastoring"
+    ],
+    "suggested_questions": [
+      "There has been a renaissance of philosophy within many branches of Christianity that once disparaged it. Is this trend generally positive?",
+      "When the Scriptures refer to \"vain philosophies\" in Colossians 2:8, what precisely is it referring to?"
+    ],
+    "modified": "2023-01-10T18:50:26-05:00"
+  },
+  {
+    "number": 52,
+    "title": "Item 52",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-52/",
+    "statement": "Christians can never be fully certain they have been redeemed.",
+    "tags": [
+      "Belief",
+      "Promises",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "There appears to be some tension between the bulk of the credences on this item and item #50. How can we resolve this apparent tension?"
+    ],
+    "modified": "2023-01-10T18:53:30-05:00"
+  },
+  {
+    "number": 53,
+    "title": "Item 53",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-53/",
+    "statement": "There are cases in which one can know with full certainty that God will answer their prayer as requested.",
+    "tags": [
+      "Belief",
+      "Prayer",
+      "Promises"
+    ],
+    "suggested_questions": [
+      "What are the conditions in these cases in which you can know your petitionary prayer will be answered?",
+      "James, in the context of petitionary prayer, claims doubt of any degree should not be present. How might this be reconciled with the notion we can never know with full certainty that our petitionary prayer will be answered as requested? (James 1:6) Is the \"lack of doubt\" and \"full certainty\" different in some way?",
+      "Based on James 1:6, shouldn't we have full certainty that our petitionary prayers will be answered?"
+    ],
+    "modified": "2023-01-10T19:02:37-05:00"
+  },
+  {
+    "number": 54,
+    "title": "Item 54",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-54/",
+    "statement": "Women should not teach men on spiritual topics in the local church.",
+    "tags": [
+      "Church",
+      "Gender",
+      "Pastoring"
+    ],
+    "suggested_questions": [
+      "Is there a clear Scriptural delineation between contexts in which women can teach men and contexts in which they cannot teach men?",
+      "Is there a rational reason other than the fact Adam was created before Eve and that Eve was deceived to refuse to allow women to teach men?"
+    ],
+    "modified": "2023-01-10T19:06:21-05:00"
+  },
+  {
+    "number": 55,
+    "title": "Item 55",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-55/",
+    "statement": "A 50% degree of confidence in the Gospel is sufficient for redemption.",
+    "tags": [
+      "Belief",
+      "Gospel",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "Is this a wholly arbitrary threshold for the degree of sufficient belief, or is there something substantial about the 50% mark?",
+      "Can a child with an Islamic father and a Christian mother simply split their confidence between the two candidate faiths to hedge their bets? How about a 1%/99% split in favor of the Christian God?"
+    ],
+    "modified": "2023-01-10T19:12:21-05:00"
+  },
+  {
+    "number": 56,
+    "title": "Item 56",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-56/",
+    "statement": "A \"mustard seed\" degree of belief in the Gospel is sufficient for redemption.",
+    "tags": [
+      "Belief",
+      "Gospel",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "In the attached graphic, survey participants provided credences that positioned the faith of a mustard seed above even a \"high\" degree of belief. Was not the use of \"mustard seed\" employed by Jesus to make it very clear that the degree of faith was not high?"
+    ],
+    "modified": "2023-01-10T19:18:18-05:00"
+  },
+  {
+    "number": 57,
+    "title": "Item 57",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-57/",
+    "statement": "Christians who are doubting their faith should surround themselves with strong Christians to reduce their doubt.",
+    "tags": [
+      "Belief",
+      "Believers",
+      "Doubt",
+      "Faith"
+    ],
+    "suggested_questions": [
+      "Can we also recommend that Muslims doubting their faith surround themselves with strong Muslims to reduce their doubt? What is an impartial, relevant principle we can provide all honest seekers? Is there one? Need there be one? Why or why not?",
+      "Should we also recommend that doubters read books written in support of other faiths or non-belief?"
+    ],
+    "modified": "2023-01-10T19:24:18-05:00"
+  },
+  {
+    "number": 58,
+    "title": "Item 58",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-58/",
+    "statement": "Praying earnestly to a proposed God in the hope that he will reveal himself is an irrational way to assess his existence.",
+    "tags": [
+      "Evidence",
+      "Prayer",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "Should this principle/practice be applied to all candidate Gods, such as Allah and the Hindu gods?",
+      "How can we coherently answer Muslims who claim to have come to Allah in this way?",
+      "Is there any danger that 1) yearning for a God you don't currently believe in and 2) praying to that God in the hope he will give you recognition of this existence will lead to a false conclusion that He is real?"
+    ],
+    "modified": "2023-01-10T19:30:17-05:00"
+  },
+  {
+    "number": 59,
+    "title": "Item 59",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-59/",
+    "statement": "Unredeemed sinners deserve eternal torment.",
+    "tags": [
+      "Justice",
+      "Punishment",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Is there any type of coherent calculus we can invoke when determining what offense deserves what punishment?",
+      "Is this punishment of eternal torment based on justice, or is it based on God's wrathful nature?",
+      "What is the argument against the simple divine forgiveness of offenses that humans find possible?",
+      "Should not parents, instead of snickering at their children's chocolate-faced lies about the missing cookies, severely punish such children as consistently as possible with the punishment God deems appropriate for the offense?"
+    ],
+    "modified": "2023-01-10T19:37:51-05:00"
+  },
+  {
+    "number": 60,
+    "title": "Item 60",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-60/",
+    "statement": "Christians who are doubting Christianity should not seek out or re-examine arguments and evidence against Christianity.",
+    "tags": [
+      "Christianity",
+      "Doubt",
+      "Evidence",
+      "Gospel"
+    ],
+    "suggested_questions": [
+      "Is there any duty for Christians to hide the existence of materials that might lead weaker Christians away from God?",
+      "Is there a relevant, universal principle consistent across both Christianity and Islam that could be applied to weak Christians and weak Muslims alike?"
+    ],
+    "modified": "2023-01-10T19:42:11-05:00"
+  },
+  {
+    "number": 61,
+    "title": "Item 61",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-61/",
+    "statement": "Christians can know with high certainty whether any suffering they experience is due to sin, chance, or divine testing.",
+    "tags": [
+      "Belief",
+      "Believers",
+      "Punishment",
+      "Suffering"
+    ],
+    "suggested_questions": [
+      "Will God ever send suffering as punishment without making it very clear the suffering is punishment for sin?",
+      "Can Christians ever know with certainty the reason for their suffering?"
+    ],
+    "modified": "2023-01-11T14:57:05-05:00"
+  },
+  {
+    "number": 62,
+    "title": "Item 62",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-62/",
+    "statement": "In ten years, fewer true Christians will be regularly attending a physical church.",
+    "tags": [
+      "Believers",
+      "Church",
+      "Future"
+    ],
+    "suggested_questions": [
+      "What are the emerging alternatives to physical churches?",
+      "Is the physical meeting of believers a biblical mandate in this age of digital interactions?",
+      "Would returning to fellowship in homes be an acceptable option to meeting in buildings collectively purchased by attendees?",
+      "Are there any natural limits to the size of a congregation?"
+    ],
+    "modified": "2023-01-11T15:02:01-05:00"
+  },
+  {
+    "number": 63,
+    "title": "Item 63",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-63/",
+    "statement": "Humans have no epistemic obligation to apply rigorous standards of evidence in their assessments of candidate Gods.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Seekers"
+    ],
+    "suggested_questions": [
+      "What is the best passage of Scripture that establishes standards of evidence when choosing between candidate Gods?",
+      "Would it be appropriate to take a leap of faith toward a particular candidate God when the standards of evidence yield no strong conclusion? And how might we determine to which candidate God we should apply this leap of faith?"
+    ],
+    "modified": "2023-01-11T15:06:41-05:00"
+  },
+  {
+    "number": 64,
+    "title": "Item 64",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-64/",
+    "statement": "As can be shown statistically, believers live healthier lives due to the help of the Holy Spirit to live righteously.",
+    "tags": [
+      "Evidence",
+      "Health",
+      "Holy Spirit",
+      "Righteousness"
+    ],
+    "suggested_questions": [
+      "If you were to design a study that might demonstrate the power of the Holy Spirit results in healthier lives for believers, what would be the essential components of that study?",
+      "Will the assistance to the human will of the Holy Spirit be consistent across cultures? Or do some cultures have social expectations that could outperform the strength of will provided by the Holy Spirit?"
+    ],
+    "modified": "2023-01-11T15:11:22-05:00"
+  },
+  {
+    "number": 65,
+    "title": "Item 65",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-65/",
+    "statement": "Everyone holds a degree of confidence above the degree of the relevant evidence for at least some propositions.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "Based on the responses, humans cannot limit their degrees of confidence to the degree of the relevant evidence. What is the reason behind this inability to restrain belief to the degree of the evidence?",
+      "If someone told you they honestly limited their degree of confidence to the degree of the relevant evidence, how would you verbally respond or show them they were wrong?"
+    ],
+    "modified": "2023-01-11T15:15:28-05:00"
+  },
+  {
+    "number": 66,
+    "title": "Item 66",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-66/",
+    "statement": "If God were to indisputably reveal his existence to someone, this would eliminate their free will.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Free will"
+    ],
+    "suggested_questions": [
+      "Based on the responses, God is not hidden or silent because he does not want to violate our free will. What are other possible reasons God might not clearly reveal himself?"
+    ],
+    "modified": "2023-01-11T15:17:38-05:00"
+  },
+  {
+    "number": 67,
+    "title": "Item 67",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-67/",
+    "statement": "Presuppositional apologetics is an effective way to evangelize.",
+    "tags": [
+      "Evangelism",
+      "Evidence"
+    ],
+    "suggested_questions": [
+      "If you hold to Christian presuppositionalism, how do you typically respond to Muslim presuppositionalistic arguments?",
+      "Are presuppositionalists abandoning logic and reason when they choose the Bible as a starting point without feeling the need to supply evidence to establish this?"
+    ],
+    "modified": "2023-01-11T15:22:57-05:00"
+  },
+  {
+    "number": 68,
+    "title": "Item 68",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-68/",
+    "statement": "Redemption required that Jesus experience physical suffering.",
+    "tags": [
+      "Jesus",
+      "Redemption",
+      "Suffering"
+    ],
+    "suggested_questions": [
+      "What are the precise elements that had to be present for redemption to take place? Death? What length?",
+      "Blood? How much?",
+      "Suffering? How much?",
+      "How do these elements combine to accomplish redemption?"
+    ],
+    "modified": "2023-01-11T15:25:19-05:00"
+  },
+  {
+    "number": 69,
+    "title": "Item 69",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-69/",
+    "statement": "God is pleased when someone takes a \"leap of faith\" beyond the available evidence to fully believe in Him.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Faith",
+      "Rational",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "Some claim that mustering up faith beyond the less-than-certain evidence to reach full certainty is intrinsically irrational, as it is in other domains of life. How might we respond?",
+      "If we add stipulations to prevent us from taking leaps of faith toward just any proposition, will our stipulations necessarily include non-arbitrary factors that must themselves be established with evidence?"
+    ],
+    "modified": "2023-01-11T15:31:55-05:00"
+  },
+  {
+    "number": 70,
+    "title": "Item 70",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-70/",
+    "statement": "I could be wrong in my belief that Christianity is true.",
+    "tags": [
+      "Belief",
+      "Christianity",
+      "Evidence",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "On what propositions can we simply end our inquiry at some point and be certain we could not be wrong?",
+      "Some Christians regularly review their faith, provisionally suspending their belief, and reevaluating the arguments for and against Christianity to ensure they have not overlooked anything. Is this a noble or dangerous process?"
+    ],
+    "modified": "2023-01-18T16:55:19-05:00"
+  },
+  {
+    "number": 71,
+    "title": "Item 71",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-71/",
+    "statement": "Humans did not evolve from lower forms of life.",
+    "tags": [
+      "Evidence",
+      "Science"
+    ],
+    "suggested_questions": [
+      "Does the trend seem to be a movement toward or away from young-earth creationism?"
+    ],
+    "modified": "2023-01-11T15:51:00-05:00"
+  },
+  {
+    "number": 72,
+    "title": "Item 72",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-72/",
+    "statement": "The Christian God will definitely reveal himself to all who honestly seek Him.",
+    "tags": [
+      "Evidence",
+      "Redemption",
+      "Seekers"
+    ],
+    "suggested_questions": [
+      "Nearly all respondents strongly believe God will reveal himself to those who honestly seek Him. In what form are the revelations? Transcendent states of consciousness?",
+      "Material evidence?",
+      "Arguments from Christian philosophy?",
+      "Inexplicable emotions?",
+      "A dream?",
+      "A vision?",
+      "A \"Road to Damascus\" experience?",
+      "Improbable events?",
+      "Are there any items in the list above that would not be a component of revelation God would not use?"
+    ],
+    "modified": "2023-01-11T15:57:39-05:00"
+  },
+  {
+    "number": 73,
+    "title": "Item 73",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-73/",
+    "statement": "Prayer works, and this is statistically demonstrable.",
+    "tags": [
+      "Evidence",
+      "Prayer",
+      "Promises"
+    ],
+    "suggested_questions": [
+      "Given the number of Christians praying, should answered prayers be statistically evidenced?",
+      "How might we design a study of the efficacy of the prayers for safety during COVID?",
+      "Are there any legitimate \"outs\" that Christians could invoke if the statistics show zero or negative effects of prayer?"
+    ],
+    "modified": "2023-01-11T16:08:32-05:00"
+  },
+  {
+    "number": 74,
+    "title": "Item 74",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-74/",
+    "statement": "A devout Muslim who has consciously rejected the Christian God is knowingly worshiping a false God.",
+    "tags": [
+      "Belief",
+      "Gospel",
+      "Rebellion",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "This item had a fairly well-defined split in the responses. What are the relevant verses?",
+      "How might we design a study to tease out the truth on this issue?"
+    ],
+    "modified": "2023-01-11T16:11:06-05:00"
+  },
+  {
+    "number": 75,
+    "title": "Item 75",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-75/",
+    "statement": "Prayer studies conducted by Christian researchers can demonstrate whether or not prayer works.",
+    "tags": [
+      "Evidence",
+      "Gospel",
+      "Prayer",
+      "Promises"
+    ],
+    "suggested_questions": [
+      "Can prayer studies by anyone demonstrate the efficacy of prayer?",
+      "Are answered prayers common enough to show up in general statistics?",
+      "Which of the following types of prayers are most likely to be statistically evidenced? Prayers for safety",
+      "Prayers for healing",
+      "Prayers for financial protection",
+      "Prayers for material desires",
+      "Prayers for souls"
+    ],
+    "modified": "2023-01-11T16:17:01-05:00"
+  },
+  {
+    "number": 76,
+    "title": "Item 76",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-76/",
+    "statement": "Jesus had the same capacity to sin as have all other humans.",
+    "tags": [
+      "Belief",
+      "Gospel",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "If Jesus was fully divine, and if God cannot sin, how then could Jesus have the capacity to sin?",
+      "If Jesus could have actually sinned, what would have been the consequences if He had?"
+    ],
+    "modified": "2023-01-16T16:28:59-05:00"
+  },
+  {
+    "number": 77,
+    "title": "Item 77",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-77/",
+    "statement": "Christians are still regularly gifted with the ability to speak in tongues today.",
+    "tags": [
+      "Believers",
+      "Church",
+      "Promises"
+    ],
+    "suggested_questions": [
+      "Must an interpreter accompany the one speaking in tongues?",
+      "Can glossolalia be tested as authentic in any way?"
+    ],
+    "modified": "2023-01-11T16:21:37-05:00"
+  },
+  {
+    "number": 78,
+    "title": "Item 78",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-78/",
+    "statement": "Christians cannot be mistaken when they feel what seems to be God-given joy and peace.",
+    "tags": [
+      "Belief",
+      "Emotions",
+      "Evidence"
+    ],
+    "suggested_questions": [
+      "If Christians can be mistaken, what is the precise process or mechanism to prevent mistakes?",
+      "If Christians cannot be mistaken, what is the mechanism that provides this certainty, and was that mechanism itself tested for reliability?"
+    ],
+    "modified": "2023-01-11T16:31:08-05:00"
+  },
+  {
+    "number": 79,
+    "title": "Item 79",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-79/",
+    "statement": "In my local church over the past 5 years, there has been at least a 30% decline in regular church attendees in their 20s.",
+    "tags": [
+      "Church",
+      "Youth"
+    ],
+    "suggested_questions": [
+      "What are the trends? Will the downward trend reverse post-COVID?",
+      "What might churches do to trigger a return to the pews?"
+    ],
+    "modified": "2023-01-11T16:33:28-05:00"
+  },
+  {
+    "number": 80,
+    "title": "Item 80",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-80/",
+    "statement": "Global warming is not actually happening.",
+    "tags": [
+      "Belief",
+      "Future",
+      "Science"
+    ],
+    "suggested_questions": [
+      "Might church-sponsored courses on science and scientific thinking be helpful to Christians?",
+      "Are there any dangers in teaching rigorous scientific thinking, such as an eagerness to test every claim before assigning degrees of confidence in each claim tested?"
+    ],
+    "modified": "2023-01-18T15:19:19-05:00"
+  },
+  {
+    "number": 81,
+    "title": "Item 81",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-81/",
+    "statement": "Doctrinal differences among real Christians are primarily due to honest misunderstandings of the Scriptures.",
+    "tags": [
+      "Bible",
+      "Doctrines"
+    ],
+    "suggested_questions": [
+      "Assuming that God made doctrinal knowledge easily accessible, what is the correct hermeneutical process, and what components are essential to that process?",
+      "What are other causes behind incorrect doctrinal beliefs?",
+      "Is an understanding of the original biblical languages an essential component of proper hermeneutics? ( See Item #17 )"
+    ],
+    "modified": "2023-01-17T15:17:52-05:00"
+  },
+  {
+    "number": 82,
+    "title": "Item 82",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-82/",
+    "statement": "A much greater percentage of humans will die in wars over the next 100 years than in the past 100 years.",
+    "tags": [
+      "Future"
+    ],
+    "suggested_questions": [
+      "Are we in the period of the \"end times\"?",
+      "Are sources such as Steven Pinker's \"The Better Angels of our Nature\" that present an optimistic view of the future of humanity overtly biased or somehow misguided?"
+    ],
+    "modified": "2023-01-14T14:35:36-05:00"
+  },
+  {
+    "number": 83,
+    "title": "Item 83",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-83/",
+    "statement": "Divorce is justified in a case in which a spouse is not sexually unfaithful, but is romantically unfaithful.",
+    "tags": [
+      "Marriage",
+      "Morality",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "What are the rigorously delineated conditions under which divorce is warranted?",
+      "Can the person who has divorced the other remarry in these cases?"
+    ],
+    "modified": "2023-01-14T14:37:49-05:00"
+  },
+  {
+    "number": 84,
+    "title": "Item 84",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-84/",
+    "statement": "At least 20% of the young people who leave Christianity do so because they were exposed to secular arguments against God.",
+    "tags": [
+      "Apostasy",
+      "Christianity",
+      "Evidence",
+      "Youth"
+    ],
+    "suggested_questions": [
+      "What is the best source to substantiate the actual percentage of young people who have left do to secular arguments against God?",
+      "How can Christian parents best innoculate their children from secular arguments?",
+      "What is the proper understanding of what seems to be a promise in Proverbs 22:6: \" Train up a child in the way he should go ; even when he is old he will not depart from it.\""
+    ],
+    "modified": "2023-01-14T14:41:06-05:00"
+  },
+  {
+    "number": 85,
+    "title": "Item 85",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-85/",
+    "statement": "The probability of Jesus' resurrection will be close to 100% in the minds of everyone who honestly looks at the evidence.",
+    "tags": [
+      "Evidence",
+      "Jesus",
+      "Rational",
+      "Resurrection",
+      "Seekers"
+    ],
+    "suggested_questions": [
+      "Should the inductive improbability of an actual resurrection factor into the assessment of the probability of Jesus' resurrection?",
+      "Does the long period between the alleged date of the resurrection and its written documentation warrant any doubt about whether the event was fabricated to some degree?",
+      "Can someone slightly doubt the resurrection and still become a Christian?"
+    ],
+    "modified": "2023-01-14T14:48:00-05:00"
+  },
+  {
+    "number": 86,
+    "title": "Item 86",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-86/",
+    "statement": "The suffering of animals in the world today is a direct result of the sins of Adam and Eve.",
+    "tags": [
+      "Bible",
+      "Sin",
+      "Suffering"
+    ],
+    "suggested_questions": [
+      "Is having animals suffer for the sins of humans consistent with justice?",
+      "Is divine justice so distant from the understanding of humans that it manifests as injustice in human minds?"
+    ],
+    "modified": "2023-01-14T14:52:54-05:00"
+  },
+  {
+    "number": 87,
+    "title": "Item 87",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-87/",
+    "statement": "Non-believers need to show their own ideology is logical before Christians are obligated to assess the logical coherency of Christianity.",
+    "tags": [
+      "Bible",
+      "Christianity",
+      "Gospel",
+      "Logic",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "Does the demonstration of a flaw in another ideology make Christianity more probable? ( See Item #40 )",
+      "Are Christians epistemically obligated to deeply scrutinize the Gospel for logical coherence and inductive probability before placing any degree of confidence in the Gospel?"
+    ],
+    "modified": "2023-01-14T14:58:32-05:00"
+  },
+  {
+    "number": 88,
+    "title": "Item 88",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-88/",
+    "statement": "Self-masturbation is always sinful.",
+    "tags": [
+      "Sex",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Is the proximity of hands and genitals any excuse for masturbation?",
+      "Should adolescents who are found masturbating be clearly told that the act is deserving of eternal damnation?"
+    ],
+    "modified": "2023-01-14T15:02:12-05:00"
+  },
+  {
+    "number": 89,
+    "title": "Item 89",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-89/",
+    "statement": "Out-of-body and near-death experiences are strong evidence for a spiritual realm.",
+    "tags": [
+      "Damnation",
+      "Evidence",
+      "Soul"
+    ],
+    "suggested_questions": [
+      "What is the best source for a non-anecdotal scientific study on these types of experiences?",
+      "How might we design a rigorous study to explore these anecdotal claims?"
+    ],
+    "modified": "2023-01-14T15:07:33-05:00"
+  },
+  {
+    "number": 90,
+    "title": "Item 90",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-90/",
+    "statement": "Consciously breaking any law of government that is not contrary to the Scriptures is sinful.",
+    "tags": [
+      "Bible",
+      "Government",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "What should we tell Christians in the pews about breaking the speed limit?",
+      "How should tax evasion or tax avoidance be viewed from a Christian perspective?",
+      "What current laws in your own region can justifiably be broken?",
+      "Is civil disobedience a legitimate method of changing laws from a Christian perspective?",
+      "Would Christians living in an Islamic country have any obligation to protest the killing of homosexuals."
+    ],
+    "modified": "2023-01-14T15:15:23-05:00"
+  },
+  {
+    "number": 91,
+    "title": "Item 91",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-91/",
+    "statement": "Church leaders should, in their official role, endorse and condemn political candidates by name.",
+    "tags": [
+      "Government",
+      "Pastoring"
+    ],
+    "suggested_questions": [
+      "How much political involvement is appropriate for Christian congregations?",
+      "Have many or most local congregations in your region been distracted from sharing the Gospel by political activities?"
+    ],
+    "modified": "2023-01-14T15:18:48-05:00"
+  },
+  {
+    "number": 92,
+    "title": "Item 92",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-92/",
+    "statement": "The fact that scientists cannot explain consciousness is clear evidence there must be a spiritual realm in which souls reside.",
+    "tags": [
+      "Evidence",
+      "Science",
+      "Soul"
+    ],
+    "suggested_questions": [
+      "There have been a few instances in which a claim that \"Science cannot explain X\" turned out to be fully explained by science. The phenomena of lightning, epilepsy and pandemics are a few examples. How certain can we be that the assumed inexplicability of consciousness will not suffer the same embarrassment?",
+      "What are other mysteries in our universe that science will never fully explain, and how can we be confident that God is behind these mysteries?"
+    ],
+    "modified": "2023-01-14T15:25:51-05:00"
+  },
+  {
+    "number": 93,
+    "title": "Item 93",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-93/",
+    "statement": "Heterosexual cohabitation that includes sexual relations among couples who make no public declaration of a life-long commitment is sinful.",
+    "tags": [
+      "Lifestyle",
+      "Marriage",
+      "Sex",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Are poverty and expensive legal procedures an excuse for impoverished Christians to skip the legalization of their union?",
+      "What might be done in cases in which cross-racial marriages are legally forbidden?"
+    ],
+    "modified": "2023-01-14T15:30:10-05:00"
+  },
+  {
+    "number": 94,
+    "title": "Item 94",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-94/",
+    "statement": "Christians make statistically-detectable wiser decisions than non-Christians due to the power of prayer or the guidance of the Holy Spirit.",
+    "tags": [
+      "Evidence",
+      "Holy Spirit",
+      "Prayer",
+      "Promises"
+    ],
+    "suggested_questions": [
+      "In which of the domains of human activity below could this be tested? The stock market (Greater ROI?)",
+      "Entrepreneurship (A lower failure rate?)",
+      "Marriage (A lower divorce rate?)",
+      "Dietary choices (Lower morbidity and mortality rates?)"
+    ],
+    "modified": "2023-01-14T15:35:44-05:00"
+  },
+  {
+    "number": 95,
+    "title": "Item 95",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-95/",
+    "statement": "Jesus' actual blood had to be shed for redemption to have been accomplished.",
+    "tags": [
+      "Jesus",
+      "Logic",
+      "Rational",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "Could God have chosen to exclude the shedding of blood for the forgiveness of sins, or was he constrained in some way to require the shedding of blood?"
+    ],
+    "modified": "2023-01-14T15:45:12-05:00"
+  },
+  {
+    "number": 96,
+    "title": "Item 96",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-96/",
+    "statement": "It is quite rational to attribute mysteries in life to God unless or until a clear physical explanation is introduced.",
+    "tags": [
+      "Belief",
+      "Rational",
+      "Science"
+    ],
+    "suggested_questions": [
+      "Is it ever proper to \"default\" to a conclusion without accompanying evidence or logic that justifies that conclusion?",
+      "Have there been many mysteries throughout human history for which God was posited as an explanation, only to later have a natural explanation be found correct? If so, should this inform our inclination to uncritically default to God as an explanation?",
+      "Is it embarrassing, unbecoming, or somehow wrong to admit that we don't yet know what is behind a current mystery?"
+    ],
+    "modified": "2023-01-14T15:56:19-05:00"
+  },
+  {
+    "number": 97,
+    "title": "Item 97",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-97/",
+    "statement": "God has clearly explained in the Bible the essence of rational belief.",
+    "tags": [
+      "Belief",
+      "Bible",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "What is the clearest and most rigorous passage of scripture that lays out this essence of rational belief?",
+      "Some claim that rational belief is a degree of belief that maps to the degree of the relevant evidence. Is this description of rational belief faulty or incomplete? If so, how?"
+    ],
+    "modified": "2023-01-14T15:59:44-05:00"
+  },
+  {
+    "number": 98,
+    "title": "Item 98",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-98/",
+    "statement": "The many emotional needs that the Gospel story satisfies are evidence that the Gospel is true.",
+    "tags": [
+      "Emotions",
+      "Evidence",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "The emotions and desires of animals are regularly unfulfilled. Is, in contrast, the existence of emotions and desires in humans evidence that for every natural desire there is something that fulfills that desire as CS Lewis argues?",
+      "What is it about a desire that requires a potential fulfillment of that desire?",
+      "Are the extant and successful religions all offering the satisfaction of human desires (either in this life or the afterlife) as evidence for the truth of their own ideologies, such as the 72 virgins in heaven that correspond to the sexual desires of Muslim men? If so, does this speak to the logical legitimacy or illegitimacy of the \"argument from desire\"?"
+    ],
+    "modified": "2023-01-14T16:10:57-05:00"
+  },
+  {
+    "number": 99,
+    "title": "Item 99",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-99/",
+    "statement": "Adult humans can clearly detect in nature a moral lawgiver and His moral laws.",
+    "tags": [
+      "Evidence",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "What is the process through which moral laws and the moral law-giver are revealed in the observation of \"the things which are made\" to a degree that the observer is rendered culpable of violating those revealed moral laws?",
+      "Have Christians, prior to their conversions, experienced this phenomenon of looking at nature and, as a result, coming to recognize their moral responsibilities?"
+    ],
+    "modified": "2023-01-14T16:18:25-05:00"
+  },
+  {
+    "number": 100,
+    "title": "Item 100",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-100/",
+    "statement": "The biblical reference to being made in the \"image of God\" refers to humans' ability to reason to a degree not seen among mere animals.",
+    "tags": [
+      "Bible",
+      "God&#039;s Image",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "Would the greater gap between the reasoning capabilities of God and of humans than of humans and of animals be an argument against the notion that \"the image of God\" refers to the ability to reason?"
+    ],
+    "modified": "2023-01-15T15:55:26-05:00"
+  },
+  {
+    "number": 101,
+    "title": "Item 101",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-101/",
+    "statement": "Biblical faith is a degree of belief that goes beyond the degree of the currently perceived evidence.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Faith",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "The dominant word for \"belief\" in the New Testament is pistis. Modern exegetes have sometimes attempted to make distinctions between types of belief, rendering pistis in various biblical contexts as \"belief\", \"faith\", and \"trust\". However, these distinctions do not appear in the original Greek. Are these English distinctions justified given their singular source in the Greek term pistis? Would adjectival additions to \"belief\" such as \"rational belief\" and \"irrational belief\" maintain more clarity?",
+      "Do we consider the woman who ignores clues about her husband's possible infidelity and who fully believes he is wholly faithful as noble or rational? Is it ever proper to sever the natural bond between the degree of the evidence and the degree of the belief?",
+      "Are Muslims who ignore the actual degree of evidence for their religion rational if they assign a degree of confidence that does not map to the degree of evidence for their religion?"
+    ],
+    "modified": "2023-01-17T14:07:01-05:00"
+  },
+  {
+    "number": 102,
+    "title": "Item 102",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-102/",
+    "statement": "It is not intrinsically immoral for those divorced to remarry.",
+    "tags": [
+      "Marriage",
+      "Morality",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Which passages of scripture most clearly and rigorously address this issue?",
+      "What should those who have concluded their remarriage is immoral do?"
+    ],
+    "modified": "2023-01-15T16:43:10-05:00"
+  },
+  {
+    "number": 103,
+    "title": "Item 103",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-103/",
+    "statement": "I have been the primary influence in the spiritual conversion of at least 3 people over the past year.",
+    "tags": [
+      "Evangelism",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "How does the passion for lost souls compare to what it was a century ago?",
+      "Are any of the evangelistic tactics used today unbiblical in any way?",
+      "Is it possible that the person who never takes advantage of opportunities to share the Gospel is an actual Christian?"
+    ],
+    "modified": "2023-01-15T16:48:53-05:00"
+  },
+  {
+    "number": 104,
+    "title": "Item 104",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-104/",
+    "statement": "Believers are statistically less likely to sin due to the sanctifying power of the Holy Spirit.",
+    "tags": [
+      "Believers",
+      "Evidence",
+      "Holy Spirit",
+      "Promises",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "What is the extent of the power of the Holy Spirit in the sanctification of believers? Can the behavior of Christians in major metrics of virtue be evidenced statistically? Or are the differences between the behavior of Christians and the behavior of non-Christians too marginal to statistically detect?",
+      "What would we expect to find were we to assess standard virtues found in Christian culture and in the Japanese culture, famous for its low crime rates.",
+      "Are the following domains of behavior under the scope of the sanctifying power of the Holy Spirit? Crime rates",
+      "Divorce rates",
+      "Obesity rates",
+      "Degree of materialism",
+      "Degree of charitable giving"
+    ],
+    "modified": "2023-01-15T16:56:01-05:00"
+  },
+  {
+    "number": 105,
+    "title": "Item 105",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-105/",
+    "statement": "A yearly salary of over $100,000 is excessive for a full-time pastor or church leader in the USA.",
+    "tags": [
+      "Church",
+      "Pastoring"
+    ],
+    "suggested_questions": [
+      "Would Christ be disappointed in the degree of compensation that Christian ministers in the USA expect today?",
+      "Would living below the poverty line be more or less reflective of the lifestyles of Christ and the Apostles? Did the poverty of Christ and the Apostles hinder their ministries?",
+      "Could/should religious institutions such as seminaries revert back to the type of non-salaried teaching found in the days of the early church?"
+    ],
+    "modified": "2023-01-15T17:08:55-05:00"
+  },
+  {
+    "number": 106,
+    "title": "Item 106",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-106/",
+    "statement": "Humans are culpable for following a sin-nature they neither requested nor can avoid.",
+    "tags": [
+      "Damnation",
+      "Rational",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Is it possible for an adult human to ignore the compulsion to sin and to live without ever sinning?",
+      "Is culpability for sin mitigated in any way by the unavoidable compulsion to sin?",
+      "Is the notion that a sin nature is passed on genetically from Adam to all humans logically coherent?"
+    ],
+    "modified": "2023-01-15T17:22:37-05:00"
+  },
+  {
+    "number": 107,
+    "title": "Item 107",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-107/",
+    "statement": "The souls of unredeemed sinners who die unrepentant will eventually be annihilated.",
+    "tags": [
+      "Damnation",
+      "Punishment",
+      "Rebellion"
+    ],
+    "suggested_questions": [
+      "What all is entailed in the notion that the \"wages of sin is death\"? What is the nature, quality, and duration of this death?",
+      "More and more Christians are moving toward the notion of the annihilation of the damned. Where will we be on this issue in 50 years?",
+      "Is the notion of the eternal, conscious suffering of the damned a notion essential to the Gospel?",
+      "Has the slow abandoning of the notion of eternal, conscious suffering of the damned been caused more by logical considerations or by the sinful inclination towards heresy?"
+    ],
+    "modified": "2023-01-15T17:30:17-05:00"
+  },
+  {
+    "number": 108,
+    "title": "Item 108",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-108/",
+    "statement": "Illegal activities involving church members can sometimes be legitimately handled internally by church leadership without involving law enforcement.",
+    "tags": [
+      "Church",
+      "Government",
+      "Pastoring"
+    ],
+    "suggested_questions": [
+      "Can a rigorous formulation of the conditions under which illegal activities should be reported be devised?",
+      "Should congregations have a rigorous policy on what does and does not get reported to law enforcement?",
+      "Is there any case in which an illegal activity by a church member should not be reported?"
+    ],
+    "modified": "2023-01-15T17:37:23-05:00"
+  },
+  {
+    "number": 109,
+    "title": "Item 109",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-109/",
+    "statement": "Jesus had to become a human for the forgiveness of sins to be possible.",
+    "tags": [
+      "Jesus",
+      "Logic",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "What logical barrier prevented God from simply forgiving humans without sacrificing Jesus?",
+      "Could Jesus have become a non-human creature, such as an angel, to suffer and redeem sinners? What is the logic behind your response?"
+    ],
+    "modified": "2023-01-15T17:42:09-05:00"
+  },
+  {
+    "number": 110,
+    "title": "Item 110",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-110/",
+    "statement": "I engage in friendly one-on-one discussions (video or personal chats) with knowledgeable skeptics of the Gospel at least once a month.",
+    "tags": [
+      "Evangelism",
+      "Personal",
+      "Seekers"
+    ],
+    "suggested_questions": [
+      "Is this practice too dangerous for most Christians? What apologetics training should they have (if any) before engaging skeptics of the Gospel?",
+      "Is this practice itself a good way to improve one's confidence in the Gospel?",
+      "Are Christians currently too focused on atheists with known flaws in their ideology? Are they ignoring arguments from others who have more nuanced criticisms of Christianity?"
+    ],
+    "modified": "2023-01-15T17:46:19-05:00"
+  },
+  {
+    "number": 111,
+    "title": "Item 111",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-111/",
+    "statement": "There are no scientific errors within the Bible.",
+    "tags": [
+      "Bible",
+      "Science"
+    ],
+    "suggested_questions": [
+      "Are there scientific errors in the Koran? If so, are there errors of the same form in the Bible, and are these errors reason to reject the Bible as not divinely inspired."
+    ],
+    "modified": "2023-01-15T17:50:28-05:00"
+  },
+  {
+    "number": 112,
+    "title": "Item 112",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-112/",
+    "statement": "Believers have demonstrably stronger marriages than non-believers due to the guidance of the Holy Spirit.",
+    "tags": [
+      "Believers",
+      "Evidence",
+      "Holy Spirit",
+      "Marriage",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "Should we expect marriages between Christians to be stronger than marriages between non-Christians due to the Holy Spirit or to other factors such as a common cultural background or biblical injections against unjustified divorces?",
+      "Is the ability to statistically test the notion that Christian marriages are stronger thwarted by the likelihood Satan targets Christians more?",
+      "What is the recent data on divorce rates among Christians? ( A study by Pew Research )",
+      "How might we tease out the various possible causes of stronger marriages, including the following: The power of the Holy Spirit",
+      "Common cultural backgrounds",
+      "Christian taboos against marriage-destroying behaviors such as drugs, promiscuity, and pornography",
+      "Supportive Christian friendships with other couples",
+      "The time spent in Christian services that might otherwise be spent in less Christian environments",
+      "The threat of divine punishment"
+    ],
+    "modified": "2023-01-15T18:04:40-05:00"
+  },
+  {
+    "number": 113,
+    "title": "Item 113",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-113/",
+    "statement": "I could be wrong in my belief that a God was necessary for the universe to exist.",
+    "tags": [
+      "Belief",
+      "Doubt",
+      "Logic",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "Can someone have a low certainty that a God was necessary for the creation of the universe and still be an actual Christian?"
+    ],
+    "modified": "2023-01-15T18:07:52-05:00"
+  },
+  {
+    "number": 114,
+    "title": "Item 114",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-114/",
+    "statement": "The fulfillment of biblical prophecies is indisputable evidence for the truth of the Gospel.",
+    "tags": [
+      "Bible",
+      "Evidence",
+      "Gospel"
+    ],
+    "suggested_questions": [
+      "Some skeptics claim that the prophecies could have been either retrodictive (actually written after the \"prophesied\" event) or that the alleged \"fulfillments\" were fabricated by writers to map to the \"prophetic\" scriptures they knew well and to which they had attached their hopes. What probability might we assign these notions?",
+      "What are the most indisputable fulfillments of prophecies found in the Bible?"
+    ],
+    "modified": "2023-01-15T18:13:33-05:00"
+  },
+  {
+    "number": 115,
+    "title": "Item 115",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-115/",
+    "statement": "I weekly share the Gospel with those around me independent of any organized evangelism program.",
+    "tags": [
+      "Evangelism",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "Should all Christians be regularly seeking opportunities to personally share the Gospel?"
+    ],
+    "modified": "2023-01-15T18:16:31-05:00"
+  },
+  {
+    "number": 116,
+    "title": "Item 116",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-116/",
+    "statement": "To say, \"I know X\" means you have absolute (100%) certainty that X is true.",
+    "tags": [
+      "Belief",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "Is there a proper, rigorous definition of \"knowledge\" or \"to know\", or is it a softer, more subjective concept?",
+      "Is there a universal threshold along the gradient of belief at which belief is rendered knowledge? Or is this threshold subjective and likely different between individuals?"
+    ],
+    "modified": "2023-01-15T18:19:44-05:00"
+  },
+  {
+    "number": 117,
+    "title": "Item 117",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-117/",
+    "statement": "Apologetics should be taught and practiced more in Christian churches today.",
+    "tags": [
+      "Church",
+      "Evidence",
+      "Pastoring"
+    ],
+    "suggested_questions": [
+      "What aspects of apologetics are most important? Fulfilled prophecies?",
+      "Ontological arguments?",
+      "Cosmological arguments?",
+      "A presuppositional stance?",
+      "Fulfilled promises to Christians in this life?",
+      "The failure of other competing ideologies?"
+    ],
+    "modified": "2023-01-15T18:23:09-05:00"
+  },
+  {
+    "number": 118,
+    "title": "Item 118",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-118/",
+    "statement": "If an individual who was born male asked me to call them \"she\" or \"her\", I would.",
+    "tags": [
+      "Gender",
+      "Personal",
+      "Sex"
+    ],
+    "suggested_questions": [
+      "What are the principles behind your choice to either use or not use the preferred pronouns of a person who, based on traditional notions of gender, do not actually match that gender?"
+    ],
+    "modified": "2023-01-15T18:25:19-05:00"
+  },
+  {
+    "number": 119,
+    "title": "Item 119",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-119/",
+    "statement": "Street preaching does more harm to Christianity than good.",
+    "tags": [
+      "Christianity",
+      "Evangelism",
+      "Gospel",
+      "Pastoring"
+    ],
+    "suggested_questions": [
+      "What forms of street preaching (if any) are legitimate and effective ways to lead souls to Christ?"
+    ],
+    "modified": "2023-01-15T18:26:33-05:00"
+  },
+  {
+    "number": 120,
+    "title": "Item 120",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-120/",
+    "statement": "Assigning high confidence to the best available explanation for an event is a rational form of belief.",
+    "tags": [
+      "Belief",
+      "Logic",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "Are there cases in which the best explanation has a low probability? If so, should we still assign that low-probability explanation a high degree of confidence?"
+    ],
+    "modified": "2023-01-15T18:27:51-05:00"
+  },
+  {
+    "number": 121,
+    "title": "Item 121",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-121/",
+    "statement": "The Holy Spirit provides a strong confirmation of redemption through a sense of his presence.",
+    "tags": [
+      "Belief",
+      "Emotions",
+      "Holy Spirit",
+      "Personal",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "Is the confirmational sensation the Holy Spirit provides distinguishable from mere emotions and the deceptive sensations of Satan?",
+      "Is it possible that Satan gives non-Christians a similar sense to make them falsely believe they are Christians? Or do all non-Christians know they are not Christians?"
+    ],
+    "modified": "2023-01-16T15:18:42-05:00"
+  },
+  {
+    "number": 122,
+    "title": "Item 122",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-122/",
+    "statement": "Less than 20% of weekly church attendees of my general doctrinal persuasion contribute financially to the ministry the amount they should.",
+    "tags": [
+      "Believers",
+      "Church"
+    ],
+    "suggested_questions": [
+      "Is tithing a command or a guideline?",
+      "Does God care about the beauty of the building in which Christians meet that larger financial offerings can provide?"
+    ],
+    "modified": "2023-01-16T15:21:23-05:00"
+  },
+  {
+    "number": 123,
+    "title": "Item 123",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-123/",
+    "statement": "The USA is a special instrument of God to spread freedom around the world.",
+    "tags": [
+      "Government"
+    ],
+    "suggested_questions": [
+      "For those who answer affirmatively, at what point in the history of the USA was this special anointing of the USA to this purpose made clear?"
+    ],
+    "modified": "2023-01-16T17:16:28-05:00"
+  },
+  {
+    "number": 124,
+    "title": "Item 124",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-124/",
+    "statement": "Most Christian testimonies of alleged miracles are more about coincidences than about divine violations of natural laws.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Science"
+    ],
+    "suggested_questions": [
+      "Should Christians who call physically possible but improbable events \"miracles\" be corrected?",
+      "If we add improbable events to the set of \"miracles\", what degree of improbability should we require?"
+    ],
+    "modified": "2023-01-16T15:38:03-05:00"
+  },
+  {
+    "number": 125,
+    "title": "Item 125",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-125/",
+    "statement": "God's love for infants is not inconsistent with His order to kill the Amalekite infants.",
+    "tags": [
+      "Emotions",
+      "Justice",
+      "Logic"
+    ],
+    "suggested_questions": [
+      "Could God have better shown his love for infants by designing a less violent and painful death, or by having the infants adopted?",
+      "Was the pain the Amalekite infants experienced necessary for some greater purpose?"
+    ],
+    "modified": "2023-01-16T16:12:20-05:00"
+  },
+  {
+    "number": 126,
+    "title": "Item 126",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-126/",
+    "statement": "Rational belief is intrinsically on a gradient. Rational belief is not a binary \"I believe X\" or \"I don't believe X\".",
+    "tags": [
+      "Belief",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "Can we identify an objective threshold along the epistemic gradient at which we suddenly flip from unbelief to belief?",
+      "Is the binary couplet of \"belief\" and \"disbelief\" only a linguistic artifact that perhaps roughly maps to the poles of the emotionally comfortable mental states of belief and disbelief, and avoids the uncomfortable psychological state of uncertainty?",
+      "Can the phrases \"I tend to believe X\" or \"I doubt X\" be resolved to more precise points along the epistemic gradient (credences) that add precision to our degree of belief or disbelief?"
+    ],
+    "modified": "2023-01-16T16:03:29-05:00"
+  },
+  {
+    "number": 127,
+    "title": "Item 127",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-127/",
+    "statement": "Weekend services should be primarily focused on the discipleship of believers.",
+    "tags": [
+      "Church",
+      "Pastoring"
+    ],
+    "suggested_questions": [
+      "What might be a proper balance of Christian activities throughout the week? Consider the following potential activities: Worship",
+      "Fellowship",
+      "Discipleship",
+      "Evangelism",
+      "Prayer"
+    ],
+    "modified": "2023-01-16T16:09:13-05:00"
+  },
+  {
+    "number": 128,
+    "title": "Item 128",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-128/",
+    "statement": "Apparent logical incoherencies in Christianity occasionally cause me to doubt Christianity.",
+    "tags": [
+      "Belief",
+      "Bible",
+      "Doubt",
+      "Logic",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "Should Muslims be sufficiently concerned about the apparent incoherencies in the Koran to back away from their belief in Islam until those apparent incoherencies have been resolved?",
+      "Should apparent incoherences seen in the Bible cause us to doubt our beliefs, or must we maintain full confidence or close to full confidence in the Gospel?"
+    ],
+    "modified": "2023-01-16T16:21:48-05:00"
+  },
+  {
+    "number": 129,
+    "title": "Item 129",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-129/",
+    "statement": "Jesus was tempted with the same vulnerability to temptations that other humans have.",
+    "tags": [
+      "Jesus",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "If it was impossible for Jesus to have sinned, can He be considered fully human?",
+      "If Jesus had not been fully God, could He have avoided sinning?"
+    ],
+    "modified": "2023-01-16T16:37:04-05:00"
+  },
+  {
+    "number": 130,
+    "title": "Item 130",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-130/",
+    "statement": "Pre-conception birth control to enjoy sex but avoid pregnancy is a sin.",
+    "tags": [
+      "Marriage",
+      "Pleasure",
+      "Sex"
+    ],
+    "suggested_questions": [
+      "For those who respond affirmatively to this item, is the rhythm method of birth control also sinful?"
+    ],
+    "modified": "2023-01-18T15:15:06-05:00"
+  },
+  {
+    "number": 131,
+    "title": "Item 131",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-131/",
+    "statement": "My understanding and practice of Christianity have become more conservative over the past five years.",
+    "tags": [
+      "Christianity",
+      "Conservative",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "Is this trend toward a more conservative position encouraging?",
+      "Is this trend real or merely apparent, perhaps an artifact of the survey participant pool or of a misperception of their doctrinal evolutions over the past five years?"
+    ],
+    "modified": "2023-01-16T16:53:08-05:00"
+  },
+  {
+    "number": 132,
+    "title": "Item 132",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-132/",
+    "statement": "More than 50% of self-proclaimed Christians are not true Christians.",
+    "tags": [
+      "Believers",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "What are the most salient indicators that someone is not an actual Christian?",
+      "How might this large pool of self-proclaimed Christians be actually brought to genuine salvation?"
+    ],
+    "modified": "2023-01-16T16:55:56-05:00"
+  },
+  {
+    "number": 133,
+    "title": "Item 133",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-133/",
+    "statement": "A degree of belief that exceeds the degree of the perceived evidence can be a rational belief.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "Can a departure from the rigorous mapping of belief to the degree of the perceived evidence ever be considered rational? Are there practical domains of life in which this tactic has been proven successful?",
+      "Does God desire that our degree of belief be rational? Or can abandoning the evidence to arrive at unwarranted belief be pleasing to God? (See Item #69 )"
+    ],
+    "modified": "2023-01-16T17:07:51-05:00"
+  },
+  {
+    "number": 134,
+    "title": "Item 134",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-134/",
+    "statement": "Gun possession should be more regulated around the world.",
+    "tags": [
+      "Government"
+    ],
+    "suggested_questions": [
+      "At what threshold of potential deadliness should we keep weapons out of the hands of civilians? Machine guns?",
+      "Missles?",
+      "Predator drones?",
+      "Grenades?"
+    ],
+    "modified": "2023-01-16T17:14:18-05:00"
+  },
+  {
+    "number": 135,
+    "title": "Item 135",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-135/",
+    "statement": "I have at least 5 good friendships with individuals who have clearly rejected Christianity.",
+    "tags": [
+      "Apostasy",
+      "Evangelism",
+      "Seekers",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "Should Christians cultivate friendships with unbelievers?",
+      "Is it impossible for unbelievers to draw true Christians into apostasy?"
+    ],
+    "modified": "2023-01-16T17:18:17-05:00"
+  },
+  {
+    "number": 136,
+    "title": "Item 136",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-136/",
+    "statement": "The Holy Spirit regularly gives us spiritual tugs to help us make decisions.",
+    "tags": [
+      "Emotions",
+      "Holy Spirit",
+      "Promises"
+    ],
+    "suggested_questions": [
+      "Is this a standard method through which God communicates his will to Christians?",
+      "How might we confirm that the \"tugs\" we feel are truly from the Holy Spirit?"
+    ],
+    "modified": "2023-01-16T17:22:09-05:00"
+  },
+  {
+    "number": 137,
+    "title": "Item 137",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-137/",
+    "statement": "There is likely life on other planets somewhere in the Universe.",
+    "tags": [
+      "Future",
+      "Science"
+    ],
+    "suggested_questions": [
+      "Is the perceived improbability that there are other forms of life in the universe informed by the notion it is humans that are the focus of God's love and attention or is it more related to the improbability of life emerging anywhere?"
+    ],
+    "modified": "2023-01-16T17:24:19-05:00"
+  },
+  {
+    "number": 138,
+    "title": "Item 138",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-138/",
+    "statement": "Redemption required that Jesus experience post-death suffering.",
+    "tags": [
+      "Jesus",
+      "Logic",
+      "Redemption",
+      "Suffering"
+    ],
+    "suggested_questions": [
+      "Was Christ conscious during his 3 days of death, and where was his soul?",
+      "If humans must be punished with post-death suffering due to God's anger, why was this not necessary for Jesus, the propitiation for our sins?"
+    ],
+    "modified": "2023-01-16T17:27:57-05:00"
+  },
+  {
+    "number": 139,
+    "title": "Item 139",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-139/",
+    "statement": "Researching and evaluating arguments against Christianity is too dangerous for the average Christian.",
+    "tags": [
+      "Believers",
+      "Christianity",
+      "Doubt",
+      "Evidence",
+      "Seekers"
+    ],
+    "suggested_questions": [
+      "What are some of the best books or resources that non-believers recommend Christians access to understand the non-Christian perspective?",
+      "Should Christians at least seek the guidance of seasoned Christians when embarking on this type of research?",
+      "Is it actually possible for true Christians to apostatize?"
+    ],
+    "modified": "2023-01-16T17:30:54-05:00"
+  },
+  {
+    "number": 140,
+    "title": "Item 140",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-140/",
+    "statement": "Vaccinations generally cause more harm than good.",
+    "tags": [
+      "Evidence",
+      "Science"
+    ],
+    "suggested_questions": [
+      "Has science been infiltrated to a dangerous degree by God-hating scientists with an agenda to turn culture away from God?",
+      "What is the actual delineation between science and scientism?"
+    ],
+    "modified": "2023-01-16T17:33:54-05:00"
+  },
+  {
+    "number": 141,
+    "title": "Item 141",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-141/",
+    "statement": "An epistemically honest human will map their degree of belief to the degree of evidence as they perceive it.",
+    "tags": [],
+    "suggested_questions": [
+      "Is there anything we can actually know with full certainty other than our own perceptions and emotions?",
+      "Can inductive (empirical and non-logical) evidence ever reach 100% on the evidential gradient?",
+      "If there is evidence that comes from God, is it in the form of other types of evidence, such as miracles in response to prayer, or is it transferred directly from God as full certainty in some way? If so, how might we test the reliability of the mechanism behind this direct transfer of knowledge?",
+      "If someone maps their degree of belief to the evidence when some of that evidence is based on lies, is this person still rational?"
+    ],
+    "modified": "2023-01-17T14:04:54-05:00"
+  },
+  {
+    "number": 142,
+    "title": "Item 142",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-142/",
+    "statement": "There is at least a 10% chance I will not be a Christian in 5 years.",
+    "tags": [
+      "Apostasy",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "What are the most common reasons individuals leave Christianity? Intellectual arguments against Christianity?",
+      "The desire to sin?",
+      "Raw rebellion against God?",
+      "A personal tragedy?",
+      "The behavior of other professed Christians?",
+      "The promises found in another religion?"
+    ],
+    "modified": "2023-01-17T12:47:14-05:00"
+  },
+  {
+    "number": 143,
+    "title": "Item 143",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-143/",
+    "statement": "It is immoral to dispose of in vitro fertilized embryos without implantation.",
+    "tags": [
+      "Abortion",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "Is there any time after conception in which the human should not be protected every bit as much as a born child?",
+      "What legal punishment is appropriate for those who destroy embryos?"
+    ],
+    "modified": "2023-01-17T12:50:00-05:00"
+  },
+  {
+    "number": 144,
+    "title": "Item 144",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-144/",
+    "statement": "Everyone will eventually reach Heaven.",
+    "tags": [
+      "Heaven",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "Does God give any group of people the opportunity to accept Jesus as their Savior after their deaths, such as those not exposed to the explicit Gospel in this life?"
+    ],
+    "modified": "2023-01-17T12:55:11-05:00"
+  },
+  {
+    "number": 145,
+    "title": "Item 145",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-145/",
+    "statement": "I feel non-believers who tell me they are truly happy are lying.",
+    "tags": [
+      "Emotions",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "Can the happiness of non-Christians reach the level of the \"joy of the Lord\"? If not, is the difference quantitative or qualitative?"
+    ],
+    "modified": "2023-01-17T12:59:02-05:00"
+  },
+  {
+    "number": 146,
+    "title": "Item 146",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-146/",
+    "statement": "It is not possible that I am wrong that I have genuine faith in Jesus.",
+    "tags": [],
+    "suggested_questions": [
+      "If a Muslim claimed it was impossible for them to be wrong about Islam, what process would you employ to persuade them otherwise?",
+      "Is it rational or wise for fallible humans to claim they could never be wrong about their current beliefs?"
+    ],
+    "modified": "2023-01-17T13:01:40-05:00"
+  },
+  {
+    "number": 147,
+    "title": "Item 147",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-147/",
+    "statement": "Demon possession and successful exorcisms regularly occur today.",
+    "tags": [
+      "Bible",
+      "Evidence",
+      "Soul"
+    ],
+    "suggested_questions": [
+      "Are there legitimate natural causes behind most claims of demon possession?",
+      "What would be a proper test to determine whether a case is actual demon possession?",
+      "Was the certainty of Christians 500 years ago that epileptics were demon-possessed justified? ( See Item #96 )"
+    ],
+    "modified": "2023-01-17T13:07:16-05:00"
+  },
+  {
+    "number": 148,
+    "title": "Item 148",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-148/",
+    "statement": "Those who provide abortions can be justifiably killed to protect the unborn.",
+    "tags": [
+      "Abortion",
+      "Government",
+      "Justice",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "Is abortion as evil as the killing of the Jews during the Holocaust? If so, would there be any reason not to penally treat the killers in each case equally?",
+      "If abortion doctors are knowingly unjustly killing humans, what penal consequences would be too severe?"
+    ],
+    "modified": "2023-01-17T13:11:19-05:00"
+  },
+  {
+    "number": 149,
+    "title": "Item 149",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-149/",
+    "statement": "Any evidence for a deistic God makes the God of Christianity more likely.",
+    "tags": [],
+    "suggested_questions": [
+      "Can there be notions of God that are impossible in spite of the evidence for a deistic creator of the universe? (One analogy heard is the possibility of finding a lump of gold and the possibility of finding a spherical cube of gold.)",
+      "How might we respond to someone who said, \"The discovery of rabbits does not make the existence of a physical Buggs Bunny more likely.\""
+    ],
+    "modified": "2023-01-17T13:16:35-05:00"
+  },
+  {
+    "number": 150,
+    "title": "Item 150",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-150/",
+    "statement": "We cannot confidently know what is moral without the Bible.",
+    "tags": [
+      "Belief",
+      "Bible",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "Is the killing of the Amalekite infants consistent with this proposition? (While the Israelite soldiers might have felt, based on their moral intuitions, that killing the infants was morally wrong, it took the direct commandment of God to show that their killing was actually the moral thing to do. See Item #125 .)"
+    ],
+    "modified": "2023-01-17T13:20:13-05:00"
+  },
+  {
+    "number": 151,
+    "title": "Item 151",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-151/",
+    "statement": "I am actively and honestly pursuing arguments both for and against the existence of God to ensure I have not overlooked important arguments.",
+    "tags": [
+      "Doubt",
+      "Evidence",
+      "Seekers"
+    ],
+    "suggested_questions": [
+      "Is it wrong or merely unwise to actively and honestly pursue arguments both for and against the existence of God?",
+      "For which kind of propositions is it proper, at some point, to claim you cannot be wrong and to stop looking at claims of new disconfirming evidence?"
+    ],
+    "modified": "2023-01-17T13:24:40-05:00"
+  },
+  {
+    "number": 152,
+    "title": "Item 152",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-152/",
+    "statement": "Divorce is biblically justified if a spouse is addicted to pornography.",
+    "tags": [
+      "Marriage",
+      "Morality",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "If someone commits adultery in their heart with pornography, why has or hasn't the condition for divorce been met?"
+    ],
+    "modified": "2023-01-17T13:26:39-05:00"
+  },
+  {
+    "number": 153,
+    "title": "Item 153",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-153/",
+    "statement": "Taking recreational drugs is sinful whether or not they are legal.",
+    "tags": [
+      "Government",
+      "Pleasure",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Are other actions that mistreat the temple of God (our bodies) just as sinful, such as knowingly eating junk food, becoming overweight, and failing to exercise? What are the relevant principles?",
+      "Some Christian claim that the consumption of some of the drugs found in nature allows for deeper spiritual experiences. Is this true?"
+    ],
+    "modified": "2023-01-17T13:32:08-05:00"
+  },
+  {
+    "number": 154,
+    "title": "Item 154",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-154/",
+    "statement": "I feel individuals of another religion who tell me they are truly happy are lying.",
+    "tags": [
+      "Emotions",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "How might we practically measure the levels of happiness found among the religions of different faiths? Is there a clear differentiating sign accompanying the authentic \"joy of the Lord\"?"
+    ],
+    "modified": "2023-01-17T13:36:30-05:00"
+  },
+  {
+    "number": 155,
+    "title": "Item 155",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-155/",
+    "statement": "I feel that many proposed government conspiracies are true.",
+    "tags": [
+      "Government",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "Is it true, as sometimes claimed, that religious minds are more susceptible to false conspiracy theories? If so, what makes this true?",
+      "Does the expansive ontology of Christianity that includes demons, angels, and miracles add, in the minds of Christians, credibility to conspiracy claims that also require more open-mindedness."
+    ],
+    "modified": "2023-01-17T13:43:32-05:00"
+  },
+  {
+    "number": 156,
+    "title": "Item 156",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-156/",
+    "statement": "The absurdity of a universe with no ultimate justice makes a God who provides ultimate justice necessary.",
+    "tags": [
+      "Belief",
+      "Justice",
+      "Logic"
+    ],
+    "suggested_questions": [
+      "What is the syllogistic form of the argument that makes an ultimate guarantor of justice logically necessary? (This makes the argument clear and a rigorous response to the argument much easier.)",
+      "Is it possible that the presumed logical need for ultimate justice derives from the emotional anxiety felt when imagining a world in which there is no ultimate justice?"
+    ],
+    "modified": "2023-01-17T13:56:44-05:00"
+  },
+  {
+    "number": 157,
+    "title": "Item 157",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-157/",
+    "statement": "A 99% degree of certainty that X is true when the perceived evidence for the truth of X is at 50% can be a rational belief.",
+    "tags": [
+      "Belief",
+      "Evidence",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "Would the more flexible formulation of rational belief found in this item optimize the success of those in finance, forecasting, or gambling?",
+      "In what domains of life is the following not true? Rational belief is a degree of belief that maps to the degree of the relevant evidence."
+    ],
+    "modified": "2023-01-17T14:11:33-05:00"
+  },
+  {
+    "number": 158,
+    "title": "Item 158",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-158/",
+    "statement": "Even if the actual bodily resurrection of Jesus had very little supporting evidence, I would still accept it on faith.",
+    "tags": [
+      "Evidence",
+      "Faith",
+      "Jesus"
+    ],
+    "suggested_questions": [
+      "Is a belief that exceeds the relevant evidence irrational?",
+      "In which domains of life does exceeding the degree of the evidence with a mismatched (usually higher) degree of belief provide optimal predictive success?"
+    ],
+    "modified": "2023-01-17T14:47:18-05:00"
+  },
+  {
+    "number": 159,
+    "title": "Item 159",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-159/",
+    "statement": "Legalized abortion is a sufficient justification for an armed insurrection.",
+    "tags": [
+      "Abortion",
+      "Government",
+      "Justice",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "If abortion is or becomes federally permitted, would it be acceptable or necessary to forge a new state in which the unborn are protected?"
+    ],
+    "modified": "2023-01-17T14:51:29-05:00"
+  },
+  {
+    "number": 160,
+    "title": "Item 160",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-160/",
+    "statement": "Jesus was both fully human and fully divine.",
+    "tags": [
+      "Gospel",
+      "Jesus",
+      "Logic"
+    ],
+    "suggested_questions": [
+      "If 1) God cannot sin, 2) Jesus is a member of the Godhead, and 3) humans can sin, can we coherently claim Jesus was fully human?"
+    ],
+    "modified": "2023-01-17T14:56:43-05:00"
+  },
+  {
+    "number": 161,
+    "title": "Item 161",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-161/",
+    "statement": "Both Christ's pre-death suffering and his death were necessary to secure redemption.",
+    "tags": [
+      "Jesus",
+      "Redemption",
+      "Suffering"
+    ],
+    "suggested_questions": [
+      "What is the correct list of all the factors necessary for the successful redemption Jesus accomplished? Some candidate components are shown below. The shedding of the amount of blood shed by Jesus",
+      "Pre-death suffering to the degree experienced by Jesus",
+      "An actual death lasting at least 3 days",
+      "What makes the collection of specified factors in your list created in response to question #1 above necessary and sufficient?"
+    ],
+    "modified": "2023-01-17T15:03:33-05:00"
+  },
+  {
+    "number": 162,
+    "title": "Item 162",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-162/",
+    "statement": "Slavery was allowed by God for a time only because it was so entrenched in the culture of the ancient world.",
+    "tags": [
+      "Bible",
+      "Morality",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "There were other sinful, culturally-entrenched practices that God did not make allowances for, such as the homosexuality within Sodom and Gomorrah. Why would God make allowances for the sinful practice of slavery?"
+    ],
+    "modified": "2023-01-17T15:06:44-05:00"
+  },
+  {
+    "number": 163,
+    "title": "Item 163",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-163/",
+    "statement": "It is rational to immediately reject all ideologies that do not offer hope for the future.",
+    "tags": [
+      "Emotions",
+      "Evidence",
+      "Future",
+      "Rational"
+    ],
+    "suggested_questions": [
+      "Some consider the demand of an ideology that offers hope to be an inappropriate demand for an honest seeker. Is this true?",
+      "Is there anything that would make a reality without hope logically impossible?"
+    ],
+    "modified": "2023-01-17T15:10:30-05:00"
+  },
+  {
+    "number": 164,
+    "title": "Item 164",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-164/",
+    "statement": "Had Jesus been physically dead less than 3 days, the price for sin would not have been fully paid.",
+    "tags": [
+      "Jesus",
+      "Logic",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "Could redemption have been accomplished had Jesus been dead for less than three days?",
+      "Would God have been unjust had he left Jesus dead for longer than three days? (See Item #30 )"
+    ],
+    "modified": "2023-01-17T15:13:20-05:00"
+  },
+  {
+    "number": 165,
+    "title": "Item 165",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-165/",
+    "statement": "There will be a civil war in the USA within 20 years that involves multiple US states.",
+    "tags": [
+      "Future",
+      "Government"
+    ],
+    "suggested_questions": [
+      "Is the trend toward political polarization in the US reversible?",
+      "What are the primary issues that might trigger a civil war?"
+    ],
+    "modified": "2023-01-17T15:14:56-05:00"
+  },
+  {
+    "number": 166,
+    "title": "Item 166",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-166/",
+    "statement": "Doctrinal disparities among real Christians are primarily due to the effects of sin on their souls.",
+    "tags": [
+      "Doctrines",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Is there a clear correlation between heterodoxical positions and sinful lifestyles?",
+      "To what resolution of othodoxy is the factor of sin relevant in the positions of the heterodoxical?"
+    ],
+    "modified": "2023-01-17T15:32:11-05:00"
+  },
+  {
+    "number": 167,
+    "title": "Item 167",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-167/",
+    "statement": "God provides unbelieving humans with supernatural miracles today to demonstrate his existence.",
+    "tags": [
+      "Evidence",
+      "Gospel",
+      "Seekers",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "Why has there been a decline in the \"signs and wonders\" previously offered as evidence for God?"
+    ],
+    "modified": "2023-01-17T15:19:44-05:00"
+  },
+  {
+    "number": 168,
+    "title": "Item 168",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-168/",
+    "statement": "The feeling of guilt comes from God and cannot be in error.",
+    "tags": [
+      "Belief",
+      "Emotions",
+      "Evidence"
+    ],
+    "suggested_questions": [
+      "Can the feeling of guilt be commandeered by various religions to capture converts? Has this been done in Christianity?",
+      "How can we help humans distinguish between the unjustified emotion of guilt and the guilt naturally emergent of sin?"
+    ],
+    "modified": "2023-01-17T15:23:02-05:00"
+  },
+  {
+    "number": 169,
+    "title": "Item 169",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-169/",
+    "statement": "When two or more candidate Gods are under consideration, an independent objective moral standard is available to eliminate any immoral candidate Gods.",
+    "tags": [
+      "Logic",
+      "Morality",
+      "Seekers"
+    ],
+    "suggested_questions": [
+      "What might be, if any, the moral standard that is independent of the candidate Gods under consideration?",
+      "It is our epistemic duty as honest and careful seekers to assess the morality of a candidate God before we accept that candidate God and his own morality as actual? (See Item #7 .)"
+    ],
+    "modified": "2023-01-17T15:26:35-05:00"
+  },
+  {
+    "number": 170,
+    "title": "Item 170",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-170/",
+    "statement": "Everyone believes in some type of transcendent morality, even if they deny they do.",
+    "tags": [],
+    "suggested_questions": [
+      "Are moral nihilists transparently hypocritical or inconsistent?",
+      "What questions might best expose the hidden moral beliefs of a self-professed moral nihilist?"
+    ],
+    "modified": "2023-01-17T15:28:46-05:00"
+  },
+  {
+    "number": 171,
+    "title": "Item 171",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-171/",
+    "statement": "I am not concerned with apparent logical incoherencies in the Bible I cannot now resolve since I know I will resolve them in Heaven.",
+    "tags": [
+      "Belief",
+      "Faith",
+      "Heaven",
+      "Logic"
+    ],
+    "suggested_questions": [
+      "Suppose you can show that Islam is logically incoherent. How would you convey that point to Muslims who claimed they are not concerned about apparent logical contradictions in Islam since such apparent contradictions would be resolved by Allah in Heaven?",
+      "Are apparent logical contradictions in Christianity that you yourself cannot explain a sufficient reason to be less than fully certain Christianity is true?"
+    ],
+    "modified": "2023-01-18T14:56:13-05:00"
+  },
+  {
+    "number": 172,
+    "title": "Item 172",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-172/",
+    "statement": "Sex outside of marriage is always sinful.",
+    "tags": [
+      "Marriage",
+      "Sex",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Is kissing or other acts short of coitus sinful outside of marriage?",
+      "How should local Christians deal with pre-marital sex?"
+    ],
+    "modified": "2023-01-18T15:03:06-05:00"
+  },
+  {
+    "number": 173,
+    "title": "Item 173",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-173/",
+    "statement": "The Earth was created in six literal days.",
+    "tags": [
+      "Bible",
+      "Science"
+    ],
+    "suggested_questions": [
+      "This issue is trending in what direction: towards young-earth or old-earth creation?",
+      "Is there scientific evidence, such as the light-year distance from the Earth some stars appear to be, that must be set aside to accommodate the authority of the Bible?"
+    ],
+    "modified": "2023-01-18T15:11:53-05:00"
+  },
+  {
+    "number": 174,
+    "title": "Item 174",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-174/",
+    "statement": "In a marriage, sex acts other than those consistent with reproduction are sinful.",
+    "tags": [
+      "Marriage",
+      "Morality",
+      "Sex",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Should a spouse do their best to attempt to accommodate the sexual preferences and fetishes of their partner?"
+    ],
+    "modified": "2023-01-18T15:16:21-05:00"
+  },
+  {
+    "number": 175,
+    "title": "Item 175",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-175/",
+    "statement": "Global warming is not primarily caused by humans.",
+    "tags": [],
+    "suggested_questions": [
+      "How can non-scientists determine when scientific consensus should be abandoned?",
+      "Are exaggerated doomsday predictions a possible cause of the resistance to the consensus of relevant scientists?"
+    ],
+    "modified": "2023-01-18T15:22:27-05:00"
+  },
+  {
+    "number": 176,
+    "title": "Item 176",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-176/",
+    "statement": "Legalized abortion is as worthy of a rectifying military response as was the holocaust.",
+    "tags": [
+      "Government",
+      "Justice",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "If there is a difference between the killing of Jews and of fetuses that requires a different response, what is that difference?"
+    ],
+    "modified": "2023-01-18T15:25:42-05:00"
+  },
+  {
+    "number": 177,
+    "title": "Item 177",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-177/",
+    "statement": "It is acceptable for governments to ban non-Christians from participating in politics.",
+    "tags": [],
+    "suggested_questions": [
+      "There are laws on the books of several US states that ban atheists from holding office. Should these laws be enforced?",
+      "If a Muslim candidate wants to introduce Sharia concepts into the laws of the country, should this candidate be banned from running?"
+    ],
+    "modified": "2023-01-20T13:48:48-05:00"
+  },
+  {
+    "number": 178,
+    "title": "Item 178",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-178/",
+    "statement": "The global economy will collapse to below 50% of its current strength sometime within the next 20 years.",
+    "tags": [
+      "Future",
+      "Government"
+    ],
+    "suggested_questions": [
+      "Are the apparent improvements in the living conditions and economic stability of humans soon to give way to a more apocalyptic reality?",
+      "As long as a stable economy, declining per capita war deaths, and improvements in living conditions continue, can we conclude we are not close to the end times as described in the Bible?"
+    ],
+    "modified": "2023-01-18T15:34:49-05:00"
+  },
+  {
+    "number": 179,
+    "title": "Item 179",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-179/",
+    "statement": "Fallible humans have no grounds on which to judge whether God is loving based on His actions recorded in the Bible.",
+    "tags": [
+      "Bible",
+      "Logic"
+    ],
+    "suggested_questions": [
+      "Is comparing a particular God who is said to be loving against that same God's actions a moral question or a logical question?",
+      "If the God we've chosen gives assurances that his apparently unloving actions are actually loving, should we defer to His definition of \"loving\"?"
+    ],
+    "modified": "2023-01-18T15:40:25-05:00"
+  },
+  {
+    "number": 180,
+    "title": "Item 180",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-180/",
+    "statement": "The Bible has much to offer the progress of science.",
+    "tags": [
+      "Bible",
+      "Evidence",
+      "Science"
+    ],
+    "suggested_questions": [
+      "What are the domains of science in which a greater dependence on the Scriptures would result in greater discoveries?",
+      "Do the foundations of science require an understanding of the Bible?",
+      "It has often been suggested that we would not expect regularity in nature if the Bible had not suggested regularity in nature is the norm as opposed to continuous miraculous intervention. What scriptures might we index here, and why would the regularity in nature be invisible to the godless?"
+    ],
+    "modified": "2023-01-18T15:47:24-05:00"
+  },
+  {
+    "number": 181,
+    "title": "Item 181",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-181/",
+    "statement": "I enjoy engaging and countering secular arguments against Christianity.",
+    "tags": [
+      "Christianity",
+      "Evidence",
+      "Personal",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "How might we strengthen our arguments against secular ideologies? Here are a few skills that might be considered: General critical thinking",
+      "Probability theory",
+      "Statistical acumen",
+      "An understanding of and practice in Bayes Theorem.",
+      "Rigorous standards of evidence",
+      "The philosophy of science",
+      "Knowledge of logical fallacies",
+      "Knowledge of cognitive biases",
+      "The history of science",
+      "General Philosophy",
+      "Knowledge of the original Biblical languages",
+      "Rhetorical skills"
+    ],
+    "modified": "2023-01-18T15:54:37-05:00"
+  },
+  {
+    "number": 182,
+    "title": "Item 182",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-182/",
+    "statement": "It is impossible for a soul to be annihilated. It must live in a conscious state for eternity.",
+    "tags": [
+      "Bible",
+      "Logic",
+      "Soul"
+    ],
+    "suggested_questions": [
+      "Is there something in the essence of a soul that makes the annihilation of that soul logically impossible?",
+      "Do some animals have eternal souls? Do any creatures have temporary souls?"
+    ],
+    "modified": "2023-01-18T15:58:16-05:00"
+  },
+  {
+    "number": 183,
+    "title": "Item 183",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-183/",
+    "statement": "It was impossible for Jesus to have sinned.",
+    "tags": [
+      "Jesus",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "If 1) Jesus was fully human and 2) humans have free will to sin, how is it logically possible that Jesus did not have this human free will to sin?"
+    ],
+    "modified": "2023-01-18T16:12:45-05:00"
+  },
+  {
+    "number": 184,
+    "title": "Item 184",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-184/",
+    "statement": "Mutual masturbation by a married couple is always sinful.",
+    "tags": [
+      "Marriage",
+      "Morality",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Is it possible that self-masturbation is sinful, but mutual masturbation between married individuals is not? If so, elaborate."
+    ],
+    "modified": "2023-01-18T16:16:30-05:00"
+  },
+  {
+    "number": 185,
+    "title": "Item 185",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-185/",
+    "statement": "Any consensual sex act within a heterosexual marriage is not intrinsically sinful.",
+    "tags": [
+      "Marriage",
+      "Morality",
+      "Sex"
+    ],
+    "suggested_questions": [
+      "If you tend to respond negatively to this item, what consensual sex acts would be sinful? What standard was used in your conclusion?"
+    ],
+    "modified": "2023-01-18T16:19:05-05:00"
+  },
+  {
+    "number": 186,
+    "title": "Item 186",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-186/",
+    "statement": "Some kind of physical baptism is necessary for redemption.",
+    "tags": [
+      "Baptism",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "What forms of baptism are in obedience to the biblical mandate to be baptized?",
+      "Is there an actual biblical mandate to be physically baptized?"
+    ],
+    "modified": "2023-01-18T16:21:30-05:00"
+  },
+  {
+    "number": 187,
+    "title": "Item 187",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-187/",
+    "statement": "Since the Bible offers few cures for diseases that humans experience, we can conclude eliminating suffering is not a priority for God.",
+    "tags": [
+      "Bible",
+      "Science",
+      "Suffering"
+    ],
+    "suggested_questions": [
+      "If God intends for humans to scientifically reduce or eliminate physical suffering, why was Job intentionally made to suffer?",
+      "Had a short passage in the Bible been devoted to an explanation of the vaccinations, this would have eliminated an immense amount of human suffering. Is its absence not an indication that God does not give the alleviation of suffering much priority?"
+    ],
+    "modified": "2023-01-18T16:28:51-05:00"
+  },
+  {
+    "number": 188,
+    "title": "Item 188",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-188/",
+    "statement": "Researching and honestly considering arguments against Christianity is a healthy activity for most Christians.",
+    "tags": [
+      "Believers",
+      "Christianity",
+      "Evidence",
+      "Seekers"
+    ],
+    "suggested_questions": [
+      "Should new Christians be encouraged to explore arguments against Christianity? Should they be accompanied by a seasoned Christian when venturing into this territory?",
+      "Is it possible for a real Christian to actually apostatize due to arguments against Christianity?"
+    ],
+    "modified": "2023-01-18T16:35:20-05:00"
+  },
+  {
+    "number": 189,
+    "title": "Item 189",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-189/",
+    "statement": "Redemption required that Jesus physically die.",
+    "tags": [
+      "Gospel",
+      "Jesus",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "For what logical reason did the forgiveness of sin require a death?",
+      "Can we authentically forgive people who have wronged us only because Jesus died? What if the one forgiving feels no one should die or should have died for the forgiveness to be genuine?"
+    ],
+    "modified": "2023-01-18T16:38:15-05:00"
+  },
+  {
+    "number": 190,
+    "title": "Item 190",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-190/",
+    "statement": "Jesus physically rose from the dead in his earthly body.",
+    "tags": [
+      "Gospel",
+      "Jesus",
+      "Redemption"
+    ],
+    "suggested_questions": [
+      "Is the type of body Jesus resurrected into an important doctrine? If so, why?",
+      "Did the resurrected body of Jesus need to carry the scars of His pre-death body? Will this be true for the resurrected bodies of Christian amputees?"
+    ],
+    "modified": "2023-01-18T16:41:09-05:00"
+  },
+  {
+    "number": 191,
+    "title": "Item 191",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-191/",
+    "statement": "Some humans with no belief in the Gospel will be redeemed.",
+    "tags": [
+      "Gospel",
+      "Redemption",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "If you tend toward an affirmative response, can you give an explanation of what makes this possible?"
+    ],
+    "modified": "2023-01-18T16:45:43-05:00"
+  },
+  {
+    "number": 192,
+    "title": "Item 192",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-192/",
+    "statement": "I could be wrong in my belief that there is a personal God.",
+    "tags": [
+      "Belief",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "Is anyone rational to claim they justifiably have no doubt that they are correct in their belief there is a personal God? (See Item #52 )",
+      "Is there an identifiable difference between the real Christian's confidence in their beliefs and the identical beliefs of a non-Christian who wrongly believes they are a Christian? (See Item #50 )"
+    ],
+    "modified": "2023-01-18T17:22:50-05:00"
+  },
+  {
+    "number": 193,
+    "title": "Item 193",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-193/",
+    "statement": "Becoming obese due to reasons other than a medical condition is sinful.",
+    "tags": [
+      "Morality",
+      "Sin"
+    ],
+    "suggested_questions": [
+      "Can we accurately identify Christians for whom their \"God is their belly\"? How should they be reprimanded?"
+    ],
+    "modified": "2023-01-18T16:57:38-05:00"
+  },
+  {
+    "number": 194,
+    "title": "Item 194",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-194/",
+    "statement": "I occasionally feel I do not actually believe in the Christian God.",
+    "tags": [
+      "Belief",
+      "Doubt",
+      "Personal"
+    ],
+    "suggested_questions": [
+      "Are occasional seasons of doubt normal for real Christians. Or does doubt suggest one was never a real Christian?",
+      "If there is no chance a real Christian can apostatize, is doubt for a Christian a minor concern, bound to eventually dissipate?",
+      "Does the essence of rationality require that we hold at least a sliver of doubt about our beliefs?"
+    ],
+    "modified": "2023-01-18T17:03:02-05:00"
+  },
+  {
+    "number": 195,
+    "title": "Item 195",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-195/",
+    "statement": "It can sometimes be immoral not to divorce.",
+    "tags": [
+      "Marriage",
+      "Morality"
+    ],
+    "suggested_questions": [
+      "Under what conditions would it be immoral not to divorce?",
+      "Is the abuse of one's own children such a case in which choosing not to divorce and merely separating would be immoral?"
+    ],
+    "modified": "2023-01-18T17:07:13-05:00"
+  },
+  {
+    "number": 196,
+    "title": "Item 196",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-196/",
+    "statement": "God chose to communicate the Gospel through the Bible since communicating to each human individually is not possible.",
+    "tags": [
+      "Bible",
+      "Gospel",
+      "Logic"
+    ],
+    "suggested_questions": [
+      "What are the reasons God might have decided to avoid giving us indisputable evidence of his existence?",
+      "The Bible presented as an indirect divine revelation appears to be the same modus operandi of most popular false religions. Why might the omnipresent and omnipotent Christian God have chosen the same mode of communicating with humans?"
+    ],
+    "modified": "2023-01-18T17:11:45-05:00"
+  },
+  {
+    "number": 197,
+    "title": "Item 197",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-197/",
+    "statement": "Humans are held accountable for rejecting the Christian God even if they have not explicitly heard about the Christian God.",
+    "tags": [
+      "Damnation",
+      "Gospel",
+      "Logic",
+      "Unbelievers"
+    ],
+    "suggested_questions": [
+      "If you answer this item affirmatively, how can culpability for the rejection of the Gospel fall on those who have not heard of the Gospel?",
+      "Can something coherently be rejected when it is unknown to the rejector?"
+    ],
+    "modified": "2023-01-18T17:15:13-05:00"
+  },
+  {
+    "number": 198,
+    "title": "Item 198",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-198/",
+    "statement": "Parents should give painful spankings to their children for misbehaving.",
+    "tags": [
+      "Family",
+      "Morality",
+      "Suffering",
+      "Youth"
+    ],
+    "suggested_questions": [
+      "For centuries, Christian parents spanked their children. Were they wrong, and did they have the ability to discern that they were wrong?",
+      "What form of corporal punishment, if any, is appropriate in Christian families today?"
+    ],
+    "modified": "2023-01-18T17:17:14-05:00"
+  },
+  {
+    "number": 199,
+    "title": "Item 199",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-199/",
+    "statement": "The average age at which the first damnable sin is committed (\"age of accountability\") is less than 10 years old.",
+    "tags": [
+      "Damnation",
+      "Sin",
+      "Youth"
+    ],
+    "suggested_questions": [
+      "In your opinion, what age is the actual average age at which the first damnable sin is committed?",
+      "Is it wrong for parents to feel relieved that their child died before they became a conscious sinner?",
+      "Are there any identifiable clues when a child first becomes culpable and subject to damnation for their sins?"
+    ],
+    "modified": "2023-01-18T17:20:57-05:00"
+  },
+  {
+    "number": 200,
+    "title": "Item 200",
+    "url": "https://christianthoughtsurvey.wordpress.com/item-200/",
+    "statement": "God sometimes speaks to me in a clear, audible voice.",
+    "tags": [],
+    "suggested_questions": [
+      "How might we categorize and interact with those who claim to hear the audible voice of God?"
+    ],
+    "modified": "2023-01-18T17:22:29-05:00"
+  }
+]

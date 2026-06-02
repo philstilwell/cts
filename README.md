@@ -35,15 +35,24 @@ The generated pages reflect the new WordPress pages updated on June 1, 2026:
 Internal launch planning files:
 
 - `WEEK_1_SURVEY_TEMPLATE.md`
+- `WEEK_1_ITEM_AUDIT.md`
 - `WEEKLY_RUNBOOK.md`
 - `DATA_PIPELINE_PLAN.md`
 - `WEEKLY_REPORTING_STRATEGY.md`
 - `PARTICIPANT_NOMINATED_BALLOT_PROTOCOL.md`
 - `TOPIC_BANK_TENSION_REVIEW.md`
+- `NEXT_3_TOPIC_ITEM_REVIEW.md`
+- `LEGACY_200_ITEM_INDEX.md`
 - `MAILERLITE_SEND_PLAN.md`
 
 Run the static build with:
 
 ```bash
 python3 scripts/build_static_site.py
+```
+
+Refresh the legacy 200-item reference index with:
+
+```bash
+python3 scripts/build_legacy_item_index.py
 ```
