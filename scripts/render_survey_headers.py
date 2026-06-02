@@ -96,8 +96,9 @@ def shadowed_panel(draw: ImageDraw.ImageDraw) -> None:
         [(sc(1390), sc(0)), (sc(W), sc(0)), (sc(W), sc(H)), (sc(1495), sc(H))],
         fill=color("#D77B22", 80),
     )
-    draw.rectangle((0, 0, sc(W), sc(8)), fill=color("#D57A22"))
-    draw.rectangle((0, sc(H - 5), sc(W), sc(H)), fill=color("#A9501D"))
+    rule = color("#C7691F")
+    draw.rectangle((0, 0, sc(W), sc(6)), fill=rule)
+    draw.rectangle((0, sc(H - 6), sc(W), sc(H)), fill=rule)
 
 
 def draw_microbars(draw: ImageDraw.ImageDraw, x0: int, y0: int, values: list[int]) -> None:
@@ -130,10 +131,10 @@ def render(
     shadowed_panel(draw)
 
     rounded(draw, (48, 24, 145, 112), 18, color("#F29A2E"), color("#FFD28A", 150), 1)
-    text(draw, (96, 54), marker, color("#20100B"), MARK_BIG, "mm")
-    text(draw, (96, 86), marker_label, color("#462513"), MARK_SMALL, "mm")
+    text(draw, (96, 60), marker, color("#20100B"), MARK_BIG, "mm")
+    text(draw, (96, 93), marker_label, color("#462513"), MARK_SMALL, "mm")
 
-    text(draw, (178, 37), "CTS WEEKLY SURVEY", color("#F5B55D"), EYEBROW)
+    text(draw, (178, 37), "CTS WEEKLY SURVEY", color("#3A1E10"), EYEBROW)
     text(draw, (177, 80), title, color("#FFF1D4"), TITLE, "lm")
 
     line_x = max(622, round(177 + TITLE.getlength(title) / SCALE + 48))
@@ -156,7 +157,7 @@ def main() -> None:
         "12",
         "ITEMS",
         "Featured Topic",
-        "Divorce and Remarriage",
+        "12 related survey items",
         "0-100 credence sliders",
         [30, 14, 24, 36, 18, 28, 40, 16, 34, 22, 37, 26],
     )
