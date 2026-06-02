@@ -65,14 +65,16 @@ Body:
 
 Hello,
 
-The first revived Christian Thought Survey weekly survey is now ready. If you have a few minutes, I would be grateful for your participation.
+The first revived Christian Thought Survey weekly survey is now ready. It should take fewer than ten minutes.
 
 Survey link:
 https://www.surveyol.com/r/9A4F55F
 
-This week's topic is Divorce and Remarriage. The survey is intended for people who are currently or previously engaged in full-time ministry and should take fewer than ten minutes to complete. It uses 0-100 credence sliders for the live survey items. You will also have a chance to vote on nominated items for future surveys, suggest additional items, and preview the next 3 planned general topics.
+This week's topic is Divorce and Remarriage.
 
-Thank you,
+The weekly surveys are intended for people who are currently or previously engaged in full-time ministry. We'll use 0-100 credence sliders for the survey items. You will also have a chance to vote on nominated items for future surveys, suggest additional items, and preview the next 3 planned general topics.
+
+Much appreciated,
 
 Phil
 Christian Thought Survey
