@@ -36,7 +36,7 @@ Hello,
 
 Thank you for your previous participation in Christian Thought Survey. Your earlier responses helped make the project worth reviving.
 
-Christian Thought Survey is being revived as a shorter weekly survey for people who are currently or previously engaged in full-time ministry. The expectation is that this weekly rhythm will provide timely insights to ministers in a dynamic age of shifting Christian doctrines and practices.
+Christian Thought Survey is being revived as a shorter weekly survey for people who are currently or previously engaged in full-time ministry. The expectation is that this weekly rhythm will provide timely insights to ministers in a dynamic age of shifting Christian doctrines and practices. By participating, you will help reflect the pulse of Christianity in this dynamic era.
 
 The first weekly survey will focus on Divorce and Remarriage. It will include one CTS-administered topic, 12 related credence-slider items, 3 participant-vote-determined items, a participant-nominated item ballot, a suggestion text box, a previous-results link, and a preview of the next 3 planned general topics.
 
