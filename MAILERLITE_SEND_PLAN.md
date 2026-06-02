@@ -34,11 +34,13 @@ Body:
 
 Hello,
 
-Thank you for your previous participation in Christian Thought Survey. Your earlier responses helped make the project worth reviving.
+I have fond memories of and deep appreciation for your participation in our 200-item 2023 survey. You can still find the extensive results at our new site: https://christianthoughtsurvey.com
 
-Christian Thought Survey is being revived as a shorter weekly survey for people who are currently or previously engaged in full-time ministry. The expectation is that this weekly rhythm will provide timely insights to ministers in a dynamic age of shifting Christian doctrines and practices. By participating, you will help reflect the pulse of Christianity in this dynamic era.
+I've decided to revive the CTS project in a less demanding, more sustainable, and more immediately useful form. Christian Thought Survey is moving to shorter weekly surveys that will take fewer than ten minutes to complete.
 
-The first weekly survey will focus on Divorce and Remarriage. It will include one CTS-administered topic, 12 related credence-slider items, 3 participant-vote-determined items, a participant-nominated item ballot, a suggestion text box, a previous-results link, and a preview of the next 3 planned general topics.
+The expectation is that this weekly rhythm will provide timely insights to participating ministers in a dynamic age of shifting Christian doctrines and practices. Your responses will also help reflect the pulse of Christianity today.
+
+Our first weekly survey will focus on Divorce and Remarriage. It will include 12 related credence-slider items, three additional items on other relevant topics that will eventually be chosen by participants, a chance to vote on nominated items for future surveys, an item nomination text box, a previous-results link as the weekly cycle develops, and a preview of the next 3 planned general topics.
 
 Looking ahead, the next 3 planned CTS-administered topics are Pornography and the Church, Pastoral Authority and Accountability, and Women in Church Leadership.
 
