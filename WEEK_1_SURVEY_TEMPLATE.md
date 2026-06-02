@@ -92,7 +92,7 @@ There are no previous weekly CTS 2026 results yet. For the closed test, please c
 
 Link:
 
-https://christianthoughtsurvey.wordpress.com/weekly-survey-reports/
+https://christianthoughtsurvey.com/weekly-survey-reports/
 
 ## F. Preview Of Upcoming Topics
 
@@ -187,7 +187,7 @@ Pastors should avoid platforming guest speakers whose doctrine differs from the 
 Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100.
 
 [Text]
-There are no previous weekly CTS 2026 results yet. For the closed test, please check that this placeholder is clear and that the reports link works: https://christianthoughtsurvey.wordpress.com/weekly-survey-reports/
+There are no previous weekly CTS 2026 results yet. For the closed test, please check that this placeholder is clear and that the reports link works: https://christianthoughtsurvey.com/weekly-survey-reports/
 
 [Text]
 Looking ahead: the next 3 planned CTS-administered weekly topics are Pornography and the Church; Pastoral Authority and Accountability; and Women in Church Leadership. Topics may shift if participant feedback or administrative needs require it.
