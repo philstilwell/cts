@@ -45,8 +45,8 @@ def color(hex_color: str, alpha: int = 255) -> tuple[int, int, int, int]:
 
 
 def draw_gradient(draw: ImageDraw.ImageDraw) -> None:
-    left = color("#24140F")
-    right = color("#5A2D17")
+    left = color("#553E15")
+    right = color("#6A4D1C")
     for x in range(W * SCALE):
         t = x / max(1, W * SCALE - 1)
         r = round(left[0] * (1 - t) + right[0] * t)
@@ -86,17 +86,17 @@ def rounded(
 def shadowed_panel(draw: ImageDraw.ImageDraw) -> None:
     draw.polygon(
         [(sc(0), sc(0)), (sc(480), sc(0)), (sc(410), sc(H)), (sc(0), sc(H))],
-        fill=color("#8B4418", 92),
+        fill=color("#8D6F4D", 172),
     )
     draw.polygon(
         [(sc(1210), sc(0)), (sc(W), sc(0)), (sc(W), sc(H)), (sc(1135), sc(H))],
-        fill=color("#A5541D", 62),
+        fill=color("#8D6F4D", 110),
     )
     draw.polygon(
         [(sc(1390), sc(0)), (sc(W), sc(0)), (sc(W), sc(H)), (sc(1495), sc(H))],
-        fill=color("#D77B22", 80),
+        fill=color("#D8912F", 116),
     )
-    rule = color("#C7691F")
+    rule = color("#D89232")
     draw.rectangle((0, 0, sc(W), sc(6)), fill=rule)
     draw.rectangle((0, sc(H - 6), sc(W), sc(H)), fill=rule)
 
@@ -107,11 +107,11 @@ def draw_microbars(draw: ImageDraw.ImageDraw, x0: int, y0: int, values: list[int
         draw.rounded_rectangle(
             (sc(x), sc(y0 + 42 - value), sc(x + 8), sc(y0 + 42)),
             radius=sc(3),
-            fill=color("#F1A138", 214),
+            fill=color("#EAA23B", 226),
         )
     draw.line(
         (sc(x0 - 6), sc(y0 + 45), sc(x0 + len(values) * 15 - 1), sc(y0 + 45)),
-        fill=color("#F4C170", 115),
+        fill=color("#F3C072", 132),
         width=sc(2),
     )
 
@@ -125,24 +125,24 @@ def render(
     pill: str,
     bars: list[int],
 ) -> None:
-    image = Image.new("RGBA", (W * SCALE, H * SCALE), color("#24140F"))
+    image = Image.new("RGBA", (W * SCALE, H * SCALE), color("#553E15"))
     draw = ImageDraw.Draw(image, "RGBA")
     draw_gradient(draw)
     shadowed_panel(draw)
 
-    rounded(draw, (48, 24, 145, 112), 18, color("#F29A2E"), color("#FFD28A", 150), 1)
-    text(draw, (96, 60), marker, color("#20100B"), MARK_BIG, "mm")
-    text(draw, (96, 93), marker_label, color("#462513"), MARK_SMALL, "mm")
+    rounded(draw, (48, 24, 145, 112), 18, color("#EAA23B"), color("#F6CA77", 165), 1)
+    text(draw, (96, 60), marker, color("#241708"), MARK_BIG, "mm")
+    text(draw, (96, 93), marker_label, color("#33220B"), MARK_SMALL, "mm")
 
-    text(draw, (178, 37), "CTS WEEKLY SURVEY", color("#3A1E10"), EYEBROW)
-    text(draw, (177, 80), title, color("#FFF1D4"), TITLE, "lm")
+    text(draw, (178, 37), "CTS WEEKLY SURVEY", color("#140D04"), EYEBROW)
+    text(draw, (177, 80), title, color("#FFF8EA"), TITLE, "lm")
 
     line_x = max(622, round(177 + TITLE.getlength(title) / SCALE + 48))
-    draw.line((sc(line_x), sc(38), sc(line_x), sc(99)), fill=color("#E58A2D", 170), width=sc(3))
-    text(draw, (line_x + 26, 66), subtitle, color("#F8DFC0"), SUBTITLE, "lm")
+    draw.line((sc(line_x), sc(38), sc(line_x), sc(99)), fill=color("#EAA23B", 190), width=sc(3))
+    text(draw, (line_x + 26, 66), subtitle, color("#F8E3BE"), SUBTITLE, "lm")
 
-    rounded(draw, (1058, 44, 1432, 91), 23, color("#2A1710", 142), color("#E58A2D", 160), 1)
-    text(draw, (1245, 68), pill, color("#FFD082"), PILL, "mm")
+    rounded(draw, (1058, 44, 1432, 91), 23, color("#392612", 186), color("#EAA23B", 172), 1)
+    text(draw, (1245, 68), pill, color("#F7CE7C"), PILL, "mm")
 
     draw_microbars(draw, 1466, 48, bars)
 
