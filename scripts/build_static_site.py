@@ -17,12 +17,13 @@ CLOUDFLARE_ANALYTICS = "<!-- Cloudflare Web Analytics --><script defer src='http
 WEEKLY_STRUCTURE_LIST = """<ol class="process-list" type="A">
   <li><strong>One CTS-administered topic:</strong> 12 related survey items from the CTS topic bank.</li>
   <li><strong>Three participant-vote-determined questions:</strong> 3 additional live survey items chosen based on the previous week's participant vote.</li>
-  <li><strong>A participant-nominated item ballot:</strong> a list of 'purified' participant-nominated survey items from the previous week that active participants can vote on for the following week.</li>
+  <li><strong>A participant-nominated item ballot:</strong> 7 AI-polished ballot items selected from the previous week's participant nominations, with AI-created seed items added only when fewer than 7 suitable participant nominations are available.</li>
   <li><strong>A text box:</strong> to suggest survey items to be voted on next week and possibly featured in the following week's survey.</li>
   <li><strong>A previous-results summary and link:</strong> a brief summary and a link to the primary CTS website page containing the previous week's results.</li>
   <li><strong>A preview of upcoming topics:</strong> The topics for the next three weeks will be featured to allow for mental preparation.</li>
 </ol>"""
 RESPONSE_RULE_NOTE = "The 15 live survey items use credence sliders. The participant-nominated item ballot and suggestion text box are administrative inputs rather than survey-item responses."
+PARTICIPANT_BALLOT_NOTE = "Participant suggestions are reviewed by CTS with AI assistance, polished for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance, and reduced to a 7-item ballot. Active participants rank those 7 items; the top 3 ranked items become live participant-vote-determined survey items in the following week's survey."
 
 
 @dataclass(frozen=True)
@@ -46,7 +47,7 @@ PAGES = [
         description=(
             "A weekly research project for Christian ministers, built around 12 "
             "CTS-administered survey items, 3 participant-vote-determined questions, "
-            "credence sliders, a participant-nominated item ballot, survey-item suggestions, "
+            "credence sliders, a 7-item AI-polished participant-nominated item ballot, survey-item suggestions, "
             "previous-results links, and a preview of upcoming topics."
         ),
         content="""
@@ -64,7 +65,7 @@ PAGES = [
         <li><strong>Credence-based responses:</strong> all survey items use sliders so responses preserve more precision than ordinary agree/disagree choices.</li>
         <li><strong>Minister-focused panel:</strong> the first invitations will go to prior CTS participants who were willing to be contacted by email.</li>
         <li><strong>Open reporting:</strong> weekly summaries will be written for public reading, while data releases will be structured for responsible reanalysis.</li>
-        <li><strong>Ongoing item voting:</strong> every weekly survey includes a 'purified' participant-nominated item ballot and a text box for next-week suggestions.</li>
+        <li><strong>Ongoing item voting:</strong> every weekly survey includes a 7-item AI-polished participant-nominated item ballot and a text box for next-week suggestions.</li>
         <li><strong>Looking ahead:</strong> every survey features the next three weeks' topics to allow for mental preparation.</li>
       </ul>
     </div>
@@ -80,6 +81,7 @@ PAGES = [
     </div>
     <div class="wp-content">
       {weekly_structure_list}
+      <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
       <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
     </div>
   </div>
@@ -94,7 +96,7 @@ PAGES = [
     <div class="wp-content">
       <p>Reports are planned for Fridays so pastors and other ministry leaders can reflect on the results before Sunday. Public summaries will be posted here, and the project is being designed so appropriately prepared raw data can be shared for independent analysis.</p>
       <p>The intended weekly cadence is a Monday heads-up email followed by the actual SurveyOL survey-link email on Thursday.</p>
-      <p>When the first weekly survey is fielded, this site will point to the current survey, the current report, the participant-vote-determined questions, the participant-nominated item ballot, the suggestion text box, the previous-results summary and link, the preview of upcoming topics, and the raw-data download policy.</p>
+      <p>When the first weekly survey is fielded, this site will point to the current survey, the current report, the participant-vote-determined questions, the 7-item participant-nominated item ballot, the suggestion text box, the previous-results summary and link, the preview of upcoming topics, and the raw-data download policy.</p>
       <p>The original 2022-2024 CTS materials remain available in the archive. They are being kept as a reference library while the front of the site shifts toward weekly reports.</p>
       <div class="button-row">
         <a class="button light" href="{weekly_url}">Weekly Survey Reports</a>
@@ -147,7 +149,8 @@ PAGES = [
   <h2>Weekly survey structure</h2>
   <p>Each Weekly Survey will include six parts:</p>
   {weekly_structure_list}
-  <p>The cycle is cumulative: participant suggestions submitted in one weekly survey are refined, placed on the next ballot, and the top 3 selected items become live survey items in the following week's survey.</p>
+  <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
+  <p>The cycle is cumulative: participant suggestions submitted in one weekly survey are reviewed by CTS with AI assistance, polished, reduced to a 7-item ballot, ranked by active participants, and the top 3 ranked items become live survey items in the following week's survey. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.</p>
   <p>The regular send rhythm is a Monday heads-up email and a Thursday SurveyOL survey-link email. The Monday email names the current topic and previews the next 3 planned general topics; the Thursday survey includes that same preview of upcoming topics inside the survey itself.</p>
   <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
 
@@ -158,7 +161,7 @@ PAGES = [
     <li><strong>Participant-vote-determined questions:</strong> 3 additional live survey items chosen based on the previous week's participant vote.</li>
     <li><strong>Credence results:</strong> summary statistics for slider responses across all live survey items.</li>
     <li><strong>Subgroup comparisons:</strong> denominational, role, ministry-experience, or other comparisons when sample size permits.</li>
-    <li><strong>Participant-nominated item ballot:</strong> the ranked result from voting on last week's 'purified' participant-nominated survey items.</li>
+    <li><strong>Participant-nominated item ballot:</strong> the ranked result from voting on last week's 7 AI-polished participant-nominated ballot items.</li>
     <li><strong>Suggestion text box:</strong> a summary of suggested survey items when they can be shared responsibly.</li>
     <li><strong>Previous-results summary and link:</strong> the brief summary and primary CTS website link included in the survey.</li>
     <li><strong>Preview of upcoming topics:</strong> the topics for the next three weeks featured to allow for mental preparation.</li>
@@ -209,7 +212,7 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>The original Christian Thought Survey project produced long-form surveys, item-level pages, mini-surveys, and extensive result reports. Those materials are now gathered here as an archive while the front of the site shifts toward the 2026 weekly survey format: 12 CTS-administered items, 3 participant-vote-determined questions, a participant-nominated item ballot, a suggestion text box, a previous-results summary and link, and a preview of upcoming topics.</p>
+  <p>The original Christian Thought Survey project produced long-form surveys, item-level pages, mini-surveys, and extensive result reports. Those materials are now gathered here as an archive while the front of the site shifts toward the 2026 weekly survey format: 12 CTS-administered items, 3 participant-vote-determined questions, a 7-item AI-polished participant-nominated item ballot, a suggestion text box, a previous-results summary and link, and a preview of upcoming topics.</p>
 
   <h2>Major results pages</h2>
   <ul>
@@ -266,6 +269,8 @@ PAGES = [
   <ul>
     <li>Free-text suggestions are treated as administrative inputs, not as public survey responses.</li>
     <li>Suggestions may be corrected, combined, clarified, shortened, or withheld before appearing on a participant-nominated item ballot.</li>
+    <li>CTS uses AI assistance to polish nominations for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance.</li>
+    <li>Each weekly ballot should contain 7 items. If fewer than 7 suitable participant nominations are available, CTS may add AI-created seed items to complete the ballot.</li>
     <li>CTS will not intentionally publish a suggestion in a way that identifies the participant who submitted it.</li>
   </ul>
 
@@ -308,6 +313,7 @@ PAGES = [
 
   <h2>How the weekly cycle works</h2>
   {weekly_structure_list}
+  <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
   <p>The regular send rhythm is a Monday heads-up email and a Thursday SurveyOL survey-link email.</p>
   <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
 
@@ -333,6 +339,7 @@ PAGES = [
 
   <p>Each Weekly Survey will include six parts:</p>
   {weekly_structure_list}
+  <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
   <p>The regular send rhythm is a Monday heads-up email and a Thursday SurveyOL survey-link email.</p>
   <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
 
@@ -378,6 +385,7 @@ def fill_links(html: str, prefix: str) -> str:
         "surveyol_embed_url": SURVEYOL_EMBED_URL,
         "weekly_structure_list": WEEKLY_STRUCTURE_LIST,
         "response_rule_note": RESPONSE_RULE_NOTE,
+        "participant_ballot_note": PARTICIPANT_BALLOT_NOTE,
     }
     return html.format(**links)
 
@@ -430,7 +438,7 @@ def render_home(page: Page, prefix: str) -> str:
         <div class="hero-copy">
           <p class="eyebrow">{escape(page.eyebrow)}</p>
           <h1 id="page-title">{page.title}</h1>
-          <p class="lede"><strong>Christian Thought Survey is being revived as a weekly research project for Christian ministers.</strong> Each Weekly Survey will pair one CTS-administered topic with 12 related items, 3 participant-vote-determined questions, a participant-nominated item ballot, a suggestion text box, a previous-results summary and link, and a preview of upcoming topics.</p>
+          <p class="lede"><strong>Christian Thought Survey is being revived as a weekly research project for Christian ministers.</strong> Each Weekly Survey will pair one CTS-administered topic with 12 related items, 3 participant-vote-determined questions, a 7-item AI-polished participant-nominated item ballot, a suggestion text box, a previous-results summary and link, and a preview of upcoming topics.</p>
           <div class="button-row">
             <a class="button" href="{page_url(prefix, "weekly-survey-reports/index.html")}">Weekly Survey Reports</a>
             <a class="button secondary" href="{page_url(prefix, "previous-results-archive/index.html")}">Previous Results Archive</a>

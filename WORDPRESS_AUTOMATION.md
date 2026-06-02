@@ -8,11 +8,13 @@ When WordPress pages or posts describe a Weekly Survey, they should match the Gi
 
 1. One CTS-administered topic: 12 related survey items from the CTS topic bank.
 2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote.
-3. A participant-nominated item ballot: a list of 'purified' participant-nominated survey items from the previous week that active participants can vote on for the following week.
+3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.
 4. A text box to suggest survey items to be voted on next week and possibly featured in the following week's survey.
 5. A previous-results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results.
 
 All live survey items should be credence-based slider items. The only non-slider inputs should be the participant-nominated item ballot and suggestion text boxes.
+
+When describing the participant-nominated ballot, make clear that CTS reviews suggestions with AI assistance, polishes them for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance, and presents 7 ballot items for active participants to rank. The top 3 ranked items become live survey items in the following week's survey.
 
 ## Authentication Model
 

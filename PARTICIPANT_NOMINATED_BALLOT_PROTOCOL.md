@@ -1,0 +1,60 @@
+# Participant-Nominated Ballot Protocol
+
+Use this protocol for the participant-nominated item ballot in each weekly CTS survey.
+
+## Purpose
+
+The ballot keeps participant-generated questions in the weekly survey cycle while preserving CTS standards for clarity, neutrality, theological/pastoral relevance, and credence-slider suitability.
+
+## Weekly Rule
+
+Each weekly survey includes a 7-item participant-nominated item ballot.
+
+1. Collect participant suggestions from the previous week's survey text box.
+2. Remove accidental identifiers, private details, duplicates, and unusable fragments.
+3. Use CTS review with AI assistance to polish viable nominations into standalone survey-item statements.
+4. Score the polished items with the rubric below.
+5. Place the top 7 suitable items on the next weekly ballot.
+6. If fewer than 7 suitable participant nominations are available, add AI-created seed items until the ballot has 7 items.
+7. Active participants rank the 7 ballot items.
+8. The top 3 ranked eligible items become live participant-vote-determined survey items in the following week's survey.
+
+## Polishing Standard
+
+Polishing may correct grammar, simplify wording, combine near-duplicates, remove identifying details, make the item credence-slider ready, and reduce loaded language. Polishing should not reverse or materially distort the participant's substantive direction.
+
+## Assessment Rubric
+
+Score each viable candidate from 0 to 2 on each criterion:
+
+- Clarity: the item can be understood quickly without extra context.
+- Credence-slider suitability: the item can be rated meaningfully from 0 to 100.
+- Neutrality: the wording does not push participants toward one answer.
+- Breadth: the item is likely to interest more than a tiny subset of participants.
+- Novelty: the item does not duplicate the current topic bank or recent live items.
+- Pastoral/theological relevance: the item connects meaningfully to ministry, doctrine, practice, or Christian thought.
+
+Total possible score: 12.
+
+## Tie Handling
+
+When items are tied for the final ballot slots, prefer the item that:
+
+1. Has higher pastoral/theological relevance.
+2. Has higher breadth.
+3. Adds more topical diversity to the ballot.
+4. Has not appeared recently in a live survey or ballot.
+
+## AI-Created Seed Items
+
+Use AI-created seed items only when fewer than 7 suitable participant nominations are available. Seed items should follow the same rubric and should be broad enough to rank against participant-nominated items. Keep an internal note identifying which ballot items were participant-originated and which were CTS/AI seed items.
+
+## Audit Trail
+
+For each weekly ballot, keep a local note with:
+
+- Raw participant suggestion, unless it contains sensitive identifying details.
+- Polished ballot wording.
+- Rubric score.
+- Whether the item was participant-originated or CTS/AI seeded.
+- Reason for excluding any otherwise plausible nomination.

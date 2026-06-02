@@ -10,12 +10,14 @@ Weekly survey assembly:
 
 1. One CTS-administered topic: 12 related survey items from the CTS topic bank.
 2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote.
-3. A participant-nominated item ballot: a list of 'purified' participant-nominated survey items from the previous week that active participants can vote on for the following week.
+3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.
 4. **A text box:** to suggest survey items to be voted on next week and possibly featured in the following week's survey.
 5. A previous-results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results.
 6. A preview of upcoming topics: The topics for the next three weeks will be featured to allow for mental preparation.
 
 All survey items should be credence-based slider items. The participant-nominated item ballot and suggestion text box are administrative inputs rather than survey-item responses.
+
+Participant-nominated ballot protocol: CTS reviews participant suggestions with AI assistance, polishes nominations for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance, and reduces them to a 7-item ballot. Active participants rank those 7 items; the top 3 ranked items become live participant-vote-determined survey items in the following week's survey.
 
 ## 1. Divorce and Remarriage
 1. In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce.

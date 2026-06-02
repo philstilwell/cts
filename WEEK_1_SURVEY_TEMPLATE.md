@@ -10,10 +10,6 @@ SurveyOL design/preview GUID: 528d1b8c-8c12-4634-9a7e-3ad9110df08d
 
 Week 1 send cadence: Monday heads-up email, Thursday SurveyOL survey-link email.
 
-Eligibility note to display inside SurveyOL:
-
-> CTS weekly survey participation is intended for people who are currently or previously engaged in full-time ministry. Please continue only if that describes you.
-
 Default live-item response format:
 
 - 0 = strongly disagree
@@ -28,13 +24,12 @@ Preview of upcoming topics for Week 1:
 
 ## Survey Sections
 
-1. Eligibility note and optional confirmation.
-2. One CTS-administered topic: Divorce and Remarriage, 12 credence slider items.
-3. Three Week 1 seeded participant-vote-determined live items, also credence sliders.
-4. A Week 1 seeded participant-nominated item ballot for pilot testing.
-5. A suggestion text box for future participant-nominated survey items.
-6. A previous-results placeholder with a link to the CTS reports page.
-7. A preview of upcoming topics.
+1. One CTS-administered topic: Divorce and Remarriage, 12 credence slider items.
+2. Three Week 1 seeded participant-vote-determined live items, also credence sliders.
+3. A Week 1 seeded 7-item participant-nominated item ballot for pilot testing.
+4. A suggestion text box for future participant-nominated survey items.
+5. A previous-results placeholder with a link to the CTS reports page.
+6. A preview of upcoming topics.
 
 ## A. CTS-Administered Topic
 
@@ -63,11 +58,15 @@ These are seeded for the closed test because there was no previous weekly partic
 
 ## C. Week 1 Seeded Participant-Nominated Item Ballot
 
-Use a ranking or multi-select style question if SurveyOL supports it cleanly. If not, use a single multiple-choice pilot ballot and note that the final weekly format should support broader voting.
+Use a ranking question with 7 ballot items.
+
+Ballot process rule:
+
+Participant suggestions are reviewed by CTS with AI assistance, polished for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance, and reduced to a 7-item ballot. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot. Active participants rank the 7 ballot items; the top 3 ranked items become live participant-vote-determined survey items in the following week's survey.
 
 Prompt:
 
-Which of these participant-nominated survey items would you most like to see considered for next week's live survey items?
+Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, and survey suitability. Each week's ballot will include the top 7 polished participant-nominated items; if fewer than 7 suitable participant nominations are available, CTS will add AI-created seed items to complete the ballot.
 
 Seeded ballot items:
 
@@ -77,6 +76,7 @@ Seeded ballot items:
 4. Divorce and remarriage policies should be explained publicly before individual cases arise.
 5. Churches should provide confidential reporting paths for marital abuse concerns.
 6. Pastors should avoid pressuring separated spouses to reconcile before safety and trust have been addressed.
+7. Churches should clearly distinguish pastoral care for divorced members from automatic restoration to ministry leadership.
 
 ## D. Suggestion Text Box
 
@@ -108,14 +108,8 @@ SurveyOL limits copy/paste imports to 3500 characters. Use these blocks in order
 
 ```text
 [Text]
-CTS weekly survey participation is intended for people who are currently or previously engaged in full-time ministry. Please continue only if that describes you.
+Main topic for the first 12 survey items: Divorce and Remarriage.
 
-[Multiple Choice][Required]
-Does this eligibility note describe you?
-Yes, I am currently or previously engaged in full-time ministry.
-No
-
-[Text]
 Default response format for live survey items: 0 = strongly disagree, 50 = unsure/mixed, 100 = strongly agree.
 
 [Slider][Required]
@@ -158,6 +152,11 @@ Churches should treat immediate physical safety as a priority before pursuing ma
 [Slider][Required]
 Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce.
 
+[Text]
+------------------------------
+Independent items
+The next 3 survey items are independent items rather than part of the main Divorce and Remarriage topic bank.
+
 [Slider][Required]
 Churches should provide written guidance explaining when separation may be pastorally appropriate even before a final divorce decision is made.
 
@@ -172,13 +171,14 @@ Churches should distinguish between biblical forgiveness and restoring full mari
 
 ```text
 [Ranking][Required]
-Which of these participant-nominated survey items would you most like to see considered for next week's live survey items?
+Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, and survey suitability. Each week's ballot will include the top 7 polished participant-nominated items; if fewer than 7 suitable participant nominations are available, CTS will add AI-created seed items to complete the ballot.
 Churches should require premarital counseling that explicitly addresses abuse, coercion, and divorce.
 Pastors should teach more often on the difference between repentance and merely apologizing.
 Churches should maintain a written care process for spouses harmed by infidelity.
 Divorce and remarriage policies should be explained publicly before individual cases arise.
 Churches should provide confidential reporting paths for marital abuse concerns.
 Pastors should avoid pressuring separated spouses to reconcile before safety and trust have been addressed.
+Churches should clearly distinguish pastoral care for divorced members from automatic restoration to ministry leadership.
 
 [Comment Box]
 Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100.
