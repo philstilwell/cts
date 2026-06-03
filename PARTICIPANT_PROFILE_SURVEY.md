@@ -13,7 +13,7 @@ The public Contact & Weekly Survey Participation form is only the interest and e
 
 Keep the link out of public CTS pages and public repo files. It is not a security boundary, but it should function as a private follow-up form sent only after eligibility review.
 
-Implementation note: SurveyOL's copy/paste importer created the introductory paragraph as Q1 `TEXTBOX`. Before the first operational use, either convert Q1 to a non-response text/display block if SurveyOL exposes a clean edit path, or tell approved participants they may leave that introductory line blank. The canonical field structure below remains the source of truth for future rebuilds.
+Implementation note: SurveyOL's copy/paste importer initially created the introductory paragraph as a textbox question. It has been corrected in SurveyOL to a `Text (Descriptive)` block, so the first response field is now `Full name`. The canonical field structure below remains the source of truth for future rebuilds.
 
 ## Workflow
 
