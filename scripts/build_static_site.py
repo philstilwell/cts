@@ -14,6 +14,16 @@ UPDATED = "June 1, 2026"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 CLOUDFLARE_ANALYTICS = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"b86c3e7a273f47648ae70f08866f9ec5\"}'></script><!-- End Cloudflare Web Analytics -->"
+MAILERLITE_UNIVERSAL_SCRIPT = """<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2397853');
+</script>
+<!-- End MailerLite Universal -->"""
+MAILERLITE_NEWSLETTER_FORM_EMBED = '<div class="ml-embedded" data-form="EQ6WXD"></div>'
 WEEKLY_STRUCTURE_LIST = """<ol class="process-list" type="A">
   <li><strong>One CTS-administered topic:</strong> 12 related survey items from the CTS topic bank.</li>
   <li><strong>Three participant-vote-determined questions:</strong> 3 additional live survey items chosen based on the previous week's participant vote. These are intentionally independent from the weekly CTS-administered topic.</li>
@@ -122,6 +132,10 @@ PAGES = [
       <a class="path-card" href="{contact_url}">
         <strong>Contact &amp; Participation</strong>
         <span>Invitation notes for ministers, topic suggestions, and data questions.</span>
+      </a>
+      <a class="path-card" href="{newsletter_url}">
+        <strong>Newsletter Signup</strong>
+        <span>Result notices, topic previews, and occasional CTS articles for non-participant readers.</span>
       </a>
       <a class="path-card" href="{privacy_url}">
         <strong>Privacy &amp; Data Release</strong>
@@ -256,6 +270,7 @@ PAGES = [
     <li>Email addresses are used for survey invitations, reminders, follow-up questions, and opt-out handling.</li>
     <li>Email addresses, names, and direct contact details are not included in public results files.</li>
     <li>MailerLite keeps survey participants and newsletter/update subscribers in separate groups: <code>CTS Participants</code> for survey invitations and <code>CTS Newsletter</code> for report notices and general CTS updates.</li>
+    <li>The newsletter signup form collects email address, name, ministry status, and a brief interest motivation note so CTS can understand newsletter readership without adding newsletter-only subscribers to the survey participant panel.</li>
     <li>Participants may unsubscribe from MailerLite emails or ask CTS to remove them from future invitations.</li>
   </ul>
 
@@ -325,6 +340,33 @@ PAGES = [
 """,
     ),
     Page(
+        key="newsletter",
+        output="newsletter/index.html",
+        nav_label="Newsletter",
+        title="Newsletter Signup",
+        eyebrow="Updates",
+        description=(
+            "A signup form for readers who want Christian Thought Survey report "
+            "notices, topic previews, and occasional articles without joining the "
+            "weekly survey participant panel."
+        ),
+        content="""
+<div class="wp-content">
+  <p>This signup is for readers who would like Christian Thought Survey result notices, topic previews, and occasional articles, but who are not asking to join the weekly survey participant panel.</p>
+
+  <p>The weekly survey participant panel is kept separately and is intended for people who are currently or previously engaged in full-time ministry. If that describes you and you want to be considered for survey participation, use the <a href="{contact_url}">Contact &amp; Weekly Survey Participation</a> page instead.</p>
+
+  <p>The newsletter form asks for your email address, name, ministry status, and a brief note about why you are interested. For ministry status, a short note such as current full-time ministry, previous full-time ministry, volunteer or lay ministry, or not in ministry is enough. Those details help CTS understand who is following the project without moving newsletter-only subscribers into the survey participant group.</p>
+
+  <div class="mailerlite-embed">
+    {mailerlite_newsletter_form_embed}
+  </div>
+
+  <p class="form-note">Newsletter subscribers are kept in the separate <code>CTS Newsletter</code> MailerLite group. See <a href="{privacy_url}">Privacy &amp; Data Release</a> for the current data handling policy.</p>
+</div>
+""",
+    ),
+    Page(
         key="contact",
         output="contact/index.html",
         nav_label="Contact",
@@ -337,6 +379,8 @@ PAGES = [
         content="""
 <div class="wp-content">
   <p>The 2026 project will begin with prior CTS participants who indicated that email follow-up is welcome. If you are currently or previously engaged in full-time ministry and would like to be considered for later invitations, participant voting, future question suggestions, or data/citation questions, use the form below.</p>
+
+  <p>If you are not asking to join the weekly survey participant panel but would like result notices, topic previews, and occasional CTS articles, use the <a href="{newsletter_url}">Newsletter Signup</a> instead.</p>
 
   <p>Each Weekly Survey will include six parts:</p>
   {weekly_structure_list}
@@ -381,9 +425,11 @@ def fill_links(html: str, prefix: str) -> str:
         "archive_url": page_url(prefix, "previous-results-archive/index.html"),
         "privacy_url": page_url(prefix, "privacy-data-release/index.html"),
         "overview_url": page_url(prefix, "overview/index.html"),
+        "newsletter_url": page_url(prefix, "newsletter/index.html"),
         "contact_url": page_url(prefix, "contact/index.html"),
         "surveyol_form_url": SURVEYOL_FORM_URL,
         "surveyol_embed_url": SURVEYOL_EMBED_URL,
+        "mailerlite_newsletter_form_embed": MAILERLITE_NEWSLETTER_FORM_EMBED,
         "weekly_structure_list": WEEKLY_STRUCTURE_LIST,
         "response_rule_note": RESPONSE_RULE_NOTE,
         "participant_ballot_note": PARTICIPANT_BALLOT_NOTE,
@@ -402,6 +448,7 @@ def render_nav(active_key: str, prefix: str) -> str:
 def render_head(page: Page, prefix: str) -> str:
     title = escape(strip_entities(page.title))
     description = escape(page.description)
+    extra_head = f"\n  {MAILERLITE_UNIVERSAL_SCRIPT}" if page.key == "newsletter" else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -411,7 +458,7 @@ def render_head(page: Page, prefix: str) -> str:
   <meta name="description" content="{description}">
   <link rel="icon" href="{prefix}assets/cts-logo.png">
   <link rel="stylesheet" href="{prefix}assets/styles.css">
-  {CLOUDFLARE_ANALYTICS}
+  {CLOUDFLARE_ANALYTICS}{extra_head}
 </head>"""
 
 

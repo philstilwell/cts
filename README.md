@@ -31,12 +31,15 @@ The regular send rhythm is a Monday heads-up email followed by the actual Survey
 
 Do not send weekly survey links to `CTS Newsletter` unless a subscriber is also intentionally included in `CTS Participants`.
 
+The public newsletter signup page is `/newsletter/`. Its MailerLite embedded form is connected only to `CTS Newsletter` and collects email address, name, ministry status, and the subscriber's motivation for interest.
+
 The generated pages reflect the new WordPress pages updated on June 1, 2026:
 
 - Christian Thought Survey 2026
 - Weekly Survey Reports
 - Previous Results Archive
 - Legacy Survey Overview
+- Newsletter Signup
 - Contact & Weekly Survey Participation
 - Privacy & Data Release
 

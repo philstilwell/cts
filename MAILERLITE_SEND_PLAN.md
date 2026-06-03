@@ -12,6 +12,16 @@ Full-launch survey audience: `CTS Participants` group.
 
 Newsletter/update audience: `CTS Newsletter` group. A person may belong to both `CTS Participants` and `CTS Newsletter`, but newsletter-only subscribers should not be added to `CTS Participants` unless they explicitly opt into weekly survey participation and fit the full-time ministry participation focus.
 
+Newsletter signup form:
+
+- MailerLite form name: `CTS Newsletter Signup`
+- MailerLite form ID: `189209938164188719`
+- Embedded form key: `EQ6WXD`
+- Connected group: `CTS Newsletter` only
+- Public site page: https://christianthoughtsurvey.com/newsletter/
+- Fields collected: email address, name, ministry status, and interest motivation.
+- Purpose: result notices, topic previews, and occasional CTS articles for readers who want updates without joining the weekly survey participant panel.
+
 Closed test recipients:
 
 - philstilwell@gmail.com

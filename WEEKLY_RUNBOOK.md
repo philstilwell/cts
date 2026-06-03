@@ -32,7 +32,8 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 2. Send the Thursday survey-link email only after testing the SurveyOL link in a private browser/session.
 3. Send one reminder to non-respondents 24-48 hours after the Thursday survey-link email when appropriate. Do not over-message the list.
 4. Keep newsletter-only subscribers in the separate `CTS Newsletter` group. Use that group for report notices, topic previews, and general CTS updates; do not send weekly survey links to newsletter-only subscribers.
-5. Keep unsubscribe handling in MailerLite. Do not manually re-add unsubscribed contacts.
+5. The public newsletter form at `https://christianthoughtsurvey.com/newsletter/` collects email address, name, ministry status, and interest motivation, and should add subscribers only to `CTS Newsletter`.
+6. Keep unsubscribe handling in MailerLite. Do not manually re-add unsubscribed contacts.
 
 ## Export And Report
 
