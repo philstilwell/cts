@@ -38,7 +38,7 @@ Shared email design:
 
 - Include a small CTS logo at the top of every email, above the greeting.
 - Recommended image settings: 48-64 px wide, left aligned, alt text `Christian Thought Survey logo`.
-- Logo source: https://philstilwell.github.io/cts/assets/cts-logo.png
+- Logo source: https://christianthoughtsurvey.com/assets/cts-logo.png
 - If MailerLite does not handle the remote image cleanly, upload the logo into MailerLite and use the uploaded image block instead.
 
 ## Email 1: Heads-Up
@@ -61,7 +61,7 @@ I've decided to revive the CTS project in a less demanding, more sustainable, an
 
 The expectation is that this weekly rhythm will provide timely insights to participating ministers in a dynamic age of shifting Christian doctrines and practices. Your responses will also help reflect the pulse of Christianity today.
 
-Our first weekly survey will focus on Divorce and Remarriage. It will include 12 related credence-slider items, three independent items chosen for relevance and meaningful participant spread, a chance to vote on nominated items for future surveys, an item nomination text box, a previous-results link as the weekly cycle develops, and a preview of the next 3 planned general topics.
+Our first weekly survey will focus on Divorce and Remarriage. It will include 12 related credence-slider items, three independent items chosen for relevance and meaningful participant spread, a chance to vote on nominated items for future surveys, an item nomination text box, last week's results summary and link as the weekly cycle develops, and a preview of the next 3 planned general topics.
 
 Looking ahead, the next 3 planned CTS-administered topics are Pornography and the Church, Pastoral Authority and Accountability, and Women in Church Leadership.
 

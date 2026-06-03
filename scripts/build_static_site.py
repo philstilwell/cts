@@ -65,7 +65,7 @@ PAGES = [
             "A weekly research project for Christian ministers, built around 12 "
             "CTS-administered survey items, 3 participant-vote-determined questions, "
             "credence sliders, a 7-item AI-polished participant-nominated item ballot, survey-item suggestions, "
-            "last week's results/report links, and a preview of upcoming topics."
+            "last week's results summary and link, and a preview of upcoming topics."
         ),
         content="""
 <section class="content-band">
@@ -182,7 +182,7 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>This page will collect the weekly Christian Thought Survey reports once the 2026 cycle begins. Each survey will focus on one doctrinal, practical, or sociological issue of interest to Christian ministers while also carrying forward participant-vote-determined questions and future survey-item suggestions.</p>
+  <p>This page collects weekly Christian Thought Survey reports for the 2026 cycle. Each survey focuses on one doctrinal, practical, or sociological issue of interest to Christian ministers while also carrying forward participant-vote-determined questions and future survey-item suggestions.</p>
 
   <div class="status-grid">
     <div class="status-card">
@@ -446,7 +446,7 @@ PAGES = [
   <ul>
     <li>Free-text suggestions are treated as administrative inputs, not as public survey responses.</li>
     <li>Suggestions may be corrected, combined, clarified, shortened, or withheld before appearing on a participant-nominated item ballot.</li>
-    <li>CTS uses AI assistance to polish nominations for clarity, neutrality, credence-slider suitability, breadth, novelty, and pastoral or theological relevance.</li>
+    <li>CTS uses AI assistance to polish nominations for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, likely participant tension, and pastoral or theological relevance.</li>
     <li>Each weekly ballot should contain 7 items. If fewer than 7 suitable participant nominations are available, CTS may add AI-created seed items to complete the ballot.</li>
     <li>CTS will not intentionally publish a suggestion in a way that identifies the participant who submitted it.</li>
   </ul>
@@ -552,11 +552,11 @@ PAGES = [
         eyebrow="Participation",
         description=(
             "Contact and participation notes for ministers, ministry leaders, weekly "
-            "survey participation, future question suggestions, and data questions."
+            "survey participation, future survey-item suggestions, and data questions."
         ),
         content="""
 <div class="wp-content">
-  <p>The 2026 project will begin with prior CTS participants who indicated that email follow-up is welcome. If you are currently or previously engaged in full-time ministry and would like to be considered for later invitations, participant voting, future question suggestions, or data/citation questions, use the form below.</p>
+  <p>The 2026 project will begin with prior CTS participants who indicated that email follow-up is welcome. If you are currently or previously engaged in full-time ministry and would like to be considered for later invitations, participant voting, future survey-item suggestions, or data/citation questions, use the form below.</p>
 
   <p>If you are not asking to join the weekly survey participant panel but would like result notices, topic previews, and occasional CTS articles, use the <a href="{newsletter_url}">Newsletter Signup</a> instead.</p>
 
@@ -600,6 +600,8 @@ def page_url(prefix: str, output: str) -> str:
 def canonical_url(output: str) -> str:
     if output == "index.html":
         return f"{SITE_URL}/"
+    if Path(output).parent.as_posix() == ".":
+        return f"{SITE_URL}/{output}"
     return f"{SITE_URL}/{Path(output).parent.as_posix()}/"
 
 
@@ -726,7 +728,7 @@ def render_standard(page: Page, prefix: str) -> str:
 def render_footer(prefix: str) -> str:
     return f"""  <footer class="site-footer">
     <div class="footer-inner">
-      <p>Christian Thought Survey. Static mirror updated from WordPress on {UPDATED}.</p>
+      <p>Christian Thought Survey. Site updated {UPDATED}.</p>
       <p><a href="{WP_SITE}/">WordPress archive</a></p>
     </div>
   </footer>
@@ -768,13 +770,14 @@ def write_404() -> None:
         description="The requested Christian Thought Survey page could not be found.",
         content="""
 <div class="wp-content">
-  <p>The page you were looking for is not part of this static CTS mirror.</p>
+  <p>The page you were looking for is not part of the current Christian Thought Survey site.</p>
   <div class="button-row">
     <a class="button light" href="{home_url}">Return home</a>
     <a class="button light" href="{archive_url}">Browse the archive</a>
   </div>
 </div>
 """,
+        robots="noindex",
     )
     path = ROOT / page.output
     path.write_text(render_page(page), encoding="utf-8")

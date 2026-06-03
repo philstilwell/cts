@@ -28,7 +28,7 @@ Preview of upcoming topics for Week 1:
 2. Three Week 1 seeded independent live items, also credence sliders. These are intentionally orthogonal to the weekly topic and are not drawn from the CTS topic bank.
 3. A Week 1 seeded 7-item participant-nominated item ballot for pilot testing. Ballot items are intentionally orthogonal to the weekly topic and are not drawn from the CTS topic bank.
 4. A suggestion text box for future participant-nominated survey items.
-5. A previous-results placeholder with a link to the CTS reports page.
+5. A last-week results placeholder with a link to the CTS reports page.
 6. A preview of upcoming topics.
 
 ## A. CTS-Administered Topic

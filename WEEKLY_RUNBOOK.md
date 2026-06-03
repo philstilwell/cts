@@ -10,7 +10,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 - Monday: send the MailerLite heads-up email for the Thursday survey, naming the current CTS-administered topic and previewing the next 3 planned general topics.
 - Tuesday: finalize the SurveyOL survey, including the 7-item AI-polished participant-nominated ballot.
-- Wednesday: test the SurveyOL link, MailerLite copy, previous-results link, and preview of upcoming topics.
+- Wednesday: test the SurveyOL link, MailerLite copy, last week's results summary and link, and preview of upcoming topics.
 - Thursday: send the actual SurveyOL survey-link email.
 - Friday: export results, publish public summary, and prepare next week's participant-vote items.
 
@@ -22,7 +22,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 4. Add the participant-nominated item ballot. Review participant suggestions with AI assistance, polish them for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance, and reduce them to 7 ballot items. If fewer than 7 suitable participant nominations are available, add AI-created seed items to complete the ballot. The older 200-item CTS survey may be indexed as a reference pool for themes or seed ideas, but ballot items should be rewritten for current clarity and should not be copied mechanically.
 5. Save a brief item-audit note for the 3 independent live items and 7 ballot items before finalizing SurveyOL.
 6. Add a text box for future participant-nominated survey items.
-7. Add a brief previous-results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
+7. Add a brief last-week results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
 8. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
 9. Confirm the full-time ministry participation note appears in the website/contact materials and email copy. Do not add a separate eligibility confirmation item inside the weekly SurveyOL survey unless CTS intentionally reintroduces one.
 10. Keep the public report URL stable before the send. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
@@ -67,6 +67,6 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Full-time ministry participation note appears on the website/contact materials and email copy.
 - Preview of upcoming topics appears inside SurveyOL and in the email copy.
 - Privacy & Data Release page is public.
-- Previous-results link points to a public page.
+- Last week's results summary and link point to a public page.
 - Test recipients can complete the survey.
 - No mass send is scheduled until the closed test is reviewed.
