@@ -37,6 +37,12 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 6. The newsletter double opt-in thank-you page should redirect to `https://christianthoughtsurvey.com/email-confirmation/`.
 7. Keep unsubscribe handling in MailerLite. Do not manually re-add unsubscribed contacts.
 
+## Participant Profile Intake
+
+The public Contact & Weekly Survey Participation form is only the eligibility and interest front door. When a potential participant appears to be currently or previously engaged in full-time ministry, send the private `CTS 2026 Participant Profile Survey` documented in `PARTICIPANT_PROFILE_SURVEY.md`.
+
+Do not link the participant-profile survey publicly. Add or confirm a person in the `CTS Participants` MailerLite group only after eligibility review and profile completion. Store raw profile exports under `data/private/participant-profiles/`, and never commit names, email addresses, or individual profile rows.
+
 ## Closed-Test Response Quarantine
 
 Closed-test submissions made through the real SurveyOL respondent link count as real SurveyOL responses. They are not automatically quarantined from later authentic survey responses.

@@ -558,6 +558,8 @@ PAGES = [
 <div class="wp-content">
   <p>The 2026 project will begin with prior CTS participants who indicated that email follow-up is welcome. If you are currently or previously engaged in full-time ministry and would like to be considered for later invitations, participant voting, future survey-item suggestions, or data/citation questions, use the form below.</p>
 
+  <p>This form is the first eligibility and interest request. Potential participants who appear to fit the ministry-participant focus may later receive a separate private profile survey so CTS can collect the same broad participant-background fields used for the 2023 survey pool.</p>
+
   <p>If you are not asking to join the weekly survey participant panel but would like result notices, topic previews, and occasional CTS articles, use the <a href="{newsletter_url}">Newsletter Signup</a> instead.</p>
 
   <h2>How the weekly cycle works</h2>

@@ -31,6 +31,8 @@ The regular send rhythm is a Monday heads-up email followed by the actual Survey
 
 Do not send weekly survey links to `CTS Newsletter` unless a subscriber is also intentionally included in `CTS Participants`.
 
+The public Contact & Weekly Survey Participation page is the eligibility and interest front door for potential survey participants. Approved potential participants should receive the separate private participant-profile survey documented in `PARTICIPANT_PROFILE_SURVEY.md` before being added or confirmed in `CTS Participants`.
+
 The public newsletter signup page is `/newsletter/`. Its MailerLite embedded form is connected only to `CTS Newsletter` and collects email address, name, ministry status, and the subscriber's motivation for interest.
 
 MailerLite double opt-in for the newsletter form redirects confirmed subscribers to `/email-confirmation/`. That page is intentionally not linked from navigation and is marked `noindex`.
@@ -54,6 +56,7 @@ Internal launch planning files:
 - `WEEKLY_RUNBOOK.md`
 - `DATA_PIPELINE_PLAN.md`
 - `WEEKLY_REPORTING_STRATEGY.md`
+- `PARTICIPANT_PROFILE_SURVEY.md`
 - `PARTICIPANT_NOMINATED_BALLOT_PROTOCOL.md`
 - `TOPIC_BANK_TENSION_REVIEW.md`
 - `NEXT_3_TOPIC_ITEM_REVIEW.md`
