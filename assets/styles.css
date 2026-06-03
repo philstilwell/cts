@@ -387,6 +387,77 @@ h3 {
   margin-top: 2.3rem;
 }
 
+.accordion-block {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(23, 40, 45, 0.08);
+}
+
+.accordion-block summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.3rem 1rem;
+  align-items: center;
+  padding: 1.2rem 1.35rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion-block summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-block summary::after {
+  content: "+";
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  color: var(--brick);
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.accordion-block[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.accordion-block[open] summary::after {
+  content: "-";
+}
+
+.accordion-block:not([open]) > .accordion-content {
+  display: none;
+}
+
+.accordion-label,
+.accordion-hint {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.accordion-label {
+  color: var(--brick);
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.accordion-title {
+  color: var(--teal-dark);
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+  font-weight: 850;
+  line-height: 1.08;
+}
+
+.accordion-content {
+  padding: 1.45rem 1.35rem 1.6rem;
+}
+
+.accordion-content > * + * {
+  margin-top: 1.25rem;
+}
+
 .wp-content ul {
   margin: 1rem 0 0;
   padding-left: 1.35rem;

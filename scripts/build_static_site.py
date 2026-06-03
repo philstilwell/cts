@@ -197,13 +197,21 @@ PAGES = [
     </div>
   </div>
 
-  <h2>How the weekly cycle works</h2>
-  <p>Each Weekly Survey will include six parts:</p>
-  {weekly_structure_list}
-  <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
-  <p>The cycle is cumulative: participant suggestions submitted in one weekly survey are reviewed by CTS with AI assistance, polished, reduced to a 7-item ballot, ranked by active participants, and the top 3 ranked items become live survey items in the following week's survey. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.</p>
-  <p>The regular send rhythm is a Monday heads-up email and a Thursday SurveyOL survey-link email. The Monday email names the current topic and previews the next 3 planned general topics; the Thursday survey includes that same preview of upcoming topics inside the survey itself.</p>
-  <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
+  <details class="accordion-block">
+    <summary>
+      <span class="accordion-label">Survey structure</span>
+      <span class="accordion-title" role="heading" aria-level="2">How the weekly cycle works</span>
+      <span class="accordion-hint">Expand to view the six-part weekly survey cycle.</span>
+    </summary>
+    <div class="accordion-content">
+      <p>Each Weekly Survey will include six parts:</p>
+      {weekly_structure_list}
+      <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
+      <p>The cycle is cumulative: participant suggestions submitted in one weekly survey are reviewed by CTS with AI assistance, polished, reduced to a 7-item ballot, ranked by active participants, and the top 3 ranked items become live survey items in the following week's survey. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.</p>
+      <p>The regular send rhythm is a Monday heads-up email and a Thursday SurveyOL survey-link email. The Monday email names the current topic and previews the next 3 planned general topics; the Thursday survey includes that same preview of upcoming topics inside the survey itself.</p>
+      <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
+    </div>
+  </details>
 
   <h2>Report format</h2>
   <ul>
