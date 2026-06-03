@@ -33,13 +33,17 @@ Do not send weekly survey links to `CTS Newsletter` unless a subscriber is also 
 
 The public newsletter signup page is `/newsletter/`. Its MailerLite embedded form is connected only to `CTS Newsletter` and collects email address, name, ministry status, and the subscriber's motivation for interest.
 
+MailerLite double opt-in for the newsletter form redirects confirmed subscribers to `/email-confirmation/`. That page is intentionally not linked from navigation and is marked `noindex`.
+
 The generated pages reflect the new WordPress pages updated on June 1, 2026:
 
 - Christian Thought Survey 2026
 - Weekly Survey Reports
+- Week 1 Report: Divorce and Remarriage
 - Previous Results Archive
 - Legacy Survey Overview
 - Newsletter Signup
+- Email Subscription Confirmed
 - Contact & Weekly Survey Participation
 - Privacy & Data Release
 

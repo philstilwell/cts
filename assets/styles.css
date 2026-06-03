@@ -299,6 +299,54 @@ h3 {
   transform: translateY(-2px);
 }
 
+.status-grid,
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.status-card,
+.report-card {
+  min-height: 150px;
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(23, 40, 45, 0.09);
+}
+
+.status-card span {
+  display: block;
+  margin-bottom: 0.32rem;
+  color: var(--brick);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.status-card strong,
+.report-card h3 {
+  display: block;
+  color: var(--teal-dark);
+  font-size: 1.04rem;
+  line-height: 1.25;
+}
+
+.status-card p,
+.report-card p {
+  margin-top: 0.58rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.52;
+}
+
+.report-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .page-heading {
   padding: 4.25rem 0 3.75rem;
   background:
@@ -494,7 +542,9 @@ h3 {
   }
 
   .two-column,
-  .path-grid {
+  .path-grid,
+  .status-grid,
+  .report-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }

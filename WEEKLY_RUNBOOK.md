@@ -25,6 +25,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 7. Add a brief previous-results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
 8. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
 9. Confirm the full-time ministry participation note appears in the website/contact materials and email copy. Do not add a separate eligibility confirmation item inside the weekly SurveyOL survey unless CTS intentionally reintroduces one.
+10. Keep the public report URL stable before the send. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
 
 ## Send The Survey
 
@@ -33,7 +34,8 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 3. Send one reminder to non-respondents 24-48 hours after the Thursday survey-link email when appropriate. Do not over-message the list.
 4. Keep newsletter-only subscribers in the separate `CTS Newsletter` group. Use that group for report notices, topic previews, and general CTS updates; do not send weekly survey links to newsletter-only subscribers.
 5. The public newsletter form at `https://christianthoughtsurvey.com/newsletter/` collects email address, name, ministry status, and interest motivation, and should add subscribers only to `CTS Newsletter`.
-6. Keep unsubscribe handling in MailerLite. Do not manually re-add unsubscribed contacts.
+6. The newsletter double opt-in thank-you page should redirect to `https://christianthoughtsurvey.com/email-confirmation/`.
+7. Keep unsubscribe handling in MailerLite. Do not manually re-add unsubscribed contacts.
 
 ## Export And Report
 

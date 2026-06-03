@@ -9,10 +9,14 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SITE_URL = "https://christianthoughtsurvey.com"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
-UPDATED = "June 1, 2026"
+UPDATED = "June 3, 2026"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
+WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
+NEWSLETTER_CONFIRMATION_OUTPUT = "email-confirmation/index.html"
+OG_IMAGE = f"{SITE_URL}/assets/cts-research-overview.png"
 CLOUDFLARE_ANALYTICS = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"b86c3e7a273f47648ae70f08866f9ec5\"}'></script><!-- End Cloudflare Web Analytics -->"
 MAILERLITE_UNIVERSAL_SCRIPT = """<!-- MailerLite Universal -->
 <script>
@@ -45,6 +49,9 @@ class Page:
     eyebrow: str
     description: str
     content: str
+    in_nav: bool = True
+    show_nav: bool = True
+    robots: str = ""
 
 
 PAGES = [
@@ -101,14 +108,31 @@ PAGES = [
   <div class="container two-column">
     <div>
       <p class="section-label">Current status</p>
-      <h2>The 2026 weekly cycle is being prepared.</h2>
+      <h2>Closed test and Week 1 launch preparation.</h2>
     </div>
     <div class="wp-content">
+      <div class="status-grid">
+        <div class="status-card">
+          <span>Survey 1</span>
+          <strong>Divorce and Remarriage</strong>
+          <p>The first revived weekly survey is being tested before broader participant release.</p>
+        </div>
+        <div class="status-card">
+          <span>Audience</span>
+          <strong>Email-only participant link</strong>
+          <p>The SurveyOL link will be sent to the participant panel; it is not posted publicly on the site.</p>
+        </div>
+        <div class="status-card">
+          <span>Report</span>
+          <strong>Results pending</strong>
+          <p>The Week 1 report page is ready and will be filled after responses are reviewed.</p>
+        </div>
+      </div>
       <p>Reports are planned for Fridays so pastors and other ministry leaders can reflect on the results before Sunday. Public summaries will be posted here, and the project is being designed so appropriately prepared raw data can be shared for independent analysis.</p>
       <p>The intended weekly cadence is a Monday heads-up email followed by the actual SurveyOL survey-link email on Thursday.</p>
-      <p>When the first weekly survey is fielded, this site will point to the current survey, the current report, the participant-vote-determined questions, the 7-item participant-nominated item ballot, the suggestion text box, last week's results summary and link, the preview of upcoming topics, and the raw-data download policy.</p>
       <p>The original 2022-2024 CTS materials remain available in the archive. They are being kept as a reference library while the front of the site shifts toward weekly reports.</p>
       <div class="button-row">
+        <a class="button light" href="{week_1_report_url}">Week 1 Report Page</a>
         <a class="button light" href="{weekly_url}">Weekly Survey Reports</a>
         <a class="button light" href="{archive_url}">Previous Results Archive</a>
       </div>
@@ -160,6 +184,19 @@ PAGES = [
 <div class="wp-content">
   <p>This page will collect the weekly Christian Thought Survey reports once the 2026 cycle begins. Each survey will focus on one doctrinal, practical, or sociological issue of interest to Christian ministers while also carrying forward participant-vote-determined questions and future survey-item suggestions.</p>
 
+  <div class="status-grid">
+    <div class="status-card">
+      <span>Current report</span>
+      <strong>Week 1: Divorce and Remarriage</strong>
+      <p>The stable report page is published now; results will be added after the response window closes.</p>
+    </div>
+    <div class="status-card">
+      <span>Current stage</span>
+      <strong>Closed test / launch preparation</strong>
+      <p>The survey link is distributed by email to the intended participant audience, not posted publicly.</p>
+    </div>
+  </div>
+
   <h2>Weekly survey structure</h2>
   <p>Each Weekly Survey will include six parts:</p>
   {weekly_structure_list}
@@ -198,12 +235,12 @@ PAGES = [
       </thead>
       <tbody>
         <tr>
-          <td>Upcoming</td>
-          <td>First weekly topic</td>
-          <td>Chosen based on participant vote</td>
-          <td>Opens after first participant suggestions</td>
-          <td>In preparation</td>
-          <td>Pending</td>
+          <td>Week 1</td>
+          <td>Divorce and Remarriage</td>
+          <td>Week 1 seeded independent items</td>
+          <td>Week 1 seeded 7-item ballot</td>
+          <td>Closed test / launch preparation</td>
+          <td><a href="{week_1_report_url}">Report page</a></td>
           <td>Pending</td>
         </tr>
       </tbody>
@@ -213,6 +250,128 @@ PAGES = [
   <p class="callout">Raw data will not include direct email identifiers in public files. Participant attributes may be grouped or suppressed when needed to avoid accidental identification. Free-text suggestions may be edited, grouped, or withheld before publication to protect privacy and keep item wording usable. See the <a href="{privacy_url}">Privacy &amp; Data Release</a> page for the current policy.</p>
 </div>
 """,
+    ),
+    Page(
+        key="week-001-report",
+        output=WEEK_1_REPORT_OUTPUT,
+        nav_label="Week 1",
+        title="Week 1 Report: Divorce and Remarriage",
+        eyebrow="Results pending",
+        description=(
+            "The stable Week 1 Christian Thought Survey report page for Divorce "
+            "and Remarriage, prepared for public results once responses are reviewed."
+        ),
+        content="""
+<div class="wp-content">
+  <p>This is the stable public page for the first revived weekly Christian Thought Survey report. Results are not posted yet. The survey is moving through closed testing and launch preparation, and the SurveyOL response link is distributed by email rather than posted publicly.</p>
+
+  <div class="status-grid">
+    <div class="status-card">
+      <span>Topic</span>
+      <strong>Divorce and Remarriage</strong>
+      <p>12 CTS-administered credence-slider items will focus on this topic.</p>
+    </div>
+    <div class="status-card">
+      <span>Live items</span>
+      <strong>15 slider items</strong>
+      <p>12 featured-topic items plus 3 independent items, all using 0-100 credence sliders.</p>
+    </div>
+    <div class="status-card">
+      <span>Report status</span>
+      <strong>Pending responses</strong>
+      <p>Public interpretation, charts, and data notes will be added after review.</p>
+    </div>
+  </div>
+
+  <h2>Planned report sections</h2>
+  <div class="report-grid">
+    <section class="report-card">
+      <h3>Executive summary</h3>
+      <p>A short public brief naming the most striking patterns, pastoral implications, and limits of the response pool.</p>
+    </section>
+    <section class="report-card">
+      <h3>15-item overview</h3>
+      <p>Means, medians, response counts, distribution shape, and a concise interpretation for all live slider items.</p>
+    </section>
+    <section class="report-card">
+      <h3>Key tensions</h3>
+      <p>The items and themes with significant disagreement, spread, or subgroup contrast.</p>
+    </section>
+    <section class="report-card">
+      <h3>Distribution visuals</h3>
+      <p>Compact sparkline-style distribution strips for every credence item, using a shared scale when sample size permits.</p>
+    </section>
+    <section class="report-card">
+      <h3>Correlations and scatterplots</h3>
+      <p>Exploratory correlation views only where the sample size, subgroup quality, and privacy thresholds justify them.</p>
+    </section>
+    <section class="report-card">
+      <h3>Ballot results</h3>
+      <p>The ranked participant-nominated item ballot and the top items selected for the following week's live survey.</p>
+    </section>
+  </div>
+
+  <h2>Results template</h2>
+  <figure>
+    <table>
+      <thead>
+        <tr>
+          <th>Section</th>
+          <th>What will appear here</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Field dates and response count</td>
+          <td>Survey window, completed responses, and any response-quality notes.</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>Featured-topic items</td>
+          <td>12 Divorce and Remarriage item summaries with 0-100 credence distributions.</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>Independent items</td>
+          <td>3 orthogonal live items chosen for relevance and meaningful participant spread.</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>Key tensions</td>
+          <td>Items where disagreement is substantial enough to merit interpretation.</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>Participant ballot</td>
+          <td>7 ranked participant-nominated or seed items, with winners for the next survey.</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>Data release</td>
+          <td>Prepared data or a release note after privacy and formatting review.</td>
+          <td>Pending</td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h2>Preview of upcoming topics</h2>
+  <ul>
+    <li><strong>Week 2:</strong> Pornography and the Church.</li>
+    <li><strong>Week 3:</strong> Pastoral Authority and Accountability.</li>
+    <li><strong>Week 4:</strong> Women in Church Leadership.</li>
+  </ul>
+
+  <p class="callout"><strong>Data note:</strong> Public files will not include email addresses or direct identifiers. Free-text suggestions may be edited, grouped, or withheld before publication to protect participants and keep survey-item wording usable.</p>
+
+  <div class="button-row">
+    <a class="button light" href="{weekly_url}">Back to report index</a>
+    <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
+  </div>
+</div>
+""",
+        in_nav=False,
     ),
     Page(
         key="archive",
@@ -367,6 +526,28 @@ PAGES = [
 """,
     ),
     Page(
+        key="email-confirmation",
+        output=NEWSLETTER_CONFIRMATION_OUTPUT,
+        nav_label="Confirmation",
+        title="Email Subscription Confirmed",
+        eyebrow="Email subscription",
+        description="Confirmation page for Christian Thought Survey email subscribers.",
+        content="""
+<div class="wp-content">
+  <p>Thank you for confirming your subscription to Christian Thought Survey updates.</p>
+  <p>CTS keeps general updates separate from weekly survey participation. Newsletter/update subscribers receive report notices, topic previews, and general CTS announcements. Weekly survey links are sent through the separate CTS Participants audience.</p>
+  <p>CTS weekly surveys are intended for people who are currently or previously engaged in full-time ministry. Participation is optional, and every email should include an unsubscribe option.</p>
+  <div class="button-row">
+    <a class="button light" href="{home_url}">Return to the CTS home page</a>
+    <a class="button light" href="{weekly_url}">View report index</a>
+  </div>
+</div>
+""",
+        in_nav=False,
+        show_nav=False,
+        robots="noindex",
+    ),
+    Page(
         key="contact",
         output="contact/index.html",
         nav_label="Contact",
@@ -402,7 +583,7 @@ PAGES = [
 ]
 
 
-NAV = [(page.key, page.output, page.nav_label) for page in PAGES]
+NAV = [(page.key, page.output, page.nav_label) for page in PAGES if page.in_nav]
 
 
 def rel_prefix(output: str) -> str:
@@ -418,10 +599,18 @@ def page_url(prefix: str, output: str) -> str:
     return f"{prefix}{Path(output).parent.as_posix()}/"
 
 
+def canonical_url(output: str) -> str:
+    if output == "index.html":
+        return f"{SITE_URL}/"
+    return f"{SITE_URL}/{Path(output).parent.as_posix()}/"
+
+
 def fill_links(html: str, prefix: str) -> str:
     links = {
         "home_url": page_url(prefix, "index.html"),
         "weekly_url": page_url(prefix, "weekly-survey-reports/index.html"),
+        "week_1_report_url": page_url(prefix, WEEK_1_REPORT_OUTPUT),
+        "newsletter_confirmation_url": page_url(prefix, NEWSLETTER_CONFIRMATION_OUTPUT),
         "archive_url": page_url(prefix, "previous-results-archive/index.html"),
         "privacy_url": page_url(prefix, "privacy-data-release/index.html"),
         "overview_url": page_url(prefix, "overview/index.html"),
@@ -448,6 +637,8 @@ def render_nav(active_key: str, prefix: str) -> str:
 def render_head(page: Page, prefix: str) -> str:
     title = escape(strip_entities(page.title))
     description = escape(page.description)
+    canonical = canonical_url(page.output)
+    robots = f'\n  <meta name="robots" content="{escape(page.robots)}">' if page.robots else ""
     extra_head = f"\n  {MAILERLITE_UNIVERSAL_SCRIPT}" if page.key == "newsletter" else ""
     return f"""<!doctype html>
 <html lang="en">
@@ -455,7 +646,20 @@ def render_head(page: Page, prefix: str) -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title} | Christian Thought Survey</title>
-  <meta name="description" content="{description}">
+  <meta name="description" content="{description}">{robots}
+  <link rel="canonical" href="{canonical}">
+  <meta property="og:site_name" content="Christian Thought Survey">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{title} | Christian Thought Survey">
+  <meta property="og:description" content="{description}">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:image" content="{OG_IMAGE}">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{title} | Christian Thought Survey">
+  <meta name="twitter:description" content="{description}">
+  <meta name="twitter:image" content="{OG_IMAGE}">
   <link rel="icon" href="{prefix}assets/cts-logo.png">
   <link rel="stylesheet" href="{prefix}assets/styles.css">
   {CLOUDFLARE_ANALYTICS}{extra_head}
@@ -463,6 +667,13 @@ def render_head(page: Page, prefix: str) -> str:
 
 
 def render_header(page: Page, prefix: str) -> str:
+    nav_links = (
+        f"""      <div class="nav-links">
+        {render_nav(page.key, prefix)}
+      </div>"""
+        if page.show_nav
+        else ""
+    )
     return f"""<body class="page-{page.key}">
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
@@ -471,9 +682,7 @@ def render_header(page: Page, prefix: str) -> str:
         <img src="{prefix}assets/cts-logo.png" alt="CTS logo" width="42" height="42">
         <span>Christian Thought Survey</span>
       </a>
-      <div class="nav-links">
-        {render_nav(page.key, prefix)}
-      </div>
+{nav_links}
     </nav>
   </header>"""
 

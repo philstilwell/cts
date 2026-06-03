@@ -19,6 +19,7 @@ Newsletter signup form:
 - Embedded form key: `EQ6WXD`
 - Connected group: `CTS Newsletter` only
 - Public site page: https://christianthoughtsurvey.com/newsletter/
+- Double opt-in thank-you URL: https://christianthoughtsurvey.com/email-confirmation/
 - Fields collected: email address, name, ministry status, and interest motivation.
 - Purpose: result notices, topic previews, and occasional CTS articles for readers who want updates without joining the weekly survey participant panel.
 
