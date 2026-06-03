@@ -26,6 +26,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 8. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
 9. Confirm the full-time ministry participation note appears in the website/contact materials and email copy. Do not add a separate eligibility confirmation item inside the weekly SurveyOL survey unless CTS intentionally reintroduces one.
 10. Keep the public report URL stable before the send. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
+11. Before any full participant send, remove all closed-test wording from the SurveyOL title, intro text, previous-results placeholder, and end-of-survey page.
 
 ## Send The Survey
 
@@ -36,6 +37,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 5. The public newsletter form at `https://christianthoughtsurvey.com/newsletter/` collects email address, name, ministry status, and interest motivation, and should add subscribers only to `CTS Newsletter`.
 6. The newsletter double opt-in thank-you page should redirect to `https://christianthoughtsurvey.com/email-confirmation/`.
 7. Keep unsubscribe handling in MailerLite. Do not manually re-add unsubscribed contacts.
+8. Keep live SurveyOL respondent links and design URLs in MailerLite or private operational notes only. Do not commit them to the public repository.
 
 ## Participant Profile Intake
 
@@ -53,7 +55,7 @@ Before any full participant send, do one of the following:
 2. Acceptable: delete all closed-test responses from SurveyOL before the public launch, after confirming no authentic responses have arrived.
 3. Fallback: export closed-test responses separately, record their SurveyOL response numbers, start times, and UTM parameters, and exclude them from the private raw export before generating public reports.
 
-For Week 1, closed-test responses `#1` and `#2` were deleted from SurveyOL on `6/2/2026` before public launch. Recheck the SurveyOL summary before the Thursday send and confirm it still says there are no responses so far.
+For Week 1, closed-test responses `#1` and `#2` were deleted from SurveyOL on June 2, 2026 before public launch. SurveyOL was rechecked on June 3, 2026 after title/text cleanup and still showed no responses so far. Recheck the SurveyOL summary again immediately before the Thursday send.
 
 ## Export And Report
 
@@ -80,6 +82,7 @@ For Week 1, closed-test responses `#1` and `#2` were deleted from SurveyOL on `6
 
 - SurveyOL survey link works.
 - The first 15 live survey items are marked required in SurveyOL.
+- SurveyOL title, descriptive text, previous-results placeholder, and end-of-survey page contain no closed-test language before production send.
 - The 3 independent live items and 7 participant-nominated ballot items are orthogonal to the weekly topic, non-duplicative, clear, and likely to produce meaningful disagreement or spread.
 - MailerLite test email renders correctly.
 - Full-time ministry participation note appears on the website/contact materials and email copy.
@@ -88,3 +91,4 @@ For Week 1, closed-test responses `#1` and `#2` were deleted from SurveyOL on `6
 - Last week's results summary and link point to a public page.
 - Test recipients can complete the survey.
 - No mass send is scheduled until the closed test is reviewed.
+- Live SurveyOL respondent links and design URLs are absent from committed public files.

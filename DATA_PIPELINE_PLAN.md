@@ -54,7 +54,7 @@ For Week 1, use one of these paths before the full launch or before final report
 2. Delete closed-test responses in SurveyOL before collecting authentic responses.
 3. Export the raw SurveyOL file, save a private closed-test copy, remove known closed-test rows, and only then save the cleaned authentic export as `data/private/surveyol/week-001.csv`.
 
-Do not let the public summary pipeline ingest closed-test rows. Known closed-test indicators include the survey title suffix `(Closed Test)`, SurveyOL response numbers created before launch, and MailerLite UTM parameters from the closed-test campaign.
+Do not let the public summary pipeline ingest closed-test rows. Known closed-test indicators include response numbers created before launch, MailerLite UTM parameters from the closed-test campaign, and any archived closed-test copy or title suffix.
 
 ## What The Script Produces
 

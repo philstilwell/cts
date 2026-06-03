@@ -2,11 +2,11 @@
 
 ## Audience Groups
 
-Current live MailerLite groups, verified June 2, 2026:
+Current live MailerLite groups, last verified June 2, 2026. Recheck counts and group targeting directly in MailerLite before every send:
 
-- `CTS Participants`: 396 subscribers. Use for weekly survey heads-up emails, survey-link emails, and participant reminders.
-- `CTS Newsletter`: 0 subscribers. Use for newsletter-only subscribers who want CTS updates, report notices, and general project news but should not receive weekly survey links unless they also join the participant group.
-- `CTS Closed Test`: 2 subscribers. Use only for closed-test sends and internal verification.
+- `CTS Participants`: use for weekly survey heads-up emails, survey-link emails, and participant reminders.
+- `CTS Newsletter`: use for newsletter-only subscribers who want CTS updates, report notices, and general project news but should not receive weekly survey links unless they also join the participant group.
+- `CTS Closed Test`: use only for closed-test sends and internal verification.
 
 Full-launch survey audience: `CTS Participants` group.
 
@@ -25,14 +25,13 @@ Newsletter signup form:
 
 Closed test recipients:
 
-- philstilwell@gmail.com
-- contact@xensible.com
+- Store and verify current test-recipient addresses inside MailerLite or in a private operational note. Do not commit personal recipient addresses to the public repository.
 
-Closed test SurveyOL link: https://www.surveyol.com/r/9A4F55F
+Closed test SurveyOL link: store the current respondent link in a private operational note. Do not commit live respondent links or SurveyOL design URLs to the public repository.
 
-Closed test MailerLite status: group `CTS Closed Test` exists and contains exactly `philstilwell@gmail.com` and `contact@xensible.com`. The survey-link email is ready to create/send to that group after final approval.
+Closed test MailerLite status: verify the `CTS Closed Test` group directly in MailerLite before test sends. The survey-link email should only target that internal group during testing.
 
-Do not send to the full `CTS Participants` group until the closed test is reviewed.
+Do not send to the full `CTS Participants` group until SurveyOL has a clean response count, all production-facing survey text has no closed-test wording, and the MailerLite campaign target is confirmed.
 
 Shared email design:
 
@@ -89,7 +88,7 @@ Hello,
 The first revived Christian Thought Survey weekly survey is now ready. It should take fewer than ten minutes.
 
 Survey link:
-https://www.surveyol.com/r/9A4F55F
+[Insert the current SurveyOL respondent link from private operational notes.]
 
 This week's topic is Divorce and Remarriage.
 
@@ -117,7 +116,7 @@ Hello,
 This is a brief reminder that the current CTS weekly survey is still open.
 
 Survey link:
-https://www.surveyol.com/r/9A4F55F
+[Insert the current SurveyOL respondent link from private operational notes.]
 
 If you have already completed it, thank you. If not, your response would help test the weekly survey format.
 
@@ -131,7 +130,7 @@ Christian Thought Survey
 1. Create a temporary MailerLite group named `CTS Closed Test`.
 2. Add only the two closed test recipients.
 3. Add the small CTS logo image block to the top of each email template.
-4. Send or preview Email 2 with the SurveyOL closed-test link.
+4. Send or preview Email 2 with the SurveyOL closed-test link from private operational notes.
 5. Confirm both recipients receive the message and can open the survey.
 6. Confirm SurveyOL received the closed-test responses.
 7. Before any bulk campaign, copy/reset the SurveyOL survey or delete/exclude all closed-test responses so authentic results begin from a clean dataset.

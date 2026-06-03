@@ -108,14 +108,14 @@ PAGES = [
   <div class="container two-column">
     <div>
       <p class="section-label">Current status</p>
-      <h2>Closed test and Week 1 launch preparation.</h2>
+      <h2>Week 1 launch preparation.</h2>
     </div>
     <div class="wp-content">
       <div class="status-grid">
         <div class="status-card">
           <span>Survey 1</span>
           <strong>Divorce and Remarriage</strong>
-          <p>The first revived weekly survey is being tested before broader participant release.</p>
+          <p>The first revived weekly survey is being prepared for broader participant release.</p>
         </div>
         <div class="status-card">
           <span>Audience</span>
@@ -192,7 +192,7 @@ PAGES = [
     </div>
     <div class="status-card">
       <span>Current stage</span>
-      <strong>Closed test / launch preparation</strong>
+      <strong>Launch preparation</strong>
       <p>The survey link is distributed by email to the intended participant audience, not posted publicly.</p>
     </div>
   </div>
@@ -239,7 +239,7 @@ PAGES = [
           <td>Divorce and Remarriage</td>
           <td>Week 1 seeded independent items</td>
           <td>Week 1 seeded 7-item ballot</td>
-          <td>Closed test / launch preparation</td>
+          <td>Launch preparation</td>
           <td><a href="{week_1_report_url}">Report page</a></td>
           <td>Pending</td>
         </tr>
@@ -263,7 +263,7 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>This is the stable public page for the first revived weekly Christian Thought Survey report. Results are not posted yet. The survey is moving through closed testing and launch preparation, and the SurveyOL response link is distributed by email rather than posted publicly.</p>
+  <p>This is the stable public page for the first revived weekly Christian Thought Survey report. Results are not posted yet. The survey is in launch preparation, and the SurveyOL response link is distributed by email rather than posted publicly.</p>
 
   <div class="status-grid">
     <div class="status-card">

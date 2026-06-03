@@ -2,11 +2,11 @@
 
 Working title: CTS 2026 Weekly Survey 1 - Divorce and Remarriage
 
-Closed test recipients: philstilwell@gmail.com, contact@xensible.com
+Closed test recipients: verify directly in MailerLite or private operational notes. Do not commit personal recipient addresses to the public repository.
 
-SurveyOL closed-test respondent link: https://www.surveyol.com/r/9A4F55F
+SurveyOL respondent link: store in private operational notes. Do not commit live respondent links to the public repository.
 
-SurveyOL design/preview GUID: 528d1b8c-8c12-4634-9a7e-3ad9110df08d
+SurveyOL design/preview GUID: store in private operational notes. Do not commit SurveyOL design URLs or GUIDs to the public repository.
 
 Week 1 send cadence: Monday heads-up email, Thursday SurveyOL survey-link email.
 
@@ -50,7 +50,7 @@ Topic: Divorce and Remarriage
 
 ## B. Week 1 Seeded Independent Items
 
-These are seeded for the closed test because there was no previous weekly participant vote. They are intentionally orthogonal to the Divorce and Remarriage topic and are not drawn from the CTS topic bank.
+These are seeded for Week 1 because there was no previous weekly participant vote. They are intentionally orthogonal to the Divorce and Remarriage topic and are not drawn from the CTS topic bank.
 
 13. Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise.
 14. Churches should encourage regular fasting as a normal expectation for mature Christian discipleship.
@@ -88,7 +88,7 @@ Suggest one or more future CTS survey items. Please write each suggestion as a s
 
 Text:
 
-There are no previous weekly CTS 2026 results yet. For the closed test, please check that this placeholder is clear and that the reports link works.
+There are no previous weekly CTS 2026 results yet. Future weekly surveys will include a brief summary and a link to the previous week's report.
 
 Link:
 
@@ -187,7 +187,7 @@ Pastors should avoid platforming guest speakers whose doctrine differs from the 
 Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100.
 
 [Text]
-There are no previous weekly CTS 2026 results yet. For the closed test, please check that this placeholder is clear and that the reports link works: https://christianthoughtsurvey.com/weekly-survey-reports/
+There are no previous weekly CTS 2026 results yet. Future weekly surveys will include a brief summary and a link to the previous week's report. Reports will be posted at https://christianthoughtsurvey.com/weekly-survey-reports/
 
 [Text]
 Looking ahead: the next 3 planned CTS-administered weekly topics are Pornography and the Church; Pastoral Authority and Accountability; and Women in Church Leadership. Topics may shift if participant feedback or administrative needs require it.
