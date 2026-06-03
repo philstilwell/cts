@@ -37,6 +37,18 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 6. The newsletter double opt-in thank-you page should redirect to `https://christianthoughtsurvey.com/email-confirmation/`.
 7. Keep unsubscribe handling in MailerLite. Do not manually re-add unsubscribed contacts.
 
+## Closed-Test Response Quarantine
+
+Closed-test submissions made through the real SurveyOL respondent link count as real SurveyOL responses. They are not automatically quarantined from later authentic survey responses.
+
+Before any full participant send, do one of the following:
+
+1. Preferred: copy or reset the tested SurveyOL survey so the public launch starts with zero responses.
+2. Acceptable: delete all closed-test responses from SurveyOL before the public launch, after confirming no authentic responses have arrived.
+3. Fallback: export closed-test responses separately, record their SurveyOL response numbers, start times, and UTM parameters, and exclude them from the private raw export before generating public reports.
+
+For Week 1, known closed-test responses currently include response `#2`, started `6/2/2026 9:29:16 PM`, with MailerLite UTM parameters from the closed-test survey-link campaign. If response `#1` is also a closed-test response, remove or exclude it too before public reporting.
+
 ## Export And Report
 
 1. Export SurveyOL responses after the response window closes.

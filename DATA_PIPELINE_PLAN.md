@@ -44,6 +44,18 @@ Before publishing `data/public/week-001-summary.json`, review the `quality` sect
 - Out-of-range slider values.
 - Unexpectedly low `n`.
 
+## Closed-Test Quarantine
+
+SurveyOL preview-mode test responses are not included in real results, but submissions through the real respondent link are included. Closed-test rows must therefore be removed before building public summaries.
+
+For Week 1, use one of these paths before the full launch or before final reporting:
+
+1. Start the public launch from a copied/reset SurveyOL survey with zero responses.
+2. Delete closed-test responses in SurveyOL before collecting authentic responses.
+3. Export the raw SurveyOL file, save a private closed-test copy, remove known closed-test rows, and only then save the cleaned authentic export as `data/private/surveyol/week-001.csv`.
+
+Do not let the public summary pipeline ingest closed-test rows. Known closed-test indicators include the survey title suffix `(Closed Test)`, SurveyOL response numbers created before launch, and MailerLite UTM parameters from the closed-test campaign.
+
 ## What The Script Produces
 
 For each of the 15 live slider items:

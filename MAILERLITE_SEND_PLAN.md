@@ -133,4 +133,6 @@ Christian Thought Survey
 3. Add the small CTS logo image block to the top of each email template.
 4. Send or preview Email 2 with the SurveyOL closed-test link.
 5. Confirm both recipients receive the message and can open the survey.
-6. Do not schedule any bulk campaign until the closed test is reviewed.
+6. Confirm SurveyOL received the closed-test responses.
+7. Before any bulk campaign, copy/reset the SurveyOL survey or delete/exclude all closed-test responses so authentic results begin from a clean dataset.
+8. Do not schedule any bulk campaign until the closed test is reviewed and response quarantine is complete.
