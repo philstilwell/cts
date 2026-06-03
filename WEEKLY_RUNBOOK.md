@@ -47,7 +47,7 @@ Before any full participant send, do one of the following:
 2. Acceptable: delete all closed-test responses from SurveyOL before the public launch, after confirming no authentic responses have arrived.
 3. Fallback: export closed-test responses separately, record their SurveyOL response numbers, start times, and UTM parameters, and exclude them from the private raw export before generating public reports.
 
-For Week 1, known closed-test responses currently include response `#2`, started `6/2/2026 9:29:16 PM`, with MailerLite UTM parameters from the closed-test survey-link campaign. If response `#1` is also a closed-test response, remove or exclude it too before public reporting.
+For Week 1, closed-test responses `#1` and `#2` were deleted from SurveyOL on `6/2/2026` before public launch. Recheck the SurveyOL summary before the Thursday send and confirm it still says there are no responses so far.
 
 ## Export And Report
 
