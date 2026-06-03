@@ -6,11 +6,14 @@ This project uses the WordPress.com REST API for automated publishing to the Chr
 
 When WordPress pages or posts describe a Weekly Survey, they should match the GitHub Pages language:
 
+How the weekly cycle works:
+
 1. One CTS-administered topic: 12 related survey items from the CTS topic bank.
-2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote. These should be independent from the weekly CTS-administered topic.
-3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot. Ballot items should be clear, relevant, novel, independent from the weekly topic, and likely to generate meaningful disagreement or spread.
-4. A text box to suggest survey items to be voted on next week and possibly featured in the following week's survey.
+2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote. These are intentionally independent from the weekly CTS-administered topic.
+3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations, with AI-created seed items added only when fewer than 7 suitable participant nominations are available. Ballot items are selected for clarity, relevance, novelty, and likely participant tension.
+4. **A text box:** to suggest survey items to be voted on next week and possibly featured in the following week's survey.
 5. Last week's results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results and reports.
+6. A preview of upcoming topics: The topics for the next three weeks will be featured to allow for mental preparation.
 
 All live survey items should be credence-based slider items. The only non-slider inputs should be the participant-nominated item ballot and suggestion text boxes.
 

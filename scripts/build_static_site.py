@@ -92,8 +92,8 @@ PAGES = [
 <section class="content-band shade">
   <div class="container two-column">
     <div>
-      <p class="section-label">Weekly structure</p>
-      <h2>Every survey has a six-part rhythm.</h2>
+      <p class="section-label">Weekly cycle</p>
+      <h2>How the weekly cycle works</h2>
       <p class="section-copy">The CTS administration supplies the main topic, active participants help choose participant-generated questions, each survey collects suggestions for the next round, and every survey previews upcoming topics for mental preparation.</p>
     </div>
     <div class="wp-content">
@@ -197,7 +197,7 @@ PAGES = [
     </div>
   </div>
 
-  <h2>Weekly survey structure</h2>
+  <h2>How the weekly cycle works</h2>
   <p>Each Weekly Survey will include six parts:</p>
   {weekly_structure_list}
   <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
@@ -214,7 +214,7 @@ PAGES = [
     <li><strong>Subgroup comparisons:</strong> denominational, role, ministry-experience, or other comparisons when sample size permits.</li>
     <li><strong>Participant-nominated item ballot:</strong> the ranked result from voting on last week's 7 AI-polished participant-nominated ballot items.</li>
     <li><strong>Suggestion text box:</strong> a summary of suggested survey items when they can be shared responsibly.</li>
-    <li><strong>Previous-results summary and link:</strong> the brief summary and primary CTS website link included in the survey.</li>
+    <li><strong>Last week's results summary and link:</strong> the brief summary and primary CTS website link included in the survey.</li>
     <li><strong>Preview of upcoming topics:</strong> the topics for the next three weeks featured to allow for mental preparation.</li>
     <li><strong>Data release:</strong> a link to raw or prepared data when privacy and formatting checks are complete.</li>
   </ul>
@@ -385,7 +385,9 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>The original Christian Thought Survey project produced long-form surveys, item-level pages, mini-surveys, and extensive result reports. Those materials are now gathered here as an archive while the front of the site shifts toward the 2026 weekly survey format: 12 CTS-administered items, 3 participant-vote-determined questions, a 7-item AI-polished participant-nominated item ballot, a suggestion text box, last week's results summary and link, and a preview of upcoming topics.</p>
+  <p>The original Christian Thought Survey project produced long-form surveys, item-level pages, mini-surveys, and extensive result reports. Those materials are gathered here as a reference archive for readers who want to revisit the earlier CTS work.</p>
+
+  <p>The current 2026 weekly survey materials now live on the <a href="{weekly_url}">Weekly Survey Reports</a> page so the legacy archive can remain focused on the earlier project.</p>
 
   <h2>Major results pages</h2>
   <ul>
@@ -468,7 +470,7 @@ PAGES = [
         eyebrow="Original project",
         description=(
             "Background on the 2022-2024 long-form Christian Thought Survey project "
-            "and how it informs the revived weekly format."
+            "and links to the original results archive."
         ),
         content="""
 <div class="wp-content">
@@ -484,16 +486,11 @@ PAGES = [
     <li>Participant reports and public-facing summaries.</li>
   </ul>
 
-  <p>The weekly 2026 project keeps the same concern for precise wording and credence measurement, but it changes the rhythm: shorter weekly surveys, faster reports, and more deliberate public release of reusable data.</p>
-
-  <h2>How the weekly cycle works</h2>
-  {weekly_structure_list}
-  <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
-  <p>The regular send rhythm is a Monday heads-up email and a Thursday SurveyOL survey-link email.</p>
-  <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
+  <p>The 2026 project keeps the same concern for precise wording and credence measurement, but the current weekly survey process is documented separately on the <a href="{weekly_url}">Weekly Survey Reports</a> page.</p>
 
   <div class="button-row">
     <a class="button light" href="{archive_url}">Browse the archive</a>
+    <a class="button light" href="{weekly_url}">Current weekly reports</a>
   </div>
 </div>
 """,
@@ -563,6 +560,7 @@ PAGES = [
 
   <p>If you are not asking to join the weekly survey participant panel but would like result notices, topic previews, and occasional CTS articles, use the <a href="{newsletter_url}">Newsletter Signup</a> instead.</p>
 
+  <h2>How the weekly cycle works</h2>
   <p>Each Weekly Survey will include six parts:</p>
   {weekly_structure_list}
   <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>

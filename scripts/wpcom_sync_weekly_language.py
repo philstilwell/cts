@@ -20,7 +20,7 @@ PAGE_IDS = [4895, 5302, 1759]
 WEEKLY_STRUCTURE_LIST = """<ol type="A" class="wp-block-list">
 <li><strong>One CTS-administered topic:</strong> 12 related survey items from the CTS topic bank.</li>
 <li><strong>Three participant-vote-determined questions:</strong> 3 additional live survey items chosen based on the previous week&#8217;s participant vote. These are intentionally independent from the weekly CTS-administered topic.</li>
-<li><strong>A participant-nominated item ballot:</strong> 7 AI-polished ballot items selected from the previous week&#8217;s participant nominations, with AI-created seed items added only when fewer than 7 suitable participant nominations are available. Ballot items are selected for clarity, relevance, novelty, independence from the weekly topic, and likely participant tension.</li>
+<li><strong>A participant-nominated item ballot:</strong> 7 AI-polished ballot items selected from the previous week&#8217;s participant nominations, with AI-created seed items added only when fewer than 7 suitable participant nominations are available. Ballot items are selected for clarity, relevance, novelty, and likely participant tension.</li>
 <li><strong>A text box:</strong> to suggest survey items to be voted on next week and possibly featured in the following week&#8217;s survey.</li>
 <li><strong>Last week&#8217;s results summary and link:</strong> a brief summary and a link to the primary CTS website page containing the previous week&#8217;s results and reports.</li>
 <li><strong>A preview of upcoming topics:</strong> The topics for the next three weeks will be featured to allow for mental preparation.</li>
