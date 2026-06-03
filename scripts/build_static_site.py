@@ -68,6 +68,39 @@ PAGES = [
             "last week's results summary and link, and a preview of upcoming topics."
         ),
         content="""
+<section class="content-band shade report-spotlight-band">
+  <div class="container latest-report">
+    <div class="latest-report-copy">
+      <p class="section-label">Latest weekly report</p>
+      <h2>Week 1: Divorce and Remarriage</h2>
+      <p class="section-copy">For most visitors, weekly results should be the fastest path through the site. The Week 1 report page is already live as the stable destination, and it will be filled after responses are reviewed.</p>
+      <div class="report-meta-grid" aria-label="Latest report status">
+        <div class="meta-chip">
+          <span>Status</span>
+          <strong>Results pending</strong>
+        </div>
+        <div class="meta-chip">
+          <span>Publication rhythm</span>
+          <strong>Friday reports</strong>
+        </div>
+        <div class="meta-chip">
+          <span>Topic</span>
+          <strong>Divorce and Remarriage</strong>
+        </div>
+      </div>
+      <div class="button-row">
+        <a class="button" href="{week_1_report_url}">Open Latest Report</a>
+        <a class="button light" href="{weekly_url}">View All Weekly Reports</a>
+      </div>
+    </div>
+    <aside class="latest-report-aside" aria-label="What the latest report will include">
+      <span class="report-status pending">Pending</span>
+      <strong>Report page ready</strong>
+      <p>Once Week 1 responses are reviewed, the report will hold the summary, key tensions, chart previews, ballot results, and data-release notes.</p>
+    </aside>
+  </div>
+</section>
+
 <section class="content-band">
   <div class="container two-column">
     <div>
@@ -100,42 +133,6 @@ PAGES = [
       {weekly_structure_list}
       <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
       <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
-    </div>
-  </div>
-</section>
-
-<section class="content-band">
-  <div class="container two-column">
-    <div>
-      <p class="section-label">Current status</p>
-      <h2>Week 1 launch preparation.</h2>
-    </div>
-    <div class="wp-content">
-      <div class="status-grid">
-        <div class="status-card">
-          <span>Survey 1</span>
-          <strong>Divorce and Remarriage</strong>
-          <p>The first revived weekly survey is being prepared for broader participant release.</p>
-        </div>
-        <div class="status-card">
-          <span>Audience</span>
-          <strong>Email-only participant link</strong>
-          <p>The SurveyOL link will be sent to the participant panel; it is not posted publicly on the site.</p>
-        </div>
-        <div class="status-card">
-          <span>Report</span>
-          <strong>Results pending</strong>
-          <p>The Week 1 report page is ready and will be filled after responses are reviewed.</p>
-        </div>
-      </div>
-      <p>Reports are planned for Fridays so pastors and other ministry leaders can reflect on the results before Sunday. Public summaries will be posted here, and the project is being designed so appropriately prepared raw data can be shared for independent analysis.</p>
-      <p>The intended weekly cadence is a Monday heads-up email followed by the actual SurveyOL survey-link email on Thursday.</p>
-      <p>The original 2022-2024 CTS materials remain available in the archive. They are being kept as a reference library while the front of the site shifts toward weekly reports.</p>
-      <div class="button-row">
-        <a class="button light" href="{week_1_report_url}">Week 1 Report Page</a>
-        <a class="button light" href="{weekly_url}">Weekly Survey Reports</a>
-        <a class="button light" href="{archive_url}">Previous Results Archive</a>
-      </div>
     </div>
   </div>
 </section>
@@ -181,20 +178,42 @@ PAGES = [
             "six-part weekly survey process."
         ),
         content="""
-<div class="wp-content">
-  <p>This page collects weekly Christian Thought Survey reports for the 2026 cycle. Each survey focuses on one doctrinal, practical, or sociological issue of interest to Christian ministers while also carrying forward participant-vote-determined questions and future survey-item suggestions.</p>
+<div class="wp-content results-hub">
+  <p>This page is the public hub for weekly Christian Thought Survey results. The newest report is featured first; earlier weekly reports appear below in a compact grid so readers can scan topics quickly.</p>
 
-  <div class="status-grid">
-    <div class="status-card">
-      <span>Current report</span>
-      <strong>Week 1: Divorce and Remarriage</strong>
-      <p>The stable report page is published now; results will be added after the response window closes.</p>
+  <section class="latest-report-card" aria-labelledby="latest-report-heading">
+    <div>
+      <p class="section-label">Newest report</p>
+      <h2 id="latest-report-heading">Week 1: Divorce and Remarriage</h2>
+      <p>The stable report page is published now. Results, key tensions, chart previews, ballot outcomes, and data-release notes will be added after responses are reviewed.</p>
+      <div class="button-row">
+        <a class="button" href="{week_1_report_url}">Open Full Report</a>
+      </div>
     </div>
-    <div class="status-card">
-      <span>Current stage</span>
-      <strong>Launch preparation</strong>
-      <p>The survey link is distributed by email to the intended participant audience, not posted publicly.</p>
-    </div>
+    <dl class="report-meta-list">
+      <div>
+        <dt>Status</dt>
+        <dd>Results pending</dd>
+      </div>
+      <div>
+        <dt>Survey topic</dt>
+        <dd>Divorce and Remarriage</dd>
+      </div>
+      <div>
+        <dt>Report rhythm</dt>
+        <dd>Friday after response review</dd>
+      </div>
+    </dl>
+  </section>
+
+  <h2>Weekly report grid</h2>
+  <div class="report-preview-grid">
+    <a class="report-preview-card" href="{week_1_report_url}">
+      <span class="report-week">Week 1</span>
+      <strong>Divorce and Remarriage</strong>
+      <span class="report-status pending">Results pending</span>
+      <span>12 featured-topic items, 3 independent live items, a 7-item ballot, and upcoming topic previews.</span>
+    </a>
   </div>
 
   <details class="accordion-block">
@@ -213,7 +232,7 @@ PAGES = [
     </div>
   </details>
 
-  <h2>Report format</h2>
+  <h2>What each report will include</h2>
   <ul>
     <li><strong>Issue:</strong> the weekly CTS-administered topic and the reason it was selected.</li>
     <li><strong>Administered items:</strong> the exact wording of the 12 CTS-provided survey items.</li>
@@ -226,34 +245,6 @@ PAGES = [
     <li><strong>Preview of upcoming topics:</strong> the topics for the next three weeks featured to allow for mental preparation.</li>
     <li><strong>Data release:</strong> a link to raw or prepared data when privacy and formatting checks are complete.</li>
   </ul>
-
-  <h2>Report index</h2>
-  <figure>
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>CTS-administered topic</th>
-          <th>Participant-vote-determined questions</th>
-          <th>Participant-nominated item ballot</th>
-          <th>Status</th>
-          <th>Report</th>
-          <th>Data</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Week 1</td>
-          <td>Divorce and Remarriage</td>
-          <td>Week 1 seeded independent items</td>
-          <td>Week 1 seeded 7-item ballot</td>
-          <td>Launch preparation</td>
-          <td><a href="{week_1_report_url}">Report page</a></td>
-          <td>Pending</td>
-        </tr>
-      </tbody>
-    </table>
-  </figure>
 
   <p class="callout">Raw data will not include direct email identifiers in public files. Participant attributes may be grouped or suppressed when needed to avoid accidental identification. Free-text suggestions may be edited, grouped, or withheld before publication to protect privacy and keep item wording usable. See the <a href="{privacy_url}">Privacy &amp; Data Release</a> page for the current policy.</p>
 </div>
@@ -707,8 +698,8 @@ def render_home(page: Page, prefix: str) -> str:
           <h1 id="page-title">{page.title}</h1>
           <p class="lede"><strong>Christian Thought Survey is being revived as a weekly research project for Christian ministers.</strong> Each Weekly Survey will pair one CTS-administered topic with 12 related items, 3 participant-vote-determined questions, a 7-item AI-polished participant-nominated item ballot, a suggestion text box, last week's results summary and link, and a preview of upcoming topics.</p>
           <div class="button-row">
-            <a class="button" href="{page_url(prefix, "weekly-survey-reports/index.html")}">Weekly Survey Reports</a>
-            <a class="button secondary" href="{page_url(prefix, "previous-results-archive/index.html")}">Previous Results Archive</a>
+            <a class="button" href="{page_url(prefix, WEEK_1_REPORT_OUTPUT)}">Latest Weekly Report</a>
+            <a class="button secondary" href="{page_url(prefix, "weekly-survey-reports/index.html")}">All Weekly Reports</a>
           </div>
         </div>
       </div>
