@@ -375,6 +375,10 @@ h3 {
   margin: 0;
 }
 
+.wp-content .status-grid + p {
+  margin-top: 2rem;
+}
+
 .wp-content h2 {
   margin-top: 2.7rem;
 }
