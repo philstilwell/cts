@@ -718,6 +718,10 @@ h3 {
   line-height: 1.72;
 }
 
+.wp-content .callout {
+  margin-top: 2.5rem;
+}
+
 .surveyol-embed {
   min-height: 1540px;
   margin-top: 2rem;
