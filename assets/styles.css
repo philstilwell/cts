@@ -404,6 +404,37 @@ h3 {
   color: var(--muted);
 }
 
+.item-rotation-feature {
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.item-rotation-feature p:not(.section-label) {
+  max-width: 820px;
+  color: var(--muted);
+}
+
+.item-rotation-figure {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.item-rotation-figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(23, 40, 45, 0.08);
+}
+
+.item-rotation-figure figcaption {
+  max-width: 820px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
 .report-meta-list {
   display: grid;
   gap: 0.75rem;

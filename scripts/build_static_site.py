@@ -206,6 +206,16 @@ PAGES = [
     </dl>
   </section>
 
+  <section class="item-rotation-feature" aria-labelledby="item-rotation-heading">
+    <p class="section-label">Participant-generated questions</p>
+    <h2 id="item-rotation-heading">How nominated items rotate into the survey</h2>
+    <p>Participant-nominated items move through a rolling three-week pipeline. Participants first submit suggested survey items, eligible nominations are then polished into a ballot for participant voting, and the top 3 voted items become live 0-100 credence-slider survey items in a later weekly survey.</p>
+    <figure class="item-rotation-figure">
+      <img src="../assets/participant-nominated-item-rotation.png" alt="Circular infographic showing the participant-nominated item rotation: nomination week, voting week, survey week, and then the cycle repeats." width="1600" height="893">
+      <figcaption>New nominations enter the pipeline while earlier nominations move toward participant voting and live survey use. This keeps the participant-generated item stream moving without making every weekly survey about the same topic.</figcaption>
+    </figure>
+  </section>
+
   <h2>Weekly report grid</h2>
   <div class="report-preview-grid">
     <a class="report-preview-card" href="{week_1_report_url}">
