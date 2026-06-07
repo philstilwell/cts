@@ -3,20 +3,30 @@
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
 from html import escape
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SITE_NAME = "Christian Thought Survey"
+SITE_DESCRIPTION = (
+    "Weekly Christian research reports for ministers, with credence-slider surveys, "
+    "participant-voted questions, and responsible data releases."
+)
 SITE_URL = "https://christianthoughtsurvey.com"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
-UPDATED = "June 3, 2026"
+UPDATED = "June 7, 2026"
+SITEMAP_LASTMOD = "2026-06-07"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
 NEWSLETTER_CONFIRMATION_OUTPUT = "email-confirmation/index.html"
 OG_IMAGE = f"{SITE_URL}/assets/cts-research-overview.png"
+OG_IMAGE_ALT = "Christian Thought Survey research overview graphic"
+DEFAULT_ROBOTS = "index,follow,max-image-preview:large"
+THEME_COLOR = "#174d51"
 CLOUDFLARE_ANALYTICS = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"b86c3e7a273f47648ae70f08866f9ec5\"}'></script><!-- End Cloudflare Web Analytics -->"
 MAILERLITE_UNIVERSAL_SCRIPT = """<!-- MailerLite Universal -->
 <script>
@@ -62,10 +72,9 @@ PAGES = [
         title="Christian Thought Survey 2026",
         eyebrow="Returning in 2026",
         description=(
-            "A weekly research project for Christian ministers, built around 12 "
-            "CTS-administered survey items, 3 participant-vote-determined questions, "
-            "credence sliders, a 7-item AI-polished participant-nominated item ballot, survey-item suggestions, "
-            "last week's results summary and link, and a preview of upcoming topics."
+            "Weekly Christian Thought Survey reports for ministers, with "
+            "credence-slider research, participant-voted questions, and responsible "
+            "data releases."
         ),
         content="""
 <section class="content-band shade report-spotlight-band">
@@ -174,8 +183,8 @@ PAGES = [
         title="Weekly Survey Reports",
         eyebrow="Report index",
         description=(
-            "The collection point for weekly Christian Thought Survey reports and the "
-            "six-part weekly survey process."
+            "Browse weekly Christian Thought Survey reports, upcoming topics, "
+            "participant-generated questions, and public data-release notes."
         ),
         content="""
 <div class="wp-content results-hub">
@@ -267,8 +276,8 @@ PAGES = [
         title="Week 1 Report: Divorce and Remarriage",
         eyebrow="Results pending",
         description=(
-            "The stable Week 1 Christian Thought Survey report page for Divorce "
-            "and Remarriage, prepared for public results once responses are reviewed."
+            "Week 1 Christian Thought Survey report page for Divorce and Remarriage, "
+            "with results, charts, ballot outcomes, and data notes added after review."
         ),
         content="""
 <div class="wp-content">
@@ -511,9 +520,8 @@ PAGES = [
         title="Newsletter Signup",
         eyebrow="Updates",
         description=(
-            "A signup form for readers who want Christian Thought Survey report "
-            "notices, topic previews, and occasional articles without joining the "
-            "weekly survey participant panel."
+            "Sign up for Christian Thought Survey report notices, topic previews, "
+            "and occasional articles without joining the weekly survey participant panel."
         ),
         content="""
 <div class="wp-content">
@@ -560,8 +568,8 @@ PAGES = [
         title="Contact &amp; Weekly Survey Participation",
         eyebrow="Participation",
         description=(
-            "Contact and participation notes for ministers, ministry leaders, weekly "
-            "survey participation, future survey-item suggestions, and data questions."
+            "Participation details for Christian ministers who want CTS weekly survey "
+            "invitations, future item suggestions, or data and citation follow-up."
         ),
         content="""
 <div class="wp-content">
@@ -616,6 +624,157 @@ def canonical_url(output: str) -> str:
     return f"{SITE_URL}/{Path(output).parent.as_posix()}/"
 
 
+def document_title(page: Page) -> str:
+    title = strip_entities(page.title)
+    if page.key == "home":
+        return title
+    return f"{title} | {SITE_NAME}"
+
+
+def robots_content(page: Page) -> str:
+    return page.robots or DEFAULT_ROBOTS
+
+
+def is_indexable(page: Page) -> bool:
+    return "noindex" not in robots_content(page)
+
+
+def schema_page_type(page: Page) -> str:
+    if page.key in {"weekly", "archive"}:
+        return "CollectionPage"
+    if page.key == "contact":
+        return "ContactPage"
+    if page.key == "overview":
+        return "AboutPage"
+    return "WebPage"
+
+
+def breadcrumb_items(page: Page) -> list[dict[str, object]]:
+    items: list[dict[str, object]] = [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": canonical_url("index.html"),
+        }
+    ]
+    if page.output == "index.html":
+        return items
+    if page.output.startswith("weekly-survey-reports/") and page.output != "weekly-survey-reports/index.html":
+        items.append(
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Weekly Survey Reports",
+                "item": canonical_url("weekly-survey-reports/index.html"),
+            }
+        )
+        position = 3
+    else:
+        position = 2
+    items.append(
+        {
+            "@type": "ListItem",
+            "position": position,
+            "name": strip_entities(page.title),
+            "item": canonical_url(page.output),
+        }
+    )
+    return items
+
+
+def json_for_script(data: dict[str, object]) -> str:
+    return json.dumps(data, ensure_ascii=True, separators=(",", ":")).replace("</", "<\\/")
+
+
+def render_structured_data(page: Page) -> str:
+    if not is_indexable(page):
+        return ""
+    canonical = canonical_url(page.output)
+    page_id = f"{canonical}#webpage"
+    breadcrumb_id = f"{canonical}#breadcrumb"
+    web_page: dict[str, object] = {
+        "@type": schema_page_type(page),
+        "@id": page_id,
+        "url": canonical,
+        "name": strip_entities(page.title),
+        "description": page.description,
+        "isPartOf": {"@id": f"{SITE_URL}/#website"},
+        "publisher": {"@id": f"{SITE_URL}/#organization"},
+        "image": OG_IMAGE,
+        "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": OG_IMAGE,
+            "width": 1600,
+            "height": 900,
+            "caption": OG_IMAGE_ALT,
+        },
+        "dateModified": SITEMAP_LASTMOD,
+    }
+    if page.output != "index.html":
+        web_page["breadcrumb"] = {"@id": breadcrumb_id}
+    graph: list[dict[str, object]] = [
+        {
+            "@type": "Organization",
+            "@id": f"{SITE_URL}/#organization",
+            "name": SITE_NAME,
+            "url": SITE_URL,
+            "logo": {
+                "@type": "ImageObject",
+                "url": f"{SITE_URL}/assets/cts-logo.png",
+            },
+            "sameAs": [WP_SITE],
+        },
+        {
+            "@type": "WebSite",
+            "@id": f"{SITE_URL}/#website",
+            "url": SITE_URL,
+            "name": SITE_NAME,
+            "description": SITE_DESCRIPTION,
+            "publisher": {"@id": f"{SITE_URL}/#organization"},
+            "inLanguage": "en-US",
+        },
+        web_page,
+    ]
+    if page.output != "index.html":
+        graph.append(
+            {
+                "@type": "BreadcrumbList",
+                "@id": breadcrumb_id,
+                "itemListElement": breadcrumb_items(page),
+            }
+        )
+    return f'\n  <script type="application/ld+json">{json_for_script({"@context": "https://schema.org", "@graph": graph})}</script>'
+
+
+def sitemap_priority(page: Page) -> str:
+    priorities = {
+        "home": "1.0",
+        "weekly": "0.9",
+        "week-001-report": "0.8",
+        "newsletter": "0.7",
+        "contact": "0.7",
+        "archive": "0.6",
+        "overview": "0.5",
+        "privacy": "0.4",
+    }
+    return priorities.get(page.key, "0.5")
+
+
+def sitemap_changefreq(page: Page) -> str:
+    frequencies = {
+        "home": "weekly",
+        "weekly": "weekly",
+        "week-001-report": "weekly",
+        "newsletter": "monthly",
+        "contact": "monthly",
+        "archive": "yearly",
+        "overview": "yearly",
+        "privacy": "yearly",
+    }
+    return frequencies.get(page.key, "monthly")
+
+
 def fill_links(html: str, prefix: str) -> str:
     links = {
         "home_url": page_url(prefix, "index.html"),
@@ -646,34 +805,41 @@ def render_nav(active_key: str, prefix: str) -> str:
 
 
 def render_head(page: Page, prefix: str) -> str:
-    title = escape(strip_entities(page.title))
+    title = escape(document_title(page))
     description = escape(page.description)
     canonical = canonical_url(page.output)
-    robots = f'\n  <meta name="robots" content="{escape(page.robots)}">' if page.robots else ""
+    robots = escape(robots_content(page))
+    structured_data = render_structured_data(page)
     extra_head = f"\n  {MAILERLITE_UNIVERSAL_SCRIPT}" if page.key == "newsletter" else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{title} | Christian Thought Survey</title>
-  <meta name="description" content="{description}">{robots}
+  <title>{title}</title>
+  <meta name="description" content="{description}">
+  <meta name="robots" content="{robots}">
+  <meta name="author" content="{SITE_NAME}">
+  <meta name="theme-color" content="{THEME_COLOR}">
   <link rel="canonical" href="{canonical}">
   <meta property="og:site_name" content="Christian Thought Survey">
+  <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{title} | Christian Thought Survey">
+  <meta property="og:title" content="{title}">
   <meta property="og:description" content="{description}">
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="{OG_IMAGE}">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="{OG_IMAGE_ALT}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{title} | Christian Thought Survey">
+  <meta name="twitter:title" content="{title}">
   <meta name="twitter:description" content="{description}">
   <meta name="twitter:image" content="{OG_IMAGE}">
+  <meta name="twitter:image:alt" content="{OG_IMAGE_ALT}">
   <link rel="icon" href="{prefix}assets/cts-logo.png">
   <link rel="stylesheet" href="{prefix}assets/styles.css">
-  {CLOUDFLARE_ANALYTICS}{extra_head}
+  {CLOUDFLARE_ANALYTICS}{structured_data}{extra_head}
 </head>"""
 
 
@@ -794,10 +960,54 @@ def write_404() -> None:
     path.write_text(render_page(page), encoding="utf-8")
 
 
+def write_sitemap() -> None:
+    urls = []
+    for page in PAGES:
+        if not is_indexable(page):
+            continue
+        urls.append(
+            "\n".join(
+                [
+                    "  <url>",
+                    f"    <loc>{escape(canonical_url(page.output))}</loc>",
+                    f"    <lastmod>{SITEMAP_LASTMOD}</lastmod>",
+                    f"    <changefreq>{sitemap_changefreq(page)}</changefreq>",
+                    f"    <priority>{sitemap_priority(page)}</priority>",
+                    "  </url>",
+                ]
+            )
+        )
+    sitemap = "\n".join(
+        [
+            '<?xml version="1.0" encoding="UTF-8"?>',
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+            *urls,
+            "</urlset>",
+            "",
+        ]
+    )
+    (ROOT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+
+
+def write_robots() -> None:
+    robots = "\n".join(
+        [
+            "User-agent: *",
+            "Allow: /",
+            "",
+            f"Sitemap: {SITE_URL}/sitemap.xml",
+            "",
+        ]
+    )
+    (ROOT / "robots.txt").write_text(robots, encoding="utf-8")
+
+
 def main() -> int:
     for page in PAGES:
         write_page(page)
     write_404()
+    write_sitemap()
+    write_robots()
     (ROOT / ".nojekyll").write_text("", encoding="utf-8")
     return 0
 
