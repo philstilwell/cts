@@ -893,6 +893,12 @@ h3 {
   white-space: nowrap;
 }
 
+.tooltip-term {
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.18em;
+}
+
 .results-table td {
   font-size: 0.94rem;
   line-height: 1.38;
