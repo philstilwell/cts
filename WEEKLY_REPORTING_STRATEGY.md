@@ -88,7 +88,7 @@ Recommended sections:
 - A 3-5 sentence executive summary.
 - A one-line reminder that participants are current or former full-time ministers.
 - A 15-item overview: 12 CTS-administered topic items plus 3 participant-vote-determined items.
-- Item cards with mean, IQR, Doubt/Dogma, standard deviation, and distribution.
+- Item cards with mean, IQR Range, Doubt/Dogma, standard deviation, and distribution.
 - A short "what ministers may notice" interpretation section.
 - A "Key tensions" section naming the items or themes where participants significantly disagree.
 - Ballot results showing which participant-nominated items were ranked highest.
@@ -105,7 +105,7 @@ The public overview table should use exactly these reader-facing columns:
 
 - `Item`: item number, short label, and full survey statement.
 - `Mean`: average 0-100 credence score.
-- `IQR`: interquartile range, with the pop-up explanation used in Week 1.
+- `IQR Range`: the displayed `Q1-Q3` interquartile interval, with the pop-up explanation used in Week 1. The underlying numeric IQR width may remain available in data as `q3 - q1`.
 - `Doubt/Dogma`: shown as `n:m`, where `n` is the count of non-endpoint responses from 1-99 and `m` is the count of endpoint responses exactly 0 or 100. Include the explanatory pop-up used in Week 1.
 - `Distribution`: an observed 10-bin sparkline with light neighbor smoothing, using the shared fixed 0-100 report scale and a visible 100% marker.
 
@@ -115,8 +115,9 @@ Do not include `Median` or `Low / Mid / High` as columns in the overview table. 
 
 Each item card should show the same visual grammar as Week 1:
 
-- Four compact stat boxes: `Mean`, `IQR`, `Doubt/Dogma`, and `SD`.
+- Four compact stat boxes: `Mean`, `IQR Range`, `Doubt/Dogma`, and `SD`.
 - No `Median` stat box.
+- The survey statement line under each item-card heading should be prefixed with `➘ ` for visual clarity.
 - A left-side label reading `Observed 10-bin distribution`.
 - A right-side 10-bin sparkline on a plain white field.
 - A 100% guide line and fully visible `100%` label.
@@ -136,6 +137,10 @@ The public sparkline is a display of observed 10-bin response percentages with l
 - Use a plain white chart field without background tint or auxiliary grid lines.
 - Color low bins with brick, middle bins with gold, and high bins with teal.
 
+##### Metadata Couplets
+
+Report metadata lists should keep each label and explanation/value together on the same row, using the shared `.report-meta-list` pattern. Place a thin horizontal divider between couplets rather than separating each label and value into stacked blocks.
+
 ### 2. Interactive Item Explorer
 
 This should be embedded inside each weekly report or linked as an expandable section.
@@ -143,7 +148,7 @@ This should be embedded inside each weekly report or linked as an expandable sec
 Recommended controls:
 
 - Toggle between all responses and eligible subgroups.
-- Sort items by mean, IQR/spread, Doubt/Dogma, distribution shape, or item order.
+- Sort items by mean, IQR range/spread, Doubt/Dogma, distribution shape, or item order.
 - Hover for exact counts and percentages.
 - Switch chart mode between distribution, dot-and-interval, and subgroup heatmap.
 - Download static chart image or summary CSV where appropriate.
@@ -229,7 +234,7 @@ Recommended content:
 
 - Mini histogram strips for each live item.
 - Dot-and-interval charts showing median and interquartile range.
-- Ranked item table with mean, IQR, Doubt/Dogma, standard deviation, and distribution shape.
+- Ranked item table with mean, IQR Range, Doubt/Dogma, standard deviation, and distribution shape.
 - Diverging distribution bars using 0-33, 34-66, and 67-100 bands only as secondary or fallback summaries when a simple broad-band view is useful.
 
 ## Google Sheets Sparkline Distribution Formula
@@ -354,7 +359,7 @@ Use the sparkline in public results when there is enough data to make the distri
 
 - All-response item sparkline: show at `n >= 30`; prefer `n >= 50`.
 - Subgroup sparkline: show only at `n >= 30`; otherwise use a simpler summary or suppress the subgroup view.
-- If `n < 30`, show `n`, mean, IQR, Doubt/Dogma, and perhaps a 3-band summary instead of a 10-bin sparkline.
+- If `n < 30`, show `n`, mean, IQR Range, Doubt/Dogma, and perhaps a 3-band summary instead of a 10-bin sparkline.
 
 ### Use For Deeper Analysis
 

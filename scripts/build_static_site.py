@@ -25,6 +25,7 @@ SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
 WEEK_2_REPORT_OUTPUT = "weekly-survey-reports/week-002-pornography-and-the-church/index.html"
 NEWSLETTER_CONFIRMATION_OUTPUT = "email-confirmation/index.html"
+REPORT_MANAGED_OUTPUTS = {WEEK_1_REPORT_OUTPUT, WEEK_2_REPORT_OUTPUT}
 OG_IMAGE = f"{SITE_URL}/assets/cts-research-overview.png"
 OG_IMAGE_ALT = "Christian Thought Survey research overview graphic"
 DEFAULT_ROBOTS = "index,follow,max-image-preview:large"
@@ -84,15 +85,19 @@ PAGES = [
     <div class="latest-report-copy">
       <p class="section-label">Latest weekly report</p>
       <h2>Week 1: Divorce and Remarriage</h2>
-      <p class="section-copy">For most visitors, weekly results should be the fastest path through the site. The Week 1 report page is already live as the stable destination, and it will be filled after responses are reviewed.</p>
+      <p class="section-copy">For most visitors, weekly results should be the fastest path through the site. The Week 1 report page now holds preliminary aggregate results, refreshed on June 16, 2026, and will be revised after the final SurveyOL export is reviewed.</p>
       <div class="report-meta-grid" aria-label="Latest report status">
         <div class="meta-chip">
           <span>Status</span>
-          <strong>Results pending</strong>
+          <strong>Preliminary results</strong>
         </div>
         <div class="meta-chip">
           <span>Publication rhythm</span>
           <strong>Tuesday reports</strong>
+        </div>
+        <div class="meta-chip">
+          <span>Current responses</span>
+          <strong>33 complete</strong>
         </div>
         <div class="meta-chip">
           <span>Topic</span>
@@ -105,9 +110,9 @@ PAGES = [
       </div>
     </div>
     <aside class="latest-report-aside" aria-label="What the latest report will include">
-      <span class="report-status pending">Pending</span>
-      <strong>Report page ready</strong>
-      <p>Once Week 1 responses are reviewed, the report will hold the summary, key tensions, chart previews, ballot results, and data-release notes.</p>
+      <span class="report-status preliminary">Preliminary</span>
+      <strong>Current snapshot posted</strong>
+      <p>The report includes a summary, key tensions, item-level aggregate distributions, ballot results, and data-release notes.</p>
     </aside>
   </div>
 </section>
@@ -165,6 +170,10 @@ PAGES = [
         <strong>Contact &amp; Participation</strong>
         <span>Invitation notes for ministers, topic suggestions, and data questions.</span>
       </a>
+      <a class="path-card" href="{participant_pool_url}">
+        <strong>Participant Pool</strong>
+        <span>How the ministry-focused panel was assembled, why it is useful, and where its limits remain.</span>
+      </a>
       <a class="path-card" href="{newsletter_url}">
         <strong>Newsletter Signup</strong>
         <span>Result notices, topic previews, and occasional CTS articles for non-participant readers.</span>
@@ -196,7 +205,7 @@ PAGES = [
     <div>
       <p class="section-label">Newest survey page</p>
       <h2 id="latest-report-heading">Week 2: Pornography and the Church</h2>
-      <p>The Week 2 placeholder page is published before SurveyOL invitations are sent. It names the topic, planned survey items, participant ballot, reporting schedule, and privacy-safe data notes.</p>
+      <p>The Week 2 placeholder page is published before SurveyOL invitations are sent. It names the topic, planned survey items, participant ballot, reporting schedule, and a short encapsulation linking to the June 16 refresh of the Week 1 report.</p>
       <div class="button-row">
         <a class="button" href="{week_2_report_url}">Open Week 2 Placeholder</a>
         <a class="button light" href="{week_1_report_url}">Open Week 1 Report</a>
@@ -214,6 +223,10 @@ PAGES = [
       <div>
         <dt>Report rhythm</dt>
         <dd>Tuesday morning report cycle</dd>
+      </div>
+      <div>
+        <dt>Linked report</dt>
+        <dd>Week 1 refreshed June 16</dd>
       </div>
     </dl>
   </section>
@@ -240,7 +253,7 @@ PAGES = [
       <span class="report-week">Week 1</span>
       <strong>Divorce and Remarriage</strong>
       <span class="report-status preliminary">Preliminary results</span>
-      <span>Current aggregate results for 15 slider items, a 7-item ballot, and participant suggestion counts.</span>
+      <span>Refreshed June 16 with 33 complete responses, 15 slider items, a 7-item ballot, and participant suggestion counts.</span>
     </a>
   </div>
 
@@ -284,14 +297,15 @@ PAGES = [
         output=WEEK_1_REPORT_OUTPUT,
         nav_label="Week 1",
         title="Week 1 Report: Divorce and Remarriage",
-        eyebrow="Results pending",
+        eyebrow="Preliminary results",
         description=(
-            "Week 1 Christian Thought Survey report page for Divorce and Remarriage, "
-            "with results, charts, ballot outcomes, and data notes added after review."
+            "Preliminary Week 1 Christian Thought Survey results on Divorce and "
+            "Remarriage, including slider distributions, key tensions, ballot "
+            "outcomes, and privacy-safe data notes."
         ),
         content="""
 <div class="wp-content">
-  <p>This is the stable public page for the first revived weekly Christian Thought Survey report. Results are not posted yet. The survey is in launch preparation, and the SurveyOL response link is distributed by email rather than posted publicly.</p>
+  <p>This is the stable public page for the first revived weekly Christian Thought Survey report. The current full report is managed as a report artifact and should not be overwritten by the generic site builder. As of the June 16, 2026 refresh, the preliminary report showed 33 complete responses from 409 invitations.</p>
 
   <div class="status-grid">
     <div class="status-card">
@@ -306,8 +320,8 @@ PAGES = [
     </div>
     <div class="status-card">
       <span>Report status</span>
-      <strong>Pending responses</strong>
-      <p>Public interpretation, charts, and data notes will be added after review.</p>
+      <strong>Preliminary results</strong>
+      <p>Public interpretation, charts, ballot results, and data notes are posted and refreshed each Tuesday morning while the survey remains open.</p>
     </div>
   </div>
 
@@ -319,7 +333,7 @@ PAGES = [
     </section>
     <section class="report-card">
       <h3>15-item overview</h3>
-      <p>Mean, IQR, Doubt/Dogma, normalized 10-bin distribution shape, and a concise interpretation for all live slider items.</p>
+      <p>Mean, IQR Range, Doubt/Dogma, observed 10-bin distribution shape, and a concise interpretation for all live slider items.</p>
     </section>
     <section class="report-card">
       <h3>Key tensions</h3>
@@ -339,13 +353,13 @@ PAGES = [
     </section>
   </div>
 
-  <h2>Results template</h2>
+  <h2>Report sections</h2>
   <figure>
     <table>
       <thead>
         <tr>
           <th>Section</th>
-          <th>What will appear here</th>
+          <th>What appears here</th>
           <th>Status</th>
         </tr>
       </thead>
@@ -353,32 +367,32 @@ PAGES = [
         <tr>
           <td>Field dates and response count</td>
           <td>Survey window, completed responses, and any response-quality notes.</td>
-          <td>Pending</td>
+          <td>Posted</td>
         </tr>
         <tr>
           <td>Featured-topic items</td>
           <td>12 Divorce and Remarriage item summaries with 0-100 credence distributions.</td>
-          <td>Pending</td>
+          <td>Posted</td>
         </tr>
         <tr>
           <td>Independent items</td>
           <td>3 orthogonal live items chosen for relevance and meaningful participant spread.</td>
-          <td>Pending</td>
+          <td>Posted</td>
         </tr>
         <tr>
           <td>Key tensions</td>
           <td>Items where disagreement is substantial enough to merit interpretation.</td>
-          <td>Pending</td>
+          <td>Posted</td>
         </tr>
         <tr>
           <td>Participant ballot</td>
           <td>7 ranked participant-nominated or seed items, with winners for the next survey.</td>
-          <td>Pending</td>
+          <td>Posted</td>
         </tr>
         <tr>
           <td>Data release</td>
           <td>Prepared data or a release note after privacy and formatting review.</td>
-          <td>Pending</td>
+          <td>Posted</td>
         </tr>
       </tbody>
     </table>
@@ -396,6 +410,116 @@ PAGES = [
   <div class="button-row">
     <a class="button light" href="{weekly_url}">Back to report index</a>
     <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
+  </div>
+</div>
+""",
+        in_nav=False,
+    ),
+    Page(
+        key="week-002-report",
+        output=WEEK_2_REPORT_OUTPUT,
+        nav_label="Week 2",
+        title="Week 2 Survey: Pornography and the Church",
+        eyebrow="Survey placeholder",
+        description=(
+            "Placeholder page for Christian Thought Survey Week 2 on Pornography "
+            "and the Church, including fielding dates, planned survey items, and "
+            "reporting schedule."
+        ),
+        content="""
+<div class="wp-content">
+  <p>This is the stable public page for the second revived weekly Christian Thought Survey report. The current page is managed as a weekly report artifact and should not be overwritten by the generic site builder.</p>
+
+  <div class="status-grid">
+    <div class="status-card">
+      <span>Status</span>
+      <strong>Survey open</strong>
+      <p>Participant invitations are sent through the SurveyOL Email collector.</p>
+    </div>
+    <div class="status-card">
+      <span>Topic</span>
+      <strong>Pornography and the Church</strong>
+      <p>12 CTS-administered credence-slider items focus on this topic.</p>
+    </div>
+    <div class="status-card">
+      <span>First report</span>
+      <strong>June 23, 2026</strong>
+      <p>The first preliminary report is planned for one week after launch.</p>
+    </div>
+  </div>
+
+  <p class="callout"><strong>Data note:</strong> Public files will not include email addresses, direct identifiers, respondent-level rows, or raw free-text suggestions. Participant attributes may be grouped or suppressed when needed to avoid accidental identification.</p>
+
+  <div class="button-row">
+    <a class="button light" href="{weekly_url}">Back to report index</a>
+    <a class="button light" href="{week_1_report_url}">Week 1 Preliminary Report</a>
+    <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
+  </div>
+</div>
+""",
+        in_nav=False,
+    ),
+    Page(
+        key="participant-pool",
+        output="participant-pool/index.html",
+        nav_label="Participant Pool",
+        title="Why These Participants Are Worth Hearing",
+        eyebrow="Participant pool",
+        description=(
+            "The Christian Thought Survey participant pool is not a random sample "
+            "of all Christians. It is an intentionally assembled panel of people "
+            "with clear ministry involvement, chosen for serious engagement and "
+            "breadth across church traditions and regions."
+        ),
+        content="""
+<div class="wp-content">
+  <p>The original CTS participant pool was assembled roughly three years before the 2026 weekly project. Participants were selected because they appeared to have meaningful involvement in Christian ministry, and because the project aimed to hear from a range of denominational and regional contexts rather than from one narrow church network.</p>
+
+  <p>The pool is also valuable because these participants did more than provide an email address. In the original project, they supplied background information such as ministry role, years in ministry, denominational setting, region, and other profile details, and they participated in an extensive survey of roughly 200 items across a large swath of doctrinal, practical, and sociological issues facing the church today.</p>
+
+  <p>The revived weekly project begins by reaching out first to those earlier participants who were willing to be contacted by email. The participant-quality claims on this page apply most directly to the initial 406 invited participants from that earlier pool. As the panel grows, CTS will do its utmost to invite subsequent participants who meet the same general standard of ministry involvement, seriousness, and breadth.</p>
+
+  <p>That means the early weekly results should be read as the views of an intentionally ministry-focused panel, not as an official denominational poll or a statistically random survey of American ministers.</p>
+
+  <h2>What participant quality means here</h2>
+  <div class="report-grid">
+    <section class="report-card">
+      <h3>Clear ministry involvement</h3>
+      <p>The pool was built around people whose public roles or stated work indicated real participation in Christian ministry, pastoral leadership, teaching, or related church service.</p>
+    </section>
+    <section class="report-card">
+      <h3>Serious survey engagement</h3>
+      <p>The earlier long-form survey required patience and careful thought. Participants answered roughly 200 items across theological, practical, and sociological issues, giving CTS unusually rich context for interpreting later weekly responses.</p>
+    </section>
+    <section class="report-card">
+      <h3>Denominational breadth</h3>
+      <p>CTS intentionally sought a range of Christian traditions so that reports would not merely reflect one denomination, school, or ministry subculture.</p>
+    </section>
+    <section class="report-card">
+      <h3>Regional breadth</h3>
+      <p>The focus was primarily the United States, with attention to hearing from ministers in different regions rather than treating one local context as the whole picture.</p>
+    </section>
+  </div>
+
+  <h2>How to read the results</h2>
+  <p>Because the participant pool is ministry-focused and intentionally assembled, CTS results are especially useful for seeing how thoughtful ministers and ministry-adjacent Christian leaders reason about current issues. The results are less useful for estimating exactly what all Christians, all pastors, or all members of a denomination believe.</p>
+
+  <p>The earlier profile data also makes future analysis more useful. When privacy thresholds allow, weekly responses can be compared with prior information such as years in ministry, denominational family, region, and earlier patterns of belief across the original 200-item survey.</p>
+
+  <p class="callout"><strong>Important limitation:</strong> Participant quality does not remove sampling limits. Every weekly report should still state the current response count, distinguish preliminary from final results, and avoid subgroup claims unless the number of respondents is large enough to protect privacy and support a responsible comparison.</p>
+
+  <h2>Why the panel can become more valuable</h2>
+  <p>The weekly format gives CTS a chance to strengthen the panel over time. Existing participants can suggest clearer survey items, invite attention to issues the administrator may have missed, and help identify questions that matter to active ministry. Additional ministers can also be invited as the project matures, especially where a tradition, region, or ministry context is underrepresented, while preserving the same basic expectations for ministry participation and thoughtful engagement.</p>
+
+  <p class="callout"><strong>Current ministers are welcome to request consideration.</strong> If you are currently serving in ministry and would like to participate in future CTS weekly surveys, please use the <a href="{contact_url}">Contact &amp; Weekly Survey Participation</a> page to introduce yourself. CTS is especially interested in thoughtful ministers who can help broaden the panel across traditions, regions, and ministry contexts.</p>
+
+  <p>The goal is not to claim that CTS participants speak for the whole church. The goal is more modest and, hopefully, more useful: to provide a disciplined window into how a diverse set of ministry-involved Christians think through doctrine, practice, and contemporary church life.</p>
+
+  <div class="button-row">
+    <a class="button light" href="{weekly_url}">Current weekly reports</a>
+    <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
+    <a class="button light" href="{overview_url}">Legacy overview</a>
+    <a class="button light" href="{contact_url}">Request participation</a>
   </div>
 </div>
 """,
@@ -654,7 +778,7 @@ def schema_page_type(page: Page) -> str:
         return "CollectionPage"
     if page.key == "contact":
         return "ContactPage"
-    if page.key == "overview":
+    if page.key in {"overview", "participant-pool"}:
         return "AboutPage"
     return "WebPage"
 
@@ -762,8 +886,10 @@ def sitemap_priority(page: Page) -> str:
         "home": "1.0",
         "weekly": "0.9",
         "week-001-report": "0.8",
+        "week-002-report": "0.8",
         "newsletter": "0.7",
         "contact": "0.7",
+        "participant-pool": "0.6",
         "archive": "0.6",
         "overview": "0.5",
         "privacy": "0.4",
@@ -776,8 +902,10 @@ def sitemap_changefreq(page: Page) -> str:
         "home": "weekly",
         "weekly": "weekly",
         "week-001-report": "weekly",
+        "week-002-report": "weekly",
         "newsletter": "monthly",
         "contact": "monthly",
+        "participant-pool": "monthly",
         "archive": "yearly",
         "overview": "yearly",
         "privacy": "yearly",
@@ -791,6 +919,7 @@ def fill_links(html: str, prefix: str) -> str:
         "weekly_url": page_url(prefix, "weekly-survey-reports/index.html"),
         "week_1_report_url": page_url(prefix, WEEK_1_REPORT_OUTPUT),
         "week_2_report_url": page_url(prefix, WEEK_2_REPORT_OUTPUT),
+        "participant_pool_url": page_url(prefix, "participant-pool/index.html"),
         "newsletter_confirmation_url": page_url(prefix, NEWSLETTER_CONFIRMATION_OUTPUT),
         "archive_url": page_url(prefix, "previous-results-archive/index.html"),
         "privacy_url": page_url(prefix, "privacy-data-release/index.html"),
@@ -944,6 +1073,8 @@ def render_page(page: Page) -> str:
 
 def write_page(page: Page) -> None:
     path = ROOT / page.output
+    if page.output in REPORT_MANAGED_OUTPUTS and path.exists():
+        return
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(render_page(page), encoding="utf-8")
 

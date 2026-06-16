@@ -146,7 +146,7 @@
             <th>Mean</th>
             <th>
               <span class="metric-popover">
-                <button class="metric-popover-trigger" type="button">IQR</button>
+                <button class="metric-popover-trigger" type="button">IQR Range</button>
                 <span class="metric-popover-panel" role="note">
                   <strong>Interquartile range</strong>
                   The middle 50% of responses, from the 25th percentile to the 75th percentile. A range such as 49-92 means half of respondents landed between 49 and 92.
@@ -435,7 +435,7 @@
           statGrid.className = "item-stat-grid";
           const iqrLabel = `
             <span class="metric-popover">
-              <button class="metric-popover-trigger" type="button">IQR</button>
+              <button class="metric-popover-trigger" type="button">IQR Range</button>
               <span class="metric-popover-panel" role="note">
                 <strong>Interquartile range</strong>
                 The middle 50% of responses, from the 25th percentile to the 75th percentile. A range such as 49-92 means half of respondents landed between 49 and 92.
@@ -453,14 +453,14 @@
           `;
           [
             ["Mean", item.mean],
-            ["IQR", `${formatNumber(item.q1)}-${formatNumber(item.q3)}`],
+            ["IQR Range", `${formatNumber(item.q1)}-${formatNumber(item.q3)}`],
             ["Doubt/Dogma", formatDoubtDogma(item)],
             ["SD", item.standard_deviation]
           ].forEach(([label, value]) => {
             const wrap = document.createElement("div");
             const dt = document.createElement("dt");
             const dd = document.createElement("dd");
-            if (label === "IQR") {
+            if (label === "IQR Range") {
               dt.innerHTML = iqrLabel;
             } else if (label === "Doubt/Dogma") {
               dt.innerHTML = doubtDogmaLabel;
