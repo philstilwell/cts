@@ -80,7 +80,7 @@ The source-field map indicates that old stance-response columns were intentional
 
 ### 1. Weekly Public Brief
 
-This should be the standard report linked from the CTS website each Friday.
+This should be the standard report linked from the CTS website each Tuesday morning during the regular report cycle.
 
 Recommended sections:
 

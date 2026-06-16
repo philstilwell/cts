@@ -112,12 +112,11 @@ The next automation step should produce a Google Sheets-friendly CSV from the sa
 
 ## Not Yet Automated
 
-- SurveyOL export download.
-- SurveyOL Email collector recipient import and invitation scheduling.
-- `CTS 2026` join validation and unmatched-response reporting.
+- SurveyOL Email collector invitation sending.
+- Direct Google Sheets writeback to `CTS 2026`.
 - Google Sheets workbook population.
 - Screenshot capture from Google Sheets.
 - Weekly report HTML generation from summary JSON.
 - Subgroup/correlation reporting.
 
-Those should be added after the first real export reveals the exact SurveyOL column shape.
+`scripts/cts_ops.py` now provides a hardened local bridge for MailerLite suppression exports, SurveyOL API snapshots, private weekly send-list/crosswalk generation, and dry-run contact/group sync plans. SurveyOL export download and response snapshots are API-assisted when a SurveyOL API token is available, but SurveyOL Email collector batch sending remains guarded until a documented send endpoint is confirmed.

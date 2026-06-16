@@ -132,6 +132,8 @@ Before each weekly newsletter and before each SurveyOL invitation batch:
 6. Keep newsletter-only subscribers, survey participants, and do-not-email records conceptually separate.
 7. Record the reconciliation date and source of each suppression update in private operational notes or the participant registry.
 
+Use `scripts/cts_ops.py` for the hardened local version of this process: export MailerLite suppressions, build the private SurveyOL send list, write the exact weekly contact crosswalk, and generate dry-run MailerLite/SurveyOL sync plans under `data/private/`. See `CTS_OPERATIONS_HARDENING.md`.
+
 ## Minimum Launch Checklist
 
 - SurveyOL survey link works.

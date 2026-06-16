@@ -54,6 +54,7 @@ Internal launch planning files:
 - `WEEK_1_SURVEY_TEMPLATE.md`
 - `WEEK_1_ITEM_AUDIT.md`
 - `WEEKLY_RUNBOOK.md`
+- `CTS_OPERATIONS_HARDENING.md`
 - `DATA_PIPELINE_PLAN.md`
 - `WEEKLY_REPORTING_STRATEGY.md`
 - `PARTICIPANT_PROFILE_SURVEY.md`
@@ -73,4 +74,10 @@ Refresh the legacy 200-item reference index with:
 
 ```bash
 python3 scripts/build_legacy_item_index.py
+```
+
+Build private weekly send lists and API sync plans with:
+
+```bash
+python3 scripts/cts_ops.py --help
 ```
