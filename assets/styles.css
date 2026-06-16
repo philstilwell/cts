@@ -1167,6 +1167,7 @@ h3 {
 .item-result-card {
   display: grid;
   gap: 0.9rem;
+  border: 3px solid var(--teal-dark);
 }
 
 .item-card-meta {

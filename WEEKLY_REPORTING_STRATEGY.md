@@ -88,12 +88,51 @@ Recommended sections:
 - A 3-5 sentence executive summary.
 - A one-line reminder that participants are current or former full-time ministers.
 - A 15-item overview: 12 CTS-administered topic items plus 3 participant-vote-determined items.
-- Item cards with mean, median, sample size, and distribution.
+- Item cards with mean, IQR, Doubt/Dogma, standard deviation, and distribution.
 - A short "what ministers may notice" interpretation section.
 - A "Key tensions" section naming the items or themes where participants significantly disagree.
 - Ballot results showing which participant-nominated items were ranked highest.
 - The next 3 planned topics.
 - Methodology and privacy note.
+
+#### Canonical Weekly Results Display
+
+Use the Week 1 revised results display as the standard for weekly survey reports unless a future report has a clearly documented reason to depart from it.
+
+##### 15-Item Overview Table
+
+The public overview table should use exactly these reader-facing columns:
+
+- `Item`: item number, short label, and full survey statement.
+- `Mean`: average 0-100 credence score.
+- `IQR`: interquartile range, with the pop-up explanation used in Week 1.
+- `Doubt/Dogma`: shown as `n:m`, where `n` is the count of non-endpoint responses from 1-99 and `m` is the count of endpoint responses exactly 0 or 100. Include the explanatory pop-up used in Week 1.
+- `Distribution`: a normalized smoothed 10-bin sparkline using the shared report scale and a visible 100% marker.
+
+Do not include `Median` or `Low / Mid / High` as columns in the overview table. Keep low/middle/high band counts in the public JSON for analysis and fallback rendering, but do not foreground them in the primary report table.
+
+##### Item-Level Detail Cards
+
+Each item card should show the same visual grammar as Week 1:
+
+- Four compact stat boxes: `Mean`, `IQR`, `Doubt/Dogma`, and `SD`.
+- No `Median` stat box.
+- A left-side label reading `Smoothed 10-bin distribution`.
+- A right-side 10-bin sparkline on a plain white field.
+- A 100% guide line and fully visible `100%` label.
+- No appended `low X, middle Y, high Z; n=...` legend text.
+
+##### Sparkline Rendering
+
+The public sparkline is a display of the S23-smoothed distribution series, not raw response values.
+
+- Use 10 bins: 0-10, 10-20, ..., 90-100.
+- Use the S23 half-boundary bucket logic, endpoint padding, and 3% adjacent-bucket smoothing.
+- Cap public display percentages at 100 after smoothing.
+- Use a shared report-level scale whose maximum is at least 100 and includes a small visual headroom, such as `CEILING(MAX(100, max_display_value) * 1.05, 5)`.
+- Draw a 100% guide line at `100 / shared_scale`.
+- Use a plain white chart field without background tint or auxiliary grid lines.
+- Color low bins with brick, middle bins with gold, and high bins with teal.
 
 ### 2. Interactive Item Explorer
 
@@ -102,7 +141,7 @@ This should be embedded inside each weekly report or linked as an expandable sec
 Recommended controls:
 
 - Toggle between all responses and eligible subgroups.
-- Sort items by mean, median, disagreement, or item order.
+- Sort items by mean, IQR/spread, Doubt/Dogma, distribution shape, or item order.
 - Hover for exact counts and percentages.
 - Switch chart mode between distribution, dot-and-interval, and subgroup heatmap.
 - Download static chart image or summary CSV where appropriate.
@@ -188,8 +227,8 @@ Recommended content:
 
 - Mini histogram strips for each live item.
 - Dot-and-interval charts showing median and interquartile range.
-- Ranked item table with mean, median, n, and disagreement score.
-- Diverging distribution bars using 0-33, 34-66, and 67-100 bands when a simple summary is useful.
+- Ranked item table with mean, IQR, Doubt/Dogma, standard deviation, and distribution shape.
+- Diverging distribution bars using 0-33, 34-66, and 67-100 bands only as secondary or fallback summaries when a simple broad-band view is useful.
 
 ## Google Sheets Sparkline Distribution Formula
 
@@ -278,7 +317,7 @@ Where `$B$2` contains a fixed maximum for the whole report, for example:
 =MAX(5,CEILING(MAX($AL$18:$BC$27)*1.05,5))
 ```
 
-This gives all 15 item sparklines the same scale while leaving a little visual headroom.
+This gives all 15 item sparklines the same scale while leaving a little visual headroom. In current CTS public reports, the shared scale should be anchored at 100, and any smoothed display values above 100 should be capped before rendering.
 
 When creating the revived CTS reporting sheet, reuse the recovered S23 formula architecture rather than replacing it with a plain bucket formula. If SurveyOL exports require a different table shape, adapt the same principles: 10-point buckets, 50/50 handling of exact boundary responses, endpoint padding, and 3% adjacent-bucket smoothing. A direct generic formula is possible, but it is less valuable than the honed S23 approach and harder to audit:
 
@@ -312,7 +351,7 @@ Use the sparkline in public results when there is enough data to make the distri
 
 - All-response item sparkline: show at `n >= 30`; prefer `n >= 50`.
 - Subgroup sparkline: show only at `n >= 30`; otherwise use a simpler summary or suppress the subgroup view.
-- If `n < 30`, show `n`, mean, median, and perhaps a 3-band summary instead of a 10-bin sparkline.
+- If `n < 30`, show `n`, mean, IQR, Doubt/Dogma, and perhaps a 3-band summary instead of a 10-bin sparkline.
 
 ### Use For Deeper Analysis
 
@@ -405,7 +444,7 @@ Recommended workbook tabs:
 - `Raw Export`: private SurveyOL export pasted/imported without public identifiers removed yet.
 - `Clean Responses`: cleaned response table with names, emails, and direct identifiers removed or hidden.
 - `Buckets`: 10-bin counts for each 0-100 credence item.
-- `Stats`: n, mean, median, interquartile range, standard deviation, disagreement score, and key-tension flag for each item.
+- `Stats`: n, mean, median retained for analysis, interquartile range, standard deviation, disagreement score, Doubt/Dogma counts, and key-tension flag for each item.
 - `Ballot`: ranked-choice or Borda-style summary for the participant-nominated ballot.
 - `Subgroups`: aggregate subgroup summaries that pass suppression thresholds.
 - `Public Charts`: screenshot-ready chart panels only.

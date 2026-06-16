@@ -74,18 +74,21 @@ For each of the 15 live slider items:
 
 - `n`
 - mean
-- median
+- median, retained for analysis but not foregrounded in the canonical public display
 - min/max
 - Q1/Q3
 - interquartile range
 - standard deviation
 - disagreement score
+- Doubt/Dogma endpoint-count metric: non-endpoint responses from 1-99, endpoint responses exactly 0 or 100, and their derived ratio
 - key-tension flag and reasons
 - simple histogram counts
 - S23-style half-boundary bucket counts
-- S23-style smoothed percentage series for sparkline charts
+- S23-style smoothed percentage series for sparkline charts, capped at 100 for public display
 
 The script counts free-text suggestions but does not output raw suggestion text.
+
+Canonical public reports should render the 15-item overview as `Item`, `Mean`, `IQR`, `Doubt/Dogma`, and `Distribution`. The distribution column should use normalized smoothed 10-bin sparklines with a shared scale, a visible 100% marker, a plain white chart field, and no auxiliary grid lines. Keep median and low/middle/high band counts available in the JSON for analysis, but do not use them as primary result-display columns.
 
 ## Privacy Rules
 
@@ -100,7 +103,7 @@ The script counts free-text suggestions but does not output raw suggestion text.
 Near-term reports can use Google Sheets as the charting surface:
 
 1. Import or paste `data/public/week-001-summary.json` or a derived CSV into a public-chart workbook.
-2. Use the recovered S23 distribution-series logic for 10-bin sparkline panels.
+2. Use the recovered S23 distribution-series logic for 10-bin sparkline panels, capping public display values at 100 and anchoring the shared chart scale at 100.
 3. Screenshot only the public chart panels.
 4. Publish screenshots alongside the written weekly report.
 

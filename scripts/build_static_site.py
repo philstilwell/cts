@@ -318,7 +318,7 @@ PAGES = [
     </section>
     <section class="report-card">
       <h3>15-item overview</h3>
-      <p>Means, medians, response counts, distribution shape, and a concise interpretation for all live slider items.</p>
+      <p>Mean, IQR, Doubt/Dogma, normalized 10-bin distribution shape, and a concise interpretation for all live slider items.</p>
     </section>
     <section class="report-card">
       <h3>Key tensions</h3>
@@ -326,7 +326,7 @@ PAGES = [
     </section>
     <section class="report-card">
       <h3>Distribution visuals</h3>
-      <p>Compact sparkline-style distribution strips for every credence item, using a shared scale when sample size permits.</p>
+      <p>Compact smoothed 10-bin sparklines for every credence item, using a shared scale, a 100% guide line, and capped display percentages when sample size permits.</p>
     </section>
     <section class="report-card">
       <h3>Correlations and scatterplots</h3>
