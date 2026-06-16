@@ -44,7 +44,7 @@ SurveyOL link:
 
 Full report: Week 001 Survey Results
 
-Make `Week 001 Survey Results` an actual rich-text hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/` and bold the linked label. Do not display the raw URL in participant-facing survey text.
+Make `Week 001 Survey Results` an actual rich-text hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`. Style the linked label as bold, underlined, header-accent colored (`#553e15` in the current Week 2 styling), and enlarged with `X↑` twice. Do not display the raw URL in participant-facing survey text.
 
 ## A. CTS-Administered Topic
 
@@ -116,7 +116,7 @@ Add the narrow section header images before the matching sections when practical
 
 Featured topic header placement rule: place the Featured Topic header image after the previous-results encapsulation and immediately before the current-week topic introduction. Prefix the topic-introduction line with `◉ ` every week.
 
-After importing Block 1, edit `Week 001 Survey Results` in SurveyOL's rich-text editor so it is an actual bold hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`. Do not leave a raw report URL visible to participants.
+After importing Block 1, edit `Week 001 Survey Results` in SurveyOL's rich-text editor so it is an actual hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`. Style the linked label as bold, underlined, header-accent colored (`#553e15` in the current Week 2 styling), and enlarged with `X↑` twice. Do not leave a raw report URL visible to participants.
 
 ### Block 1
 
