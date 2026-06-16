@@ -329,8 +329,7 @@ h3 {
 
 .meta-chip,
 .latest-report-aside,
-.latest-report-card,
-.report-preview-card {
+.latest-report-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -343,7 +342,6 @@ h3 {
 }
 
 .meta-chip span,
-.report-week,
 .report-meta-list dt {
   display: block;
   color: var(--brick);
@@ -458,44 +456,6 @@ h3 {
   color: var(--teal-dark);
   font-weight: 800;
   line-height: 1.25;
-}
-
-.report-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.report-preview-card {
-  min-height: 210px;
-  padding: 1.15rem;
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.report-preview-card strong {
-  display: block;
-  margin-top: 0.45rem;
-  color: var(--teal-dark);
-  font-size: 1.15rem;
-  line-height: 1.25;
-}
-
-.report-preview-card .report-status {
-  margin-top: 0.8rem;
-}
-
-.report-preview-card span:last-child {
-  display: block;
-  margin-top: 0.8rem;
-  color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.5;
-}
-
-.report-preview-card:hover {
-  border-color: var(--teal);
-  transform: translateY(-2px);
 }
 
 .survey-control-board {
@@ -1540,7 +1500,6 @@ h3 {
   .latest-report,
   .latest-report-card,
   .report-meta-grid,
-  .report-preview-grid,
   .section-heading-row,
   .status-grid,
   .report-grid,
@@ -1551,8 +1510,7 @@ h3 {
     gap: 1.5rem;
   }
 
-  .path-card,
-  .report-preview-card {
+  .path-card {
     min-height: auto;
   }
 
