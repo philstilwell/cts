@@ -25,7 +25,7 @@
   <meta name="twitter:image" content="https://christianthoughtsurvey.com/assets/cts-research-overview.png">
   <meta name="twitter:image:alt" content="Christian Thought Survey research overview graphic">
   <link rel="icon" href="../assets/cts-logo.png">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260616-rotation-image-scale">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260616-status-popovers">
   <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b86c3e7a273f47648ae70f08866f9ec5"}'></script><!-- End Cloudflare Web Analytics -->
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://christianthoughtsurvey.com/#organization","name":"Christian Thought Survey","url":"https://christianthoughtsurvey.com","logo":{"@type":"ImageObject","url":"https://christianthoughtsurvey.com/assets/cts-logo.png"},"sameAs":["https://christianthoughtsurvey.wordpress.com"]},{"@type":"WebSite","@id":"https://christianthoughtsurvey.com/#website","url":"https://christianthoughtsurvey.com","name":"Christian Thought Survey","description":"Weekly Christian research reports for ministers, with credence-slider surveys, participant-voted questions, and responsible data releases.","publisher":{"@id":"https://christianthoughtsurvey.com/#organization"},"inLanguage":"en-US"},{"@type":"CollectionPage","@id":"https://christianthoughtsurvey.com/weekly-survey-reports/#webpage","url":"https://christianthoughtsurvey.com/weekly-survey-reports/","name":"Weekly Survey Reports","description":"Browse weekly Christian Thought Survey reports, upcoming topics, participant-generated questions, and public data-release notes.","isPartOf":{"@id":"https://christianthoughtsurvey.com/#website"},"publisher":{"@id":"https://christianthoughtsurvey.com/#organization"},"image":"https://christianthoughtsurvey.com/assets/cts-research-overview.png","primaryImageOfPage":{"@type":"ImageObject","url":"https://christianthoughtsurvey.com/assets/cts-research-overview.png","width":1600,"height":900,"caption":"Christian Thought Survey research overview graphic"},"dateModified":"2026-06-16","breadcrumb":{"@id":"https://christianthoughtsurvey.com/weekly-survey-reports/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://christianthoughtsurvey.com/weekly-survey-reports/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://christianthoughtsurvey.com/"},{"@type":"ListItem","position":2,"name":"Weekly Survey Reports","item":"https://christianthoughtsurvey.com/weekly-survey-reports/"}]}]}</script>
 </head>
@@ -108,23 +108,28 @@
         </div>
         <div class="survey-stage-track" aria-label="Week 2 is currently fielding invitations.">
           <div class="survey-stage done" data-short-label="Page">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week2-placeholder-info" aria-label="Week 2 placeholder details"></button>
+            <span class="stage-info-panel" id="week2-placeholder-info" role="tooltip"><strong>Week 2 placeholder</strong> Public page published before the SurveyOL response link was distributed. Current public responses: not yet reported.</span>
             <span>Placeholder</span>
           </div>
           <div class="survey-stage active" data-short-label="Open">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week2-fielding-info" aria-label="Week 2 fielding details"></button>
+            <span class="stage-info-panel" id="week2-fielding-info" role="tooltip"><strong>Fielding now</strong> SurveyOL Email collector invitations are being sent in daily batches. Current public responses: pending the first report.</span>
             <span>Fielding</span>
           </div>
           <div class="survey-stage pending" data-short-label="Report">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week2-first-report-info" aria-label="Week 2 first report details"></button>
+            <span class="stage-info-panel" id="week2-first-report-info" role="tooltip"><strong>First report</strong> Scheduled for June 23, 2026. The first public report will include the current complete-response count and aggregate item results.</span>
             <span>First Report</span>
           </div>
           <div class="survey-stage pending" data-short-label="Refresh">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week2-refresh-info" aria-label="Week 2 refresh details"></button>
+            <span class="stage-info-panel" id="week2-refresh-info" role="tooltip"><strong>Refreshes</strong> After the first report posts, this survey will refresh each Tuesday morning while the response window remains open.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week2-final-info" aria-label="Week 2 final report details"></button>
+            <span class="stage-info-panel" id="week2-final-info" role="tooltip"><strong>Final report</strong> Final close target: July 7, 2026. Results will be marked final after the SurveyOL export is reviewed.</span>
             <span>Final</span>
           </div>
         </div>
@@ -140,23 +145,28 @@
         </div>
         <div class="survey-stage-track" aria-label="Week 1 has posted preliminary results and is in the refresh period.">
           <div class="survey-stage done" data-short-label="Page">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week1-placeholder-info" aria-label="Week 1 placeholder details"></button>
+            <span class="stage-info-panel" id="week1-placeholder-info" role="tooltip"><strong>Week 1 placeholder</strong> The Divorce and Remarriage public page was created before invitations were sent, giving readers a stable report URL.</span>
             <span>Placeholder</span>
           </div>
           <div class="survey-stage done" data-short-label="Sent">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week1-fielding-info" aria-label="Week 1 fielding details"></button>
+            <span class="stage-info-panel" id="week1-fielding-info" role="tooltip"><strong>Fielding</strong> 409 SurveyOL Email collector invitations were sent. The survey remains open during the three-week response window.</span>
             <span>Fielding</span>
           </div>
           <div class="survey-stage done" data-short-label="Report">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week1-first-report-info" aria-label="Week 1 first report details"></button>
+            <span class="stage-info-panel" id="week1-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 33 complete responses as of the June 16 refresh.</span>
             <span>First Report</span>
           </div>
           <div class="survey-stage active" data-short-label="Refresh">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week1-refresh-info" aria-label="Week 1 refresh details"></button>
+            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshing</strong> Current public responses: 33 complete. The report refreshes each Tuesday morning while the survey remains open.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
-            <span class="stage-dot" aria-hidden="true"></span>
+            <button class="stage-dot" type="button" aria-describedby="week1-final-info" aria-label="Week 1 final report details"></button>
+            <span class="stage-info-panel" id="week1-final-info" role="tooltip"><strong>Final report</strong> Pending final close and SurveyOL export review. Final reporting will preserve respondent privacy thresholds.</span>
             <span>Final</span>
           </div>
         </div>

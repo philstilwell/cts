@@ -580,13 +580,105 @@ h3 {
 }
 
 .stage-dot {
+  appearance: none;
   display: block;
   width: 1.18rem;
   height: 1.18rem;
+  padding: 0;
   border: 3px solid #dce8e4;
   border-radius: 999px;
   background: var(--paper);
   box-shadow: 0 0 0 4px var(--paper);
+  cursor: help;
+}
+
+.stage-dot:focus-visible {
+  outline: 3px solid rgba(215, 161, 45, 0.72);
+  outline-offset: 0.25rem;
+}
+
+.stage-info-panel {
+  position: absolute;
+  z-index: 12;
+  left: 50%;
+  bottom: calc(100% + 0.72rem);
+  width: min(17rem, 78vw);
+  padding: 0.78rem 0.86rem;
+  border: 1px solid rgba(23, 77, 81, 0.24);
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(23, 40, 45, 0.16);
+  color: var(--ink);
+  background: #fffdf8;
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.38;
+  text-align: left;
+  text-transform: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -0.25rem);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.stage-info-panel::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.43rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-right: 1px solid rgba(23, 77, 81, 0.24);
+  border-bottom: 1px solid rgba(23, 77, 81, 0.24);
+  background: #fffdf8;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.stage-info-panel strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--teal-dark);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.survey-stage:hover .stage-info-panel,
+.survey-stage:focus-within .stage-info-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.survey-stage:first-child .stage-info-panel {
+  left: 0;
+  transform: translate(0, -0.25rem);
+}
+
+.survey-stage:first-child .stage-info-panel::after {
+  left: 1rem;
+  transform: rotate(45deg);
+}
+
+.survey-stage:first-child:hover .stage-info-panel,
+.survey-stage:first-child:focus-within .stage-info-panel {
+  transform: translate(0, 0);
+}
+
+.survey-stage:last-child .stage-info-panel {
+  right: 0;
+  left: auto;
+  transform: translate(0, -0.25rem);
+}
+
+.survey-stage:last-child .stage-info-panel::after {
+  right: 1rem;
+  left: auto;
+  transform: rotate(45deg);
+}
+
+.survey-stage:last-child:hover .stage-info-panel,
+.survey-stage:last-child:focus-within .stage-info-panel {
+  transform: translate(0, 0);
 }
 
 .survey-stage.done {
