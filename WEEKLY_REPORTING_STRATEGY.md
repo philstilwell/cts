@@ -130,6 +130,7 @@ The public sparkline is a display of observed 10-bin response percentages with l
 - Count observed responses directly into the 10 bins, with 90-100 including exact 100.
 - Add only 3% of each natural neighboring bin to the plotted value. Do not pad endpoints.
 - Store this reader-facing series as `distribution.display_percentages`.
+- Public renderers must not fall back to `s23_smoothed_percentages` for bar heights. If `display_percentages` is absent, compute the observed-smoothed display series from `simple_counts` and `n`.
 - Use a fixed public display scale of 0-100 after capping, with no visual headroom above 100.
 - Draw the 100% guide line at the top of the plot area so a true 100% bin reaches the marker.
 - Use a plain white chart field without background tint or auxiliary grid lines.

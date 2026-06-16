@@ -59,7 +59,7 @@
     <section class="content-band">
       <article class="article-shell">
 
-<div class="wp-content week-report" data-summary-url="../../data/public/week-001-preliminary-summary.json">
+<div class="wp-content week-report" data-summary-url="../../data/public/week-001-preliminary-summary.json?v=20260616-observed-distribution">
   <p class="report-kicker">Preliminary public snapshot. These results should be read as current, not final, until the response window is closed and the final SurveyOL export is reviewed.</p>
   <p class="report-kicker">Update note: while this survey remains open, this preliminary report will be refreshed each Tuesday morning. It may also be refreshed sooner if new responses materially change the results. The final report will be marked after the response window closes and the SurveyOL export is reviewed.</p>
 
@@ -280,10 +280,25 @@
         return `${metric.non_endpoint_count}:${metric.endpoint_count}`;
       };
 
-      const sparklineValues = (item) => {
-        const values = item.distribution && (item.distribution.display_percentages || item.distribution.s23_smoothed_percentages);
+      const sanitizeSparklineValues = (values) => {
         if (!Array.isArray(values) || values.length !== 10) return null;
         return values.map((value) => Math.max(0, Math.min(100, Number(value) || 0)));
+      };
+
+      const displayValuesFromCounts = (item) => {
+        const counts = item.distribution && item.distribution.simple_counts;
+        const n = Number(item.n);
+        if (!Array.isArray(counts) || counts.length !== 10 || !n) return null;
+        const padded = [0, ...counts, 0];
+        return counts.map((_, index) => {
+          const value = ((padded[index] * 0.03 + padded[index + 1] + padded[index + 2] * 0.03) / n) * 100;
+          return Math.max(0, Math.min(100, value));
+        });
+      };
+
+      const sparklineValues = (item) => {
+        const values = item.distribution && item.distribution.display_percentages;
+        return sanitizeSparklineValues(values) || displayValuesFromCounts(item);
       };
 
       const sparklineBinLabel = (item, index) => {
@@ -505,7 +520,7 @@
         });
       };
 
-      fetch(summaryUrl)
+      fetch(summaryUrl, { cache: "no-cache" })
         .then((response) => {
           if (!response.ok) throw new Error("Summary file not available.");
           return response.json();
