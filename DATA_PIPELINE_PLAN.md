@@ -89,7 +89,7 @@ For each of the 15 live slider items:
 
 The script counts free-text suggestions but does not output raw suggestion text.
 
-Canonical public reports should render the 15-item overview as `Item`, `Mean`, `IQR Range`, `Doubt/Dogma`, and `Distribution`. The distribution column should use observed 10-bin sparklines with light neighbor smoothing, a shared fixed 0-100 scale, a visible 100% marker at the top of the plot area, a plain white chart field, and no auxiliary grid lines. Keep median and low/middle/high band counts available in the JSON for analysis, but do not use them as primary result-display columns.
+Canonical public reports should render the 15-item overview as `Item`, `Mean`, `IQR Range`, `Doubt/Dogma`, and `Distribution`. The `Doubt/Dogma` ratio should color the left non-endpoint/doubt count yellow and the right endpoint/dogma count red. The distribution column should use observed 10-bin sparklines with light neighbor smoothing, a shared fixed 0-100 scale, a visible 100% marker at the top of the plot area, a plain white chart field, and no auxiliary grid lines. Keep median and low/middle/high band counts available in the JSON for analysis, but do not use them as primary result-display columns.
 
 ## Privacy Rules
 

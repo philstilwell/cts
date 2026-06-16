@@ -108,7 +108,7 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 8. Save any joined identity-bearing analysis file under `data/private/`. Do not commit joined files, contact crosswalks, names, email addresses, participant IDs, or raw free-text suggestions.
 9. Generate the public summary JSON with `scripts/cts_report_pipeline.py` and the matching `reporting/week-###.config.json`.
 10. Review the generated summary's `quality` section for missing columns, non-numeric values, out-of-range values, unexpectedly low counts, and unexpected unmatched-response counts.
-11. Summarize all 15 live slider items with the canonical results display: `Item`, `Mean`, `IQR Range`, `Doubt/Dogma` as non-endpoint:endpoint counts, and an observed 10-bin distribution sparkline with light neighbor smoothing and a visible 100% marker. Do not use `Median` or `Low / Mid / High` as primary table columns.
+11. Summarize all 15 live slider items with the canonical results display: `Item`, `Mean`, `IQR Range`, `Doubt/Dogma` as non-endpoint:endpoint counts, and an observed 10-bin distribution sparkline with light neighbor smoothing and a visible 100% marker. In `Doubt/Dogma`, color the left non-endpoint/doubt count yellow and the right endpoint/dogma count red. Do not use `Median` or `Low / Mid / High` as primary table columns.
 12. Identify key tensions where item-level disagreement is significant.
 13. Suppress or combine subgroup comparisons when counts are too small.
 14. Review free-text suggestions for accidental identifiers before using or publishing them.

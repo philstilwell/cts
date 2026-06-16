@@ -16,7 +16,7 @@ SITE_DESCRIPTION = (
     "participant-voted questions, and responsible data releases."
 )
 SITE_URL = "https://christianthoughtsurvey.com"
-CSS_VERSION = "20260616-five-metric-row"
+CSS_VERSION = "20260616-doubt-dogma-colors"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
 UPDATED = "June 16, 2026"
 SITEMAP_LASTMOD = "2026-06-16"
