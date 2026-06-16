@@ -120,3 +120,5 @@ The next automation step should produce a Google Sheets-friendly CSV from the sa
 - Subgroup/correlation reporting.
 
 `scripts/cts_ops.py` now provides a hardened local bridge for MailerLite suppression exports, SurveyOL API snapshots, private weekly send-list/crosswalk generation, and dry-run contact/group sync plans. SurveyOL export download and response snapshots are API-assisted when a SurveyOL API token is available, but SurveyOL Email collector batch sending remains guarded until a documented send endpoint is confirmed.
+
+Operational JSON outputs that gate a risky action use `human_review_required`, `human_review_reason`, and `human_review_next_action` so automations can stop cleanly before imports, external list mutations, newsletter sends, or survey invitations.

@@ -166,6 +166,23 @@ def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def review_fields(required: bool, reason: str = "", next_action: str = "") -> dict[str, Any]:
+    return {
+        "human_review_required": bool(required),
+        "human_review_reason": reason if required else "",
+        "human_review_next_action": next_action if required else "",
+    }
+
+
+def print_review_notice(data: dict[str, Any]) -> None:
+    if data.get("human_review_required"):
+        reason = str(data.get("human_review_reason") or "Review this output before taking the next action.")
+        next_action = str(data.get("human_review_next_action") or "")
+        print(f"Human review required: {reason}")
+        if next_action:
+            print(f"Next action after review: {next_action}")
+
+
 def api_json(
     method: str,
     url: str,
@@ -479,6 +496,11 @@ def cmd_mailerlite_sync_group(args: argparse.Namespace) -> int:
     plan = {
         "generated_at": now_iso(),
         "dry_run": not args.apply,
+        **review_fields(
+            not args.apply,
+            "This is a dry-run MailerLite group sync plan; review counts and contact categories before applying list changes.",
+            "If the plan is correct, re-run the same command with --apply. Correct the send list or suppressions first if anything looks wrong.",
+        ),
         "group_id": args.group_id,
         "send_list": args.send_list,
         "desired_count": len(desired_by_email),
@@ -516,6 +538,7 @@ def cmd_mailerlite_sync_group(args: argparse.Namespace) -> int:
 
     write_json(Path(args.plan_output), plan)
     print(f"Wrote MailerLite group sync plan to {args.plan_output}")
+    print_review_notice(plan)
     if not args.apply:
         print("Dry run only. Re-run with --apply to make API changes.")
     return 0
@@ -606,6 +629,11 @@ def cmd_surveyol_sync_contacts(args: argparse.Namespace) -> int:
     plan = {
         "generated_at": now_iso(),
         "dry_run": not args.apply,
+        **review_fields(
+            not args.apply,
+            "This is a dry-run SurveyOL contact sync plan; review missing contacts before adding them to SurveyOL.",
+            "If the plan is correct, re-run the same command with --apply. Correct the send list first if any contact should not be added.",
+        ),
         "send_list": args.send_list,
         "current_contacts": len(current_by_email),
         "desired_contacts": len(desired),
@@ -625,6 +653,7 @@ def cmd_surveyol_sync_contacts(args: argparse.Namespace) -> int:
             plan["actions"].append({"action": "add_contact", "email": email, "id": result.get("id", "") if isinstance(result, dict) else ""})
     write_json(Path(args.plan_output), plan)
     print(f"Wrote SurveyOL contact sync plan to {args.plan_output}")
+    print_review_notice(plan)
     if not args.apply:
         print("Dry run only. Re-run with --apply to add missing SurveyOL contacts.")
     return 0
@@ -708,6 +737,11 @@ def cmd_build_send_list(args: argparse.Namespace) -> int:
     )
     audit = {
         "generated_at": now_iso(),
+        **review_fields(
+            True,
+            "Review accepted/rejected counts and rejected-record reasons before importing contacts or sending invitations.",
+            "If the audit is acceptable, use the generated send list for SurveyOL contact import and keep the crosswalk private.",
+        ),
         "week": args.week,
         "registry_csv": str(registry_path),
         "field_map": field_map,
@@ -730,6 +764,7 @@ def cmd_build_send_list(args: argparse.Namespace) -> int:
     print(f"Wrote {len(send_rows)} send-list contacts to {send_list_path}")
     print(f"Wrote private crosswalk to {crosswalk_path}")
     print(f"Wrote audit to {audit_path}")
+    print_review_notice(audit)
     return 0
 
 

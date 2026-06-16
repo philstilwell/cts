@@ -134,6 +134,8 @@ Before each weekly newsletter and before each SurveyOL invitation batch:
 
 Use `scripts/cts_ops.py` for the hardened local version of this process: export MailerLite suppressions, build the private SurveyOL send list, write the exact weekly contact crosswalk, and generate dry-run MailerLite/SurveyOL sync plans under `data/private/`. See `CTS_OPERATIONS_HARDENING.md`.
 
+Any generated audit or plan with `human_review_required: true` is a hard stop. Review the stated reason and next action before importing contacts, applying list changes, sending a newsletter, or sending SurveyOL invitations.
+
 ## Minimum Launch Checklist
 
 - SurveyOL survey link works.
@@ -145,6 +147,7 @@ Use `scripts/cts_ops.py` for the hardened local version of this process: export 
 - The `◉ Main topic...` introduction block is styled in SurveyOL: main-topic line bold and enlarged with `X↑` twice, topic name highlighted with `#e0a550` background and `#553e15` text, and response-format line bold in black.
 - SurveyOL Email collector is `Open`, `Anonymous Responses` is `Off`, and any Web Link collector is closed or intentionally excluded from the launch.
 - SurveyOL recipient import comes from `CTS 2026`, excludes do-not-email records, and contains no email-only contacts with missing names.
+- The current weekly send-list audit and any sync plans have been reviewed, and no unresolved `human_review_required: true` output remains for the action about to be taken.
 - A test Email collector export confirms that responses can be joined back to `CTS 2026` by email identity or a stable private join key.
 - The 3 independent live items and 7 participant-nominated ballot items are orthogonal to the weekly topic, non-duplicative, clear, and likely to produce meaningful disagreement or spread.
 - The survey invitation email renders correctly.

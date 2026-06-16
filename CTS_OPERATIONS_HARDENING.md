@@ -8,6 +8,7 @@ This file documents the local operational tooling used by the weekly CTS automat
 - `data/private/` and `.env*` files are ignored by git.
 - The ops CLI does not send SurveyOL invitations or MailerLite campaigns.
 - Commands that can change MailerLite or SurveyOL data default to dry-run plans and require `--apply`.
+- Generated audits and dry-run plans include `human_review_required`, `human_review_reason`, and `human_review_next_action` fields. Treat `human_review_required: true` as a hard stop before imports, list mutations, newsletter sends, or survey invitations.
 - SurveyOL Email collector sending still requires a guarded human/session step unless a documented send endpoint is added later.
 
 ## API Tokens
@@ -77,6 +78,8 @@ data/private/contact-crosswalks/week-003.csv
 data/private/audits/week-003-send-list-audit.json
 ```
 
+Review the audit before using the send list. The audit intentionally sets `human_review_required: true` so the accepted count, rejected count, suppression exclusions, duplicate handling, and missing-name exclusions are checked before contacts are imported or invitations are sent.
+
 ## MailerLite Dry-Run Sync
 
 Create a dry-run group alignment plan before applying anything. The snapshot/sync reads MailerLite group members across active, unsubscribed, unconfirmed, bounced, and junk statuses so suppressed records are not hidden by MailerLite's default active-only group view:
@@ -101,6 +104,8 @@ python3 scripts/cts_ops.py --env-file .env mailerlite-sync-group \
 ```
 
 Do not use `--remove-extra` unless you intentionally want to remove active MailerLite group members who are not in the current weekly send list.
+
+Dry-run sync plans set `human_review_required: true`. Applied plans set it to `false` because the reviewed action has already been executed.
 
 ## SurveyOL API Snapshots
 
