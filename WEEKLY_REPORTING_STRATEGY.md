@@ -106,7 +106,7 @@ The public overview table should use exactly these reader-facing columns:
 - `Item`: item number, short label, and full survey statement.
 - `Mean`: average 0-100 credence score.
 - `IQR Range`: the displayed `Q1-Q3` interquartile interval, with the pop-up explanation used in Week 1. The underlying numeric IQR width may remain available in data as `q3 - q1`.
-- `Doubt/Dogma`: shown as `n:m`, where `n` is the count of non-endpoint responses from 1-99 and `m` is the count of endpoint responses exactly 0 or 100. Display the left/doubt number in yellow and the right/dogma number in red. Include the explanatory pop-up used in Week 1.
+- `Doubt/Dogma`: shown as `n:m`, where `n` is the count of non-endpoint responses from 1-99 and `m` is the count of endpoint responses exactly 0 or 100. Display the left/doubt number in green and the right/dogma number in red. Include the explanatory pop-up used in Week 1.
 - `Distribution`: an observed 10-bin sparkline with light neighbor smoothing, using the shared fixed 0-100 report scale and a visible 100% marker.
 
 Do not include `Median` or `Low / Mid / High` as columns in the overview table. Keep low/middle/high band counts in the public JSON for analysis and fallback rendering, but do not foreground them in the primary report table.

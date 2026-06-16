@@ -1314,7 +1314,7 @@ h3 {
 }
 
 .doubt-dogma-ratio .doubt-count {
-  color: #b77900;
+  color: var(--teal);
 }
 
 .doubt-dogma-ratio .dogma-count {
