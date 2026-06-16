@@ -15,6 +15,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Every week: before any newsletter or survey-invitation send, remove or suppress from both MailerLite and SurveyOL any address that unsubscribed, opted out, bounced, or was marked do-not-email in either system.
 - Every weekly survey remains open for 3 weeks from its first invitation send. Close the SurveyOL collector after the 3-week response window, export the final raw results privately, and regenerate the public report as final.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
+- The Reports page includes a rolling survey control board under the weekly report grid. Any automation that changes a survey's public status on that board should rebuild the static site, commit the changed public files, and push to the remote before reporting the board update as complete.
 
 ## Active Reminders
 
@@ -111,6 +112,7 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 14. Review free-text suggestions for accidental identifiers before using or publishing them.
 15. Publish the report on the primary CTS website and link it from the reports index.
 16. Create or update the report encapsulation for the next newsletter and the top of the next weekly SurveyOL survey.
+17. Update the rolling survey control board on the Reports page when a survey moves to a new public stage, then commit and push the changed site files.
 
 ## Prepare Next Week
 

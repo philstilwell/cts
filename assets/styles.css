@@ -498,6 +498,139 @@ h3 {
   transform: translateY(-2px);
 }
 
+.survey-control-board {
+  padding: 1.45rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--wash);
+}
+
+.section-heading-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.58fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.section-heading-row h2 {
+  margin-top: 0;
+}
+
+.section-heading-row p:not(.section-label) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.control-board-scroll {
+  margin-top: 1.35rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.wp-content .control-board-table {
+  width: 100%;
+  min-width: 940px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.control-board-table th,
+.control-board-table td {
+  padding: 0.82rem 0.78rem;
+  border: 1px solid var(--line);
+  font-size: 0.92rem;
+  line-height: 1.35;
+  vertical-align: middle;
+}
+
+.control-board-table thead th {
+  color: var(--paper);
+  background: var(--teal-dark);
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.control-board-table tbody th {
+  color: var(--teal-dark);
+  font-weight: 800;
+  text-align: left;
+}
+
+.control-board-table th:nth-child(1) {
+  width: 8%;
+}
+
+.control-board-table th:nth-child(2) {
+  width: 17%;
+}
+
+.control-board-table th:nth-child(3),
+.control-board-table th:nth-child(4),
+.control-board-table th:nth-child(5),
+.control-board-table th:nth-child(6),
+.control-board-table th:nth-child(7) {
+  width: 10.5%;
+}
+
+.control-board-table th:nth-child(8) {
+  width: 22.5%;
+}
+
+.control-board-table td:nth-child(n+3):nth-child(-n+7) {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.control-board-table td:last-child {
+  color: var(--muted);
+}
+
+.board-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  min-width: 5.8rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 850;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.board-status.done {
+  color: #0f4c40;
+  background: #dff0ea;
+}
+
+.board-status.active {
+  color: #5b3500;
+  background: #ffe7af;
+}
+
+.board-status.pending {
+  color: #365155;
+  background: #e7eeee;
+}
+
+.board-status.review {
+  color: #7a2e20;
+  background: #f8ddd7;
+}
+
+.control-board-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
 .status-grid,
 .report-grid {
   display: grid;
@@ -1322,6 +1455,7 @@ h3 {
   .latest-report-card,
   .report-meta-grid,
   .report-preview-grid,
+  .section-heading-row,
   .status-grid,
   .report-grid,
   .result-metric-grid,
