@@ -21,7 +21,7 @@ Independent live items and participant-nominated ballot items should be orthogon
 
 ## Weekly Cadence
 
-The regular send rhythm is a Monday heads-up email followed by the actual SurveyOL survey-link email on Thursday. The Monday email names the current topic and previews the next 3 planned general topics; the Thursday survey includes that same preview of upcoming topics inside the survey itself.
+The regular weekly rhythm is Tuesday-centered. Tuesday morning is the report and newsletter window: publish or refresh the report for the survey launched one week earlier, send the MailerLite newsletter to subscribers, and include a short report encapsulation plus a link. Tuesday evening is the new survey launch window: open the SurveyOL Email collector and send the first batch of up to 100 participant invitations. Continue sending up to 100 invitations per day until all eligible participants have been invited. Each weekly survey remains open for three weeks from the first invitation send, after which the collector is closed and the report is regenerated as final.
 
 ## MailerLite Audience Groups
 

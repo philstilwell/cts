@@ -8,11 +8,40 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 ## Weekly Cadence
 
-- Monday: send the heads-up email for the Thursday survey, naming the current CTS-administered topic and previewing the next 3 planned general topics. MailerLite may be used for general announcements and report notices, but the identity-bearing survey invitation should come from the SurveyOL Email collector.
-- Tuesday: finalize the SurveyOL survey, including the 7-item AI-polished participant-nominated ballot and the SurveyOL Email collector settings.
-- Wednesday: test the SurveyOL Email collector invitation path, export shape, last week's results summary and link, and preview of upcoming topics.
-- Thursday: send the actual SurveyOL Email collector invitation.
-- Friday: export results, publish public summary, and prepare next week's participant-vote items.
+- Tuesday morning: publish the first weekly report for the survey launched one week earlier. The first report may be preliminary while responses continue to arrive, but it should clearly state that the survey remains open and will be recalculated as additional responses trickle in.
+- Tuesday morning: send the weekly newsletter to newsletter subscribers after the report is published. Include an encapsulation of the newest report plus a link to the full report.
+- Tuesday evening: launch the new weekly SurveyOL survey and begin sending invitations through the SurveyOL Email collector. Send up to 100 participant invitations per day until all eligible potential participants have been sent that week's invitation.
+- Wednesday through Saturday, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
+- Every week: before any newsletter or survey-invitation send, remove or suppress unsubscribers, SurveyOL opt-outs, MailerLite unsubscribers, bounces, and do-not-email records from all relevant lists.
+- Every weekly survey remains open for 3 weeks from its first invitation send. Close the SurveyOL collector after the 3-week response window, export the final raw results privately, and regenerate the public report as final.
+- Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
+
+## Active Reminders
+
+- Monday afternoon: run the list-hygiene audit before the next newsletter and survey sends.
+- Tuesday morning: publish or refresh the weekly report, create the report encapsulation, update the site, and send or prepare the newsletter.
+- Tuesday morning after the report cycle: check whether any survey has reached the 3-week close date, then close and finalize reports as needed.
+- Tuesday evening: launch the new SurveyOL Email collector survey and send the first invitation batch.
+- Wednesday through Saturday evenings: send the next invitation batch when eligible participants remain uninvited.
+
+These reminders can execute only when the relevant SurveyOL, MailerLite, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
+
+## Report And Newsletter Encapsulation
+
+Each weekly report needs a short encapsulation suitable for reuse in two places:
+
+1. The weekly newsletter sent to MailerLite subscribers.
+2. The top of the next weekly SurveyOL survey.
+
+The encapsulation should be short enough to scan quickly and should include:
+
+- the survey topic;
+- response count and whether the report is preliminary or final;
+- 2-4 major findings or tensions;
+- a link to the full public report;
+- a privacy-safe note that raw respondent identities and raw free-text suggestions are not published.
+
+Newsletter-only subscribers should receive report notices and topic previews, not SurveyOL respondent links unless they are separately approved as survey participants.
 
 ## Build The Survey
 
@@ -30,12 +59,12 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 ## Send The Survey
 
-1. Send the Monday heads-up through the chosen announcement channel, but send the actual Thursday survey invitation through that week's SurveyOL Email collector. For closed tests, use only internal/test contacts.
+1. Send the Tuesday evening survey invitation through that week's SurveyOL Email collector. For closed tests, use only internal/test contacts.
 2. The SurveyOL Email collector must be `Open` with `Anonymous Responses` set to `Off` so exports can include email identity for private matching. Close or do not distribute Web Link collectors unless CTS intentionally wants an unmapped public response channel.
 3. Build the SurveyOL recipient list from the canonical `CTS 2026` participant registry. Include only eligible records with `Name`, `Primary Email Address`, `Participant ID`, and `Email Key`, and exclude records marked `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
 4. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
 5. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
-6. Send one reminder to non-respondents 24-48 hours after the Thursday survey-link email when appropriate. Prefer SurveyOL's non-response tracking so reminders do not go to people who already completed the survey.
+6. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count and stop when the remaining eligible-invitation count reaches zero.
 7. Keep newsletter-only subscribers in the separate `CTS Newsletter` group. Use that group for report notices, topic previews, and general CTS updates; do not send weekly survey links to newsletter-only subscribers.
 8. After each send, reconcile SurveyOL `Opted Out`, bounced, and delivery-problem records back into `CTS 2026` before the next recipient import.
 9. The public newsletter form at `https://christianthoughtsurvey.com/newsletter/` collects email address, name, ministry status, and interest motivation, and should add subscribers only to `CTS Newsletter`.
@@ -58,31 +87,45 @@ Before any full participant send, do one of the following:
 2. Acceptable: delete all closed-test responses from SurveyOL before the public launch, after confirming no authentic responses have arrived.
 3. Fallback: export closed-test responses separately, record their SurveyOL response numbers, start times, and UTM parameters, and exclude them from the private raw export before generating public reports.
 
-For Week 1, closed-test responses `#1` and `#2` were deleted from SurveyOL on June 2, 2026 before public launch. SurveyOL was rechecked on June 3, 2026 after title/text cleanup and still showed no responses so far. Recheck the SurveyOL summary again immediately before the Thursday send.
+For Week 1, closed-test responses `#1` and `#2` were deleted from SurveyOL on June 2, 2026 before public launch. SurveyOL was rechecked on June 3, 2026 after title/text cleanup and still showed no responses so far. Recheck the SurveyOL summary again immediately before each production send.
 
 For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the Email collector was left open with `Anonymous Responses` set to `Off` so private exports can be mapped back to the `CTS 2026` registry.
 
 ## Export And Report
 
-1. Export SurveyOL responses after the response window closes.
-2. Save the private raw export in `data/private/surveyol/week-###.csv`. Do not commit raw exports.
-3. Normalize email addresses and join the private export to the `CTS 2026` participant registry before subgroup or deep analysis. Flag unmatched rows and resolve them before publishing a report.
-4. Save any joined identity-bearing analysis file under `data/private/`. Do not commit joined files, contact crosswalks, names, email addresses, participant IDs, or raw free-text suggestions.
-5. Generate the public summary JSON with `scripts/cts_report_pipeline.py` and the matching `reporting/week-###.config.json`.
-6. Review the generated summary's `quality` section for missing columns, non-numeric values, out-of-range values, unexpectedly low counts, and unexpected unmatched-response counts.
-7. Summarize all 15 live slider items with count, mean, median, and distribution shape, including the S23-style smoothed sparkline series when sample size permits.
-8. Identify key tensions where item-level disagreement is significant.
-9. Suppress or combine subgroup comparisons when counts are too small.
-10. Review free-text suggestions for accidental identifiers before using or publishing them.
-11. Publish the report on the primary CTS website and link it from the reports index.
+1. Publish a preliminary first report on Tuesday morning one week after the first invitation send.
+2. Continue to recalculate the preliminary report as additional responses arrive.
+3. Export SurveyOL responses after the 3-week response window closes.
+4. Save the private raw export in `data/private/surveyol/week-###.csv`. Do not commit raw exports.
+5. Normalize email addresses and join the private export to the `CTS 2026` participant registry before subgroup or deep analysis. Flag unmatched rows and resolve them before publishing a report.
+6. Save any joined identity-bearing analysis file under `data/private/`. Do not commit joined files, contact crosswalks, names, email addresses, participant IDs, or raw free-text suggestions.
+7. Generate the public summary JSON with `scripts/cts_report_pipeline.py` and the matching `reporting/week-###.config.json`.
+8. Review the generated summary's `quality` section for missing columns, non-numeric values, out-of-range values, unexpectedly low counts, and unexpected unmatched-response counts.
+9. Summarize all 15 live slider items with count, mean, median, and distribution shape, including the S23-style smoothed sparkline series when sample size permits.
+10. Identify key tensions where item-level disagreement is significant.
+11. Suppress or combine subgroup comparisons when counts are too small.
+12. Review free-text suggestions for accidental identifiers before using or publishing them.
+13. Publish the report on the primary CTS website and link it from the reports index.
+14. Create or update the report encapsulation for the next newsletter and the top of the next weekly SurveyOL survey.
 
 ## Prepare Next Week
 
 1. Rank the participant-nominated ballot results.
 2. Select the top 3 eligible ranked ballot items for the next week's live participant-vote-determined questions.
 3. Clean new text-box nominations into ballot-ready wording using the AI-assisted CTS review rubric: clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance.
-4. Update the preview of upcoming topics from the topic bank before the Monday heads-up email.
+4. Update the preview of upcoming topics from the topic bank before the Tuesday report/newsletter cycle and the Tuesday evening survey launch.
 5. Save the next survey draft before sending any email.
+
+## Weekly List Hygiene
+
+Before each weekly newsletter and before each SurveyOL invitation batch:
+
+1. Export or inspect MailerLite unsubscribers, bounces, and suppression records.
+2. Export or inspect SurveyOL opted-out, bounced, and delivery-problem records.
+3. Update the canonical `CTS 2026` participant registry so suppressed participants are excluded from future sends.
+4. Update SurveyOL recipient lists so unsubscribed or opted-out contacts are not reimported.
+5. Keep newsletter-only subscribers, survey participants, and do-not-email records conceptually separate.
+6. Record the reconciliation date and source of each suppression update in private operational notes or the participant registry.
 
 ## Minimum Launch Checklist
 

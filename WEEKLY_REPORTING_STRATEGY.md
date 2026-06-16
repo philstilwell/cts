@@ -553,4 +553,4 @@ Methods And Data
 5. Suppress small subgroup reporting aggressively.
 6. Use word clouds sparingly and only as a supplement to coded themes or nomination summaries.
 7. Build the first interactive report around the 15 live credence-slider items before adding more elaborate features.
-8. Keep report production simple enough to publish on Friday without heroics.
+8. Keep report production simple enough to publish or refresh during the Tuesday morning report cycle without heroics.

@@ -8,7 +8,7 @@ SurveyOL respondent link: store in private operational notes. Do not commit live
 
 SurveyOL design/preview GUID: store in private operational notes. Do not commit SurveyOL design URLs or GUIDs to the public repository.
 
-Week 1 send cadence: Monday heads-up email, Thursday SurveyOL survey-link email.
+Week 1 historical send cadence: Monday heads-up email, Thursday SurveyOL survey-link email. The canonical 2026 cadence is now Tuesday morning reports/newsletters and Tuesday evening SurveyOL survey launches.
 
 Default live-item response format:
 

@@ -40,9 +40,9 @@ Shared email design:
 - Logo source: https://christianthoughtsurvey.com/assets/cts-logo.png
 - If MailerLite does not handle the remote image cleanly, upload the logo into MailerLite and use the uploaded image block instead.
 
-## Email 1: Heads-Up
+## Email 1: Weekly Newsletter / Report Notice
 
-Timing: Monday before the Thursday survey-link email.
+Timing: Tuesday morning after the newest weekly report is published or refreshed.
 
 Subject:
 
@@ -64,7 +64,7 @@ Our first weekly survey will focus on Divorce and Remarriage. It will include 12
 
 Looking ahead, the next 3 planned CTS-administered topics are Pornography and the Church, Pastoral Authority and Accountability, and Women in Church Leadership.
 
-You will receive the first survey link on Thursday in a separate email. Participation is optional, and you can unsubscribe from future CTS emails at any time.
+You will receive the first survey link on Tuesday evening in a separate SurveyOL invitation email. Participation is optional, and you can unsubscribe from future CTS emails at any time.
 
 Thank you,
 
@@ -73,7 +73,7 @@ Christian Thought Survey
 
 ## Email 2: Survey Link
 
-Timing: Thursday survey open day.
+Timing: Tuesday evening survey launch. Send through the SurveyOL Email collector, up to 100 participant invitations per day until all eligible potential participants have been invited.
 
 Subject:
 
@@ -101,7 +101,7 @@ Christian Thought Survey
 
 ## Email 3: Reminder
 
-Timing: 24-48 hours after the Thursday survey-link email, only if appropriate.
+Timing: 24-48 hours after the Tuesday survey-link email, only if appropriate.
 
 Subject:
 
