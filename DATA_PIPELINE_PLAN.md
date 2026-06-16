@@ -84,11 +84,12 @@ For each of the 15 live slider items:
 - key-tension flag and reasons
 - simple histogram counts
 - S23-style half-boundary bucket counts
-- S23-style smoothed percentage series for sparkline charts, capped at 100 for public display
+- observed 10-bin display percentage series with light neighbor smoothing for public sparkline charts
+- S23-style smoothed percentage series retained for reference/audit, capped at 100 if rendered
 
 The script counts free-text suggestions but does not output raw suggestion text.
 
-Canonical public reports should render the 15-item overview as `Item`, `Mean`, `IQR`, `Doubt/Dogma`, and `Distribution`. The distribution column should use normalized smoothed 10-bin sparklines with a shared fixed 0-100 scale, a visible 100% marker at the top of the plot area, a plain white chart field, and no auxiliary grid lines. Keep median and low/middle/high band counts available in the JSON for analysis, but do not use them as primary result-display columns.
+Canonical public reports should render the 15-item overview as `Item`, `Mean`, `IQR`, `Doubt/Dogma`, and `Distribution`. The distribution column should use observed 10-bin sparklines with light neighbor smoothing, a shared fixed 0-100 scale, a visible 100% marker at the top of the plot area, a plain white chart field, and no auxiliary grid lines. Keep median and low/middle/high band counts available in the JSON for analysis, but do not use them as primary result-display columns.
 
 ## Privacy Rules
 

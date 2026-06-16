@@ -14,7 +14,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "cts-weekly-summary-v0.1"
+      "enum": ["cts-weekly-summary-v0.2", "cts-weekly-summary-v0.2-preliminary"]
     },
     "generated_at": {
       "type": "string"
@@ -89,7 +89,7 @@
           },
           "distribution": {
             "type": "object",
-            "required": ["cut_points", "simple_counts", "s23_bucket_counts", "s23_smoothed_percentages"],
+            "required": ["cut_points", "simple_counts", "display_percentages", "s23_bucket_counts", "s23_smoothed_percentages"],
             "properties": {
               "cut_points": {
                 "type": "array",
@@ -98,6 +98,10 @@
               "simple_counts": {
                 "type": "array",
                 "items": {"type": "integer"}
+              },
+              "display_percentages": {
+                "type": "array",
+                "items": {"type": "number", "minimum": 0, "maximum": 100}
               },
               "s23_bucket_counts": {
                 "type": "array",

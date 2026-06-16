@@ -14,7 +14,7 @@ import sys
 from typing import Any
 
 
-SCHEMA_VERSION = "cts-weekly-summary-v0.1"
+SCHEMA_VERSION = "cts-weekly-summary-v0.2"
 CUT_POINTS = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 
@@ -146,6 +146,16 @@ def simple_histogram_counts(values: list[float]) -> list[int]:
     return counts
 
 
+def display_distribution_percentages(values: list[float]) -> list[float]:
+    """Create the public sparkline series from observed bins with light smoothing."""
+    if not values:
+        return [0.0] * 10
+    counts = simple_histogram_counts(values)
+    padded = [0, *counts, 0]
+    smoothed = [((padded[index] * 0.03 + padded[index + 1] + padded[index + 2] * 0.03) / len(values)) * 100 for index in range(10)]
+    return [min(100.0, value) for value in smoothed]
+
+
 def doubt_dogma(values: list[float]) -> dict[str, Any]:
     exact_zero_count = count_equal(values, 0)
     exact_hundred_count = count_equal(values, 100)
@@ -232,6 +242,7 @@ def summarize_item(
         "distribution": {
             "cut_points": CUT_POINTS,
             "simple_counts": simple_histogram_counts(values),
+            "display_percentages": [round(value, 3) for value in display_distribution_percentages(values)],
             "s23_bucket_counts": [round(value, 3) for value in s23_bucket_counts(values)],
             "s23_smoothed_percentages": [round(value, 3) for value in s23_smoothed_percentages(values)],
         },

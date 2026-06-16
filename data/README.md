@@ -35,9 +35,9 @@ python3 scripts/cts_report_pipeline.py summarize \
   --output data/public/week-001-summary.json
 ```
 
-The generated summary should contain aggregate slider statistics, endpoint counts for Doubt/Dogma reporting, and normalized distribution series only. It must not contain names, email addresses, participant IDs, or raw free-text suggestions.
+The generated summary should contain aggregate slider statistics, endpoint counts for Doubt/Dogma reporting, and public display distribution series only. It must not contain names, email addresses, participant IDs, or raw free-text suggestions.
 
-Canonical public reports use the summary to display `Item`, `Mean`, `IQR`, `Doubt/Dogma`, and a smoothed 10-bin distribution sparkline. Median and low/middle/high band counts may remain in the JSON for analysis and fallback rendering, but they are not primary report columns.
+Canonical public reports use the summary to display `Item`, `Mean`, `IQR`, `Doubt/Dogma`, and an observed 10-bin distribution sparkline with light neighbor smoothing. Median and low/middle/high band counts may remain in the JSON for analysis and fallback rendering, but they are not primary report columns.
 
 ## Dry Run With Synthetic Data
 

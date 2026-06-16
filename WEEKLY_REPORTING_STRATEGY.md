@@ -107,7 +107,7 @@ The public overview table should use exactly these reader-facing columns:
 - `Mean`: average 0-100 credence score.
 - `IQR`: interquartile range, with the pop-up explanation used in Week 1.
 - `Doubt/Dogma`: shown as `n:m`, where `n` is the count of non-endpoint responses from 1-99 and `m` is the count of endpoint responses exactly 0 or 100. Include the explanatory pop-up used in Week 1.
-- `Distribution`: a normalized smoothed 10-bin sparkline using the shared report scale and a visible 100% marker.
+- `Distribution`: an observed 10-bin sparkline with light neighbor smoothing, using the shared fixed 0-100 report scale and a visible 100% marker.
 
 Do not include `Median` or `Low / Mid / High` as columns in the overview table. Keep low/middle/high band counts in the public JSON for analysis and fallback rendering, but do not foreground them in the primary report table.
 
@@ -117,18 +117,19 @@ Each item card should show the same visual grammar as Week 1:
 
 - Four compact stat boxes: `Mean`, `IQR`, `Doubt/Dogma`, and `SD`.
 - No `Median` stat box.
-- A left-side label reading `Smoothed 10-bin distribution`.
+- A left-side label reading `Observed 10-bin distribution`.
 - A right-side 10-bin sparkline on a plain white field.
 - A 100% guide line and fully visible `100%` label.
 - No appended `low X, middle Y, high Z; n=...` legend text.
 
 ##### Sparkline Rendering
 
-The public sparkline is a display of the S23-smoothed distribution series, not raw response values.
+The public sparkline is a display of observed 10-bin response percentages with light neighbor smoothing. The older S23-smoothed series may remain in the JSON for audit/history, but it should not drive the public bar heights because endpoint padding can visually overstate endpoint-heavy items.
 
 - Use 10 bins: 0-10, 10-20, ..., 90-100.
-- Use the S23 half-boundary bucket logic, endpoint padding, and 3% adjacent-bucket smoothing.
-- Cap public display percentages at 100 after smoothing.
+- Count observed responses directly into the 10 bins, with 90-100 including exact 100.
+- Add only 3% of each natural neighboring bin to the plotted value. Do not pad endpoints.
+- Store this reader-facing series as `distribution.display_percentages`.
 - Use a fixed public display scale of 0-100 after capping, with no visual headroom above 100.
 - Draw the 100% guide line at the top of the plot area so a true 100% bin reaches the marker.
 - Use a plain white chart field without background tint or auxiliary grid lines.
@@ -248,9 +249,9 @@ What it does:
 - `"ymax",120` forces a shared vertical scale. This is important because it lets item sparklines be compared visually. Without a shared `ymax`, every sparkline auto-scales and weak patterns can look as strong as major patterns.
 - `"color","charcoal"` sets the column color. A hex value such as `"#334155"` can be used if a named color is inconsistent.
 
-### Preserve The Distribution-Series Formula
+### Preserve The Historical S23 Distribution-Series Formula
 
-The `Filt` tab in the old `S23 — CTS` workbook uses this formula architecture for item column `AL`:
+The `Filt` tab in the old `S23 — CTS` workbook uses this formula architecture for item column `AL`. Preserve it as a documented reference and possible analytical helper, but use the observed-smoothed `display_percentages` series for public report bars.
 
 ```gs
 AL17 = COUNT(AL33:AL)
@@ -296,16 +297,16 @@ AL26 = ((AL13*0.03+AL14+AL15*0.03)/AL$17)*100
 AL27 = ((AL14*0.03+AL15+AL16*0.03)/AL$17)*100
 ```
 
-Why this is worth preserving:
+Why this is worth preserving as a reference:
 
 - Exact boundary responses such as 10, 20, 50, and 100 are handled gracefully instead of being forced awkwardly into one bucket.
 - Endpoint padding keeps the first and last visible buckets from behaving differently just because they have only one natural neighbor.
 - The 3% adjacent-bucket smoothing keeps the mini-chart readable without erasing strong distribution features.
-- Public sparkline display values are capped at 100% after smoothing, because endpoint-heavy items can otherwise exceed 100% visually even though no bin can represent more than the full response count.
+- S23 display values must be capped at 100% if rendered, because endpoint-heavy items can otherwise exceed 100% visually even though no bin can represent more than the full response count.
 - The values become percentages, so the shape can be compared across items with different response counts.
 - The method preserves the "pulse" of all credences much better than a mean or median alone.
 
-For revived CTS reports, keep this idea but avoid hardcoding `120` unless that value fits the current response count. Use a shared report-level maximum instead:
+For revived CTS public reports, keep the basic insight that the sparkline displays a prepared distribution series, but make that series the endpoint-aware observed-smoothed `display_percentages` field. Use a shared report-level maximum:
 
 ```gs
 =SPARKLINE(AL18:AL27,{"charttype","column";"ymin",0;"ymax",$B$2;"color","#334155"})
@@ -317,17 +318,18 @@ Where `$B$2` contains the fixed public display maximum for the whole report:
 =100
 ```
 
-This gives all 15 item sparklines the same scale and makes a true 100% bin reach the 100% marker. In current CTS public reports, any smoothed display values above 100 should be capped before rendering.
+This gives all 15 item sparklines the same scale and makes a true 100% bin reach the 100% marker.
 
-When creating the revived CTS reporting sheet, reuse the recovered S23 formula architecture rather than replacing it with a plain bucket formula. If SurveyOL exports require a different table shape, adapt the same principles: 10-point buckets, 50/50 handling of exact boundary responses, endpoint padding, and 3% adjacent-bucket smoothing. A direct generic formula is possible, but it is less valuable than the honed S23 approach and harder to audit:
+When creating the revived CTS reporting sheet, keep the recovered S23 formula architecture available as a reference, but build the public `display_percentages` from direct 10-point observed buckets plus 3% natural-neighbor smoothing. A direct generic formula is possible:
 
 ```gs
-=SPARKLINE(
-  MAP(
-    SEQUENCE(10,1,0,10),
-    LAMBDA(lo,COUNTIFS(Responses!B2:B,">="&lo,Responses!B2:B,IF(lo=90,"<=100","<"&lo+10)))
-  ),
-  {"charttype","column";"ymin",0;"ymax",$B$2;"color","#334155"}
+=LET(
+  raw,FILTER(Responses!B2:B,ISNUMBER(Responses!B2:B)),
+  n,COUNT(raw),
+  bins,MAP(SEQUENCE(10,1,0,10),LAMBDA(lo,COUNTIFS(raw,">="&lo,raw,IF(lo=90,"<=100","<"&lo+10)))),
+  padded,HSTACK(0,bins,0),
+  display,MAP(SEQUENCE(10),LAMBDA(i,((INDEX(padded,1,i)*0.03+INDEX(padded,1,i+1)+INDEX(padded,1,i+2)*0.03)/n)*100)),
+  SPARKLINE(display,{"charttype","column";"ymin",0;"ymax",$B$2;"color","#334155"})
 )
 ```
 
@@ -345,7 +347,7 @@ Recommended cut points for 0-100 credence sliders:
 - 90
 - 100
 
-Exact cut-point responses should be split between neighboring buckets as in the S23 workbook.
+For public display, exact cut-point responses should stay in the observed bin where the survey value naturally lands; exact 100 belongs in the 90-100 bin. Boundary splitting belongs only to the archived S23 reference method.
 
 Use the sparkline in public results when there is enough data to make the distribution meaningful. Recommended minimums:
 

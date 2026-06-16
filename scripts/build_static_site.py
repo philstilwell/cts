@@ -16,6 +16,7 @@ SITE_DESCRIPTION = (
     "participant-voted questions, and responsible data releases."
 )
 SITE_URL = "https://christianthoughtsurvey.com"
+CSS_VERSION = "20260616-sparkline-display"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
 UPDATED = "June 16, 2026"
 SITEMAP_LASTMOD = "2026-06-16"
@@ -326,7 +327,7 @@ PAGES = [
     </section>
     <section class="report-card">
       <h3>Distribution visuals</h3>
-      <p>Compact smoothed 10-bin sparklines for every credence item, using a shared fixed 0-100 scale, a 100% guide line, and capped display percentages when sample size permits.</p>
+      <p>Compact observed 10-bin sparklines for every credence item, using light neighbor smoothing, a shared fixed 0-100 scale, and a 100% guide line when sample size permits.</p>
     </section>
     <section class="report-card">
       <h3>Correlations and scatterplots</h3>
@@ -848,7 +849,7 @@ def render_head(page: Page, prefix: str) -> str:
   <meta name="twitter:image" content="{OG_IMAGE}">
   <meta name="twitter:image:alt" content="{OG_IMAGE_ALT}">
   <link rel="icon" href="{prefix}assets/cts-logo.png">
-  <link rel="stylesheet" href="{prefix}assets/styles.css">
+  <link rel="stylesheet" href="{prefix}assets/styles.css?v={CSS_VERSION}">
   {CLOUDFLARE_ANALYTICS}{structured_data}{extra_head}
 </head>"""
 

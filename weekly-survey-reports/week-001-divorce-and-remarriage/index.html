@@ -25,7 +25,7 @@
   <meta name="twitter:image" content="https://christianthoughtsurvey.com/assets/cts-research-overview.png">
   <meta name="twitter:image:alt" content="Christian Thought Survey research overview graphic">
   <link rel="icon" href="../../assets/cts-logo.png">
-  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/styles.css?v=20260616-sparkline-display">
   <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b86c3e7a273f47648ae70f08866f9ec5"}'></script><!-- End Cloudflare Web Analytics -->
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://christianthoughtsurvey.com/#organization","name":"Christian Thought Survey","url":"https://christianthoughtsurvey.com","logo":{"@type":"ImageObject","url":"https://christianthoughtsurvey.com/assets/cts-logo.png"},"sameAs":["https://christianthoughtsurvey.wordpress.com"]},{"@type":"WebSite","@id":"https://christianthoughtsurvey.com/#website","url":"https://christianthoughtsurvey.com","name":"Christian Thought Survey","description":"Weekly Christian research reports for ministers, with credence-slider surveys, participant-voted questions, and responsible data releases.","publisher":{"@id":"https://christianthoughtsurvey.com/#organization"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/#webpage","url":"https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/","name":"Week 1 Preliminary Results: Divorce and Remarriage","description":"Preliminary Week 1 Christian Thought Survey results on Divorce and Remarriage, including slider distributions, key tensions, ballot outcomes, and privacy-safe data notes.","isPartOf":{"@id":"https://christianthoughtsurvey.com/#website"},"publisher":{"@id":"https://christianthoughtsurvey.com/#organization"},"image":"https://christianthoughtsurvey.com/assets/cts-research-overview.png","primaryImageOfPage":{"@type":"ImageObject","url":"https://christianthoughtsurvey.com/assets/cts-research-overview.png","width":1600,"height":900,"caption":"Christian Thought Survey research overview graphic"},"dateModified":"2026-06-16","breadcrumb":{"@id":"https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://christianthoughtsurvey.com/"},{"@type":"ListItem","position":2,"name":"Weekly Survey Reports","item":"https://christianthoughtsurvey.com/weekly-survey-reports/"},{"@type":"ListItem","position":3,"name":"Week 1 Preliminary Results: Divorce and Remarriage","item":"https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/"}]}]}</script>
 </head>
@@ -132,7 +132,7 @@
   <section class="report-section" aria-labelledby="overview-heading">
     <h2 id="overview-heading">All 15 Slider Items At A Glance</h2>
     <p>The table uses the CTS 0-100 credence scale: 0 means strong disagreement, 50 means uncertain or mixed, and 100 means strong agreement.</p>
-    <p>The distribution column uses smoothed 10-bin sparklines, scaled consistently on a fixed 0-100 public display scale. The 100% guide line marks the top of that scale. The Doubt/Dogma ratio is shown as non-endpoint responses to endpoint responses.</p>
+    <p>The distribution column uses observed 10-bin sparklines with light neighbor smoothing, scaled consistently on a fixed 0-100 public display scale. The 100% guide line marks the top of that scale. The Doubt/Dogma ratio is shown as non-endpoint responses to endpoint responses.</p>
     <figure class="result-table-figure">
       <table class="results-table" id="item-overview-table">
         <thead>
@@ -281,7 +281,7 @@
       };
 
       const sparklineValues = (item) => {
-        const values = item.distribution && item.distribution.s23_smoothed_percentages;
+        const values = item.distribution && (item.distribution.display_percentages || item.distribution.s23_smoothed_percentages);
         if (!Array.isArray(values) || values.length !== 10) return null;
         return values.map((value) => Math.max(0, Math.min(100, Number(value) || 0)));
       };
@@ -327,7 +327,7 @@
         chart.setAttribute("role", "img");
         chart.setAttribute(
           "aria-label",
-          `Smoothed 10-bin distribution for Q${item.number}; 100 percent guide line shown at the top of the fixed 0 to 100 display scale: ${values.map((value, index) => `${sparklineBinLabel(item, index)} ${formatPercent(value)}%`).join("; ")}`
+          `Observed 10-bin distribution with light neighbor smoothing for Q${item.number}; 100 percent guide line shown at the top of the fixed 0 to 100 display scale: ${values.map((value, index) => `${sparklineBinLabel(item, index)} ${formatPercent(value)}%`).join("; ")}`
         );
 
         values.forEach((value, index) => {
@@ -457,7 +457,7 @@
           barWrap.className = "sparkline-wrap";
           const legend = document.createElement("p");
           legend.className = "sparkline-legend";
-          legend.textContent = "Smoothed 10-bin distribution";
+          legend.textContent = "Observed 10-bin distribution";
           barWrap.appendChild(legend);
           barWrap.appendChild(createSparkline(item, scaleMax));
 
