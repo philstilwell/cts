@@ -65,14 +65,16 @@ Newsletter-only subscribers should receive report notices and topic previews, no
 1. Before sending the Tuesday evening survey invitation, confirm the placeholder public report page exists, is linked from the reports index, and has been pushed to GitHub Pages. For closed tests, use only internal/test contacts.
 2. The SurveyOL Email collector must be `Open` with `Anonymous Responses` set to `Off` so exports can include email identity for private matching. Close or do not distribute Web Link collectors unless CTS intentionally wants an unmapped public response channel.
 3. Build the SurveyOL recipient list from the canonical `CTS 2026` participant registry. Include only eligible records with `Name`, `Primary Email Address`, `Participant ID`, and `Email Key`, and exclude records marked `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
-4. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
-5. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
-6. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count and stop when the remaining eligible-invitation count reaches zero.
-7. Keep newsletter-only subscribers in the separate `CTS Newsletter` group. Use that group for report notices, topic previews, and general CTS updates; do not send weekly survey links to newsletter-only subscribers.
-8. After each send, reconcile SurveyOL `Opted Out`, bounced, and delivery-problem records back into `CTS 2026`, MailerLite, and SurveyOL before the next recipient import. An unsubscribe, opt-out, bounce, or do-not-email record in either SurveyOL or MailerLite is a global CTS email suppression for both systems.
-9. The public newsletter form at `https://christianthoughtsurvey.com/newsletter/` collects email address, name, ministry status, and interest motivation, and should add subscribers only to `CTS Newsletter`.
-10. The newsletter double opt-in thank-you page should redirect to `https://christianthoughtsurvey.com/email-confirmation/`.
-11. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
+4. Audit the exact CSV that will be imported or used for recipient targeting with `scripts/cts_ops.py audit-email-duplicates --fail-on-duplicates`. Any duplicate normalized email address is a hard stop until corrected.
+5. Export or inspect the live SurveyOL contact table before each invitation batch. If any SurveyOL contact email appears more than once, stop sending until the extra contact records are merged or deleted.
+6. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
+7. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
+8. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count and stop when the remaining eligible-invitation count reaches zero.
+9. Keep newsletter-only subscribers in the separate `CTS Newsletter` group. Use that group for report notices, topic previews, and general CTS updates; do not send weekly survey links to newsletter-only subscribers.
+10. After each send, reconcile SurveyOL `Opted Out`, bounced, and delivery-problem records back into `CTS 2026`, MailerLite, and SurveyOL before the next recipient import. An unsubscribe, opt-out, bounce, or do-not-email record in either SurveyOL or MailerLite is a global CTS email suppression for both systems.
+11. The public newsletter form at `https://christianthoughtsurvey.com/newsletter/` collects email address, name, ministry status, and interest motivation, and should add subscribers only to `CTS Newsletter`.
+12. The newsletter double opt-in thank-you page should redirect to `https://christianthoughtsurvey.com/email-confirmation/`.
+13. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
 
 ## Participant Profile Intake
 
@@ -149,6 +151,7 @@ Any generated audit or plan with `human_review_required: true` is a hard stop. R
 - The `◉ Main topic...` introduction block is styled in SurveyOL: main-topic line bold and enlarged with `X↑` twice, topic name highlighted with `#e0a550` background and `#553e15` text, and response-format line bold in black.
 - SurveyOL Email collector is `Open`, `Anonymous Responses` is `Off`, and any Web Link collector is closed or intentionally excluded from the launch.
 - SurveyOL recipient import comes from `CTS 2026`, excludes do-not-email records, and contains no email-only contacts with missing names.
+- The exact SurveyOL recipient CSV and the live SurveyOL contact table have both passed duplicate-email checks.
 - The current weekly send-list audit and any sync plans have been reviewed, and no unresolved `human_review_required: true` output remains for the action about to be taken.
 - A test Email collector export confirms that responses can be joined back to `CTS 2026` by email identity or a stable private join key.
 - The 3 independent live items and 7 participant-nominated ballot items are orthogonal to the weekly topic, non-duplicative, clear, and likely to produce meaningful disagreement or spread.

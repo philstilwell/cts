@@ -47,8 +47,11 @@ The send-list builder looks for flexible header names, but the preferred columns
 - `Email Key`
 - `Do Not Email?`
 - `Friendly Outreach List`
+- `2026 Outreach Status`
 
 Rows with missing names are excluded automatically. This protects the rule that we do not upload email addresses with no accompanying names.
+
+The send-list builder also treats `2026 Outreach Status` values containing terms such as `hold`, `paused`, `suppressed`, `opted out`, `unsubscribed`, `bounced`, or `complaint` as exclusions. Use that field for temporary operational holds that should block future sends without marking the participant as a permanent `Do Not Email?` record.
 
 ## Monday Hygiene Flow
 
@@ -80,6 +83,17 @@ data/private/audits/week-003-send-list-audit.json
 ```
 
 Review the audit before using the send list. The audit intentionally sets `human_review_required: true` so the accepted count, rejected count, suppression exclusions, duplicate handling, and missing-name exclusions are checked before contacts are imported or invitations are sent.
+
+Before importing any generated or manually edited contact CSV, run the duplicate-email audit and treat any duplicate as a hard stop:
+
+```bash
+python3 scripts/cts_ops.py audit-email-duplicates \
+  --csv data/private/send-lists/week-003-surveyol-contacts.csv \
+  --output data/private/audits/week-003-send-list-duplicate-audit.json \
+  --fail-on-duplicates
+```
+
+The audit normalizes email addresses by trimming whitespace and lowercasing. It reports every CSV row sharing the same normalized email so the list can be corrected before SurveyOL sees it.
 
 ## MailerLite Dry-Run Sync
 
@@ -134,6 +148,16 @@ python3 scripts/cts_ops.py --env-file .env surveyol-snapshot \
 
 The snapshot also stores survey pages and page-level questions so a preflight can compare the live SurveyOL structure against the weekly template.
 
+Export the live SurveyOL contact table and audit it for duplicate email records before importing recipients or sending another invitation batch:
+
+```bash
+python3 scripts/cts_ops.py --env-file .env surveyol-contacts \
+  --output data/private/surveyol-api/surveyol-contacts.csv \
+  --audit-output data/private/audits/surveyol-contact-duplicate-audit.json
+```
+
+If `duplicate_email_count` is greater than `0`, stop all SurveyOL invitation sends until the extra SurveyOL contact records are merged or deleted and the audit is clean.
+
 Sync missing SurveyOL contacts from a private send list with a dry-run first:
 
 ```bash
@@ -141,6 +165,8 @@ python3 scripts/cts_ops.py --env-file .env surveyol-sync-contacts \
   --send-list data/private/send-lists/week-003-surveyol-contacts.csv \
   --plan-output data/private/audits/week-003-surveyol-contact-plan.json
 ```
+
+The sync plan now checks both the incoming send list and the existing SurveyOL contacts for duplicate normalized emails. If duplicates are present, `duplicate_blockers` is populated, `human_review_required` remains `true`, and `--apply` is blocked.
 
 Apply only after review:
 

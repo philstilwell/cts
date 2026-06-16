@@ -16,7 +16,7 @@ SITE_DESCRIPTION = (
     "participant-voted questions, and responsible data releases."
 )
 SITE_URL = "https://christianthoughtsurvey.com"
-CSS_VERSION = "20260616-survey-control-board"
+CSS_VERSION = "20260616-status-board-audit"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
 UPDATED = "June 16, 2026"
 SITEMAP_LASTMOD = "2026-06-16"
@@ -260,50 +260,46 @@ PAGES = [
   <section class="survey-control-board" aria-labelledby="survey-control-heading">
     <div class="section-heading-row">
       <div>
-        <p class="section-label">Operational status</p>
-        <h2 id="survey-control-heading">Rolling survey control board</h2>
+        <p class="section-label">Survey status</p>
+        <h2 id="survey-control-heading">Weekly survey status</h2>
       </div>
-      <p>This board tracks each weekly survey across the same recurring stages so readers can see whether a survey is drafting, fielding, reporting, refreshing, or finalizing. Internal files, respondent identities, and private review notes remain unpublished.</p>
+      <p>This board gives readers a public progress snapshot for each weekly survey: what is open now, what has already been reported, and when to expect the next public update. Participant identities and raw response files are not published.</p>
     </div>
-    <div class="control-board-scroll" role="region" aria-label="Rolling weekly survey status board" tabindex="0">
+    <div class="control-board-scroll" role="region" aria-label="Weekly survey public status board" tabindex="0">
       <table class="control-board-table">
         <thead>
           <tr>
             <th scope="col">Survey</th>
             <th scope="col">Topic</th>
-            <th scope="col">Draft</th>
-            <th scope="col">Placeholder</th>
-            <th scope="col">Launch / Sends</th>
-            <th scope="col">First Report</th>
-            <th scope="col">Refresh / Close</th>
-            <th scope="col">Next Action</th>
+            <th scope="col">Public Stage</th>
+            <th scope="col">Invitations</th>
+            <th scope="col">Report Status</th>
+            <th scope="col">Key Date</th>
+            <th scope="col">Next Public Update</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row"><a href="{week_2_report_url}">Week 2</a></th>
             <td>Pornography and the Church</td>
-            <td><span class="board-status done">Ready</span></td>
-            <td><span class="board-status done">Published</span></td>
-            <td><span class="board-status active">Fielding</span></td>
-            <td><span class="board-status pending">Scheduled</span></td>
-            <td><span class="board-status pending">Pending</span></td>
-            <td>Continue invitation batches and prepare the first Tuesday report cycle.</td>
+            <td><span class="board-status active">Survey open</span></td>
+            <td>Daily email batches are underway.</td>
+            <td><span class="board-status pending">First report pending</span></td>
+            <td>First report: June 23, 2026. Final close target: July 7, 2026.</td>
+            <td>The first preliminary report is scheduled for the Tuesday morning report cycle.</td>
           </tr>
           <tr>
             <th scope="row"><a href="{week_1_report_url}">Week 1</a></th>
             <td>Divorce and Remarriage</td>
-            <td><span class="board-status done">Done</span></td>
-            <td><span class="board-status done">Published</span></td>
-            <td><span class="board-status done">Invited</span></td>
-            <td><span class="board-status done">Posted</span></td>
-            <td><span class="board-status active">Refreshing</span></td>
-            <td>Refresh each Tuesday morning until the three-week close and final export.</td>
+            <td><span class="board-status active">Preliminary</span></td>
+            <td>409 invitations sent.</td>
+            <td><span class="board-status done">Posted</span> 33 complete responses as of June 16.</td>
+            <td>Last updated: June 16, 2026.</td>
+            <td>The report will refresh each Tuesday morning while the survey remains open.</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="control-board-note"><strong>Update rule:</strong> whenever an automation changes this board, it should commit and push the Reports page update so the public status reflects the latest completed operation.</p>
   </section>
 
   <details class="accordion-block">

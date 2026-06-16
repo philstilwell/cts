@@ -12,6 +12,7 @@ The commands in this file are intentionally conservative:
 from __future__ import annotations
 
 import argparse
+from collections import defaultdict
 import csv
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -66,6 +67,28 @@ FRIENDLY_FIELDS = (
     "Friendly Outreach List?",
     "Friendly Outreach List = Yes",
     "Friendly?",
+)
+OUTREACH_STATUS_FIELDS = (
+    "2026 Outreach Status",
+    "Outreach Status",
+    "Email Status",
+    "Survey Outreach Status",
+)
+OUTREACH_HOLD_TERMS = (
+    "hold",
+    "pause",
+    "paused",
+    "suppress",
+    "suppressed",
+    "do not email",
+    "do-not-email",
+    "opt out",
+    "opted out",
+    "unsubscribe",
+    "unsubscribed",
+    "bounce",
+    "bounced",
+    "complaint",
 )
 
 
@@ -123,6 +146,13 @@ def truthy(value: str | None) -> bool:
     return value.strip().lower() in {"1", "true", "yes", "y", "x", "do not email", "suppressed"}
 
 
+def outreach_hold(value: str | None) -> bool:
+    if value is None:
+        return False
+    normalized = value.strip().lower()
+    return any(term in normalized for term in OUTREACH_HOLD_TERMS)
+
+
 def normalize_email(value: str | None) -> str:
     if value is None:
         return ""
@@ -148,6 +178,17 @@ def read_csv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
     return headers, rows
 
 
+def require_email_field(headers: list[str], path: Path, explicit_field: str = "") -> str:
+    if explicit_field:
+        if explicit_field not in headers:
+            raise SystemExit(f"{path} does not contain requested email column {explicit_field!r}. Headers: {headers}")
+        return explicit_field
+    email_field = find_field(headers, EMAIL_FIELDS)
+    if not email_field:
+        raise SystemExit(f"Could not find an email column in {path}. Headers: {headers}")
+    return email_field
+
+
 def write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
@@ -164,6 +205,90 @@ def write_json(path: Path, data: Any) -> None:
 
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def csv_duplicate_email_report(
+    path: Path,
+    explicit_email_field: str = "",
+    max_duplicates: int = 200,
+) -> dict[str, Any]:
+    headers, rows = read_csv(path)
+    email_field = require_email_field(headers, path, explicit_email_field)
+    name_field = find_field(headers, NAME_FIELDS)
+    id_field = find_field(headers, ["id", "ID", "Contact ID", "contact_id", *PARTICIPANT_ID_FIELDS])
+    source_row_field = find_field(headers, ["source_row", "Source Row", "Source XL Row"])
+    groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for index, row in enumerate(rows, start=2):
+        email = normalize_email(row.get(email_field))
+        if not email:
+            continue
+        detail = {
+            "csv_row": index,
+            "email": email,
+        }
+        if name_field:
+            detail["name"] = row.get(name_field, "")
+        if id_field:
+            detail["id"] = row.get(id_field, "")
+        if source_row_field:
+            detail["source_row"] = row.get(source_row_field, "")
+        groups[email].append(detail)
+    duplicates = [
+        {"email": email, "count": len(items), "rows": items}
+        for email, items in sorted(groups.items())
+        if len(items) > 1
+    ]
+    return {
+        "path": str(path),
+        "email_field": email_field,
+        "row_count": len(rows),
+        "unique_email_count": len(groups),
+        "duplicate_email_count": len(duplicates),
+        "duplicate_row_count": sum(item["count"] for item in duplicates),
+        "duplicates": duplicates[:max_duplicates],
+        "duplicates_truncated": len(duplicates) > max_duplicates,
+    }
+
+
+def surveyol_contact_duplicate_report(contacts: list[dict[str, Any]], max_duplicates: int = 200) -> dict[str, Any]:
+    groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for contact in contacts:
+        email = normalize_email(str(contact.get("email", "")))
+        if not email:
+            continue
+        first = str(contact.get("firstName", "") or "").strip()
+        last = str(contact.get("lastName", "") or "").strip()
+        groups[email].append(
+            {
+                "id": str(contact.get("id", "")),
+                "email": email,
+                "first_name": first,
+                "last_name": last,
+                "name": f"{first} {last}".strip(),
+            }
+        )
+    duplicates = [
+        {"email": email, "count": len(items), "contacts": items}
+        for email, items in sorted(groups.items())
+        if len(items) > 1
+    ]
+    return {
+        "contact_row_count": len(contacts),
+        "unique_email_count": len(groups),
+        "duplicate_email_count": len(duplicates),
+        "duplicate_contact_count": sum(item["count"] for item in duplicates),
+        "duplicates": duplicates[:max_duplicates],
+        "duplicates_truncated": len(duplicates) > max_duplicates,
+    }
+
+
+def contacts_by_email(contacts: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for contact in contacts:
+        email = normalize_email(str(contact.get("email", "")))
+        if email:
+            grouped[email].append(contact)
+    return dict(grouped)
 
 
 def review_fields(required: bool, reason: str = "", next_action: str = "") -> dict[str, Any]:
@@ -326,6 +451,7 @@ class RegistryRecord:
     email_key: str
     do_not_email: bool
     friendly: bool | None
+    outreach_status: str
     raw: dict[str, str]
 
 
@@ -339,6 +465,7 @@ def registry_records(path: Path, require_friendly: bool) -> tuple[list[RegistryR
     email_key_field = find_field(headers, EMAIL_KEY_FIELDS)
     do_not_email_field = find_field(headers, DO_NOT_EMAIL_FIELDS)
     friendly_field = find_field(headers, FRIENDLY_FIELDS)
+    outreach_status_field = find_field(headers, OUTREACH_STATUS_FIELDS)
 
     if not email_field:
         raise SystemExit(f"Could not find an email column in {path}. Headers: {headers}")
@@ -371,6 +498,7 @@ def registry_records(path: Path, require_friendly: bool) -> tuple[list[RegistryR
                 email_key=row.get(email_key_field, "").strip() if email_key_field else "",
                 do_not_email=truthy(row.get(do_not_email_field)) if do_not_email_field else False,
                 friendly=friendly,
+                outreach_status=row.get(outreach_status_field, "").strip() if outreach_status_field else "",
                 raw=row,
             )
         )
@@ -384,6 +512,7 @@ def registry_records(path: Path, require_friendly: bool) -> tuple[list[RegistryR
         "email_key": email_key_field,
         "do_not_email": do_not_email_field,
         "friendly": friendly_field,
+        "outreach_status": outreach_status_field,
     }
     return records, fields
 
@@ -615,32 +744,83 @@ def cmd_surveyol_contacts(args: argparse.Namespace) -> int:
     ]
     write_csv(Path(args.output), ["id", "email", "first_name", "last_name"], rows)
     print(f"Wrote {len(rows)} SurveyOL contacts to {args.output}")
+    duplicate_audit = surveyol_contact_duplicate_report(contacts, args.max_duplicates)
+    if args.audit_output:
+        audit = {
+            "generated_at": now_iso(),
+            **review_fields(
+                duplicate_audit["duplicate_email_count"] > 0,
+                "SurveyOL contacts contain duplicate email addresses. Do not import recipients or send invitations until these contact records are merged or deleted.",
+                "Resolve duplicate contacts in SurveyOL, then re-run this contact export and confirm duplicate_email_count is 0.",
+            ),
+            **duplicate_audit,
+        }
+        write_json(Path(args.audit_output), audit)
+        print(f"Wrote SurveyOL contact duplicate audit to {args.audit_output}")
+        print_review_notice(audit)
+    elif duplicate_audit["duplicate_email_count"]:
+        print(f"Warning: found {duplicate_audit['duplicate_email_count']} duplicate SurveyOL contact email(s).")
     return 0
 
 
 def cmd_surveyol_sync_contacts(args: argparse.Namespace) -> int:
     token = require_env("SURVEYOL_API_TOKEN")
-    _, send_rows = read_csv(Path(args.send_list))
+    send_list_path = Path(args.send_list)
+    send_headers, send_rows = read_csv(send_list_path)
+    send_email_field = require_email_field(send_headers, send_list_path)
+    send_duplicate_audit = csv_duplicate_email_report(send_list_path, max_duplicates=args.max_duplicates)
     contacts = surveyol_list("/contacts", token)
-    current_by_email = {normalize_email(str(contact.get("email", ""))): contact for contact in contacts if normalize_email(str(contact.get("email", "")))}
-    desired = {normalize_email(row.get("email")): row for row in send_rows if normalize_email(row.get("email"))}
-    missing = sorted(email for email in desired if email not in current_by_email)
-    existing = sorted(email for email in desired if email in current_by_email)
+    current_grouped = contacts_by_email(contacts)
+    current_by_email = {email: items[0] for email, items in current_grouped.items()}
+    current_duplicate_audit = surveyol_contact_duplicate_report(contacts, args.max_duplicates)
+    desired = {normalize_email(row.get(send_email_field)): row for row in send_rows if normalize_email(row.get(send_email_field))}
+    missing = sorted(email for email in desired if email not in current_grouped)
+    existing = sorted(email for email in desired if email in current_grouped)
+    duplicate_blockers = []
+    if send_duplicate_audit["duplicate_email_count"]:
+        duplicate_blockers.append("send_list_duplicate_emails")
+    if current_duplicate_audit["duplicate_email_count"]:
+        duplicate_blockers.append("surveyol_duplicate_contacts")
+    review_required = bool(duplicate_blockers) or not args.apply
+    if duplicate_blockers:
+        review_reason = (
+            "Duplicate emails exist in the SurveyOL send path. Stop invitation sends until the send list and SurveyOL contact table "
+            "both have at most one row per normalized email address."
+        )
+        review_next_action = (
+            "De-duplicate the listed email rows or SurveyOL contact records, then re-run this command. Do not use --apply while "
+            "duplicate_blockers is non-empty."
+        )
+    else:
+        review_reason = "This is a dry-run SurveyOL contact sync plan; review missing contacts before adding them to SurveyOL."
+        review_next_action = (
+            "If the plan is correct, re-run the same command with --apply. Correct the send list first if any contact should not be added."
+        )
     plan = {
         "generated_at": now_iso(),
         "dry_run": not args.apply,
         **review_fields(
-            not args.apply,
-            "This is a dry-run SurveyOL contact sync plan; review missing contacts before adding them to SurveyOL.",
-            "If the plan is correct, re-run the same command with --apply. Correct the send list first if any contact should not be added.",
+            review_required,
+            review_reason,
+            review_next_action,
         ),
         "send_list": args.send_list,
-        "current_contacts": len(current_by_email),
+        "send_list_email_field": send_email_field,
+        "current_contact_rows": len(contacts),
+        "current_unique_contacts": len(current_by_email),
         "desired_contacts": len(desired),
         "missing_contacts_to_add": missing,
         "existing_contacts": existing,
+        "duplicate_blockers": duplicate_blockers,
+        "send_list_duplicate_audit": send_duplicate_audit,
+        "surveyol_contact_duplicate_audit": current_duplicate_audit,
         "actions": [],
     }
+    if args.apply and duplicate_blockers:
+        write_json(Path(args.plan_output), plan)
+        print(f"Wrote blocked SurveyOL contact sync plan to {args.plan_output}")
+        print_review_notice(plan)
+        raise SystemExit("Blocked SurveyOL contact sync because duplicate email records are present.")
     if args.apply:
         for email in missing:
             row = desired[email]
@@ -656,6 +836,36 @@ def cmd_surveyol_sync_contacts(args: argparse.Namespace) -> int:
     print_review_notice(plan)
     if not args.apply:
         print("Dry run only. Re-run with --apply to add missing SurveyOL contacts.")
+    return 0
+
+
+def cmd_audit_email_duplicates(args: argparse.Namespace) -> int:
+    reports = [
+        csv_duplicate_email_report(Path(path), args.email_field or "", args.max_duplicates)
+        for path in args.csv
+    ]
+    duplicate_email_count = sum(report["duplicate_email_count"] for report in reports)
+    duplicate_row_count = sum(report["duplicate_row_count"] for report in reports)
+    audit = {
+        "generated_at": now_iso(),
+        **review_fields(
+            duplicate_email_count > 0,
+            "One or more contact CSVs contain duplicate normalized email addresses. Do not import this file or send invitations from it until it is de-duplicated.",
+            "Keep exactly one intended recipient row per normalized email address, regenerate the CSV if needed, and re-run this audit.",
+        ),
+        "csv_count": len(reports),
+        "duplicate_email_count": duplicate_email_count,
+        "duplicate_row_count": duplicate_row_count,
+        "reports": reports,
+    }
+    if args.output:
+        write_json(Path(args.output), audit)
+        print(f"Wrote duplicate email audit to {args.output}")
+        print_review_notice(audit)
+    else:
+        print(json.dumps(audit, indent=2, ensure_ascii=False))
+    if args.fail_on_duplicates and duplicate_email_count:
+        return 2
     return 0
 
 
@@ -675,6 +885,8 @@ def cmd_build_send_list(args: argparse.Namespace) -> int:
             reasons.append("missing_name")
         if record.do_not_email:
             reasons.append("registry_do_not_email")
+        if outreach_hold(record.outreach_status):
+            reasons.append("outreach_status_hold")
         if record.email in suppressions:
             reasons.append("global_suppression")
         if record.email and record.email in seen_emails:
@@ -691,6 +903,7 @@ def cmd_build_send_list(args: argparse.Namespace) -> int:
                     "email": record.email,
                     "name": record.name,
                     "reasons": reasons,
+                    "outreach_status": record.outreach_status,
                     "suppression_sources": suppressions.get(record.email, []),
                 }
             )
@@ -812,6 +1025,14 @@ def main() -> int:
     p.add_argument("--limit", type=int, default=1000)
     p.set_defaults(func=cmd_mailerlite_sync_group)
 
+    p = subparsers.add_parser("audit-email-duplicates", help="audit one or more contact CSVs for duplicate normalized email addresses")
+    p.add_argument("--csv", action="append", required=True, help="contact CSV to audit; may be repeated")
+    p.add_argument("--email-field", default="", help="optional explicit email column name used for every CSV")
+    p.add_argument("--output", help="optional JSON audit output")
+    p.add_argument("--fail-on-duplicates", action="store_true", help="exit with status 2 if any duplicate email is found")
+    p.add_argument("--max-duplicates", type=int, default=200)
+    p.set_defaults(func=cmd_audit_email_duplicates)
+
     p = subparsers.add_parser("surveyol-account", help="verify SurveyOL API token/account")
     p.set_defaults(func=cmd_surveyol_account)
 
@@ -827,12 +1048,15 @@ def main() -> int:
 
     p = subparsers.add_parser("surveyol-contacts", help="export SurveyOL contacts to CSV")
     p.add_argument("--output", required=True)
+    p.add_argument("--audit-output", help="optional JSON duplicate-email audit output")
+    p.add_argument("--max-duplicates", type=int, default=200)
     p.set_defaults(func=cmd_surveyol_contacts)
 
     p = subparsers.add_parser("surveyol-sync-contacts", help="dry-run or apply missing SurveyOL contact additions from a private send list")
     p.add_argument("--send-list", required=True)
     p.add_argument("--plan-output", required=True)
     p.add_argument("--apply", action="store_true", help="make API changes; default is dry-run")
+    p.add_argument("--max-duplicates", type=int, default=200)
     p.set_defaults(func=cmd_surveyol_sync_contacts)
 
     p = subparsers.add_parser("build-send-list", help="build a weekly SurveyOL send list and private crosswalk from CTS registry CSV")
