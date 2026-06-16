@@ -8,7 +8,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 ## Weekly Cadence
 
-- Tuesday morning: publish the first weekly report for the survey launched one week earlier. The first report may be preliminary while responses continue to arrive, but it should clearly state that the survey remains open and will be recalculated as additional responses trickle in.
+- Tuesday morning: publish the first weekly report for any survey launched one week earlier, and refresh every still-open survey report that has already received its first preliminary report. Preliminary reports should clearly state that the survey remains open and will be refreshed each Tuesday morning until final close.
 - Tuesday morning: send the weekly newsletter to newsletter subscribers after the report is published. Include an encapsulation of the newest report plus a link to the full report.
 - Tuesday evening: create the placeholder public report page for the new survey, launch the new weekly SurveyOL survey, and begin sending invitations through the SurveyOL Email collector. Send up to 100 participant invitations per day until all eligible potential participants have been sent that week's invitation.
 - Wednesday through Saturday, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
@@ -19,7 +19,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 ## Active Reminders
 
 - Monday afternoon: run the list-hygiene audit before the next newsletter and survey sends.
-- Tuesday morning: publish or refresh the weekly report, create the report encapsulation, update the site, and send or prepare the newsletter.
+- Tuesday morning: publish first preliminary reports, refresh still-open preliminary reports, create the report encapsulation, update the site, and send or prepare the newsletter.
 - Tuesday morning after the report cycle: check whether any survey has reached the 3-week close date, then close and finalize reports as needed.
 - Tuesday evening: create the placeholder public report page, launch the new SurveyOL Email collector survey, and send the first invitation batch.
 - Wednesday through Saturday evenings: send the next invitation batch when eligible participants remain uninvited.
@@ -54,7 +54,7 @@ Newsletter-only subscribers should receive report notices and topic previews, no
 7. Add a brief last-week results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
 8. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
 9. Confirm the full-time ministry participation note appears in the website/contact materials and email copy. Do not add a separate eligibility confirmation item inside the weekly SurveyOL survey unless CTS intentionally reintroduces one.
-10. Create the placeholder public report page before the first SurveyOL invitation batch. The placeholder should use the stable report URL, state that the survey is open, name the topic, identify the expected first-report date, and promise recalculation as responses arrive. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
+10. Create the placeholder public report page before the first SurveyOL invitation batch. The placeholder should use the stable report URL, state that the survey is open, name the topic, identify the expected first-report date, and explain that preliminary results will be refreshed each Tuesday morning until final close. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
 11. Before any full participant send, remove all closed-test wording from the SurveyOL title, intro text, previous-results placeholder, and end-of-survey page.
 
 ## Send The Survey
@@ -94,19 +94,21 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 ## Export And Report
 
 1. Publish a preliminary first report on Tuesday morning one week after the first invitation send.
-2. Continue to recalculate the preliminary report as additional responses arrive.
-3. Export SurveyOL responses after the 3-week response window closes.
-4. Save the private raw export in `data/private/surveyol/week-###.csv`. Do not commit raw exports.
-5. Normalize email addresses and join the private export to the `CTS 2026` participant registry before subgroup or deep analysis. Flag unmatched rows and resolve them before publishing a report.
-6. Save any joined identity-bearing analysis file under `data/private/`. Do not commit joined files, contact crosswalks, names, email addresses, participant IDs, or raw free-text suggestions.
-7. Generate the public summary JSON with `scripts/cts_report_pipeline.py` and the matching `reporting/week-###.config.json`.
-8. Review the generated summary's `quality` section for missing columns, non-numeric values, out-of-range values, unexpectedly low counts, and unexpected unmatched-response counts.
-9. Summarize all 15 live slider items with count, mean, median, and distribution shape, including the S23-style smoothed sparkline series when sample size permits.
-10. Identify key tensions where item-level disagreement is significant.
-11. Suppress or combine subgroup comparisons when counts are too small.
-12. Review free-text suggestions for accidental identifiers before using or publishing them.
-13. Publish the report on the primary CTS website and link it from the reports index.
-14. Create or update the report encapsulation for the next newsletter and the top of the next weekly SurveyOL survey.
+2. Refresh every still-open preliminary report each Tuesday morning until its 3-week response window closes.
+3. Optionally refresh a preliminary report outside the Tuesday cycle when responses have materially changed, such as about 10 or more new complete responses or a clear shift in a published takeaway.
+4. Each preliminary refresh should show the current response count, last-updated date, and a note that the report will continue to be refreshed until final close.
+5. Export SurveyOL responses after the 3-week response window closes.
+6. Save the private raw export in `data/private/surveyol/week-###.csv`. Do not commit raw exports.
+7. Normalize email addresses and join the private export to the `CTS 2026` participant registry before subgroup or deep analysis. Flag unmatched rows and resolve them before publishing a report.
+8. Save any joined identity-bearing analysis file under `data/private/`. Do not commit joined files, contact crosswalks, names, email addresses, participant IDs, or raw free-text suggestions.
+9. Generate the public summary JSON with `scripts/cts_report_pipeline.py` and the matching `reporting/week-###.config.json`.
+10. Review the generated summary's `quality` section for missing columns, non-numeric values, out-of-range values, unexpectedly low counts, and unexpected unmatched-response counts.
+11. Summarize all 15 live slider items with count, mean, median, and distribution shape, including the S23-style smoothed sparkline series when sample size permits.
+12. Identify key tensions where item-level disagreement is significant.
+13. Suppress or combine subgroup comparisons when counts are too small.
+14. Review free-text suggestions for accidental identifiers before using or publishing them.
+15. Publish the report on the primary CTS website and link it from the reports index.
+16. Create or update the report encapsulation for the next newsletter and the top of the next weekly SurveyOL survey.
 
 ## Prepare Next Week
 

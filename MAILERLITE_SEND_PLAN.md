@@ -42,7 +42,7 @@ Shared email design:
 
 ## Email 1: Weekly Newsletter / Report Notice
 
-Timing: Tuesday morning after the newest weekly report is published or refreshed.
+Timing: Tuesday morning after the weekly report cycle publishes the newest first preliminary report and refreshes any still-open preliminary reports.
 
 Subject:
 
