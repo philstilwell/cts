@@ -711,15 +711,20 @@ h3 {
   font-weight: 750;
 }
 
-.callout {
-  padding: 2rem 1.6rem;
+.callout,
+.report-kicker {
+  padding: 1.25rem 1.35rem;
+  border: 1px solid #f0d79a;
   border-left: 5px solid var(--gold);
+  border-radius: 8px;
+  color: #4f3b11;
   background: #fff8e8;
-  line-height: 1.72;
+  font-weight: 500;
+  line-height: 1.68;
 }
 
 .wp-content .callout {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .surveyol-embed {
@@ -766,16 +771,6 @@ h3 {
 .report-status.preliminary {
   color: #5b3500;
   background: #ffe7af;
-}
-
-.report-kicker {
-  padding: 0.95rem 1.1rem;
-  border: 1px solid #f0d79a;
-  border-left: 5px solid var(--gold);
-  border-radius: 8px;
-  color: #5d4313;
-  background: #fff8e8;
-  font-weight: 700;
 }
 
 .executive-summary {
