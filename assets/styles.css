@@ -890,6 +890,26 @@ h3 {
 }
 
 .results-table th {
+  text-align: center;
+  white-space: nowrap;
+}
+
+#item-overview-table th:first-child,
+#item-overview-table td:first-child,
+.ballot-table th:nth-child(2),
+.ballot-table td:nth-child(2) {
+  text-align: left;
+}
+
+#item-overview-table td:not(:first-child),
+.ballot-table th:first-child,
+.ballot-table th:last-child,
+.ballot-table td:first-child,
+.ballot-table td:last-child {
+  text-align: center;
+}
+
+#item-overview-table td:nth-child(n+2):nth-child(-n+5) {
   white-space: nowrap;
 }
 
@@ -918,7 +938,9 @@ h3 {
 .band-bar {
   display: flex;
   width: 100%;
+  max-width: 22rem;
   min-width: 150px;
+  margin-inline: auto;
   height: 18px;
   overflow: hidden;
   border: 1px solid rgba(23, 40, 45, 0.18);
