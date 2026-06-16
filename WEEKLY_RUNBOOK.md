@@ -47,7 +47,7 @@ Newsletter-only subscribers should receive report notices and topic previews, no
 
 1. Select one CTS-administered topic from `CTS 2026 Weekly Topic Bank.md`.
 2. Review the selected topic for clarity and tension potential before fielding it.
-3. Add a brief last-week results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
+3. Add a brief last-week results summary and a link to the public weekly report page. In SurveyOL, make the report reference an actual rich-text hyperlink with a bold linked label, not a pasted raw URL. For example: `Full report: Week 001 Survey Results`, with `Week 001 Survey Results` bolded and linked to the public report URL. For Week 1, use the no-previous-results placeholder.
 4. Add the narrow Featured Topic header image immediately before the current-topic introduction line. Prefix that line with `◉ ` every week, for example: `◉ Main topic for the first 12 survey items: Pornography and the Church.`
 5. Add the topic's 12 survey items as required 0-100 credence sliders.
 6. Add the narrow Independent Items header image, then add 3 participant-vote-determined live survey items from the previous week's ballot. These items should be semantically clear, orthogonal to the weekly CTS-administered topic, not copied from the current topic bank, and likely to generate meaningful tension or spread. For Week 1 only, use the seeded items in `WEEK_1_SURVEY_TEMPLATE.md`.
@@ -137,6 +137,7 @@ Before each weekly newsletter and before each SurveyOL invitation batch:
 - SurveyOL survey link works.
 - The first 15 live survey items are marked required in SurveyOL.
 - SurveyOL title, descriptive text, previous-results placeholder, and end-of-survey page contain no closed-test language before production send.
+- Previous-results report references use an actual bold rich-text link in SurveyOL, with no raw URL visible to participants.
 - Placeholder public report page exists, is linked from the reports index, and has been pushed before the first production invitation batch.
 - Featured Topic header image appears immediately before the `◉ Main topic...` introduction line.
 - SurveyOL Email collector is `Open`, `Anonymous Responses` is `Off`, and any Web Link collector is closed or intentionally excluded from the launch.

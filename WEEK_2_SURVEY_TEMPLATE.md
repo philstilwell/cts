@@ -40,9 +40,11 @@ Text:
 
 Last week's preliminary report is now posted: Week 1, Divorce and Remarriage. The early results show strong agreement on immediate safety in abusive marriages and on careful pastoral discernment between ordinary conflict and coercive control. Classical divorce grounds such as adultery, physical abuse, abandonment, and remarriage after a legitimate divorce currently show high agreement, while questions about pornography, nonsexual romantic infidelity, formal discipline, and pastoral review show wider spread. The report is preliminary and will be refreshed each Tuesday morning while the survey remains open.
 
-Link:
+SurveyOL link:
 
-https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/
+Full report: Week 001 Survey Results
+
+Make `Week 001 Survey Results` an actual rich-text hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/` and bold the linked label. Do not display the raw URL in participant-facing survey text.
 
 ## A. CTS-Administered Topic
 
@@ -114,13 +116,15 @@ Add the narrow section header images before the matching sections when practical
 
 Featured topic header placement rule: place the Featured Topic header image after the previous-results encapsulation and immediately before the current-week topic introduction. Prefix the topic-introduction line with `◉ ` every week.
 
+After importing Block 1, edit `Week 001 Survey Results` in SurveyOL's rich-text editor so it is an actual bold hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`. Do not leave a raw report URL visible to participants.
+
 ### Block 1
 
 ```text
 [Text]
 Last week's preliminary report is now posted: Week 1, Divorce and Remarriage. The early results show strong agreement on immediate safety in abusive marriages and on careful pastoral discernment between ordinary conflict and coercive control. Classical divorce grounds such as adultery, physical abuse, abandonment, and remarriage after a legitimate divorce currently show high agreement, while questions about pornography, nonsexual romantic infidelity, formal discipline, and pastoral review show wider spread. The report is preliminary and will be refreshed each Tuesday morning while the survey remains open.
 
-Full report: https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/
+Full report: Week 001 Survey Results
 
 [Text]
 ◉ Main topic for the first 12 survey items: Pornography and the Church.
