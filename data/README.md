@@ -4,7 +4,7 @@ This directory separates private inputs from public report outputs.
 
 ## Directory Layout
 
-- `data/private/`: ignored by git. Put raw SurveyOL exports, contact-level files, raw participant suggestions, and internal QA notes here.
+- `data/private/`: ignored by git. Put raw SurveyOL exports, contact-level files, weekly send-list crosswalks, joined identity-bearing analysis files, raw participant suggestions, and internal QA notes here.
 - `data/fixtures/`: committed synthetic files used to test the pipeline before real data exists.
 - `data/public/`: privacy-safe generated summaries and public chart data. These files may be committed when they are intended for GitHub Pages/public reporting.
 
@@ -17,6 +17,14 @@ Put real weekly SurveyOL exports in:
 ```text
 data/private/surveyol/week-001.csv
 ```
+
+Put the exact SurveyOL Email collector send-list crosswalk for the same week in:
+
+```text
+data/private/contact-crosswalks/week-001.csv
+```
+
+If deep reports require respondent-level participant context, create the joined private analysis file only under `data/private/`, then produce public aggregate outputs from that private source. Never commit raw exports, contact crosswalks, joined files, names, email addresses, participant IDs, or unreviewed free-text suggestions.
 
 Then generate a public summary:
 

@@ -1,0 +1,424 @@
+{
+  "schema_version": "cts-weekly-summary-v0.1-preliminary",
+  "week": "week-001",
+  "title": "CTS 2026 Weekly Survey 01 - Divorce and Remarriage",
+  "topic": "Divorce and Remarriage",
+  "status": "preliminary",
+  "snapshot_date": "2026-06-15",
+  "platform": "SurveyOL",
+  "collector": "Email - Survey 01",
+  "private_data_excluded": true,
+  "privacy_note": "This file contains aggregate public results only. Names, email addresses, response identifiers, respondent-level records, and raw free-text suggestions are excluded.",
+  "response_summary": {
+    "invitations_sent": 409,
+    "responses": 33,
+    "complete_responses": 33,
+    "completion_rate_percent": 100,
+    "typical_time_spent": "5 minutes",
+    "approximate_invited_response_rate_percent": 8.1,
+    "suggestions_received": 14
+  },
+  "update_policy": {
+    "will_recalculate": true,
+    "note": "This preliminary report may be recalculated as additional responses trickle in. A final report should be stamped after the response window closes and the SurveyOL export is reviewed."
+  },
+  "slider_scale": {
+    "min": 0,
+    "midpoint": 50,
+    "max": 100,
+    "labels": {
+      "0": "strongly disagree",
+      "50": "uncertain or mixed",
+      "100": "strongly agree"
+    }
+  },
+  "band_definitions": {
+    "low": "0-33",
+    "middle": "34-66",
+    "high": "67-100"
+  },
+  "items": [
+    {
+      "id": "W001-Q01",
+      "number": 1,
+      "section": "cts_administered_topic",
+      "short_label": "Adultery",
+      "text": "In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce.",
+      "n": 33,
+      "mean": 85.9,
+      "median": 100,
+      "q1": 80,
+      "q3": 100,
+      "standard_deviation": 26.3,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 2,
+        "middle": 3,
+        "high": 28
+      }
+    },
+    {
+      "id": "W001-Q02",
+      "number": 2,
+      "section": "cts_administered_topic",
+      "short_label": "Physical abuse",
+      "text": "In ordinary cases, a spouse's persistent physical abuse constitutes biblically legitimate grounds for divorce even if sexual adultery has not occurred.",
+      "n": 33,
+      "mean": 83.2,
+      "median": 100,
+      "q1": 75,
+      "q3": 100,
+      "standard_deviation": 30.7,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 4,
+        "middle": 2,
+        "high": 27
+      }
+    },
+    {
+      "id": "W001-Q03",
+      "number": 3,
+      "section": "cts_administered_topic",
+      "short_label": "Emotional abuse",
+      "text": "In ordinary cases, a spouse's severe and persistent emotional or psychological abuse can constitute biblically legitimate grounds for divorce.",
+      "n": 33,
+      "mean": 76.5,
+      "median": 100,
+      "q1": 63,
+      "q3": 100,
+      "standard_deviation": 32.8,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 6,
+        "middle": 3,
+        "high": 24
+      }
+    },
+    {
+      "id": "W001-Q04",
+      "number": 4,
+      "section": "cts_administered_topic",
+      "short_label": "Abandonment",
+      "text": "In ordinary cases, willful abandonment by an unbelieving spouse constitutes biblically legitimate grounds for divorce.",
+      "n": 33,
+      "mean": 80.9,
+      "median": 100,
+      "q1": 55,
+      "q3": 100,
+      "standard_deviation": 31.2,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 3,
+        "middle": 6,
+        "high": 24
+      }
+    },
+    {
+      "id": "W001-Q05",
+      "number": 5,
+      "section": "cts_administered_topic",
+      "short_label": "Pornography",
+      "text": "In ordinary cases, a spouse's persistent pornography use can become biblically legitimate grounds for divorce.",
+      "n": 33,
+      "mean": 65,
+      "median": 75,
+      "q1": 40,
+      "q3": 100,
+      "standard_deviation": 38.2,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 8,
+        "middle": 6,
+        "high": 19
+      }
+    },
+    {
+      "id": "W001-Q06",
+      "number": 6,
+      "section": "cts_administered_topic",
+      "short_label": "Nonsexual infidelity",
+      "text": "In ordinary cases, a spouse's romantic but nonsexual infidelity can constitute biblically legitimate grounds for divorce.",
+      "n": 33,
+      "mean": 63.6,
+      "median": 70,
+      "q1": 50,
+      "q3": 100,
+      "standard_deviation": 33.6,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 6,
+        "middle": 10,
+        "high": 17
+      }
+    },
+    {
+      "id": "W001-Q07",
+      "number": 7,
+      "section": "cts_administered_topic",
+      "short_label": "Remarriage freedom",
+      "text": "A Christian whose divorce was biblically legitimate is normally free to remarry.",
+      "n": 33,
+      "mean": 87.5,
+      "median": 100,
+      "q1": 100,
+      "q3": 100,
+      "standard_deviation": 30.5,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 3,
+        "middle": 2,
+        "high": 28
+      }
+    },
+    {
+      "id": "W001-Q08",
+      "number": 8,
+      "section": "cts_administered_topic",
+      "short_label": "Pastoral review",
+      "text": "Churches should normally require pastoral review before affirming the remarriage of a divorced Christian.",
+      "n": 33,
+      "mean": 65.7,
+      "median": 85,
+      "q1": 48,
+      "q3": 100,
+      "standard_deviation": 38.9,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 8,
+        "middle": 5,
+        "high": 20
+      }
+    },
+    {
+      "id": "W001-Q09",
+      "number": 9,
+      "section": "cts_administered_topic",
+      "short_label": "Formal discipline",
+      "text": "Churches should use formal discipline when members knowingly pursue a biblically illegitimate divorce.",
+      "n": 33,
+      "mean": 48.4,
+      "median": 50,
+      "q1": 0,
+      "q3": 100,
+      "standard_deviation": 45.2,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 15,
+        "middle": 3,
+        "high": 15
+      }
+    },
+    {
+      "id": "W001-Q10",
+      "number": 10,
+      "section": "cts_administered_topic",
+      "short_label": "Churches too permissive",
+      "text": "In my ministry context, churches are generally too permissive about divorce and remarriage.",
+      "n": 33,
+      "mean": 45.3,
+      "median": 50,
+      "q1": 0,
+      "q3": 75,
+      "standard_deviation": 37.2,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 13,
+        "middle": 11,
+        "high": 9
+      }
+    },
+    {
+      "id": "W001-Q11",
+      "number": 11,
+      "section": "cts_administered_topic",
+      "short_label": "Physical safety",
+      "text": "Churches should treat immediate physical safety as a priority before pursuing marital reconciliation in abusive marriages.",
+      "n": 33,
+      "mean": 97.6,
+      "median": 100,
+      "q1": 100,
+      "q3": 100,
+      "standard_deviation": 6.8,
+      "min": 75,
+      "max": 100,
+      "bands": {
+        "low": 0,
+        "middle": 0,
+        "high": 33
+      }
+    },
+    {
+      "id": "W001-Q12",
+      "number": 12,
+      "section": "cts_administered_topic",
+      "short_label": "Coercive control",
+      "text": "Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce.",
+      "n": 33,
+      "mean": 95.6,
+      "median": 100,
+      "q1": 100,
+      "q3": 100,
+      "standard_deviation": 8.7,
+      "min": 75,
+      "max": 100,
+      "bands": {
+        "low": 0,
+        "middle": 0,
+        "high": 33
+      }
+    },
+    {
+      "id": "W001-Q13",
+      "number": 13,
+      "section": "participant_vote_seeded",
+      "short_label": "Political naming",
+      "text": "Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise.",
+      "n": 33,
+      "mean": 57.7,
+      "median": 72,
+      "q1": 20,
+      "q3": 81,
+      "standard_deviation": 36.5,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 10,
+        "middle": 5,
+        "high": 18
+      }
+    },
+    {
+      "id": "W001-Q14",
+      "number": 14,
+      "section": "participant_vote_seeded",
+      "short_label": "Fasting",
+      "text": "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship.",
+      "n": 33,
+      "mean": 55.8,
+      "median": 50,
+      "q1": 26,
+      "q3": 100,
+      "standard_deviation": 36.5,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 10,
+        "middle": 10,
+        "high": 13
+      }
+    },
+    {
+      "id": "W001-Q15",
+      "number": 15,
+      "section": "participant_vote_seeded",
+      "short_label": "Worship source",
+      "text": "Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox.",
+      "n": 33,
+      "mean": 53.4,
+      "median": 50,
+      "q1": 25,
+      "q3": 80,
+      "standard_deviation": 36.8,
+      "min": 0,
+      "max": 100,
+      "bands": {
+        "low": 11,
+        "middle": 8,
+        "high": 14
+      }
+    }
+  ],
+  "ballot": {
+    "answered": 33,
+    "usable_rankings_per_item": 28,
+    "items": [
+      {
+        "rank": 1,
+        "score": 4.64,
+        "text": "A church should require formal membership before a person serves in any public ministry role."
+      },
+      {
+        "rank": 2,
+        "score": 4.46,
+        "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation."
+      },
+      {
+        "rank": 3,
+        "score": 4.32,
+        "text": "Christians should avoid recreational marijuana use even where it is legal."
+      },
+      {
+        "rank": 4,
+        "score": 3.89,
+        "text": "Christian parents should consider a school's moral and religious formation more important than its academic quality."
+      },
+      {
+        "rank": 5,
+        "score": 3.57,
+        "text": "Churches should publicly repent for institutional failures even when current leaders were not personally involved."
+      },
+      {
+        "rank": 5,
+        "score": 3.57,
+        "text": "Pastors should avoid platforming guest speakers whose doctrine differs from the church on secondary issues."
+      },
+      {
+        "rank": 7,
+        "score": 3.54,
+        "text": "A church should refuse to host community events sponsored by groups that publicly oppose Christian sexual ethics."
+      }
+    ]
+  },
+  "next_week_ballot_draft": {
+    "status": "draft",
+    "note": "Five items are polished from participant suggestions. Two items are carried over from the Week 1 participant ballot because they ranked highest there.",
+    "items": [
+      {
+        "rank": 1,
+        "source": "participant_suggestion",
+        "text": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands."
+      },
+      {
+        "rank": 2,
+        "source": "participant_suggestion",
+        "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies."
+      },
+      {
+        "rank": 3,
+        "source": "participant_suggestion",
+        "text": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified."
+      },
+      {
+        "rank": 4,
+        "source": "participant_suggestion",
+        "text": "Baptism should ordinarily precede participation in the Lord's Supper."
+      },
+      {
+        "rank": 5,
+        "source": "participant_suggestion",
+        "text": "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship."
+      },
+      {
+        "rank": 6,
+        "source": "week_1_ballot_carryover",
+        "text": "A church should require formal membership before a person serves in any public ministry role."
+      },
+      {
+        "rank": 7,
+        "source": "week_1_ballot_carryover",
+        "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation."
+      }
+    ]
+  }
+}

@@ -13,12 +13,24 @@ Convert a private SurveyOL export into a privacy-safe public summary that can fe
 
 ## Current Pipeline Layers
 
-1. `data/private/`: private, ignored inputs.
-2. `reporting/week-001.config.json`: week-specific item and reporting configuration.
-3. `scripts/cts_report_pipeline.py`: CSV-to-summary builder.
-4. `schemas/public-weekly-summary.schema.json`: public summary shape.
-5. `data/public/`: public, privacy-safe generated outputs.
-6. `data/fixtures/`: synthetic data for dry runs.
+1. `CTS 2026`: canonical private participant registry and outreach status source.
+2. `data/private/`: private, ignored inputs.
+3. `reporting/week-001.config.json`: week-specific item and reporting configuration.
+4. `scripts/cts_report_pipeline.py`: CSV-to-summary builder.
+5. `schemas/public-weekly-summary.schema.json`: public summary shape.
+6. `data/public/`: public, privacy-safe generated outputs.
+7. `data/fixtures/`: synthetic data for dry runs.
+
+## Participant Mapping Layer
+
+Deep reports depend on a reliable private join between SurveyOL responses and the `CTS 2026` participant registry. The preferred path is:
+
+1. Build each week's SurveyOL send list from `CTS 2026`, filtering out records with no `Name`, no usable `Primary Email Address`, no `Participant ID`, no `Email Key`, `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
+2. Send the weekly survey through a SurveyOL Email collector with `Anonymous Responses` set to `Off`. Close or avoid distributing Web Link collectors unless CTS intentionally wants an unmapped public response channel.
+3. Include stable private join keys in SurveyOL contact fields when available: `Participant ID` and `Email Key`.
+4. Save the exact weekly send-list crosswalk privately in `data/private/contact-crosswalks/week-###.csv`.
+5. After export, normalize response email addresses by trimming whitespace and lowercasing, join responses to `CTS 2026`, and flag unmatched responses before producing any deep report.
+6. Run subgroup and correlation analysis from the joined private file only after minimum-n suppression rules are in place.
 
 ## Week 1 Command
 
@@ -54,7 +66,7 @@ For Week 1, use one of these paths before the full launch or before final report
 2. Delete closed-test responses in SurveyOL before collecting authentic responses.
 3. Export the raw SurveyOL file, save a private closed-test copy, remove known closed-test rows, and only then save the cleaned authentic export as `data/private/surveyol/week-001.csv`.
 
-Do not let the public summary pipeline ingest closed-test rows. Known closed-test indicators include response numbers created before launch, MailerLite UTM parameters from the closed-test campaign, and any archived closed-test copy or title suffix.
+Do not let the public summary pipeline ingest closed-test rows. Known closed-test indicators include response numbers created before launch, test-recipient email addresses, UTM parameters from any test campaign, and any archived closed-test copy or title suffix.
 
 ## What The Script Produces
 
@@ -78,6 +90,7 @@ The script counts free-text suggestions but does not output raw suggestion text.
 ## Privacy Rules
 
 - Raw SurveyOL exports stay in `data/private/`.
+- Exact send-list crosswalks and joined identity-bearing analysis files stay in `data/private/`.
 - Public JSON must not contain names, emails, participant IDs, direct contact fields, or raw free-text suggestions.
 - Subgroup reporting should not be added until suppression thresholds are implemented and tested.
 - Public files should contain aggregates only.
@@ -96,7 +109,8 @@ The next automation step should produce a Google Sheets-friendly CSV from the sa
 ## Not Yet Automated
 
 - SurveyOL export download.
-- MailerLite send scheduling.
+- SurveyOL Email collector recipient import and invitation scheduling.
+- `CTS 2026` join validation and unmatched-response reporting.
 - Google Sheets workbook population.
 - Screenshot capture from Google Sheets.
 - Weekly report HTML generation from summary JSON.
