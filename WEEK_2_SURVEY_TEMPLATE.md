@@ -27,11 +27,12 @@ Preview of upcoming topics for Week 2:
 ## Survey Sections
 
 1. Previous-results encapsulation: Week 1 preliminary results summary and link.
-2. One CTS-administered topic: Pornography and the Church, 12 credence slider items.
-3. Three Week 2 participant-vote-determined independent live items from the Week 1 ballot leaders.
-4. A 7-item participant-nominated item ballot for future live items.
-5. A suggestion text box for future participant-nominated survey items.
-6. A preview of upcoming topics.
+2. Featured Topic header image immediately before the current-topic introduction line.
+3. One CTS-administered topic: Pornography and the Church, 12 credence slider items.
+4. Three Week 2 participant-vote-determined independent live items from the Week 1 ballot leaders.
+5. A 7-item participant-nominated item ballot for future live items.
+6. A suggestion text box for future participant-nominated survey items.
+7. A preview of upcoming topics.
 
 ## Previous-Results Encapsulation
 
@@ -111,6 +112,8 @@ Add the narrow section header images before the matching sections when practical
 - Featured topic header: `https://christianthoughtsurvey.com/assets/featured-topic-header.png`
 - Independent items header: `https://christianthoughtsurvey.com/assets/independent-items-header.png`
 
+Featured topic header placement rule: place the Featured Topic header image after the previous-results encapsulation and immediately before the current-week topic introduction. Prefix the topic-introduction line with `◉ ` every week.
+
 ### Block 1
 
 ```text
@@ -120,7 +123,7 @@ Last week's preliminary report is now posted: Week 1, Divorce and Remarriage. Th
 Full report: https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/
 
 [Text]
-Main topic for the first 12 survey items: Pornography and the Church.
+◉ Main topic for the first 12 survey items: Pornography and the Church.
 
 Default response format for live survey items: 0 = strongly disagree, 50 = unsure/mixed, 100 = strongly agree.
 

@@ -40,11 +40,11 @@ MAILERLITE_UNIVERSAL_SCRIPT = """<!-- MailerLite Universal -->
 <!-- End MailerLite Universal -->"""
 MAILERLITE_NEWSLETTER_FORM_EMBED = '<div class="ml-embedded" data-form="EQ6WXD"></div>'
 WEEKLY_STRUCTURE_LIST = """<ol class="process-list" type="A">
-  <li><strong>One CTS-administered topic:</strong> 12 related survey items from the CTS topic bank.</li>
+  <li><strong>Last week's results summary and link:</strong> a brief summary and a link to the primary CTS website page containing the previous week's results and reports.</li>
+  <li><strong>One CTS-administered topic:</strong> the Featured Topic banner appears immediately before a <strong>◉ Main topic...</strong> introduction line, followed by 12 related survey items from the CTS topic bank.</li>
   <li><strong>Three participant-vote-determined questions:</strong> 3 additional live survey items chosen based on the previous week's participant vote. These are intentionally independent from the weekly CTS-administered topic.</li>
   <li><strong>A participant-nominated item ballot:</strong> 7 AI-polished ballot items selected from the previous week's participant nominations, with AI-created seed items added only when fewer than 7 suitable participant nominations are available. Ballot items are selected for clarity, relevance, novelty, and likely participant tension.</li>
   <li><strong>A text box:</strong> to suggest survey items to be voted on next week and possibly featured in the following week's survey.</li>
-  <li><strong>Last week's results summary and link:</strong> a brief summary and a link to the primary CTS website page containing the previous week's results and reports.</li>
   <li><strong>A preview of upcoming topics:</strong> The topics for the next three weeks will be featured to allow for mental preparation.</li>
 </ol>"""
 RESPONSE_RULE_NOTE = "The 15 live survey items use credence sliders. The participant-nominated item ballot and suggestion text box are administrative inputs rather than survey-item responses."
@@ -882,7 +882,7 @@ def render_home(page: Page, prefix: str) -> str:
         <div class="hero-copy">
           <p class="eyebrow">{escape(page.eyebrow)}</p>
           <h1 id="page-title">{page.title}</h1>
-          <p class="lede"><strong>Christian Thought Survey is being revived as a weekly research project for Christian ministers.</strong> Each Weekly Survey will pair one CTS-administered topic with 12 related items, 3 participant-vote-determined questions, a 7-item AI-polished participant-nominated item ballot, a suggestion text box, last week's results summary and link, and a preview of upcoming topics.</p>
+          <p class="lede"><strong>Christian Thought Survey is being revived as a weekly research project for Christian ministers.</strong> Each Weekly Survey will begin with last week's results summary and link, then a Featured Topic banner and <strong>◉ Main topic...</strong> introduction before 12 CTS-administered items, 3 participant-vote-determined questions, a 7-item AI-polished participant-nominated item ballot, a suggestion text box, and a preview of upcoming topics.</p>
           <div class="button-row">
             <a class="button" href="{page_url(prefix, WEEK_1_REPORT_OUTPUT)}">Latest Weekly Report</a>
             <a class="button secondary" href="{page_url(prefix, "weekly-survey-reports/index.html")}">All Weekly Reports</a>

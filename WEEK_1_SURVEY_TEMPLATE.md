@@ -109,11 +109,13 @@ Add the narrow section header images before the matching sections:
 - Featured topic header: `https://christianthoughtsurvey.com/assets/featured-topic-header.png`
 - Independent items header: `https://christianthoughtsurvey.com/assets/independent-items-header.png`
 
+Featured topic header placement rule: place the Featured Topic header image immediately before the current-week topic introduction. Prefix the topic-introduction line with `◉ ` every week.
+
 ### Block 1
 
 ```text
 [Text]
-Main topic for the first 12 survey items: Divorce and Remarriage.
+◉ Main topic for the first 12 survey items: Divorce and Remarriage.
 
 Default response format for live survey items: 0 = strongly disagree, 50 = unsure/mixed, 100 = strongly agree.
 

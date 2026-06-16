@@ -46,16 +46,18 @@ Newsletter-only subscribers should receive report notices and topic previews, no
 ## Build The Survey
 
 1. Select one CTS-administered topic from `CTS 2026 Weekly Topic Bank.md`.
-2. Review the selected topic for clarity and tension potential before fielding it, then add the narrow Featured Topic header image and the topic's 12 survey items as required 0-100 credence sliders.
-3. Add the narrow Independent Items header image, then add 3 participant-vote-determined live survey items from the previous week's ballot. These items should be semantically clear, orthogonal to the weekly CTS-administered topic, not copied from the current topic bank, and likely to generate meaningful tension or spread. For Week 1 only, use the seeded items in `WEEK_1_SURVEY_TEMPLATE.md`.
-4. Add the participant-nominated item ballot. Review participant suggestions with AI assistance, polish them for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance, and reduce them to 7 ballot items. If fewer than 7 suitable participant nominations are available, add AI-created seed items to complete the ballot. The older 200-item CTS survey may be indexed as a reference pool for themes or seed ideas, but ballot items should be rewritten for current clarity and should not be copied mechanically.
-5. Save a brief item-audit note for the 3 independent live items and 7 ballot items before finalizing SurveyOL.
-6. Add a text box for future participant-nominated survey items.
-7. Add a brief last-week results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
-8. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
-9. Confirm the full-time ministry participation note appears in the website/contact materials and email copy. Do not add a separate eligibility confirmation item inside the weekly SurveyOL survey unless CTS intentionally reintroduces one.
-10. Create the placeholder public report page before the first SurveyOL invitation batch. The placeholder should use the stable report URL, state that the survey is open, name the topic, identify the expected first-report date, and explain that preliminary results will be refreshed each Tuesday morning until final close. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
-11. Before any full participant send, remove all closed-test wording from the SurveyOL title, intro text, previous-results placeholder, and end-of-survey page.
+2. Review the selected topic for clarity and tension potential before fielding it.
+3. Add a brief last-week results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
+4. Add the narrow Featured Topic header image immediately before the current-topic introduction line. Prefix that line with `◉ ` every week, for example: `◉ Main topic for the first 12 survey items: Pornography and the Church.`
+5. Add the topic's 12 survey items as required 0-100 credence sliders.
+6. Add the narrow Independent Items header image, then add 3 participant-vote-determined live survey items from the previous week's ballot. These items should be semantically clear, orthogonal to the weekly CTS-administered topic, not copied from the current topic bank, and likely to generate meaningful tension or spread. For Week 1 only, use the seeded items in `WEEK_1_SURVEY_TEMPLATE.md`.
+7. Add the participant-nominated item ballot. Review participant suggestions with AI assistance, polish them for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance, and reduce them to 7 ballot items. If fewer than 7 suitable participant nominations are available, add AI-created seed items to complete the ballot. The older 200-item CTS survey may be indexed as a reference pool for themes or seed ideas, but ballot items should be rewritten for current clarity and should not be copied mechanically.
+8. Save a brief item-audit note for the 3 independent live items and 7 ballot items before finalizing SurveyOL.
+9. Add a text box for future participant-nominated survey items.
+10. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
+11. Confirm the full-time ministry participation note appears in the website/contact materials and email copy. Do not add a separate eligibility confirmation item inside the weekly SurveyOL survey unless CTS intentionally reintroduces one.
+12. Create the placeholder public report page before the first SurveyOL invitation batch. The placeholder should use the stable report URL, state that the survey is open, name the topic, identify the expected first-report date, and explain that preliminary results will be refreshed each Tuesday morning until final close. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
+13. Before any full participant send, remove all closed-test wording from the SurveyOL title, intro text, previous-results placeholder, and end-of-survey page.
 
 ## Send The Survey
 
@@ -136,6 +138,7 @@ Before each weekly newsletter and before each SurveyOL invitation batch:
 - The first 15 live survey items are marked required in SurveyOL.
 - SurveyOL title, descriptive text, previous-results placeholder, and end-of-survey page contain no closed-test language before production send.
 - Placeholder public report page exists, is linked from the reports index, and has been pushed before the first production invitation batch.
+- Featured Topic header image appears immediately before the `◉ Main topic...` introduction line.
 - SurveyOL Email collector is `Open`, `Anonymous Responses` is `Off`, and any Web Link collector is closed or intentionally excluded from the launch.
 - SurveyOL recipient import comes from `CTS 2026`, excludes do-not-email records, and contains no email-only contacts with missing names.
 - A test Email collector export confirms that responses can be joined back to `CTS 2026` by email identity or a stable private join key.

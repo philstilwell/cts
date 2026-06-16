@@ -6,11 +6,11 @@ Static GitHub Pages mirror for the revived Christian Thought Survey site.
 
 How the weekly cycle works:
 
-1. One CTS-administered topic: 12 related survey items from the CTS topic bank.
-2. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote. These are intentionally independent from the weekly CTS-administered topic.
-3. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations, with AI-created seed items added only when fewer than 7 suitable participant nominations are available. Ballot items are selected for clarity, relevance, novelty, and likely participant tension.
-4. **A text box:** to suggest survey items to be voted on next week and possibly featured in the following week's survey.
-5. Last week's results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results and reports.
+1. Last week's results summary and link: a brief summary and a link to the primary CTS website page containing the previous week's results and reports.
+2. One CTS-administered topic: the Featured Topic header image appears immediately before a `◉ Main topic...` introduction line, followed by 12 related survey items from the CTS topic bank.
+3. Three participant-vote-determined questions: 3 additional live survey items chosen based on the previous week's participant vote. These are intentionally independent from the weekly CTS-administered topic.
+4. A participant-nominated item ballot: 7 AI-polished ballot items selected from the previous week's participant nominations, with AI-created seed items added only when fewer than 7 suitable participant nominations are available. Ballot items are selected for clarity, relevance, novelty, and likely participant tension.
+5. **A text box:** to suggest survey items to be voted on next week and possibly featured in the following week's survey.
 6. A preview of upcoming topics: The topics for the next three weeks will be featured to allow for mental preparation.
 
 The 15 live survey items use credence sliders. The participant-nominated item ballot and suggestion text box are administrative inputs rather than survey-item responses.
