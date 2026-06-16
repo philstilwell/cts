@@ -1026,6 +1026,34 @@ h3 {
   box-shadow: 0 12px 28px rgba(23, 40, 45, 0.08);
 }
 
+.week-report .result-table-figure:has(#item-overview-table td[colspan]) {
+  min-height: 101.58rem;
+}
+
+.week-report .result-table-figure:has(#ballot-table td[colspan]) {
+  min-height: 24.32rem;
+}
+
+.week-report .result-table-figure:has(#next-ballot-table td[colspan]) {
+  min-height: 32.1rem;
+}
+
+.week-report #item-card-grid:empty {
+  min-height: 186.45rem;
+}
+
+.week-report #item-card-grid:empty::before {
+  content: "Loading item-level detail...";
+  display: block;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(23, 40, 45, 0.08);
+  font-weight: 750;
+}
+
 .results-table {
   min-width: 900px;
 }
@@ -1515,6 +1543,10 @@ h3 {
 
   .sparkline-wrap {
     grid-template-columns: 1fr;
+  }
+
+  .week-report #item-card-grid:empty {
+    min-height: 340rem;
   }
 
   .footer-inner {

@@ -6,6 +6,7 @@
 *.token
 __pycache__/
 *.pyc
+node_modules/
 llm-paper-assistant/
 data/private/
 data/raw/
