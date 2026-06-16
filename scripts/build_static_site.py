@@ -17,11 +17,12 @@ SITE_DESCRIPTION = (
 )
 SITE_URL = "https://christianthoughtsurvey.com"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
-UPDATED = "June 7, 2026"
-SITEMAP_LASTMOD = "2026-06-07"
+UPDATED = "June 16, 2026"
+SITEMAP_LASTMOD = "2026-06-16"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
+WEEK_2_REPORT_OUTPUT = "weekly-survey-reports/week-002-pornography-and-the-church/index.html"
 NEWSLETTER_CONFIRMATION_OUTPUT = "email-confirmation/index.html"
 OG_IMAGE = f"{SITE_URL}/assets/cts-research-overview.png"
 OG_IMAGE_ALT = "Christian Thought Survey research overview graphic"
@@ -188,25 +189,26 @@ PAGES = [
         ),
         content="""
 <div class="wp-content results-hub">
-  <p>This page is the public hub for weekly Christian Thought Survey results. The newest report is featured first; earlier weekly reports appear below in a compact grid so readers can scan topics quickly.</p>
+  <p>This page is the public hub for weekly Christian Thought Survey results. The newest survey page is featured first; earlier weekly reports appear below in a compact grid so readers can scan topics quickly.</p>
 
   <section class="latest-report-card" aria-labelledby="latest-report-heading">
     <div>
-      <p class="section-label">Newest report</p>
-      <h2 id="latest-report-heading">Week 1: Divorce and Remarriage</h2>
-      <p>The stable report page is published now. Results, key tensions, chart previews, ballot outcomes, and data-release notes will be added after responses are reviewed.</p>
+      <p class="section-label">Newest survey page</p>
+      <h2 id="latest-report-heading">Week 2: Pornography and the Church</h2>
+      <p>The Week 2 placeholder page is published before SurveyOL invitations are sent. It names the topic, planned survey items, participant ballot, reporting schedule, and privacy-safe data notes.</p>
       <div class="button-row">
-        <a class="button" href="{week_1_report_url}">Open Full Report</a>
+        <a class="button" href="{week_2_report_url}">Open Week 2 Placeholder</a>
+        <a class="button light" href="{week_1_report_url}">Open Week 1 Report</a>
       </div>
     </div>
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Results pending</dd>
+        <dd>Survey placeholder</dd>
       </div>
       <div>
         <dt>Survey topic</dt>
-        <dd>Divorce and Remarriage</dd>
+        <dd>Pornography and the Church</dd>
       </div>
       <div>
         <dt>Report rhythm</dt>
@@ -227,11 +229,17 @@ PAGES = [
 
   <h2>Weekly report grid</h2>
   <div class="report-preview-grid">
+    <a class="report-preview-card" href="{week_2_report_url}">
+      <span class="report-week">Week 2</span>
+      <strong>Pornography and the Church</strong>
+      <span class="report-status preliminary">Survey placeholder</span>
+      <span>Planned survey items, Week 1 encapsulation, participant ballot, and reporting schedule.</span>
+    </a>
     <a class="report-preview-card" href="{week_1_report_url}">
       <span class="report-week">Week 1</span>
       <strong>Divorce and Remarriage</strong>
-      <span class="report-status pending">Results pending</span>
-      <span>12 featured-topic items, 3 independent live items, a 7-item ballot, and upcoming topic previews.</span>
+      <span class="report-status preliminary">Preliminary results</span>
+      <span>Current aggregate results for 15 slider items, a 7-item ballot, and participant suggestion counts.</span>
     </a>
   </div>
 
@@ -781,6 +789,7 @@ def fill_links(html: str, prefix: str) -> str:
         "home_url": page_url(prefix, "index.html"),
         "weekly_url": page_url(prefix, "weekly-survey-reports/index.html"),
         "week_1_report_url": page_url(prefix, WEEK_1_REPORT_OUTPUT),
+        "week_2_report_url": page_url(prefix, WEEK_2_REPORT_OUTPUT),
         "newsletter_confirmation_url": page_url(prefix, NEWSLETTER_CONFIRMATION_OUTPUT),
         "archive_url": page_url(prefix, "previous-results-archive/index.html"),
         "privacy_url": page_url(prefix, "privacy-data-release/index.html"),

@@ -20,7 +20,7 @@
   },
   "update_policy": {
     "will_recalculate": true,
-    "note": "This preliminary report may be recalculated as additional responses trickle in. A final report should be stamped after the response window closes and the SurveyOL export is reviewed."
+    "note": "This preliminary report will be refreshed each Tuesday morning while the survey remains open. It may also be refreshed sooner if new responses materially change the results. A final report should be stamped after the response window closes and the SurveyOL export is reviewed."
   },
   "slider_scale": {
     "min": 0,

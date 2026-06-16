@@ -764,7 +764,8 @@ h3 {
   font-size: 0.93rem;
 }
 
-.page-week-001-report .article-shell {
+.page-week-001-report .article-shell,
+.page-week-002-report .article-shell {
   width: min(1120px, calc(100% - 32px));
 }
 
