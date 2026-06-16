@@ -134,7 +134,8 @@ def s23_smoothed_percentages(values: list[float]) -> list[float]:
         return [0.0] * 10
     counts = s23_bucket_counts(values)
     padded = [counts[0], *counts, counts[-1]]
-    return [((padded[index] * 0.03 + padded[index + 1] + padded[index + 2] * 0.03) / len(values)) * 100 for index in range(10)]
+    smoothed = [((padded[index] * 0.03 + padded[index + 1] + padded[index + 2] * 0.03) / len(values)) * 100 for index in range(10)]
+    return [min(100.0, value) for value in smoothed]
 
 
 def simple_histogram_counts(values: list[float]) -> list[int]:
@@ -143,6 +144,21 @@ def simple_histogram_counts(values: list[float]) -> list[int]:
         bucket = 9 if value >= 90 else max(0, min(9, int(value // 10)))
         counts[bucket] += 1
     return counts
+
+
+def doubt_dogma(values: list[float]) -> dict[str, Any]:
+    exact_zero_count = count_equal(values, 0)
+    exact_hundred_count = count_equal(values, 100)
+    endpoint_count = exact_zero_count + exact_hundred_count
+    non_endpoint_count = len(values) - endpoint_count
+    ratio = None if endpoint_count == 0 else non_endpoint_count / endpoint_count
+    return {
+        "non_endpoint_count": non_endpoint_count,
+        "endpoint_count": endpoint_count,
+        "exact_zero_count": exact_zero_count,
+        "exact_hundred_count": exact_hundred_count,
+        "ratio": rounded(ratio, 3),
+    }
 
 
 def key_tension(values: list[float], iqr: float | None, stdev: float | None, minimum_n: int) -> dict[str, Any]:
@@ -211,6 +227,7 @@ def summarize_item(
         "iqr": rounded(iqr, 2),
         "standard_deviation": rounded(stdev, 2),
         "disagreement_score": rounded(iqr, 2),
+        "doubt_dogma": doubt_dogma(values),
         "key_tension": key_tension(values, iqr, stdev, minimum_key_tension_n),
         "distribution": {
             "cut_points": CUT_POINTS,

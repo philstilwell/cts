@@ -132,13 +132,13 @@
   <section class="report-section" aria-labelledby="overview-heading">
     <h2 id="overview-heading">All 15 Slider Items At A Glance</h2>
     <p>The table uses the CTS 0-100 credence scale: 0 means strong disagreement, 50 means uncertain or mixed, and 100 means strong agreement.</p>
+    <p>The distribution column uses smoothed 10-bin sparklines, scaled consistently across all items in this report. The 100% guide line shows where a bin would land if it represented a full response count on the shared scale. The Doubt/Dogma ratio is shown as non-endpoint responses to endpoint responses.</p>
     <figure class="result-table-figure">
       <table class="results-table" id="item-overview-table">
         <thead>
           <tr>
             <th>Item</th>
             <th>Mean</th>
-            <th>Median</th>
             <th>
               <span class="metric-popover">
                 <button class="metric-popover-trigger" type="button">IQR</button>
@@ -148,13 +148,21 @@
                 </span>
               </span>
             </th>
-            <th>Low / Mid / High</th>
+            <th>
+              <span class="metric-popover">
+                <button class="metric-popover-trigger" type="button">Doubt/Dogma</button>
+                <span class="metric-popover-panel" role="note">
+                  <strong>Doubt/Dogma ratio</strong>
+                  Shown as n:m. The first number is non-endpoint responses, from 1 to 99; the second number is endpoint responses, exactly 0 or 100. Higher first numbers mean respondents avoided absolutes more often.
+                </span>
+              </span>
+            </th>
             <th>Distribution</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td colspan="6">Loading aggregate results...</td>
+            <td colspan="5">Loading aggregate results...</td>
           </tr>
         </tbody>
       </table>
@@ -218,7 +226,7 @@
 
   <section class="report-section" aria-labelledby="data-heading">
     <h2 id="data-heading">Public Data Note</h2>
-    <p>The current public data file contains aggregate item summaries, band counts, and ballot scores only. It excludes names, email addresses, response identifiers, respondent-level rows, and raw free-text suggestions.</p>
+    <p>The current public data file contains aggregate item summaries, distribution series, endpoint counts, and ballot scores only. It excludes names, email addresses, response identifiers, respondent-level rows, and raw free-text suggestions.</p>
     <div class="button-row">
       <a class="button light" href="../../data/public/week-001-preliminary-summary.json">Open aggregate JSON</a>
       <a class="button light" href="../../weekly-survey-reports/">Back to report index</a>
@@ -261,6 +269,41 @@
         return Math.max(0, Math.min(100, (count / total) * 100));
       };
 
+      const formatPercent = (value) => {
+        if (value === null || value === undefined || Number.isNaN(Number(value))) return "0.0";
+        return Number(value).toFixed(1);
+      };
+
+      const formatDoubtDogma = (item) => {
+        const metric = item.doubt_dogma;
+        if (!metric) return "n/a";
+        return `${metric.non_endpoint_count}:${metric.endpoint_count}`;
+      };
+
+      const sparklineValues = (item) => {
+        const values = item.distribution && item.distribution.s23_smoothed_percentages;
+        if (!Array.isArray(values) || values.length !== 10) return null;
+        return values.map((value) => Math.max(0, Math.min(100, Number(value) || 0)));
+      };
+
+      const sparklineBinLabel = (item, index) => {
+        const cuts = item.distribution && item.distribution.cut_points;
+        if (!Array.isArray(cuts) || cuts.length < index + 2) return `Bin ${index + 1}`;
+        return `${cuts[index]}-${cuts[index + 1]}`;
+      };
+
+      const sparklineColorClass = (index) => {
+        if (index <= 2) return "low";
+        if (index <= 6) return "middle";
+        return "high";
+      };
+
+      const sparklineMax = (items) => {
+        const values = items.flatMap((item) => sparklineValues(item) || []);
+        const maxValue = Math.max(100, ...values);
+        return Math.ceil((maxValue * 1.05) / 5) * 5;
+      };
+
       const createBand = (item) => {
         const band = document.createElement("div");
         band.className = "band-bar";
@@ -279,6 +322,32 @@
         return band;
       };
 
+      const createSparkline = (item, scaleMax) => {
+        const values = sparklineValues(item);
+        if (!values) return createBand(item);
+
+        const chart = document.createElement("div");
+        chart.className = "sparkline-chart";
+        chart.style.setProperty("--hundred-line", `${Math.max(0, Math.min(100, (100 / scaleMax) * 100))}%`);
+        chart.setAttribute("role", "img");
+        chart.setAttribute(
+          "aria-label",
+          `Smoothed 10-bin distribution for Q${item.number}; 100 percent guide line shown at the shared scale level: ${values.map((value, index) => `${sparklineBinLabel(item, index)} ${formatPercent(value)}%`).join("; ")}`
+        );
+
+        values.forEach((value, index) => {
+          const bar = document.createElement("span");
+          bar.className = `sparkline-bar ${sparklineColorClass(index)}`;
+          const height = value > 0 ? (value / scaleMax) * 100 : 0;
+          bar.style.height = `${height}%`;
+          bar.style.minHeight = value > 0 ? "3px" : "0";
+          bar.title = `${sparklineBinLabel(item, index)}: ${formatPercent(value)}%`;
+          chart.appendChild(bar);
+        });
+
+        return chart;
+      };
+
       const itemClass = (item) => {
         const lowShare = item.bands.low / item.n;
         const highShare = item.bands.high / item.n;
@@ -292,7 +361,7 @@
         return section === "participant_vote_seeded" ? "Participant-vote seeded" : "Divorce and Remarriage";
       };
 
-      const renderTable = (items) => {
+      const renderTable = (items, scaleMax) => {
         tableBody.textContent = "";
         items.forEach((item) => {
           const row = document.createElement("tr");
@@ -306,29 +375,32 @@
           itemCell.appendChild(itemText);
           row.appendChild(itemCell);
 
-          ["mean", "median"].forEach((key) => {
-            const cell = document.createElement("td");
-            cell.textContent = formatNumber(item[key]);
-            row.appendChild(cell);
-          });
+          const meanCell = document.createElement("td");
+          meanCell.textContent = formatNumber(item.mean);
+          row.appendChild(meanCell);
 
           const iqrCell = document.createElement("td");
           iqrCell.textContent = `${formatNumber(item.q1)}-${formatNumber(item.q3)}`;
           row.appendChild(iqrCell);
 
-          const bandCounts = document.createElement("td");
-          bandCounts.textContent = `${item.bands.low} / ${item.bands.middle} / ${item.bands.high}`;
-          row.appendChild(bandCounts);
+          const doubtDogmaCell = document.createElement("td");
+          doubtDogmaCell.className = "doubt-dogma-cell";
+          doubtDogmaCell.textContent = formatDoubtDogma(item);
+          if (item.doubt_dogma) {
+            doubtDogmaCell.title = `${item.doubt_dogma.non_endpoint_count} non-endpoint responses / ${item.doubt_dogma.endpoint_count} endpoint responses`;
+          }
+          row.appendChild(doubtDogmaCell);
 
           const barCell = document.createElement("td");
-          barCell.appendChild(createBand(item));
+          barCell.className = "sparkline-cell";
+          barCell.appendChild(createSparkline(item, scaleMax));
           row.appendChild(barCell);
 
           tableBody.appendChild(row);
         });
       };
 
-      const renderCards = (items) => {
+      const renderCards = (items, scaleMax) => {
         cardGrid.textContent = "";
         items.forEach((item) => {
           const card = document.createElement("article");
@@ -355,10 +427,19 @@
               </span>
             </span>
           `;
+          const doubtDogmaLabel = `
+            <span class="metric-popover">
+              <button class="metric-popover-trigger" type="button">Doubt/Dogma</button>
+              <span class="metric-popover-panel" role="note">
+                <strong>Doubt/Dogma ratio</strong>
+                Shown as n:m. The first number is non-endpoint responses, from 1 to 99; the second number is endpoint responses, exactly 0 or 100. Higher first numbers mean respondents avoided absolutes more often.
+              </span>
+            </span>
+          `;
           [
             ["Mean", item.mean],
-            ["Median", item.median],
             ["IQR", `${formatNumber(item.q1)}-${formatNumber(item.q3)}`],
+            ["Doubt/Dogma", formatDoubtDogma(item)],
             ["SD", item.standard_deviation]
           ].forEach(([label, value]) => {
             const wrap = document.createElement("div");
@@ -366,6 +447,8 @@
             const dd = document.createElement("dd");
             if (label === "IQR") {
               dt.innerHTML = iqrLabel;
+            } else if (label === "Doubt/Dogma") {
+              dt.innerHTML = doubtDogmaLabel;
             } else {
               dt.textContent = label;
             }
@@ -376,12 +459,12 @@
           });
 
           const barWrap = document.createElement("div");
-          barWrap.className = "band-wrap";
-          barWrap.appendChild(createBand(item));
+          barWrap.className = "sparkline-wrap";
           const legend = document.createElement("p");
-          legend.className = "band-legend";
-          legend.textContent = `Low ${item.bands.low}, middle ${item.bands.middle}, high ${item.bands.high}; n=${item.n}`;
+          legend.className = "sparkline-legend";
+          legend.textContent = "Smoothed 10-bin distribution";
           barWrap.appendChild(legend);
+          barWrap.appendChild(createSparkline(item, scaleMax));
 
           card.appendChild(meta);
           card.appendChild(heading);
@@ -433,14 +516,15 @@
           return response.json();
         })
         .then((summary) => {
-          renderTable(summary.items);
-          renderCards(summary.items);
+          const scaleMax = sparklineMax(summary.items);
+          renderTable(summary.items, scaleMax);
+          renderCards(summary.items, scaleMax);
           renderBallot(summary.ballot);
           renderNextBallot(summary.next_week_ballot_draft);
         })
         .catch(() => {
           if (tableBody) {
-            tableBody.innerHTML = "<tr><td colspan=\"6\">The aggregate summary file could not be loaded. Please use the public JSON link below.</td></tr>";
+            tableBody.innerHTML = "<tr><td colspan=\"5\">The aggregate summary file could not be loaded. Please use the public JSON link below.</td></tr>";
           }
           if (ballotBody) {
             ballotBody.innerHTML = "<tr><td colspan=\"3\">The aggregate summary file could not be loaded.</td></tr>";

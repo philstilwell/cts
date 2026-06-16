@@ -65,6 +65,17 @@
           "iqr": {"type": ["number", "null"]},
           "standard_deviation": {"type": ["number", "null"]},
           "disagreement_score": {"type": ["number", "null"]},
+          "doubt_dogma": {
+            "type": "object",
+            "required": ["non_endpoint_count", "endpoint_count", "exact_zero_count", "exact_hundred_count", "ratio"],
+            "properties": {
+              "non_endpoint_count": {"type": "integer", "minimum": 0},
+              "endpoint_count": {"type": "integer", "minimum": 0},
+              "exact_zero_count": {"type": "integer", "minimum": 0},
+              "exact_hundred_count": {"type": "integer", "minimum": 0},
+              "ratio": {"type": ["number", "null"]}
+            }
+          },
           "key_tension": {
             "type": "object",
             "required": ["flag", "reasons"],
@@ -94,7 +105,7 @@
               },
               "s23_smoothed_percentages": {
                 "type": "array",
-                "items": {"type": "number"}
+                "items": {"type": "number", "minimum": 0, "maximum": 100}
               }
             }
           }

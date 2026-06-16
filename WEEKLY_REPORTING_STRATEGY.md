@@ -262,6 +262,7 @@ Why this is worth preserving:
 - Exact boundary responses such as 10, 20, 50, and 100 are handled gracefully instead of being forced awkwardly into one bucket.
 - Endpoint padding keeps the first and last visible buckets from behaving differently just because they have only one natural neighbor.
 - The 3% adjacent-bucket smoothing keeps the mini-chart readable without erasing strong distribution features.
+- Public sparkline display values are capped at 100% after smoothing, because endpoint-heavy items can otherwise exceed 100% visually even though no bin can represent more than the full response count.
 - The values become percentages, so the shape can be compared across items with different response counts.
 - The method preserves the "pulse" of all credences much better than a mean or median alone.
 
