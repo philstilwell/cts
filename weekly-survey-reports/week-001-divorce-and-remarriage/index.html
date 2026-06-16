@@ -132,7 +132,7 @@
   <section class="report-section" aria-labelledby="overview-heading">
     <h2 id="overview-heading">All 15 Slider Items At A Glance</h2>
     <p>The table uses the CTS 0-100 credence scale: 0 means strong disagreement, 50 means uncertain or mixed, and 100 means strong agreement.</p>
-    <p>The distribution column uses smoothed 10-bin sparklines, scaled consistently across all items in this report. The 100% guide line shows where a bin would land if it represented a full response count on the shared scale. The Doubt/Dogma ratio is shown as non-endpoint responses to endpoint responses.</p>
+    <p>The distribution column uses smoothed 10-bin sparklines, scaled consistently on a fixed 0-100 public display scale. The 100% guide line marks the top of that scale. The Doubt/Dogma ratio is shown as non-endpoint responses to endpoint responses.</p>
     <figure class="result-table-figure">
       <table class="results-table" id="item-overview-table">
         <thead>
@@ -298,11 +298,7 @@
         return "high";
       };
 
-      const sparklineMax = (items) => {
-        const values = items.flatMap((item) => sparklineValues(item) || []);
-        const maxValue = Math.max(100, ...values);
-        return Math.ceil((maxValue * 1.05) / 5) * 5;
-      };
+      const sparklineMax = () => 100;
 
       const createBand = (item) => {
         const band = document.createElement("div");
@@ -328,11 +324,10 @@
 
         const chart = document.createElement("div");
         chart.className = "sparkline-chart";
-        chart.style.setProperty("--hundred-line", `${Math.max(0, Math.min(100, (100 / scaleMax) * 100))}%`);
         chart.setAttribute("role", "img");
         chart.setAttribute(
           "aria-label",
-          `Smoothed 10-bin distribution for Q${item.number}; 100 percent guide line shown at the shared scale level: ${values.map((value, index) => `${sparklineBinLabel(item, index)} ${formatPercent(value)}%`).join("; ")}`
+          `Smoothed 10-bin distribution for Q${item.number}; 100 percent guide line shown at the top of the fixed 0 to 100 display scale: ${values.map((value, index) => `${sparklineBinLabel(item, index)} ${formatPercent(value)}%`).join("; ")}`
         );
 
         values.forEach((value, index) => {

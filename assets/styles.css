@@ -1083,6 +1083,10 @@ h3 {
 }
 
 .sparkline-chart {
+  --sparkline-top-pad: 1.05rem;
+  --sparkline-right-pad: 1.6rem;
+  --sparkline-bottom-pad: 0.28rem;
+  --sparkline-left-pad: 0.42rem;
   position: relative;
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
@@ -1091,7 +1095,7 @@ h3 {
   width: min(100%, 18rem);
   min-width: 170px;
   height: 3.35rem;
-  padding: 1.05rem 1.6rem 0.28rem 0.42rem;
+  padding: var(--sparkline-top-pad) var(--sparkline-right-pad) var(--sparkline-bottom-pad) var(--sparkline-left-pad);
   border: 1px solid rgba(23, 40, 45, 0.16);
   border-radius: 8px;
   overflow: visible;
@@ -1102,11 +1106,11 @@ h3 {
   content: "";
   position: absolute;
   z-index: 1;
-  left: 0.42rem;
-  right: 1.6rem;
-  bottom: var(--hundred-line, 68%);
+  left: var(--sparkline-left-pad);
+  right: var(--sparkline-right-pad);
+  top: var(--sparkline-top-pad);
   border-top: 2px solid rgba(23, 77, 81, 0.5);
-  transform: translateY(1px);
+  transform: translateY(-1px);
 }
 
 .sparkline-chart::after {
@@ -1114,14 +1118,14 @@ h3 {
   position: absolute;
   z-index: 3;
   right: 0.3rem;
-  bottom: var(--hundred-line, 68%);
+  top: var(--sparkline-top-pad);
   padding: 0 0.18rem;
   color: rgba(23, 77, 81, 0.82);
   background: rgba(255, 255, 255, 0.92);
   font-size: 0.62rem;
   font-weight: 850;
   line-height: 1.1;
-  transform: translateY(50%);
+  transform: translateY(-50%);
 }
 
 .sparkline-bar {

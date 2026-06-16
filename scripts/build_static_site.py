@@ -326,7 +326,7 @@ PAGES = [
     </section>
     <section class="report-card">
       <h3>Distribution visuals</h3>
-      <p>Compact smoothed 10-bin sparklines for every credence item, using a shared scale, a 100% guide line, and capped display percentages when sample size permits.</p>
+      <p>Compact smoothed 10-bin sparklines for every credence item, using a shared fixed 0-100 scale, a 100% guide line, and capped display percentages when sample size permits.</p>
     </section>
     <section class="report-card">
       <h3>Correlations and scatterplots</h3>

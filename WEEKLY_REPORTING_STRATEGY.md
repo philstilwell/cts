@@ -129,8 +129,8 @@ The public sparkline is a display of the S23-smoothed distribution series, not r
 - Use 10 bins: 0-10, 10-20, ..., 90-100.
 - Use the S23 half-boundary bucket logic, endpoint padding, and 3% adjacent-bucket smoothing.
 - Cap public display percentages at 100 after smoothing.
-- Use a shared report-level scale whose maximum is at least 100 and includes a small visual headroom, such as `CEILING(MAX(100, max_display_value) * 1.05, 5)`.
-- Draw a 100% guide line at `100 / shared_scale`.
+- Use a fixed public display scale of 0-100 after capping, with no visual headroom above 100.
+- Draw the 100% guide line at the top of the plot area so a true 100% bin reaches the marker.
 - Use a plain white chart field without background tint or auxiliary grid lines.
 - Color low bins with brick, middle bins with gold, and high bins with teal.
 
@@ -311,13 +311,13 @@ For revived CTS reports, keep this idea but avoid hardcoding `120` unless that v
 =SPARKLINE(AL18:AL27,{"charttype","column";"ymin",0;"ymax",$B$2;"color","#334155"})
 ```
 
-Where `$B$2` contains a fixed maximum for the whole report, for example:
+Where `$B$2` contains the fixed public display maximum for the whole report:
 
 ```gs
-=MAX(5,CEILING(MAX($AL$18:$BC$27)*1.05,5))
+=100
 ```
 
-This gives all 15 item sparklines the same scale while leaving a little visual headroom. In current CTS public reports, the shared scale should be anchored at 100, and any smoothed display values above 100 should be capped before rendering.
+This gives all 15 item sparklines the same scale and makes a true 100% bin reach the 100% marker. In current CTS public reports, any smoothed display values above 100 should be capped before rendering.
 
 When creating the revived CTS reporting sheet, reuse the recovered S23 formula architecture rather than replacing it with a plain bucket formula. If SurveyOL exports require a different table shape, adapt the same principles: 10-point buckets, 50/50 handling of exact boundary responses, endpoint padding, and 3% adjacent-bucket smoothing. A direct generic formula is possible, but it is less valuable than the honed S23 approach and harder to audit:
 
