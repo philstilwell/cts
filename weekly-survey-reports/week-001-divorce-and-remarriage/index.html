@@ -136,7 +136,15 @@
             <th>Item</th>
             <th>Mean</th>
             <th>Median</th>
-            <th><abbr class="tooltip-term" title="Interquartile range: the middle 50% of responses, from the 25th to the 75th percentile.">IQR</abbr></th>
+            <th>
+              <span class="metric-popover">
+                <button class="metric-popover-trigger" type="button">IQR</button>
+                <span class="metric-popover-panel" role="note">
+                  <strong>Interquartile range</strong>
+                  The middle 50% of responses, from the 25th percentile to the 75th percentile. A range such as 63-100 means half of respondents landed between 63 and 100.
+                </span>
+              </span>
+            </th>
             <th>Low / Mid / High</th>
             <th>Distribution</th>
           </tr>
@@ -335,6 +343,15 @@
 
           const statGrid = document.createElement("dl");
           statGrid.className = "item-stat-grid";
+          const iqrLabel = `
+            <span class="metric-popover">
+              <button class="metric-popover-trigger" type="button">IQR</button>
+              <span class="metric-popover-panel" role="note">
+                <strong>Interquartile range</strong>
+                The middle 50% of responses, from the 25th percentile to the 75th percentile. A range such as 63-100 means half of respondents landed between 63 and 100.
+              </span>
+            </span>
+          `;
           [
             ["Mean", item.mean],
             ["Median", item.median],
@@ -344,7 +361,11 @@
             const wrap = document.createElement("div");
             const dt = document.createElement("dt");
             const dd = document.createElement("dd");
-            dt.textContent = label;
+            if (label === "IQR") {
+              dt.innerHTML = iqrLabel;
+            } else {
+              dt.textContent = label;
+            }
             dd.textContent = typeof value === "number" ? formatNumber(value) : value;
             wrap.appendChild(dt);
             wrap.appendChild(dd);
