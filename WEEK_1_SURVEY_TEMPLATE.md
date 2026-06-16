@@ -111,6 +111,8 @@ Add the narrow section header images before the matching sections:
 
 Featured topic header placement rule: place the Featured Topic header image immediately before the current-week topic introduction. Prefix the topic-introduction line with `◉ ` every week.
 
+SurveyOL topic-introduction style rule: make the main-topic line bold and enlarge it with `X↑` twice. Highlight only the topic name with the header gold background (`#e0a550`) and dark header text (`#553e15`). Keep the response-format line below it bold in black.
+
 ### Block 1
 
 ```text

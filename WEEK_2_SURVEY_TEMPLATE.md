@@ -116,6 +116,8 @@ Add the narrow section header images before the matching sections when practical
 
 Featured topic header placement rule: place the Featured Topic header image after the previous-results encapsulation and immediately before the current-week topic introduction. Prefix the topic-introduction line with `◉ ` every week.
 
+SurveyOL topic-introduction style rule: make the main-topic line bold and enlarge it with `X↑` twice. Highlight only the topic name with the header gold background (`#e0a550`) and dark header text (`#553e15`). Keep the response-format line below it bold in black.
+
 After importing Block 1, edit `Week 001 Survey Results` in SurveyOL's rich-text editor so it is an actual hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`. Style the linked label as bold, underlined, header-accent colored (`#553e15` in the current Week 2 styling), and enlarged with `X↑` twice. Do not leave a raw report URL visible to participants.
 
 ### Block 1
