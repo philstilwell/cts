@@ -10,9 +10,9 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 - Tuesday morning: publish the first weekly report for the survey launched one week earlier. The first report may be preliminary while responses continue to arrive, but it should clearly state that the survey remains open and will be recalculated as additional responses trickle in.
 - Tuesday morning: send the weekly newsletter to newsletter subscribers after the report is published. Include an encapsulation of the newest report plus a link to the full report.
-- Tuesday evening: launch the new weekly SurveyOL survey and begin sending invitations through the SurveyOL Email collector. Send up to 100 participant invitations per day until all eligible potential participants have been sent that week's invitation.
+- Tuesday evening: create the placeholder public report page for the new survey, launch the new weekly SurveyOL survey, and begin sending invitations through the SurveyOL Email collector. Send up to 100 participant invitations per day until all eligible potential participants have been sent that week's invitation.
 - Wednesday through Saturday, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
-- Every week: before any newsletter or survey-invitation send, remove or suppress unsubscribers, SurveyOL opt-outs, MailerLite unsubscribers, bounces, and do-not-email records from all relevant lists.
+- Every week: before any newsletter or survey-invitation send, remove or suppress from both MailerLite and SurveyOL any address that unsubscribed, opted out, bounced, or was marked do-not-email in either system.
 - Every weekly survey remains open for 3 weeks from its first invitation send. Close the SurveyOL collector after the 3-week response window, export the final raw results privately, and regenerate the public report as final.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
 
@@ -21,7 +21,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Monday afternoon: run the list-hygiene audit before the next newsletter and survey sends.
 - Tuesday morning: publish or refresh the weekly report, create the report encapsulation, update the site, and send or prepare the newsletter.
 - Tuesday morning after the report cycle: check whether any survey has reached the 3-week close date, then close and finalize reports as needed.
-- Tuesday evening: launch the new SurveyOL Email collector survey and send the first invitation batch.
+- Tuesday evening: create the placeholder public report page, launch the new SurveyOL Email collector survey, and send the first invitation batch.
 - Wednesday through Saturday evenings: send the next invitation batch when eligible participants remain uninvited.
 
 These reminders can execute only when the relevant SurveyOL, MailerLite, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
@@ -54,19 +54,19 @@ Newsletter-only subscribers should receive report notices and topic previews, no
 7. Add a brief last-week results summary and a link to the public weekly report page. For Week 1, use the no-previous-results placeholder.
 8. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
 9. Confirm the full-time ministry participation note appears in the website/contact materials and email copy. Do not add a separate eligibility confirmation item inside the weekly SurveyOL survey unless CTS intentionally reintroduces one.
-10. Keep the public report URL stable before the send. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
+10. Create the placeholder public report page before the first SurveyOL invitation batch. The placeholder should use the stable report URL, state that the survey is open, name the topic, identify the expected first-report date, and promise recalculation as responses arrive. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
 11. Before any full participant send, remove all closed-test wording from the SurveyOL title, intro text, previous-results placeholder, and end-of-survey page.
 
 ## Send The Survey
 
-1. Send the Tuesday evening survey invitation through that week's SurveyOL Email collector. For closed tests, use only internal/test contacts.
+1. Before sending the Tuesday evening survey invitation, confirm the placeholder public report page exists, is linked from the reports index, and has been pushed to GitHub Pages. For closed tests, use only internal/test contacts.
 2. The SurveyOL Email collector must be `Open` with `Anonymous Responses` set to `Off` so exports can include email identity for private matching. Close or do not distribute Web Link collectors unless CTS intentionally wants an unmapped public response channel.
 3. Build the SurveyOL recipient list from the canonical `CTS 2026` participant registry. Include only eligible records with `Name`, `Primary Email Address`, `Participant ID`, and `Email Key`, and exclude records marked `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
 4. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
 5. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
 6. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count and stop when the remaining eligible-invitation count reaches zero.
 7. Keep newsletter-only subscribers in the separate `CTS Newsletter` group. Use that group for report notices, topic previews, and general CTS updates; do not send weekly survey links to newsletter-only subscribers.
-8. After each send, reconcile SurveyOL `Opted Out`, bounced, and delivery-problem records back into `CTS 2026` before the next recipient import.
+8. After each send, reconcile SurveyOL `Opted Out`, bounced, and delivery-problem records back into `CTS 2026`, MailerLite, and SurveyOL before the next recipient import. An unsubscribe, opt-out, bounce, or do-not-email record in either SurveyOL or MailerLite is a global CTS email suppression for both systems.
 9. The public newsletter form at `https://christianthoughtsurvey.com/newsletter/` collects email address, name, ministry status, and interest motivation, and should add subscribers only to `CTS Newsletter`.
 10. The newsletter double opt-in thank-you page should redirect to `https://christianthoughtsurvey.com/email-confirmation/`.
 11. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
@@ -122,16 +122,18 @@ Before each weekly newsletter and before each SurveyOL invitation batch:
 
 1. Export or inspect MailerLite unsubscribers, bounces, and suppression records.
 2. Export or inspect SurveyOL opted-out, bounced, and delivery-problem records.
-3. Update the canonical `CTS 2026` participant registry so suppressed participants are excluded from future sends.
-4. Update SurveyOL recipient lists so unsubscribed or opted-out contacts are not reimported.
-5. Keep newsletter-only subscribers, survey participants, and do-not-email records conceptually separate.
-6. Record the reconciliation date and source of each suppression update in private operational notes or the participant registry.
+3. Treat an unsubscribe, opt-out, bounce, or do-not-email record from either MailerLite or SurveyOL as a global CTS email suppression.
+4. Update the canonical `CTS 2026` participant registry so suppressed participants are excluded from future sends.
+5. Update both SurveyOL and MailerLite lists so globally suppressed contacts are removed, suppressed, or otherwise excluded from both systems.
+6. Keep newsletter-only subscribers, survey participants, and do-not-email records conceptually separate.
+7. Record the reconciliation date and source of each suppression update in private operational notes or the participant registry.
 
 ## Minimum Launch Checklist
 
 - SurveyOL survey link works.
 - The first 15 live survey items are marked required in SurveyOL.
 - SurveyOL title, descriptive text, previous-results placeholder, and end-of-survey page contain no closed-test language before production send.
+- Placeholder public report page exists, is linked from the reports index, and has been pushed before the first production invitation batch.
 - SurveyOL Email collector is `Open`, `Anonymous Responses` is `Off`, and any Web Link collector is closed or intentionally excluded from the launch.
 - SurveyOL recipient import comes from `CTS 2026`, excludes do-not-email records, and contains no email-only contacts with missing names.
 - A test Email collector export confirms that responses can be joined back to `CTS 2026` by email identity or a stable private join key.

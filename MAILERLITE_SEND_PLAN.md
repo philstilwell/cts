@@ -73,7 +73,7 @@ Christian Thought Survey
 
 ## Email 2: Survey Link
 
-Timing: Tuesday evening survey launch. Send through the SurveyOL Email collector, up to 100 participant invitations per day until all eligible potential participants have been invited.
+Timing: Tuesday evening survey launch. Create and publish the placeholder public report page first, then send through the SurveyOL Email collector, up to 100 participant invitations per day until all eligible potential participants have been invited. Before sending, remove or suppress from both MailerLite and SurveyOL any address that unsubscribed, opted out, bounced, or was marked do-not-email in either system.
 
 Subject:
 

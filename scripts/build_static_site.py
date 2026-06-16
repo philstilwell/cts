@@ -246,7 +246,7 @@ PAGES = [
       {weekly_structure_list}
       <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
       <p>The cycle is cumulative: participant suggestions submitted in one weekly survey are reviewed by CTS with AI assistance, polished, reduced to a 7-item ballot, ranked by active participants, and the top 3 ranked items become live survey items in the following week's survey. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.</p>
-      <p>The regular rhythm is Tuesday-centered. Reports and newsletters are prepared on Tuesday morning, and the next SurveyOL survey launches Tuesday evening. Invitations are sent through the SurveyOL Email collector in daily batches of up to 100 until all eligible participants have been invited.</p>
+      <p>The regular rhythm is Tuesday-centered. Reports and newsletters are prepared on Tuesday morning, and the next survey's placeholder report page is published before the SurveyOL survey launches Tuesday evening. Invitations are sent through the SurveyOL Email collector in daily batches of up to 100 until all eligible participants have been invited.</p>
       <p>Each weekly survey remains open for three weeks from the first invitation send. Preliminary reports may be recalculated as additional responses arrive, then marked final after the response window closes.</p>
       <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
     </div>
@@ -584,7 +584,7 @@ PAGES = [
   <p>Each Weekly Survey will include six parts:</p>
   {weekly_structure_list}
   <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
-  <p>The regular rhythm is Tuesday-centered: reports and newsletters are prepared Tuesday morning, and the next SurveyOL survey launches Tuesday evening. Invitations are sent in daily batches of up to 100 until all eligible participants have been invited.</p>
+  <p>The regular rhythm is Tuesday-centered: reports and newsletters are prepared Tuesday morning, and the next survey's placeholder report page is published before the SurveyOL survey launches Tuesday evening. Invitations are sent in daily batches of up to 100 until all eligible participants have been invited.</p>
   <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
 
   <p class="callout"><strong>Participation note:</strong> CTS weekly survey participation is intended for people who are currently or previously engaged in full-time ministry.</p>
