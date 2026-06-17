@@ -961,7 +961,7 @@ h3 {
 
 .automation-log-table th:nth-child(2),
 .automation-log-table td:nth-child(2) {
-  width: 15rem;
+  width: 11rem;
 }
 
 .automation-log-table th:nth-child(3),

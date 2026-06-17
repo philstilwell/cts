@@ -82,7 +82,7 @@ def render_automation_daily_log_content() -> str:
                 [
                     "      <tr>",
                     f"        <td>{escape(str(entry.get('date', '')))}</td>",
-                    f"        <td><time datetime=\"{escape(str(entry.get('recorded_at', '')))}\">{escape(str(entry.get('recorded_at', '')))}</time></td>",
+                    f"        <td><time datetime=\"{escape(str(entry.get('recorded_at', '')))}\">{escape(str(entry.get('recorded_time_et') or entry.get('recorded_at', '')))}</time></td>",
                     f"        <td><span class=\"log-status\">{escape(str(entry.get('status', '')))}</span></td>",
                     f"        <td>{escape(str(entry.get('summary', '')))}{render_text_list(entry.get('ran'))}</td>",
                     f"        <td>{escape(str(entry.get('result', '')))}</td>",
@@ -101,7 +101,7 @@ def render_automation_daily_log_content() -> str:
                 ]
             )
         )
-    updated_at = escape(str(data.get("updated_at", "")))
+    updated_at = escape(str(data.get("updated_time_et") or data.get("updated_at", "")))
     return f"""
 <div class="wp-content automation-log">
   <p class="callout"><strong>Private-data note:</strong> This page is intentionally unlinked, omitted from the sitemap, and marked `noindex,nofollow`. It shows only public-safe operational summaries, not participant data, respondent links, raw exports, or private status-board paths.</p>
