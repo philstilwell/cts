@@ -951,7 +951,7 @@ h3 {
 }
 
 .wp-content .automation-log-table {
-  min-width: 900px;
+  min-width: 1040px;
 }
 
 .automation-log-table th:first-child,
@@ -961,6 +961,11 @@ h3 {
 
 .automation-log-table th:nth-child(2),
 .automation-log-table td:nth-child(2) {
+  width: 15rem;
+}
+
+.automation-log-table th:nth-child(3),
+.automation-log-table td:nth-child(3) {
   width: 10rem;
 }
 

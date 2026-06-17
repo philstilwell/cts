@@ -82,6 +82,7 @@ def render_automation_daily_log_content() -> str:
                 [
                     "      <tr>",
                     f"        <td>{escape(str(entry.get('date', '')))}</td>",
+                    f"        <td><time datetime=\"{escape(str(entry.get('recorded_at', '')))}\">{escape(str(entry.get('recorded_at', '')))}</time></td>",
                     f"        <td><span class=\"log-status\">{escape(str(entry.get('status', '')))}</span></td>",
                     f"        <td>{escape(str(entry.get('summary', '')))}{render_text_list(entry.get('ran'))}</td>",
                     f"        <td>{escape(str(entry.get('result', '')))}</td>",
@@ -128,6 +129,7 @@ def render_automation_daily_log_content() -> str:
       <thead>
         <tr>
           <th scope="col">Date</th>
+          <th scope="col">Timestamp</th>
           <th scope="col">Status</th>
           <th scope="col">What ran</th>
           <th scope="col">Result</th>

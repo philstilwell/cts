@@ -1,8 +1,9 @@
 {
-  "updated_at": "2026-06-17",
+  "updated_at": "2026-06-17T14:47:58-04:00",
   "entries": [
     {
       "date": "2026-06-17",
+      "recorded_at": "2026-06-17T13:48:06-04:00",
       "status": "Week 2 batch sent",
       "summary": "Queued the next Week 2 invitation batch and tightened the recurring invitation automation.",
       "ran": [
@@ -16,6 +17,7 @@
     },
     {
       "date": "2026-06-17",
+      "recorded_at": "2026-06-17T13:10:52-04:00",
       "status": "Status board created",
       "summary": "Added the weekly automation coverage manifest, private timestamped status boards, and manual ledger workflow.",
       "ran": [
