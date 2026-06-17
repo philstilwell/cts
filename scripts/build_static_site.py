@@ -220,14 +220,6 @@ PAGES = [
         <dt>Survey topic</dt>
         <dd>Pornography and the Church</dd>
       </div>
-      <div>
-        <dt>Report rhythm</dt>
-        <dd>Tuesday morning report cycle</dd>
-      </div>
-      <div>
-        <dt>Linked report</dt>
-        <dd>Week 1 refreshed June 16</dd>
-      </div>
     </dl>
   </section>
 
