@@ -68,6 +68,32 @@ def render_text_list(items: object) -> str:
     return f"<ul>\n{list_items}\n      </ul>"
 
 
+def render_invitation_progress(entry: dict[str, object]) -> str:
+    progress = entry.get("invitation_progress")
+    if not isinstance(progress, dict):
+        return "<span class=\"muted-cell\">Not applicable</span>"
+    batch_sent = progress.get("batch_sent")
+    cumulative_sent = progress.get("cumulative_sent")
+    list_total = progress.get("list_total")
+    list_total_note = str(progress.get("list_total_note") or "")
+    batch_text = f"{batch_sent} sent in batch" if isinstance(batch_sent, int) else "Batch not recorded"
+    if isinstance(cumulative_sent, int) and isinstance(list_total, int) and list_total > 0:
+        percent = (cumulative_sent / list_total) * 100
+        total_text = f"{cumulative_sent} / {list_total} total ({percent:.1f}%)"
+    elif isinstance(cumulative_sent, int):
+        total_text = f"{cumulative_sent} / total not recorded"
+    else:
+        total_text = "Cumulative total not recorded"
+    note = f"<span>{escape(list_total_note)}</span>" if list_total_note else ""
+    return (
+        "<div class=\"invitation-progress\">"
+        f"<strong>{escape(batch_text)}</strong>\n"
+        f"<span>{escape(total_text)}</span>\n"
+        f"{note}"
+        "</div>"
+    )
+
+
 def render_automation_daily_log_content() -> str:
     data = load_automation_daily_log()
     entries = data.get("entries", [])
@@ -84,6 +110,7 @@ def render_automation_daily_log_content() -> str:
                     f"        <td>{escape(str(entry.get('date', '')))}</td>",
                     f"        <td><time datetime=\"{escape(str(entry.get('recorded_at', '')))}\">{escape(str(entry.get('recorded_time_et') or entry.get('recorded_at', '')))}</time></td>",
                     f"        <td><span class=\"log-status\">{escape(str(entry.get('status', '')))}</span></td>",
+                    f"        <td>{render_invitation_progress(entry)}</td>",
                     f"        <td>{escape(str(entry.get('summary', '')))}{render_text_list(entry.get('ran'))}</td>",
                     f"        <td>{escape(str(entry.get('result', '')))}</td>",
                     f"        <td>{escape(str(entry.get('next', '')))}</td>",
@@ -96,7 +123,7 @@ def render_automation_daily_log_content() -> str:
             "\n".join(
                 [
                     "      <tr>",
-                    "        <td colspan=\"5\">No daily automation log entries have been published yet.</td>",
+                    "        <td colspan=\"7\">No daily automation log entries have been published yet.</td>",
                     "      </tr>",
                 ]
             )
@@ -131,6 +158,7 @@ def render_automation_daily_log_content() -> str:
           <th scope="col">Date</th>
           <th scope="col">Timestamp</th>
           <th scope="col">Status</th>
+          <th scope="col">Invitation Progress</th>
           <th scope="col">What ran</th>
           <th scope="col">Result</th>
           <th scope="col">Next</th>

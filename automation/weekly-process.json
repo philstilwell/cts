@@ -283,11 +283,13 @@
       ],
       "covers": [
         "Batch count",
+        "Cumulative sent count",
+        "Total eligible invitation-list count",
         "Remaining eligible invitations",
         "Daily cap check"
       ],
       "redundancy_groups": ["send-accountability"],
-      "operator_note": "Record batch size, remaining count, and any blockers. Keep respondent links out of the ledger."
+      "operator_note": "Record batch size, cumulative sent count, total eligible invitation-list count, remaining count, and any blockers. Keep respondent links out of the ledger."
     },
     {
       "id": "post-send.suppression-reconcile",

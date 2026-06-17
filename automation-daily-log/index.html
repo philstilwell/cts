@@ -78,6 +78,7 @@
           <th scope="col">Date</th>
           <th scope="col">Timestamp</th>
           <th scope="col">Status</th>
+          <th scope="col">Invitation Progress</th>
           <th scope="col">What ran</th>
           <th scope="col">Result</th>
           <th scope="col">Next</th>
@@ -88,6 +89,9 @@
         <td>2026-06-17</td>
         <td><time datetime="2026-06-17T13:48:06-04:00">1:48:06 PM EDT</time></td>
         <td><span class="log-status">Week 2 batch sent</span></td>
+        <td><div class="invitation-progress"><strong>100 sent in batch</strong>
+<span>190 / total not recorded</span>
+<span>Not recorded in the public-safe log at send time.</span></div></td>
         <td>Queued the next Week 2 invitation batch and tightened the recurring invitation automation.<ul>
         <li>Sent the second guarded Week 2 invitation batch.</li>
         <li>Recorded the batch in the private automation ledger.</li>
@@ -95,12 +99,13 @@
         <li>Regenerated the private invitation-scope status board after the send.</li>
       </ul></td>
         <td>100 invitations were queued, bringing the Week 2 total to 190 invitations. The daily sending limit was reached for today. One opt-out now requires global suppression reconciliation before the next batch.</td>
-        <td>Reconcile the opt-out across CTS 2026, CTS contacts, and MailerLite before another invitation batch is sent.</td>
+        <td>Reconcile the opt-out across CTS 2026, CTS contacts, and MailerLite before another invitation batch is sent. Record the total eligible invitation list size with the next batch.</td>
       </tr>
       <tr>
         <td>2026-06-17</td>
         <td><time datetime="2026-06-17T13:10:52-04:00">1:10:52 PM EDT</time></td>
         <td><span class="log-status">Status board created</span></td>
+        <td><span class="muted-cell">Not applicable</span></td>
         <td>Added the weekly automation coverage manifest, private timestamped status boards, and manual ledger workflow.<ul>
         <li>Validated the automation coverage manifest.</li>
         <li>Compiled and tested the status-board CLI.</li>

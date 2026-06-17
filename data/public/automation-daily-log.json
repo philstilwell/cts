@@ -7,6 +7,12 @@
       "recorded_at": "2026-06-17T13:48:06-04:00",
       "recorded_time_et": "1:48:06 PM EDT",
       "status": "Week 2 batch sent",
+      "invitation_progress": {
+        "batch_sent": 100,
+        "cumulative_sent": 190,
+        "list_total": null,
+        "list_total_note": "Not recorded in the public-safe log at send time."
+      },
       "summary": "Queued the next Week 2 invitation batch and tightened the recurring invitation automation.",
       "ran": [
         "Sent the second guarded Week 2 invitation batch.",
@@ -15,7 +21,7 @@
         "Regenerated the private invitation-scope status board after the send."
       ],
       "result": "100 invitations were queued, bringing the Week 2 total to 190 invitations. The daily sending limit was reached for today. One opt-out now requires global suppression reconciliation before the next batch.",
-      "next": "Reconcile the opt-out across CTS 2026, CTS contacts, and MailerLite before another invitation batch is sent."
+      "next": "Reconcile the opt-out across CTS 2026, CTS contacts, and MailerLite before another invitation batch is sent. Record the total eligible invitation list size with the next batch."
     },
     {
       "date": "2026-06-17",
