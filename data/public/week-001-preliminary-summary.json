@@ -5,7 +5,7 @@
   "topic": "Divorce and Remarriage",
   "status": "preliminary",
   "snapshot_date": "2026-06-16",
-  "platform": "CTS Survey",
+  "platform": "CTS",
   "collector": "Email - Survey 01",
   "private_data_excluded": true,
   "privacy_note": "This file contains aggregate public results only. Names, email addresses, response identifiers, respondent-level records, and raw free-text suggestions are excluded.",
@@ -20,7 +20,7 @@
   },
   "update_policy": {
     "will_recalculate": true,
-    "note": "This preliminary report will be refreshed each Tuesday morning while the survey remains open. It may also be refreshed sooner if new responses materially change the results. A final report should be stamped after the response window closes and the CTS Survey export is reviewed."
+    "note": "This preliminary report will be refreshed each Tuesday morning while the survey remains open. It may also be refreshed sooner if new responses materially change the results. A final report should be stamped after the response window closes and the CTS export is reviewed."
   },
   "slider_scale": {
     "min": 0,

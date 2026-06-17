@@ -85,7 +85,7 @@ PAGES = [
     <div class="latest-report-copy">
       <p class="section-label">Latest weekly report</p>
       <h2>Week 1: Divorce and Remarriage</h2>
-      <p class="section-copy">For most visitors, weekly results should be the fastest path through the site. The Week 1 report page now holds preliminary aggregate results, refreshed on June 16, 2026, and will be revised after the final CTS Survey export is reviewed.</p>
+      <p class="section-copy">For most visitors, weekly results should be the fastest path through the site. The Week 1 report page now holds preliminary aggregate results, refreshed on June 16, 2026, and will be revised after the final CTS export is reviewed.</p>
       <div class="report-meta-grid" aria-label="Latest report status">
         <div class="meta-chip">
           <span>Status</span>
@@ -205,7 +205,7 @@ PAGES = [
     <div>
       <p class="section-label">Newest survey page</p>
       <h2 id="latest-report-heading">Week 2: Pornography and the Church</h2>
-      <p>The Week 2 placeholder page is published before CTS Survey invitations are sent. It names the topic, planned survey items, participant ballot, reporting schedule, and a short encapsulation linking to the June 16 refresh of the Week 1 report.</p>
+      <p>The Week 2 placeholder page is published before CTS invitations are sent. It names the topic, planned survey items, participant ballot, reporting schedule, and a short encapsulation linking to the June 16 refresh of the Week 1 report.</p>
       <div class="button-row">
         <a class="button" href="{week_2_report_url}">Open Week 2 Placeholder</a>
         <a class="button light" href="{week_1_report_url}">Open Week 1 Report</a>
@@ -313,7 +313,7 @@ PAGES = [
       {weekly_structure_list}
       <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
       <p>The cycle is cumulative: participant suggestions submitted in one weekly survey are reviewed by CTS with AI assistance, polished, reduced to a 7-item ballot, ranked by active participants, and the top 3 ranked items become live survey items in the following week's survey. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.</p>
-      <p>The regular rhythm is Tuesday-centered. First preliminary reports and refreshes to still-open preliminary reports are prepared on Tuesday morning, and the next survey's placeholder report page is published before the CTS Survey launches Tuesday evening. Invitations are sent through the CTS Survey email invitation system in daily batches of up to 100 until all eligible participants have been invited.</p>
+      <p>The regular rhythm is Tuesday-centered. First preliminary reports and refreshes to still-open preliminary reports are prepared on Tuesday morning, and the next survey's placeholder report page is published before the next CTS survey launches Tuesday evening. Invitations are sent through the CTS email invitation system in daily batches of up to 100 until all eligible participants have been invited.</p>
       <p>Each weekly survey remains open for three weeks from the first invitation send. Preliminary reports are refreshed each Tuesday morning until the response window closes, with optional earlier updates when responses materially change, then marked final after the final export is reviewed.</p>
       <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
     </div>
@@ -479,7 +479,7 @@ PAGES = [
     <div class="status-card">
       <span>Status</span>
       <strong>Survey open</strong>
-      <p>Participant invitations are sent through the CTS Survey email invitation system.</p>
+      <p>Participant invitations are sent through the CTS email invitation system.</p>
     </div>
     <div class="status-card">
       <span>Topic</span>
@@ -762,7 +762,7 @@ PAGES = [
   <p>Each Weekly Survey will include six parts:</p>
   {weekly_structure_list}
   <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
-  <p>The regular rhythm is Tuesday-centered: first preliminary reports and refreshes to still-open preliminary reports are prepared Tuesday morning, and the next survey's placeholder report page is published before the CTS Survey launches Tuesday evening. Invitations are sent in daily batches of up to 100 until all eligible participants have been invited.</p>
+  <p>The regular rhythm is Tuesday-centered: first preliminary reports and refreshes to still-open preliminary reports are prepared Tuesday morning, and the next survey's placeholder report page is published before the next CTS survey launches Tuesday evening. Invitations are sent in daily batches of up to 100 until all eligible participants have been invited.</p>
   <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
 
   <p class="callout"><strong>Participation note:</strong> CTS weekly survey participation is intended for people who are currently or previously engaged in full-time ministry.</p>
@@ -771,7 +771,7 @@ PAGES = [
     <iframe title="CTS 2026 Participation Request" src="{surveyol_embed_url}" loading="lazy"></iframe>
   </div>
 
-  <p class="form-note">If the embedded form does not load, <a href="{surveyol_form_url}">open the CTS Survey form in a new tab</a>. The same full-time ministry participation note applies.</p>
+  <p class="form-note">If the embedded form does not load, <a href="{surveyol_form_url}">open the CTS participation form in a new tab</a>. The same full-time ministry participation note applies.</p>
   <p class="form-note">Contact information is used for CTS participation and follow-up only. See <a href="{privacy_url}">Privacy &amp; Data Release</a> for the current data handling policy.</p>
 </div>
 """,
