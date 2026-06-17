@@ -16,15 +16,17 @@ SITE_DESCRIPTION = (
     "participant-voted questions, and responsible data releases."
 )
 SITE_URL = "https://christianthoughtsurvey.com"
-CSS_VERSION = "20260616-doubt-dogma-green-red"
+CSS_VERSION = "20260617-automation-status"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
-UPDATED = "June 16, 2026"
-SITEMAP_LASTMOD = "2026-06-16"
+UPDATED = "June 17, 2026"
+SITEMAP_LASTMOD = "2026-06-17"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
 WEEK_2_REPORT_OUTPUT = "weekly-survey-reports/week-002-pornography-and-the-church/index.html"
 NEWSLETTER_CONFIRMATION_OUTPUT = "email-confirmation/index.html"
+AUTOMATION_DAILY_LOG_OUTPUT = "automation-daily-log/index.html"
+AUTOMATION_DAILY_LOG_DATA = ROOT / "data/public/automation-daily-log.json"
 REPORT_MANAGED_OUTPUTS = {WEEK_1_REPORT_OUTPUT, WEEK_2_REPORT_OUTPUT}
 OG_IMAGE = f"{SITE_URL}/assets/cts-research-overview.png"
 OG_IMAGE_ALT = "Christian Thought Survey research overview graphic"
@@ -51,6 +53,94 @@ WEEKLY_STRUCTURE_LIST = """<ol class="process-list" type="A">
 </ol>"""
 RESPONSE_RULE_NOTE = "The 15 live survey items use credence sliders. The participant-nominated item ballot and suggestion text box are administrative inputs rather than survey-item responses."
 PARTICIPANT_BALLOT_NOTE = "Participant suggestions are reviewed by CTS with AI assistance, polished for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, likely participant tension, and pastoral or theological relevance, and reduced to a 7-item ballot. Active participants rank those 7 items; the top 3 ranked eligible items become live participant-vote-determined survey items in the following week's survey."
+
+
+def load_automation_daily_log() -> dict[str, object]:
+    if not AUTOMATION_DAILY_LOG_DATA.exists():
+        return {"updated_at": "", "entries": []}
+    return json.loads(AUTOMATION_DAILY_LOG_DATA.read_text(encoding="utf-8"))
+
+
+def render_text_list(items: object) -> str:
+    if not isinstance(items, list) or not items:
+        return ""
+    list_items = "\n".join(f"        <li>{escape(str(item))}</li>" for item in items)
+    return f"<ul>\n{list_items}\n      </ul>"
+
+
+def render_automation_daily_log_content() -> str:
+    data = load_automation_daily_log()
+    entries = data.get("entries", [])
+    if not isinstance(entries, list):
+        entries = []
+    rows = []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        rows.append(
+            "\n".join(
+                [
+                    "      <tr>",
+                    f"        <td>{escape(str(entry.get('date', '')))}</td>",
+                    f"        <td><span class=\"log-status\">{escape(str(entry.get('status', '')))}</span></td>",
+                    f"        <td>{escape(str(entry.get('summary', '')))}{render_text_list(entry.get('ran'))}</td>",
+                    f"        <td>{escape(str(entry.get('result', '')))}</td>",
+                    f"        <td>{escape(str(entry.get('next', '')))}</td>",
+                    "      </tr>",
+                ]
+            )
+        )
+    if not rows:
+        rows.append(
+            "\n".join(
+                [
+                    "      <tr>",
+                    "        <td colspan=\"5\">No daily automation log entries have been published yet.</td>",
+                    "      </tr>",
+                ]
+            )
+        )
+    updated_at = escape(str(data.get("updated_at", "")))
+    return f"""
+<div class="wp-content automation-log">
+  <p class="callout"><strong>Private-data note:</strong> This page is intentionally unlinked, omitted from the sitemap, and marked `noindex,nofollow`. It shows only public-safe operational summaries, not participant data, respondent links, raw exports, or private status-board paths.</p>
+
+  <div class="status-grid automation-log-summary">
+    <div class="status-card">
+      <span>Visibility</span>
+      <strong>Orphaned</strong>
+      <p>No public navigation or sitemap entry points to this page.</p>
+    </div>
+    <div class="status-card">
+      <span>Robots</span>
+      <strong>Noindex, nofollow</strong>
+      <p>The page-level robots directive asks search engines not to index or follow it.</p>
+    </div>
+    <div class="status-card">
+      <span>Updated</span>
+      <strong>{updated_at}</strong>
+      <p>The log is updated only with public-safe automation summaries.</p>
+    </div>
+  </div>
+
+  <figure class="automation-log-table-wrap">
+    <table class="automation-log-table">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Status</th>
+          <th scope="col">What ran</th>
+          <th scope="col">Result</th>
+          <th scope="col">Next</th>
+        </tr>
+      </thead>
+      <tbody>
+{chr(10).join(rows)}
+      </tbody>
+    </table>
+  </figure>
+</div>
+"""
 
 
 @dataclass(frozen=True)
@@ -199,7 +289,7 @@ PAGES = [
         ),
         content="""
 <div class="wp-content results-hub">
-  <p>This page is the public hub for weekly Christian Thought Survey results. The newest survey page is featured first; earlier weekly reports appear below in a compact grid so readers can scan topics quickly.</p>
+  <p>This page is the public hub for weekly Christian Thought Survey results. The newest survey page is featured first, followed by the current weekly survey status lanes and the participant-nominated item rotation.</p>
 
   <section class="latest-report-card" aria-labelledby="latest-report-heading">
     <div>
@@ -223,32 +313,6 @@ PAGES = [
     </dl>
   </section>
 
-  <section class="item-rotation-feature" aria-labelledby="item-rotation-heading">
-    <p class="section-label">Participant-generated questions</p>
-    <h2 id="item-rotation-heading">How nominated items rotate into the survey</h2>
-    <p>Participant-nominated items move through a rolling three-week pipeline. Participants first submit suggested survey items, eligible nominations are then polished into a ballot for participant voting, and the top 3 voted items become live 0-100 credence-slider survey items in a later weekly survey.</p>
-    <figure class="item-rotation-figure">
-      <img src="../assets/participant-nominated-item-rotation.png" alt="Circular infographic showing the participant-nominated item rotation: nomination week, voting week, survey week, and then the cycle repeats." width="1600" height="893">
-      <figcaption>New nominations enter the pipeline while earlier nominations move toward participant voting and live survey use. This keeps the participant-generated item stream moving without making every weekly survey about the same topic.</figcaption>
-    </figure>
-  </section>
-
-  <h2>Weekly report grid</h2>
-  <div class="report-preview-grid">
-    <a class="report-preview-card" href="{week_2_report_url}">
-      <span class="report-week">Week 2</span>
-      <strong>Pornography and the Church</strong>
-      <span class="report-status preliminary">Survey placeholder</span>
-      <span>Planned survey items, Week 1 encapsulation, participant ballot, and reporting schedule.</span>
-    </a>
-    <a class="report-preview-card" href="{week_1_report_url}">
-      <span class="report-week">Week 1</span>
-      <strong>Divorce and Remarriage</strong>
-      <span class="report-status preliminary">Preliminary results</span>
-      <span>Refreshed June 16 with 33 complete responses, 15 slider items, a 7-item ballot, and participant suggestion counts.</span>
-    </a>
-  </div>
-
   <section class="survey-control-board" aria-labelledby="survey-control-heading">
     <div class="section-heading-row">
       <div>
@@ -257,41 +321,92 @@ PAGES = [
       </div>
       <p>This board gives readers a public progress snapshot for each weekly survey: what is open now, what has already been reported, and when to expect the next public update. Participant identities and raw response files are not published.</p>
     </div>
-    <div class="control-board-scroll" role="region" aria-label="Weekly survey public status board" tabindex="0">
-      <table class="control-board-table">
-        <thead>
-          <tr>
-            <th scope="col">Survey</th>
-            <th scope="col">Topic</th>
-            <th scope="col">Public Stage</th>
-            <th scope="col">Invitations</th>
-            <th scope="col">Report Status</th>
-            <th scope="col">Key Date</th>
-            <th scope="col">Next Public Update</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row"><a href="{week_2_report_url}">Week 2</a></th>
-            <td>Pornography and the Church</td>
-            <td><span class="board-status active">Survey open</span></td>
-            <td>Daily email batches are underway.</td>
-            <td><span class="board-status pending">First report pending</span></td>
-            <td>First report: June 23, 2026. Final close target: July 7, 2026.</td>
-            <td>The first preliminary report is scheduled for the Tuesday morning report cycle.</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="{week_1_report_url}">Week 1</a></th>
-            <td>Divorce and Remarriage</td>
-            <td><span class="board-status active">Preliminary</span></td>
-            <td>409 invitations sent.</td>
-            <td><span class="board-status done">Posted</span> 33 complete responses as of June 16.</td>
-            <td>Last updated: June 16, 2026.</td>
-            <td>The report will refresh each Tuesday morning while the survey remains open.</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="survey-timeline-chart" aria-label="Weekly survey status timeline">
+      <div class="survey-lane current" style="--progress-width: 22.4%;">
+        <div class="survey-lane-label">
+          <a href="{week_2_report_url}">Week 2</a>
+          <span>Pornography and the Church</span>
+        </div>
+        <div class="survey-stage-track" aria-label="Week 2 is currently fielding invitations.">
+          <div class="survey-stage done" data-short-label="Page">
+            <button class="stage-dot" type="button" aria-describedby="week2-placeholder-info" aria-label="Week 2 placeholder details"></button>
+            <span class="stage-info-panel" id="week2-placeholder-info" role="tooltip"><strong>Week 2 placeholder</strong> Public page published before the CTS response link was distributed. Current public responses: not yet reported.</span>
+            <span>Placeholder</span>
+          </div>
+          <div class="survey-stage active" data-short-label="Open">
+            <button class="stage-dot" type="button" aria-describedby="week2-fielding-info" aria-label="Week 2 fielding details"></button>
+            <span class="stage-info-panel" id="week2-fielding-info" role="tooltip"><strong>Fielding now</strong> CTS email invitations are being sent in daily batches. Current public responses: pending the first report.</span>
+            <span>Fielding</span>
+          </div>
+          <div class="survey-stage pending" data-short-label="Report">
+            <button class="stage-dot" type="button" aria-describedby="week2-first-report-info" aria-label="Week 2 first report details"></button>
+            <span class="stage-info-panel" id="week2-first-report-info" role="tooltip"><strong>First report</strong> Scheduled for June 23, 2026. The first public report will include the current complete-response count and aggregate item results.</span>
+            <span>First Report</span>
+          </div>
+          <div class="survey-stage pending" data-short-label="Refresh">
+            <button class="stage-dot" type="button" aria-describedby="week2-refresh-info" aria-label="Week 2 refresh details"></button>
+            <span class="stage-info-panel" id="week2-refresh-info" role="tooltip"><strong>Refreshes</strong> After the first report posts, this survey will refresh each Tuesday morning while the response window remains open.</span>
+            <span>Refreshes</span>
+          </div>
+          <div class="survey-stage pending" data-short-label="Final">
+            <button class="stage-dot" type="button" aria-describedby="week2-final-info" aria-label="Week 2 final report details"></button>
+            <span class="stage-info-panel" id="week2-final-info" role="tooltip"><strong>Final report</strong> Final close target: July 7, 2026. Results will be marked final after the CTS export is reviewed.</span>
+            <span>Final</span>
+          </div>
+        </div>
+        <div class="survey-lane-next">
+          <span>Next</span>
+          <strong>First report June 23</strong>
+        </div>
+      </div>
+      <div class="survey-lane" style="--progress-width: 59.2%;">
+        <div class="survey-lane-label">
+          <a href="{week_1_report_url}">Week 1</a>
+          <span>Divorce and Remarriage</span>
+        </div>
+        <div class="survey-stage-track" aria-label="Week 1 has posted preliminary results and is in the refresh period.">
+          <div class="survey-stage done" data-short-label="Page">
+            <button class="stage-dot" type="button" aria-describedby="week1-placeholder-info" aria-label="Week 1 placeholder details"></button>
+            <span class="stage-info-panel" id="week1-placeholder-info" role="tooltip"><strong>Week 1 placeholder</strong> The Divorce and Remarriage public page was created before invitations were sent, giving readers a stable report URL.</span>
+            <span>Placeholder</span>
+          </div>
+          <div class="survey-stage done" data-short-label="Sent">
+            <button class="stage-dot" type="button" aria-describedby="week1-fielding-info" aria-label="Week 1 fielding details"></button>
+            <span class="stage-info-panel" id="week1-fielding-info" role="tooltip"><strong>Fielding</strong> 409 CTS email invitations were sent. The survey remains open during the three-week response window.</span>
+            <span>Fielding</span>
+          </div>
+          <div class="survey-stage done" data-short-label="Report">
+            <button class="stage-dot" type="button" aria-describedby="week1-first-report-info" aria-label="Week 1 first report details"></button>
+            <span class="stage-info-panel" id="week1-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 33 complete responses as of the June 16 refresh.</span>
+            <span>First Report</span>
+          </div>
+          <div class="survey-stage active" data-short-label="Refresh">
+            <button class="stage-dot" type="button" aria-describedby="week1-refresh-info" aria-label="Week 1 refresh details"></button>
+            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshing</strong> Current public responses: 33 complete. The report refreshes each Tuesday morning while the survey remains open.</span>
+            <span>Refreshes</span>
+          </div>
+          <div class="survey-stage pending" data-short-label="Final">
+            <button class="stage-dot" type="button" aria-describedby="week1-final-info" aria-label="Week 1 final report details"></button>
+            <span class="stage-info-panel" id="week1-final-info" role="tooltip"><strong>Final report</strong> Pending final close and CTS export review. Final reporting will preserve respondent privacy thresholds.</span>
+            <span>Final</span>
+          </div>
+        </div>
+        <div class="survey-lane-next">
+          <span>Next</span>
+          <strong>Tuesday refresh</strong>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <section class="item-rotation-feature" aria-labelledby="item-rotation-heading">
+    <p class="section-label">Participant-generated questions</p>
+    <h2 id="item-rotation-heading">How nominated items rotate into the survey</h2>
+    <p>Participant-nominated items move through a rolling three-week pipeline. Participants first submit suggested survey items, eligible nominations are then polished into a ballot for participant voting, and the top 3 voted items become live 0-100 credence-slider survey items in a later weekly survey.</p>
+    <figure class="item-rotation-figure">
+      <img src="../assets/participant-nominated-item-rotation.png" alt="Circular infographic showing the participant-nominated item rotation: nomination week, voting week, survey week, and then the cycle repeats." width="1600" height="893">
+      <figcaption>New nominations enter the pipeline while earlier nominations move toward participant voting and live survey use. This keeps the participant-generated item stream moving without making every weekly survey about the same topic.</figcaption>
+    </figure>
   </section>
 
   <details class="accordion-block">
@@ -731,6 +846,21 @@ PAGES = [
         in_nav=False,
         show_nav=False,
         robots="noindex",
+    ),
+    Page(
+        key="automation-log",
+        output=AUTOMATION_DAILY_LOG_OUTPUT,
+        nav_label="Automation Log",
+        title="Daily Automation Log",
+        eyebrow="Operational log",
+        description=(
+            "A simple public-safe daily log of Christian Thought Survey automation "
+            "status activity."
+        ),
+        content=render_automation_daily_log_content(),
+        in_nav=False,
+        show_nav=False,
+        robots="noindex,nofollow,noarchive",
     ),
     Page(
         key="contact",

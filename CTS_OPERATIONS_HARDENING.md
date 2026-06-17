@@ -11,6 +11,42 @@ This file documents the local operational tooling used by the weekly CTS automat
 - Generated audits and dry-run plans include `human_review_required`, `human_review_reason`, and `human_review_next_action` fields. Treat `human_review_required: true` as a hard stop before imports, list mutations, newsletter sends, or survey invitations.
 - The public Reports page includes a rolling survey control board. Any automation that changes that board should rebuild the static site, commit the public status update, and push to the remote before reporting completion.
 - SurveyOL Email collector sending still requires a guarded human/session step unless a documented send endpoint is added later.
+- Weekly automation status boards belong under `data/private/automation-status/`. They show run timestamps, current status, missing/stale evidence, and process coverage/redundancy without exposing private participant data.
+
+## Automation Status And Coverage
+
+The machine-readable coverage manifest is `automation/weekly-process.json`. It defines every required automation or guarded check, the artifacts that prove it ran, the scopes where it applies, and the redundancy groups that protect risky steps.
+
+Generate a private status board for a week and scope:
+
+```bash
+python3 scripts/cts_automation_status.py report \
+  --week week-003 \
+  --scope launch \
+  --output data/private/automation-status/week-003-launch-status.md
+```
+
+The report includes:
+
+- required run evidence counts and timestamps;
+- per-item statuses: `passed`, `review_required`, `blocked`, `failed`, `missing`, `stale`, `planned`, `running`, and `not_due`;
+- direct evidence links to private artifacts when they exist;
+- next action text from `human_review_required` JSON fields when a dry-run plan is waiting;
+- a coverage and redundancy table for suppression handling, duplicate protection, participant identity joins, SurveyOL state, privacy boundaries, public status, send accountability, and report quality.
+
+Record guarded or manual confirmations in the private ledger:
+
+```bash
+python3 scripts/cts_automation_status.py record \
+  --week week-003 \
+  --id surveyol.closed-test-quarantine \
+  --status passed \
+  --note "Closed-test response count checked; production send gate clear."
+```
+
+Use `not_due` only when a process step is truly outside the current calendar gate, such as final close before the three-week response window ends. Use `review_required` when an automation has run but a human decision is still needed. Use `blocked` when the next risky action must stop.
+
+The recurring invitation-batch check runs Wednesday through Saturday at 2:30 PM Eastern while a weekly survey still has eligible participants who have not been invited. It should regenerate the invitation-scope status board before acting, stop on any missing/stale/blocked/failed evidence, and treat `review_required` suppression reconciliation as a hard gate before another batch.
 
 ## API Tokens
 

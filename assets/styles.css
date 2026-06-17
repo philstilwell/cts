@@ -795,6 +795,10 @@ h3 {
   width: min(1120px, calc(100% - 32px));
 }
 
+.page-automation-log .article-shell {
+  width: min(1040px, calc(100% - 32px));
+}
+
 .wp-content > * + * {
   margin-top: 1.25rem;
 }
@@ -940,6 +944,46 @@ h3 {
   color: var(--paper);
   background: var(--teal-dark);
   font-weight: 750;
+}
+
+.automation-log-summary {
+  margin-top: 1.5rem;
+}
+
+.wp-content .automation-log-table {
+  min-width: 900px;
+}
+
+.automation-log-table th:first-child,
+.automation-log-table td:first-child {
+  width: 8.5rem;
+}
+
+.automation-log-table th:nth-child(2),
+.automation-log-table td:nth-child(2) {
+  width: 10rem;
+}
+
+.automation-log-table td {
+  font-size: 0.95rem;
+  line-height: 1.48;
+}
+
+.automation-log-table ul {
+  margin-top: 0.65rem;
+}
+
+.log-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.24rem 0.52rem;
+  border: 1px solid #b9d6d1;
+  border-radius: 8px;
+  color: var(--teal-dark);
+  background: #edf7f4;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 .callout,

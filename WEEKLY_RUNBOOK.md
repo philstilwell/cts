@@ -11,7 +11,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Tuesday morning: publish the first weekly report for any survey launched one week earlier, and refresh every still-open survey report that has already received its first preliminary report. Preliminary reports should clearly state that the survey remains open and will be refreshed each Tuesday morning until final close.
 - Tuesday morning: send the weekly newsletter to newsletter subscribers after the report is published. Include an encapsulation of the newest report plus a link to the full report.
 - Tuesday evening: create the placeholder public report page for the new survey, launch the new weekly SurveyOL survey, and begin sending invitations through the SurveyOL Email collector. Send up to 100 participant invitations per day until all eligible potential participants have been sent that week's invitation.
-- Wednesday through Saturday, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
+- Wednesday through Saturday at 2:30 PM Eastern, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
 - Every week: before any newsletter or survey-invitation send, remove or suppress from both MailerLite and SurveyOL any address that unsubscribed, opted out, bounced, or was marked do-not-email in either system.
 - Every weekly survey remains open for 3 weeks from its first invitation send. Close the SurveyOL collector after the 3-week response window, export the final raw results privately, and regenerate the public report as final.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
@@ -23,9 +23,52 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Tuesday morning: publish first preliminary reports, refresh still-open preliminary reports, create the report encapsulation, update the site, and send or prepare the newsletter.
 - Tuesday morning after the report cycle: check whether any survey has reached the 3-week close date, then close and finalize reports as needed.
 - Tuesday evening: create the placeholder public report page, launch the new SurveyOL Email collector survey, and send the first invitation batch.
-- Wednesday through Saturday evenings: send the next invitation batch when eligible participants remain uninvited.
+- Wednesday through Saturday at 2:30 PM Eastern: check whether eligible participants remain uninvited, regenerate the invitation-scope automation status board, and send the next guarded invitation batch only if required hygiene and suppression checks are clear.
 
 These reminders can execute only when the relevant SurveyOL, MailerLite, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
+
+## Automation Status Board
+
+Each weekly cycle should have a private timestamped automation status board under `data/private/automation-status/`. Generate it before any risky action and again after the action is completed or blocked:
+
+```bash
+python3 scripts/cts_automation_status.py report \
+  --week week-003 \
+  --scope launch \
+  --output data/private/automation-status/week-003-launch-status.md
+```
+
+Use these scopes:
+
+- `launch`: required evidence before the first production SurveyOL invitation batch.
+- `invitation`: recurring evidence around Wednesday-Saturday invitation batches.
+- `report`: Tuesday report, newsletter, and public status update evidence.
+- `close`: three-week survey close and final-report evidence.
+- `full-cycle`: complete process coverage and redundancy audit.
+
+The status board answers three operational questions:
+
+1. Did every required automation or guarded check for this scope run, and when?
+2. Is each item `passed`, `review_required`, `blocked`, `failed`, `missing`, `stale`, `planned`, `running`, or explicitly `not_due`?
+3. Does each major process area have coverage and redundancy, such as MailerLite plus SurveyOL suppression checks, send-list plus live-contact duplicate audits, dry-run plans plus human-review gates, and private raw exports plus public aggregate summaries?
+
+Some required steps are intentionally not fully automated, especially SurveyOL survey creation, Email collector sends, test-export review, public URL verification, and final approval of dry-run plans. Record those guarded steps in the private ledger instead of relying on memory:
+
+```bash
+python3 scripts/cts_automation_status.py record \
+  --week week-003 \
+  --id public.placeholder-page \
+  --status passed \
+  --note "Placeholder page and reports index verified on GitHub Pages; commit abc1234."
+```
+
+List valid IDs with:
+
+```bash
+python3 scripts/cts_automation_status.py list --scope launch
+```
+
+Do not put live SurveyOL respondent links, names, emails, participant IDs, or private raw-data details in ledger notes. Keep notes public-safe even though the ledger is stored under ignored private data.
 
 ## Report And Newsletter Encapsulation
 
@@ -139,6 +182,8 @@ Before each weekly newsletter and before each SurveyOL invitation batch:
 Use `scripts/cts_ops.py` for the hardened local version of this process: export MailerLite suppressions, build the private SurveyOL send list, write the exact weekly contact crosswalk, and generate dry-run MailerLite/SurveyOL sync plans under `data/private/`. See `CTS_OPERATIONS_HARDENING.md`.
 
 Any generated audit or plan with `human_review_required: true` is a hard stop. Review the stated reason and next action before importing contacts, applying list changes, sending a newsletter, or sending SurveyOL invitations.
+
+Before acting on the checklist above, regenerate the relevant automation status board and confirm no required item is `missing`, `stale`, `blocked`, or `failed`. A `review_required` item means the automation ran but a human gate is still open; record the review outcome before the next risky action.
 
 ## Minimum Launch Checklist
 

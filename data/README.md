@@ -5,6 +5,7 @@ This directory separates private inputs from public report outputs.
 ## Directory Layout
 
 - `data/private/`: ignored by git. Put raw SurveyOL exports, contact-level files, weekly send-list crosswalks, joined identity-bearing analysis files, raw participant suggestions, and internal QA notes here.
+- `data/private/automation-status/`: ignored by git. Put weekly automation ledgers and generated status boards here so run timestamps, guarded confirmations, blockers, and redundancy coverage can be reviewed without exposing participant data.
 - `data/fixtures/`: committed synthetic files used to test the pipeline before real data exists.
 - `data/public/`: privacy-safe generated summaries and public chart data. These files may be committed when they are intended for GitHub Pages/public reporting.
 
