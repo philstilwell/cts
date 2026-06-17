@@ -951,7 +951,7 @@ h3 {
 }
 
 .wp-content .automation-log-table {
-  min-width: 1180px;
+  min-width: 1040px;
 }
 
 .automation-log-table th:first-child,
@@ -967,11 +967,6 @@ h3 {
 .automation-log-table th:nth-child(3),
 .automation-log-table td:nth-child(3) {
   width: 10rem;
-}
-
-.automation-log-table th:nth-child(4),
-.automation-log-table td:nth-child(4) {
-  width: 14rem;
 }
 
 .automation-log-table td {
@@ -994,24 +989,6 @@ h3 {
   font-size: 0.78rem;
   font-weight: 800;
   line-height: 1.2;
-}
-
-.invitation-progress {
-  display: grid;
-  gap: 0.26rem;
-}
-
-.invitation-progress strong {
-  color: var(--ink);
-  font-size: 0.95rem;
-  line-height: 1.28;
-}
-
-.invitation-progress span,
-.muted-cell {
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.36;
 }
 
 .callout,
