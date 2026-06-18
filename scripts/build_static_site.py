@@ -77,12 +77,13 @@ def render_automation_daily_log_content() -> str:
     for entry in entries:
         if not isinstance(entry, dict):
             continue
+        recorded_date = escape(str(entry.get("date", "")))
+        recorded_time = escape(str(entry.get("recorded_time_et") or entry.get("recorded_at", "")))
         rows.append(
             "\n".join(
                 [
                     "      <tr>",
-                    f"        <td>{escape(str(entry.get('date', '')))}</td>",
-                    f"        <td><time datetime=\"{escape(str(entry.get('recorded_at', '')))}\">{escape(str(entry.get('recorded_time_et') or entry.get('recorded_at', '')))}</time></td>",
+                    f"        <td><time datetime=\"{escape(str(entry.get('recorded_at', '')))}\"><span class=\"recorded-date\">{recorded_date}</span><span class=\"recorded-time\">{recorded_time}</span></time></td>",
                     f"        <td><span class=\"log-status\">{escape(str(entry.get('status', '')))}</span></td>",
                     f"        <td>{escape(str(entry.get('summary', '')))}{render_text_list(entry.get('ran'))}</td>",
                     f"        <td>{escape(str(entry.get('result', '')))}</td>",
@@ -96,7 +97,7 @@ def render_automation_daily_log_content() -> str:
             "\n".join(
                 [
                     "      <tr>",
-                    "        <td colspan=\"6\">No daily automation log entries have been published yet.</td>",
+                    "        <td colspan=\"5\">No daily automation log entries have been published yet.</td>",
                     "      </tr>",
                 ]
             )
@@ -128,8 +129,7 @@ def render_automation_daily_log_content() -> str:
     <table class="automation-log-table">
       <thead>
         <tr>
-          <th scope="col">Date</th>
-          <th scope="col">Timestamp</th>
+          <th scope="col">Recorded</th>
           <th scope="col">Status</th>
           <th scope="col">What ran</th>
           <th scope="col">Result</th>
