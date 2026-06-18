@@ -196,6 +196,17 @@ python3 scripts/cts_ops.py surveyol-contacts \
 
 If `duplicate_email_count` is greater than `0`, stop all SurveyOL invitation sends until the extra SurveyOL contact records are merged or deleted and the audit is clean.
 
+If the shell token is unavailable but the live SurveyOL send page is already open and authenticated in the browser, first save a private JSON extract of the address book plus invitation list, then materialize the canonical artifacts from that extract:
+
+```bash
+python3 scripts/cts_ops.py surveyol-live-extract \
+  --input-json data/private/surveyol-api/week-003-live-contacts-extract.json \
+  --output data/private/surveyol-api/surveyol-contacts.csv \
+  --audit-output data/private/audits/surveyol-contact-duplicate-audit.json \
+  --next-batch-output data/private/send-lists/week-003-live-next-batch.csv \
+  --summary-output data/private/audits/week-003-live-next-batch-summary.json
+```
+
 Sync missing SurveyOL contacts from a private send list with a dry-run first:
 
 ```bash

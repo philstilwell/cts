@@ -320,6 +320,19 @@ def surveyol_contact_duplicate_report(contacts: list[dict[str, Any]], max_duplic
     }
 
 
+def normalize_live_extract_contact(contact: dict[str, Any]) -> dict[str, str]:
+    first_name = str(contact.get("first_name", contact.get("firstName", "")) or "").strip()
+    last_name = str(contact.get("last_name", contact.get("lastName", "")) or "").strip()
+    email = normalize_email(str(contact.get("email", "")))
+    contact_id = str(contact.get("id", "")) or email
+    return {
+        "id": contact_id,
+        "email": email,
+        "first_name": first_name,
+        "last_name": re.sub(r"\s*\(\d+\)\s*$", "", last_name).strip(),
+    }
+
+
 def contacts_by_email(contacts: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for contact in contacts:
@@ -859,6 +872,80 @@ def cmd_surveyol_contacts(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_surveyol_live_extract(args: argparse.Namespace) -> int:
+    payload = read_json(Path(args.input_json))
+    raw_contacts = payload.get("contacts", []) if isinstance(payload, dict) else []
+    if not isinstance(raw_contacts, list):
+        raise SystemExit(f"{args.input_json} does not contain a top-level contacts list.")
+    contacts = [normalize_live_extract_contact(item) for item in raw_contacts if isinstance(item, dict)]
+    contacts = [item for item in contacts if item["email"]]
+    write_csv(Path(args.output), ["id", "email", "first_name", "last_name"], contacts)
+    print(f"Wrote {len(contacts)} SurveyOL contacts from live extract to {args.output}")
+    duplicate_audit = surveyol_contact_duplicate_report(
+        [
+            {
+                "id": item["id"],
+                "email": item["email"],
+                "firstName": item["first_name"],
+                "lastName": item["last_name"],
+            }
+            for item in contacts
+        ],
+        args.max_duplicates,
+    )
+    if args.audit_output:
+        audit = {
+            "generated_at": now_iso(),
+            **review_fields(
+                duplicate_audit["duplicate_email_count"] > 0,
+                "SurveyOL contacts contain duplicate email addresses. Do not import recipients or send invitations until these contact records are merged or deleted.",
+                "Resolve duplicate contacts in SurveyOL, then re-run this live extract and confirm duplicate_email_count is 0.",
+            ),
+            **duplicate_audit,
+            "source": "surveyol live extract",
+            "input_json": args.input_json,
+        }
+        write_json(Path(args.audit_output), audit)
+        print(f"Wrote SurveyOL live-extract duplicate audit to {args.audit_output}")
+        print_review_notice(audit)
+    raw_invitations = payload.get("invitations", []) if isinstance(payload, dict) else []
+    if args.next_batch_output or args.summary_output:
+        invited = {
+            normalize_email(str(item.get("email", "")))
+            for item in raw_invitations
+            if isinstance(item, dict) and normalize_email(str(item.get("email", "")))
+        }
+        remaining = [item for item in contacts if item["email"] not in invited]
+        if args.next_batch_output:
+            write_csv(
+                Path(args.next_batch_output),
+                ["id", "email", "first_name", "last_name"],
+                remaining[: args.next_batch_size],
+            )
+            print(
+                f"Wrote {min(len(remaining), args.next_batch_size)} remaining live-extract contacts "
+                f"to {args.next_batch_output}"
+            )
+        if args.summary_output:
+            summary = {
+                "generated_at": now_iso(),
+                "input_json": args.input_json,
+                "contact_row_count": len(contacts),
+                "invitation_row_count": len(invited),
+                "remaining_contact_count": len(remaining),
+                "next_batch_size": min(len(remaining), args.next_batch_size),
+                "next_batch_emails": [item["email"] for item in remaining[: args.next_batch_size]],
+                **review_fields(
+                    duplicate_audit["duplicate_email_count"] > 0,
+                    "SurveyOL live extract still contains duplicate emails.",
+                    "Resolve duplicate SurveyOL contacts before using the next batch output.",
+                ),
+            }
+            write_json(Path(args.summary_output), summary)
+            print(f"Wrote SurveyOL live-extract summary to {args.summary_output}")
+    return 0
+
+
 def cmd_surveyol_sync_contacts(args: argparse.Namespace) -> int:
     token = require_env("SURVEYOL_API_TOKEN")
     send_list_path = Path(args.send_list)
@@ -1125,6 +1212,19 @@ def main() -> int:
     p.add_argument("--audit-output", help="optional JSON duplicate-email audit output")
     p.add_argument("--max-duplicates", type=int, default=200)
     p.set_defaults(func=cmd_surveyol_contacts)
+
+    p = subparsers.add_parser(
+        "surveyol-live-extract",
+        help="materialize SurveyOL contact artifacts from a live browser extract JSON",
+    )
+    p.add_argument("--input-json", required=True, help="JSON payload extracted from the live SurveyOL send page")
+    p.add_argument("--output", required=True, help="contact CSV output path")
+    p.add_argument("--audit-output", help="optional JSON duplicate-email audit output")
+    p.add_argument("--next-batch-output", help="optional CSV of remaining uninvited contacts")
+    p.add_argument("--summary-output", help="optional JSON summary including remaining-contact counts")
+    p.add_argument("--next-batch-size", type=int, default=100)
+    p.add_argument("--max-duplicates", type=int, default=200)
+    p.set_defaults(func=cmd_surveyol_live_extract)
 
     p = subparsers.add_parser("surveyol-sync-contacts", help="dry-run or apply missing SurveyOL contact additions from a private send list")
     p.add_argument("--send-list", required=True)
