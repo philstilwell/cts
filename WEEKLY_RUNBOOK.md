@@ -171,6 +171,7 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 
 Before each weekly newsletter and before each SurveyOL invitation batch:
 
+0. Run `python3 scripts/cts_ops.py env-doctor --verify-api` and stop immediately if it exits nonzero or reports `human_review_required: true`.
 1. Export or inspect MailerLite unsubscribers, bounces, and suppression records.
 2. Export or inspect SurveyOL opted-out, bounced, and delivery-problem records.
 3. Treat an unsubscribe, opt-out, bounce, or do-not-email record from either MailerLite or SurveyOL as a global CTS email suppression.
@@ -180,6 +181,8 @@ Before each weekly newsletter and before each SurveyOL invitation batch:
 7. Record the reconciliation date and source of each suppression update in private operational notes or the participant registry.
 
 Use `scripts/cts_ops.py` for the hardened local version of this process: export MailerLite suppressions, build the private SurveyOL send list, write the exact weekly contact crosswalk, and generate dry-run MailerLite/SurveyOL sync plans under `data/private/`. See `CTS_OPERATIONS_HARDENING.md`.
+
+Prefer one stable private token file such as `.secrets/cts.env`. `scripts/cts_ops.py` auto-discovers that path along with `.env`, `.env.local`, `.secrets/cts-ops.env`, and `~/.codex/cts.env`, so the recurring automations should not depend on ad hoc shell exports.
 
 Any generated audit or plan with `human_review_required: true` is a hard stop. Review the stated reason and next action before importing contacts, applying list changes, sending a newsletter, or sending SurveyOL invitations.
 

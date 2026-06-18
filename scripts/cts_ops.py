@@ -34,6 +34,7 @@ MAILERLITE_API_BASE = "https://connect.mailerlite.com/api"
 SURVEYOL_API_BASE = "https://api.surveyol.com/v1"
 SUPPRESSION_STATUSES = ("unsubscribed", "bounced", "junk")
 MAILERLITE_GROUP_STATUSES = ("active", "unsubscribed", "unconfirmed", "bounced", "junk")
+LOADED_ENV_FILES: list[str] = []
 
 EMAIL_FIELDS = (
     "Primary Email Address",
@@ -115,12 +116,49 @@ def load_env_file(path: Path) -> None:
         key = key.strip()
         value = value.strip().strip('"').strip("'")
         os.environ.setdefault(key, value)
+    resolved = str(path.resolve())
+    if resolved not in LOADED_ENV_FILES:
+        LOADED_ENV_FILES.append(resolved)
+
+
+def default_env_files() -> list[Path]:
+    candidates = [
+        ROOT / ".env",
+        ROOT / ".env.local",
+        ROOT / ".secrets" / "cts.env",
+        ROOT / ".secrets" / "cts-ops.env",
+        Path.home() / ".codex" / "cts.env",
+    ]
+    codex_home = os.environ.get("CODEX_HOME", "").strip()
+    if codex_home:
+        candidates.append(Path(codex_home) / "cts.env")
+    unique: list[Path] = []
+    seen: set[str] = set()
+    for path in candidates:
+        resolved = str(path)
+        if resolved in seen:
+            continue
+        seen.add(resolved)
+        unique.append(path)
+    return unique
+
+
+def load_default_env_files() -> list[str]:
+    loaded_before = set(LOADED_ENV_FILES)
+    for path in default_env_files():
+        load_env_file(path)
+    return [path for path in LOADED_ENV_FILES if path not in loaded_before]
 
 
 def require_env(name: str) -> str:
     value = os.environ.get(name, "").strip()
     if not value:
-        raise SystemExit(f"Missing required environment variable: {name}")
+        searched = ", ".join(LOADED_ENV_FILES) if LOADED_ENV_FILES else "no env files loaded"
+        raise SystemExit(
+            f"Missing required environment variable: {name}. "
+            f"Searched loaded env files: {searched}. "
+            "Run `python3 scripts/cts_ops.py env-doctor --verify-api` to confirm the CTS ops environment."
+        )
     return value
 
 
@@ -559,6 +597,78 @@ def cmd_mailerlite_groups(args: argparse.Namespace) -> int:
     else:
         print(json.dumps(groups, indent=2, ensure_ascii=False))
     return 0
+
+
+def cmd_env_doctor(args: argparse.Namespace) -> int:
+    required = [
+        "MAILERLITE_API_TOKEN",
+        "SURVEYOL_API_TOKEN",
+    ]
+    optional = [
+        "MAILERLITE_CTS_PARTICIPANTS_GROUP_ID",
+        "MAILERLITE_CTS_NEWSLETTER_GROUP_ID",
+    ]
+    visible_default_files = [str(path) for path in default_env_files()]
+    env_status = []
+    missing_required = []
+    for name in [*required, *optional]:
+        present = bool(os.environ.get(name, "").strip())
+        env_status.append(
+            {
+                "name": name,
+                "required": name in required,
+                "present": present,
+            }
+        )
+        if name in required and not present:
+            missing_required.append(name)
+
+    api_checks: dict[str, Any] = {}
+    verify_errors: list[str] = []
+    if args.verify_api and not missing_required:
+        try:
+            surveyol_account = api_json("GET", f"{SURVEYOL_API_BASE}/account/me", require_env("SURVEYOL_API_TOKEN"))
+            api_checks["surveyol_account"] = {
+                "ok": True,
+                "email": surveyol_account.get("email", "") if isinstance(surveyol_account, dict) else "",
+            }
+        except SystemExit as exc:
+            api_checks["surveyol_account"] = {"ok": False, "error": str(exc)}
+            verify_errors.append(f"SurveyOL API check failed: {exc}")
+        try:
+            groups = mailerlite_get_pages("/groups", require_env("MAILERLITE_API_TOKEN"), {"limit": 1})
+            api_checks["mailerlite_groups"] = {
+                "ok": True,
+                "group_sample_count": len(groups),
+            }
+        except SystemExit as exc:
+            api_checks["mailerlite_groups"] = {"ok": False, "error": str(exc)}
+            verify_errors.append(f"MailerLite API check failed: {exc}")
+
+    review_required = bool(missing_required or verify_errors)
+    result = {
+        "generated_at": now_iso(),
+        **review_fields(
+            review_required,
+            "CTS ops environment is not ready for suppression reconciliation or API-backed hygiene commands."
+            if review_required
+            else "",
+            "Add the missing CTS tokens to a discovered private env file such as .secrets/cts.env, then rerun `python3 scripts/cts_ops.py env-doctor --verify-api`."
+            if review_required
+            else "",
+        ),
+        "loaded_env_files": LOADED_ENV_FILES,
+        "default_env_candidates": visible_default_files,
+        "env": env_status,
+        "api_checks": api_checks,
+    }
+    if args.json_output:
+        write_json(Path(args.json_output), result)
+        print(f"Wrote env doctor report to {args.json_output}")
+    else:
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+    print_review_notice(result)
+    return 0 if not review_required else 2
 
 
 def cmd_mailerlite_suppressions(args: argparse.Namespace) -> int:
@@ -1033,6 +1143,11 @@ def main() -> int:
     p.add_argument("--max-duplicates", type=int, default=200)
     p.set_defaults(func=cmd_audit_email_duplicates)
 
+    p = subparsers.add_parser("env-doctor", help="check CTS ops env discovery and optionally verify API access")
+    p.add_argument("--verify-api", action="store_true", help="also verify SurveyOL and MailerLite API access when tokens are present")
+    p.add_argument("--json-output", help="optional JSON report output path")
+    p.set_defaults(func=cmd_env_doctor)
+
     p = subparsers.add_parser("surveyol-account", help="verify SurveyOL API token/account")
     p.set_defaults(func=cmd_surveyol_account)
 
@@ -1072,6 +1187,7 @@ def main() -> int:
     p.set_defaults(func=cmd_build_send_list)
 
     args = parser.parse_args()
+    load_default_env_files()
     for env_file in args.env_file:
         load_env_file(Path(env_file))
     return int(args.func(args))

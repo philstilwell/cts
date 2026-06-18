@@ -53,10 +53,11 @@ The recurring invitation-batch check runs Wednesday through Saturday at 2:30 PM 
 Create private API tokens and store them outside git:
 
 ```bash
-cp .env.example .env
+mkdir -p .secrets
+cp .env.example .secrets/cts.env
 ```
 
-Then fill only the private `.env` file:
+Then fill only the private CTS env file:
 
 ```bash
 MAILERLITE_API_TOKEN=...
@@ -64,6 +65,24 @@ SURVEYOL_API_TOKEN=...
 MAILERLITE_CTS_PARTICIPANTS_GROUP_ID=...
 MAILERLITE_CTS_NEWSLETTER_GROUP_ID=...
 ```
+
+`scripts/cts_ops.py` now auto-discovers CTS env files in these locations before every command:
+
+- `.env`
+- `.env.local`
+- `.secrets/cts.env`
+- `.secrets/cts-ops.env`
+- `~/.codex/cts.env`
+
+Use one standard location and keep it stable. The recommended project-local path is `.secrets/cts.env`.
+
+Before a weekly hygiene run, invitation batch, or suppression reconciliation, run the fast environment preflight:
+
+```bash
+python3 scripts/cts_ops.py env-doctor --verify-api
+```
+
+Treat any nonzero exit or `human_review_required: true` output as a hard stop. This catches missing tokens or broken API access before the automation reaches the send gate.
 
 MailerLite's current API lists subscribers with `filter[status]` values such as `active`, `unsubscribed`, `bounced`, and `junk`, and exposes group membership endpoints. SurveyOL's developer API exposes account, contact, survey, collector, and response objects through bearer-token authentication.
 
@@ -91,10 +110,16 @@ The send-list builder also treats `2026 Outreach Status` values containing terms
 
 ## Monday Hygiene Flow
 
-Export MailerLite suppressions:
+Start with the environment/API preflight:
 
 ```bash
-python3 scripts/cts_ops.py --env-file .env mailerlite-suppressions \
+python3 scripts/cts_ops.py env-doctor --verify-api
+```
+
+Then export MailerLite suppressions:
+
+```bash
+python3 scripts/cts_ops.py mailerlite-suppressions \
   --output data/private/suppressions/mailerlite-global.csv
 ```
 
@@ -136,7 +161,7 @@ The audit normalizes email addresses by trimming whitespace and lowercasing. It 
 Create a dry-run group alignment plan before applying anything. The snapshot/sync reads MailerLite group members across active, unsubscribed, unconfirmed, bounced, and junk statuses so suppressed records are not hidden by MailerLite's default active-only group view:
 
 ```bash
-python3 scripts/cts_ops.py --env-file .env mailerlite-sync-group \
+python3 scripts/cts_ops.py mailerlite-sync-group \
   --send-list data/private/send-lists/week-003-surveyol-contacts.csv \
   --group-id "$MAILERLITE_CTS_PARTICIPANTS_GROUP_ID" \
   --suppression-csv data/private/suppressions/mailerlite-global.csv \
@@ -146,7 +171,7 @@ python3 scripts/cts_ops.py --env-file .env mailerlite-sync-group \
 Only after reviewing the plan:
 
 ```bash
-python3 scripts/cts_ops.py --env-file .env mailerlite-sync-group \
+python3 scripts/cts_ops.py mailerlite-sync-group \
   --send-list data/private/send-lists/week-003-surveyol-contacts.csv \
   --group-id "$MAILERLITE_CTS_PARTICIPANTS_GROUP_ID" \
   --suppression-csv data/private/suppressions/mailerlite-global.csv \
@@ -163,20 +188,20 @@ Dry-run sync plans set `human_review_required: true`. Applied plans set it to `f
 Verify the token:
 
 ```bash
-python3 scripts/cts_ops.py --env-file .env surveyol-account
+python3 scripts/cts_ops.py surveyol-account
 ```
 
 Snapshot the survey list:
 
 ```bash
-python3 scripts/cts_ops.py --env-file .env surveyol-surveys \
+python3 scripts/cts_ops.py surveyol-surveys \
   --output data/private/surveyol-api/surveys.json
 ```
 
 Snapshot a specific survey's metadata, collectors, and responses:
 
 ```bash
-python3 scripts/cts_ops.py --env-file .env surveyol-snapshot \
+python3 scripts/cts_ops.py surveyol-snapshot \
   --week week-003 \
   --survey-id SURVEYOL_SURVEY_GUID \
   --out-dir data/private/surveyol-api
@@ -187,7 +212,7 @@ The snapshot also stores survey pages and page-level questions so a preflight ca
 Export the live SurveyOL contact table and audit it for duplicate email records before importing recipients or sending another invitation batch:
 
 ```bash
-python3 scripts/cts_ops.py --env-file .env surveyol-contacts \
+python3 scripts/cts_ops.py surveyol-contacts \
   --output data/private/surveyol-api/surveyol-contacts.csv \
   --audit-output data/private/audits/surveyol-contact-duplicate-audit.json
 ```
@@ -197,7 +222,7 @@ If `duplicate_email_count` is greater than `0`, stop all SurveyOL invitation sen
 Sync missing SurveyOL contacts from a private send list with a dry-run first:
 
 ```bash
-python3 scripts/cts_ops.py --env-file .env surveyol-sync-contacts \
+python3 scripts/cts_ops.py surveyol-sync-contacts \
   --send-list data/private/send-lists/week-003-surveyol-contacts.csv \
   --plan-output data/private/audits/week-003-surveyol-contact-plan.json
 ```
@@ -207,7 +232,7 @@ The sync plan now checks both the incoming send list and the existing SurveyOL c
 Apply only after review:
 
 ```bash
-python3 scripts/cts_ops.py --env-file .env surveyol-sync-contacts \
+python3 scripts/cts_ops.py surveyol-sync-contacts \
   --send-list data/private/send-lists/week-003-surveyol-contacts.csv \
   --plan-output data/private/audits/week-003-surveyol-contact-plan-applied.json \
   --apply
