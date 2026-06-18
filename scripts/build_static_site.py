@@ -83,8 +83,7 @@ def render_automation_daily_log_content() -> str:
             "\n".join(
                 [
                     "      <tr>",
-                    f"        <td><time datetime=\"{escape(str(entry.get('recorded_at', '')))}\"><span class=\"recorded-date\">{recorded_date}</span><span class=\"recorded-time\">{recorded_time}</span></time></td>",
-                    f"        <td><span class=\"log-status\">{escape(str(entry.get('status', '')))}</span></td>",
+                    f"        <td><div class=\"recorded-status\"><time datetime=\"{escape(str(entry.get('recorded_at', '')))}\"><span class=\"recorded-date\">{recorded_date}</span><span class=\"recorded-time\">{recorded_time}</span></time>\n<span class=\"log-status\">{escape(str(entry.get('status', '')))}</span></div></td>",
                     f"        <td>{escape(str(entry.get('summary', '')))}{render_text_list(entry.get('ran'))}</td>",
                     f"        <td>{escape(str(entry.get('result', '')))}</td>",
                     f"        <td>{escape(str(entry.get('next', '')))}</td>",
@@ -97,7 +96,7 @@ def render_automation_daily_log_content() -> str:
             "\n".join(
                 [
                     "      <tr>",
-                    "        <td colspan=\"5\">No daily automation log entries have been published yet.</td>",
+                    "        <td colspan=\"4\">No daily automation log entries have been published yet.</td>",
                     "      </tr>",
                 ]
             )
@@ -129,8 +128,7 @@ def render_automation_daily_log_content() -> str:
     <table class="automation-log-table">
       <thead>
         <tr>
-          <th scope="col">Recorded</th>
-          <th scope="col">Status</th>
+          <th scope="col">Recorded / Status</th>
           <th scope="col">What ran</th>
           <th scope="col">Result</th>
           <th scope="col">Next</th>

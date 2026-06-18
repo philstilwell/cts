@@ -952,21 +952,13 @@ h3 {
 
 .wp-content .automation-log-table {
   min-width: 1040px;
+  table-layout: fixed;
 }
 
-.automation-log-table th:first-child,
-.automation-log-table td:first-child {
-  width: 12rem;
-}
-
-.automation-log-table th:nth-child(2),
-.automation-log-table td:nth-child(2) {
-  width: 10rem;
-}
-
-.automation-log-table th:nth-child(3),
-.automation-log-table td:nth-child(3) {
-  width: 28rem;
+.automation-log-table th,
+.automation-log-table td {
+  width: 25%;
+  overflow-wrap: anywhere;
 }
 
 .automation-log-table td {
@@ -993,6 +985,12 @@ h3 {
   color: var(--muted);
   font-size: 0.88rem;
   line-height: 1.35;
+}
+
+.recorded-status {
+  display: grid;
+  gap: 0.58rem;
+  align-content: start;
 }
 
 .log-status {
