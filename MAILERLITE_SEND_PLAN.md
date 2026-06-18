@@ -1,5 +1,7 @@
 # CTS MailerLite Send Plan
 
+Retired as an operational source of truth on 2026-06-18. CTS weekly survey processes no longer depend on MailerLite. Keep this file only as historical reference for any legacy public pages or archived email copy.
+
 ## Audience Groups
 
 Current live MailerLite groups, last verified June 2, 2026. Recheck counts and group targeting directly in MailerLite before every send:

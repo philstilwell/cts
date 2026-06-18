@@ -9,23 +9,22 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 ## Weekly Cadence
 
 - Tuesday morning: publish the first weekly report for any survey launched one week earlier, and refresh every still-open survey report that has already received its first preliminary report. Preliminary reports should clearly state that the survey remains open and will be refreshed each Tuesday morning until final close.
-- Tuesday morning: send the weekly newsletter to newsletter subscribers after the report is published. Include an encapsulation of the newest report plus a link to the full report.
 - Tuesday evening: create the placeholder public report page for the new survey, launch the new weekly SurveyOL survey, and begin sending invitations through the SurveyOL Email collector. Send up to 100 participant invitations per day until all eligible potential participants have been sent that week's invitation.
 - Wednesday through Saturday at 2:30 PM Eastern, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
-- Every week: before any newsletter or survey-invitation send, remove or suppress from both MailerLite and SurveyOL any address that unsubscribed, opted out, bounced, or was marked do-not-email in either system.
+- Every week: before any survey-invitation send, remove or suppress from SurveyOL and `CTS 2026` any address that appears on SurveyOL's no-send/unsubscribed list or is otherwise marked do-not-email in the registry.
 - Every weekly survey remains open for 3 weeks from its first invitation send. Close the SurveyOL collector after the 3-week response window, export the final raw results privately, and regenerate the public report as final.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
 - The Reports page includes a rolling survey control board under the weekly report grid. Any automation that changes a survey's public status on that board should rebuild the static site, commit the changed public files, and push to the remote before reporting the board update as complete.
 
 ## Active Reminders
 
-- Monday afternoon: run the list-hygiene audit before the next newsletter and survey sends.
-- Tuesday morning: publish first preliminary reports, refresh still-open preliminary reports, create the report encapsulation, update the site, and send or prepare the newsletter.
+- Monday afternoon: run the list-hygiene audit before the next survey sends.
+- Tuesday morning: publish first preliminary reports, refresh still-open preliminary reports, create the report encapsulation, and update the site.
 - Tuesday morning after the report cycle: check whether any survey has reached the 3-week close date, then close and finalize reports as needed.
 - Tuesday evening: create the placeholder public report page, launch the new SurveyOL Email collector survey, and send the first invitation batch.
 - Wednesday through Saturday at 2:30 PM Eastern: check whether eligible participants remain uninvited, regenerate the invitation-scope automation status board, and send the next guarded invitation batch only if required hygiene and suppression checks are clear.
 
-These reminders can execute only when the relevant SurveyOL, MailerLite, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
+These reminders can execute only when the relevant SurveyOL, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
 
 ## Automation Status Board
 
@@ -50,7 +49,7 @@ The status board answers three operational questions:
 
 1. Did every required automation or guarded check for this scope run, and when?
 2. Is each item `passed`, `review_required`, `blocked`, `failed`, `missing`, `stale`, `planned`, `running`, or explicitly `not_due`?
-3. Does each major process area have coverage and redundancy, such as MailerLite plus SurveyOL suppression checks, send-list plus live-contact duplicate audits, dry-run plans plus human-review gates, and private raw exports plus public aggregate summaries?
+3. Does each major process area have coverage and redundancy, such as SurveyOL no-send plus registry suppression checks, send-list plus live-contact duplicate audits, dry-run plans plus human-review gates, and private raw exports plus public aggregate summaries?
 
 Some required steps are intentionally not fully automated, especially SurveyOL survey creation, Email collector sends, test-export review, public URL verification, and final approval of dry-run plans. Record those guarded steps in the private ledger instead of relying on memory:
 
@@ -70,12 +69,11 @@ python3 scripts/cts_automation_status.py list --scope launch
 
 Do not put live SurveyOL respondent links, names, emails, participant IDs, or private raw-data details in ledger notes. Keep notes public-safe even though the ledger is stored under ignored private data.
 
-## Report And Newsletter Encapsulation
+## Report Encapsulation
 
-Each weekly report needs a short encapsulation suitable for reuse in two places:
+Each weekly report needs a short encapsulation suitable for reuse in at least one place:
 
-1. The weekly newsletter sent to MailerLite subscribers.
-2. The top of the next weekly SurveyOL survey.
+1. The top of the next weekly SurveyOL survey.
 
 The encapsulation should be short enough to scan quickly and should include:
 
@@ -84,8 +82,6 @@ The encapsulation should be short enough to scan quickly and should include:
 - 2-4 major findings or tensions;
 - a link to the full public report;
 - a privacy-safe note that raw respondent identities and raw free-text suggestions are not published.
-
-Newsletter-only subscribers should receive report notices and topic previews, not SurveyOL respondent links unless they are separately approved as survey participants.
 
 ## Build The Survey
 
@@ -113,11 +109,8 @@ Newsletter-only subscribers should receive report notices and topic previews, no
 6. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
 7. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
 8. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
-9. Keep newsletter-only subscribers in the separate `CTS Newsletter` group. Use that group for report notices, topic previews, and general CTS updates; do not send weekly survey links to newsletter-only subscribers.
-10. After each send, reconcile SurveyOL `Opted Out`, bounced, and delivery-problem records back into `CTS 2026`, MailerLite, and SurveyOL before the next recipient import. An unsubscribe, opt-out, bounce, or do-not-email record in either SurveyOL or MailerLite is a global CTS email suppression for both systems.
-11. The public newsletter form at `https://christianthoughtsurvey.com/newsletter/` collects email address, name, ministry status, and interest motivation, and should add subscribers only to `CTS Newsletter`.
-12. The newsletter double opt-in thank-you page should redirect to `https://christianthoughtsurvey.com/email-confirmation/`.
-13. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
+9. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
+10. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
 
 ## Participant Profile Intake
 
@@ -169,18 +162,15 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 
 ## Weekly List Hygiene
 
-Before each weekly newsletter and before each SurveyOL invitation batch:
+Before each SurveyOL invitation batch:
 
 0. Run `python3 scripts/cts_ops.py env-doctor --verify-api` and stop immediately if it exits nonzero or reports `human_review_required: true`.
-1. Export or inspect MailerLite unsubscribers, bounces, and suppression records.
-2. Export or inspect SurveyOL opted-out, bounced, and delivery-problem records.
-3. Treat an unsubscribe, opt-out, bounce, or do-not-email record from either MailerLite or SurveyOL as a global CTS email suppression.
-4. Update the canonical `CTS 2026` participant registry so suppressed participants are excluded from future sends.
-5. Update both SurveyOL and MailerLite lists so globally suppressed contacts are removed, suppressed, or otherwise excluded from both systems.
-6. Keep newsletter-only subscribers, survey participants, and do-not-email records conceptually separate.
-7. Record the reconciliation date and source of each suppression update in private operational notes or the participant registry.
+1. Export or inspect SurveyOL opted-out, bounced, delivery-problem, and no-send records.
+2. Treat a SurveyOL no-send, opt-out, bounce, delivery-problem, or registry do-not-email record as a global CTS email suppression.
+3. Update the canonical `CTS 2026` participant registry so suppressed participants are excluded from future sends.
+4. Record the reconciliation date and source of each suppression update in private operational notes or the participant registry.
 
-Use `scripts/cts_ops.py` for the hardened local version of this process: export MailerLite suppressions, build the private SurveyOL send list, write the exact weekly contact crosswalk, and generate dry-run MailerLite/SurveyOL sync plans under `data/private/`. See `CTS_OPERATIONS_HARDENING.md`.
+Use `scripts/cts_ops.py` for the hardened local version of this process: verify SurveyOL API access, save the current SurveyOL no-send suppression CSV under `data/private/suppressions/surveyol-no-send.csv`, build the private SurveyOL send list, write the exact weekly contact crosswalk, and generate dry-run SurveyOL contact sync plans under `data/private/`. See `CTS_OPERATIONS_HARDENING.md`.
 
 Prefer one stable private token file such as `.secrets/cts.env`. `scripts/cts_ops.py` auto-discovers that path along with `.env`, `.env.local`, `.secrets/cts-ops.env`, and `~/.codex/cts.env`, so the recurring automations should not depend on ad hoc shell exports.
 

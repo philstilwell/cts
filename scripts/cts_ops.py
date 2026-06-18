@@ -5,7 +5,7 @@ The commands in this file are intentionally conservative:
 
 - private inputs and generated contact files belong under data/private/;
 - dry-run plans are the default for API-changing workflows;
-- no command sends a SurveyOL or MailerLite campaign;
+- no command sends SurveyOL invitations;
 - public report generation remains in cts_report_pipeline.py.
 """
 
@@ -601,13 +601,9 @@ def cmd_mailerlite_groups(args: argparse.Namespace) -> int:
 
 def cmd_env_doctor(args: argparse.Namespace) -> int:
     required = [
-        "MAILERLITE_API_TOKEN",
         "SURVEYOL_API_TOKEN",
     ]
-    optional = [
-        "MAILERLITE_CTS_PARTICIPANTS_GROUP_ID",
-        "MAILERLITE_CTS_NEWSLETTER_GROUP_ID",
-    ]
+    optional: list[str] = []
     visible_default_files = [str(path) for path in default_env_files()]
     env_status = []
     missing_required = []
@@ -635,16 +631,6 @@ def cmd_env_doctor(args: argparse.Namespace) -> int:
         except SystemExit as exc:
             api_checks["surveyol_account"] = {"ok": False, "error": str(exc)}
             verify_errors.append(f"SurveyOL API check failed: {exc}")
-        try:
-            groups = mailerlite_get_pages("/groups", require_env("MAILERLITE_API_TOKEN"), {"limit": 1})
-            api_checks["mailerlite_groups"] = {
-                "ok": True,
-                "group_sample_count": len(groups),
-            }
-        except SystemExit as exc:
-            api_checks["mailerlite_groups"] = {"ok": False, "error": str(exc)}
-            verify_errors.append(f"MailerLite API check failed: {exc}")
-
     review_required = bool(missing_required or verify_errors)
     result = {
         "generated_at": now_iso(),
@@ -653,7 +639,7 @@ def cmd_env_doctor(args: argparse.Namespace) -> int:
             "CTS ops environment is not ready for suppression reconciliation or API-backed hygiene commands."
             if review_required
             else "",
-            "Add the missing CTS tokens to a discovered private env file such as .secrets/cts.env, then rerun `python3 scripts/cts_ops.py env-doctor --verify-api`."
+            "Add the missing SurveyOL token to a discovered private env file such as .secrets/cts.env, then rerun `python3 scripts/cts_ops.py env-doctor --verify-api`."
             if review_required
             else "",
         ),
@@ -1107,33 +1093,6 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     add_common_env(parser)
     subparsers = parser.add_subparsers(dest="command", required=True)
-
-    p = subparsers.add_parser("mailerlite-groups", help="list MailerLite groups")
-    p.add_argument("--output", help="optional CSV output")
-    p.add_argument("--limit", type=int, default=1000)
-    p.set_defaults(func=cmd_mailerlite_groups)
-
-    p = subparsers.add_parser("mailerlite-suppressions", help="export MailerLite unsubscribed/bounced/junk subscribers")
-    p.add_argument("--output", required=True)
-    p.add_argument("--status", action="append", choices=["active", "unsubscribed", "unconfirmed", "bounced", "junk"], help="status to export; may be repeated")
-    p.add_argument("--limit", type=int, default=1000)
-    p.set_defaults(func=cmd_mailerlite_suppressions)
-
-    p = subparsers.add_parser("mailerlite-group-snapshot", help="export subscribers currently in a MailerLite group")
-    p.add_argument("--group-id", required=True)
-    p.add_argument("--output", required=True)
-    p.add_argument("--limit", type=int, default=1000)
-    p.set_defaults(func=cmd_mailerlite_group_snapshot)
-
-    p = subparsers.add_parser("mailerlite-sync-group", help="dry-run or apply MailerLite group alignment from a private send list")
-    p.add_argument("--send-list", required=True)
-    p.add_argument("--group-id", required=True)
-    p.add_argument("--suppression-csv", action="append", default=[], help="suppression CSV; may be repeated")
-    p.add_argument("--plan-output", required=True)
-    p.add_argument("--remove-extra", action="store_true", help="also remove active group members not present in the send list")
-    p.add_argument("--apply", action="store_true", help="make API changes; default is dry-run")
-    p.add_argument("--limit", type=int, default=1000)
-    p.set_defaults(func=cmd_mailerlite_sync_group)
 
     p = subparsers.add_parser("audit-email-duplicates", help="audit one or more contact CSVs for duplicate normalized email addresses")
     p.add_argument("--csv", action="append", required=True, help="contact CSV to audit; may be repeated")

@@ -6,8 +6,8 @@ This file documents the local operational tooling used by the weekly CTS automat
 
 - Raw SurveyOL exports, participant registry CSV exports, contact crosswalks, API snapshots, and sync plans belong under `data/private/`.
 - `data/private/` and `.env*` files are ignored by git.
-- The ops CLI does not send SurveyOL invitations or MailerLite campaigns.
-- Commands that can change MailerLite or SurveyOL data default to dry-run plans and require `--apply`.
+- The ops CLI does not send SurveyOL invitations.
+- Commands that can change SurveyOL data default to dry-run plans and require `--apply`.
 - Generated audits and dry-run plans include `human_review_required`, `human_review_reason`, and `human_review_next_action` fields. Treat `human_review_required: true` as a hard stop before imports, list mutations, newsletter sends, or survey invitations.
 - The public Reports page includes a rolling survey control board. Any automation that changes that board should rebuild the static site, commit the public status update, and push to the remote before reporting completion.
 - SurveyOL Email collector sending still requires a guarded human/session step unless a documented send endpoint is added later.
@@ -60,10 +60,7 @@ cp .env.example .secrets/cts.env
 Then fill only the private CTS env file:
 
 ```bash
-MAILERLITE_API_TOKEN=...
 SURVEYOL_API_TOKEN=...
-MAILERLITE_CTS_PARTICIPANTS_GROUP_ID=...
-MAILERLITE_CTS_NEWSLETTER_GROUP_ID=...
 ```
 
 `scripts/cts_ops.py` now auto-discovers CTS env files in these locations before every command:
@@ -84,7 +81,7 @@ python3 scripts/cts_ops.py env-doctor --verify-api
 
 Treat any nonzero exit or `human_review_required: true` output as a hard stop. This catches missing tokens or broken API access before the automation reaches the send gate.
 
-MailerLite's current API lists subscribers with `filter[status]` values such as `active`, `unsubscribed`, `bounced`, and `junk`, and exposes group membership endpoints. SurveyOL's developer API exposes account, contact, survey, collector, and response objects through bearer-token authentication.
+SurveyOL's developer API exposes account, contact, survey, collector, and response objects through bearer-token authentication.
 
 ## Weekly Private Inputs
 
@@ -116,12 +113,13 @@ Start with the environment/API preflight:
 python3 scripts/cts_ops.py env-doctor --verify-api
 ```
 
-Then export MailerLite suppressions:
+Then save the current SurveyOL no-send suppression source to:
 
-```bash
-python3 scripts/cts_ops.py mailerlite-suppressions \
-  --output data/private/suppressions/mailerlite-global.csv
+```text
+data/private/suppressions/surveyol-no-send.csv
 ```
+
+This file may come from a direct SurveyOL no-send or unsubscribed export, or from a normalized manual CSV built from the live SurveyOL send page. The send-list builder reads the email column generically, so the file only needs a usable email column.
 
 Build a private weekly SurveyOL send list and exact crosswalk:
 
@@ -129,7 +127,7 @@ Build a private weekly SurveyOL send list and exact crosswalk:
 python3 scripts/cts_ops.py build-send-list \
   --week week-003 \
   --registry-csv data/private/registry/cts-2026.csv \
-  --suppression-csv data/private/suppressions/mailerlite-global.csv \
+  --suppression-csv data/private/suppressions/surveyol-no-send.csv \
   --require-friendly \
   --require-participant-id \
   --require-email-key
@@ -156,32 +154,11 @@ python3 scripts/cts_ops.py audit-email-duplicates \
 
 The audit normalizes email addresses by trimming whitespace and lowercasing. It reports every CSV row sharing the same normalized email so the list can be corrected before SurveyOL sees it.
 
-## MailerLite Dry-Run Sync
+## SurveyOL No-Send Source
 
-Create a dry-run group alignment plan before applying anything. The snapshot/sync reads MailerLite group members across active, unsubscribed, unconfirmed, bounced, and junk statuses so suppressed records are not hidden by MailerLite's default active-only group view:
+CTS no longer uses MailerLite as an operational suppression source. The only external suppression source for weekly survey invitations is SurveyOL's no-send or unsubscribed list, which must be reflected back into `CTS 2026` before future sends.
 
-```bash
-python3 scripts/cts_ops.py mailerlite-sync-group \
-  --send-list data/private/send-lists/week-003-surveyol-contacts.csv \
-  --group-id "$MAILERLITE_CTS_PARTICIPANTS_GROUP_ID" \
-  --suppression-csv data/private/suppressions/mailerlite-global.csv \
-  --plan-output data/private/audits/week-003-mailerlite-sync-plan.json
-```
-
-Only after reviewing the plan:
-
-```bash
-python3 scripts/cts_ops.py mailerlite-sync-group \
-  --send-list data/private/send-lists/week-003-surveyol-contacts.csv \
-  --group-id "$MAILERLITE_CTS_PARTICIPANTS_GROUP_ID" \
-  --suppression-csv data/private/suppressions/mailerlite-global.csv \
-  --plan-output data/private/audits/week-003-mailerlite-sync-plan-applied.json \
-  --apply
-```
-
-Do not use `--remove-extra` unless you intentionally want to remove active MailerLite group members who are not in the current weekly send list.
-
-Dry-run sync plans set `human_review_required: true`. Applied plans set it to `false` because the reviewed action has already been executed.
+If SurveyOL's API does not expose the needed no-send rows directly, save a private normalized CSV under `data/private/suppressions/surveyol-no-send.csv` from the live SurveyOL send page or export UI and treat that file as the current suppression authority.
 
 ## SurveyOL API Snapshots
 
@@ -244,7 +221,6 @@ The scripts harden list preparation, suppression reconciliation, API snapshots, 
 
 - SurveyOL survey creation from copy/paste blocks.
 - SurveyOL Email collector batch sending.
-- MailerLite campaign creation/sending.
 - Google Sheets direct writeback to `CTS 2026`.
 
 Those should remain guarded until the exact APIs and field mappings are proven with one or two production cycles.

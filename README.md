@@ -21,21 +21,11 @@ Independent live items and participant-nominated ballot items should be orthogon
 
 ## Weekly Cadence
 
-The regular weekly rhythm is Tuesday-centered. Tuesday morning is the report and newsletter window: publish the first preliminary report for any survey launched one week earlier, refresh every still-open preliminary report, send the MailerLite newsletter to subscribers, and include a short report encapsulation plus a link. Tuesday evening is the new survey launch window: create the placeholder public report page, open the SurveyOL Email collector, and send the first batch of up to 100 participant invitations. Continue sending up to 100 invitations per day until all eligible participants have been invited. Each weekly survey remains open for three weeks from the first invitation send, with preliminary reports refreshed each Tuesday morning until the collector is closed and the report is regenerated as final. An unsubscribe, opt-out, bounce, or do-not-email record in either SurveyOL or MailerLite suppresses that address from both systems before future sends.
+The regular weekly rhythm is Tuesday-centered. Tuesday morning is the report window: publish the first preliminary report for any survey launched one week earlier and refresh every still-open preliminary report. Tuesday evening is the new survey launch window: create the placeholder public report page, open the SurveyOL Email collector, and send the first batch of up to 100 participant invitations. Continue sending up to 100 invitations per day until all eligible participants have been invited. Each weekly survey remains open for three weeks from the first invitation send, with preliminary reports refreshed each Tuesday morning until the collector is closed and the report is regenerated as final. A SurveyOL no-send, opt-out, bounce, delivery-problem, or registry do-not-email record suppresses that address from future survey invitations.
 
-## MailerLite Audience Groups
+## Legacy MailerLite Note
 
-- `CTS Participants`: survey participants who may receive weekly heads-up emails, survey links, and participant reminders.
-- `CTS Newsletter`: newsletter-only subscribers who may receive report notices, topic previews, and general CTS updates.
-- `CTS Closed Test`: temporary/internal test recipients.
-
-Do not send weekly survey links to `CTS Newsletter` unless a subscriber is also intentionally included in `CTS Participants`.
-
-The public Contact & Weekly Survey Participation page is the eligibility and interest front door for potential survey participants. Approved potential participants should receive the separate private participant-profile survey documented in `PARTICIPANT_PROFILE_SURVEY.md` before being added or confirmed in `CTS Participants`.
-
-The public newsletter signup page is `/newsletter/`. Its MailerLite embedded form is connected only to `CTS Newsletter` and collects email address, name, ministry status, and the subscriber's motivation for interest.
-
-MailerLite double opt-in for the newsletter form redirects confirmed subscribers to `/email-confirmation/`. That page is intentionally not linked from navigation and is marked `noindex`.
+Mailerlite-related pages and notes remain in the repository for historical/public-site continuity, but MailerLite is no longer part of the operational weekly survey process. The active invitation workflow now trusts SurveyOL's no-send list plus the canonical `CTS 2026` registry only.
 
 The generated pages reflect the new WordPress pages updated on June 1, 2026:
 
