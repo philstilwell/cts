@@ -46,7 +46,7 @@ python3 scripts/cts_automation_status.py record \
 
 Use `not_due` only when a process step is truly outside the current calendar gate, such as final close before the three-week response window ends. Use `review_required` when an automation has run but a human decision is still needed. Use `blocked` when the next risky action must stop.
 
-The recurring invitation-batch check runs Wednesday through Saturday at 2:30 PM Eastern while a weekly survey still has eligible participants who have not been invited. It should regenerate the invitation-scope status board before acting, stop on any missing/stale/blocked/failed evidence, and treat `review_required` suppression reconciliation as a hard gate before another batch.
+The recurring invitation-batch check runs Wednesday through Saturday at 11:30 AM Eastern while a weekly survey still has eligible participants who have not been invited. It should regenerate the invitation-scope status board before acting, stop on any missing/stale/blocked/failed evidence, and treat `review_required` suppression reconciliation as a hard gate before another batch.
 
 ## API Tokens
 

@@ -10,7 +10,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 - Tuesday morning: publish the first weekly report for any survey launched one week earlier, and refresh every still-open survey report that has already received its first preliminary report. Preliminary reports should clearly state that the survey remains open and will be refreshed each Tuesday morning until final close.
 - Tuesday evening: create the placeholder public report page for the new survey, launch the new weekly SurveyOL survey, and begin sending invitations through the SurveyOL Email collector. Send up to 100 participant invitations per day until all eligible potential participants have been sent that week's invitation.
-- Wednesday through Saturday at 2:30 PM Eastern, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
+- Wednesday through Saturday at 11:30 AM Eastern, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
 - Every week: before any survey-invitation send, remove or suppress from SurveyOL and `CTS 2026` any address that appears on SurveyOL's no-send/unsubscribed list or is otherwise marked do-not-email in the registry.
 - Every weekly survey remains open for 3 weeks from its first invitation send. Close the SurveyOL collector after the 3-week response window, export the final raw results privately, and regenerate the public report as final.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
@@ -22,7 +22,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Tuesday morning: publish first preliminary reports, refresh still-open preliminary reports, create the report encapsulation, and update the site.
 - Tuesday morning after the report cycle: check whether any survey has reached the 3-week close date, then close and finalize reports as needed.
 - Tuesday evening: create the placeholder public report page, launch the new SurveyOL Email collector survey, and send the first invitation batch.
-- Wednesday through Saturday at 2:30 PM Eastern: check whether eligible participants remain uninvited, regenerate the invitation-scope automation status board, and send the next guarded invitation batch only if required hygiene and suppression checks are clear.
+- Wednesday through Saturday at 11:30 AM Eastern: check whether eligible participants remain uninvited, regenerate the invitation-scope automation status board, and send the next guarded invitation batch only if required hygiene and suppression checks are clear.
 
 These reminders can execute only when the relevant SurveyOL, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
 
