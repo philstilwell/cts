@@ -77,3 +77,9 @@ Update the public-safe automation log source with:
 ```bash
 python3 scripts/update_automation_daily_log.py --help
 ```
+
+Audit the local CTS cron definitions to confirm they all require public automation-log updates with:
+
+```bash
+python3 scripts/audit_cts_cron_logging.py
+```

@@ -26,6 +26,8 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 These reminders can execute only when the relevant SurveyOL, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
 
+Every CTS cron automation, even when it makes no public change or hits a blocker, must write a public-safe record to `data/public/automation-daily-log.json`, rebuild the static site, and push the refreshed `automation-daily-log/` page before the run is considered complete.
+
 ## Automation Status Board
 
 Each weekly cycle should have a private timestamped automation status board under `data/private/automation-status/`. Generate it before any risky action and again after the action is completed or blocked:
