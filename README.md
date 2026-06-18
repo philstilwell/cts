@@ -71,3 +71,9 @@ Build private weekly send lists and API sync plans with:
 ```bash
 python3 scripts/cts_ops.py --help
 ```
+
+Update the public-safe automation log source with:
+
+```bash
+python3 scripts/update_automation_daily_log.py --help
+```

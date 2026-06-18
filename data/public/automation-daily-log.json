@@ -1,7 +1,23 @@
 {
-  "updated_at": "2026-06-17T14:47:58-04:00",
-  "updated_time_et": "2:47:58 PM EDT",
+  "updated_at": "2026-06-18T15:19:53-04:00",
+  "updated_time_et": "3:19:53 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-18",
+      "recorded_at": "2026-06-18T15:19:53-04:00",
+      "recorded_time_et": "3:19:53 PM EDT",
+      "status": "Week 2 batch sent",
+      "summary": "Cleared the remaining invitation gate and sent the next guarded Week 2 batch.",
+      "ran": [
+        "Materialized the canonical SurveyOL contacts and duplicate-audit artifacts from the live authenticated send page.",
+        "Confirmed the invitation-scope status board was clear before sending.",
+        "Queued the next guarded SurveyOL Email collector batch of 100 invitations.",
+        "Recorded the post-send suppression check and remaining-count estimate in the private ledger.",
+        "Hardened the workflow with a reusable SurveyOL live-extract fallback for future runs."
+      ],
+      "result": "100 invitations were queued in this batch, bringing the Week 2 cumulative invitation count to 290. Public-safe post-send totals were 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited. SurveyOL then reached its daily sending limit.",
+      "next": "Resume at the next allowed send window if eligible contacts remain, and keep future public-safe automation log entries in sync with each batch result."
+    },
     {
       "date": "2026-06-17",
       "recorded_at": "2026-06-17T13:48:06-04:00",

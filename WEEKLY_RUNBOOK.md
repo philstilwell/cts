@@ -110,6 +110,7 @@ The encapsulation should be short enough to scan quickly and should include:
 7. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
 8. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
 9. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
+10. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
 10. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
 
 ## Participant Profile Intake
