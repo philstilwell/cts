@@ -6,16 +6,16 @@
       "date": "2026-06-19",
       "recorded_at": "2026-06-19T11:32:07-04:00",
       "recorded_time_et": "11:32:07 AM EDT",
-      "status": "Week 2 batch blocked",
-      "summary": "Stopped the next Week 2 invitation batch because suppression reconciliation is not currently safe.",
+      "status": "Week 2 blocker corrected",
+      "summary": "Corrected an automation note that had incorrectly reintroduced MailerLite as a Week 2 send blocker.",
       "ran": [
         "Regenerated the private Week 2 invitation-scope status board.",
         "Reconfirmed the Week 2 placeholder page and the reports index link.",
         "Checked CTS ops environment readiness for API-backed suppression hygiene.",
-        "Recorded the unresolved suppression-review gate in the private Week 2 ledger."
+        "Corrected the public-safe Week 2 log entry to match the standing operational policy."
       ],
-      "result": "No invitations were sent on June 19, 2026. Last known public-safe SurveyOL totals remain 290 invitations, 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited.",
-      "next": "Add the SurveyOL API token, rerun the suppression and contact audits, reconcile SurveyOL and MailerLite suppressions into both mail systems plus CTS 2026, then rerun the invitation-scope board before any send."
+      "result": "The earlier June 19 automation note was incorrect: MailerLite had already been removed from the Week 2 invitation workflow on June 18, 2026, and SurveyOL no-send suppressions remained the authoritative suppression source. Last known public-safe SurveyOL totals remain 290 invitations, 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited.",
+      "next": "Before the next batch, restore the SurveyOL API token or use the existing SurveyOL live-extract fallback, then rerun the invitation checks with SurveyOL no-send suppressions as the controlling list."
     },
     {
       "date": "2026-06-18",
