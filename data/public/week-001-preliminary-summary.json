@@ -5,6 +5,13 @@
   "topic": "Divorce and Remarriage",
   "status": "preliminary",
   "snapshot_date": "2026-06-16",
+  "field_dates": {
+    "first_invitation_sent": "2026-06-10",
+    "final_close": "2026-07-01",
+    "final_close_label": "Wednesday, July 1, 2026",
+    "final_close_rule": "21 days after the first production invitation send",
+    "date_note": "Week 1 launched outside the normal Tuesday cadence; this is the scheduled three-week final close target from the first Week 1 production invitation window."
+  },
   "platform": "CTS",
   "collector": "Email - Survey 01",
   "private_data_excluded": true,
@@ -20,7 +27,7 @@
   },
   "update_policy": {
     "will_recalculate": true,
-    "note": "This preliminary report will be refreshed each Tuesday morning while the survey remains open. It may also be refreshed sooner if new responses materially change the results. A final report should be stamped after the response window closes and the CTS export is reviewed."
+    "note": "This preliminary report will be refreshed each Tuesday morning while the survey remains open, until final close on Wednesday, July 1, 2026. It may also be refreshed sooner if new responses materially change the results. A final report should be stamped after the response window closes and the CTS export is reviewed."
   },
   "slider_scale": {
     "min": 0,

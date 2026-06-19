@@ -4,8 +4,13 @@
   "topic": "Pornography and the Church",
   "platform": "CTS",
   "field_dates": {
-    "start": null,
-    "end": null
+    "start": "2026-06-16",
+    "end": "2026-07-07",
+    "first_invitation_sent": "2026-06-16",
+    "first_report_target": "2026-06-23",
+    "final_close": "2026-07-07",
+    "final_close_label": "Tuesday, July 7, 2026",
+    "final_close_rule": "21 days after the first production invitation send"
   },
   "slider_scale": {
     "min": 0,

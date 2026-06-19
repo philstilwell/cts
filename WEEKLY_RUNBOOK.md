@@ -8,11 +8,11 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 ## Weekly Cadence
 
-- Tuesday morning: publish the first weekly report for any survey launched one week earlier, and refresh every still-open survey report that has already received its first preliminary report. Preliminary reports should clearly state that the survey remains open and will be refreshed each Tuesday morning until final close.
+- Tuesday morning: publish the first weekly report for any survey launched one week earlier, and refresh every still-open survey report that has already received its first preliminary report. Preliminary reports should clearly state the exact final close date and that the survey remains open until that date.
 - Tuesday evening: create the placeholder public report page for the new survey, launch the new weekly SurveyOL survey, and begin sending invitations through the SurveyOL Email collector. Send up to 100 participant invitations per day until all eligible potential participants have been sent that week's invitation.
 - Wednesday through Saturday at 11:30 AM Eastern, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
 - Every week: before any survey-invitation send, remove or suppress from SurveyOL and `CTS 2026` any address that appears on SurveyOL's no-send/unsubscribed list or is otherwise marked do-not-email in the registry.
-- Every weekly survey remains open for 3 weeks from its first invitation send. Close the SurveyOL collector after the 3-week response window, export the final raw results privately, and regenerate the public report as final.
+- Every weekly survey remains open for 3 weeks from its first invitation send. Calculate the final close date as the first production invitation send date plus 21 days, normally a Tuesday for Tuesday evening launches, and post that exact date on the weekly survey's public page before invitations go out. Close the SurveyOL collector after that date, export the final raw results privately, and regenerate the public report as final.
 - Every weekly SurveyOL Email collector should have `Reminder Follow-up` set to `Automate reminders within 12 days` before the first production invitation batch, unless CTS intentionally disables a reminder for a specific week and records the reason.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
 - The Reports page includes a rolling survey control board under the weekly report grid. Any automation that changes a survey's public status on that board should rebuild the static site, commit the changed public files, and push to the remote before reporting the board update as complete.
@@ -21,7 +21,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 - Monday afternoon: run the list-hygiene audit before the next survey sends.
 - Tuesday morning: publish first preliminary reports, refresh still-open preliminary reports, create the report encapsulation, and update the site.
-- Tuesday morning after the report cycle: check whether any survey has reached the 3-week close date, then close and finalize reports as needed.
+- Tuesday morning after the report cycle: check whether any survey has reached its posted final close date, then close and finalize reports as needed.
 - Tuesday evening: create the placeholder public report page, launch the new SurveyOL Email collector survey, and send the first invitation batch.
 - Wednesday through Saturday at 11:30 AM Eastern: check whether eligible participants remain uninvited, regenerate the invitation-scope automation status board, and send the next guarded invitation batch only if required hygiene and suppression checks are clear.
 
@@ -99,7 +99,7 @@ The encapsulation should be short enough to scan quickly and should include:
 9. Add a text box for future participant-nominated survey items.
 10. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
 11. Confirm the full-time ministry participation note appears in the website/contact materials and email copy. Do not add a separate eligibility confirmation item inside the weekly SurveyOL survey unless CTS intentionally reintroduces one.
-12. Create the placeholder public report page before the first SurveyOL invitation batch. The placeholder should use the stable report URL, state that the survey is open, name the topic, identify the expected first-report date, and explain that preliminary results will be refreshed each Tuesday morning until final close. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
+12. Create the placeholder public report page before the first SurveyOL invitation batch. The placeholder should use the stable report URL, state that the survey is open, name the topic, identify the expected first-report date, and show the exact final close date calculated as the planned first production invitation date plus 21 days. If the actual first send slips, update the page, reports index, and week config to the corrected close date before reporting the launch complete. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
 13. Before any full participant send, remove all closed-test wording from the SurveyOL title, intro text, previous-results placeholder, and end-of-survey page.
 
 ## Send The Survey
@@ -113,9 +113,10 @@ The encapsulation should be short enough to scan quickly and should include:
 7. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
 8. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
 9. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
-10. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
-11. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
-12. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
+10. After the first production invitation batch is actually sent, verify that the public page's final close date equals that send date plus 21 days. If the actual send date differs from the planned launch date, correct the public page, reports index, reporting config, and automation ledger before the next public status update.
+11. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
+12. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
+13. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
 
 ## Participant Profile Intake
 
@@ -140,10 +141,10 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 ## Export And Report
 
 1. Publish a preliminary first report on Tuesday morning one week after the first invitation send.
-2. Refresh every still-open preliminary report each Tuesday morning until its 3-week response window closes.
+2. Refresh every still-open preliminary report each Tuesday morning until its posted final close date.
 3. Optionally refresh a preliminary report outside the Tuesday cycle when responses have materially changed, such as about 10 or more new complete responses or a clear shift in a published takeaway.
-4. Each preliminary refresh should show the current response count, last-updated date, and a note that the report will continue to be refreshed until final close.
-5. Export SurveyOL responses after the 3-week response window closes.
+4. Each preliminary refresh should show the current response count, last-updated date, exact final close date, and a note that the report will continue to be refreshed until that close date.
+5. Export SurveyOL responses after the posted final close date.
 6. Save the private raw export in `data/private/surveyol/week-###.csv`. Do not commit raw exports.
 7. Normalize email addresses and join the private export to the `CTS 2026` participant registry before subgroup or deep analysis. Flag unmatched rows and resolve them before publishing a report.
 8. Save any joined identity-bearing analysis file under `data/private/`. Do not commit joined files, contact crosswalks, names, email addresses, participant IDs, or raw free-text suggestions.
@@ -190,7 +191,7 @@ Before acting on the checklist above, regenerate the relevant automation status 
 - The first 15 live survey items are marked required in SurveyOL.
 - SurveyOL title, descriptive text, previous-results placeholder, and end-of-survey page contain no closed-test language before production send.
 - Previous-results report references use an actual SurveyOL rich-text link, with no raw URL visible to participants. The linked label is bold, underlined, header-accent colored (`#553e15` unless the banner palette changes), and enlarged with `X↑` twice.
-- Placeholder public report page exists, is linked from the reports index, and has been pushed before the first production invitation batch.
+- Placeholder public report page exists, is linked from the reports index, shows the exact final close date calculated from the planned first invitation date plus 21 days, and has been pushed before the first production invitation batch.
 - Featured Topic header image appears immediately before the `◉ Main topic...` introduction line.
 - The `◉ Main topic...` introduction block is styled in SurveyOL: main-topic line bold and enlarged with `X↑` twice, topic name highlighted with `#e0a550` background and `#553e15` text, and response-format line bold in black.
 - SurveyOL Email collector is `Open`, `Anonymous Responses` is `Off`, and any Web Link collector is closed or intentionally excluded from the launch.

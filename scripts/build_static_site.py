@@ -350,7 +350,7 @@ PAGES = [
           </div>
           <div class="survey-stage pending" data-short-label="Final">
             <button class="stage-dot" type="button" aria-describedby="week2-final-info" aria-label="Week 2 final report details"></button>
-            <span class="stage-info-panel" id="week2-final-info" role="tooltip"><strong>Final report</strong> Final close target: July 7, 2026. Results will be marked final after the CTS export is reviewed.</span>
+            <span class="stage-info-panel" id="week2-final-info" role="tooltip"><strong>Final report</strong> Final close: Tuesday, July 7, 2026, 21 days after the first production invitation send. Results will be marked final after the CTS export is reviewed.</span>
             <span>Final</span>
           </div>
         </div>
@@ -382,12 +382,12 @@ PAGES = [
           </div>
           <div class="survey-stage active" data-short-label="Refresh">
             <button class="stage-dot" type="button" aria-describedby="week1-refresh-info" aria-label="Week 1 refresh details"></button>
-            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshing</strong> Current public responses: 33 complete. The report refreshes each Tuesday morning while the survey remains open.</span>
+            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshing</strong> Current public responses: 33 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Wednesday, July 1, 2026.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
             <button class="stage-dot" type="button" aria-describedby="week1-final-info" aria-label="Week 1 final report details"></button>
-            <span class="stage-info-panel" id="week1-final-info" role="tooltip"><strong>Final report</strong> Pending final close and CTS export review. Final reporting will preserve respondent privacy thresholds.</span>
+            <span class="stage-info-panel" id="week1-final-info" role="tooltip"><strong>Final report</strong> Final close target: Wednesday, July 1, 2026, 21 days after the first Week 1 production invitation window. Final reporting will preserve respondent privacy thresholds.</span>
             <span>Final</span>
           </div>
         </div>
@@ -421,7 +421,7 @@ PAGES = [
       <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
       <p>The cycle is cumulative: participant suggestions submitted in one weekly survey are reviewed by CTS with AI assistance, polished, reduced to a 7-item ballot, ranked by active participants, and the top 3 ranked items become live survey items in the following week's survey. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.</p>
       <p>The regular rhythm is Tuesday-centered. First preliminary reports and refreshes to still-open preliminary reports are prepared on Tuesday morning, and the next survey's placeholder report page is published before the next CTS survey launches Tuesday evening. Invitations are sent through the CTS email invitation system in daily batches of up to 100 until all eligible participants have been invited.</p>
-      <p>Each weekly survey remains open for three weeks from the first invitation send. Preliminary reports are refreshed each Tuesday morning until the response window closes, with optional earlier updates when responses materially change, then marked final after the final export is reviewed.</p>
+      <p>Each weekly survey remains open for three weeks from the first invitation send. The exact final close date is posted on the weekly public page before invitations go out, adjusted if the first send date changes, and reused through report refreshes and finalization. Preliminary reports are refreshed each Tuesday morning until the response window closes, with optional earlier updates when responses materially change, then marked final after the final export is reviewed.</p>
       <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
     </div>
   </details>

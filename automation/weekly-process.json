@@ -59,6 +59,26 @@
       "operator_note": "Record the public URL and git commit after the site is pushed."
     },
     {
+      "id": "public.final-close-date-posted",
+      "title": "Public final close date is calculated and posted",
+      "phase": "Launch public status",
+      "required": true,
+      "scopes": ["launch", "report", "close", "full-cycle"],
+      "cadence": "Before the first production invitation batch, after the first batch if the actual send date differs from the plan, and before each report refresh.",
+      "evidence": [
+        {"kind": "record", "required": true}
+      ],
+      "covers": [
+        "First production invitation send date captured or planned",
+        "Final close date calculated as first invitation date plus 21 days",
+        "Weekly public page shows the exact final close date or a clearly marked final close target before launch",
+        "Reports index and refresh notes use the same final close date",
+        "Close automation uses the posted final close date"
+      ],
+      "redundancy_groups": ["public-status", "survey-close-date"],
+      "operator_note": "Record the first invitation date, computed final close date, public URL, and commit hash. If launch slips, update the public page, reports index, week config, and ledger before reporting the launch complete."
+    },
+    {
       "id": "hygiene.surveyol-suppressions",
       "title": "SurveyOL no-send suppression list saved",
       "phase": "List hygiene",
@@ -368,13 +388,14 @@
         {"kind": "record", "required": true}
       ],
       "covers": [
+        "Posted final close date reached",
         "Collector closed",
         "Final raw export saved",
         "Final public report generated",
         "Control board moved to final"
       ],
       "redundancy_groups": ["public-status", "surveyol-state", "privacy-boundary"],
-      "operator_note": "Use not_due before the close date; use passed only after finalization is complete."
+      "operator_note": "Use not_due before the posted final close date; use passed only after finalization is complete."
     }
   ],
   "coverage_areas": [
@@ -467,11 +488,23 @@
       "scopes": ["launch", "report", "close", "full-cycle"],
       "required_automation_ids": [
         "public.placeholder-page",
+        "public.final-close-date-posted",
         "site.build-commit-push",
         "survey.close-finalize"
       ],
       "redundancy_groups": ["public-status"],
       "redundancy_reason": "Public pages, the control board, commit evidence, and finalization records all have to agree."
+    },
+    {
+      "id": "survey-close-date",
+      "title": "Survey close-date calculation and publication",
+      "scopes": ["launch", "report", "close", "full-cycle"],
+      "required_automation_ids": [
+        "public.final-close-date-posted",
+        "survey.close-finalize"
+      ],
+      "redundancy_groups": ["survey-close-date", "public-status", "surveyol-state"],
+      "redundancy_reason": "The final close date is calculated from the first invitation send, published on public pages, checked during report refreshes, and reused when the collector is closed."
     },
     {
       "id": "send-accountability",

@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>4:22:55 PM EDT</strong>
+      <strong>4:57:17 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,17 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-19T16:57:17-04:00"><span class="recorded-date">2026-06-19</span><span class="recorded-time">4:57:17 PM EDT</span></time>
+<span class="log-status">Close-date process hardened</span></div></td>
+        <td>Made the three-week final close date an explicit launch and reporting requirement.<ul>
+        <li>Updated the weekly runbook so each survey&#x27;s final close date is calculated as the first production invitation date plus 21 days.</li>
+        <li>Added a launch-gate record requiring the final close date to be posted on the weekly public page before invitations go out.</li>
+        <li>Updated the Week 1 and Week 2 public pages, reporting configs, and Reports page status details with exact close dates.</li>
+      </ul></td>
+        <td>Future weekly surveys should display their exact final close date on the public placeholder page before the first production invitation batch, then preserve that same date through report refreshes and finalization.</td>
+        <td>For each new weekly survey, record public.final-close-date-posted in the private ledger with the first invitation date, computed final close date, public URL, and commit hash.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-19T16:22:55-04:00"><span class="recorded-date">2026-06-19</span><span class="recorded-time">4:22:55 PM EDT</span></time>
 <span class="log-status">Reminder process hardened</span></div></td>

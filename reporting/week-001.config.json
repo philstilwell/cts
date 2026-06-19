@@ -4,8 +4,13 @@
   "topic": "Divorce and Remarriage",
   "platform": "CTS",
   "field_dates": {
-    "start": null,
-    "end": null
+    "start": "2026-06-10",
+    "end": "2026-07-01",
+    "first_invitation_sent": "2026-06-10",
+    "final_close": "2026-07-01",
+    "final_close_label": "Wednesday, July 1, 2026",
+    "final_close_rule": "21 days after the first production invitation send",
+    "date_note": "Week 1 launched outside the normal Tuesday cadence; this is the scheduled three-week final close target from the first Week 1 production invitation window."
   },
   "slider_scale": {
     "min": 0,

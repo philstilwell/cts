@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-19T16:22:55-04:00",
-  "updated_time_et": "4:22:55 PM EDT",
+  "updated_at": "2026-06-19T16:57:17-04:00",
+  "updated_time_et": "4:57:17 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-19",
+      "recorded_at": "2026-06-19T16:57:17-04:00",
+      "recorded_time_et": "4:57:17 PM EDT",
+      "status": "Close-date process hardened",
+      "summary": "Made the three-week final close date an explicit launch and reporting requirement.",
+      "ran": [
+        "Updated the weekly runbook so each survey's final close date is calculated as the first production invitation date plus 21 days.",
+        "Added a launch-gate record requiring the final close date to be posted on the weekly public page before invitations go out.",
+        "Updated the Week 1 and Week 2 public pages, reporting configs, and Reports page status details with exact close dates."
+      ],
+      "result": "Future weekly surveys should display their exact final close date on the public placeholder page before the first production invitation batch, then preserve that same date through report refreshes and finalization.",
+      "next": "For each new weekly survey, record public.final-close-date-posted in the private ledger with the first invitation date, computed final close date, public URL, and commit hash."
+    },
     {
       "date": "2026-06-19",
       "recorded_at": "2026-06-19T16:22:55-04:00",
