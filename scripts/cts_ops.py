@@ -15,7 +15,7 @@ import argparse
 from collections import defaultdict
 import csv
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import json
 import os
 from pathlib import Path
@@ -35,6 +35,12 @@ SURVEYOL_API_BASE = "https://api.surveyol.com/v1"
 SUPPRESSION_STATUSES = ("unsubscribed", "bounced", "junk")
 MAILERLITE_GROUP_STATUSES = ("active", "unsubscribed", "unconfirmed", "bounced", "junk")
 LOADED_ENV_FILES: list[str] = []
+CTS_SYNC_ENV_VARS = (
+    "SURVEYOL_API_TOKEN",
+    "SURVEYOL_API_TOKEN_EXPIRES_AT",
+    "MAILERLITE_API_TOKEN",
+)
+SURVEYOL_TOKEN_EXPIRY_WARNING_DAYS = 14
 
 EMAIL_FIELDS = (
     "Primary Email Address",
@@ -121,6 +127,29 @@ def load_env_file(path: Path) -> None:
         LOADED_ENV_FILES.append(resolved)
 
 
+def env_file_values(path: Path) -> dict[str, str]:
+    values: dict[str, str] = {}
+    if not path.exists():
+        return values
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        values[key.strip()] = value.strip().strip('"').strip("'")
+    return values
+
+
+def write_env_file(path: Path, values: dict[str, str], header_lines: list[str] | None = None) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lines = list(header_lines or [])
+    for key in sorted(values):
+        value = values[key].replace("\n", " ").strip()
+        lines.append(f"{key}={value}")
+    path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    path.chmod(0o600)
+
+
 def default_env_files() -> list[Path]:
     candidates = [
         ROOT / ".env",
@@ -148,6 +177,21 @@ def load_default_env_files() -> list[str]:
     for path in default_env_files():
         load_env_file(path)
     return [path for path in LOADED_ENV_FILES if path not in loaded_before]
+
+
+def parse_iso_datetime(value: str) -> datetime | None:
+    normalized = value.strip()
+    if not normalized:
+        return None
+    if normalized.endswith("Z"):
+        normalized = normalized[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(normalized)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
 
 
 def require_env(name: str) -> str:
@@ -620,6 +664,11 @@ def cmd_env_doctor(args: argparse.Namespace) -> int:
     visible_default_files = [str(path) for path in default_env_files()]
     env_status = []
     missing_required = []
+    discovered_key_sources: dict[str, list[str]] = {}
+    for path in default_env_files():
+        values = env_file_values(path)
+        for key in set(values):
+            discovered_key_sources.setdefault(key, []).append(str(path))
     for name in [*required, *optional]:
         present = bool(os.environ.get(name, "").strip())
         env_status.append(
@@ -627,6 +676,7 @@ def cmd_env_doctor(args: argparse.Namespace) -> int:
                 "name": name,
                 "required": name in required,
                 "present": present,
+                "discovered_in_files": discovered_key_sources.get(name, []),
             }
         )
         if name in required and not present:
@@ -634,6 +684,37 @@ def cmd_env_doctor(args: argparse.Namespace) -> int:
 
     api_checks: dict[str, Any] = {}
     verify_errors: list[str] = []
+    token_expiry_at = parse_iso_datetime(os.environ.get("SURVEYOL_API_TOKEN_EXPIRES_AT", ""))
+    token_expiry_status: dict[str, Any] | None = None
+    expiry_review_reason = ""
+    if token_expiry_at is not None:
+        remaining = token_expiry_at - datetime.now(timezone.utc)
+        warning_window = timedelta(days=SURVEYOL_TOKEN_EXPIRY_WARNING_DAYS)
+        status = "ok"
+        if remaining <= timedelta(0):
+            status = "expired"
+            expiry_review_reason = "The stored SurveyOL API token has expired."
+        elif remaining <= warning_window:
+            status = "expiring_soon"
+            expiry_review_reason = (
+                f"The stored SurveyOL API token expires within {SURVEYOL_TOKEN_EXPIRY_WARNING_DAYS} days."
+            )
+        token_expiry_status = {
+            "present": True,
+            "status": status,
+            "expires_at": token_expiry_at.isoformat().replace("+00:00", "Z"),
+            "days_remaining": round(remaining.total_seconds() / 86400, 2),
+        }
+    elif os.environ.get("SURVEYOL_API_TOKEN", "").strip():
+        token_expiry_status = {
+            "present": False,
+            "status": "unknown",
+            "expires_at": "",
+            "days_remaining": None,
+        }
+        expiry_review_reason = (
+            "The SurveyOL API token is present, but SURVEYOL_API_TOKEN_EXPIRES_AT is missing."
+        )
     if args.verify_api and not missing_required:
         try:
             surveyol_account = api_json("GET", f"{SURVEYOL_API_BASE}/account/me", require_env("SURVEYOL_API_TOKEN"))
@@ -644,22 +725,44 @@ def cmd_env_doctor(args: argparse.Namespace) -> int:
         except SystemExit as exc:
             api_checks["surveyol_account"] = {"ok": False, "error": str(exc)}
             verify_errors.append(f"SurveyOL API check failed: {exc}")
-    review_required = bool(missing_required or verify_errors)
+    review_required = bool(missing_required or verify_errors or expiry_review_reason)
+    next_action = ""
+    if missing_required:
+        next_action = (
+            "Add the missing SurveyOL token to a discovered private env file such as .secrets/cts.env, "
+            "then run `python3 scripts/cts_ops.py sync-env --target ~/.codex/cts.env` and rerun "
+            "`python3 scripts/cts_ops.py env-doctor --verify-api`."
+        )
+    elif verify_errors:
+        next_action = (
+            "Repair the failing SurveyOL API token, mirror it with "
+            "`python3 scripts/cts_ops.py sync-env --target ~/.codex/cts.env`, and rerun "
+            "`python3 scripts/cts_ops.py env-doctor --verify-api`."
+        )
+    elif expiry_review_reason:
+        next_action = (
+            "Refresh the SurveyOL API token before the next cron window, set `SURVEYOL_API_TOKEN_EXPIRES_AT`, "
+            "mirror both values with `python3 scripts/cts_ops.py sync-env --target ~/.codex/cts.env`, "
+            "then rerun `python3 scripts/cts_ops.py env-doctor --verify-api`."
+        )
     result = {
         "generated_at": now_iso(),
         **review_fields(
             review_required,
-            "CTS ops environment is not ready for suppression reconciliation or API-backed hygiene commands."
-            if review_required
-            else "",
-            "Add the missing SurveyOL token to a discovered private env file such as .secrets/cts.env, then rerun `python3 scripts/cts_ops.py env-doctor --verify-api`."
-            if review_required
-            else "",
+            expiry_review_reason
+            or (
+                "CTS ops environment is not ready for suppression reconciliation or API-backed hygiene commands."
+                if review_required
+                else ""
+            ),
+            next_action if review_required else "",
         ),
         "loaded_env_files": LOADED_ENV_FILES,
         "default_env_candidates": visible_default_files,
         "env": env_status,
         "api_checks": api_checks,
+        "surveyol_token_expiry": token_expiry_status,
+        "recommended_mirror_target": str(Path.home() / ".codex" / "cts.env"),
     }
     if args.json_output:
         write_json(Path(args.json_output), result)
@@ -786,6 +889,35 @@ def cmd_surveyol_account(args: argparse.Namespace) -> int:
     token = require_env("SURVEYOL_API_TOKEN")
     account = api_json("GET", f"{SURVEYOL_API_BASE}/account/me", token)
     print(json.dumps(account, indent=2, ensure_ascii=False))
+    return 0
+
+
+def cmd_sync_env(args: argparse.Namespace) -> int:
+    target = Path(args.target).expanduser()
+    current = env_file_values(target)
+    values: dict[str, str] = {}
+    missing: list[str] = []
+    for key in CTS_SYNC_ENV_VARS:
+        value = os.environ.get(key, "").strip()
+        if value:
+            values[key] = value
+        elif key == "SURVEYOL_API_TOKEN":
+            missing.append(key)
+    if missing:
+        raise SystemExit(
+            "Cannot sync CTS env because required values are still missing from the loaded environment: "
+            + ", ".join(missing)
+        )
+    if args.preserve_existing:
+        for key, value in current.items():
+            if key not in values:
+                values[key] = value
+    header_lines = [
+        "# Mirrored by scripts/cts_ops.py sync-env",
+        "# This file is a stable Codex-wide fallback for CTS automation env discovery.",
+    ]
+    write_env_file(target, values, header_lines)
+    print(f"Wrote CTS env mirror to {target}")
     return 0
 
 
@@ -1193,6 +1325,11 @@ def main() -> int:
     p.add_argument("--verify-api", action="store_true", help="also verify SurveyOL and MailerLite API access when tokens are present")
     p.add_argument("--json-output", help="optional JSON report output path")
     p.set_defaults(func=cmd_env_doctor)
+
+    p = subparsers.add_parser("sync-env", help="mirror the loaded CTS env values into a stable private env file")
+    p.add_argument("--target", default=str(Path.home() / ".codex" / "cts.env"))
+    p.add_argument("--preserve-existing", action="store_true", help="keep unrelated keys already present in the target file")
+    p.set_defaults(func=cmd_sync_env)
 
     p = subparsers.add_parser("surveyol-account", help="verify SurveyOL API token/account")
     p.set_defaults(func=cmd_surveyol_account)

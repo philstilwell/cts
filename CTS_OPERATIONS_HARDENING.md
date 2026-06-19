@@ -61,6 +61,7 @@ Then fill only the private CTS env file:
 
 ```bash
 SURVEYOL_API_TOKEN=...
+SURVEYOL_API_TOKEN_EXPIRES_AT=2027-06-19T00:00:00Z
 ```
 
 `scripts/cts_ops.py` now auto-discovers CTS env files in these locations before every command:
@@ -73,13 +74,23 @@ SURVEYOL_API_TOKEN=...
 
 Use one standard location and keep it stable. The recommended project-local path is `.secrets/cts.env`.
 
+After adding or rotating the token, mirror it into the Codex-wide fallback file so cron runs are not depending on only one private path:
+
+```bash
+python3 scripts/cts_ops.py sync-env --target ~/.codex/cts.env
+```
+
 Before a weekly hygiene run, invitation batch, or suppression reconciliation, run the fast environment preflight:
 
 ```bash
 python3 scripts/cts_ops.py env-doctor --verify-api
 ```
 
-Treat any nonzero exit or `human_review_required: true` output as a hard stop. This catches missing tokens or broken API access before the automation reaches the send gate.
+Treat any nonzero exit or `human_review_required: true` output as a hard stop. This now catches three classes of failure before the automation reaches the send gate:
+
+- missing SurveyOL token
+- broken SurveyOL API access
+- missing or near-expiry `SURVEYOL_API_TOKEN_EXPIRES_AT` metadata
 
 SurveyOL's developer API exposes account, contact, survey, collector, and response objects through bearer-token authentication.
 

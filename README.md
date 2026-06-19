@@ -72,6 +72,12 @@ Build private weekly send lists and API sync plans with:
 python3 scripts/cts_ops.py --help
 ```
 
+Mirror the active CTS private env values into the Codex-wide fallback file after any token rotation with:
+
+```bash
+python3 scripts/cts_ops.py sync-env --target ~/.codex/cts.env
+```
+
 Update the public-safe automation log source with:
 
 ```bash

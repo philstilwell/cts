@@ -168,6 +168,7 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 Before each SurveyOL invitation batch:
 
 0. Run `python3 scripts/cts_ops.py env-doctor --verify-api` and stop immediately if it exits nonzero or reports `human_review_required: true`.
+   If a SurveyOL token was just added or rotated, run `python3 scripts/cts_ops.py sync-env --target ~/.codex/cts.env` before the preflight so the cron path and the project path both see the same token.
 1. Export or inspect SurveyOL opted-out, bounced, delivery-problem, and no-send records.
 2. Treat a SurveyOL no-send, opt-out, bounce, delivery-problem, or registry do-not-email record as a global CTS email suppression.
 3. Update the canonical `CTS 2026` participant registry so suppressed participants are excluded from future sends.
@@ -175,7 +176,7 @@ Before each SurveyOL invitation batch:
 
 Use `scripts/cts_ops.py` for the hardened local version of this process: verify SurveyOL API access, save the current SurveyOL no-send suppression CSV under `data/private/suppressions/surveyol-no-send.csv`, build the private SurveyOL send list, write the exact weekly contact crosswalk, and generate dry-run SurveyOL contact sync plans under `data/private/`. See `CTS_OPERATIONS_HARDENING.md`.
 
-Prefer one stable private token file such as `.secrets/cts.env`. `scripts/cts_ops.py` auto-discovers that path along with `.env`, `.env.local`, `.secrets/cts-ops.env`, and `~/.codex/cts.env`, so the recurring automations should not depend on ad hoc shell exports.
+Prefer one stable private token file such as `.secrets/cts.env`, and mirror it to `~/.codex/cts.env` after any rotation. `scripts/cts_ops.py` auto-discovers both paths along with `.env`, `.env.local`, and `.secrets/cts-ops.env`, so the recurring automations should not depend on ad hoc shell exports. Include `SURVEYOL_API_TOKEN_EXPIRES_AT` with the token so `env-doctor` can warn before the next cron window when a token is missing expiry metadata or is close to expiry.
 
 Any generated audit or plan with `human_review_required: true` is a hard stop. Review the stated reason and next action before importing contacts, applying list changes, sending a newsletter, or sending SurveyOL invitations.
 
