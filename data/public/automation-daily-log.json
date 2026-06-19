@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-19T14:20:00-04:00",
-  "updated_time_et": "2:20:00 PM EDT",
+  "updated_at": "2026-06-19T16:22:55-04:00",
+  "updated_time_et": "4:22:55 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-19",
+      "recorded_at": "2026-06-19T16:22:55-04:00",
+      "recorded_time_et": "4:22:55 PM EDT",
+      "status": "Reminder process hardened",
+      "summary": "Canonized SurveyOL 12-day reminder follow-ups for future weekly surveys.",
+      "ran": [
+        "Added the 12-day Reminder Follow-up requirement to the weekly runbook and launch checklist.",
+        "Added a private launch-gate record for verifying the Email collector reminder setting.",
+        "Updated the Monday preflight, Tuesday launch, and recurring invitation-check automations to require or flag the reminder setting."
+      ],
+      "result": "Future weekly surveys should have the SurveyOL Email collector Reminder Follow-up set to automate reminders within 12 days before the first production invitation batch, unless an intentional exception is recorded.",
+      "next": "For each new weekly survey, record surveyol.reminder-followup-configured in the private ledger after the reminder preview and setting are verified."
+    },
     {
       "date": "2026-06-19",
       "recorded_at": "2026-06-19T14:20:00-04:00",

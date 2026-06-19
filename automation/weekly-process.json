@@ -229,6 +229,24 @@
       "operator_note": "Record the test response/export confirmation only; do not record private identities in the ledger."
     },
     {
+      "id": "surveyol.reminder-followup-configured",
+      "title": "Email collector 12-day reminder follow-up configured",
+      "phase": "SurveyOL launch gate",
+      "required": true,
+      "scopes": ["launch", "full-cycle"],
+      "cadence": "Before the first production invitation batch.",
+      "evidence": [
+        {"kind": "record", "required": true}
+      ],
+      "covers": [
+        "Reminder Follow-up is set to Automate reminders within 12 days",
+        "Reminder email preview reviewed",
+        "Intentional reminder exceptions recorded before launch"
+      ],
+      "redundancy_groups": ["surveyol-state", "human-review-gate", "send-accountability"],
+      "operator_note": "Record this after the production Email collector's Reminder Follow-up setting is verified. If the reminder is intentionally disabled for a week, record not_due or review_required with the reason."
+    },
+    {
       "id": "send.invitation-batch-ledger",
       "title": "SurveyOL invitation batch counts recorded",
       "phase": "Invitation send",
@@ -412,7 +430,8 @@
         "send-list.build",
         "surveyol.contact-sync-plan",
         "surveyol.contact-sync-applied-or-confirmed",
-        "surveyol.closed-test-quarantine"
+        "surveyol.closed-test-quarantine",
+        "surveyol.reminder-followup-configured"
       ],
       "redundancy_groups": ["human-review-gate"],
       "redundancy_reason": "Dry-run plans and explicit confirmations make list mutation, imports, and sends deliberate rather than silent."
@@ -424,10 +443,11 @@
       "required_automation_ids": [
         "surveyol.survey-snapshot",
         "hygiene.surveyol-contacts-audit",
-        "surveyol.closed-test-quarantine"
+        "surveyol.closed-test-quarantine",
+        "surveyol.reminder-followup-configured"
       ],
       "redundancy_groups": ["surveyol-state", "duplicate-email-protection"],
-      "redundancy_reason": "Survey snapshots, contact exports, and launch quarantine checks catch different SurveyOL failure modes."
+      "redundancy_reason": "Survey snapshots, contact exports, launch quarantine checks, and reminder follow-up verification catch different SurveyOL failure modes."
     },
     {
       "id": "privacy-boundary",
@@ -459,10 +479,11 @@
       "scopes": ["launch", "invitation", "full-cycle"],
       "required_automation_ids": [
         "send.invitation-batch-ledger",
+        "surveyol.reminder-followup-configured",
         "post-send.suppression-reconcile"
       ],
       "redundancy_groups": ["send-accountability", "global-email-suppression"],
-      "redundancy_reason": "Batch counts are recorded separately from suppression reconciliation, so a send cannot disappear into platform history."
+      "redundancy_reason": "Batch counts, reminder follow-up configuration, and suppression reconciliation are recorded separately so a send cannot disappear into platform history."
     },
     {
       "id": "report-quality",

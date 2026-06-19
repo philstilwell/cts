@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>2:20:00 PM EDT</strong>
+      <strong>4:22:55 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,17 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-19T16:22:55-04:00"><span class="recorded-date">2026-06-19</span><span class="recorded-time">4:22:55 PM EDT</span></time>
+<span class="log-status">Reminder process hardened</span></div></td>
+        <td>Canonized SurveyOL 12-day reminder follow-ups for future weekly surveys.<ul>
+        <li>Added the 12-day Reminder Follow-up requirement to the weekly runbook and launch checklist.</li>
+        <li>Added a private launch-gate record for verifying the Email collector reminder setting.</li>
+        <li>Updated the Monday preflight, Tuesday launch, and recurring invitation-check automations to require or flag the reminder setting.</li>
+      </ul></td>
+        <td>Future weekly surveys should have the SurveyOL Email collector Reminder Follow-up set to automate reminders within 12 days before the first production invitation batch, unless an intentional exception is recorded.</td>
+        <td>For each new weekly survey, record surveyol.reminder-followup-configured in the private ledger after the reminder preview and setting are verified.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-19T14:20:00-04:00"><span class="recorded-date">2026-06-19</span><span class="recorded-time">2:20:00 PM EDT</span></time>
 <span class="log-status">Week 2 batch sent</span></div></td>
@@ -154,7 +165,7 @@
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>Christian Thought Survey. Site updated June 17, 2026.</p>
+      <p>Christian Thought Survey. Site updated June 19, 2026.</p>
       <p><a href="https://christianthoughtsurvey.wordpress.com/">WordPress archive</a></p>
     </div>
   </footer>

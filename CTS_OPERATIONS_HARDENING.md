@@ -242,6 +242,7 @@ python3 scripts/cts_ops.py surveyol-sync-contacts \
 The scripts harden list preparation, suppression reconciliation, API snapshots, contact sync, and exact crosswalk creation. They do not yet automate:
 
 - SurveyOL survey creation from copy/paste blocks.
+- SurveyOL Email collector reminder follow-up configuration. Each production Email collector should be manually verified with `Reminder Follow-up` set to `Automate reminders within 12 days`, then recorded in the private ledger as `surveyol.reminder-followup-configured` before the first production invitation batch.
 - SurveyOL Email collector batch sending.
 - Google Sheets direct writeback to `CTS 2026`.
 

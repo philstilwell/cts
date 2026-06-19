@@ -13,6 +13,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Wednesday through Saturday at 11:30 AM Eastern, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
 - Every week: before any survey-invitation send, remove or suppress from SurveyOL and `CTS 2026` any address that appears on SurveyOL's no-send/unsubscribed list or is otherwise marked do-not-email in the registry.
 - Every weekly survey remains open for 3 weeks from its first invitation send. Close the SurveyOL collector after the 3-week response window, export the final raw results privately, and regenerate the public report as final.
+- Every weekly SurveyOL Email collector should have `Reminder Follow-up` set to `Automate reminders within 12 days` before the first production invitation batch, unless CTS intentionally disables a reminder for a specific week and records the reason.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
 - The Reports page includes a rolling survey control board under the weekly report grid. Any automation that changes a survey's public status on that board should rebuild the static site, commit the changed public files, and push to the remote before reporting the board update as complete.
 
@@ -105,15 +106,16 @@ The encapsulation should be short enough to scan quickly and should include:
 
 1. Before sending the Tuesday evening survey invitation, confirm the placeholder public report page exists, is linked from the reports index, and has been pushed to GitHub Pages. For closed tests, use only internal/test contacts.
 2. The SurveyOL Email collector must be `Open` with `Anonymous Responses` set to `Off` so exports can include email identity for private matching. Close or do not distribute Web Link collectors unless CTS intentionally wants an unmapped public response channel.
-3. Build the SurveyOL recipient list from the canonical `CTS 2026` participant registry. Include only eligible records with `Name`, `Primary Email Address`, `Participant ID`, and `Email Key`, and exclude records marked `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
-4. Audit the exact CSV that will be imported or used for recipient targeting with `scripts/cts_ops.py audit-email-duplicates --fail-on-duplicates`. Any duplicate normalized email address is a hard stop until corrected.
-5. Export or inspect the live SurveyOL contact table before each invitation batch. If any SurveyOL contact email appears more than once, stop sending until the extra contact records are merged or deleted.
-6. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
-7. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
-8. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
-9. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
-10. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
-10. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
+3. Set the Email collector `Reminder Follow-up` to `Automate reminders within 12 days`, review the reminder email preview, and record `surveyol.reminder-followup-configured` in the private automation ledger before the first production invitation batch. If CTS intentionally disables the reminder for a week, record `not_due` or `review_required` with the reason before sending.
+4. Build the SurveyOL recipient list from the canonical `CTS 2026` participant registry. Include only eligible records with `Name`, `Primary Email Address`, `Participant ID`, and `Email Key`, and exclude records marked `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
+5. Audit the exact CSV that will be imported or used for recipient targeting with `scripts/cts_ops.py audit-email-duplicates --fail-on-duplicates`. Any duplicate normalized email address is a hard stop until corrected.
+6. Export or inspect the live SurveyOL contact table before each invitation batch. If any SurveyOL contact email appears more than once, stop sending until the extra contact records are merged or deleted.
+7. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
+8. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
+9. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
+10. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
+11. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
+12. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
 
 ## Participant Profile Intake
 
@@ -192,6 +194,7 @@ Before acting on the checklist above, regenerate the relevant automation status 
 - Featured Topic header image appears immediately before the `◉ Main topic...` introduction line.
 - The `◉ Main topic...` introduction block is styled in SurveyOL: main-topic line bold and enlarged with `X↑` twice, topic name highlighted with `#e0a550` background and `#553e15` text, and response-format line bold in black.
 - SurveyOL Email collector is `Open`, `Anonymous Responses` is `Off`, and any Web Link collector is closed or intentionally excluded from the launch.
+- SurveyOL Email collector `Reminder Follow-up` is set to `Automate reminders within 12 days`, or an intentional exception is recorded in the private automation ledger before the first production invitation batch.
 - SurveyOL recipient import comes from `CTS 2026`, excludes do-not-email records, and contains no email-only contacts with missing names.
 - The exact SurveyOL recipient CSV and the live SurveyOL contact table have both passed duplicate-email checks.
 - The current weekly send-list audit and any sync plans have been reviewed, and no unresolved `human_review_required: true` output remains for the action about to be taken.
