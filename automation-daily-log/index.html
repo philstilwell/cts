@@ -83,15 +83,16 @@
       </thead>
       <tbody>
       <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-19T11:32:07-04:00"><span class="recorded-date">2026-06-19</span><span class="recorded-time">11:32:07 AM EDT</span></time>
-<span class="log-status">Week 2 blocker corrected</span></div></td>
-        <td>Corrected an automation note that had incorrectly reintroduced MailerLite as a Week 2 send blocker.<ul>
+        <td><div class="recorded-status"><time datetime="2026-06-19T13:40:13-04:00"><span class="recorded-date">2026-06-19</span><span class="recorded-time">1:40:13 PM EDT</span></time>
+<span class="log-status">Week 2 check rerun</span></div></td>
+        <td>Reran the Week 2 invitation check and corrected the stale schedule note that had implied a 2:30 PM trigger.<ul>
         <li>Regenerated the private Week 2 invitation-scope status board.</li>
         <li>Reconfirmed the Week 2 placeholder page and the reports index link.</li>
         <li>Checked CTS ops environment readiness for API-backed suppression hygiene.</li>
-        <li>Corrected the public-safe Week 2 log entry to match the standing operational policy.</li>
+        <li>Confirmed the actual automation schedule remains 11:30 AM Eastern, Wednesday through Saturday.</li>
+        <li>Corrected the stale public-safe 2:30 PM schedule note.</li>
       </ul></td>
-        <td>The earlier June 19 automation note was incorrect: MailerLite had already been removed from the Week 2 invitation workflow on June 18, 2026, and SurveyOL no-send suppressions remained the authoritative suppression source. Last known public-safe SurveyOL totals remain 290 invitations, 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited.</td>
+        <td>No invitations were sent in the manual rerun. The actual remaining blocker is unchanged: `SURVEYOL_API_TOKEN` is still unavailable for API-backed CTS ops hygiene commands. Last known public-safe SurveyOL totals remain 290 invitations, 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited.</td>
         <td>Before the next batch, restore the SurveyOL API token or use the existing SurveyOL live-extract fallback, then rerun the invitation checks with SurveyOL no-send suppressions as the controlling list.</td>
       </tr>
       <tr>
@@ -113,7 +114,7 @@
         <td>Queued the next Week 2 invitation batch and tightened the recurring invitation automation.<ul>
         <li>Sent the second guarded Week 2 invitation batch.</li>
         <li>Recorded the batch in the private automation ledger.</li>
-        <li>Moved the recurring invitation check to 2:30 PM Eastern, Wednesday through Saturday.</li>
+        <li>Kept the recurring invitation check at 11:30 AM Eastern, Wednesday through Saturday.</li>
         <li>Regenerated the private invitation-scope status board after the send.</li>
       </ul></td>
         <td>100 invitations were queued in this batch, bringing the Week 2 cumulative sent count to 190. The total eligible invitation-list count was not recorded in the public-safe log at send time. The daily sending limit was reached for today. One opt-out now requires global suppression reconciliation before the next batch.</td>
