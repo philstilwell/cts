@@ -201,6 +201,9 @@ def artifact_result(path: Path, label: str) -> EvidenceResult:
                 detail = f"{len(data)} rows"
         elif path.suffix.lower() == ".csv":
             timestamp, row_count = csv_latest_timestamp(path)
+            mtime = file_mtime(path)
+            if timestamp is None or mtime > timestamp:
+                timestamp = mtime
             detail = f"{row_count} rows"
         else:
             detail = "found"

@@ -113,10 +113,12 @@ The encapsulation should be short enough to scan quickly and should include:
 7. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
 8. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
 9. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
-10. After the first production invitation batch is actually sent, verify that the public page's final close date equals that send date plus 21 days. If the actual send date differs from the planned launch date, correct the public page, reports index, reporting config, and automation ledger before the next public status update.
-11. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
-12. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
-13. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
+10. For a small tail batch, prefer the simplest stable SurveyOL send path. If the live contact-table checkbox UI is fragile, row selection opens edit dialogs, or the remaining list is already known from the guarded send audit, use the `Recipient Email(s)` field directly with the verified remaining addresses instead of forcing another checkbox-based selection pass. Record that direct-entry fallback was used.
+11. After the first production invitation batch is actually sent, verify that the public page's final close date equals that send date plus 21 days. If the actual send date differs from the planned launch date, correct the public page, reports index, reporting config, and automation ledger before the next public status update.
+12. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
+13. If the suppression CSV was manually reconfirmed or regenerated without changing membership, still refresh its evidence timestamp before rerunning the invitation board so the board reflects the latest review rather than an old embedded `collected_at` date.
+14. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
+15. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
 
 ## Participant Profile Intake
 
@@ -175,11 +177,14 @@ Before each SurveyOL invitation batch:
 1. Export or inspect SurveyOL opted-out, bounced, delivery-problem, and no-send records.
 2. Treat a SurveyOL no-send, opt-out, bounce, delivery-problem, or registry do-not-email record as a global CTS email suppression.
 3. Update the canonical `CTS 2026` participant registry so suppressed participants are excluded from future sends.
-4. Record the reconciliation date and source of each suppression update in private operational notes or the participant registry.
+4. Refresh the canonical suppression artifact under `data/private/suppressions/surveyol-no-send.csv` whenever the list is rechecked, even if the member set is unchanged, so the invitation board has current evidence.
+5. Record the reconciliation date and source of each suppression update in private operational notes or the participant registry.
 
 Use `scripts/cts_ops.py` for the hardened local version of this process: verify SurveyOL API access, save the current SurveyOL no-send suppression CSV under `data/private/suppressions/surveyol-no-send.csv`, build the private SurveyOL send list, write the exact weekly contact crosswalk, and generate dry-run SurveyOL contact sync plans under `data/private/`. See `CTS_OPERATIONS_HARDENING.md`.
 
 Prefer one stable private token file such as `.secrets/cts.env`, and mirror it to `~/.codex/cts.env` after any rotation. `scripts/cts_ops.py` auto-discovers both paths along with `.env`, `.env.local`, and `.secrets/cts-ops.env`, so the recurring automations should not depend on ad hoc shell exports. Include `SURVEYOL_API_TOKEN_EXPIRES_AT` with the token so `env-doctor` can warn before the next cron window when a token is missing expiry metadata or is close to expiry.
+
+For browser-operated sends, prefer reclaiming an already authenticated SurveyOL tab in Chrome. If the Chrome extension path is unavailable, fall back to direct computer-use control of that same authenticated tab instead of opening a fresh SurveyOL sign-in loop.
 
 Any generated audit or plan with `human_review_required: true` is a hard stop. Review the stated reason and next action before importing contacts, applying list changes, sending a newsletter, or sending SurveyOL invitations.
 
