@@ -253,7 +253,7 @@
       "title": "Email collector 12-day reminder follow-up configured",
       "phase": "SurveyOL launch gate",
       "required": true,
-      "scopes": ["launch", "full-cycle"],
+      "scopes": ["launch", "invitation", "full-cycle"],
       "cadence": "Before the first production invitation batch.",
       "evidence": [
         {"kind": "record", "required": true}

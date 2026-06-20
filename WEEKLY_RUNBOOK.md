@@ -23,7 +23,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Tuesday morning: publish first preliminary reports, refresh still-open preliminary reports, create the report encapsulation, and update the site.
 - Tuesday morning after the report cycle: check whether any survey has reached its posted final close date, then close and finalize reports as needed.
 - Tuesday evening: create the placeholder public report page, launch the new SurveyOL Email collector survey, and send the first invitation batch.
-- Wednesday through Saturday at 11:30 AM Eastern: check whether eligible participants remain uninvited, regenerate the invitation-scope automation status board, and send the next guarded invitation batch only if required hygiene and suppression checks are clear.
+- Wednesday through Saturday at 11:30 AM Eastern: check whether eligible participants remain uninvited, regenerate the invitation-scope automation status board, and send the next guarded invitation batch only if the recurring hygiene checks and any still-relevant launch-time send gates are clear. At minimum, the reminder-follow-up gate must stay recorded and clear on the invitation board until invitations are finished.
 
 These reminders can execute only when the relevant SurveyOL, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
 
@@ -43,7 +43,7 @@ python3 scripts/cts_automation_status.py report \
 Use these scopes:
 
 - `launch`: required evidence before the first production SurveyOL invitation batch.
-- `invitation`: recurring evidence around Wednesday-Saturday invitation batches.
+- `invitation`: recurring evidence around Wednesday-Saturday invitation batches, including any launch-time send gate that remains relevant after Tuesday, such as reminder follow-up verification.
 - `report`: Tuesday report, newsletter, and public status update evidence.
 - `close`: three-week survey close and final-report evidence.
 - `full-cycle`: complete process coverage and redundancy audit.
@@ -106,7 +106,7 @@ The encapsulation should be short enough to scan quickly and should include:
 
 1. Before sending the Tuesday evening survey invitation, confirm the placeholder public report page exists, is linked from the reports index, and has been pushed to GitHub Pages. For closed tests, use only internal/test contacts.
 2. The SurveyOL Email collector must be `Open` with `Anonymous Responses` set to `Off` so exports can include email identity for private matching. Close or do not distribute Web Link collectors unless CTS intentionally wants an unmapped public response channel.
-3. Set the Email collector `Reminder Follow-up` to `Automate reminders within 12 days`, review the reminder email preview, and record `surveyol.reminder-followup-configured` in the private automation ledger before the first production invitation batch. If CTS intentionally disables the reminder for a week, record `not_due` or `review_required` with the reason before sending.
+3. Set the Email collector `Reminder Follow-up` to `Automate reminders within 12 days`, review the reminder email preview, and record `surveyol.reminder-followup-configured` in the private automation ledger before the first production invitation batch. That ledger record remains a hard gate for later Wednesday-Saturday batches as well, so the invitation-scope board should surface it until all invitations are sent. If CTS intentionally disables the reminder for a week, record `not_due` or `review_required` with the reason before sending.
 4. Build the SurveyOL recipient list from the canonical `CTS 2026` participant registry. Include only eligible records with `Name`, `Primary Email Address`, `Participant ID`, and `Email Key`, and exclude records marked `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
 5. Audit the exact CSV that will be imported or used for recipient targeting with `scripts/cts_ops.py audit-email-duplicates --fail-on-duplicates`. Any duplicate normalized email address is a hard stop until corrected.
 6. Export or inspect the live SurveyOL contact table before each invitation batch. If any SurveyOL contact email appears more than once, stop sending until the extra contact records are merged or deleted.
@@ -183,7 +183,7 @@ Prefer one stable private token file such as `.secrets/cts.env`, and mirror it t
 
 Any generated audit or plan with `human_review_required: true` is a hard stop. Review the stated reason and next action before importing contacts, applying list changes, sending a newsletter, or sending SurveyOL invitations.
 
-Before acting on the checklist above, regenerate the relevant automation status board and confirm no required item is `missing`, `stale`, `blocked`, or `failed`. A `review_required` item means the automation ran but a human gate is still open; record the review outcome before the next risky action.
+Before acting on the checklist above, regenerate the relevant automation status board and confirm no required item is `missing`, `stale`, `blocked`, `failed`, or unresolved `review_required`. For recurring invitation sends, treat the invitation scope as the controlling board for both list hygiene and any carry-forward launch send gate, especially `surveyol.reminder-followup-configured`. A `review_required` item means the automation ran but a human gate is still open; record the review outcome before the next risky action.
 
 ## Minimum Launch Checklist
 
