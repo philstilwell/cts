@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-20T13:49:42-04:00",
-  "updated_time_et": "1:49:42 PM EDT",
+  "updated_at": "2026-06-20T16:08:59-04:00",
+  "updated_time_et": "4:08:59 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-20",
+      "recorded_at": "2026-06-20T16:08:59-04:00",
+      "recorded_time_et": "4:08:59 PM EDT",
+      "status": "Week 2 final batch sent",
+      "summary": "Restored the live SurveyOL session and completed the remaining Week 2 invitation slice.",
+      "ran": [
+        "Regenerated the private Week 2 invitation-scope status board and rechecked the public placeholder page, reports index link, July 7, 2026 final close date, and 12-day reminder-follow-up setting.",
+        "Queued three guarded SurveyOL invitation batches during the authenticated completion run: 14 invitations, then 3 invitations, then a final 2-contact micro-batch.",
+        "Recorded the completed batch result and post-send suppression check in the private Week 2 ledger."
+      ],
+      "result": "19 invitations were queued on June 20, bringing the Week 2 cumulative invitation count to 409. Public-safe post-send totals were 26 completes, 14 opt-outs, and 0 bounces, with an estimated 0 eligible contacts still uninvited.",
+      "next": "No further Week 2 invitation batch is pending unless a later audit finds a missed identity mapping or new suppression exception."
+    },
     {
       "date": "2026-06-20",
       "recorded_at": "2026-06-20T13:49:42-04:00",
