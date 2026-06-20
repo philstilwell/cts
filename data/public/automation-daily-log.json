@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-06-20T11:34:31-04:00",
-  "updated_time_et": "11:34:31 AM EDT",
+  "updated_at": "2026-06-20T13:49:42-04:00",
+  "updated_time_et": "1:49:42 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-20",
+      "recorded_at": "2026-06-20T13:49:42-04:00",
+      "recorded_time_et": "1:49:42 PM EDT",
+      "status": "Week 2 send blocked",
+      "summary": "The final Week 2 batch remains blocked by SurveyOL web authentication.",
+      "ran": [
+        "Regenerated the private Week 2 invitation-scope status board.",
+        "Reconfirmed the Week 2 placeholder page, reports index link, and July 7, 2026 final close date.",
+        "Verified the 12-day SurveyOL reminder follow-up gate from the earlier authenticated collector check.",
+        "Confirmed the SurveyOL API token is still valid for CTS ops exports but not sufficient to restore the live send page session."
+      ],
+      "result": "No invitations were sent in this run. Last known public-safe Week 2 totals remain 390 invitations, 23 completes, 14 opt-outs, and 0 bounces, with an estimated 19 eligible contacts still uninvited.",
+      "next": "Before another send attempt, restore an authenticated SurveyOL web session for the CTS account, reopen the Week 2 Email collector send page, and then send the final guarded batch if no new review gate appears."
+    },
     {
       "date": "2026-06-20",
       "recorded_at": "2026-06-20T11:34:31-04:00",
