@@ -688,48 +688,65 @@ PAGES = [
         title="Herding Cats and other silly ventures",
         eyebrow="Survey humility",
         description=(
-            "A lighthearted note on the intrinsic difficulties of writing theology "
-            "surveys that are clear, fair, concise, and somehow acceptable to "
-            "everyone at once."
+            "A lighthearted note on why theology surveys are hard to word well, "
+            "easy to critique, and still worth doing carefully."
         ),
         content="""
 <div class="wp-content">
-  <p>Creating surveys for leaders in theology is a little like herding cats, except the cats have read the footnotes, noticed three possible meanings of the word <em>authority</em>, and would like to know why the question did not distinguish between at least five denominational contexts.</p>
+  <section class="herding-note" aria-labelledby="herding-note-heading">
+    <div>
+      <h2 id="herding-note-heading">Survey wording is where the trouble starts.</h2>
+      <p>Writing surveys for theological leaders is a little like herding cats, except the cats have read the footnotes, spotted three possible meanings of <em>authority</em>, and would like to know why the question did not distinguish between at least five denominational contexts.</p>
+      <p>CTS tries to write items that are clear enough to answer, fair enough to trust, and short enough to finish before the participant's coffee gets cold. That is a worthy aim. It is also, on many days, a comedy of theological calibration.</p>
+    </div>
+    <p class="herding-aside"><span>The survey designer's dilemma</span><strong>Precise enough to be fair. Plain enough to answer. Brief enough to survive.</strong></p>
+  </section>
 
-  <p>CTS tries to write survey items that are clear enough to answer, fair enough to trust, and short enough that no one needs to pack a lunch before reaching the end of a sentence. This is a noble ambition. It is also, on some days, a comedy of theological calibration.</p>
+  <h2>The neutral sentence problem</h2>
+  <p>The same survey item can sound suspicious for opposite reasons. Conservative theologians may hear a progressive assumption tucked into the framing. Progressive theologians may hear a conservative assumption doing quiet work in the categories. Both reactions can be sincere, thoughtful, and inconveniently plausible.</p>
 
-  <h2>The trouble with neutral wording</h2>
-  <p>Conservative theologians sometimes look at a survey item and suspect that a progressive assumption has slipped in through the side door. Progressive theologians sometimes look at the same item and suspect that a conservative assumption is sitting in the favorite chair. Both reactions can be sincere, thoughtful, and inconveniently plausible.</p>
+  <p>Pastor-theologians add another layer of useful difficulty. They notice when a phrase sounds tidy on a form but lands awkwardly in the life of a congregation. They ask whether the wording is too broad, too narrow, too abstract, too loaded, too soft, too sharp, or missing the pastoral qualifier that would keep the whole thing from wobbling.</p>
 
-  <p>Pastor theologians add their own important layer of difficulty. They often notice that a phrase sounds tidy in a survey but lands awkwardly in the life of a congregation. They ask whether the wording is too broad, too narrow, too abstract, too loaded, too soft, too sharp, or missing the one pastoral qualifier that would keep the whole thing from wobbling.</p>
-
-  <div class="report-grid">
-    <section class="report-card">
+  <div class="herding-complaint-grid" aria-label="Common survey wording tensions">
+    <section class="herding-complaint-card conservative">
+      <span>From one angle</span>
       <h3>Too progressive</h3>
-      <p>Some readers hear a question and wonder whether the framing already nudges them toward cultural accommodation.</p>
+      <p>The wording seems to smuggle in cultural accommodation before the participant has even touched the slider.</p>
     </section>
-    <section class="report-card">
+    <section class="herding-complaint-card progressive">
+      <span>From another</span>
       <h3>Too conservative</h3>
-      <p>Others hear the same question and wonder whether the categories are already carrying inherited assumptions.</p>
+      <p>The same wording seems to carry inherited assumptions as if they were simply the neutral starting point.</p>
     </section>
-    <section class="report-card">
-      <h3>Too imprecise</h3>
-      <p>Pastors and theologians quite reasonably want definitions, distinctions, caveats, and sometimes a small rescue squad of dependent clauses.</p>
+    <section class="herding-complaint-card pastoral">
+      <span>From the pulpit</span>
+      <h3>Too tidy</h3>
+      <p>The sentence may be technically clear and still miss the pastoral messiness people actually carry.</p>
     </section>
-    <section class="report-card">
+    <section class="herding-complaint-card practical">
+      <span>From the respondent</span>
       <h3>Too long</h3>
-      <p>Then everyone remembers that a survey item still has to be answerable before the participant's coffee gets cold.</p>
+      <p>Every helpful caveat makes the item fairer, right up until the question becomes a paragraph in formalwear.</p>
     </section>
   </div>
 
-  <h2>Why the project keeps going anyway</h2>
-  <p>The goal is not to produce perfect sentences that float serenely above every theological tradition. Those sentences do not appear to exist, and if they do, they are probably too long for a 0-100 slider. The more modest goal is to ask disciplined, transparent, revisable questions that help reveal where thoughtful Christian leaders agree, where they differ, and where the wording itself needs another pass.</p>
+  <section class="herding-tradeoffs" aria-labelledby="herding-tradeoffs-heading">
+    <div>
+      <h2 id="herding-tradeoffs-heading">Why the project keeps going anyway</h2>
+      <p>The goal is not to produce perfect sentences that float above every tradition untouched. Those sentences do not appear to exist, and if they do, they are probably too long for a 0-100 slider.</p>
+      <p>The more modest goal is to ask disciplined, transparent, revisable questions that help reveal where thoughtful Christian leaders agree, where they differ, and where the wording itself needs another pass.</p>
+    </div>
+    <ul>
+      <li><strong>Precision</strong> has to be balanced against readability.</li>
+      <li><strong>Neutrality</strong> has to be balanced against recognizable theological language.</li>
+      <li><strong>Pastoral nuance</strong> has to be balanced against respondent fatigue.</li>
+      <li><strong>Breadth</strong> has to be balanced against the fact that every tradition names the terrain differently.</li>
+    </ul>
+  </section>
 
-  <p>Survey design lives inside real tradeoffs: precision against readability, neutrality against recognizability, pastoral nuance against respondent fatigue, and breadth against the fact that every tradition has its own vocabulary for the same disputed terrain.</p>
+  <p class="callout herding-thanks"><strong>Thank you to CTS participants.</strong> Your patience makes the project possible. Thank you for answering imperfect questions carefully, suggesting better wording when something feels off, and accepting that some limitations are built into this kind of work. The survey will never keep everyone perfectly happy, but your understanding helps it become more honest, more useful, and less silly than it otherwise would be.</p>
 
-  <p class="callout"><strong>Thank you to CTS participants.</strong> Your patience makes the project possible. Thank you for answering imperfect questions carefully, suggesting better wording when something feels off, and accepting that some limitations are built into the work. The survey will never keep everyone perfectly happy, but your understanding helps it become more honest, more useful, and less silly than it otherwise would be.</p>
-
-  <p>CTS welcomes thoughtful correction, better phrasing, and participant-nominated survey items. The aim is not to win the impossible game of making every question immune to complaint. The aim is to keep improving the questions while learning something worthwhile together.</p>
+  <p class="herding-close">CTS welcomes thoughtful correction, better phrasing, and participant-nominated survey items. The aim is not to make every question immune to complaint. The aim is to keep improving the questions while learning something worthwhile together.</p>
 
   <div class="button-row">
     <a class="button light" href="{weekly_url}">Current weekly reports</a>
