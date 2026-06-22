@@ -18,8 +18,8 @@ SITE_DESCRIPTION = (
 SITE_URL = "https://christianthoughtsurvey.com"
 CSS_VERSION = "20260617-automation-status"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
-UPDATED = "June 19, 2026"
-SITEMAP_LASTMOD = "2026-06-19"
+UPDATED = "June 22, 2026"
+SITEMAP_LASTMOD = "2026-06-22"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
@@ -263,6 +263,10 @@ PAGES = [
       <a class="path-card" href="{participant_pool_url}">
         <strong>Participant Pool</strong>
         <span>How the ministry-focused panel was assembled, why it is useful, and where its limits remain.</span>
+      </a>
+      <a class="path-card" href="{herding_cats_url}">
+        <strong>Herding Cats</strong>
+        <span>A cheerful note on why theological survey wording makes everyone reach for a red pen.</span>
       </a>
       <a class="path-card" href="{newsletter_url}">
         <strong>Newsletter Signup</strong>
@@ -678,6 +682,64 @@ PAGES = [
         in_nav=False,
     ),
     Page(
+        key="herding-cats",
+        output="herding-cats/index.html",
+        nav_label="Herding Cats",
+        title="Herding Cats and other silly ventures",
+        eyebrow="Survey humility",
+        description=(
+            "A lighthearted note on the intrinsic difficulties of writing theology "
+            "surveys that are clear, fair, concise, and somehow acceptable to "
+            "everyone at once."
+        ),
+        content="""
+<div class="wp-content">
+  <p>Creating surveys for leaders in theology is a little like herding cats, except the cats have read the footnotes, noticed three possible meanings of the word <em>authority</em>, and would like to know why the question did not distinguish between at least five denominational contexts.</p>
+
+  <p>CTS tries to write survey items that are clear enough to answer, fair enough to trust, and short enough that no one needs to pack a lunch before reaching the end of a sentence. This is a noble ambition. It is also, on some days, a comedy of theological calibration.</p>
+
+  <h2>The trouble with neutral wording</h2>
+  <p>Conservative theologians sometimes look at a survey item and suspect that a progressive assumption has slipped in through the side door. Progressive theologians sometimes look at the same item and suspect that a conservative assumption is sitting in the favorite chair. Both reactions can be sincere, thoughtful, and inconveniently plausible.</p>
+
+  <p>Pastor theologians add their own important layer of difficulty. They often notice that a phrase sounds tidy in a survey but lands awkwardly in the life of a congregation. They ask whether the wording is too broad, too narrow, too abstract, too loaded, too soft, too sharp, or missing the one pastoral qualifier that would keep the whole thing from wobbling.</p>
+
+  <div class="report-grid">
+    <section class="report-card">
+      <h3>Too progressive</h3>
+      <p>Some readers hear a question and wonder whether the framing already nudges them toward cultural accommodation.</p>
+    </section>
+    <section class="report-card">
+      <h3>Too conservative</h3>
+      <p>Others hear the same question and wonder whether the categories are already carrying inherited assumptions.</p>
+    </section>
+    <section class="report-card">
+      <h3>Too imprecise</h3>
+      <p>Pastors and theologians quite reasonably want definitions, distinctions, caveats, and sometimes a small rescue squad of dependent clauses.</p>
+    </section>
+    <section class="report-card">
+      <h3>Too long</h3>
+      <p>Then everyone remembers that a survey item still has to be answerable before the participant's coffee gets cold.</p>
+    </section>
+  </div>
+
+  <h2>Why the project keeps going anyway</h2>
+  <p>The goal is not to produce perfect sentences that float serenely above every theological tradition. Those sentences do not appear to exist, and if they do, they are probably too long for a 0-100 slider. The more modest goal is to ask disciplined, transparent, revisable questions that help reveal where thoughtful Christian leaders agree, where they differ, and where the wording itself needs another pass.</p>
+
+  <p>Survey design lives inside real tradeoffs: precision against readability, neutrality against recognizability, pastoral nuance against respondent fatigue, and breadth against the fact that every tradition has its own vocabulary for the same disputed terrain.</p>
+
+  <p class="callout"><strong>Thank you to CTS participants.</strong> Your patience makes the project possible. Thank you for answering imperfect questions carefully, suggesting better wording when something feels off, and accepting that some limitations are built into the work. The survey will never keep everyone perfectly happy, but your understanding helps it become more honest, more useful, and less silly than it otherwise would be.</p>
+
+  <p>CTS welcomes thoughtful correction, better phrasing, and participant-nominated survey items. The aim is not to win the impossible game of making every question immune to complaint. The aim is to keep improving the questions while learning something worthwhile together.</p>
+
+  <div class="button-row">
+    <a class="button light" href="{weekly_url}">Current weekly reports</a>
+    <a class="button light" href="{contact_url}">Suggest an item</a>
+    <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
+  </div>
+</div>
+""",
+    ),
+    Page(
         key="archive",
         output="previous-results-archive/index.html",
         nav_label="Archive",
@@ -945,7 +1007,7 @@ def schema_page_type(page: Page) -> str:
         return "CollectionPage"
     if page.key == "contact":
         return "ContactPage"
-    if page.key in {"overview", "participant-pool"}:
+    if page.key in {"overview", "participant-pool", "herding-cats"}:
         return "AboutPage"
     return "WebPage"
 
@@ -1057,6 +1119,7 @@ def sitemap_priority(page: Page) -> str:
         "newsletter": "0.7",
         "contact": "0.7",
         "participant-pool": "0.6",
+        "herding-cats": "0.6",
         "archive": "0.6",
         "overview": "0.5",
         "privacy": "0.4",
@@ -1073,6 +1136,7 @@ def sitemap_changefreq(page: Page) -> str:
         "newsletter": "monthly",
         "contact": "monthly",
         "participant-pool": "monthly",
+        "herding-cats": "monthly",
         "archive": "yearly",
         "overview": "yearly",
         "privacy": "yearly",
@@ -1087,6 +1151,7 @@ def fill_links(html: str, prefix: str) -> str:
         "week_1_report_url": page_url(prefix, WEEK_1_REPORT_OUTPUT),
         "week_2_report_url": page_url(prefix, WEEK_2_REPORT_OUTPUT),
         "participant_pool_url": page_url(prefix, "participant-pool/index.html"),
+        "herding_cats_url": page_url(prefix, "herding-cats/index.html"),
         "newsletter_confirmation_url": page_url(prefix, NEWSLETTER_CONFIRMATION_OUTPUT),
         "archive_url": page_url(prefix, "previous-results-archive/index.html"),
         "privacy_url": page_url(prefix, "privacy-data-release/index.html"),
