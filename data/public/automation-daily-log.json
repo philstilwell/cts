@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-22T16:05:44-04:00",
-  "updated_time_et": "4:05:44 PM EDT",
+  "updated_at": "2026-06-22T16:19:07-04:00",
+  "updated_time_et": "4:19:07 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-22",
+      "recorded_at": "2026-06-22T16:19:07-04:00",
+      "recorded_time_et": "4:19:07 PM EDT",
+      "status": "completed",
+      "summary": "Weekly list hygiene reconciled active SurveyOL and CTS suppression controls before the next send.",
+      "ran": [
+        "Recovered authenticated SurveyOL Week 2 invitation evidence and compared it with private suppression records.",
+        "Updated the canonical private SurveyOL no-send source and CTS 2026 registry for the missing opt-outs.",
+        "Confirmed MailerLite is legacy-only for the active CTS workflow and left MailerLite unchanged."
+      ],
+      "result": "Active workflow suppression controls are reconciled: 14 SurveyOL opt-outs, 0 SurveyOL bounces, six private suppression records added, and six CTS 2026 rows updated or annotated. No private email addresses are published.",
+      "next": "Build the next SurveyOL send list from a fresh CTS 2026 registry export plus the updated no-send CSV before sending."
+    },
     {
       "date": "2026-06-22",
       "recorded_at": "2026-06-22T16:05:44-04:00",
