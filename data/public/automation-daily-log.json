@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-22T16:19:07-04:00",
-  "updated_time_et": "4:19:07 PM EDT",
+  "updated_at": "2026-06-22T16:22:14-04:00",
+  "updated_time_et": "4:22:14 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-22",
+      "recorded_at": "2026-06-22T16:22:14-04:00",
+      "recorded_time_et": "4:22:14 PM EDT",
+      "status": "completed",
+      "summary": "SurveyOL opted-out participants were removed from future weekly invitation contacts.",
+      "ran": [
+        "Built and inspected a private opt-out contact-removal plan from the canonical SurveyOL no-send source.",
+        "Deleted only the opted-out SurveyOL contact records that were still present in Contact Management.",
+        "Re-exported SurveyOL contacts and reran the duplicate-contact audit."
+      ],
+      "result": "Fourteen SurveyOL opt-outs are now excluded from future SurveyOL weekly invitations: thirteen contact records were removed and one was already absent. Current SurveyOL contact export has 391 rows, with zero opted-out contacts remaining and duplicate_email_count 0.",
+      "next": "Before the next send, build the private SurveyOL send list from a fresh CTS 2026 export plus the updated no-send CSV."
+    },
     {
       "date": "2026-06-22",
       "recorded_at": "2026-06-22T16:19:07-04:00",

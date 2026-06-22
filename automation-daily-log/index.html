@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>4:19:07 PM EDT</strong>
+      <strong>4:22:14 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,17 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-22T16:22:14-04:00"><span class="recorded-date">2026-06-22</span><span class="recorded-time">4:22:14 PM EDT</span></time>
+<span class="log-status">completed</span></div></td>
+        <td>SurveyOL opted-out participants were removed from future weekly invitation contacts.<ul>
+        <li>Built and inspected a private opt-out contact-removal plan from the canonical SurveyOL no-send source.</li>
+        <li>Deleted only the opted-out SurveyOL contact records that were still present in Contact Management.</li>
+        <li>Re-exported SurveyOL contacts and reran the duplicate-contact audit.</li>
+      </ul></td>
+        <td>Fourteen SurveyOL opt-outs are now excluded from future SurveyOL weekly invitations: thirteen contact records were removed and one was already absent. Current SurveyOL contact export has 391 rows, with zero opted-out contacts remaining and duplicate_email_count 0.</td>
+        <td>Before the next send, build the private SurveyOL send list from a fresh CTS 2026 export plus the updated no-send CSV.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-22T16:19:07-04:00"><span class="recorded-date">2026-06-22</span><span class="recorded-time">4:19:07 PM EDT</span></time>
 <span class="log-status">completed</span></div></td>
