@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-22T16:22:14-04:00",
-  "updated_time_et": "4:22:14 PM EDT",
+  "updated_at": "2026-06-22T16:28:02-04:00",
+  "updated_time_et": "4:28:02 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-22",
+      "recorded_at": "2026-06-22T16:28:02-04:00",
+      "recorded_time_et": "4:28:02 PM EDT",
+      "status": "review-required",
+      "summary": "Next SurveyOL send list was rebuilt and checked clean of opt-outs.",
+      "ran": [
+        "Exported a fresh private CTS 2026 Participants registry from Google Sheets.",
+        "Fixed the CTS ops friendly-list header match and rebuilt the Week 3 SurveyOL send list.",
+        "Audited the private send list against SurveyOL opt-outs, registry do-not-email flags, duplicate emails, and current SurveyOL contacts."
+      ],
+      "result": "Prepared a private 377-recipient Week 3 SurveyOL send list. It has zero opt-outs, zero registry do-not-email rows, zero duplicate emails, zero opted-out SurveyOL contacts, and zero missing SurveyOL contacts.",
+      "next": "Review the private send-list audit gate before using the generated Week 3 recipient list for invitations."
+    },
     {
       "date": "2026-06-22",
       "recorded_at": "2026-06-22T16:22:14-04:00",

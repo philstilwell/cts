@@ -70,6 +70,8 @@ DO_NOT_EMAIL_FIELDS = (
     "Suppressed",
 )
 FRIENDLY_FIELDS = (
+    "2024 Friendly Outreach List?",
+    "2024 Friendly Outreach List",
     "Friendly Outreach List",
     "Friendly Outreach List?",
     "Friendly Outreach List = Yes",
