@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-22T09:00:00-04:00",
-  "updated_time_et": "9:00:00 AM EDT",
+  "updated_at": "2026-06-22T16:05:44-04:00",
+  "updated_time_et": "4:05:44 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-22",
+      "recorded_at": "2026-06-22T16:05:44-04:00",
+      "recorded_time_et": "4:05:44 PM EDT",
+      "status": "blocked",
+      "summary": "Weekly list hygiene found a suppression reconciliation blocker before the next CTS send.",
+      "ran": [
+        "Verified SurveyOL API readiness and refreshed SurveyOL contacts/duplicate audit.",
+        "Checked CTS 2026 registry suppression rows and local suppression artifacts.",
+        "Searched recent Gmail for MailerLite unsubscribe or bounce notifications."
+      ],
+      "result": "No external list changes were applied. SurveyOL contacts export has 404 rows with duplicate_email_count 0. Local/registry evidence covers 8 SurveyOL opt-outs and 5 prior MailerLite unsubscribes, but latest private send counts record 14 SurveyOL opt-outs and MailerLite API access is unavailable.",
+      "next": "Resolve the six missing SurveyOL opt-out identities and restore MailerLite API/export access before any cross-system sync."
+    },
     {
       "date": "2026-06-22",
       "recorded_at": "2026-06-22T09:00:00-04:00",
