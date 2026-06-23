@@ -1,12 +1,12 @@
 # CTS 2026 Week 3 Survey Template
 
-Working title: CTS 2026 Weekly Survey 3 - Pastoral Authority and Accountability
+Working title: CTS 2026 Weekly Survey 03 - Pastoral Authority and Accountability
 
 SurveyOL respondent link: store in private operational notes. Do not commit live respondent links to the public repository.
 
 SurveyOL design/preview GUID: store in private operational notes. Do not commit SurveyOL design URLs or GUIDs to the public repository.
 
-Launch target: Tuesday evening, June 23, 2026, after CTS review.
+Launch target: Tuesday evening, June 23, 2026, after SurveyOL draft review.
 
 Expected first preliminary report: Tuesday morning, June 30, 2026.
 
@@ -38,7 +38,7 @@ Preview of upcoming topics for Week 3:
 
 Text:
 
-Last week's preliminary report is now posted: Week 2, Pornography and the Church. The first preliminary report has 28 complete responses. Early patterns show high agreement around pastoral accountability for persistent pornography use, direct leadership screening, pastoral care for harmed spouses, and proactive youth teaching. Wider spread appears around whether accountability software should be de-emphasized and how strongly churches are losing ground. Raw respondent identities and raw free-text suggestions are not published.
+Last week's preliminary report is being prepared for Week 2, Pornography and the Church. The early complete responses show strong concern about pornography's hidden effect on churches, broad support for direct but careful leadership screening, and meaningful spread around how churches should frame accountability software, pastoral care for harmed spouses, and proactive teaching for young people. The report is preliminary and will be refreshed each Tuesday morning while the survey remains open.
 
 SurveyOL link:
 
@@ -65,7 +65,7 @@ Topic: Pastoral Authority and Accountability
 
 ## B. Week 3 Participant-Vote-Determined Independent Items
 
-These are the top three Week 2 participant ballot items. They are intentionally independent from the Pastoral Authority and Accountability topic.
+These are the top eligible Week 2 participant ballot items. They are intentionally orthogonal to the Pastoral Authority and Accountability topic and are not drawn from the Week 3 CTS-administered topic.
 
 13. Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified.
 14. Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands.
@@ -85,13 +85,13 @@ Which of these participant-nominated survey items would you most like to see con
 
 Ballot items:
 
-1. Churches should explicitly teach regular attenders that committed local church membership is a normal part of Christian discipleship.
-2. Churches should prioritize faithful Christian witness over gaining political power as their primary public posture.
-3. Churches should prioritize communities of connection and service over programs aimed mainly at individual spiritual growth.
-4. Scripture reserves the office of pastor or elder for qualified men.
-5. A complementarian church should treat a pastoral candidate's egalitarian convictions as disqualifying for its senior pastor role.
-6. Baptism should ordinarily precede participation in the Lord's Supper.
-7. Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
+1. Christians should prioritize faithful public witness through suffering over seeking political power to advance Christ's kingdom.
+2. Churches should emphasize shared community, service, and belonging as much as individual spiritual maturity.
+3. Scripture reserves the pastoral office to qualified men.
+4. A male pastor who holds egalitarian convictions should normally not serve as pastor in a complementarian church.
+5. Baptism should ordinarily precede participation in the Lord's Supper.
+6. Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
+7. Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
 
 ## D. Suggestion Text Box
 
@@ -124,7 +124,7 @@ After importing Block 1, edit `Week 002 Survey Results` in SurveyOL's rich-text 
 
 ```text
 [Text]
-Last week's preliminary report is now posted: Week 2, Pornography and the Church. The first preliminary report has 28 complete responses. Early patterns show high agreement around pastoral accountability for persistent pornography use, direct leadership screening, pastoral care for harmed spouses, and proactive youth teaching. Wider spread appears around whether accountability software should be de-emphasized and how strongly churches are losing ground. Raw respondent identities and raw free-text suggestions are not published.
+Last week's preliminary report is being prepared for Week 2, Pornography and the Church. The early complete responses show strong concern about pornography's hidden effect on churches, broad support for direct but careful leadership screening, and meaningful spread around how churches should frame accountability software, pastoral care for harmed spouses, and proactive teaching for young people. The report is preliminary and will be refreshed each Tuesday morning while the survey remains open.
 
 Full report: Week 002 Survey Results
 
@@ -191,13 +191,13 @@ Churches should teach explicitly on the moral and pastoral implications of IVF a
 ```text
 [Ranking][Required]
 Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Pastoral Authority and Accountability topic. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension.
-Churches should explicitly teach regular attenders that committed local church membership is a normal part of Christian discipleship.
-Churches should prioritize faithful Christian witness over gaining political power as their primary public posture.
-Churches should prioritize communities of connection and service over programs aimed mainly at individual spiritual growth.
-Scripture reserves the office of pastor or elder for qualified men.
-A complementarian church should treat a pastoral candidate's egalitarian convictions as disqualifying for its senior pastor role.
+Christians should prioritize faithful public witness through suffering over seeking political power to advance Christ's kingdom.
+Churches should emphasize shared community, service, and belonging as much as individual spiritual maturity.
+Scripture reserves the pastoral office to qualified men.
+A male pastor who holds egalitarian convictions should normally not serve as pastor in a complementarian church.
 Baptism should ordinarily precede participation in the Lord's Supper.
 Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
+Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
 
 [Comment Box]
 Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100.
