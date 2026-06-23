@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-23T09:45:00-04:00",
-  "updated_time_et": "9:45:00 AM EDT",
+  "updated_at": "2026-06-23T10:32:53-04:00",
+  "updated_time_et": "10:32:53 AM EDT",
   "entries": [
+    {
+      "date": "2026-06-23",
+      "recorded_at": "2026-06-23T10:32:53-04:00",
+      "recorded_time_et": "10:32:53 AM EDT",
+      "status": "not_due",
+      "summary": "Three-week close check found no weekly SurveyOL survey due for final close.",
+      "ran": [
+        "Refreshed the private SurveyOL survey list for the close-check run.",
+        "Verified Week 1 final close date as Wednesday, July 1, 2026 across public page, reports index/status lane, reporting config, and private ledger.",
+        "Verified Week 2 final close date as Tuesday, July 7, 2026 across public page, reports index/status lane, reporting config, and private ledger."
+      ],
+      "result": "No SurveyOL collector was closed and no final raw export or final public report was generated. Week 1 is not due until July 1, 2026; Week 2 is not due until July 7, 2026.",
+      "next": "Run the close check again when a posted final close date arrives."
+    },
     {
       "date": "2026-06-23",
       "recorded_at": "2026-06-23T09:45:00-04:00",
