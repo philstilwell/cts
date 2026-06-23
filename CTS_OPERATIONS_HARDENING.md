@@ -9,6 +9,7 @@ This file documents the local operational tooling used by the weekly CTS automat
 - The ops CLI does not send SurveyOL invitations.
 - Commands that can change SurveyOL data default to dry-run plans and require `--apply`.
 - Generated audits and dry-run plans include `human_review_required`, `human_review_reason`, and `human_review_next_action` fields. Treat `human_review_required: true` as a hard stop before imports, list mutations, newsletter sends, or survey invitations.
+- The finished weekly SurveyOL survey must receive CTS owner approval before the first production invitation batch. This approval is recorded as `surveyol.prelaunch-human-review`; a test send is not required unless the owner explicitly asks for one.
 - The public Reports page includes a rolling survey control board. Any automation that changes that board should rebuild the static site, commit the public status update, and push to the remote before reporting completion.
 - SurveyOL Email collector sending still requires a guarded human/session step unless a documented send endpoint is added later.
 - Weekly automation status boards belong under `data/private/automation-status/`. They show run timestamps, current status, missing/stale evidence, and process coverage/redundancy without exposing private participant data.
@@ -39,14 +40,14 @@ Record guarded or manual confirmations in the private ledger:
 ```bash
 python3 scripts/cts_automation_status.py record \
   --week week-003 \
-  --id surveyol.closed-test-quarantine \
+  --id surveyol.prelaunch-human-review \
   --status passed \
-  --note "Closed-test response count checked; production send gate clear."
+  --note "CTS owner reviewed the finished Week 3 SurveyOL survey and approved the first production invitation batch; no test send requested."
 ```
 
 Use `not_due` only when a process step is truly outside the current calendar gate, such as final close before the three-week response window ends. Use `review_required` when an automation has run but a human decision is still needed. Use `blocked` when the next risky action must stop.
 
-The recurring invitation-batch check runs Wednesday through Saturday at 11:30 AM Eastern while a weekly survey still has eligible participants who have not been invited. It should regenerate the invitation-scope status board before acting, stop on any missing/stale/blocked/failed evidence, and treat `review_required` suppression reconciliation as a hard gate before another batch.
+The recurring invitation-batch check runs Wednesday through Saturday at 11:30 AM Eastern while a weekly survey still has eligible participants who have not been invited. It should regenerate the invitation-scope status board before acting, stop on any missing/stale/blocked/failed evidence, and treat `review_required` suppression reconciliation as a hard gate before another batch. For the first production batch of a week, regenerate the launch-scope board and require `surveyol.prelaunch-human-review`; for later batches, the invitation-scope board controls unless a launch-time gate has become stale or was explicitly reopened.
 
 ## API Tokens
 
@@ -242,8 +243,20 @@ python3 scripts/cts_ops.py surveyol-sync-contacts \
 The scripts harden list preparation, suppression reconciliation, API snapshots, contact sync, and exact crosswalk creation. They do not yet automate:
 
 - SurveyOL survey creation from copy/paste blocks.
+- CTS owner prelaunch review of the finished weekly survey. Record `surveyol.prelaunch-human-review` before the first production invitation batch, after the owner has reviewed the final survey/preview and invitation copy. Do not substitute an internal test send for this approval, and do not require a test send unless the owner explicitly asks for one.
 - SurveyOL Email collector reminder follow-up configuration. Each production Email collector should be manually verified with `Reminder Follow-up` set to `Automate reminders within 12 days`, then recorded in the private ledger as `surveyol.reminder-followup-configured` before the first production invitation batch.
 - SurveyOL Email collector batch sending.
 - Google Sheets direct writeback to `CTS 2026`.
 
 Those should remain guarded until the exact APIs and field mappings are proven with one or two production cycles.
+
+## First-Batch Hardening
+
+Before the first production batch for any weekly survey:
+
+1. Regenerate the launch-scope automation board and require every required item to be `passed`.
+2. Confirm `surveyol.prelaunch-human-review` is recorded after owner approval of the finished survey, not merely after automated draft creation.
+3. Confirm `public.final-close-date-posted` is recorded after the placeholder/report page and Reports board have been pushed.
+4. Confirm the live Email collector shows `Reminder Follow-up: Within 12 days`, `Anonymous Responses: Off`, `Status: Open`, and no unexpected Web Link collector is being distributed.
+5. Use the audited private send list as the source of truth for the first 100 recipients. If direct entry into SurveyOL's `Recipient Email(s)` field is used, save the exact batch CSV privately and record the batch count, cumulative count, remaining estimate, opt-outs, bounces, and daily-limit state after send.
+6. After the send or blocker, update the public-safe automation daily log, rebuild the static site, commit, and push before reporting completion.
