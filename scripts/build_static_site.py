@@ -316,7 +316,7 @@ PAGES = [
       <p>This board gives readers a public progress snapshot for each weekly survey: what is open now, what has already been reported, and when to expect the next public update. Participant identities and raw response files are not published.</p>
     </div>
     <div class="survey-timeline-chart" aria-label="Weekly survey status timeline">
-      <div class="survey-lane current" style="--progress-width: 22.4%;">
+      <div class="survey-lane current" style="--progress-width: 59.2%;">
         <div class="survey-lane-label">
           <a href="{week_2_report_url}">Week 2</a>
           <span>Pornography and the Church</span>
@@ -327,9 +327,9 @@ PAGES = [
             <span class="stage-info-panel" id="week2-placeholder-info" role="tooltip"><strong>Week 2 placeholder</strong> Public page published before the CTS response link was distributed.</span>
             <span>Placeholder</span>
           </div>
-          <div class="survey-stage active" data-short-label="Open">
+          <div class="survey-stage done" data-short-label="Sent">
             <button class="stage-dot" type="button" aria-describedby="week2-fielding-info" aria-label="Week 2 fielding details"></button>
-            <span class="stage-info-panel" id="week2-fielding-info" role="tooltip"><strong>Fielding now</strong> 409 CTS email invitations were sent. The survey remains open during the three-week response window.</span>
+            <span class="stage-info-panel" id="week2-fielding-info" role="tooltip"><strong>Fielding</strong> 409 CTS email invitations were sent. The survey remains open during the three-week response window.</span>
             <span>Fielding</span>
           </div>
           <div class="survey-stage done" data-short-label="Report">
@@ -350,7 +350,7 @@ PAGES = [
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>Tuesday refresh</strong>
+          <strong>June 30 refresh</strong>
         </div>
       </div>
       <div class="survey-lane" style="--progress-width: 59.2%;">
@@ -387,7 +387,7 @@ PAGES = [
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>Tuesday refresh</strong>
+          <strong>June 30 refresh</strong>
         </div>
       </div>
     </div>
