@@ -153,12 +153,13 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 9. Generate the public summary JSON with `scripts/cts_report_pipeline.py` and the matching `reporting/week-###.config.json`.
 10. Review the generated summary's `quality` section for missing columns, non-numeric values, out-of-range values, unexpectedly low counts, and unexpected unmatched-response counts.
 11. Summarize all 15 live slider items with the canonical results display: `Item`, `Mean`, `IQR Range`, `Doubt/Dogma` as non-endpoint:endpoint counts, and an observed 10-bin distribution sparkline with light neighbor smoothing and a visible 100% marker. In `Doubt/Dogma`, color the left non-endpoint/doubt count green and the right endpoint/dogma count red. Do not use `Median` or `Low / Mid / High` as primary table columns.
-12. Identify key tensions where item-level disagreement is significant.
-13. Suppress or combine subgroup comparisons when counts are too small.
-14. Review free-text suggestions for accidental identifiers before using or publishing them.
-15. Publish the report on the primary CTS website and link it from the reports index.
-16. Create or update the report encapsulation for the next newsletter and the top of the next weekly SurveyOL survey.
-17. Update the rolling survey control board on the Reports page when a survey moves to a new public stage, then commit and push the changed site files.
+12. Use the canonical weekly report artifact shell for every preliminary and final weekly report page. The page should point `.week-report` at the public summary JSON with `data-summary-url`, set the topic labels, include `assets/weekly-report.js`, and provide placeholders for the all-item table, item-level detail cards, participant ballot table, and next-ballot table. Do not hand-build a static item table when the public JSON has item summaries and distribution series.
+13. Identify key tensions where item-level disagreement is significant.
+14. Suppress or combine subgroup comparisons when counts are too small.
+15. Review free-text suggestions for accidental identifiers before using or publishing them.
+16. Publish the report on the primary CTS website and link it from the reports index.
+17. Create or update the report encapsulation for the next newsletter and the top of the next weekly SurveyOL survey.
+18. Update the rolling survey control board on the Reports page when a survey moves to a new public stage, then commit and push the changed site files.
 
 ## Prepare Next Week
 
