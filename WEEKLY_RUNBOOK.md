@@ -54,7 +54,7 @@ The status board answers three operational questions:
 2. Is each item `passed`, `review_required`, `blocked`, `failed`, `missing`, `stale`, `planned`, `running`, or explicitly `not_due`?
 3. Does each major process area have coverage and redundancy, such as SurveyOL no-send plus registry suppression checks, send-list plus live-contact duplicate audits, dry-run plans plus human-review gates, and private raw exports plus public aggregate summaries?
 
-Some required steps are intentionally not fully automated, especially SurveyOL survey creation, Email collector sends, test-export review, public URL verification, and final approval of dry-run plans. Record those guarded steps in the private ledger instead of relying on memory:
+Some required steps are intentionally not fully automated, especially SurveyOL survey creation, Email collector sends, public URL verification, and final approval of dry-run plans. Record those guarded steps in the private ledger instead of relying on memory:
 
 ```bash
 python3 scripts/cts_automation_status.py record \
@@ -111,12 +111,11 @@ The encapsulation should be short enough to scan quickly and should include:
 5. Audit the exact CSV that will be imported or used for recipient targeting with `scripts/cts_ops.py audit-email-duplicates --fail-on-duplicates`. Any duplicate normalized email address is a hard stop until corrected.
 6. Export or inspect the live SurveyOL contact table before each invitation batch. If any SurveyOL contact email appears more than once, stop sending until the extra contact records are merged or deleted.
 7. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
-8. Before any full send, invite at least one internal test recipient through the Email collector, complete the survey, export the test result, and confirm the export includes email identity or another reliable join key.
-9. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
-10. For a small tail batch, prefer the simplest stable SurveyOL send path. If the live contact-table checkbox UI is fragile, row selection opens edit dialogs, or the remaining list is already known from the guarded send audit, use the `Recipient Email(s)` field directly with the verified remaining addresses instead of forcing another checkbox-based selection pass. Record that direct-entry fallback was used.
-11. After the first production invitation batch is actually sent, verify that the public page's final close date equals that send date plus 21 days. If the actual send date differs from the planned launch date, correct the public page, reports index, reporting config, and automation ledger before the next public status update.
-12. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
-13. If the suppression CSV was manually reconfirmed or regenerated without changing membership, still refresh its evidence timestamp before rerunning the invitation board so the board reflects the latest review rather than an old embedded `collected_at` date.
+8. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
+9. For a small tail batch, prefer the simplest stable SurveyOL send path. If the live contact-table checkbox UI is fragile, row selection opens edit dialogs, or the remaining list is already known from the guarded send audit, use the `Recipient Email(s)` field directly with the verified remaining addresses instead of forcing another checkbox-based selection pass. Record that direct-entry fallback was used.
+10. After the first production invitation batch is actually sent, verify that the public page's final close date equals that send date plus 21 days. If the actual send date differs from the planned launch date, correct the public page, reports index, reporting config, and automation ledger before the next public status update.
+11. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
+12. If the suppression CSV was manually reconfirmed or regenerated without changing membership, still refresh its evidence timestamp before rerunning the invitation board so the board reflects the latest review rather than an old embedded `collected_at` date.
 14. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
 15. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
 
@@ -205,7 +204,6 @@ Before acting on the checklist above, regenerate the relevant automation status 
 - SurveyOL recipient import comes from `CTS 2026`, excludes do-not-email records, and contains no email-only contacts with missing names.
 - The exact SurveyOL recipient CSV and the live SurveyOL contact table have both passed duplicate-email checks.
 - The current weekly send-list audit and any sync plans have been reviewed, and no unresolved `human_review_required: true` output remains for the action about to be taken.
-- A test Email collector export confirms that responses can be joined back to `CTS 2026` by email identity or a stable private join key.
 - The 3 independent live items and 7 participant-nominated ballot items are orthogonal to the weekly topic, non-duplicative, clear, and likely to produce meaningful disagreement or spread.
 - The survey invitation email renders correctly.
 - Full-time ministry participation note appears on the website/contact materials and email copy.

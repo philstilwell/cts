@@ -290,7 +290,7 @@ PAGES = [
     <div>
       <p class="section-label">Newest survey page</p>
       <h2 id="latest-report-heading">Week 3: Pastoral Authority and Accountability</h2>
-      <p>The Week 3 placeholder page is posted before participant invitations go out. If the first production invitations are sent on Tuesday, June 23, 2026, the final close date will be Tuesday, July 14, 2026, exactly 21 days later.</p>
+      <p>The Week 3 survey is now fielding. The first production invitation batch was queued on Tuesday, June 23, 2026, so the final close date is Tuesday, July 14, 2026, exactly 21 days later.</p>
       <div class="button-row">
         <a class="button" href="{week_3_report_url}">Open Week 3 Placeholder</a>
         <a class="button light" href="{week_2_report_url}">Open Week 2 Report</a>
@@ -299,7 +299,7 @@ PAGES = [
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Launch pending</dd>
+        <dd>Fielding</dd>
       </div>
       <div>
         <dt>Survey topic</dt>
@@ -317,21 +317,21 @@ PAGES = [
       <p>This board gives readers a public progress snapshot for each weekly survey: what is open now, what has already been reported, and when to expect the next public update. Participant identities and raw response files are not published.</p>
     </div>
     <div class="survey-timeline-chart" aria-label="Weekly survey status timeline">
-      <div class="survey-lane current" style="--progress-width: 20%;">
+      <div class="survey-lane current" style="--progress-width: 40%;">
         <div class="survey-lane-label">
           <a href="{week_3_report_url}">Week 3</a>
           <span>Pastoral Authority and Accountability</span>
         </div>
-        <div class="survey-stage-track" aria-label="Week 3 public placeholder is posted and participant invitations are pending.">
+        <div class="survey-stage-track" aria-label="Week 3 public placeholder is posted and the first participant invitation batch has been queued.">
           <div class="survey-stage done" data-short-label="Page">
             <button class="stage-dot" type="button" aria-describedby="week3-placeholder-info" aria-label="Week 3 placeholder details"></button>
             <span class="stage-info-panel" id="week3-placeholder-info" role="tooltip"><strong>Week 3 placeholder</strong> Public page posted before participant invitations so the report URL and exact final close date are visible.</span>
             <span>Placeholder</span>
           </div>
-          <div class="survey-stage active" data-short-label="Sent">
+          <div class="survey-stage done" data-short-label="Sent">
             <button class="stage-dot" type="button" aria-describedby="week3-fielding-info" aria-label="Week 3 fielding details"></button>
-            <span class="stage-info-panel" id="week3-fielding-info" role="tooltip"><strong>Launch pending</strong> First production invitations are planned for Tuesday, June 23, 2026. Do not mark fielding complete until SurveyOL records invitations.</span>
-            <span>Launch</span>
+            <span class="stage-info-panel" id="week3-fielding-info" role="tooltip"><strong>Fielding</strong> 100 CTS email invitations were queued on Tuesday, June 23, 2026. The remaining eligible invitation estimate is 277.</span>
+            <span>Fielding</span>
           </div>
           <div class="survey-stage pending" data-short-label="Report">
             <button class="stage-dot" type="button" aria-describedby="week3-first-report-info" aria-label="Week 3 first report details"></button>
@@ -345,13 +345,13 @@ PAGES = [
           </div>
           <div class="survey-stage pending" data-short-label="Final">
             <button class="stage-dot" type="button" aria-describedby="week3-final-info" aria-label="Week 3 final report details"></button>
-            <span class="stage-info-panel" id="week3-final-info" role="tooltip"><strong>Final report</strong> Planned final close: Tuesday, July 14, 2026, 21 days after the planned first production invitation send.</span>
+            <span class="stage-info-panel" id="week3-final-info" role="tooltip"><strong>Final report</strong> Final close: Tuesday, July 14, 2026, 21 days after the first production invitation send.</span>
             <span>Final</span>
           </div>
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>Send first invitation batch</strong>
+          <strong>Next invitation batch</strong>
         </div>
       </div>
       <div class="survey-lane" style="--progress-width: 59.2%;">
@@ -648,21 +648,21 @@ PAGES = [
         output=WEEK_3_REPORT_OUTPUT,
         nav_label="Week 3",
         title="Week 3 Report Placeholder: Pastoral Authority and Accountability",
-        eyebrow="Launch placeholder",
+        eyebrow="Survey fielding",
         description=(
             "Stable Week 3 Christian Thought Survey report URL for Pastoral "
-            "Authority and Accountability, including the planned launch and exact "
-            "final close date before participant invitations go out."
+            "Authority and Accountability, including the first invitation batch "
+            "and exact final close date."
         ),
         content="""
 <div class="wp-content">
-  <p>This is the stable public page for the third revived weekly Christian Thought Survey report. The page is posted before participant invitations so readers can see the topic, reporting plan, and exact close-date rule without exposing SurveyOL respondent links.</p>
+  <p>This is the stable public page for the third revived weekly Christian Thought Survey report. The survey is now fielding through the CTS email invitation system, and this page gives readers the topic, reporting plan, and exact close-date rule without exposing SurveyOL respondent links.</p>
 
   <div class="status-grid">
     <div class="status-card">
       <span>Status</span>
-      <strong>Launch pending</strong>
-      <p>Participant invitations are prepared through the CTS SurveyOL email invitation system.</p>
+      <strong>Fielding</strong>
+      <p>The first 100 participant invitations were queued through the CTS SurveyOL email invitation system on Tuesday, June 23, 2026.</p>
     </div>
     <div class="status-card">
       <span>Topic</span>

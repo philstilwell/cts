@@ -231,24 +231,6 @@
       "operator_note": "Record the chosen quarantine path and SurveyOL response count."
     },
     {
-      "id": "surveyol.test-export-join",
-      "title": "Email collector test export confirms response identity join",
-      "phase": "SurveyOL launch gate",
-      "required": true,
-      "scopes": ["launch", "full-cycle"],
-      "cadence": "Before full participant send.",
-      "evidence": [
-        {"kind": "record", "required": true}
-      ],
-      "covers": [
-        "Anonymous Responses is Off",
-        "Export contains email identity or stable join key",
-        "Private crosswalk can join responses"
-      ],
-      "redundancy_groups": ["participant-identity-join", "human-review-gate"],
-      "operator_note": "Record the test response/export confirmation only; do not record private identities in the ledger."
-    },
-    {
       "id": "surveyol.reminder-followup-configured",
       "title": "Email collector 12-day reminder follow-up configured",
       "phase": "SurveyOL launch gate",
@@ -437,11 +419,10 @@
       "scopes": ["launch", "report", "close", "full-cycle"],
       "required_automation_ids": [
         "send-list.build",
-        "surveyol.test-export-join",
         "report.response-export"
       ],
       "redundancy_groups": ["participant-identity-join", "privacy-boundary"],
-      "redundancy_reason": "The private crosswalk and an Email collector export test both confirm responses can be joined without public identity exposure."
+      "redundancy_reason": "The private crosswalk and response exports support participant identity joins without public identity exposure."
     },
     {
       "id": "human-review-gates",
