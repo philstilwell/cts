@@ -1,0 +1,160 @@
+{
+  "week": "week-003",
+  "title": "CTS 2026 Weekly Survey 3 - Pastoral Authority and Accountability",
+  "topic": "Pastoral Authority and Accountability",
+  "platform": "CTS",
+  "field_dates": {
+    "start": "2026-06-23",
+    "end": "2026-07-14",
+    "first_invitation_sent": "2026-06-23",
+    "first_report_target": "2026-06-30",
+    "final_close": "2026-07-14",
+    "final_close_label": "Tuesday, July 14, 2026",
+    "final_close_rule": "21 days after the first production invitation send"
+  },
+  "slider_scale": {
+    "min": 0,
+    "midpoint": 50,
+    "max": 100,
+    "labels": {
+      "0": "strongly disagree",
+      "50": "unsure/mixed",
+      "100": "strongly agree"
+    }
+  },
+  "privacy": {
+    "min_public_item_n": 30,
+    "min_public_subgroup_n": 15,
+    "preferred_public_subgroup_n": 20
+  },
+  "suggestion_columns": [
+    "Suggestion",
+    "Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100."
+  ],
+  "ballot": {
+    "source_columns": [
+      "Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Pastoral Authority and Accountability topic. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension."
+    ],
+    "choices": [
+      "Churches should explicitly teach regular attenders that committed local church membership is a normal part of Christian discipleship.",
+      "Churches should prioritize faithful Christian witness over gaining political power as their primary public posture.",
+      "Churches should prioritize communities of connection and service over programs aimed mainly at individual spiritual growth.",
+      "Scripture reserves the office of pastor or elder for qualified men.",
+      "A complementarian church should treat a pastoral candidate's egalitarian convictions as disqualifying for its senior pastor role.",
+      "Baptism should ordinarily precede participation in the Lord's Supper.",
+      "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship."
+    ]
+  },
+  "report_encapsulation": {
+    "title": "Week 3 report: Pastoral Authority and Accountability",
+    "url": "https://christianthoughtsurvey.com/weekly-survey-reports/week-003-pastoral-authority-and-accountability/",
+    "text": "The Week 3 report will cover Pastoral Authority and Accountability after the first preliminary results are reviewed. Raw respondent identities and raw free-text suggestions will not be published."
+  },
+  "items": [
+    {
+      "id": "W003-Q01",
+      "number": 1,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q1", "In many churches, pastors exercise less legitimate spiritual authority than Scripture assigns to church leaders."],
+      "text": "In many churches, pastors exercise less legitimate spiritual authority than Scripture assigns to church leaders."
+    },
+    {
+      "id": "W003-Q02",
+      "number": 2,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q2", "In many churches, pastors exercise more practical authority than their accountability structures can safely support."],
+      "text": "In many churches, pastors exercise more practical authority than their accountability structures can safely support."
+    },
+    {
+      "id": "W003-Q03",
+      "number": 3,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q3", "A plurality of qualified elders is an important safeguard against pastoral misuse of authority."],
+      "text": "A plurality of qualified elders is an important safeguard against pastoral misuse of authority."
+    },
+    {
+      "id": "W003-Q04",
+      "number": 4,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q4", "Congregational voting is an important safeguard against pastoral misuse of authority."],
+      "text": "Congregational voting is an important safeguard against pastoral misuse of authority."
+    },
+    {
+      "id": "W003-Q05",
+      "number": 5,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q5", "Pastors should be accountable to some recognized authority outside their own local congregation."],
+      "text": "Pastors should be accountable to some recognized authority outside their own local congregation."
+    },
+    {
+      "id": "W003-Q06",
+      "number": 6,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q6", "A persistent pattern of manipulative or coercive leadership should normally disqualify a pastor from office."],
+      "text": "A persistent pattern of manipulative or coercive leadership should normally disqualify a pastor from office."
+    },
+    {
+      "id": "W003-Q07",
+      "number": 7,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q7", "In my ministry context, the label spiritual abuse is sometimes applied to ordinary pastoral disagreement or correction."],
+      "text": "In my ministry context, the label spiritual abuse is sometimes applied to ordinary pastoral disagreement or correction."
+    },
+    {
+      "id": "W003-Q08",
+      "number": 8,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q8", "In my ministry context, genuinely abusive pastoral leadership is more common than churches publicly acknowledge."],
+      "text": "In my ministry context, genuinely abusive pastoral leadership is more common than churches publicly acknowledge."
+    },
+    {
+      "id": "W003-Q09",
+      "number": 9,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q9", "Pastoral authority should include giving moral counsel about members' major life decisions outside formal church programs."],
+      "text": "Pastoral authority should include giving moral counsel about members' major life decisions outside formal church programs."
+    },
+    {
+      "id": "W003-Q10",
+      "number": 10,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q10", "Churches should publish clear procedures for bringing complaints against pastors, elders, or other leaders."],
+      "text": "Churches should publish clear procedures for bringing complaints against pastors, elders, or other leaders."
+    },
+    {
+      "id": "W003-Q11",
+      "number": 11,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q11", "Pastors should have meaningful accountability for how they use church finances, staff authority, and confidential information."],
+      "text": "Pastors should have meaningful accountability for how they use church finances, staff authority, and confidential information."
+    },
+    {
+      "id": "W003-Q12",
+      "number": 12,
+      "section": "cts_administered_topic",
+      "source_columns": ["Q12", "Churches should distinguish between biblical submission to leaders and unquestioning compliance with leaders."],
+      "text": "Churches should distinguish between biblical submission to leaders and unquestioning compliance with leaders."
+    },
+    {
+      "id": "W003-Q13",
+      "number": 13,
+      "section": "participant_vote_determined",
+      "source_columns": ["Q13", "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified."],
+      "text": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified."
+    },
+    {
+      "id": "W003-Q14",
+      "number": 14,
+      "section": "participant_vote_determined",
+      "source_columns": ["Q14", "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands."],
+      "text": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands."
+    },
+    {
+      "id": "W003-Q15",
+      "number": 15,
+      "section": "participant_vote_determined",
+      "source_columns": ["Q15", "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies."],
+      "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies."
+    }
+  ]
+}
