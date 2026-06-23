@@ -2,7 +2,7 @@
 
 Working title: CTS 2026 Weekly Survey 1 - Divorce and Remarriage
 
-Closed test recipients: verify directly in MailerLite or private operational notes. Do not commit personal recipient addresses to the public repository.
+Closed test recipients: verify in private operational notes. Do not commit personal recipient addresses to the public repository.
 
 SurveyOL respondent link: store in private operational notes. Do not commit live respondent links to the public repository.
 

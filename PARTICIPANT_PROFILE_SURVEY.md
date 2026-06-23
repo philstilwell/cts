@@ -20,8 +20,8 @@ Implementation note: SurveyOL's copy/paste importer initially created the introd
 1. Potential participant submits the public participation request form.
 2. CTS reviews whether the person is currently or previously engaged in full-time ministry.
 3. If approved, CTS sends the private participant-profile survey link.
-4. After the profile is complete, CTS adds or confirms the person in the `CTS Participants` MailerLite group.
-5. Keep newsletter-only subscribers out of `CTS Participants` unless they explicitly opt into weekly survey participation and fit the ministry-participant focus.
+4. After the profile is complete, CTS adds or confirms the person in the current CTS participant registry and invitation workflow.
+5. Keep update-only readers out of the weekly survey participant workflow unless they explicitly opt into survey participation and fit the ministry-participant focus.
 
 ## Source Schema
 

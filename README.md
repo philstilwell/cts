@@ -23,10 +23,6 @@ Independent live items and participant-nominated ballot items should be orthogon
 
 The regular weekly rhythm is Tuesday-centered. Tuesday morning is the report window: publish the first preliminary report for any survey launched one week earlier and refresh every still-open preliminary report. Tuesday evening is the new survey launch window: create the placeholder public report page, open the SurveyOL Email collector, and send the first batch of up to 100 participant invitations. Continue sending up to 100 invitations per day until all eligible participants have been invited. Each weekly survey remains open for three weeks from the first invitation send, so the placeholder page and each preliminary report must show the exact final close date calculated as the first production invitation date plus 21 days. Preliminary reports are refreshed each Tuesday morning until that posted close date, then the collector is closed and the report is regenerated as final. A SurveyOL no-send, opt-out, bounce, delivery-problem, or registry do-not-email record suppresses that address from future survey invitations.
 
-## Legacy MailerLite Note
-
-Mailerlite-related pages and notes remain in the repository for historical/public-site continuity, but MailerLite is no longer part of the operational weekly survey process. The active invitation workflow now trusts SurveyOL's no-send list plus the canonical `CTS 2026` registry only.
-
 The generated pages reflect the new WordPress pages updated on June 1, 2026:
 
 - Christian Thought Survey 2026
@@ -52,7 +48,6 @@ Internal launch planning files:
 - `TOPIC_BANK_TENSION_REVIEW.md`
 - `NEXT_3_TOPIC_ITEM_REVIEW.md`
 - `LEGACY_200_ITEM_INDEX.md`
-- `MAILERLITE_SEND_PLAN.md`
 
 Run the static build with:
 

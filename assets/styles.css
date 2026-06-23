@@ -1227,18 +1227,13 @@ h3 {
   border: 0;
 }
 
-.mailerlite-embed {
+.newsletter-signup-panel {
   margin-top: 2rem;
   padding: 1.5rem;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--wash);
   box-shadow: var(--shadow);
-}
-
-.mailerlite-embed iframe,
-.mailerlite-embed .ml-embedded {
-  max-width: 100%;
 }
 
 .form-note {
@@ -2009,7 +2004,7 @@ h3 {
     min-height: 1840px;
   }
 
-  .mailerlite-embed {
+  .newsletter-signup-panel {
     padding: 1rem;
   }
 

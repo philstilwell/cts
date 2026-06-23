@@ -167,7 +167,7 @@ The audit normalizes email addresses by trimming whitespace and lowercasing. It 
 
 ## SurveyOL No-Send Source
 
-CTS no longer uses MailerLite as an operational suppression source. The only external suppression source for weekly survey invitations is SurveyOL's no-send or unsubscribed list, which must be reflected back into `CTS 2026` before future sends.
+The external suppression source for weekly survey invitations is SurveyOL's no-send or unsubscribed list, which must be reflected back into `CTS 2026` before future sends.
 
 If SurveyOL's API does not expose the needed no-send rows directly, save a private normalized CSV under `data/private/suppressions/surveyol-no-send.csv` from the live SurveyOL send page or export UI and treat that file as the current suppression authority.
 

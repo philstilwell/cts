@@ -33,16 +33,6 @@ OG_IMAGE_ALT = "Christian Thought Survey research overview graphic"
 DEFAULT_ROBOTS = "index,follow,max-image-preview:large"
 THEME_COLOR = "#174d51"
 CLOUDFLARE_ANALYTICS = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"b86c3e7a273f47648ae70f08866f9ec5\"}'></script><!-- End Cloudflare Web Analytics -->"
-MAILERLITE_UNIVERSAL_SCRIPT = """<!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2397853');
-</script>
-<!-- End MailerLite Universal -->"""
-MAILERLITE_NEWSLETTER_FORM_EMBED = '<div class="ml-embedded" data-form="EQ6WXD"></div>'
 WEEKLY_STRUCTURE_LIST = """<ol class="process-list" type="A">
   <li><strong>Last week's results summary and link:</strong> a brief summary and a link to the primary CTS website page containing the previous week's results and reports.</li>
   <li><strong>One CTS-administered topic:</strong> the Featured Topic banner appears immediately before a <strong>◉ Main topic...</strong> introduction line, followed by 12 related survey items from the CTS topic bank.</li>
@@ -813,9 +803,9 @@ PAGES = [
   <ul>
     <li>Email addresses are used for survey invitations, reminders, follow-up questions, and opt-out handling.</li>
     <li>Email addresses, names, and direct contact details are not included in public results files.</li>
-    <li>MailerLite keeps survey participants and newsletter/update subscribers in separate groups: <code>CTS Participants</code> for survey invitations and <code>CTS Newsletter</code> for report notices and general CTS updates.</li>
-    <li>The newsletter signup form collects email address, name, ministry status, and a brief interest motivation note so CTS can understand newsletter readership without adding newsletter-only subscribers to the survey participant panel.</li>
-    <li>Participants may unsubscribe from MailerLite emails or ask CTS to remove them from future invitations.</li>
+    <li>Survey participant invitations are managed through the current CTS invitation workflow, and general update requests are kept separate from the weekly survey participant panel.</li>
+    <li>The public contact form may be used to ask for report notices, topic previews, or occasional CTS updates without joining the weekly survey participant panel.</li>
+    <li>Participants may ask CTS to remove them from future invitations or updates.</li>
   </ul>
 
   <h2>Survey responses</h2>
@@ -894,13 +884,16 @@ PAGES = [
 
   <p>The weekly survey participant panel is kept separately and is intended for people who are currently or previously engaged in full-time ministry. If that describes you and you want to be considered for survey participation, use the <a href="{contact_url}">Contact &amp; Weekly Survey Participation</a> page instead.</p>
 
-  <p>The newsletter form asks for your email address, name, ministry status, and a brief note about why you are interested. For ministry status, a short note such as current full-time ministry, previous full-time ministry, volunteer or lay ministry, or not in ministry is enough. Those details help CTS understand who is following the project without moving newsletter-only subscribers into the survey participant group.</p>
+  <p>Use the contact form to ask for report notices, topic previews, or occasional CTS updates. Please include your email address, name, ministry status, and a brief note about why you are interested. For ministry status, a short note such as current full-time ministry, previous full-time ministry, volunteer or lay ministry, or not in ministry is enough. Those details help CTS understand who is following the project without moving update-only readers into the survey participant group.</p>
 
-  <div class="mailerlite-embed">
-    {mailerlite_newsletter_form_embed}
+  <div class="newsletter-signup-panel">
+    <p>Update requests are currently handled through the CTS contact form.</p>
+    <div class="button-row">
+      <a class="button" href="{contact_url}">Open Contact Form</a>
+    </div>
   </div>
 
-  <p class="form-note">Newsletter subscribers are kept in the separate <code>CTS Newsletter</code> MailerLite group. See <a href="{privacy_url}">Privacy &amp; Data Release</a> for the current data handling policy.</p>
+  <p class="form-note">See <a href="{privacy_url}">Privacy &amp; Data Release</a> for the current data handling policy.</p>
 </div>
 """,
     ),
@@ -1177,7 +1170,6 @@ def fill_links(html: str, prefix: str) -> str:
         "contact_url": page_url(prefix, "contact/index.html"),
         "surveyol_form_url": SURVEYOL_FORM_URL,
         "surveyol_embed_url": SURVEYOL_EMBED_URL,
-        "mailerlite_newsletter_form_embed": MAILERLITE_NEWSLETTER_FORM_EMBED,
         "weekly_structure_list": WEEKLY_STRUCTURE_LIST,
         "response_rule_note": RESPONSE_RULE_NOTE,
         "participant_ballot_note": PARTICIPANT_BALLOT_NOTE,
@@ -1199,7 +1191,7 @@ def render_head(page: Page, prefix: str) -> str:
     canonical = canonical_url(page.output)
     robots = escape(robots_content(page))
     structured_data = render_structured_data(page)
-    extra_head = f"\n  {MAILERLITE_UNIVERSAL_SCRIPT}" if page.key == "newsletter" else ""
+    extra_head = ""
     return f"""<!doctype html>
 <html lang="en">
 <head>

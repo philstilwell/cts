@@ -12,10 +12,10 @@
         "Verified Week 1 and Week 2 final close dates across public pages, reports index, reporting configs, and private ledger records.",
         "Refreshed SurveyOL API snapshots, private report CSVs, public aggregate summaries, and report pages for all open preliminary reports.",
         "Ranked Week 2 participant ballot results and prepared the next seven-item participant-nominated ballot draft without publishing raw suggestions.",
-        "Checked generated human-review gates and MailerLite availability before newsletter action."
+        "Checked generated human-review gates before newsletter action."
       ],
-      "result": "Week 1 now shows 44 complete responses with final close Wednesday, July 1, 2026. Week 2 first preliminary report shows 28 complete responses with final close Tuesday, July 7, 2026. Newsletter sending is blocked because MailerLite API access is missing for required suppression reconciliation.",
-      "next": "Restore MailerLite API access and reconcile global suppressions before sending the newsletter."
+      "result": "Week 1 now shows 44 complete responses with final close Wednesday, July 1, 2026. Week 2 first preliminary report shows 28 complete responses with final close Tuesday, July 7, 2026. Newsletter sending was not performed in this report run.",
+      "next": "Use the current CTS update workflow for any future newsletter send."
     },
     {
       "date": "2026-06-22",
@@ -54,7 +54,7 @@
       "ran": [
         "Recovered authenticated SurveyOL Week 2 invitation evidence and compared it with private suppression records.",
         "Updated the canonical private SurveyOL no-send source and CTS 2026 registry for the missing opt-outs.",
-        "Confirmed MailerLite is legacy-only for the active CTS workflow and left MailerLite unchanged."
+        "Confirmed legacy email tooling is outside the active CTS workflow and left it unchanged."
       ],
       "result": "Active workflow suppression controls are reconciled: 14 SurveyOL opt-outs, 0 SurveyOL bounces, six private suppression records added, and six CTS 2026 rows updated or annotated. No private email addresses are published.",
       "next": "Build the next SurveyOL send list from a fresh CTS 2026 registry export plus the updated no-send CSV before sending."
@@ -68,10 +68,10 @@
       "ran": [
         "Verified SurveyOL API readiness and refreshed SurveyOL contacts/duplicate audit.",
         "Checked CTS 2026 registry suppression rows and local suppression artifacts.",
-        "Searched recent Gmail for MailerLite unsubscribe or bounce notifications."
+        "Searched recent Gmail for unsubscribe or bounce notifications."
       ],
-      "result": "No external list changes were applied. SurveyOL contacts export has 404 rows with duplicate_email_count 0. Local/registry evidence covers 8 SurveyOL opt-outs and 5 prior MailerLite unsubscribes, but latest private send counts record 14 SurveyOL opt-outs and MailerLite API access is unavailable.",
-      "next": "Resolve the six missing SurveyOL opt-out identities and restore MailerLite API/export access before any cross-system sync."
+      "result": "No external list changes were applied. SurveyOL contacts export has 404 rows with duplicate_email_count 0. Local/registry evidence covers 8 SurveyOL opt-outs, but latest private send counts record 14 SurveyOL opt-outs.",
+      "next": "Resolve the six missing SurveyOL opt-out identities before any cross-system sync."
     },
     {
       "date": "2026-06-22",
@@ -221,7 +221,7 @@
         "Regenerated the private invitation-scope status board after the send."
       ],
       "result": "100 invitations were queued in this batch, bringing the Week 2 cumulative sent count to 190. The total eligible invitation-list count was not recorded in the public-safe log at send time. The daily sending limit was reached for today. One opt-out now requires global suppression reconciliation before the next batch.",
-      "next": "Reconcile the opt-out across CTS 2026, CTS contacts, and MailerLite before another invitation batch is sent. Record the total eligible invitation list size with the next batch."
+      "next": "Reconcile the opt-out across CTS 2026 and CTS contacts before another invitation batch is sent. Record the total eligible invitation list size with the next batch."
     },
     {
       "date": "2026-06-17",

@@ -24,21 +24,16 @@ import ssl
 import sys
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PRIVATE_DIR = ROOT / "data" / "private"
-MAILERLITE_API_BASE = "https://connect.mailerlite.com/api"
 SURVEYOL_API_BASE = "https://api.surveyol.com/v1"
-SUPPRESSION_STATUSES = ("unsubscribed", "bounced", "junk")
-MAILERLITE_GROUP_STATUSES = ("active", "unsubscribed", "unconfirmed", "bounced", "junk")
 LOADED_ENV_FILES: list[str] = []
 CTS_SYNC_ENV_VARS = (
     "SURVEYOL_API_TOKEN",
     "SURVEYOL_API_TOKEN_EXPIRES_AT",
-    "MAILERLITE_API_TOKEN",
 )
 SURVEYOL_TOKEN_EXPIRY_WARNING_DAYS = 14
 
@@ -433,99 +428,6 @@ def api_json(
         raise SystemExit(f"{method} {url} failed: {exc.reason}") from exc
 
 
-def api_empty(method: str, url: str, token: str) -> None:
-    request = Request(
-        url,
-        headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
-        method=method,
-    )
-    try:
-        with urlopen(request, timeout=60, context=ssl_context()) as response:
-            response.read()
-    except HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")
-        raise SystemExit(f"{method} {url} returned HTTP {exc.code}: {detail}") from exc
-    except URLError as exc:
-        raise SystemExit(f"{method} {url} failed: {exc.reason}") from exc
-
-
-def mailerlite_get_all(path: str, token: str, params: dict[str, Any] | None = None) -> list[dict[str, Any]]:
-    params = dict(params or {})
-    data: list[dict[str, Any]] = []
-    cursor = params.pop("cursor", None)
-    while True:
-        query = dict(params)
-        if cursor:
-            query["cursor"] = cursor
-        sep = "&" if "?" in path else "?"
-        url = f"{MAILERLITE_API_BASE}{path}"
-        if query:
-            url = f"{url}{sep}{urlencode(query)}"
-        payload = api_json("GET", url, token)
-        items = payload.get("data", []) if isinstance(payload, dict) else []
-        if not isinstance(items, list):
-            raise SystemExit(f"Unexpected MailerLite response for {path}: {payload}")
-        data.extend(item for item in items if isinstance(item, dict))
-        meta = payload.get("meta", {}) if isinstance(payload, dict) else {}
-        cursor = meta.get("next_cursor") if isinstance(meta, dict) else None
-        if not cursor:
-            break
-    return data
-
-
-def mailerlite_get_pages(path: str, token: str, params: dict[str, Any] | None = None) -> list[dict[str, Any]]:
-    params = dict(params or {})
-    page = int(params.pop("page", 1))
-    data: list[dict[str, Any]] = []
-    while True:
-        query = {**params, "page": page}
-        url = f"{MAILERLITE_API_BASE}{path}?{urlencode(query)}"
-        payload = api_json("GET", url, token)
-        items = payload.get("data", []) if isinstance(payload, dict) else []
-        if not isinstance(items, list):
-            raise SystemExit(f"Unexpected MailerLite response for {path}: {payload}")
-        data.extend(item for item in items if isinstance(item, dict))
-        meta = payload.get("meta", {}) if isinstance(payload, dict) else {}
-        last_page = int(meta.get("last_page", page)) if isinstance(meta, dict) else page
-        if page >= last_page:
-            break
-        page += 1
-    return data
-
-
-def subscriber_email(subscriber: dict[str, Any]) -> str:
-    return normalize_email(str(subscriber.get("email", "")))
-
-
-def subscriber_name_fields(subscriber: dict[str, Any]) -> tuple[str, str, str]:
-    fields = subscriber.get("fields", {})
-    fields = fields if isinstance(fields, dict) else {}
-    first = str(fields.get("name") or subscriber.get("name") or "").strip()
-    last = str(fields.get("last_name") or "").strip()
-    full = f"{first} {last}".strip()
-    return full, first, last
-
-
-def mailerlite_group_subscribers(
-    group_id: str,
-    token: str,
-    limit: int,
-    statuses: tuple[str, ...] = MAILERLITE_GROUP_STATUSES,
-) -> list[dict[str, Any]]:
-    by_id_or_email: dict[str, dict[str, Any]] = {}
-    for status in statuses:
-        subscribers = mailerlite_get_all(
-            f"/groups/{group_id}/subscribers",
-            token,
-            {"filter[status]": status, "limit": limit, "include": "groups"},
-        )
-        for subscriber in subscribers:
-            key = str(subscriber.get("id") or subscriber_email(subscriber))
-            if key:
-                by_id_or_email[key] = subscriber
-    return list(by_id_or_email.values())
-
-
 def status_suppression_row(source: str, email: str, status: str, source_id: str = "", note: str = "") -> dict[str, str]:
     return {
         "email": normalize_email(email),
@@ -635,27 +537,6 @@ def read_suppression_files(paths: list[Path]) -> dict[str, list[dict[str, str]]]
             }
             suppressions.setdefault(email, []).append(entry)
     return suppressions
-
-
-def cmd_mailerlite_groups(args: argparse.Namespace) -> int:
-    token = require_env("MAILERLITE_API_TOKEN")
-    groups = mailerlite_get_pages("/groups", token, {"limit": args.limit})
-    if args.output:
-        rows = [
-            {
-                "id": group.get("id", ""),
-                "name": group.get("name", ""),
-                "active_count": group.get("active_count", ""),
-                "unsubscribed_count": group.get("unsubscribed_count", ""),
-                "bounced_count": group.get("bounced_count", ""),
-                "junk_count": group.get("junk_count", ""),
-            }
-            for group in groups
-        ]
-        write_csv(Path(args.output), ["id", "name", "active_count", "unsubscribed_count", "bounced_count", "junk_count"], rows)
-    else:
-        print(json.dumps(groups, indent=2, ensure_ascii=False))
-    return 0
 
 
 def cmd_env_doctor(args: argparse.Namespace) -> int:
@@ -773,118 +654,6 @@ def cmd_env_doctor(args: argparse.Namespace) -> int:
         print(json.dumps(result, indent=2, ensure_ascii=False))
     print_review_notice(result)
     return 0 if not review_required else 2
-
-
-def cmd_mailerlite_suppressions(args: argparse.Namespace) -> int:
-    token = require_env("MAILERLITE_API_TOKEN")
-    statuses = args.status or list(SUPPRESSION_STATUSES)
-    rows: list[dict[str, str]] = []
-    for status in statuses:
-        subscribers = mailerlite_get_all(
-            "/subscribers",
-            token,
-            {"filter[status]": status, "limit": args.limit},
-        )
-        for subscriber in subscribers:
-            email = subscriber_email(subscriber)
-            if not email:
-                continue
-            rows.append(
-                status_suppression_row(
-                    "mailerlite",
-                    email,
-                    status,
-                    str(subscriber.get("id", "")),
-                    str(subscriber.get("unsubscribed_at") or subscriber.get("updated_at") or ""),
-                )
-            )
-    write_csv(Path(args.output), ["email", "source", "status", "source_id", "note", "collected_at"], rows)
-    print(f"Wrote {len(rows)} MailerLite suppression rows to {args.output}")
-    return 0
-
-
-def cmd_mailerlite_group_snapshot(args: argparse.Namespace) -> int:
-    token = require_env("MAILERLITE_API_TOKEN")
-    subscribers = mailerlite_group_subscribers(args.group_id, token, args.limit)
-    rows = []
-    for subscriber in subscribers:
-        full, first, last = subscriber_name_fields(subscriber)
-        rows.append(
-            {
-                "id": subscriber.get("id", ""),
-                "email": subscriber_email(subscriber),
-                "status": subscriber.get("status", ""),
-                "name": full,
-                "first_name": first,
-                "last_name": last,
-                "updated_at": subscriber.get("updated_at", ""),
-            }
-        )
-    write_csv(Path(args.output), ["id", "email", "status", "name", "first_name", "last_name", "updated_at"], rows)
-    print(f"Wrote {len(rows)} MailerLite group subscriber rows to {args.output}")
-    return 0
-
-
-def cmd_mailerlite_sync_group(args: argparse.Namespace) -> int:
-    token = require_env("MAILERLITE_API_TOKEN")
-    _, send_rows = read_csv(Path(args.send_list))
-    suppressions = read_suppression_files([Path(path) for path in args.suppression_csv])
-    group_subscribers = mailerlite_group_subscribers(args.group_id, token, args.limit)
-    current_by_email = {subscriber_email(item): item for item in group_subscribers if subscriber_email(item)}
-
-    desired_by_email = {normalize_email(row.get("email")): row for row in send_rows if normalize_email(row.get("email"))}
-    suppressed_current = sorted(email for email in current_by_email if email in suppressions)
-    missing = sorted(email for email in desired_by_email if email not in current_by_email and email not in suppressions)
-    extra = sorted(email for email in current_by_email if email not in desired_by_email and email not in suppressions)
-    plan = {
-        "generated_at": now_iso(),
-        "dry_run": not args.apply,
-        **review_fields(
-            not args.apply,
-            "This is a dry-run MailerLite group sync plan; review counts and contact categories before applying list changes.",
-            "If the plan is correct, re-run the same command with --apply. Correct the send list or suppressions first if anything looks wrong.",
-        ),
-        "group_id": args.group_id,
-        "send_list": args.send_list,
-        "desired_count": len(desired_by_email),
-        "current_count": len(current_by_email),
-        "missing_active_contacts": missing,
-        "suppressed_group_contacts_to_remove": suppressed_current,
-        "extra_group_contacts_not_in_send_list": extra,
-        "remove_extra": bool(args.remove_extra),
-        "actions": [],
-    }
-
-    if args.apply:
-        for email in missing:
-            row = desired_by_email[email]
-            payload = {
-                "email": email,
-                "fields": {
-                    "name": row.get("first_name") or row.get("name", ""),
-                    "last_name": row.get("last_name", ""),
-                },
-                "groups": [args.group_id],
-            }
-            result = api_json("POST", f"{MAILERLITE_API_BASE}/subscribers", token, payload)
-            plan["actions"].append({"action": "upsert_to_group", "email": email, "result_id": result.get("data", {}).get("id", "") if isinstance(result, dict) else ""})
-        remove_emails = list(suppressed_current)
-        if args.remove_extra:
-            remove_emails.extend(extra)
-        for email in sorted(set(remove_emails)):
-            subscriber = current_by_email[email]
-            subscriber_id = str(subscriber.get("id", ""))
-            if not subscriber_id:
-                continue
-            api_empty("DELETE", f"{MAILERLITE_API_BASE}/subscribers/{subscriber_id}/groups/{args.group_id}", token)
-            plan["actions"].append({"action": "remove_from_group", "email": email, "subscriber_id": subscriber_id})
-
-    write_json(Path(args.plan_output), plan)
-    print(f"Wrote MailerLite group sync plan to {args.plan_output}")
-    print_review_notice(plan)
-    if not args.apply:
-        print("Dry run only. Re-run with --apply to make API changes.")
-    return 0
 
 
 def cmd_surveyol_account(args: argparse.Namespace) -> int:
@@ -1324,7 +1093,7 @@ def main() -> int:
     p.set_defaults(func=cmd_audit_email_duplicates)
 
     p = subparsers.add_parser("env-doctor", help="check CTS ops env discovery and optionally verify API access")
-    p.add_argument("--verify-api", action="store_true", help="also verify SurveyOL and MailerLite API access when tokens are present")
+    p.add_argument("--verify-api", action="store_true", help="also verify SurveyOL API access when a token is present")
     p.add_argument("--json-output", help="optional JSON report output path")
     p.set_defaults(func=cmd_env_doctor)
 
