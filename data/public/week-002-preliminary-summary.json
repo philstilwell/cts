@@ -1,0 +1,1649 @@
+{
+  "schema_version": "cts-weekly-summary-v0.2",
+  "generated_at": "2026-06-23T13:06:33.022068+00:00",
+  "week": "week-002",
+  "title": "CTS 2026 Weekly Survey 2 - Pornography and the Church",
+  "topic": "Pornography and the Church",
+  "field_dates": {
+    "start": "2026-06-16",
+    "end": "2026-07-07",
+    "first_invitation_sent": "2026-06-16",
+    "first_report_target": "2026-06-23",
+    "final_close": "2026-07-07",
+    "final_close_label": "Tuesday, July 7, 2026",
+    "final_close_rule": "21 days after the first production invitation send"
+  },
+  "platform": "CTS",
+  "slider_scale": {
+    "min": 0,
+    "midpoint": 50,
+    "max": 100,
+    "labels": {
+      "0": "strongly disagree",
+      "50": "unsure/mixed",
+      "100": "strongly agree"
+    }
+  },
+  "privacy": {
+    "min_public_item_n": 30,
+    "min_public_subgroup_n": 15,
+    "preferred_public_subgroup_n": 20
+  },
+  "response_count": 28,
+  "items": [
+    {
+      "id": "W002-Q01",
+      "number": 1,
+      "section": "cts_administered_topic",
+      "short_label": "Pornography use is more spiritually",
+      "text": "Pornography use is more spiritually damaging to churches today than most other hidden sins.",
+      "source_column": "Pornography use is more spiritually damaging to churches today than most other hidden sins.",
+      "n": 28,
+      "mean": 63.54,
+      "median": 70.5,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 50.0,
+      "q3": 81.5,
+      "iqr": 31.5,
+      "standard_deviation": 30.27,
+      "bands": {
+        "low": 6,
+        "middle": 7,
+        "high": 15
+      },
+      "disagreement_score": 31.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 22,
+        "endpoint_count": 6,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 5,
+        "ratio": 3.667
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          3,
+          5,
+          3,
+          5,
+          6
+        ],
+        "display_percentages": [
+          7.357,
+          7.464,
+          3.893,
+          3.679,
+          0.429,
+          11.25,
+          18.5,
+          11.786,
+          18.821,
+          21.964
+        ],
+        "s23_bucket_counts": [
+          3.0,
+          1.5,
+          1.0,
+          1.0,
+          1.0,
+          3.0,
+          4.0,
+          5.0,
+          3.5,
+          8.0
+        ],
+        "s23_smoothed_percentages": [
+          11.196,
+          5.786,
+          3.839,
+          3.786,
+          4.0,
+          11.25,
+          15.143,
+          18.661,
+          13.893,
+          29.804
+        ]
+      }
+    },
+    {
+      "id": "W002-Q02",
+      "number": 2,
+      "section": "cts_administered_topic",
+      "short_label": "In my ministry context pornography",
+      "text": "In my ministry context, pornography use among Christian men is more common than most congregations recognize.",
+      "source_column": "In my ministry context, pornography use among Christian men is more common than most congregations recognize.",
+      "n": 28,
+      "mean": 80.29,
+      "median": 85.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 74.25,
+      "q3": 100.0,
+      "iqr": 25.75,
+      "standard_deviation": 23.43,
+      "bands": {
+        "low": 1,
+        "middle": 4,
+        "high": 23
+      },
+      "disagreement_score": 25.75,
+      "doubt_dogma": {
+        "non_endpoint_count": 17,
+        "endpoint_count": 11,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 10,
+        "ratio": 1.545
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          2,
+          2,
+          6,
+          3,
+          13
+        ],
+        "display_percentages": [
+          3.571,
+          0.107,
+          0.0,
+          0.107,
+          3.786,
+          7.464,
+          8.0,
+          21.964,
+          12.75,
+          46.75
+        ],
+        "s23_bucket_counts": [
+          1.5,
+          0.0,
+          0.0,
+          0.5,
+          1.0,
+          2.0,
+          1.5,
+          6.5,
+          3.0,
+          17.5
+        ],
+        "s23_smoothed_percentages": [
+          5.518,
+          0.161,
+          0.054,
+          1.893,
+          3.839,
+          7.411,
+          6.268,
+          23.696,
+          13.286,
+          64.696
+        ]
+      }
+    },
+    {
+      "id": "W002-Q03",
+      "number": 3,
+      "section": "cts_administered_topic",
+      "short_label": "In my ministry context pornography",
+      "text": "In my ministry context, pornography use among Christian women is more common than most congregations recognize.",
+      "source_column": "In my ministry context, pornography use among Christian women is more common than most congregations recognize.",
+      "n": 28,
+      "mean": 63.86,
+      "median": 75.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 36.5,
+      "q3": 92.25,
+      "iqr": 55.75,
+      "standard_deviation": 33.27,
+      "bands": {
+        "low": 7,
+        "middle": 4,
+        "high": 17
+      },
+      "disagreement_score": 55.75,
+      "doubt_dogma": {
+        "non_endpoint_count": 21,
+        "endpoint_count": 7,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 6,
+        "ratio": 3.0
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          2,
+          1,
+          4,
+          0,
+          2,
+          1,
+          1,
+          6,
+          2,
+          9
+        ],
+        "display_percentages": [
+          7.25,
+          4.214,
+          14.393,
+          0.643,
+          7.25,
+          3.893,
+          4.321,
+          21.75,
+          8.75,
+          32.357
+        ],
+        "s23_bucket_counts": [
+          3.0,
+          0.5,
+          4.0,
+          0.5,
+          2.0,
+          0.5,
+          2.0,
+          6.0,
+          1.5,
+          11.5
+        ],
+        "s23_smoothed_percentages": [
+          11.089,
+          2.536,
+          14.393,
+          2.429,
+          7.25,
+          2.214,
+          7.839,
+          21.804,
+          7.232,
+          42.464
+        ]
+      }
+    },
+    {
+      "id": "W002-Q04",
+      "number": 4,
+      "section": "cts_administered_topic",
+      "short_label": "Persistent pornography use should ordinarily",
+      "text": "Persistent pornography use should ordinarily disqualify a pastor from active ministry until repentance and accountability are demonstrably established.",
+      "source_column": "Persistent pornography use should ordinarily disqualify a pastor from active ministry until repentance and accountability are demonstrably established.",
+      "n": 28,
+      "mean": 82.96,
+      "median": 100.0,
+      "min": 6.0,
+      "max": 100.0,
+      "q1": 67.5,
+      "q3": 100.0,
+      "iqr": 32.5,
+      "standard_deviation": 27.34,
+      "bands": {
+        "low": 2,
+        "middle": 5,
+        "high": 21
+      },
+      "disagreement_score": 32.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 13,
+        "endpoint_count": 15,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 15,
+        "ratio": 0.867
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          3,
+          2,
+          1,
+          0,
+          20
+        ],
+        "display_percentages": [
+          3.679,
+          3.679,
+          0.107,
+          0.0,
+          0.321,
+          10.929,
+          7.571,
+          3.786,
+          2.25,
+          71.429
+        ],
+        "s23_bucket_counts": [
+          1.5,
+          0.5,
+          0.0,
+          0.0,
+          1.0,
+          3.0,
+          1.5,
+          0.5,
+          1.0,
+          26.5
+        ],
+        "s23_smoothed_percentages": [
+          5.571,
+          1.946,
+          0.054,
+          0.107,
+          3.893,
+          10.982,
+          5.732,
+          2.054,
+          6.464,
+          97.589
+        ]
+      }
+    },
+    {
+      "id": "W002-Q05",
+      "number": 5,
+      "section": "cts_administered_topic",
+      "short_label": "Churches should ask direct but",
+      "text": "Churches should ask direct but pastorally careful questions about pornography use when evaluating candidates for leadership.",
+      "source_column": "Churches should ask direct but pastorally careful questions about pornography use when evaluating candidates for leadership.",
+      "n": 28,
+      "mean": 80.54,
+      "median": 90.0,
+      "min": 31.0,
+      "max": 100.0,
+      "q1": 59.75,
+      "q3": 100.0,
+      "iqr": 40.25,
+      "standard_deviation": 22.17,
+      "bands": {
+        "low": 1,
+        "middle": 8,
+        "high": 19
+      },
+      "disagreement_score": 40.25,
+      "doubt_dogma": {
+        "non_endpoint_count": 16,
+        "endpoint_count": 12,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 12,
+        "ratio": 1.333
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          5,
+          2,
+          2,
+          2,
+          15
+        ],
+        "display_percentages": [
+          0.0,
+          0.0,
+          0.107,
+          3.679,
+          4.214,
+          18.179,
+          7.893,
+          7.571,
+          8.964,
+          53.786
+        ],
+        "s23_bucket_counts": [
+          0.0,
+          0.0,
+          0.0,
+          1.5,
+          1.0,
+          5.5,
+          1.5,
+          2.0,
+          2.5,
+          20.0
+        ],
+        "s23_smoothed_percentages": [
+          0.0,
+          0.0,
+          0.161,
+          5.464,
+          4.321,
+          19.911,
+          6.161,
+          7.571,
+          11.286,
+          73.839
+        ]
+      }
+    },
+    {
+      "id": "W002-Q06",
+      "number": 6,
+      "section": "cts_administered_topic",
+      "short_label": "Pornography use is substantially shaping",
+      "text": "Pornography use is substantially shaping sexual expectations within Christian marriages.",
+      "source_column": "Pornography use is substantially shaping sexual expectations within Christian marriages.",
+      "n": 28,
+      "mean": 75.39,
+      "median": 80.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 63.0,
+      "q3": 90.0,
+      "iqr": 27.0,
+      "standard_deviation": 23.5,
+      "bands": {
+        "low": 1,
+        "middle": 7,
+        "high": 20
+      },
+      "disagreement_score": 27.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 22,
+        "endpoint_count": 6,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 5,
+        "ratio": 3.667
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          1,
+          0,
+          0,
+          0,
+          3,
+          2,
+          2,
+          4,
+          8,
+          8
+        ],
+        "display_percentages": [
+          3.571,
+          0.107,
+          0.0,
+          0.321,
+          10.929,
+          7.679,
+          7.786,
+          15.357,
+          29.857,
+          29.429
+        ],
+        "s23_bucket_counts": [
+          1.5,
+          0.0,
+          0.0,
+          0.5,
+          3.0,
+          2.0,
+          2.0,
+          5.0,
+          7.5,
+          9.5
+        ],
+        "s23_smoothed_percentages": [
+          5.518,
+          0.161,
+          0.054,
+          2.107,
+          10.982,
+          7.679,
+          7.893,
+          18.875,
+          28.339,
+          35.75
+        ]
+      }
+    },
+    {
+      "id": "W002-Q07",
+      "number": 7,
+      "section": "cts_administered_topic",
+      "short_label": "Churches should avoid presenting accountability",
+      "text": "Churches should avoid presenting accountability software as a primary solution for habitual pornography use.",
+      "source_column": "Churches should avoid presenting accountability software as a primary solution for habitual pornography use.",
+      "n": 28,
+      "mean": 51.11,
+      "median": 50.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 24.75,
+      "q3": 71.75,
+      "iqr": 47.0,
+      "standard_deviation": 30.87,
+      "bands": {
+        "low": 10,
+        "middle": 10,
+        "high": 8
+      },
+      "disagreement_score": 47.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 22,
+        "endpoint_count": 6,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 5,
+        "ratio": 3.667
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          2,
+          1,
+          7,
+          0,
+          3,
+          6,
+          2,
+          0,
+          2,
+          5
+        ],
+        "display_percentages": [
+          7.25,
+          4.536,
+          25.107,
+          1.071,
+          11.357,
+          21.964,
+          7.786,
+          0.429,
+          7.679,
+          18.071
+        ],
+        "s23_bucket_counts": [
+          2.5,
+          1.0,
+          7.0,
+          1.0,
+          3.5,
+          4.5,
+          2.0,
+          0.5,
+          1.5,
+          7.5
+        ],
+        "s23_smoothed_percentages": [
+          9.304,
+          4.589,
+          25.214,
+          4.696,
+          13.089,
+          16.661,
+          7.679,
+          2.161,
+          6.214,
+          27.75
+        ]
+      }
+    },
+    {
+      "id": "W002-Q08",
+      "number": 8,
+      "section": "cts_administered_topic",
+      "short_label": "Pastors should address pornography from",
+      "text": "Pastors should address pornography from the pulpit more often than most churches currently do.",
+      "source_column": "Pastors should address pornography from the pulpit more often than most churches currently do.",
+      "n": 28,
+      "mean": 65.86,
+      "median": 67.5,
+      "min": 10.0,
+      "max": 100.0,
+      "q1": 50.0,
+      "q3": 80.0,
+      "iqr": 30.0,
+      "standard_deviation": 22.76,
+      "bands": {
+        "low": 2,
+        "middle": 12,
+        "high": 14
+      },
+      "disagreement_score": 30.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 24,
+        "endpoint_count": 4,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 4,
+        "ratio": 6.0
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          0,
+          1,
+          0,
+          2,
+          2,
+          5,
+          4,
+          6,
+          3,
+          5
+        ],
+        "display_percentages": [
+          0.107,
+          3.571,
+          0.321,
+          7.357,
+          7.893,
+          18.5,
+          15.464,
+          22.179,
+          11.893,
+          18.179
+        ],
+        "s23_bucket_counts": [
+          0.5,
+          0.5,
+          0.0,
+          2.5,
+          3.5,
+          4.5,
+          3.0,
+          6.5,
+          2.5,
+          6.5
+        ],
+        "s23_smoothed_percentages": [
+          1.893,
+          1.839,
+          0.321,
+          9.304,
+          13.25,
+          16.768,
+          11.893,
+          23.804,
+          10.321,
+          24.179
+        ]
+      }
+    },
+    {
+      "id": "W002-Q09",
+      "number": 9,
+      "section": "cts_administered_topic",
+      "short_label": "Churches should treat habitual pornography",
+      "text": "Churches should treat habitual pornography use as both moral sin and a behavioral health concern.",
+      "source_column": "Churches should treat habitual pornography use as both moral sin and a behavioral health concern.",
+      "n": 28,
+      "mean": 73.04,
+      "median": 89.5,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 50.0,
+      "q3": 100.0,
+      "iqr": 50.0,
+      "standard_deviation": 33.35,
+      "bands": {
+        "low": 5,
+        "middle": 4,
+        "high": 19
+      },
+      "disagreement_score": 50.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 13,
+        "endpoint_count": 15,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 13,
+        "ratio": 0.867
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          2,
+          1,
+          1,
+          2,
+          0,
+          2,
+          1,
+          4,
+          1,
+          14
+        ],
+        "display_percentages": [
+          7.25,
+          3.893,
+          3.893,
+          7.25,
+          0.429,
+          7.25,
+          4.214,
+          14.5,
+          5.5,
+          50.107
+        ],
+        "s23_bucket_counts": [
+          3.0,
+          1.0,
+          1.5,
+          1.5,
+          1.0,
+          1.0,
+          2.0,
+          3.0,
+          1.5,
+          20.0
+        ],
+        "s23_smoothed_percentages": [
+          11.143,
+          4.054,
+          5.625,
+          5.625,
+          3.839,
+          3.893,
+          7.571,
+          11.089,
+          7.821,
+          73.732
+        ]
+      }
+    },
+    {
+      "id": "W002-Q10",
+      "number": 10,
+      "section": "cts_administered_topic",
+      "short_label": "In my ministry context churches",
+      "text": "In my ministry context, churches are currently losing more ground than they are gaining against pornography.",
+      "source_column": "In my ministry context, churches are currently losing more ground than they are gaining against pornography.",
+      "n": 28,
+      "mean": 65.21,
+      "median": 68.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 47.75,
+      "q3": 88.5,
+      "iqr": 40.75,
+      "standard_deviation": 28.16,
+      "bands": {
+        "low": 2,
+        "middle": 12,
+        "high": 14
+      },
+      "disagreement_score": 40.75,
+      "doubt_dogma": {
+        "non_endpoint_count": 20,
+        "endpoint_count": 8,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 6,
+        "ratio": 2.5
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          2,
+          0,
+          0,
+          1,
+          4,
+          4,
+          3,
+          5,
+          2,
+          7
+        ],
+        "display_percentages": [
+          7.143,
+          0.214,
+          0.107,
+          4.0,
+          14.821,
+          15.036,
+          11.679,
+          18.393,
+          8.429,
+          25.214
+        ],
+        "s23_bucket_counts": [
+          3.0,
+          0.0,
+          0.0,
+          2.5,
+          3.0,
+          4.0,
+          3.0,
+          4.5,
+          2.5,
+          9.5
+        ],
+        "s23_smoothed_percentages": [
+          11.036,
+          0.321,
+          0.268,
+          9.25,
+          11.411,
+          14.929,
+          11.625,
+          16.661,
+          10.429,
+          35.214
+        ]
+      }
+    },
+    {
+      "id": "W002-Q11",
+      "number": 11,
+      "section": "cts_administered_topic",
+      "short_label": "Churches should provide structured pastoral",
+      "text": "Churches should provide structured pastoral care for spouses harmed by pornography use even when the user is repentant.",
+      "source_column": "Churches should provide structured pastoral care for spouses harmed by pornography use even when the user is repentant.",
+      "n": 28,
+      "mean": 79.54,
+      "median": 87.5,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 73.75,
+      "q3": 100.0,
+      "iqr": 26.25,
+      "standard_deviation": 24.84,
+      "bands": {
+        "low": 2,
+        "middle": 3,
+        "high": 23
+      },
+      "disagreement_score": 26.25,
+      "doubt_dogma": {
+        "non_endpoint_count": 17,
+        "endpoint_count": 11,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 10,
+        "ratio": 1.545
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          6,
+          3,
+          14
+        ],
+        "display_percentages": [
+          3.571,
+          0.214,
+          3.571,
+          0.214,
+          3.679,
+          3.786,
+          4.321,
+          21.857,
+          12.857,
+          50.321
+        ],
+        "s23_bucket_counts": [
+          1.5,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          2.0,
+          6.0,
+          3.5,
+          17.5
+        ],
+        "s23_smoothed_percentages": [
+          5.518,
+          0.268,
+          3.571,
+          0.214,
+          3.679,
+          3.893,
+          7.893,
+          22.018,
+          15.018,
+          64.75
+        ]
+      }
+    },
+    {
+      "id": "W002-Q12",
+      "number": 12,
+      "section": "cts_administered_topic",
+      "short_label": "Churches should teach young people",
+      "text": "Churches should teach young people about pornography before parents or students report that it is already a problem.",
+      "source_column": "Churches should teach young people about pornography before parents or students report that it is already a problem.",
+      "n": 28,
+      "mean": 77.82,
+      "median": 85.5,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 67.0,
+      "q3": 100.0,
+      "iqr": 33.0,
+      "standard_deviation": 26.16,
+      "bands": {
+        "low": 2,
+        "middle": 5,
+        "high": 21
+      },
+      "disagreement_score": 33.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 16,
+        "endpoint_count": 12,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 11,
+        "ratio": 1.333
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          2,
+          14
+        ],
+        "display_percentages": [
+          3.571,
+          0.214,
+          3.571,
+          0.214,
+          3.786,
+          7.571,
+          11.357,
+          14.821,
+          9.071,
+          50.214
+        ],
+        "s23_bucket_counts": [
+          1.5,
+          0.0,
+          1.0,
+          0.5,
+          1.0,
+          2.0,
+          3.5,
+          3.5,
+          2.5,
+          18.5
+        ],
+        "s23_smoothed_percentages": [
+          5.518,
+          0.268,
+          3.625,
+          2.0,
+          3.839,
+          7.625,
+          13.089,
+          13.143,
+          11.286,
+          68.321
+        ]
+      }
+    },
+    {
+      "id": "W002-Q13",
+      "number": 13,
+      "section": "participant_vote_determined",
+      "short_label": "A church should require formal",
+      "text": "A church should require formal membership before a person serves in any public ministry role.",
+      "source_column": "A church should require formal membership before a person serves in any public ministry role.",
+      "n": 28,
+      "mean": 64.46,
+      "median": 75.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 34.75,
+      "q3": 100.0,
+      "iqr": 65.25,
+      "standard_deviation": 35.44,
+      "bands": {
+        "low": 7,
+        "middle": 6,
+        "high": 15
+      },
+      "disagreement_score": 65.25,
+      "doubt_dogma": {
+        "non_endpoint_count": 15,
+        "endpoint_count": 13,
+        "exact_zero_count": 3,
+        "exact_hundred_count": 10,
+        "ratio": 1.154
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          3,
+          1,
+          1,
+          3,
+          0,
+          3,
+          2,
+          3,
+          2,
+          10
+        ],
+        "display_percentages": [
+          10.821,
+          4.0,
+          4.0,
+          10.821,
+          0.643,
+          10.929,
+          7.786,
+          11.143,
+          8.536,
+          35.929
+        ],
+        "s23_bucket_counts": [
+          4.5,
+          1.0,
+          1.5,
+          2.5,
+          1.5,
+          2.5,
+          1.0,
+          3.5,
+          1.5,
+          15.0
+        ],
+        "s23_smoothed_percentages": [
+          16.661,
+          4.214,
+          5.732,
+          9.25,
+          5.893,
+          9.196,
+          4.214,
+          12.768,
+          7.339,
+          55.339
+        ]
+      }
+    },
+    {
+      "id": "W002-Q14",
+      "number": 14,
+      "section": "participant_vote_determined",
+      "short_label": "Pastors should normally mention specific",
+      "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
+      "source_column": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
+      "n": 28,
+      "mean": 57.82,
+      "median": 61.5,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 33.75,
+      "q3": 78.5,
+      "iqr": 44.75,
+      "standard_deviation": 32.06,
+      "bands": {
+        "low": 7,
+        "middle": 9,
+        "high": 12
+      },
+      "disagreement_score": 44.75,
+      "doubt_dogma": {
+        "non_endpoint_count": 20,
+        "endpoint_count": 8,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 6,
+        "ratio": 2.5
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          3,
+          0,
+          2,
+          4,
+          2,
+          1,
+          4,
+          5,
+          1,
+          6
+        ],
+        "display_percentages": [
+          10.714,
+          0.536,
+          7.571,
+          14.714,
+          7.679,
+          4.214,
+          14.929,
+          18.393,
+          4.75,
+          21.536
+        ],
+        "s23_bucket_counts": [
+          4.0,
+          1.0,
+          2.0,
+          3.0,
+          2.5,
+          1.5,
+          3.5,
+          5.0,
+          0.5,
+          9.0
+        ],
+        "s23_smoothed_percentages": [
+          14.821,
+          4.214,
+          7.571,
+          11.196,
+          9.411,
+          6.0,
+          13.196,
+          18.286,
+          3.286,
+          33.161
+        ]
+      }
+    },
+    {
+      "id": "W002-Q15",
+      "number": 15,
+      "section": "participant_vote_determined",
+      "short_label": "Christians should avoid recreational marijuana",
+      "text": "Christians should avoid recreational marijuana use even where it is legal.",
+      "source_column": "Christians should avoid recreational marijuana use even where it is legal.",
+      "n": 28,
+      "mean": 66.46,
+      "median": 87.5,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 24.25,
+      "q3": 100.0,
+      "iqr": 75.75,
+      "standard_deviation": 39.03,
+      "bands": {
+        "low": 8,
+        "middle": 3,
+        "high": 17
+      },
+      "disagreement_score": 75.75,
+      "doubt_dogma": {
+        "non_endpoint_count": 13,
+        "endpoint_count": 15,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 13,
+        "ratio": 0.867
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          3,
+          2,
+          3,
+          1,
+          0,
+          2,
+          0,
+          2,
+          1,
+          14
+        ],
+        "display_percentages": [
+          10.929,
+          7.786,
+          11.036,
+          3.893,
+          0.321,
+          7.143,
+          0.429,
+          7.25,
+          5.286,
+          50.107
+        ],
+        "s23_bucket_counts": [
+          4.5,
+          2.0,
+          2.5,
+          1.0,
+          0.5,
+          1.5,
+          0.5,
+          1.5,
+          1.5,
+          20.0
+        ],
+        "s23_smoothed_percentages": [
+          16.768,
+          7.893,
+          9.25,
+          3.893,
+          2.054,
+          5.464,
+          2.107,
+          5.571,
+          7.661,
+          73.732
+        ]
+      }
+    }
+  ],
+  "participant_nominations": {
+    "suggestions_received": 5,
+    "raw_suggestions_public": false
+  },
+  "quality": {
+    "rows_read": 28,
+    "missing_item_columns": [],
+    "non_numeric_values": [],
+    "out_of_range_values": []
+  },
+  "private_data_excluded": true,
+  "ballot": {
+    "source_column": "Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Pornography and the Church topic. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension.",
+    "respondents": 28,
+    "scoring": "Borda count: 7 points for first place through 1 point for seventh place.",
+    "items": [
+      {
+        "choice": 3,
+        "text": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified.",
+        "score": 134,
+        "rank_count": 28,
+        "rank": 1
+      },
+      {
+        "choice": 1,
+        "text": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands.",
+        "score": 131,
+        "rank_count": 28,
+        "rank": 2
+      },
+      {
+        "choice": 2,
+        "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies.",
+        "score": 127,
+        "rank_count": 28,
+        "rank": 3
+      },
+      {
+        "choice": 4,
+        "text": "Baptism should ordinarily precede participation in the Lord's Supper.",
+        "score": 127,
+        "rank_count": 28,
+        "rank": 4
+      },
+      {
+        "choice": 5,
+        "text": "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.",
+        "score": 104,
+        "rank_count": 28,
+        "rank": 5
+      },
+      {
+        "choice": 6,
+        "text": "A church should require formal membership before a person serves in any public ministry role.",
+        "score": 86,
+        "rank_count": 28,
+        "rank": 6
+      },
+      {
+        "choice": 7,
+        "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
+        "score": 75,
+        "rank_count": 28,
+        "rank": 7
+      }
+    ],
+    "quality": {
+      "invalid_values": []
+    }
+  },
+  "next_week_ballot_draft": {
+    "items": [
+      {
+        "rank": 1,
+        "text": "Churches should explicitly teach regular attenders that committed local church membership is a normal part of Christian discipleship.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 2,
+        "text": "Churches should prioritize faithful Christian witness over gaining political power as their primary public posture.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 3,
+        "text": "Churches should prioritize communities of connection and service over programs aimed mainly at individual spiritual growth.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 4,
+        "text": "Scripture reserves the office of pastor or elder for qualified men.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 5,
+        "text": "A complementarian church should treat a pastoral candidate's egalitarian convictions as disqualifying for its senior pastor role.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 6,
+        "text": "Baptism should ordinarily precede participation in the Lord's Supper.",
+        "source": "week_2_ballot_carryover"
+      },
+      {
+        "rank": 7,
+        "text": "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.",
+        "source": "week_2_ballot_carryover"
+      }
+    ]
+  },
+  "report_encapsulation": {
+    "title": "Week 2 preliminary report: Pornography and the Church",
+    "url": "https://christianthoughtsurvey.com/weekly-survey-reports/week-002-pornography-and-the-church/",
+    "text": "The first Week 2 preliminary report has 28 complete responses. Early patterns show high agreement around pastoral accountability for persistent pornography use, direct leadership screening, pastoral care for harmed spouses, and proactive youth teaching, with wider spread around whether accountability software should be de-emphasized and how strongly churches are losing ground. Raw respondent identities and raw free-text suggestions are not published."
+  }
+}

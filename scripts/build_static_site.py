@@ -16,10 +16,10 @@ SITE_DESCRIPTION = (
     "participant-voted questions, and responsible data releases."
 )
 SITE_URL = "https://christianthoughtsurvey.com"
-CSS_VERSION = "20260622-herding-cats-bg2"
+CSS_VERSION = "20260623-tuesday-report"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
-UPDATED = "June 22, 2026"
-SITEMAP_LASTMOD = "2026-06-22"
+UPDATED = "June 23, 2026"
+SITEMAP_LASTMOD = "2026-06-23"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
@@ -174,8 +174,8 @@ PAGES = [
   <div class="container latest-report">
     <div class="latest-report-copy">
       <p class="section-label">Latest weekly report</p>
-      <h2>Week 1: Divorce and Remarriage</h2>
-      <p class="section-copy">For most visitors, weekly results should be the fastest path through the site. The Week 1 report page now holds preliminary aggregate results, refreshed on June 16, 2026, and will be revised after the final CTS export is reviewed.</p>
+      <h2>Week 2: Pornography and the Church</h2>
+      <p class="section-copy">For most visitors, weekly results should be the fastest path through the site. The Week 2 report page now holds its first preliminary aggregate results, posted on June 23, 2026, and will be refreshed each Tuesday while the survey remains open.</p>
       <div class="report-meta-grid" aria-label="Latest report status">
         <div class="meta-chip">
           <span>Status</span>
@@ -187,15 +187,15 @@ PAGES = [
         </div>
         <div class="meta-chip">
           <span>Current responses</span>
-          <strong>33 complete</strong>
+          <strong>28 complete</strong>
         </div>
         <div class="meta-chip">
           <span>Topic</span>
-          <strong>Divorce and Remarriage</strong>
+          <strong>Pornography and the Church</strong>
         </div>
       </div>
       <div class="button-row">
-        <a class="button" href="{week_1_report_url}">Open Latest Report</a>
+            <a class="button" href="{week_2_report_url}">Open Latest Report</a>
         <a class="button light" href="{weekly_url}">View All Weekly Reports</a>
       </div>
     </div>
@@ -299,16 +299,16 @@ PAGES = [
     <div>
       <p class="section-label">Newest survey page</p>
       <h2 id="latest-report-heading">Week 2: Pornography and the Church</h2>
-      <p>The Week 2 placeholder page is published before CTS invitations are sent. It names the topic, planned survey items, participant ballot, reporting schedule, and a short encapsulation linking to the June 16 refresh of the Week 1 report.</p>
+      <p>The Week 2 preliminary report is now posted with 28 complete responses, item-level aggregate results, ballot outcomes, and the next participant-nominated ballot draft. It will continue to refresh each Tuesday morning until final close on Tuesday, July 7, 2026.</p>
       <div class="button-row">
-        <a class="button" href="{week_2_report_url}">Open Week 2 Placeholder</a>
+        <a class="button" href="{week_2_report_url}">Open Week 2 Report</a>
         <a class="button light" href="{week_1_report_url}">Open Week 1 Report</a>
       </div>
     </div>
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Survey placeholder</dd>
+        <dd>Preliminary report</dd>
       </div>
       <div>
         <dt>Survey topic</dt>
@@ -331,25 +331,25 @@ PAGES = [
           <a href="{week_2_report_url}">Week 2</a>
           <span>Pornography and the Church</span>
         </div>
-        <div class="survey-stage-track" aria-label="Week 2 is currently fielding invitations.">
+        <div class="survey-stage-track" aria-label="Week 2 has posted its first preliminary report and remains open for refreshes.">
           <div class="survey-stage done" data-short-label="Page">
             <button class="stage-dot" type="button" aria-describedby="week2-placeholder-info" aria-label="Week 2 placeholder details"></button>
-            <span class="stage-info-panel" id="week2-placeholder-info" role="tooltip"><strong>Week 2 placeholder</strong> Public page published before the CTS response link was distributed. Current public responses: not yet reported.</span>
+            <span class="stage-info-panel" id="week2-placeholder-info" role="tooltip"><strong>Week 2 placeholder</strong> Public page published before the CTS response link was distributed.</span>
             <span>Placeholder</span>
           </div>
           <div class="survey-stage active" data-short-label="Open">
             <button class="stage-dot" type="button" aria-describedby="week2-fielding-info" aria-label="Week 2 fielding details"></button>
-            <span class="stage-info-panel" id="week2-fielding-info" role="tooltip"><strong>Fielding now</strong> CTS email invitations are being sent in daily batches. Current public responses: pending the first report.</span>
+            <span class="stage-info-panel" id="week2-fielding-info" role="tooltip"><strong>Fielding now</strong> 409 CTS email invitations were sent. The survey remains open during the three-week response window.</span>
             <span>Fielding</span>
           </div>
-          <div class="survey-stage pending" data-short-label="Report">
+          <div class="survey-stage done" data-short-label="Report">
             <button class="stage-dot" type="button" aria-describedby="week2-first-report-info" aria-label="Week 2 first report details"></button>
-            <span class="stage-info-panel" id="week2-first-report-info" role="tooltip"><strong>First report</strong> Scheduled for June 23, 2026. The first public report will include the current complete-response count and aggregate item results.</span>
+            <span class="stage-info-panel" id="week2-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 28 complete responses as of the June 23 report.</span>
             <span>First Report</span>
           </div>
-          <div class="survey-stage pending" data-short-label="Refresh">
+          <div class="survey-stage active" data-short-label="Refresh">
             <button class="stage-dot" type="button" aria-describedby="week2-refresh-info" aria-label="Week 2 refresh details"></button>
-            <span class="stage-info-panel" id="week2-refresh-info" role="tooltip"><strong>Refreshes</strong> After the first report posts, this survey will refresh each Tuesday morning while the response window remains open.</span>
+            <span class="stage-info-panel" id="week2-refresh-info" role="tooltip"><strong>Refreshes</strong> Current public responses: 28 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Tuesday, July 7, 2026.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
@@ -360,7 +360,7 @@ PAGES = [
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>First report June 23</strong>
+          <strong>Tuesday refresh</strong>
         </div>
       </div>
       <div class="survey-lane" style="--progress-width: 59.2%;">
@@ -381,12 +381,12 @@ PAGES = [
           </div>
           <div class="survey-stage done" data-short-label="Report">
             <button class="stage-dot" type="button" aria-describedby="week1-first-report-info" aria-label="Week 1 first report details"></button>
-            <span class="stage-info-panel" id="week1-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 33 complete responses as of the June 16 refresh.</span>
+            <span class="stage-info-panel" id="week1-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 44 complete responses as of the June 23 refresh.</span>
             <span>First Report</span>
           </div>
           <div class="survey-stage active" data-short-label="Refresh">
             <button class="stage-dot" type="button" aria-describedby="week1-refresh-info" aria-label="Week 1 refresh details"></button>
-            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshing</strong> Current public responses: 33 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Wednesday, July 1, 2026.</span>
+            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshing</strong> Current public responses: 44 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Wednesday, July 1, 2026.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
@@ -461,7 +461,7 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>This is the stable public page for the first revived weekly Christian Thought Survey report. The current full report is managed as a report artifact and should not be overwritten by the generic site builder. As of the June 16, 2026 refresh, the preliminary report showed 33 complete responses from 409 invitations.</p>
+  <p>This is the stable public page for the first revived weekly Christian Thought Survey report. The current full report is managed as a report artifact and should not be overwritten by the generic site builder. As of the June 23, 2026 refresh, the preliminary report showed 44 complete responses from 409 invitations.</p>
 
   <div class="status-grid">
     <div class="status-card">
@@ -575,12 +575,12 @@ PAGES = [
         key="week-002-report",
         output=WEEK_2_REPORT_OUTPUT,
         nav_label="Week 2",
-        title="Week 2 Survey: Pornography and the Church",
-        eyebrow="Survey placeholder",
+        title="Week 2 Preliminary Results: Pornography and the Church",
+        eyebrow="Preliminary results",
         description=(
-            "Placeholder page for Christian Thought Survey Week 2 on Pornography "
-            "and the Church, including fielding dates, planned survey items, and "
-            "reporting schedule."
+            "Preliminary Week 2 Christian Thought Survey results on Pornography "
+            "and the Church, including response count, item-level aggregate "
+            "results, ballot outcomes, and privacy-safe data notes."
         ),
         content="""
 <div class="wp-content">

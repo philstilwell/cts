@@ -1,11 +1,12 @@
 {
-  "schema_version": "cts-weekly-summary-v0.2-preliminary",
+  "schema_version": "cts-weekly-summary-v0.2",
+  "generated_at": "2026-06-23T13:06:06.224896+00:00",
   "week": "week-001",
-  "title": "CTS 2026 Weekly Survey 01 - Divorce and Remarriage",
+  "title": "CTS 2026 Weekly Survey 1 - Divorce and Remarriage",
   "topic": "Divorce and Remarriage",
-  "status": "preliminary",
-  "snapshot_date": "2026-06-16",
   "field_dates": {
+    "start": "2026-06-10",
+    "end": "2026-07-01",
     "first_invitation_sent": "2026-06-10",
     "final_close": "2026-07-01",
     "final_close_label": "Wednesday, July 1, 2026",
@@ -13,56 +14,56 @@
     "date_note": "Week 1 launched outside the normal Tuesday cadence; this is the scheduled three-week final close target from the first Week 1 production invitation window."
   },
   "platform": "CTS",
-  "collector": "Email - Survey 01",
-  "private_data_excluded": true,
-  "privacy_note": "This file contains aggregate public results only. Names, email addresses, response identifiers, respondent-level records, and raw free-text suggestions are excluded.",
-  "response_summary": {
-    "invitations_sent": 409,
-    "responses": 33,
-    "complete_responses": 33,
-    "completion_rate_percent": 100,
-    "typical_time_spent": "5 minutes",
-    "approximate_invited_response_rate_percent": 8.1,
-    "suggestions_received": 14
-  },
-  "update_policy": {
-    "will_recalculate": true,
-    "note": "This preliminary report will be refreshed each Tuesday morning while the survey remains open, until final close on Wednesday, July 1, 2026. It may also be refreshed sooner if new responses materially change the results. A final report should be stamped after the response window closes and the CTS export is reviewed."
-  },
   "slider_scale": {
     "min": 0,
     "midpoint": 50,
     "max": 100,
     "labels": {
       "0": "strongly disagree",
-      "50": "uncertain or mixed",
+      "50": "unsure/mixed",
       "100": "strongly agree"
     }
   },
-  "band_definitions": {
-    "low": "0-33",
-    "middle": "34-66",
-    "high": "67-100"
+  "privacy": {
+    "min_public_item_n": 30,
+    "min_public_subgroup_n": 15,
+    "preferred_public_subgroup_n": 20
   },
+  "response_count": 44,
   "items": [
     {
       "id": "W001-Q01",
       "number": 1,
       "section": "cts_administered_topic",
-      "short_label": "Adultery",
+      "short_label": "In ordinary cases a spouse's",
       "text": "In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce.",
-      "n": 33,
-      "mean": 85.9,
-      "median": 100,
-      "q1": 80,
-      "q3": 100,
-      "standard_deviation": 26.3,
-      "min": 0,
-      "max": 100,
+      "source_column": "In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce.",
+      "n": 44,
+      "mean": 86.02,
+      "median": 100.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 79.5,
+      "q3": 100.0,
+      "iqr": 20.5,
+      "standard_deviation": 26.97,
       "bands": {
-        "low": 2,
+        "low": 3,
         "middle": 3,
-        "high": 28
+        "high": 38
+      },
+      "disagreement_score": 20.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 13,
+        "endpoint_count": 31,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 29,
+        "ratio": 0.419
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": true,
+        "reasons": []
       },
       "distribution": {
         "cut_points": [
@@ -79,80 +80,90 @@
           100
         ],
         "simple_counts": [
-          1,
+          2,
           1,
           0,
           0,
           1,
           1,
           2,
-          2,
+          4,
           3,
-          22
-        ],
-        "s23_bucket_counts": [
-          2,
-          0.5,
-          0,
-          0.5,
-          1,
-          1,
-          1.5,
-          2.5,
-          2.5,
-          32.5
-        ],
-        "s23_smoothed_percentages": [
-          6.288,
-          1.697,
-          0.091,
-          1.606,
-          3.167,
-          3.258,
-          4.864,
-          7.939,
-          10.758,
-          100.0
+          30
         ],
         "display_percentages": [
-          3.121,
-          3.121,
-          0.091,
-          0.091,
-          3.121,
-          3.303,
-          6.333,
-          6.515,
-          11.273,
-          66.939
+          4.614,
+          2.409,
+          0.068,
+          0.068,
+          2.341,
+          2.477,
+          4.886,
+          9.432,
+          9.136,
+          68.386
+        ],
+        "s23_bucket_counts": [
+          3.5,
+          0.5,
+          0.0,
+          0.5,
+          1.0,
+          1.0,
+          1.5,
+          4.5,
+          2.5,
+          44.5
+        ],
+        "s23_smoothed_percentages": [
+          8.227,
+          1.375,
+          0.068,
+          1.205,
+          2.375,
+          2.443,
+          3.784,
+          10.5,
+          9.023,
+          100.0
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 22,
-        "exact_hundred_count": 21,
-        "exact_zero_count": 1,
-        "non_endpoint_count": 11,
-        "ratio": 0.5
       }
     },
     {
       "id": "W001-Q02",
       "number": 2,
       "section": "cts_administered_topic",
-      "short_label": "Physical abuse",
+      "short_label": "In ordinary cases a spouse's",
       "text": "In ordinary cases, a spouse's persistent physical abuse constitutes biblically legitimate grounds for divorce even if sexual adultery has not occurred.",
-      "n": 33,
-      "mean": 83.2,
-      "median": 100,
-      "q1": 75,
-      "q3": 100,
-      "standard_deviation": 30.7,
-      "min": 0,
-      "max": 100,
+      "source_column": "In ordinary cases, a spouse's persistent physical abuse constitutes biblically legitimate grounds for divorce even if sexual adultery has not occurred.",
+      "n": 44,
+      "mean": 83.16,
+      "median": 100.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 75.0,
+      "q3": 100.0,
+      "iqr": 25.0,
+      "standard_deviation": 30.14,
       "bands": {
-        "low": 4,
+        "low": 5,
         "middle": 2,
-        "high": 27
+        "high": 37
+      },
+      "disagreement_score": 25.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 13,
+        "endpoint_count": 31,
+        "exact_zero_count": 3,
+        "exact_hundred_count": 28,
+        "ratio": 0.419
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_standard_deviation"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -169,80 +180,91 @@
           100
         ],
         "simple_counts": [
-          2,
-          1,
-          0,
-          1,
-          1,
-          1,
-          0,
-          3,
-          1,
-          23
-        ],
-        "s23_bucket_counts": [
           3,
           1,
           0,
           1,
-          1.5,
-          0.5,
-          0,
-          3,
           1,
-          34
-        ],
-        "s23_smoothed_percentages": [
-          9.455,
-          3.303,
-          0.182,
-          3.167,
-          4.682,
-          1.652,
-          0.318,
-          9.182,
-          6.394,
-          100.0
+          1,
+          0,
+          6,
+          1,
+          30
         ],
         "display_percentages": [
-          6.152,
-          3.212,
-          0.182,
-          3.121,
-          3.212,
-          3.121,
-          0.364,
-          9.182,
-          5.394,
-          69.788
+          6.886,
+          2.477,
+          0.136,
+          2.341,
+          2.409,
+          2.341,
+          0.477,
+          13.705,
+          4.727,
+          68.25
+        ],
+        "s23_bucket_counts": [
+          4.5,
+          1.0,
+          0.0,
+          1.0,
+          1.5,
+          0.5,
+          0.0,
+          6.0,
+          1.5,
+          43.5
+        ],
+        "s23_smoothed_percentages": [
+          10.602,
+          2.58,
+          0.136,
+          2.375,
+          3.511,
+          1.239,
+          0.443,
+          13.739,
+          6.784,
+          100.0
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 24,
-        "exact_hundred_count": 22,
-        "exact_zero_count": 2,
-        "non_endpoint_count": 9,
-        "ratio": 0.375
       }
     },
     {
       "id": "W001-Q03",
       "number": 3,
       "section": "cts_administered_topic",
-      "short_label": "Emotional abuse",
+      "short_label": "In ordinary cases a spouse's",
       "text": "In ordinary cases, a spouse's severe and persistent emotional or psychological abuse can constitute biblically legitimate grounds for divorce.",
-      "n": 33,
-      "mean": 76.5,
-      "median": 100,
-      "q1": 63,
-      "q3": 100,
-      "standard_deviation": 32.8,
-      "min": 0,
-      "max": 100,
+      "source_column": "In ordinary cases, a spouse's severe and persistent emotional or psychological abuse can constitute biblically legitimate grounds for divorce.",
+      "n": 44,
+      "mean": 75.02,
+      "median": 96.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 50.0,
+      "q3": 100.0,
+      "iqr": 50.0,
+      "standard_deviation": 33.07,
       "bands": {
-        "low": 6,
-        "middle": 3,
-        "high": 24
+        "low": 8,
+        "middle": 5,
+        "high": 31
+      },
+      "disagreement_score": 50.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 19,
+        "endpoint_count": 25,
+        "exact_zero_count": 3,
+        "exact_hundred_count": 22,
+        "ratio": 0.76
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_iqr",
+          "high_standard_deviation"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -259,80 +281,90 @@
           100
         ],
         "simple_counts": [
-          3,
-          0,
-          1,
-          2,
-          0,
-          2,
-          1,
-          3,
-          3,
-          18
-        ],
-        "s23_bucket_counts": [
           4,
           0,
-          1,
+          2,
           2,
           1,
+          3,
           1,
-          1,
-          3.5,
-          2.5,
-          26.5
-        ],
-        "s23_smoothed_percentages": [
-          12.485,
-          0.455,
-          3.212,
-          6.242,
-          3.303,
-          3.212,
-          3.439,
-          10.924,
-          10.303,
-          82.939
+          4,
+          4,
+          23
         ],
         "display_percentages": [
           9.091,
-          0.364,
-          3.212,
-          6.152,
-          0.364,
-          6.152,
-          3.485,
-          9.455,
-          11.0,
-          54.818
+          0.409,
+          4.682,
+          4.75,
+          2.614,
+          6.955,
+          2.75,
+          9.432,
+          10.932,
+          52.545
+        ],
+        "s23_bucket_counts": [
+          5.5,
+          0.0,
+          2.0,
+          2.0,
+          2.5,
+          1.5,
+          1.0,
+          5.0,
+          3.0,
+          34.0
+        ],
+        "s23_smoothed_percentages": [
+          12.875,
+          0.511,
+          4.682,
+          4.852,
+          5.92,
+          3.648,
+          2.716,
+          11.636,
+          9.477,
+          79.795
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 19,
-        "exact_hundred_count": 17,
-        "exact_zero_count": 2,
-        "non_endpoint_count": 14,
-        "ratio": 0.737
       }
     },
     {
       "id": "W001-Q04",
       "number": 4,
       "section": "cts_administered_topic",
-      "short_label": "Abandonment",
+      "short_label": "In ordinary cases willful abandonment",
       "text": "In ordinary cases, willful abandonment by an unbelieving spouse constitutes biblically legitimate grounds for divorce.",
-      "n": 33,
-      "mean": 80.9,
-      "median": 100,
-      "q1": 55,
-      "q3": 100,
-      "standard_deviation": 31.2,
-      "min": 0,
-      "max": 100,
+      "source_column": "In ordinary cases, willful abandonment by an unbelieving spouse constitutes biblically legitimate grounds for divorce.",
+      "n": 44,
+      "mean": 82.66,
+      "median": 100.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 79.0,
+      "q3": 100.0,
+      "iqr": 21.0,
+      "standard_deviation": 30.74,
       "bands": {
-        "low": 3,
+        "low": 4,
         "middle": 6,
-        "high": 24
+        "high": 34
+      },
+      "disagreement_score": 21.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 12,
+        "endpoint_count": 32,
+        "exact_zero_count": 3,
+        "exact_hundred_count": 29,
+        "ratio": 0.375
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_standard_deviation"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -349,80 +381,92 @@
           100
         ],
         "simple_counts": [
-          2,
+          3,
           0,
           0,
           2,
           2,
           3,
           0,
-          0,
+          1,
           2,
-          22
-        ],
-        "s23_bucket_counts": [
-          3,
-          0,
-          0,
-          2.5,
-          2.5,
-          2,
-          0,
-          0.5,
-          1.5,
-          33
-        ],
-        "s23_smoothed_percentages": [
-          9.364,
-          0.273,
-          0.227,
-          7.803,
-          7.985,
-          6.288,
-          0.227,
-          1.652,
-          7.591,
-          100.0
+          31
         ],
         "display_percentages": [
-          6.061,
-          0.182,
-          0.182,
-          6.242,
-          6.515,
-          9.273,
+          6.818,
+          0.205,
+          0.136,
+          4.682,
+          4.886,
+          6.955,
           0.273,
-          0.182,
-          8.061,
-          66.848
+          2.409,
+          6.727,
+          70.591
+        ],
+        "s23_bucket_counts": [
+          4.5,
+          0.0,
+          0.0,
+          2.5,
+          2.5,
+          2.0,
+          0.0,
+          1.5,
+          1.5,
+          45.5
+        ],
+        "s23_smoothed_percentages": [
+          10.534,
+          0.307,
+          0.17,
+          5.852,
+          5.989,
+          4.716,
+          0.239,
+          3.511,
+          6.614,
+          100.0
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 24,
-        "exact_hundred_count": 22,
-        "exact_zero_count": 2,
-        "non_endpoint_count": 9,
-        "ratio": 0.375
       }
     },
     {
       "id": "W001-Q05",
       "number": 5,
       "section": "cts_administered_topic",
-      "short_label": "Pornography",
+      "short_label": "In ordinary cases a spouse's",
       "text": "In ordinary cases, a spouse's persistent pornography use can become biblically legitimate grounds for divorce.",
-      "n": 33,
-      "mean": 65,
-      "median": 75,
-      "q1": 40,
-      "q3": 100,
-      "standard_deviation": 38.2,
-      "min": 0,
-      "max": 100,
+      "source_column": "In ordinary cases, a spouse's persistent pornography use can become biblically legitimate grounds for divorce.",
+      "n": 44,
+      "mean": 65.66,
+      "median": 80.5,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 38.25,
+      "q3": 100.0,
+      "iqr": 61.75,
+      "standard_deviation": 38.72,
       "bands": {
-        "low": 8,
+        "low": 11,
         "middle": 6,
-        "high": 19
+        "high": 27
+      },
+      "disagreement_score": 61.75,
+      "doubt_dogma": {
+        "non_endpoint_count": 20,
+        "endpoint_count": 24,
+        "exact_zero_count": 8,
+        "exact_hundred_count": 16,
+        "ratio": 0.833
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -439,80 +483,92 @@
           100
         ],
         "simple_counts": [
-          6,
-          0,
+          8,
+          1,
           1,
           1,
           1,
           3,
           2,
-          3,
-          2,
-          14
-        ],
-        "s23_bucket_counts": [
-          9,
-          0,
-          1,
-          1.5,
-          2,
-          2,
-          2,
-          2.5,
-          2,
-          20
-        ],
-        "s23_smoothed_percentages": [
-          28.091,
-          0.909,
-          3.167,
-          4.818,
-          6.379,
-          6.424,
-          6.47,
-          7.939,
-          8.106,
-          62.606
+          4,
+          4,
+          19
         ],
         "display_percentages": [
-          18.182,
-          0.636,
-          3.121,
-          3.212,
-          3.394,
-          9.364,
-          6.606,
-          9.455,
-          7.606,
-          42.606
+          18.25,
+          2.886,
+          2.409,
+          2.409,
+          2.545,
+          7.023,
+          5.023,
+          9.5,
+          10.659,
+          43.455
+        ],
+        "s23_bucket_counts": [
+          12.5,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.0,
+          2.0,
+          4.0,
+          4.0,
+          26.5
+        ],
+        "s23_smoothed_percentages": [
+          29.295,
+          2.057,
+          2.409,
+          3.614,
+          4.784,
+          4.818,
+          4.955,
+          9.5,
+          11.17,
+          62.307
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 18,
-        "exact_hundred_count": 12,
-        "exact_zero_count": 6,
-        "non_endpoint_count": 15,
-        "ratio": 0.833
       }
     },
     {
       "id": "W001-Q06",
       "number": 6,
       "section": "cts_administered_topic",
-      "short_label": "Nonsexual infidelity",
+      "short_label": "In ordinary cases a spouse's",
       "text": "In ordinary cases, a spouse's romantic but nonsexual infidelity can constitute biblically legitimate grounds for divorce.",
-      "n": 33,
-      "mean": 63.6,
-      "median": 70,
-      "q1": 50,
-      "q3": 100,
-      "standard_deviation": 33.6,
-      "min": 0,
-      "max": 100,
+      "source_column": "In ordinary cases, a spouse's romantic but nonsexual infidelity can constitute biblically legitimate grounds for divorce.",
+      "n": 44,
+      "mean": 63.0,
+      "median": 70.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 49.5,
+      "q3": 97.0,
+      "iqr": 47.5,
+      "standard_deviation": 34.2,
       "bands": {
-        "low": 6,
-        "middle": 10,
-        "high": 17
+        "low": 9,
+        "middle": 12,
+        "high": 23
+      },
+      "disagreement_score": 47.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 28,
+        "endpoint_count": 16,
+        "exact_zero_count": 5,
+        "exact_hundred_count": 11,
+        "ratio": 1.75
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -529,80 +585,88 @@
           100
         ],
         "simple_counts": [
-          4,
+          6,
           1,
-          1,
+          2,
           0,
           2,
-          7,
-          1,
-          5,
-          0,
-          12
-        ],
-        "s23_bucket_counts": [
-          5.5,
-          1,
-          1,
-          0,
-          4.5,
-          4.5,
+          8,
           2,
-          4,
-          0.5,
-          16
-        ],
-        "s23_smoothed_percentages": [
-          17.258,
-          3.621,
-          3.121,
-          0.5,
-          14.045,
-          14.227,
-          6.833,
-          12.348,
-          3.333,
-          49.985
+          6,
+          2,
+          15
         ],
         "display_percentages": [
-          12.212,
-          3.485,
-          3.121,
+          13.705,
+          2.818,
+          4.614,
           0.273,
-          6.697,
-          21.485,
-          4.121,
-          15.242,
-          1.545,
-          36.364
+          5.091,
+          18.455,
+          5.5,
+          13.909,
+          5.977,
+          34.227
+        ],
+        "s23_bucket_counts": [
+          8.5,
+          1.0,
+          2.0,
+          0.0,
+          5.0,
+          5.0,
+          3.0,
+          5.0,
+          3.0,
+          19.5
+        ],
+        "s23_smoothed_percentages": [
+          19.966,
+          2.989,
+          4.614,
+          0.477,
+          11.705,
+          11.909,
+          7.5,
+          11.773,
+          8.489,
+          45.852
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 12,
-        "exact_hundred_count": 9,
-        "exact_zero_count": 3,
-        "non_endpoint_count": 21,
-        "ratio": 1.75
       }
     },
     {
       "id": "W001-Q07",
       "number": 7,
       "section": "cts_administered_topic",
-      "short_label": "Remarriage freedom",
+      "short_label": "A Christian whose divorce was",
       "text": "A Christian whose divorce was biblically legitimate is normally free to remarry.",
-      "n": 33,
-      "mean": 87.5,
-      "median": 100,
-      "q1": 100,
-      "q3": 100,
-      "standard_deviation": 30.5,
-      "min": 0,
-      "max": 100,
+      "source_column": "A Christian whose divorce was biblically legitimate is normally free to remarry.",
+      "n": 44,
+      "mean": 88.32,
+      "median": 100.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 100.0,
+      "q3": 100.0,
+      "iqr": 0.0,
+      "standard_deviation": 29.42,
       "bands": {
-        "low": 3,
+        "low": 4,
         "middle": 2,
-        "high": 28
+        "high": 38
+      },
+      "disagreement_score": 0.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 6,
+        "endpoint_count": 38,
+        "exact_zero_count": 3,
+        "exact_hundred_count": 35,
+        "ratio": 0.158
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": true,
+        "reasons": []
       },
       "distribution": {
         "cut_points": [
@@ -620,7 +684,7 @@
         ],
         "simple_counts": [
           3,
-          0,
+          1,
           0,
           0,
           0,
@@ -628,71 +692,83 @@
           0,
           0,
           0,
-          28
-        ],
-        "s23_bucket_counts": [
-          4.5,
-          0,
-          0,
-          0,
-          0.5,
-          1.5,
-          0,
-          0,
-          0.5,
-          40.5
-        ],
-        "s23_smoothed_percentages": [
-          14.045,
-          0.409,
-          0.0,
-          0.045,
-          1.652,
-          4.591,
-          0.136,
-          0.045,
-          5.197,
-          100.0
+          38
         ],
         "display_percentages": [
-          9.091,
-          0.273,
+          6.886,
+          2.477,
+          0.068,
+          0.0,
+          0.136,
+          4.545,
+          0.136,
+          0.0,
+          2.591,
+          86.364
+        ],
+        "s23_bucket_counts": [
+          5.0,
+          0.5,
           0.0,
           0.0,
-          0.182,
-          6.061,
-          0.182,
+          0.5,
+          1.5,
           0.0,
-          2.545,
-          84.848
+          0.0,
+          1.0,
+          54.5
+        ],
+        "s23_smoothed_percentages": [
+          11.739,
+          1.477,
+          0.034,
+          0.034,
+          1.239,
+          3.443,
+          0.102,
+          0.068,
+          5.989,
+          100.0
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 29,
-        "exact_hundred_count": 26,
-        "exact_zero_count": 3,
-        "non_endpoint_count": 4,
-        "ratio": 0.138
       }
     },
     {
       "id": "W001-Q08",
       "number": 8,
       "section": "cts_administered_topic",
-      "short_label": "Pastoral review",
+      "short_label": "Churches should normally require pastoral",
       "text": "Churches should normally require pastoral review before affirming the remarriage of a divorced Christian.",
-      "n": 33,
-      "mean": 65.7,
-      "median": 85,
-      "q1": 48,
-      "q3": 100,
-      "standard_deviation": 38.9,
-      "min": 0,
-      "max": 100,
+      "source_column": "Churches should normally require pastoral review before affirming the remarriage of a divorced Christian.",
+      "n": 44,
+      "mean": 68.93,
+      "median": 90.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 48.0,
+      "q3": 100.0,
+      "iqr": 52.0,
+      "standard_deviation": 36.91,
       "bands": {
-        "low": 8,
-        "middle": 5,
-        "high": 20
+        "low": 9,
+        "middle": 7,
+        "high": 28
+      },
+      "disagreement_score": 52.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 21,
+        "endpoint_count": 23,
+        "exact_zero_count": 6,
+        "exact_hundred_count": 17,
+        "ratio": 0.913
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -710,79 +786,91 @@
         ],
         "simple_counts": [
           6,
-          0,
-          2,
-          0,
-          2,
-          2,
-          2,
-          2,
           1,
-          16
-        ],
-        "s23_bucket_counts": [
-          9,
-          1,
-          1,
+          2,
           0,
+          4,
+          2,
+          2,
           3,
           1,
-          2,
-          2,
-          2.5,
-          20.5
-        ],
-        "s23_smoothed_percentages": [
-          28.182,
-          3.939,
-          3.121,
-          0.364,
-          9.182,
-          3.485,
-          6.333,
-          6.47,
-          9.621,
-          64.212
+          23
         ],
         "display_percentages": [
-          18.182,
-          0.727,
-          6.061,
-          0.364,
-          6.242,
-          6.424,
-          6.424,
-          6.333,
-          4.667,
-          48.576
+          13.705,
+          2.818,
+          4.614,
+          0.409,
+          9.227,
+          4.955,
+          4.886,
+          7.023,
+          4.045,
+          52.341
+        ],
+        "s23_bucket_counts": [
+          9.0,
+          2.0,
+          1.0,
+          0.0,
+          5.0,
+          1.0,
+          2.0,
+          3.0,
+          3.5,
+          29.0
+        ],
+        "s23_smoothed_percentages": [
+          21.205,
+          5.227,
+          2.409,
+          0.409,
+          11.432,
+          2.75,
+          4.818,
+          7.193,
+          10.136,
+          68.125
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 18,
-        "exact_hundred_count": 12,
-        "exact_zero_count": 6,
-        "non_endpoint_count": 15,
-        "ratio": 0.833
       }
     },
     {
       "id": "W001-Q09",
       "number": 9,
       "section": "cts_administered_topic",
-      "short_label": "Formal discipline",
+      "short_label": "Churches should use formal discipline",
       "text": "Churches should use formal discipline when members knowingly pursue a biblically illegitimate divorce.",
-      "n": 33,
-      "mean": 48.4,
-      "median": 50,
-      "q1": 0,
-      "q3": 100,
-      "standard_deviation": 45.2,
-      "min": 0,
-      "max": 100,
+      "source_column": "Churches should use formal discipline when members knowingly pursue a biblically illegitimate divorce.",
+      "n": 44,
+      "mean": 53.5,
+      "median": 62.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 0.0,
+      "q3": 100.0,
+      "iqr": 100.0,
+      "standard_deviation": 43.69,
       "bands": {
-        "low": 15,
-        "middle": 3,
-        "high": 15
+        "low": 18,
+        "middle": 4,
+        "high": 22
+      },
+      "disagreement_score": 100.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 16,
+        "endpoint_count": 28,
+        "exact_zero_count": 12,
+        "exact_hundred_count": 16,
+        "ratio": 0.571
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -799,80 +887,92 @@
           100
         ],
         "simple_counts": [
-          14,
+          15,
           0,
-          0,
-          1,
+          2,
           1,
           2,
+          2,
           0,
-          3,
-          0,
-          12
-        ],
-        "s23_bucket_counts": [
-          20,
-          0,
-          0.5,
+          4,
           1,
-          1,
-          1.5,
-          0.5,
-          2.5,
-          0.5,
           17
         ],
-        "s23_smoothed_percentages": [
-          62.424,
-          1.864,
-          1.606,
-          3.167,
-          3.258,
-          4.682,
-          1.879,
-          7.667,
-          3.288,
-          53.106
-        ],
         "display_percentages": [
-          42.424,
-          1.273,
-          0.091,
-          3.121,
-          3.303,
-          6.152,
-          0.455,
-          9.091,
-          1.364,
-          36.364
+          34.091,
+          1.159,
+          4.614,
+          2.545,
+          4.75,
+          4.682,
+          0.409,
+          9.159,
+          3.705,
+          38.705
+        ],
+        "s23_bucket_counts": [
+          21.0,
+          0.0,
+          2.5,
+          1.0,
+          2.0,
+          1.5,
+          0.5,
+          4.0,
+          1.0,
+          24.5
+        ],
+        "s23_smoothed_percentages": [
+          49.159,
+          1.602,
+          5.75,
+          2.58,
+          4.716,
+          3.58,
+          1.511,
+          9.193,
+          4.216,
+          57.42
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 23,
-        "exact_hundred_count": 11,
-        "exact_zero_count": 12,
-        "non_endpoint_count": 10,
-        "ratio": 0.435
       }
     },
     {
       "id": "W001-Q10",
       "number": 10,
       "section": "cts_administered_topic",
-      "short_label": "Churches too permissive",
+      "short_label": "In my ministry context churches",
       "text": "In my ministry context, churches are generally too permissive about divorce and remarriage.",
-      "n": 33,
-      "mean": 45.3,
-      "median": 50,
-      "q1": 0,
-      "q3": 75,
-      "standard_deviation": 37.2,
-      "min": 0,
-      "max": 100,
+      "source_column": "In my ministry context, churches are generally too permissive about divorce and remarriage.",
+      "n": 44,
+      "mean": 51.07,
+      "median": 50.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 3.75,
+      "q3": 92.5,
+      "iqr": 88.75,
+      "standard_deviation": 38.49,
       "bands": {
-        "low": 13,
-        "middle": 11,
-        "high": 9
+        "low": 15,
+        "middle": 13,
+        "high": 16
+      },
+      "disagreement_score": 88.75,
+      "doubt_dogma": {
+        "non_endpoint_count": 22,
+        "endpoint_count": 22,
+        "exact_zero_count": 11,
+        "exact_hundred_count": 11,
+        "ratio": 1.0
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -889,80 +989,88 @@
           100
         ],
         "simple_counts": [
-          10,
+          12,
           0,
           3,
           0,
           2,
-          7,
+          9,
           2,
-          1,
-          1,
-          7
-        ],
-        "s23_bucket_counts": [
-          14.5,
-          0,
           3,
-          0.5,
-          5,
-          3.5,
-          2,
-          1.5,
           1,
-          9.5
-        ],
-        "s23_smoothed_percentages": [
-          45.258,
-          1.591,
-          9.136,
-          2.242,
-          15.515,
-          11.242,
-          6.515,
-          4.818,
-          4.03,
-          29.742
+          12
         ],
         "display_percentages": [
-          30.303,
-          1.182,
-          9.091,
-          0.455,
-          6.697,
-          21.576,
-          6.788,
-          3.303,
-          3.758,
-          21.303
+          27.273,
+          1.023,
+          6.818,
+          0.341,
+          5.159,
+          20.727,
+          5.364,
+          7.023,
+          3.295,
+          27.341
+        ],
+        "s23_bucket_counts": [
+          17.5,
+          0.0,
+          3.0,
+          0.5,
+          5.5,
+          5.0,
+          2.0,
+          3.5,
+          1.0,
+          17.0
+        ],
+        "s23_smoothed_percentages": [
+          40.966,
+          1.398,
+          6.852,
+          1.716,
+          12.875,
+          11.875,
+          5.125,
+          8.159,
+          3.67,
+          39.864
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 15,
-        "exact_hundred_count": 6,
-        "exact_zero_count": 9,
-        "non_endpoint_count": 18,
-        "ratio": 1.2
       }
     },
     {
       "id": "W001-Q11",
       "number": 11,
       "section": "cts_administered_topic",
-      "short_label": "Physical safety",
+      "short_label": "Churches should treat immediate physical",
       "text": "Churches should treat immediate physical safety as a priority before pursuing marital reconciliation in abusive marriages.",
-      "n": 33,
-      "mean": 97.6,
-      "median": 100,
-      "q1": 100,
-      "q3": 100,
-      "standard_deviation": 6.8,
-      "min": 75,
-      "max": 100,
+      "source_column": "Churches should treat immediate physical safety as a priority before pursuing marital reconciliation in abusive marriages.",
+      "n": 44,
+      "mean": 96.95,
+      "median": 100.0,
+      "min": 60.0,
+      "max": 100.0,
+      "q1": 100.0,
+      "q3": 100.0,
+      "iqr": 0.0,
+      "standard_deviation": 8.49,
       "bands": {
         "low": 0,
-        "middle": 0,
-        "high": 33
+        "middle": 1,
+        "high": 43
+      },
+      "disagreement_score": 0.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 6,
+        "endpoint_count": 38,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 38,
+        "ratio": 0.158
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": true,
+        "reasons": []
       },
       "distribution": {
         "cut_points": [
@@ -985,34 +1093,10 @@
           0,
           0,
           0,
-          0,
+          1,
           2,
-          1,
-          30
-        ],
-        "s23_bucket_counts": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          2.5,
-          1,
-          44
-        ],
-        "s23_smoothed_percentages": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.227,
-          7.667,
-          7.258,
-          100.0
+          2,
+          39
         ],
         "display_percentages": [
           0.0,
@@ -1020,39 +1104,71 @@
           0.0,
           0.0,
           0.0,
+          0.068,
+          2.409,
+          4.75,
+          7.341,
+          88.773
+        ],
+        "s23_bucket_counts": [
           0.0,
-          0.182,
-          6.152,
-          5.939,
-          91.0
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.5,
+          2.5,
+          2.0,
+          57.5
+        ],
+        "s23_smoothed_percentages": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.034,
+          1.17,
+          1.341,
+          5.852,
+          8.636,
+          100.0
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 29,
-        "exact_hundred_count": 29,
-        "exact_zero_count": 0,
-        "non_endpoint_count": 4,
-        "ratio": 0.138
       }
     },
     {
       "id": "W001-Q12",
       "number": 12,
       "section": "cts_administered_topic",
-      "short_label": "Coercive control",
+      "short_label": "Pastors should distinguish carefully between",
       "text": "Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce.",
-      "n": 33,
-      "mean": 95.6,
-      "median": 100,
-      "q1": 100,
-      "q3": 100,
-      "standard_deviation": 8.7,
-      "min": 75,
-      "max": 100,
+      "source_column": "Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce.",
+      "n": 44,
+      "mean": 94.98,
+      "median": 100.0,
+      "min": 60.0,
+      "max": 100.0,
+      "q1": 98.5,
+      "q3": 100.0,
+      "iqr": 1.5,
+      "standard_deviation": 10.0,
       "bands": {
         "low": 0,
-        "middle": 0,
-        "high": 33
+        "middle": 1,
+        "high": 43
+      },
+      "disagreement_score": 1.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 11,
+        "endpoint_count": 33,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 33,
+        "ratio": 0.333
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": true,
+        "reasons": []
       },
       "distribution": {
         "cut_points": [
@@ -1075,34 +1191,10 @@
           0,
           0,
           0,
-          0,
-          4,
+          1,
+          5,
           2,
-          27
-        ],
-        "s23_bucket_counts": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          4,
-          2.5,
-          39
-        ],
-        "s23_smoothed_percentages": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.364,
-          12.348,
-          11.485,
-          100.0
+          36
         ],
         "display_percentages": [
           0.0,
@@ -1110,39 +1202,177 @@
           0.0,
           0.0,
           0.0,
+          0.068,
+          2.614,
+          11.568,
+          7.341,
+          81.955
+        ],
+        "s23_bucket_counts": [
           0.0,
-          0.364,
-          12.303,
-          8.879,
-          82.0
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.5,
+          5.0,
+          3.0,
+          51.5
+        ],
+        "s23_smoothed_percentages": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.034,
+          1.17,
+          1.511,
+          11.602,
+          10.67,
+          100.0
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 25,
-        "exact_hundred_count": 25,
-        "exact_zero_count": 0,
-        "non_endpoint_count": 8,
-        "ratio": 0.32
       }
     },
     {
       "id": "W001-Q13",
       "number": 13,
       "section": "participant_vote_seeded",
-      "short_label": "Political naming",
+      "short_label": "Pastors should sometimes name specific",
       "text": "Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise.",
-      "n": 33,
-      "mean": 57.7,
-      "median": 72,
-      "q1": 20,
-      "q3": 81,
-      "standard_deviation": 36.5,
-      "min": 0,
-      "max": 100,
+      "source_column": "Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise.",
+      "n": 44,
+      "mean": 58.16,
+      "median": 71.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 25.0,
+      "q3": 83.25,
+      "iqr": 58.25,
+      "standard_deviation": 35.3,
       "bands": {
-        "low": 10,
-        "middle": 5,
-        "high": 18
+        "low": 13,
+        "middle": 8,
+        "high": 23
+      },
+      "disagreement_score": 58.25,
+      "doubt_dogma": {
+        "non_endpoint_count": 30,
+        "endpoint_count": 14,
+        "exact_zero_count": 6,
+        "exact_hundred_count": 8,
+        "ratio": 2.143
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          7,
+          2,
+          3,
+          1,
+          0,
+          5,
+          3,
+          9,
+          3,
+          11
+        ],
+        "display_percentages": [
+          16.045,
+          5.227,
+          7.023,
+          2.477,
+          0.409,
+          11.568,
+          7.773,
+          20.864,
+          8.182,
+          25.205
+        ],
+        "s23_bucket_counts": [
+          10.5,
+          2.0,
+          3.0,
+          0.5,
+          2.5,
+          3.5,
+          2.5,
+          9.5,
+          2.5,
+          14.5
+        ],
+        "s23_smoothed_percentages": [
+          24.716,
+          5.466,
+          6.989,
+          1.511,
+          5.955,
+          8.295,
+          6.568,
+          21.932,
+          7.318,
+          34.114
+        ]
+      }
+    },
+    {
+      "id": "W001-Q14",
+      "number": 14,
+      "section": "participant_vote_seeded",
+      "short_label": "Churches should encourage regular fasting",
+      "text": "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship.",
+      "source_column": "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship.",
+      "n": 44,
+      "mean": 56.55,
+      "median": 55.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 25.0,
+      "q3": 100.0,
+      "iqr": 75.0,
+      "standard_deviation": 36.3,
+      "bands": {
+        "low": 14,
+        "middle": 11,
+        "high": 19
+      },
+      "disagreement_score": 75.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 25,
+        "endpoint_count": 19,
+        "exact_zero_count": 6,
+        "exact_hundred_count": 13,
+        "ratio": 1.316
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -1161,168 +1391,90 @@
         "simple_counts": [
           6,
           2,
-          1,
-          1,
-          0,
-          3,
-          2,
-          8,
-          2,
-          8
-        ],
-        "s23_bucket_counts": [
-          9,
-          2,
-          1,
-          0.5,
-          1.5,
+          6,
           2,
           2,
-          8,
-          1.5,
-          11
-        ],
-        "s23_smoothed_percentages": [
-          28.273,
-          6.97,
-          3.258,
-          1.742,
-          4.773,
-          6.379,
-          6.97,
-          24.561,
-          6.273,
-          34.47
-        ],
-        "display_percentages": [
-          18.364,
-          6.697,
-          3.303,
-          3.121,
-          0.364,
-          9.273,
-          7.061,
-          24.606,
-          7.515,
-          24.424
-        ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 11,
-        "exact_hundred_count": 6,
-        "exact_zero_count": 5,
-        "non_endpoint_count": 22,
-        "ratio": 2
-      }
-    },
-    {
-      "id": "W001-Q14",
-      "number": 14,
-      "section": "participant_vote_seeded",
-      "short_label": "Fasting",
-      "text": "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship.",
-      "n": 33,
-      "mean": 55.8,
-      "median": 50,
-      "q1": 26,
-      "q3": 100,
-      "standard_deviation": 36.5,
-      "min": 0,
-      "max": 100,
-      "bands": {
-        "low": 10,
-        "middle": 10,
-        "high": 13
-      },
-      "distribution": {
-        "cut_points": [
-          0,
-          10,
-          20,
-          30,
-          40,
-          50,
-          60,
-          70,
-          80,
-          90,
-          100
-        ],
-        "simple_counts": [
           5,
-          1,
-          4,
-          2,
           2,
           4,
           2,
-          2,
-          1,
-          10
-        ],
-        "s23_bucket_counts": [
-          7.5,
-          1,
-          4,
-          2.5,
-          3,
-          3,
-          1.5,
-          2,
-          1,
-          15
-        ],
-        "s23_smoothed_percentages": [
-          23.5,
-          4.076,
-          12.439,
-          8.212,
-          9.591,
-          9.5,
-          5.0,
-          6.288,
-          4.576,
-          46.909
+          13
         ],
         "display_percentages": [
-          15.242,
-          3.848,
-          12.394,
-          6.606,
-          6.606,
-          12.485,
-          6.606,
-          6.333,
-          4.121,
-          30.394
+          13.773,
+          5.364,
+          13.909,
+          5.091,
+          5.023,
+          11.636,
+          5.159,
+          9.364,
+          5.705,
+          29.682
+        ],
+        "s23_bucket_counts": [
+          9.0,
+          2.0,
+          6.0,
+          2.5,
+          3.0,
+          4.0,
+          1.5,
+          4.5,
+          1.5,
+          19.5
+        ],
+        "s23_smoothed_percentages": [
+          21.205,
+          5.568,
+          13.943,
+          6.295,
+          7.261,
+          9.398,
+          3.989,
+          10.432,
+          5.045,
+          45.75
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 15,
-        "exact_hundred_count": 10,
-        "exact_zero_count": 5,
-        "non_endpoint_count": 18,
-        "ratio": 1.2
       }
     },
     {
       "id": "W001-Q15",
       "number": 15,
       "section": "participant_vote_seeded",
-      "short_label": "Worship source",
+      "short_label": "Churches should avoid using worship",
       "text": "Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox.",
-      "n": 33,
-      "mean": 53.4,
-      "median": 50,
-      "q1": 25,
-      "q3": 80,
-      "standard_deviation": 36.8,
-      "min": 0,
-      "max": 100,
+      "source_column": "Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox.",
+      "n": 44,
+      "mean": 52.11,
+      "median": 50.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 25.0,
+      "q3": 80.0,
+      "iqr": 55.0,
+      "standard_deviation": 36.24,
       "bands": {
-        "low": 11,
+        "low": 17,
         "middle": 8,
-        "high": 14
+        "high": 19
+      },
+      "disagreement_score": 55.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 27,
+        "endpoint_count": 17,
+        "exact_zero_count": 8,
+        "exact_hundred_count": 9,
+        "ratio": 1.588
+      },
+      "key_tension": {
+        "flag": true,
+        "eligible": true,
+        "reasons": [
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
+        ]
       },
       "distribution": {
         "cut_points": [
@@ -1339,142 +1491,171 @@
           100
         ],
         "simple_counts": [
-          7,
+          9,
           1,
+          5,
           2,
-          1,
           0,
           7,
           3,
-          2,
-          2,
-          8
-        ],
-        "s23_bucket_counts": [
-          10.5,
-          1,
-          2,
-          1,
           3,
-          4.5,
-          2.5,
-          3,
-          1,
-          12
-        ],
-        "s23_smoothed_percentages": [
-          32.864,
-          4.167,
-          6.242,
-          3.485,
-          9.591,
-          14.136,
-          8.258,
-          9.409,
-          4.394,
-          37.545
+          4,
+          10
         ],
         "display_percentages": [
-          21.303,
-          3.848,
-          6.242,
-          3.212,
-          0.727,
-          21.485,
-          9.909,
-          6.515,
-          6.97,
-          24.424
+          20.523,
+          3.227,
+          11.568,
+          4.886,
+          0.614,
+          16.114,
+          7.5,
+          7.295,
+          9.977,
+          23.0
+        ],
+        "s23_bucket_counts": [
+          13.0,
+          1.0,
+          5.5,
+          1.5,
+          3.0,
+          4.5,
+          3.0,
+          4.5,
+          2.5,
+          14.0
+        ],
+        "s23_smoothed_percentages": [
+          30.5,
+          3.534,
+          12.67,
+          3.989,
+          7.227,
+          10.636,
+          7.432,
+          10.602,
+          6.943,
+          32.943
         ]
-      },
-      "doubt_dogma": {
-        "endpoint_count": 15,
-        "exact_hundred_count": 8,
-        "exact_zero_count": 7,
-        "non_endpoint_count": 18,
-        "ratio": 1.2
       }
     }
   ],
+  "participant_nominations": {
+    "suggestions_received": 20,
+    "raw_suggestions_public": false
+  },
+  "quality": {
+    "rows_read": 44,
+    "missing_item_columns": [],
+    "non_numeric_values": [],
+    "out_of_range_values": []
+  },
+  "private_data_excluded": true,
   "ballot": {
-    "answered": 33,
-    "usable_rankings_per_item": 28,
+    "source_column": "Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Divorce and Remarriage topic and are not drawn from the CTS topic bank. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension. Each week's ballot will include the top 7 polished participant-nominated items; if fewer than 7 suitable participant nominations are available, CTS will add AI-created seed items to complete the ballot.",
+    "respondents": 36,
+    "scoring": "Borda count: 7 points for first place through 1 point for seventh place.",
     "items": [
       {
-        "rank": 1,
-        "score": 4.64,
-        "text": "A church should require formal membership before a person serves in any public ministry role."
+        "choice": 2,
+        "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
+        "score": 169,
+        "rank_count": 36,
+        "rank": 1
       },
       {
-        "rank": 2,
-        "score": 4.46,
-        "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation."
+        "choice": 1,
+        "text": "A church should require formal membership before a person serves in any public ministry role.",
+        "score": 164,
+        "rank_count": 36,
+        "rank": 2
       },
       {
-        "rank": 3,
-        "score": 4.32,
-        "text": "Christians should avoid recreational marijuana use even where it is legal."
+        "choice": 3,
+        "text": "Christians should avoid recreational marijuana use even where it is legal.",
+        "score": 147,
+        "rank_count": 36,
+        "rank": 3
       },
       {
-        "rank": 4,
-        "score": 3.89,
-        "text": "Christian parents should consider a school's moral and religious formation more important than its academic quality."
+        "choice": 4,
+        "text": "Christian parents should consider a school's moral and religious formation more important than its academic quality.",
+        "score": 140,
+        "rank_count": 36,
+        "rank": 4
       },
       {
-        "rank": 5,
-        "score": 3.57,
-        "text": "Churches should publicly repent for institutional failures even when current leaders were not personally involved."
+        "choice": 5,
+        "text": "Churches should publicly repent for institutional failures even when current leaders were not personally involved.",
+        "score": 138,
+        "rank_count": 36,
+        "rank": 5
       },
       {
-        "rank": 5,
-        "score": 3.57,
-        "text": "Pastors should avoid platforming guest speakers whose doctrine differs from the church on secondary issues."
+        "choice": 7,
+        "text": "Pastors should avoid platforming guest speakers whose doctrine differs from the church on secondary issues.",
+        "score": 128,
+        "rank_count": 36,
+        "rank": 6
       },
       {
-        "rank": 7,
-        "score": 3.54,
-        "text": "A church should refuse to host community events sponsored by groups that publicly oppose Christian sexual ethics."
+        "choice": 6,
+        "text": "A church should refuse to host community events sponsored by groups that publicly oppose Christian sexual ethics.",
+        "score": 122,
+        "rank_count": 36,
+        "rank": 7
       }
-    ]
+    ],
+    "quality": {
+      "invalid_values": [
+        "[]",
+        "[]",
+        "[]",
+        "[]",
+        "[]",
+        "[]",
+        "[]",
+        "[]"
+      ]
+    }
   },
   "next_week_ballot_draft": {
-    "status": "draft",
-    "note": "Five items are polished from participant suggestions. Two items are carried over from the Week 1 participant ballot because they ranked highest there.",
     "items": [
       {
         "rank": 1,
-        "source": "participant_suggestion",
-        "text": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands."
+        "text": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands.",
+        "source": "participant_suggestion"
       },
       {
         "rank": 2,
-        "source": "participant_suggestion",
-        "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies."
+        "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies.",
+        "source": "participant_suggestion"
       },
       {
         "rank": 3,
-        "source": "participant_suggestion",
-        "text": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified."
+        "text": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified.",
+        "source": "participant_suggestion"
       },
       {
         "rank": 4,
-        "source": "participant_suggestion",
-        "text": "Baptism should ordinarily precede participation in the Lord's Supper."
+        "text": "Baptism should ordinarily precede participation in the Lord's Supper.",
+        "source": "participant_suggestion"
       },
       {
         "rank": 5,
-        "source": "participant_suggestion",
-        "text": "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship."
+        "text": "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.",
+        "source": "participant_suggestion"
       },
       {
         "rank": 6,
-        "source": "week_1_ballot_carryover",
-        "text": "A church should require formal membership before a person serves in any public ministry role."
+        "text": "A church should require formal membership before a person serves in any public ministry role.",
+        "source": "week_1_ballot_carryover"
       },
       {
         "rank": 7,
-        "source": "week_1_ballot_carryover",
-        "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation."
+        "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
+        "source": "week_1_ballot_carryover"
       }
     ]
   }

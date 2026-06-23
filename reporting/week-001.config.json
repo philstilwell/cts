@@ -31,6 +31,59 @@
     "Suggestion",
     "Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100."
   ],
+  "ballot": {
+    "source_columns": [
+      "Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Divorce and Remarriage topic and are not drawn from the CTS topic bank. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension. Each week's ballot will include the top 7 polished participant-nominated items; if fewer than 7 suitable participant nominations are available, CTS will add AI-created seed items to complete the ballot."
+    ],
+    "choices": [
+      "A church should require formal membership before a person serves in any public ministry role.",
+      "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
+      "Christians should avoid recreational marijuana use even where it is legal.",
+      "Christian parents should consider a school's moral and religious formation more important than its academic quality.",
+      "Churches should publicly repent for institutional failures even when current leaders were not personally involved.",
+      "A church should refuse to host community events sponsored by groups that publicly oppose Christian sexual ethics.",
+      "Pastors should avoid platforming guest speakers whose doctrine differs from the church on secondary issues."
+    ]
+  },
+  "next_week_ballot_draft": {
+    "items": [
+      {
+        "rank": 1,
+        "text": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 2,
+        "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 3,
+        "text": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 4,
+        "text": "Baptism should ordinarily precede participation in the Lord's Supper.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 5,
+        "text": "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 6,
+        "text": "A church should require formal membership before a person serves in any public ministry role.",
+        "source": "week_1_ballot_carryover"
+      },
+      {
+        "rank": 7,
+        "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
+        "source": "week_1_ballot_carryover"
+      }
+    ]
+  },
   "items": [
     {
       "id": "W001-Q01",

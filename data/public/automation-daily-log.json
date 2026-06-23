@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-06-22T16:28:02-04:00",
-  "updated_time_et": "4:28:02 PM EDT",
+  "updated_at": "2026-06-23T09:45:00-04:00",
+  "updated_time_et": "9:45:00 AM EDT",
   "entries": [
+    {
+      "date": "2026-06-23",
+      "recorded_at": "2026-06-23T09:45:00-04:00",
+      "recorded_time_et": "9:45:00 AM EDT",
+      "status": "report-published-newsletter-blocked",
+      "summary": "Tuesday report cycle refreshed Week 1 and posted Week 2 preliminary results.",
+      "ran": [
+        "Verified Week 1 and Week 2 final close dates across public pages, reports index, reporting configs, and private ledger records.",
+        "Refreshed SurveyOL API snapshots, private report CSVs, public aggregate summaries, and report pages for all open preliminary reports.",
+        "Ranked Week 2 participant ballot results and prepared the next seven-item participant-nominated ballot draft without publishing raw suggestions.",
+        "Checked generated human-review gates and MailerLite availability before newsletter action."
+      ],
+      "result": "Week 1 now shows 44 complete responses with final close Wednesday, July 1, 2026. Week 2 first preliminary report shows 28 complete responses with final close Tuesday, July 7, 2026. Newsletter sending is blocked because MailerLite API access is missing for required suppression reconciliation.",
+      "next": "Restore MailerLite API access and reconcile global suppressions before sending the newsletter."
+    },
     {
       "date": "2026-06-22",
       "recorded_at": "2026-06-22T16:28:02-04:00",

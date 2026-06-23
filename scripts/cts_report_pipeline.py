@@ -81,6 +81,12 @@ def rounded(value: float | None, digits: int = 2) -> float | None:
     return round(value, digits)
 
 
+def short_label(text: str, fallback_words: int = 5) -> str:
+    words = [word.strip(".,;:!?()[]") for word in text.split()]
+    words = [word for word in words if word]
+    return " ".join(words[:fallback_words]).rstrip() or text[:40]
+
+
 def percentile(values: list[float], p: float) -> float | None:
     if not values:
         return None
@@ -171,6 +177,14 @@ def doubt_dogma(values: list[float]) -> dict[str, Any]:
     }
 
 
+def bands(values: list[float]) -> dict[str, int]:
+    return {
+        "low": sum(1 for value in values if value <= 33),
+        "middle": sum(1 for value in values if 34 <= value <= 66),
+        "high": sum(1 for value in values if value >= 67),
+    }
+
+
 def key_tension(values: list[float], iqr: float | None, stdev: float | None, minimum_n: int) -> dict[str, Any]:
     if len(values) < minimum_n:
         return {"flag": False, "eligible": False, "reasons": ["below_minimum_n"]}
@@ -225,6 +239,7 @@ def summarize_item(
         "id": item_id,
         "number": item.get("number"),
         "section": item.get("section"),
+        "short_label": item.get("short_label") or short_label(str(item.get("text") or "")),
         "text": item.get("text"),
         "source_column": column,
         "n": n,
@@ -236,6 +251,7 @@ def summarize_item(
         "q3": rounded(q3, 2),
         "iqr": rounded(iqr, 2),
         "standard_deviation": rounded(stdev, 2),
+        "bands": bands(values),
         "disagreement_score": rounded(iqr, 2),
         "doubt_dogma": doubt_dogma(values),
         "key_tension": key_tension(values, iqr, stdev, minimum_key_tension_n),
@@ -256,6 +272,81 @@ def nonempty_count(rows: list[dict[str, str]], headers: list[str], candidates: l
     return sum(1 for row in rows if str(row.get(column, "")).strip())
 
 
+def parse_ranking(value: str) -> list[int]:
+    raw = value.strip()
+    if not raw:
+        return []
+    try:
+        parsed = json.loads(raw)
+    except json.JSONDecodeError:
+        return []
+    if not isinstance(parsed, list):
+        return []
+    rankings: list[int] = []
+    for item in parsed:
+        try:
+            rankings.append(int(item))
+        except (TypeError, ValueError):
+            continue
+    return rankings
+
+
+def summarize_ballot(config: dict[str, Any], rows: list[dict[str, str]], headers: list[str]) -> dict[str, Any] | None:
+    ballot = config.get("ballot")
+    if not isinstance(ballot, dict):
+        return None
+    choices = ballot.get("choices", [])
+    if not isinstance(choices, list) or not choices:
+        return None
+    source_columns = [str(value) for value in ballot.get("source_columns", [])]
+    column = find_column(headers, source_columns)
+    if column is None:
+        return {
+            "source_column": None,
+            "respondents": 0,
+            "items": [],
+            "quality": {"missing_ballot_column": source_columns},
+        }
+
+    scores = {index: 0 for index in range(1, len(choices) + 1)}
+    counts = {index: 0 for index in range(1, len(choices) + 1)}
+    ballots_seen = 0
+    invalid_values: list[str] = []
+    for row in rows:
+        ranking = parse_ranking(str(row.get(column, "")))
+        if not ranking:
+            if str(row.get(column, "")).strip():
+                invalid_values.append(str(row.get(column, ""))[:120])
+            continue
+        ballots_seen += 1
+        for position, choice_index in enumerate(ranking, start=1):
+            if choice_index not in scores:
+                continue
+            scores[choice_index] += len(choices) + 1 - position
+            counts[choice_index] += 1
+
+    items = []
+    for index, text in enumerate(choices, start=1):
+        items.append(
+            {
+                "choice": index,
+                "text": str(text),
+                "score": scores[index],
+                "rank_count": counts[index],
+            }
+        )
+    items.sort(key=lambda item: (-item["score"], item["choice"]))
+    for rank, item in enumerate(items, start=1):
+        item["rank"] = rank
+    return {
+        "source_column": column,
+        "respondents": ballots_seen,
+        "scoring": ballot.get("scoring", "Borda count: 7 points for first place through 1 point for seventh place."),
+        "items": items,
+        "quality": {"invalid_values": invalid_values},
+    }
+
+
 def build_summary(config: dict[str, Any], rows: list[dict[str, str]]) -> dict[str, Any]:
     headers = list(rows[0].keys()) if rows else []
     quality: dict[str, Any] = {
@@ -269,8 +360,9 @@ def build_summary(config: dict[str, Any], rows: list[dict[str, str]]) -> dict[st
     items = [summarize_item(item, rows, headers, quality, minimum_key_tension_n) for item in config.get("items", [])]
     suggestion_columns = [str(value) for value in config.get("suggestion_columns", [])]
     suggestions_received = nonempty_count(rows, headers, suggestion_columns)
+    ballot = summarize_ballot(config, rows, headers)
 
-    return {
+    summary: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "week": config.get("week"),
@@ -289,6 +381,13 @@ def build_summary(config: dict[str, Any], rows: list[dict[str, str]]) -> dict[st
         "quality": quality,
         "private_data_excluded": True,
     }
+    if ballot is not None:
+        summary["ballot"] = ballot
+    if "next_week_ballot_draft" in config:
+        summary["next_week_ballot_draft"] = config["next_week_ballot_draft"]
+    if "report_encapsulation" in config:
+        summary["report_encapsulation"] = config["report_encapsulation"]
+    return summary
 
 
 def cmd_summarize(args: argparse.Namespace) -> int:
