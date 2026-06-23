@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-23T10:32:53-04:00",
-  "updated_time_et": "10:32:53 AM EDT",
+  "updated_at": "2026-06-23T13:26:52-04:00",
+  "updated_time_et": "1:26:52 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-23",
+      "recorded_at": "2026-06-23T13:26:52-04:00",
+      "recorded_time_et": "1:26:52 PM EDT",
+      "status": "blocked",
+      "summary": "Week 3 first SurveyOL invitation batch was not sent because a required launch gate is still missing.",
+      "ran": [
+        "Prepared the Week 3 public report placeholder and reports control-board lane with the planned Tuesday, July 14, 2026 final close date.",
+        "Corrected the Week 3 reporting config ballot choices to match the SurveyOL draft materials.",
+        "Reviewed private Week 3 send-list and SurveyOL contact-sync evidence without publishing participant identifiers."
+      ],
+      "result": "No participant invitations were sent. The remaining launch blocker is the required Email collector test export identity-join confirmation before any production SurveyOL invitation batch.",
+      "next": "Complete and record the private SurveyOL Email collector test-export join check, then rerun the Week 3 launch status board before sending participant invitations."
+    },
     {
       "date": "2026-06-23",
       "recorded_at": "2026-06-23T10:32:53-04:00",
