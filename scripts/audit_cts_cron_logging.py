@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify that all CTS cron automations require public automation-log updates."""
+"""Verify that CTS cron automations share the current process contract."""
 
 from __future__ import annotations
 
@@ -10,9 +10,19 @@ from pathlib import Path
 AUTOMATIONS_DIR = Path.home() / ".codex" / "automations"
 REQUIRED_SNIPPETS = (
     'kind = "cron"',
+    "CTS_PROCESS_COORDINATION.md",
     "data/public/automation-daily-log.json",
     "rebuild the static site",
     "push to the remote",
+)
+
+FORBIDDEN_SNIPPETS = (
+    "Mailer" "Lite",
+    "mailer" "lite",
+    "MAILER" "LITE",
+    "automate reminders" " within " "12 " "days",
+    "Reminder Follow-up setting is" " set" " to " "automate reminders",
+    "surveyol." "reminder-followup-configured",
 )
 
 
@@ -22,21 +32,24 @@ def main() -> int:
         print(f"No CTS automation definitions found under {AUTOMATIONS_DIR}")
         return 1
 
-    failures: list[tuple[Path, list[str]]] = []
+    failures: list[tuple[Path, list[str], list[str]]] = []
     for path in paths:
         text = path.read_text(encoding="utf-8")
         missing = [snippet for snippet in REQUIRED_SNIPPETS if snippet not in text]
-        if missing:
-            failures.append((path, missing))
+        forbidden = [snippet for snippet in FORBIDDEN_SNIPPETS if snippet in text]
+        if missing or forbidden:
+            failures.append((path, missing, forbidden))
 
     if failures:
-        for path, missing in failures:
+        for path, missing, forbidden in failures:
             print(f"FAIL {path}")
             for snippet in missing:
                 print(f"  missing: {snippet}")
+            for snippet in forbidden:
+                print(f"  forbidden: {snippet}")
         return 2
 
-    print(f"PASS {len(paths)} CTS cron automation definitions require public automation-log updates.")
+    print(f"PASS {len(paths)} CTS cron automation definitions share the current process contract.")
     return 0
 
 

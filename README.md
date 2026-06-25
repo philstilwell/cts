@@ -37,6 +37,7 @@ The generated pages reflect the new WordPress pages updated on June 1, 2026:
 
 Internal launch planning files:
 
+- `CTS_PROCESS_COORDINATION.md`
 - `WEEK_1_SURVEY_TEMPLATE.md`
 - `WEEK_1_ITEM_AUDIT.md`
 - `WEEKLY_RUNBOOK.md`
@@ -79,7 +80,7 @@ Update the public-safe automation log source with:
 python3 scripts/update_automation_daily_log.py --help
 ```
 
-Audit the local CTS cron definitions to confirm they all require public automation-log updates with:
+Audit the local CTS cron definitions to confirm they all reference the current process contract and require public automation-log updates with:
 
 ```bash
 python3 scripts/audit_cts_cron_logging.py
