@@ -1,17 +1,59 @@
 {
-  "updated_at": "2026-06-24T11:48:25-04:00",
-  "updated_time_et": "11:48:25 AM EDT",
+  "updated_at": "2026-06-25T15:49:44-04:00",
+  "updated_time_et": "3:49:44 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-25",
+      "recorded_at": "2026-06-25T15:49:44-04:00",
+      "recorded_time_et": "3:49:44 PM EDT",
+      "status": "completed",
+      "summary": "CTS cron process coordination was reconstructed and hardened.",
+      "ran": [
+        "Added a canonical CTS process coordination contract covering the weekly flow, hard gates, reminder policy, public log requirements, and cron responsibilities.",
+        "Updated all six CTS cron definitions to reference the coordination contract and removed stale invitation blockers from the active prompts.",
+        "Expanded the cron audit so stale automatic-reminder and external email-tool invitation-gate language fails validation."
+      ],
+      "result": "The active cron prompts now agree that SurveyOL plus CTS 2026 are the SurveyOL invitation suppression controls, automatic SurveyOL reminders stay off, and day-12 reminders use the audited manual reminder workflow.",
+      "next": "Use scripts/audit_cts_cron_logging.py after future cron prompt edits to catch process drift before the next scheduled run."
+    },
+    {
+      "date": "2026-06-25",
+      "recorded_at": "2026-06-25T15:29:41-04:00",
+      "recorded_time_et": "3:29:41 PM EDT",
+      "status": "completed",
+      "summary": "Week 3 third SurveyOL invitation batch was queued after clearing the stale blocker.",
+      "ran": [
+        "Regenerated the private Week 3 invitation-scope board, confirmed the Week 3 placeholder page and reports index link, and reverified the exact Tuesday, July 14, 2026 final close date from the Tuesday, June 23, 2026 first invitation date.",
+        "Built a live SurveyOL invitation-table extract, cleared the invitation-row duplicate audit, and reconciled three newly observed opt-outs into the active suppression controls before sending.",
+        "Queued the third private 100-recipient Week 3 batch from the duplicate-audited batch CSV and captured a direct post-send check from the live SurveyOL collector."
+      ],
+      "result": "SurveyOL accepted 100 emails for queueing on June 25, 2026. Public-safe Week 3 totals are now 300 invitations, 13 complete responses, 6 opt-outs, and 0 bounces, with an estimated 77 eligible contacts still uninvited. The daily 100-email sending limit was reached after the batch.",
+      "next": "Rerun the invitation check at the next allowed send window and queue the final guarded Week 3 batch, up to 77 invitations, if the live duplicate audit and suppression checks remain clear."
+    },
+    {
+      "date": "2026-06-25",
+      "recorded_at": "2026-06-25T11:35:56-04:00",
+      "recorded_time_et": "11:35:56 AM EDT",
+      "status": "review_required",
+      "summary": "Week 3 invitation batch remained blocked during today\u2019s guarded check.",
+      "ran": [
+        "Regenerated the private Week 3 invitation-scope board and refreshed SurveyOL contacts, duplicate audit, Week 3 send-list audit, exact duplicate audit, and dry-run contact sync evidence.",
+        "Reconfirmed the Week 3 placeholder page, reports index link, and exact final close date of Tuesday, July 14, 2026 from the Tuesday, June 23, 2026 first invitation date.",
+        "Compared the rebuilt 374-contact eligible list with the two prior 100-recipient batches and confirmed that 177 eligible contacts remain uninvited after three already-sent addresses became suppressed."
+      ],
+      "result": "No invitations were sent in that earlier June 25, 2026 check. Public-safe Week 3 totals remained 200 invitations, 5 complete responses, 3 opt-outs, and 0 bounces, with 177 currently eligible contacts still uninvited. The blocker was later superseded as stale prompt policy rather than a live SurveyOL send-list defect.",
+      "next": "Use the later June 25 correction and send-complete record as the controlling status: active invitation gating is SurveyOL plus CTS 2026, automatic reminders stay off, and live invitation rows must be duplicate-audited before additional sends."
+    },
     {
       "date": "2026-06-24",
       "recorded_at": "2026-06-24T11:48:25-04:00",
       "recorded_time_et": "11:48:25 AM EDT",
       "status": "completed",
-      "summary": "Week 3 second SurveyOL invitation batch was queued after clearing the stale MailerLite blocker.",
+      "summary": "Week 3 second SurveyOL invitation batch was queued after clearing a stale external suppression blocker.",
       "ran": [
         "Regenerated the private Week 3 invitation-scope board and confirmed the public placeholder page, reports index link, exact Tuesday, July 14, 2026 final close date, and the live SurveyOL Reminder Follow-up setting of Within 12 days.",
         "Built and duplicate-audited the second private Week 3 batch slice, then queued 100 more SurveyOL Email collector invitations.",
-        "Recorded that CTS invitation suppression gating now relies on SurveyOL plus CTS 2026, and that MailerLite is not part of the active invitation-batch process."
+        "Recorded that CTS invitation suppression gating now relies on SurveyOL plus CTS 2026."
       ],
       "result": "SurveyOL accepted 100 emails for queueing on June 24, 2026. Public-safe Week 3 totals are now 200 invitations, 5 complete responses, 3 opt-outs, and 0 bounces, with an estimated 177 eligible contacts still uninvited. The daily 100-email sending limit was reached after the batch.",
       "next": "Rerun the invitation check at the next allowed send window and queue up to 100 more Week 3 invitations if the remaining 177 eligible contacts still clear suppression checks."
@@ -142,7 +184,7 @@
         "Computed the planned Week 3 final close date as Tuesday, July 14, 2026, from a planned Tuesday, June 23, 2026 first production invitation date."
       ],
       "result": "Week 3 is not ready for production invitation: no Week 3 survey draft/copy-paste blocks, placeholder report page, reporting config, newest Week 2 report encapsulation, confirmed Week 2 ballot leaders, or Week 3 launch ledger gates are present yet.",
-      "next": "Before launch, publish the Week 3 placeholder with July 14 final close, create the Week 3 draft/config, confirm the Week 2 report/ballot-derived items, and record the 12-day reminder and final-close-date gates."
+      "next": "Before launch, publish the Week 3 placeholder with July 14 final close, create the Week 3 draft/config, confirm the Week 2 report/ballot-derived items, and record the automatic-reminder-off and final-close-date gates."
     },
     {
       "date": "2026-06-20",
@@ -151,7 +193,7 @@
       "status": "Week 2 final batch sent",
       "summary": "Restored the live SurveyOL session and completed the remaining Week 2 invitation slice.",
       "ran": [
-        "Regenerated the private Week 2 invitation-scope status board and rechecked the public placeholder page, reports index link, July 7, 2026 final close date, and 12-day reminder-follow-up setting.",
+        "Regenerated the private Week 2 invitation-scope status board and rechecked the public placeholder page, reports index link, July 7, 2026 final close date, and automatic-reminder-off setting.",
         "Queued three guarded SurveyOL invitation batches during the authenticated completion run: 14 invitations, then 3 invitations, then a final 2-contact micro-batch.",
         "Recorded the completed batch result and post-send suppression check in the private Week 2 ledger."
       ],
@@ -167,7 +209,7 @@
       "ran": [
         "Regenerated the private Week 2 invitation-scope status board.",
         "Reconfirmed the Week 2 placeholder page, reports index link, and July 7, 2026 final close date.",
-        "Verified the 12-day SurveyOL reminder follow-up gate from the earlier authenticated collector check.",
+        "Verified the SurveyOL automatic-reminder-off gate from the earlier authenticated collector check.",
         "Confirmed the SurveyOL API token is still valid for CTS ops exports but not sufficient to restore the live send page session."
       ],
       "result": "No invitations were sent in this run. Last known public-safe Week 2 totals remain 390 invitations, 23 completes, 14 opt-outs, and 0 bounces, with an estimated 19 eligible contacts still uninvited.",
@@ -178,16 +220,16 @@
       "recorded_at": "2026-06-20T11:34:31-04:00",
       "recorded_time_et": "11:34:31 AM EDT",
       "status": "Week 2 send blocked",
-      "summary": "Held the final Week 2 batch pending SurveyOL reminder verification.",
+      "summary": "Held the final Week 2 batch pending SurveyOL reminder-policy verification.",
       "ran": [
         "Regenerated the private Week 2 invitation-scope status board.",
         "Reconfirmed the Week 2 placeholder page and the reports index link.",
         "Rechecked that the public placeholder page, reports index, and reporting config all show the exact final close date of Tuesday, July 7, 2026.",
         "Saved a fresh private SurveyOL snapshot for the active Week 2 survey.",
-        "Recorded the missing Week 2 launch-gate ledger entries and today's reminder-followup blocker."
+        "Recorded the missing Week 2 launch-gate ledger entries and today's reminder-policy blocker."
       ],
       "result": "No invitations were sent on June 20, 2026. Last known public-safe Week 2 totals remain 390 invitations, 23 completes, 14 opt-outs, and 0 bounces, with an estimated 19 eligible contacts still uninvited.",
-      "next": "Verify the SurveyOL Email collector Reminder Follow-up is set to automate reminders within 12 days, or record an intentional exception, then rerun the guarded invitation batch check."
+      "next": "Verify the SurveyOL Email collector automatic Reminder Follow-up is off, record the automatic-reminder-off gate, then rerun the guarded invitation batch check."
     },
     {
       "date": "2026-06-19",
@@ -207,15 +249,15 @@
       "date": "2026-06-19",
       "recorded_at": "2026-06-19T16:22:55-04:00",
       "recorded_time_et": "4:22:55 PM EDT",
-      "status": "Reminder process hardened",
-      "summary": "Canonized SurveyOL 12-day reminder follow-ups for future weekly surveys.",
+      "status": "Manual reminder process hardened",
+      "summary": "Canonized audited manual reminders for future weekly surveys.",
       "ran": [
-        "Added the 12-day Reminder Follow-up requirement to the weekly runbook and launch checklist.",
-        "Added a private launch-gate record for verifying the Email collector reminder setting.",
-        "Updated the Monday preflight, Tuesday launch, and recurring invitation-check automations to require or flag the reminder setting."
+        "Added the day-12 manual reminder due check to the weekly runbook and launch checklist.",
+        "Added a private launch-gate record for verifying that automatic Email collector reminders are off.",
+        "Updated the Monday preflight, Tuesday launch, and recurring invitation-check automations to require or flag the automatic-reminder-off setting."
       ],
-      "result": "Future weekly surveys should have the SurveyOL Email collector Reminder Follow-up set to automate reminders within 12 days before the first production invitation batch, unless an intentional exception is recorded.",
-      "next": "For each new weekly survey, record surveyol.reminder-followup-configured in the private ledger after the reminder preview and setting are verified."
+      "result": "Future weekly surveys should keep SurveyOL automatic Reminder Follow-up off before the first production invitation batch. Reminder sends should use the separate day-12 manual reminder due check and invitation-row audit.",
+      "next": "For each new weekly survey, record surveyol.reminder-auto-disabled in the private ledger before launch, then run the manual reminder due check after the first invitation date plus 12 days."
     },
     {
       "date": "2026-06-19",
