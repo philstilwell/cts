@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-25T15:49:44-04:00",
-  "updated_time_et": "3:49:44 PM EDT",
+  "updated_at": "2026-06-25T16:01:47-04:00",
+  "updated_time_et": "4:01:47 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-25",
+      "recorded_at": "2026-06-25T16:01:47-04:00",
+      "recorded_time_et": "4:01:47 PM EDT",
+      "status": "completed",
+      "summary": "GitHub Pages publishing path was made explicit and verified.",
+      "ran": [
+        "Added a guarded publish wrapper that builds the static site, syncs only approved public artifacts to gh-pages, pushes the Pages branch, and checks the live URL for expected text.",
+        "Updated CTS process docs and all six cron prompts so public updates require scripts/publish_static_site.py instead of a main-branch push alone.",
+        "Expanded the cron audit to require the publish wrapper, gh-pages, expected-text verification, and live-page verification language."
+      ],
+      "result": "Future CTS cron runs should not report public updates complete until gh-pages has been published and the live site contains the expected public-safe marker.",
+      "next": "Use scripts/publish_static_site.py with --expect-text from each new public log entry after committing source changes to main."
+    },
     {
       "date": "2026-06-25",
       "recorded_at": "2026-06-25T15:49:44-04:00",

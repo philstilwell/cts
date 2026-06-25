@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>3:49:44 PM EDT</strong>
+      <strong>4:01:47 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,17 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-25T16:01:47-04:00"><span class="recorded-date">2026-06-25</span><span class="recorded-time">4:01:47 PM EDT</span></time>
+<span class="log-status">completed</span></div></td>
+        <td>GitHub Pages publishing path was made explicit and verified.<ul>
+        <li>Added a guarded publish wrapper that builds the static site, syncs only approved public artifacts to gh-pages, pushes the Pages branch, and checks the live URL for expected text.</li>
+        <li>Updated CTS process docs and all six cron prompts so public updates require scripts/publish_static_site.py instead of a main-branch push alone.</li>
+        <li>Expanded the cron audit to require the publish wrapper, gh-pages, expected-text verification, and live-page verification language.</li>
+      </ul></td>
+        <td>Future CTS cron runs should not report public updates complete until gh-pages has been published and the live site contains the expected public-safe marker.</td>
+        <td>Use scripts/publish_static_site.py with --expect-text from each new public log entry after committing source changes to main.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-25T15:49:44-04:00"><span class="recorded-date">2026-06-25</span><span class="recorded-time">3:49:44 PM EDT</span></time>
 <span class="log-status">completed</span></div></td>
