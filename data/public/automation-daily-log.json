@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-24T11:48:25-04:00",
-  "updated_time_et": "11:48:25 AM EDT",
+  "updated_at": "2026-06-25T11:35:56-04:00",
+  "updated_time_et": "11:35:56 AM EDT",
   "entries": [
+    {
+      "date": "2026-06-25",
+      "recorded_at": "2026-06-25T11:35:56-04:00",
+      "recorded_time_et": "11:35:56 AM EDT",
+      "status": "review_required",
+      "summary": "Week 3 invitation batch remained blocked during today\u2019s guarded check.",
+      "ran": [
+        "Regenerated the private Week 3 invitation-scope board and refreshed SurveyOL contacts, duplicate audit, Week 3 send-list audit, exact duplicate audit, and dry-run contact sync evidence.",
+        "Reconfirmed the Week 3 placeholder page, reports index link, and exact final close date of Tuesday, July 14, 2026 from the Tuesday, June 23, 2026 first invitation date.",
+        "Compared the rebuilt 374-contact eligible list with the two prior 100-recipient batches and confirmed that 177 eligible contacts remain uninvited after three already-sent addresses became suppressed."
+      ],
+      "result": "No invitations were sent on June 25, 2026. Public-safe Week 3 totals remain 200 invitations, 5 complete responses, 3 opt-outs, and 0 bounces, with 177 currently eligible contacts still uninvited. The next batch is blocked because the active Email collector Reminder Follow-up is off and this run did not produce a fresh MailerLite-side suppression reconciliation artifact for the current policy.",
+      "next": "Restore the required reminder-follow-up configuration or explicitly revise the policy, reconcile the current MailerLite/SurveyOL/CTS suppression scope, then rerun the invitation-scope board before any next batch."
+    },
     {
       "date": "2026-06-24",
       "recorded_at": "2026-06-24T11:48:25-04:00",
