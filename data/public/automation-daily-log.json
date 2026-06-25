@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-25T11:35:56-04:00",
-  "updated_time_et": "11:35:56 AM EDT",
+  "updated_at": "2026-06-25T15:29:41-04:00",
+  "updated_time_et": "3:29:41 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-25",
+      "recorded_at": "2026-06-25T15:29:41-04:00",
+      "recorded_time_et": "3:29:41 PM EDT",
+      "status": "completed",
+      "summary": "Week 3 third SurveyOL invitation batch was queued after clearing the stale blocker.",
+      "ran": [
+        "Regenerated the private Week 3 invitation-scope board, confirmed the Week 3 placeholder page and reports index link, and reverified the exact Tuesday, July 14, 2026 final close date from the Tuesday, June 23, 2026 first invitation date.",
+        "Built a live SurveyOL invitation-table extract, cleared the invitation-row duplicate audit, and reconciled three newly observed opt-outs into the active suppression controls before sending.",
+        "Queued the third private 100-recipient Week 3 batch from the duplicate-audited batch CSV and captured a direct post-send check from the live SurveyOL collector."
+      ],
+      "result": "SurveyOL accepted 100 emails for queueing on June 25, 2026. Public-safe Week 3 totals are now 300 invitations, 13 complete responses, 6 opt-outs, and 0 bounces, with an estimated 77 eligible contacts still uninvited. The daily 100-email sending limit was reached after the batch.",
+      "next": "Rerun the invitation check at the next allowed send window and queue the final guarded Week 3 batch, up to 77 invitations, if the live duplicate audit and suppression checks remain clear."
+    },
     {
       "date": "2026-06-25",
       "recorded_at": "2026-06-25T11:35:56-04:00",
