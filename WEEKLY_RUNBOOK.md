@@ -13,7 +13,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Wednesday through Saturday at 11:30 AM Eastern, if needed: continue SurveyOL Email collector invitation batches of up to 100 per day until the full eligible participant list has been invited.
 - Every week: before any survey-invitation send, remove or suppress from SurveyOL and `CTS 2026` any address that appears on SurveyOL's no-send/unsubscribed list or is otherwise marked do-not-email in the registry.
 - Every weekly survey remains open for 3 weeks from its first invitation send. Calculate the final close date as the first production invitation send date plus 21 days, normally a Tuesday for Tuesday evening launches, and post that exact date on the weekly survey's public page before invitations go out. Close the SurveyOL collector after that date, export the final raw results privately, and regenerate the public report as final.
-- Every weekly SurveyOL Email collector should have `Reminder Follow-up` set to `Automate reminders within 12 days` before the first production invitation batch, unless CTS intentionally disables a reminder for a specific week and records the reason.
+- Every weekly SurveyOL Email collector should launch with automatic `Reminder Follow-up` off. Send reminders only through a later manual reminder pass after the live invitation table has been exported or extracted, duplicate-audited, and converted into a reminder candidate list.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
 - Every new weekly SurveyOL survey must be reviewed and approved by the CTS owner before the first production invitation batch. This review replaces any standing internal test-send requirement; perform a test send only when the owner explicitly asks for one or when a specific technical uncertainty warrants it.
 - The Reports page includes a rolling survey control board under the weekly report grid. Any automation that changes a survey's public status on that board should rebuild the static site, commit the changed public files, and push to the remote before reporting the board update as complete.
@@ -24,7 +24,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Tuesday morning: publish first preliminary reports, refresh still-open preliminary reports, create the report encapsulation, and update the site.
 - Tuesday morning after the report cycle: check whether any survey has reached its posted final close date, then close and finalize reports as needed.
 - Tuesday evening: create the placeholder public report page, launch the new SurveyOL Email collector survey, and send the first invitation batch.
-- Wednesday through Saturday at 11:30 AM Eastern: check whether eligible participants remain uninvited, regenerate the invitation-scope automation status board, and send the next guarded invitation batch only if the recurring hygiene checks and any still-relevant launch-time send gates are clear. At minimum, the reminder-follow-up gate must stay recorded and clear on the invitation board until invitations are finished.
+- Wednesday through Saturday at 11:30 AM Eastern: check whether eligible participants remain uninvited, regenerate the invitation-scope automation status board, and send the next guarded invitation batch only if the recurring hygiene checks and any still-relevant launch-time send gates are clear. At minimum, the automatic-reminder-off gate must stay recorded and clear on the invitation board until invitations are finished.
 
 These reminders can execute only when the relevant SurveyOL, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
 
@@ -44,7 +44,7 @@ python3 scripts/cts_automation_status.py report \
 Use these scopes:
 
 - `launch`: required evidence before the first production SurveyOL invitation batch.
-- `invitation`: recurring evidence around Wednesday-Saturday invitation batches, including any launch-time send gate that remains relevant after Tuesday, such as reminder follow-up verification.
+- `invitation`: recurring evidence around Wednesday-Saturday invitation batches, including any launch-time send gate that remains relevant after Tuesday, such as automatic-reminder-off verification and manual reminder audits.
 - `report`: Tuesday report, newsletter, and public status update evidence.
 - `close`: three-week survey close and final-report evidence.
 - `full-cycle`: complete process coverage and redundancy audit.
@@ -109,11 +109,11 @@ The encapsulation should be short enough to scan quickly and should include:
 1. Before sending the Tuesday evening survey invitation, confirm the placeholder public report page exists, is linked from the reports index, and has been pushed to GitHub Pages. For closed tests, use only internal/test contacts.
 2. The SurveyOL Email collector must be `Open` with `Anonymous Responses` set to `Off` so exports can include email identity for private matching. Close or do not distribute Web Link collectors unless CTS intentionally wants an unmapped public response channel.
 3. Confirm the CTS owner has reviewed the finished weekly survey and explicitly approved the first production invitation batch. Record `surveyol.prelaunch-human-review` in the private automation ledger before any production invitations are sent. This is a hard gate; an internal test send is not a standing requirement.
-4. Set the Email collector `Reminder Follow-up` to `Automate reminders within 12 days`, review the reminder email preview, and record `surveyol.reminder-followup-configured` in the private automation ledger before the first production invitation batch. That ledger record remains a hard gate for later Wednesday-Saturday batches as well, so the invitation-scope board should surface it until all invitations are sent. If CTS intentionally disables the reminder for a week, record `not_due` or `review_required` with the reason before sending.
+4. Confirm the Email collector `Reminder Follow-up` is off before the first production invitation batch, and record `surveyol.reminder-auto-disabled` in the private automation ledger. That ledger record remains a hard gate for later Wednesday-Saturday batches as well, so the invitation-scope board should surface it until all invitations are sent. Do not enable automated reminders as the standing weekly default.
 5. Build the SurveyOL recipient list from the canonical `CTS 2026` participant registry. Include only eligible records with `Name`, `Primary Email Address`, `Participant ID`, and `Email Key`, and exclude records marked `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
 6. Audit the exact CSV that will be imported or used for recipient targeting with `scripts/cts_ops.py audit-email-duplicates --fail-on-duplicates`. Any duplicate normalized email address is a hard stop until corrected.
 7. Export or inspect the live SurveyOL contact table before each invitation batch. If any SurveyOL contact email appears more than once, stop sending until the extra contact records are merged or deleted.
-8. After any SurveyOL invitations exist, export or extract the live Email collector invitation table and audit it with `scripts/cts_ops.py audit-surveyol-invitations --fail-on-duplicates`. Any duplicate normalized invitation email is a hard stop before sending more invitations or leaving reminder follow-up enabled.
+8. After any SurveyOL invitations exist, export or extract the live Email collector invitation table and audit it with `scripts/cts_ops.py audit-surveyol-invitations --fail-on-duplicates`. Any duplicate normalized invitation email is a hard stop before sending more invitations or sending reminders.
 9. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
 10. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
 11. For a small tail batch, prefer the simplest stable SurveyOL send path. If the live contact-table checkbox UI is fragile, row selection opens edit dialogs, or the remaining list is already known from the guarded send audit, use the `Recipient Email(s)` field directly with the verified remaining addresses instead of forcing another checkbox-based selection pass. Record that direct-entry fallback was used.
@@ -122,6 +122,35 @@ The encapsulation should be short enough to scan quickly and should include:
 14. If the suppression CSV was manually reconfirmed or regenerated without changing membership, still refresh its evidence timestamp before rerunning the invitation board so the board reflects the latest review rather than an old embedded `collected_at` date.
 15. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
 16. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
+
+## Send Reminders
+
+Reminder emails are a separate manual operation. Do not rely on SurveyOL automated reminder follow-up as the weekly default.
+
+1. Keep the Email collector `Reminder Follow-up` off until the reminder pass is ready.
+2. Export or extract the live SurveyOL Email collector invitation table, including invitation rows and their status labels.
+3. Audit the invitation rows before any reminder send:
+
+```bash
+python3 scripts/cts_ops.py audit-surveyol-invitations \
+  --input-json data/private/surveyol-api/week-XXX-invitations-extract.json \
+  --output data/private/audits/week-XXX-invitation-duplicate-audit.json \
+  --fail-on-duplicates
+```
+
+4. Build the manual reminder candidate list:
+
+```bash
+python3 scripts/cts_ops.py build-surveyol-reminder-list \
+  --input-json data/private/surveyol-api/week-XXX-invitations-extract.json \
+  --output-csv data/private/send-lists/week-XXX-reminder-candidates.csv \
+  --report-output data/private/audits/week-XXX-reminder-candidates-report.json
+```
+
+5. Stop immediately if either command reports `human_review_required: true`, exits nonzero, or shows any duplicate normalized invitation email. Resolve the extra invitation row in SurveyOL, re-extract, and rerun both checks before sending reminders.
+6. Send reminders only from SurveyOL's `Reminder Follow-up` -> `Manually Send` flow. Select only rows that appear in the audited reminder candidate CSV. Do not use `+ NEW INVITATIONS` as a reminder mechanism.
+7. The reminder candidate CSV intentionally excludes invitation rows that are missing `Sent`, already have `Clicked`, `Clicked-through`, `Started`, `Complete`, `Completed`, `Opted Out`, `Bounced`, `Reminded`, or `Thanked` status labels, or share an email address with another invitation row.
+8. After sending reminders, re-export or re-extract the invitation table and verify that each intended reminder recipient has exactly one `Reminded` flag. Record `surveyol.manual-reminder-audit` and the reminder count in the private automation ledger.
 
 ## Participant Profile Intake
 
@@ -192,7 +221,7 @@ For browser-operated sends, prefer reclaiming an already authenticated SurveyOL 
 
 Any generated audit or plan with `human_review_required: true` is a hard stop. Review the stated reason and next action before importing contacts, applying list changes, sending a newsletter, or sending SurveyOL invitations.
 
-Before acting on the checklist above, regenerate the relevant automation status board and confirm no required item is `missing`, `stale`, `blocked`, `failed`, or unresolved `review_required`. For recurring invitation sends, treat the invitation scope as the controlling board for both list hygiene and any carry-forward launch send gate, especially `surveyol.reminder-followup-configured`. A `review_required` item means the automation ran but a human gate is still open; record the review outcome before the next risky action.
+Before acting on the checklist above, regenerate the relevant automation status board and confirm no required item is `missing`, `stale`, `blocked`, `failed`, or unresolved `review_required`. For recurring invitation sends, treat the invitation scope as the controlling board for both list hygiene and any carry-forward launch send gate, especially `surveyol.reminder-auto-disabled`. Before any reminder send, require `surveyol.manual-reminder-audit` to be passed or explicitly recorded as `not_due`. A `review_required` item means the automation ran but a human gate is still open; record the review outcome before the next risky action.
 
 ## Minimum Launch Checklist
 
@@ -205,10 +234,10 @@ Before acting on the checklist above, regenerate the relevant automation status 
 - Featured Topic header image appears immediately before the `◉ Main topic...` introduction line.
 - The `◉ Main topic...` introduction block is styled in SurveyOL: main-topic line bold and enlarged with `X↑` twice, topic name highlighted with `#e0a550` background and `#553e15` text, and response-format line bold in black.
 - SurveyOL Email collector is `Open`, `Anonymous Responses` is `Off`, and any Web Link collector is closed or intentionally excluded from the launch.
-- SurveyOL Email collector `Reminder Follow-up` is set to `Automate reminders within 12 days`, or an intentional exception is recorded in the private automation ledger before the first production invitation batch.
+- SurveyOL Email collector automatic `Reminder Follow-up` is off before the first production invitation batch, and `surveyol.reminder-auto-disabled` is recorded in the private automation ledger.
 - SurveyOL recipient import comes from `CTS 2026`, excludes do-not-email records, and contains no email-only contacts with missing names.
 - The exact SurveyOL recipient CSV and the live SurveyOL contact table have both passed duplicate-email checks.
-- If any invitations already exist in the SurveyOL Email collector, the live invitation table has passed `audit-surveyol-invitations --fail-on-duplicates` before reminders remain enabled.
+- If any invitations already exist in the SurveyOL Email collector, the live invitation table has passed `audit-surveyol-invitations --fail-on-duplicates` before more invitations or any reminders are sent.
 - The current weekly send-list audit and any sync plans have been reviewed, and no unresolved `human_review_required: true` output remains for the action about to be taken.
 - The 3 independent live items and 7 participant-nominated ballot items are orthogonal to the weekly topic, non-duplicative, clear, and likely to produce meaningful disagreement or spread.
 - The survey invitation email renders correctly.

@@ -219,7 +219,7 @@ python3 scripts/cts_ops.py surveyol-live-extract \
   --summary-output data/private/audits/week-003-live-next-batch-summary.json
 ```
 
-When the extract includes Email collector invitation rows, audit those rows before sending another batch or leaving reminder follow-up enabled:
+When the extract includes Email collector invitation rows, audit those rows before sending another batch or sending reminders:
 
 ```bash
 python3 scripts/cts_ops.py audit-surveyol-invitations \
@@ -228,7 +228,18 @@ python3 scripts/cts_ops.py audit-surveyol-invitations \
   --fail-on-duplicates
 ```
 
-This catches duplicate invitation rows that are not visible in the SurveyOL contact table. Reminder follow-up can resend against invitation rows, so a clean contact export is not enough once invitations already exist.
+This catches duplicate invitation rows that are not visible in the SurveyOL contact table. Reminder follow-up sends against invitation rows, so a clean contact export is not enough once invitations already exist.
+
+Build manual reminder candidates from the same live invitation extract:
+
+```bash
+python3 scripts/cts_ops.py build-surveyol-reminder-list \
+  --input-json data/private/surveyol-api/week-003-invitations-extract.json \
+  --output-csv data/private/send-lists/week-003-reminder-candidates.csv \
+  --report-output data/private/audits/week-003-reminder-candidates-report.json
+```
+
+The reminder candidate command exits nonzero and skips the CSV when duplicate or missing invitation emails are present. Its CSV excludes rows that are not sent or already show clicked, started, completed, opted-out, bounced, reminded, or thanked status.
 
 Sync missing SurveyOL contacts from a private send list with a dry-run first:
 
@@ -255,7 +266,7 @@ The scripts harden list preparation, suppression reconciliation, API snapshots, 
 
 - SurveyOL survey creation from copy/paste blocks.
 - CTS owner prelaunch review of the finished weekly survey. Record `surveyol.prelaunch-human-review` before the first production invitation batch, after the owner has reviewed the final survey/preview and invitation copy. Do not substitute an internal test send for this approval, and do not require a test send unless the owner explicitly asks for one.
-- SurveyOL Email collector reminder follow-up configuration. Each production Email collector should be manually verified with `Reminder Follow-up` set to `Automate reminders within 12 days`, then recorded in the private ledger as `surveyol.reminder-followup-configured` before the first production invitation batch.
+- SurveyOL Email collector automatic reminder follow-up state. Each production Email collector should be manually verified with `Reminder Follow-up` off before the first production invitation batch, then recorded in the private ledger as `surveyol.reminder-auto-disabled`. Reminder sends use the separate manual reminder audit flow.
 - SurveyOL Email collector batch sending.
 - Google Sheets direct writeback to `CTS 2026`.
 
@@ -268,6 +279,6 @@ Before the first production batch for any weekly survey:
 1. Regenerate the launch-scope automation board and require every required item to be `passed`.
 2. Confirm `surveyol.prelaunch-human-review` is recorded after owner approval of the finished survey, not merely after automated draft creation.
 3. Confirm `public.final-close-date-posted` is recorded after the placeholder/report page and Reports board have been pushed.
-4. Confirm the live Email collector shows `Reminder Follow-up: Within 12 days`, `Anonymous Responses: Off`, `Status: Open`, and no unexpected Web Link collector is being distributed.
+4. Confirm the live Email collector shows `Reminder Follow-up: Off`, `Anonymous Responses: Off`, `Status: Open`, and no unexpected Web Link collector is being distributed.
 5. Use the audited private send list as the source of truth for the first 100 recipients. If direct entry into SurveyOL's `Recipient Email(s)` field is used, save the exact batch CSV privately and record the batch count, cumulative count, remaining estimate, opt-outs, bounces, and daily-limit state after send.
 6. After the send or blocker, update the public-safe automation daily log, rebuild the static site, commit, and push before reporting completion.

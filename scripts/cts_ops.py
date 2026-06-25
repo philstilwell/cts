@@ -94,6 +94,17 @@ OUTREACH_HOLD_TERMS = (
     "bounced",
     "complaint",
 )
+REMINDER_EXCLUDED_STATUS_KEYS = {
+    "bounced",
+    "clicked",
+    "clickedthrough",
+    "complete",
+    "completed",
+    "optedout",
+    "reminded",
+    "started",
+    "thanked",
+}
 
 
 def ssl_context() -> ssl.SSLContext | None:
@@ -236,6 +247,29 @@ def normalize_email(value: str | None) -> str:
     if value is None:
         return ""
     return value.strip().lower()
+
+
+def normalize_status_key(value: str | None) -> str:
+    if value is None:
+        return ""
+    return re.sub(r"[^a-z0-9]+", "", value.lower())
+
+
+def invitation_status_details(invitation: dict[str, Any]) -> list[dict[str, str]]:
+    statuses_raw = invitation.get("statuses", [])
+    statuses = statuses_raw if isinstance(statuses_raw, list) else []
+    normalized_statuses: list[dict[str, str]] = []
+    for status in statuses:
+        if not isinstance(status, dict):
+            continue
+        normalized_statuses.append(
+            {
+                "label": str(status.get("label", "")).strip(),
+                "title": str(status.get("title", "")).strip(),
+                "class": str(status.get("class", "")).strip(),
+            }
+        )
+    return normalized_statuses
 
 
 def split_name(name: str) -> tuple[str, str]:
@@ -384,20 +418,14 @@ def surveyol_invitation_duplicate_report(
         if not email:
             missing_email_count += 1
             continue
-        statuses_raw = invitation.get("statuses", [])
-        statuses = statuses_raw if isinstance(statuses_raw, list) else []
-        normalized_statuses: list[dict[str, str]] = []
-        for status in statuses:
-            if not isinstance(status, dict):
-                continue
-            label = str(status.get("label", "")).strip()
-            title = str(status.get("title", "")).strip()
-            css_class = str(status.get("class", "")).strip()
+        normalized_statuses = invitation_status_details(invitation)
+        for status in normalized_statuses:
+            label = status["label"]
+            title = status["title"]
             if label:
                 status_counts[label] = status_counts.get(label, 0) + 1
             if label.lower() == "reminded":
                 reminded_by_title[title] = reminded_by_title.get(title, 0) + 1
-            normalized_statuses.append({"label": label, "title": title, "class": css_class})
         detail = {
             "extract_row": index,
             "email": email,
@@ -431,6 +459,82 @@ def surveyol_invitation_duplicate_report(
         "target_email": target,
         "target_invitation_count": len(target_invitations) if target else None,
         "target_invitations": target_invitations if target else [],
+    }
+
+
+def surveyol_reminder_candidate_report(payload: dict[str, Any], max_duplicates: int = 200) -> dict[str, Any]:
+    duplicate_report = surveyol_invitation_duplicate_report(payload, max_duplicates=max_duplicates)
+    invitations_raw = payload.get("invitations", [])
+    if not isinstance(invitations_raw, list):
+        raise SystemExit("Invitation extract does not contain a top-level invitations list.")
+
+    rows_by_email: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    missing_email_count = 0
+    for index, invitation in enumerate(invitations_raw):
+        if not isinstance(invitation, dict):
+            continue
+        email = normalize_email(str(invitation.get("email", "")))
+        statuses = invitation_status_details(invitation)
+        status_labels = [status["label"] for status in statuses if status["label"]]
+        status_titles = [status["title"] for status in statuses if status["title"]]
+        status_keys = {normalize_status_key(label) for label in status_labels}
+        detail = {
+            "extract_row": index,
+            "email": email,
+            "guid": str(invitation.get("guid", "")).strip(),
+            "status_labels": status_labels,
+            "status_titles": status_titles,
+            "status_keys": sorted(status_keys),
+        }
+        if not email:
+            missing_email_count += 1
+            continue
+        rows_by_email[email].append(detail)
+
+    candidates: list[dict[str, Any]] = []
+    rejected: list[dict[str, Any]] = []
+    for email, invitation_rows in sorted(rows_by_email.items()):
+        duplicate_email = len(invitation_rows) > 1
+        for row in invitation_rows:
+            status_keys = set(row["status_keys"])
+            reasons: list[str] = []
+            if duplicate_email:
+                reasons.append("duplicate_invitation_email")
+            if "sent" not in status_keys:
+                reasons.append("invitation_not_sent")
+            excluded_statuses = sorted(status_keys & REMINDER_EXCLUDED_STATUS_KEYS)
+            if excluded_statuses:
+                reasons.extend(f"status_{status}" for status in excluded_statuses)
+            reminder_row = {
+                "Email": email,
+                "Invitation GUID": row["guid"],
+                "Extract Row": row["extract_row"],
+                "Status Labels": "; ".join(row["status_labels"]),
+                "Status Details": " | ".join(row["status_titles"]),
+            }
+            if reasons:
+                rejected.append({**reminder_row, "reasons": reasons})
+            else:
+                candidates.append(reminder_row)
+
+    return {
+        "source": duplicate_report["source"],
+        "survey_guid": duplicate_report["survey_guid"],
+        "collector_title": duplicate_report["collector_title"],
+        "collector_key": duplicate_report["collector_key"],
+        "invitation_row_count": duplicate_report["invitation_row_count"],
+        "missing_email_count": missing_email_count,
+        "unique_email_count": duplicate_report["unique_email_count"],
+        "duplicate_email_count": duplicate_report["duplicate_email_count"],
+        "duplicate_invitation_count": duplicate_report["duplicate_invitation_count"],
+        "duplicates": duplicate_report["duplicates"],
+        "duplicates_truncated": duplicate_report["duplicates_truncated"],
+        "status_counts": duplicate_report["status_counts"],
+        "candidate_count": len(candidates),
+        "rejected_count": len(rejected),
+        "excluded_status_keys": sorted(REMINDER_EXCLUDED_STATUS_KEYS),
+        "candidates": candidates,
+        "rejected": rejected,
     }
 
 
@@ -1036,8 +1140,8 @@ def cmd_audit_surveyol_invitations(args: argparse.Namespace) -> int:
         "generated_at": now_iso(),
         **review_fields(
             duplicate_email_count > 0,
-            "The SurveyOL invitation table contains duplicate normalized recipient email addresses. Disable or do not enable reminder follow-up until duplicate invitation rows are resolved.",
-            "Cancel or otherwise resolve extra invitation rows in SurveyOL, re-extract invitation statistics, and re-run this audit before reminder-enabled sends.",
+            "The SurveyOL invitation table contains duplicate normalized recipient email addresses. Do not send reminders until duplicate invitation rows are resolved.",
+            "Cancel or otherwise resolve extra invitation rows in SurveyOL, re-extract invitation statistics, and re-run this audit before invitation or reminder sends.",
         ),
         "input_json": args.input_json,
         **report,
@@ -1050,6 +1154,36 @@ def cmd_audit_surveyol_invitations(args: argparse.Namespace) -> int:
         print(json.dumps(audit, indent=2, ensure_ascii=False))
     if args.fail_on_duplicates and duplicate_email_count:
         return 2
+    return 0
+
+
+def cmd_build_surveyol_reminder_list(args: argparse.Namespace) -> int:
+    payload = read_json(Path(args.input_json))
+    report = surveyol_reminder_candidate_report(payload, args.max_duplicates)
+    review_required = report["duplicate_email_count"] > 0 or report["missing_email_count"] > 0
+    audit = {
+        "generated_at": now_iso(),
+        **review_fields(
+            review_required,
+            "The SurveyOL invitation table is not safe for manual reminder sending because duplicate or missing recipient email rows are present.",
+            "Resolve duplicate or missing-email invitation rows in SurveyOL, re-extract invitation statistics, and rebuild the reminder list before sending reminders.",
+        ),
+        "input_json": args.input_json,
+        "output_csv": args.output_csv,
+        **report,
+    }
+    write_json(Path(args.report_output), audit)
+    print(f"Wrote SurveyOL reminder candidate report to {args.report_output}")
+    if review_required:
+        print_review_notice(audit)
+        print("Skipped reminder CSV because the invitation table requires review.")
+        return 2
+    write_csv(
+        Path(args.output_csv),
+        ["Email", "Invitation GUID", "Extract Row", "Status Labels", "Status Details"],
+        report["candidates"],
+    )
+    print(f"Wrote {report['candidate_count']} reminder candidates to {args.output_csv}")
     return 0
 
 
@@ -1200,6 +1334,16 @@ def main() -> int:
     p.add_argument("--fail-on-duplicates", action="store_true", help="exit with status 2 if any duplicate invitation email is found")
     p.add_argument("--max-duplicates", type=int, default=200)
     p.set_defaults(func=cmd_audit_surveyol_invitations)
+
+    p = subparsers.add_parser(
+        "build-surveyol-reminder-list",
+        help="build a duplicate-safe manual reminder candidate CSV from a SurveyOL invitation extract",
+    )
+    p.add_argument("--input-json", required=True, help="JSON payload extracted from the live SurveyOL send page")
+    p.add_argument("--output-csv", required=True, help="CSV of recipients eligible for manual reminder selection")
+    p.add_argument("--report-output", required=True, help="JSON audit report for the reminder candidate build")
+    p.add_argument("--max-duplicates", type=int, default=200)
+    p.set_defaults(func=cmd_build_surveyol_reminder_list)
 
     p = subparsers.add_parser("env-doctor", help="check CTS ops env discovery and optionally verify API access")
     p.add_argument("--verify-api", action="store_true", help="also verify SurveyOL API access when a token is present")
