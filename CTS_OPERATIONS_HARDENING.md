@@ -219,6 +219,17 @@ python3 scripts/cts_ops.py surveyol-live-extract \
   --summary-output data/private/audits/week-003-live-next-batch-summary.json
 ```
 
+When the extract includes Email collector invitation rows, audit those rows before sending another batch or leaving reminder follow-up enabled:
+
+```bash
+python3 scripts/cts_ops.py audit-surveyol-invitations \
+  --input-json data/private/surveyol-api/week-003-invitations-extract.json \
+  --output data/private/audits/week-003-invitation-duplicate-audit.json \
+  --fail-on-duplicates
+```
+
+This catches duplicate invitation rows that are not visible in the SurveyOL contact table. Reminder follow-up can resend against invitation rows, so a clean contact export is not enough once invitations already exist.
+
 Sync missing SurveyOL contacts from a private send list with a dry-run first:
 
 ```bash

@@ -361,6 +361,79 @@ def surveyol_contact_duplicate_report(contacts: list[dict[str, Any]], max_duplic
     }
 
 
+def surveyol_invitation_duplicate_report(
+    payload: dict[str, Any],
+    target_email: str = "",
+    max_duplicates: int = 200,
+) -> dict[str, Any]:
+    invitations_raw = payload.get("invitations", [])
+    if not isinstance(invitations_raw, list):
+        raise SystemExit("Invitation extract does not contain a top-level invitations list.")
+
+    groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    status_counts: dict[str, int] = {}
+    reminded_by_title: dict[str, int] = {}
+    missing_email_count = 0
+    target = normalize_email(target_email)
+    target_invitations: list[dict[str, Any]] = []
+
+    for index, invitation in enumerate(invitations_raw):
+        if not isinstance(invitation, dict):
+            continue
+        email = normalize_email(str(invitation.get("email", "")))
+        if not email:
+            missing_email_count += 1
+            continue
+        statuses_raw = invitation.get("statuses", [])
+        statuses = statuses_raw if isinstance(statuses_raw, list) else []
+        normalized_statuses: list[dict[str, str]] = []
+        for status in statuses:
+            if not isinstance(status, dict):
+                continue
+            label = str(status.get("label", "")).strip()
+            title = str(status.get("title", "")).strip()
+            css_class = str(status.get("class", "")).strip()
+            if label:
+                status_counts[label] = status_counts.get(label, 0) + 1
+            if label.lower() == "reminded":
+                reminded_by_title[title] = reminded_by_title.get(title, 0) + 1
+            normalized_statuses.append({"label": label, "title": title, "class": css_class})
+        detail = {
+            "extract_row": index,
+            "email": email,
+            "guid": str(invitation.get("guid", "")).strip(),
+            "statuses": normalized_statuses,
+        }
+        groups[email].append(detail)
+        if target and email == target:
+            target_invitations.append(detail)
+
+    duplicates = [
+        {"email": email, "count": len(items), "invitations": items}
+        for email, items in sorted(groups.items())
+        if len(items) > 1
+    ]
+    return {
+        "source": payload.get("source", ""),
+        "survey_guid": payload.get("survey_guid", payload.get("surveyGuid", "")),
+        "collector_title": payload.get("collector_title", payload.get("collectorTitle", "")),
+        "collector_key": payload.get("collector_key", payload.get("collectorKey", "")),
+        "invitation_row_count": sum(len(items) for items in groups.values()),
+        "missing_email_count": missing_email_count,
+        "unique_email_count": len(groups),
+        "duplicate_email_count": len(duplicates),
+        "duplicate_invitation_count": sum(item["count"] for item in duplicates),
+        "duplicates": duplicates[:max_duplicates],
+        "duplicates_truncated": len(duplicates) > max_duplicates,
+        "status_counts": dict(sorted(status_counts.items())),
+        "reminded_count": status_counts.get("Reminded", 0),
+        "reminded_by_title": dict(sorted(reminded_by_title.items())),
+        "target_email": target,
+        "target_invitation_count": len(target_invitations) if target else None,
+        "target_invitations": target_invitations if target else [],
+    }
+
+
 def normalize_live_extract_contact(contact: dict[str, Any]) -> dict[str, str]:
     first_name = str(contact.get("first_name", contact.get("firstName", "")) or "").strip()
     last_name = str(contact.get("last_name", contact.get("lastName", "")) or "").strip()
@@ -955,6 +1028,31 @@ def cmd_audit_email_duplicates(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_audit_surveyol_invitations(args: argparse.Namespace) -> int:
+    payload = read_json(Path(args.input_json))
+    report = surveyol_invitation_duplicate_report(payload, args.target_email or "", args.max_duplicates)
+    duplicate_email_count = report["duplicate_email_count"]
+    audit = {
+        "generated_at": now_iso(),
+        **review_fields(
+            duplicate_email_count > 0,
+            "The SurveyOL invitation table contains duplicate normalized recipient email addresses. Disable or do not enable reminder follow-up until duplicate invitation rows are resolved.",
+            "Cancel or otherwise resolve extra invitation rows in SurveyOL, re-extract invitation statistics, and re-run this audit before reminder-enabled sends.",
+        ),
+        "input_json": args.input_json,
+        **report,
+    }
+    if args.output:
+        write_json(Path(args.output), audit)
+        print(f"Wrote SurveyOL invitation audit to {args.output}")
+        print_review_notice(audit)
+    else:
+        print(json.dumps(audit, indent=2, ensure_ascii=False))
+    if args.fail_on_duplicates and duplicate_email_count:
+        return 2
+    return 0
+
+
 def cmd_build_send_list(args: argparse.Namespace) -> int:
     registry_path = Path(args.registry_csv)
     records, field_map = registry_records(registry_path, args.require_friendly)
@@ -1091,6 +1189,17 @@ def main() -> int:
     p.add_argument("--fail-on-duplicates", action="store_true", help="exit with status 2 if any duplicate email is found")
     p.add_argument("--max-duplicates", type=int, default=200)
     p.set_defaults(func=cmd_audit_email_duplicates)
+
+    p = subparsers.add_parser(
+        "audit-surveyol-invitations",
+        help="audit a SurveyOL Email collector invitation extract for duplicate recipient email rows",
+    )
+    p.add_argument("--input-json", required=True, help="JSON payload extracted from the live SurveyOL send page")
+    p.add_argument("--output", help="optional JSON audit output")
+    p.add_argument("--target-email", default="", help="optional normalized-recipient drilldown to include in the report")
+    p.add_argument("--fail-on-duplicates", action="store_true", help="exit with status 2 if any duplicate invitation email is found")
+    p.add_argument("--max-duplicates", type=int, default=200)
+    p.set_defaults(func=cmd_audit_surveyol_invitations)
 
     p = subparsers.add_parser("env-doctor", help="check CTS ops env discovery and optionally verify API access")
     p.add_argument("--verify-api", action="store_true", help="also verify SurveyOL API access when a token is present")
