@@ -11,6 +11,7 @@ The weekly CTS cycle has one canonical participant registry, one survey delivery
 - `data/private/` holds raw exports, contact crosswalks, private audits, operational notes, and automation ledgers.
 - `data/public/` plus generated site pages are the only public data surfaces.
 - `data/public/automation-daily-log.json` and `automation-daily-log/index.html` are the public-safe audit trail for every cron run, including no-op and blocked runs.
+- `scripts/publish_static_site.py` is the required publishing path for public site changes. It builds the site, syncs only approved public artifacts to `gh-pages`, pushes the Pages branch, and verifies the live URL.
 
 Historical newsletter or external email-tool evidence may be used as background only when it has already been reflected into `CTS 2026`. It is not an active SurveyOL invitation gate unless CTS explicitly reintroduces that system in this file and in `automation/weekly-process.json`.
 
@@ -55,7 +56,15 @@ Use SurveyOL's manual reminder flow for audited reminder candidates. Do not use 
 
 ## Public Log And Publishing
 
-Every cron run must append or update a public-safe entry in `data/public/automation-daily-log.json`, rebuild the static site, commit the changed public files, and push to the remote before reporting completion.
+Every cron run must append or update a public-safe entry in `data/public/automation-daily-log.json`, commit relevant source/public changes to `main`, then publish through `scripts/publish_static_site.py` before reporting completion. Do not treat a `main` push alone as a completed public update, because GitHub Pages serves `gh-pages`.
+
+Use a command shaped like:
+
+```bash
+python3 scripts/publish_static_site.py \
+  --message "Publish refreshed CTS automation log" \
+  --expect-text "public-safe text from the new log entry"
+```
 
 Public log entries may include counts, dates, statuses, and public URLs. They must not include respondent links, names, email addresses, participant IDs, private raw exports, contact crosswalks, or raw free-text suggestions.
 

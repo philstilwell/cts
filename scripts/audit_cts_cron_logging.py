@@ -12,8 +12,10 @@ REQUIRED_SNIPPETS = (
     'kind = "cron"',
     "CTS_PROCESS_COORDINATION.md",
     "data/public/automation-daily-log.json",
-    "rebuild the static site",
-    "push to the remote",
+    "scripts/publish_static_site.py",
+    "gh-pages",
+    "--expect-text",
+    "live page is verified",
 )
 
 FORBIDDEN_SNIPPETS = (
@@ -23,6 +25,7 @@ FORBIDDEN_SNIPPETS = (
     "automate reminders" " within " "12 " "days",
     "Reminder Follow-up setting is" " set" " to " "automate reminders",
     "surveyol." "reminder-followup-configured",
+    "rebuild the static site, commit the changed public files," " and push to the remote",
 )
 
 

@@ -11,7 +11,7 @@ This file documents the local operational tooling used by the weekly CTS automat
 - Generated audits and dry-run plans include `human_review_required`, `human_review_reason`, and `human_review_next_action` fields. Treat `human_review_required: true` as a hard stop before imports, list mutations, newsletter sends, or survey invitations.
 - For weekly SurveyOL invitation batching, historical external email-tool evidence is background only after it has been reflected into `CTS 2026`, unless CTS explicitly restores another active workflow dependency in `CTS_PROCESS_COORDINATION.md` and `automation/weekly-process.json`. Current invitation blocking follows live SurveyOL evidence plus the canonical `CTS 2026` registry.
 - The finished weekly SurveyOL survey must receive CTS owner approval before the first production invitation batch. This approval is recorded as `surveyol.prelaunch-human-review`; a test send is not required unless the owner explicitly asks for one.
-- The public Reports page includes a rolling survey control board. Any automation that changes that board should rebuild the static site, commit the public status update, and push to the remote before reporting completion.
+- The public Reports page includes a rolling survey control board. Any automation that changes that board should commit the public status update to `main`, publish through `scripts/publish_static_site.py`, and verify the live page before reporting completion.
 - SurveyOL Email collector sending still requires a guarded human/session step unless a documented send endpoint is added later.
 - Weekly automation status boards belong under `data/private/automation-status/`. They show run timestamps, current status, missing/stale evidence, and process coverage/redundancy without exposing private participant data.
 
@@ -291,4 +291,4 @@ Before the first production batch for any weekly survey:
 3. Confirm `public.final-close-date-posted` is recorded after the placeholder/report page and Reports board have been pushed.
 4. Confirm the live Email collector shows `Reminder Follow-up: Off`, `Anonymous Responses: Off`, `Status: Open`, and no unexpected Web Link collector is being distributed.
 5. Use the audited private send list as the source of truth for the first 100 recipients. If direct entry into SurveyOL's `Recipient Email(s)` field is used, save the exact batch CSV privately and record the batch count, cumulative count, remaining estimate, opt-outs, bounces, and daily-limit state after send.
-6. After the send or blocker, update the public-safe automation daily log, rebuild the static site, commit, and push before reporting completion.
+6. After the send or blocker, update the public-safe automation daily log, commit relevant source/public changes to `main`, publish through `scripts/publish_static_site.py`, and verify the live page before reporting completion.

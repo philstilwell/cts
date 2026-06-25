@@ -56,6 +56,16 @@ Run the static build with:
 python3 scripts/build_static_site.py
 ```
 
+Publish public site changes to GitHub Pages with:
+
+```bash
+python3 scripts/publish_static_site.py \
+  --message "Publish refreshed CTS site" \
+  --expect-text "text expected on the live page"
+```
+
+GitHub Pages serves the `gh-pages` branch for this project, so a `main` push alone is not a completed public-site publish.
+
 Refresh the legacy 200-item reference index with:
 
 ```bash

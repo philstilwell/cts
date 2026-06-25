@@ -18,7 +18,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Every weekly SurveyOL Email collector should launch with automatic `Reminder Follow-up` off. Send reminders only through a later manual reminder pass after the live invitation table has been exported or extracted, duplicate-audited, and converted into a reminder candidate list.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
 - Every new weekly SurveyOL survey must be reviewed and approved by the CTS owner before the first production invitation batch. This review replaces any standing internal test-send requirement; perform a test send only when the owner explicitly asks for one or when a specific technical uncertainty warrants it.
-- The Reports page includes a rolling survey control board under the weekly report grid. Any automation that changes a survey's public status on that board should rebuild the static site, commit the changed public files, and push to the remote before reporting the board update as complete.
+- The Reports page includes a rolling survey control board under the weekly report grid. Any automation that changes a survey's public status on that board should commit the changed public/source files to `main`, publish through `scripts/publish_static_site.py`, and verify the live page before reporting the board update as complete.
 
 ## Active Reminders
 
@@ -31,7 +31,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 
 These reminders can execute only when the relevant SurveyOL, Google Sheets, and GitHub access is available. If an authentication step, confirmation code, or safety check blocks a send, the reminder should stop and report the blocker rather than improvising.
 
-Every CTS cron automation, even when it makes no public change or hits a blocker, must write a public-safe record to `data/public/automation-daily-log.json`, rebuild the static site, and push the refreshed `automation-daily-log/` page before the run is considered complete.
+Every CTS cron automation, even when it makes no public change or hits a blocker, must write a public-safe record to `data/public/automation-daily-log.json`, commit relevant source/public changes to `main`, and publish through `scripts/publish_static_site.py` before the run is considered complete. GitHub Pages serves `gh-pages`, so a `main` push alone does not refresh the live site.
 
 ## Automation Status Board
 
@@ -133,7 +133,7 @@ python3 scripts/cts_ops.py surveyol-reminder-due-check \
 14. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
     Do not let older external email-tool notes reopen the invitation gate by accident; record invitation suppression reconciliation against the active SurveyOL plus `CTS 2026` controls unless another dependency has been explicitly restored in `CTS_PROCESS_COORDINATION.md`.
 15. If the suppression CSV was manually reconfirmed or regenerated without changing membership, still refresh its evidence timestamp before rerunning the invitation board so the board reflects the latest review rather than an old embedded `collected_at` date.
-16. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, rebuild the static site, and push the refreshed `automation-daily-log/` page so the public log matches the private ledger.
+16. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, commit relevant source/public changes to `main`, then run `scripts/publish_static_site.py` with an `--expect-text` from the new log entry so the live public log is verified against the private ledger.
 17. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
 
 ## Send Reminders
@@ -213,7 +213,7 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 15. Review free-text suggestions for accidental identifiers before using or publishing them.
 16. Publish the report on the primary CTS website and link it from the reports index.
 17. Create or update the report encapsulation for the next newsletter and the top of the next weekly SurveyOL survey.
-18. Update the rolling survey control board on the Reports page when a survey moves to a new public stage, then commit and push the changed site files.
+18. Update the rolling survey control board on the Reports page when a survey moves to a new public stage, then commit the changed source/public files and publish through `scripts/publish_static_site.py`.
 
 ## Prepare Next Week
 
