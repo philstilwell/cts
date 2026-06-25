@@ -9,7 +9,6 @@ import subprocess
 import sys
 import tempfile
 import time
-import urllib.request
 from pathlib import Path
 
 
@@ -108,24 +107,31 @@ def verify_live(url: str, expected_text: str, timeout_seconds: int, interval_sec
     last_error = ""
     while time.time() < deadline:
         verify_url = f"{url}{'&' if '?' in url else '?'}v={cache_key}"
-        request = urllib.request.Request(
-            verify_url,
-            headers={
-                "Cache-Control": "no-cache",
-                "User-Agent": "cts-publish-static-site/1.0",
-            },
+        result = subprocess.run(
+            [
+                "curl",
+                "-L",
+                "-sS",
+                "--fail",
+                "--max-time",
+                "20",
+                "-H",
+                "Cache-Control: no-cache",
+                "-H",
+                "User-Agent: cts-publish-static-site/1.0",
+                verify_url,
+            ],
+            check=False,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
         )
-        try:
-            with urllib.request.urlopen(request, timeout=20) as response:
-                body = response.read().decode("utf-8", errors="replace")
-                last_modified = response.headers.get("Last-Modified", "unknown")
-        except Exception as exc:  # noqa: BLE001 - report the latest network/deploy failure.
-            last_error = str(exc)
+        if result.returncode != 0:
+            last_error = result.stdout.strip() or f"curl exited {result.returncode}"
+        elif expected_text in result.stdout:
+            print(f"Verified live page: {url}")
+            return
         else:
-            if expected_text in body:
-                print(f"Verified live page: {url}")
-                print(f"Last-Modified: {last_modified}")
-                return
             last_error = f"expected text not found at {verify_url}"
         time.sleep(interval_seconds)
     raise SystemExit(f"Live verification failed after {timeout_seconds}s: {last_error}")
