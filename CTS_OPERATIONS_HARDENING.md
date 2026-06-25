@@ -233,6 +233,15 @@ This catches duplicate invitation rows that are not visible in the SurveyOL cont
 Build manual reminder candidates from the same live invitation extract:
 
 ```bash
+python3 scripts/cts_ops.py surveyol-reminder-due-check \
+  --week week-003 \
+  --first-invitation-date 2026-06-23 \
+  --output data/private/audits/week-003-manual-reminder-due.json
+```
+
+This due check computes the manual reminder window as the first production invitation date plus 12 days. When the window is due, the output is `human_review_required: true` so the automation status board triggers the manual reminder workflow without auto-sending email.
+
+```bash
 python3 scripts/cts_ops.py build-surveyol-reminder-list \
   --input-json data/private/surveyol-api/week-003-invitations-extract.json \
   --output-csv data/private/send-lists/week-003-reminder-candidates.csv \

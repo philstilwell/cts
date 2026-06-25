@@ -15,7 +15,7 @@ import argparse
 from collections import defaultdict
 import csv
 from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 import json
 import os
 from pathlib import Path
@@ -200,6 +200,19 @@ def parse_iso_datetime(value: str) -> datetime | None:
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=timezone.utc)
     return parsed.astimezone(timezone.utc)
+
+
+def parse_date_value(value: str, label: str) -> date:
+    text = value.strip()
+    if not text:
+        raise SystemExit(f"Missing {label}.")
+    try:
+        return date.fromisoformat(text[:10])
+    except ValueError:
+        parsed = parse_iso_datetime(text)
+        if parsed:
+            return parsed.date()
+        raise SystemExit(f"Could not parse {label} as YYYY-MM-DD or ISO datetime: {value!r}.")
 
 
 def require_env(name: str) -> str:
@@ -1187,6 +1200,35 @@ def cmd_build_surveyol_reminder_list(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_surveyol_reminder_due_check(args: argparse.Namespace) -> int:
+    first_invitation_date = parse_date_value(args.first_invitation_date, "--first-invitation-date")
+    as_of_date = parse_date_value(args.as_of, "--as-of") if args.as_of else datetime.now().date()
+    due_date = first_invitation_date + timedelta(days=args.days_after)
+    days_until_due = (due_date - as_of_date).days
+    due = days_until_due <= 0
+    audit = {
+        "generated_at": now_iso(),
+        **review_fields(
+            due,
+            f"Manual reminder window is open: first invitation date {first_invitation_date.isoformat()} + {args.days_after} days = {due_date.isoformat()}.",
+            "Export or extract the live SurveyOL invitation table, run audit-surveyol-invitations, build-surveyol-reminder-list, and send only audited candidates through SurveyOL Reminder Follow-up -> Manually Send.",
+        ),
+        "week": args.week,
+        "status": "due" if due else "not_due",
+        "first_invitation_date": first_invitation_date.isoformat(),
+        "as_of_date": as_of_date.isoformat(),
+        "days_after_first_invitation": args.days_after,
+        "manual_reminder_due_date": due_date.isoformat(),
+        "days_until_due": days_until_due,
+    }
+    write_json(Path(args.output), audit)
+    print(f"Wrote SurveyOL manual reminder due check to {args.output}")
+    print_review_notice(audit)
+    if args.fail_when_due and due:
+        return 2
+    return 0
+
+
 def cmd_build_send_list(args: argparse.Namespace) -> int:
     registry_path = Path(args.registry_csv)
     records, field_map = registry_records(registry_path, args.require_friendly)
@@ -1344,6 +1386,18 @@ def main() -> int:
     p.add_argument("--report-output", required=True, help="JSON audit report for the reminder candidate build")
     p.add_argument("--max-duplicates", type=int, default=200)
     p.set_defaults(func=cmd_build_surveyol_reminder_list)
+
+    p = subparsers.add_parser(
+        "surveyol-reminder-due-check",
+        help="check whether the manual reminder window is due based on first invitation date",
+    )
+    p.add_argument("--week", required=True, help="week id, e.g. week-003")
+    p.add_argument("--first-invitation-date", required=True, help="first production invitation date as YYYY-MM-DD or ISO datetime")
+    p.add_argument("--output", required=True, help="JSON audit output")
+    p.add_argument("--days-after", type=int, default=12, help="manual reminder due offset after the first invitation date")
+    p.add_argument("--as-of", default="", help="optional YYYY-MM-DD/ISO date override for testing or backfills")
+    p.add_argument("--fail-when-due", action="store_true", help="exit with status 2 when the reminder window is due")
+    p.set_defaults(func=cmd_surveyol_reminder_due_check)
 
     p = subparsers.add_parser("env-doctor", help="check CTS ops env discovery and optionally verify API access")
     p.add_argument("--verify-api", action="store_true", help="also verify SurveyOL API access when a token is present")
