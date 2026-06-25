@@ -9,6 +9,7 @@ This file documents the local operational tooling used by the weekly CTS automat
 - The ops CLI does not send SurveyOL invitations.
 - Commands that can change SurveyOL data default to dry-run plans and require `--apply`.
 - Generated audits and dry-run plans include `human_review_required`, `human_review_reason`, and `human_review_next_action` fields. Treat `human_review_required: true` as a hard stop before imports, list mutations, newsletter sends, or survey invitations.
+- For weekly SurveyOL invitation batching, MailerLite is legacy context unless CTS explicitly restores it as an active workflow dependency. Current invitation blocking should follow live SurveyOL evidence plus the canonical `CTS 2026` registry rather than stale MailerLite-specific notes.
 - The finished weekly SurveyOL survey must receive CTS owner approval before the first production invitation batch. This approval is recorded as `surveyol.prelaunch-human-review`; a test send is not required unless the owner explicitly asks for one.
 - The public Reports page includes a rolling survey control board. Any automation that changes that board should rebuild the static site, commit the public status update, and push to the remote before reporting completion.
 - SurveyOL Email collector sending still requires a guarded human/session step unless a documented send endpoint is added later.
