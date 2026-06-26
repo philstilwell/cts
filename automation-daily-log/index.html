@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>4:01:47 PM EDT</strong>
+      <strong>8:10:50 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,17 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-25T20:10:50-04:00"><span class="recorded-date">2026-06-25</span><span class="recorded-time">8:10:50 PM EDT</span></time>
+<span class="log-status">review_required</span></div></td>
+        <td>Week 3 invitations were paused after a duplicate-delivery report.<ul>
+        <li>Reviewed the June 25 Week 3 batch files and confirmed the reported recipient was present once in the private batch CSV.</li>
+        <li>Added a required pre-send audit that compares the exact next batch CSV with the live SurveyOL invitation table before more invitations can be sent.</li>
+        <li>Recorded a private Week 3 blocker for remaining invitations and reminders until the live post-send SurveyOL invitation table is extracted and duplicate-row checks are clean.</li>
+      </ul></td>
+        <td>No additional invitations or reminders should be sent for Week 3 until the fresh SurveyOL invitation-row audit clears the duplicate-delivery concern.</td>
+        <td>Extract the current Week 3 SurveyOL invitation table, rerun the live duplicate-row audit and exact next-batch audit, resolve any duplicate SurveyOL rows found, then clear the private blocker before sending the remaining invitations.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-25T16:01:47-04:00"><span class="recorded-date">2026-06-25</span><span class="recorded-time">4:01:47 PM EDT</span></time>
 <span class="log-status">completed</span></div></td>

@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-25T16:01:47-04:00",
-  "updated_time_et": "4:01:47 PM EDT",
+  "updated_at": "2026-06-25T20:10:50-04:00",
+  "updated_time_et": "8:10:50 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-25",
+      "recorded_at": "2026-06-25T20:10:50-04:00",
+      "recorded_time_et": "8:10:50 PM EDT",
+      "status": "review_required",
+      "summary": "Week 3 invitations were paused after a duplicate-delivery report.",
+      "ran": [
+        "Reviewed the June 25 Week 3 batch files and confirmed the reported recipient was present once in the private batch CSV.",
+        "Added a required pre-send audit that compares the exact next batch CSV with the live SurveyOL invitation table before more invitations can be sent.",
+        "Recorded a private Week 3 blocker for remaining invitations and reminders until the live post-send SurveyOL invitation table is extracted and duplicate-row checks are clean."
+      ],
+      "result": "No additional invitations or reminders should be sent for Week 3 until the fresh SurveyOL invitation-row audit clears the duplicate-delivery concern.",
+      "next": "Extract the current Week 3 SurveyOL invitation table, rerun the live duplicate-row audit and exact next-batch audit, resolve any duplicate SurveyOL rows found, then clear the private blocker before sending the remaining invitations."
+    },
     {
       "date": "2026-06-25",
       "recorded_at": "2026-06-25T16:01:47-04:00",
