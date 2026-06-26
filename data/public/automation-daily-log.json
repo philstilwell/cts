@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-25T20:10:50-04:00",
-  "updated_time_et": "8:10:50 PM EDT",
+  "updated_at": "2026-06-26T11:43:55-04:00",
+  "updated_time_et": "11:43:55 AM EDT",
   "entries": [
+    {
+      "date": "2026-06-26",
+      "recorded_at": "2026-06-26T11:43:55-04:00",
+      "recorded_time_et": "11:43:55 AM EDT",
+      "status": "completed",
+      "summary": "Week 3 final SurveyOL invitation tail batch was queued.",
+      "ran": [
+        "Regenerated the private Week 3 invitation-scope board, reverified the public placeholder page, reports index link, and exact Tuesday, July 14, 2026 final close date from the Tuesday, June 23, 2026 first invitation date.",
+        "Extracted a fresh live SurveyOL invitation table, confirmed Reminder Follow-up Off, Status Open, Anonymous Responses Off, and cleared the duplicate-row concern with a clean invitation audit and exact next-batch-vs-live audit.",
+        "Reconciled six newly observed Week 3 opt-outs into the private SurveyOL suppression file and local CTS 2026 registry export, then queued the duplicate-audited 77-recipient tail batch through the direct Recipient Email(s) fallback."
+      ],
+      "result": "SurveyOL accepted 77 more Week 3 invitations for queueing on Friday, June 26, 2026. Public-safe Week 3 totals are now 377 invitations queued, 18 complete responses, 12 opt-outs, and 0 bounces, with 0 currently eligible contacts remaining uninvited. Reminder Follow-up remains Off, and the exact posted final close date remains Tuesday, July 14, 2026.",
+      "next": "Publish the refreshed control board and automation log, then continue with the Tuesday, June 30, 2026 first-report cycle. Manual reminders are still not due until Saturday, July 5, 2026."
+    },
     {
       "date": "2026-06-25",
       "recorded_at": "2026-06-25T20:10:50-04:00",
