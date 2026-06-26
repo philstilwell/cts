@@ -38,7 +38,9 @@ Before any invitation batch:
 - Confirm `surveyol.reminder-auto-disabled` is recorded. Do not require the older automatic-reminder configuration ledger gate for recurring invitation batches.
 - Reconcile SurveyOL opt-outs, bounces, delivery problems, no-send rows, and `CTS 2026` do-not-email records into the active suppression controls.
 - Audit the send-list CSV, SurveyOL contacts, and, after invitations already exist, the live SurveyOL invitation rows.
+- Compare the exact next batch CSV with the live SurveyOL invitation table. No address already present in SurveyOL invitations may appear in the next batch.
 - Record the batch result under `send.invitation-batch-ledger` and the suppression result under `post-send.suppression-reconcile`.
+- After any send, re-extract or inspect the live SurveyOL invitation table before the next risky action. If a participant reports multiple copies, record a blocker and stop invitations and reminders until the live duplicate-row audit is clean.
 
 ## Reminder Policy
 

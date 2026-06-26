@@ -231,6 +231,18 @@ python3 scripts/cts_ops.py audit-surveyol-invitations \
 
 This catches duplicate invitation rows that are not visible in the SurveyOL contact table. Reminder follow-up sends against invitation rows, so a clean contact export is not enough once invitations already exist.
 
+Before sending the exact next batch, compare the batch CSV to the same fresh live invitation extract:
+
+```bash
+python3 scripts/cts_ops.py audit-batch-against-invitations \
+  --batch-csv data/private/send-lists/week-003-batch-003-2026-06-25.csv \
+  --invitation-json data/private/surveyol-api/week-003-invitations-extract.json \
+  --output data/private/audits/week-003-next-batch-live-audit.json \
+  --fail-on-blockers
+```
+
+This is a hard send gate. It blocks if the batch contains a duplicate address, if any planned address already appears in SurveyOL invitations, or if SurveyOL already has duplicate invitation rows. Direct entry in the SurveyOL `Recipient Email(s)` field is allowed only after this audit passes.
+
 Build manual reminder candidates from the same live invitation extract:
 
 ```bash
@@ -290,5 +302,6 @@ Before the first production batch for any weekly survey:
 2. Confirm `surveyol.prelaunch-human-review` is recorded after owner approval of the finished survey, not merely after automated draft creation.
 3. Confirm `public.final-close-date-posted` is recorded after the placeholder/report page and Reports board have been pushed.
 4. Confirm the live Email collector shows `Reminder Follow-up: Off`, `Anonymous Responses: Off`, `Status: Open`, and no unexpected Web Link collector is being distributed.
-5. Use the audited private send list as the source of truth for the first 100 recipients. If direct entry into SurveyOL's `Recipient Email(s)` field is used, save the exact batch CSV privately and record the batch count, cumulative count, remaining estimate, opt-outs, bounces, and daily-limit state after send.
+5. Use the audited private send list as the source of truth for the first 100 recipients. If direct entry into SurveyOL's `Recipient Email(s)` field is used, save the exact batch CSV privately and record the batch count, cumulative count, remaining estimate, opt-outs, bounces, and daily-limit state after send. For later batches, first run `audit-batch-against-invitations --fail-on-blockers` against a fresh live invitation extract.
+6. After any send, re-extract or inspect the live SurveyOL invitation table before the next invitation or reminder action. If a participant reports multiple copies, record a private blocker and stop until the live duplicate-row audit is clean.
 6. After the send or blocker, update the public-safe automation daily log, commit relevant source/public changes to `main`, publish through `scripts/publish_static_site.py`, and verify the live page before reporting completion.

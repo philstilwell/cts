@@ -1170,6 +1170,92 @@ def cmd_audit_surveyol_invitations(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_audit_batch_against_invitations(args: argparse.Namespace) -> int:
+    headers, rows = read_csv(Path(args.batch_csv))
+    email_field = require_email_field(headers, Path(args.batch_csv), args.email_field or "")
+    invitation_payload = read_json(Path(args.invitation_json))
+    invitation_report = surveyol_invitation_duplicate_report(invitation_payload, "", args.max_conflicts)
+
+    batch_groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for index, row in enumerate(rows, start=2):
+        email = normalize_email(row.get(email_field))
+        if not email:
+            continue
+        batch_groups[email].append({"csv_row": index, "email": email})
+
+    invited_emails: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for invitation in invitation_payload.get("invitations", []):
+        if not isinstance(invitation, dict):
+            continue
+        email = normalize_email(str(invitation.get("email", "")))
+        if not email:
+            continue
+        invited_emails[email].append(
+            {
+                "guid": str(invitation.get("guid", "")).strip(),
+                "statuses": invitation_status_details(invitation),
+            }
+        )
+
+    batch_duplicates = [
+        {"email": email, "count": len(items), "rows": items}
+        for email, items in sorted(batch_groups.items())
+        if len(items) > 1
+    ]
+    already_invited = [
+        {
+            "email": email,
+            "batch_rows": batch_groups[email],
+            "existing_invitation_count": len(invited_emails[email]),
+            "existing_invitations": invited_emails[email],
+        }
+        for email in sorted(batch_groups)
+        if email in invited_emails
+    ]
+    blockers = []
+    if batch_duplicates:
+        blockers.append("The planned batch CSV contains duplicate email addresses.")
+    if already_invited:
+        blockers.append("The planned batch includes one or more recipients already present in SurveyOL invitations.")
+    if invitation_report["duplicate_email_count"] > 0:
+        blockers.append("The live SurveyOL invitation table already contains duplicate email rows.")
+    review_required = bool(blockers)
+    audit = {
+        "generated_at": now_iso(),
+        **review_fields(
+            review_required,
+            " ".join(blockers),
+            "Rebuild the batch from a fresh live SurveyOL invitation extract, resolve any duplicate invitation rows in SurveyOL, and rerun this audit before sending invitations or reminders.",
+        ),
+        "batch_csv": args.batch_csv,
+        "batch_email_field": email_field,
+        "invitation_json": args.invitation_json,
+        "batch_row_count": len(rows),
+        "batch_unique_email_count": len(batch_groups),
+        "batch_duplicate_email_count": len(batch_duplicates),
+        "already_invited_email_count": len(already_invited),
+        "invitation_row_count": invitation_report["invitation_row_count"],
+        "invitation_unique_email_count": invitation_report["unique_email_count"],
+        "invitation_duplicate_email_count": invitation_report["duplicate_email_count"],
+        "safe_to_send": not review_required,
+        "batch_duplicates": batch_duplicates[: args.max_conflicts],
+        "batch_duplicates_truncated": len(batch_duplicates) > args.max_conflicts,
+        "already_invited": already_invited[: args.max_conflicts],
+        "already_invited_truncated": len(already_invited) > args.max_conflicts,
+        "invitation_duplicates": invitation_report["duplicates"],
+        "invitation_duplicates_truncated": invitation_report["duplicates_truncated"],
+    }
+    if args.output:
+        write_json(Path(args.output), audit)
+        print(f"Wrote batch-vs-invitations audit to {args.output}")
+        print_review_notice(audit)
+    else:
+        print(json.dumps(audit, indent=2, ensure_ascii=False))
+    if args.fail_on_blockers and review_required:
+        return 2
+    return 0
+
+
 def cmd_build_surveyol_reminder_list(args: argparse.Namespace) -> int:
     payload = read_json(Path(args.input_json))
     report = surveyol_reminder_candidate_report(payload, args.max_duplicates)
@@ -1376,6 +1462,18 @@ def main() -> int:
     p.add_argument("--fail-on-duplicates", action="store_true", help="exit with status 2 if any duplicate invitation email is found")
     p.add_argument("--max-duplicates", type=int, default=200)
     p.set_defaults(func=cmd_audit_surveyol_invitations)
+
+    p = subparsers.add_parser(
+        "audit-batch-against-invitations",
+        help="audit the exact next invitation batch against live SurveyOL invitation rows before sending",
+    )
+    p.add_argument("--batch-csv", required=True, help="exact private CSV planned for the next SurveyOL invitation batch")
+    p.add_argument("--invitation-json", required=True, help="fresh JSON payload extracted from the live SurveyOL send page")
+    p.add_argument("--output", help="optional JSON audit output")
+    p.add_argument("--email-field", default="", help="optional explicit email column name in the batch CSV")
+    p.add_argument("--fail-on-blockers", action="store_true", help="exit with status 2 if the batch is unsafe to send")
+    p.add_argument("--max-conflicts", type=int, default=200)
+    p.set_defaults(func=cmd_audit_batch_against_invitations)
 
     p = subparsers.add_parser(
         "build-surveyol-reminder-list",
