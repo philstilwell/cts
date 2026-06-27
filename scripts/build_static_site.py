@@ -16,7 +16,7 @@ SITE_DESCRIPTION = (
     "participant-voted questions, and responsible data releases."
 )
 SITE_URL = "https://christianthoughtsurvey.com"
-CSS_VERSION = "20260623-tuesday-report"
+CSS_VERSION = "20260627-callout-spacing"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
 UPDATED = "June 23, 2026"
 SITEMAP_LASTMOD = "2026-06-23"
