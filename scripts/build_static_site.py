@@ -862,14 +862,11 @@ PAGES = [
   </ul>
 
   <h2>Project overview pages</h2>
-  <p>The old WordPress menu now keeps project background and citation guidance under Project Overview rather than inside the previous-results archive.</p>
   <ul>
     <li><a href="https://christianthoughtsurvey.wordpress.com/overview/">Project Overview</a></li>
     <li><a href="https://christianthoughtsurvey.wordpress.com/cts-q-a/">CTS Q&amp;A</a></li>
     <li><a href="https://christianthoughtsurvey.wordpress.com/citation-policy/">Citation Policy</a></li>
   </ul>
-
-  <p>Individual 2022-2023 item pages remain published and can still be reached through their direct URLs and tags.</p>
 </div>
 """,
     ),
