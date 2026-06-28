@@ -852,7 +852,7 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>The original Christian Thought Survey project produced long-form surveys, item-level pages, mini-surveys, and extensive result reports. Those materials are gathered here as a reference archive for readers who want to revisit the earlier CTS work.</p>
+  <p>The original Christian Thought Survey project produced extensive result reports. Those materials are gathered here as a reference archive for readers who want to revisit the earlier CTS work.</p>
 
   <p>The current 2026 weekly survey materials now live on the <a href="{weekly_url}">Weekly Survey Reports</a> page so the legacy archive can remain focused on the earlier project.</p>
 
