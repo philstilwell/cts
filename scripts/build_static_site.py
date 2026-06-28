@@ -861,14 +861,6 @@ PAGES = [
     <li><a href="https://christianthoughtsurvey.wordpress.com/cts-2023-results/">2023 Full Results</a></li>
   </ul>
 
-  <h2>Supplemental pages</h2>
-  <ul>
-    <li><a href="https://christianthoughtsurvey.wordpress.com/mini-surveys/">Mini-Surveys</a></li>
-    <li><a href="https://christianthoughtsurvey.wordpress.com/christianity-donald-trump-mini-survey/">Christianity &amp; Donald Trump Mini-Survey</a></li>
-    <li><a href="https://christianthoughtsurvey.wordpress.com/a-facebook-surprise/">A Facebook Surprise</a></li>
-    <li><a href="https://christianthoughtsurvey.wordpress.com/all-2023a-items/">All 2023 Items</a></li>
-  </ul>
-
   <h2>Project overview pages</h2>
   <p>The old WordPress menu now keeps project background and citation guidance under Project Overview rather than inside the previous-results archive.</p>
   <ul>
