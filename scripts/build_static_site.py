@@ -846,10 +846,7 @@ PAGES = [
         nav_label="Archive",
         title="Previous Results Archive",
         eyebrow="Reference library",
-        description=(
-            "A gathered archive for the original CTS long-form surveys, item-level "
-            "pages, mini-surveys, and public results reports."
-        ),
+        description="A gathered archive for the original CTS public results reports.",
         content="""
 <div class="wp-content">
   <p>The original Christian Thought Survey project produced extensive result reports. Those materials are gathered here as a reference archive for readers who want to revisit the earlier CTS work.</p>
