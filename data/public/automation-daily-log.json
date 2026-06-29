@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-06-29T10:02:45-04:00",
-  "updated_time_et": "10:02:45 AM EDT",
+  "updated_at": "2026-06-29T16:04:44-04:00",
+  "updated_time_et": "4:04:44 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-29",
+      "recorded_at": "2026-06-29T16:04:44-04:00",
+      "recorded_time_et": "4:04:44 PM EDT",
+      "status": "review_required",
+      "summary": "Week 4 list hygiene refreshed private SurveyOL evidence but kept send gates closed.",
+      "ran": [
+        "Read the CTS coordination contract, weekly runbook, and operations-hardening notes before list action.",
+        "Verified SurveyOL API access, refreshed the private SurveyOL contact export, rebuilt the Week 4 private send list and crosswalk, audited duplicate emails, and generated a dry-run contact sync plan.",
+        "Inspected generated review flags and recorded the Week 4 private ledger/status evidence without sending invitations or applying external list changes."
+      ],
+      "result": "The private Week 4 send list contains 365 eligible rows after applying 26 active SurveyOL no-send suppressions plus CTS 2026 do-not-email/outreach-hold exclusions. Duplicate-email audits are clean, SurveyOL contacts remain at 391 unique emails, and the dry-run sync plan found zero missing contacts or actions. Human review remains required because the send-list audit and dry-run sync plan require approval, and the SurveyOL no-send source still needs fresh export or manual reconfirmation before invitations.",
+      "next": "Review the private Week 4 send-list audit, reconfirm current SurveyOL no-send suppressions, finish Week 4 launch gates, then rerun the invitation board before any send."
+    },
     {
       "date": "2026-06-29",
       "recorded_at": "2026-06-29T10:02:45-04:00",
