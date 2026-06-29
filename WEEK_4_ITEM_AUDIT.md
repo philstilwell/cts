@@ -22,13 +22,13 @@ Default response format: 0 = strongly disagree, 50 = unsure/mixed, 100 = strongl
 2. Scripture permits women to serve as elders or overseers in the local church.
 3. Scripture permits women to serve as deacons in the local church.
 4. The New Testament restricts women from exercising final governing authority over men in the local church.
-5. Complementarian restrictions on office often cause churches to underuse women's spiritual gifts.
+5. Women's spiritual gifts are often underused due to vaguely defined restrictions on roles.
 6. Egalitarian interpretations of the relevant biblical texts are exegetically plausible.
 7. A church's position on women serving as elders should be treated as a first-order doctrinal issue.
-8. Churches should normally separate from one another over incompatible positions on women serving as elders.
-9. Complementarian churches should include women in major decision-making even when final elder authority is male-only.
-10. Over the next 20 years, evangelical churches will become substantially more egalitarian in practice.
-11. Churches should clearly define which teaching roles are reserved for elders before restricting women from those roles.
+8. Churches should normally disassociate from one another over incompatible positions on women serving as elders.
+9. Churches should include women in major decision-making even when final elder authority is male-only.
+10. For better or worse, over the next 20 years, evangelical churches will become substantially more egalitarian in their leadership roles for men and women.
+11. Women in the church are eligible to teach teenage boys.
 12. Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office.
 
 ## Independent Live Items

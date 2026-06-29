@@ -86,22 +86,26 @@ Strong tension items:
 - Q4: The New Testament restricts women from exercising final governing authority over men in the local church.
 - Q6: Egalitarian interpretations of the relevant biblical texts are exegetically plausible.
 - Q7: A church's position on women serving as elders should be treated as a first-order doctrinal issue.
-- Q8: Churches should normally separate from one another over incompatible positions on women serving as elders.
-- Q10: Over the next 20 years, evangelical churches will become substantially more egalitarian in practice.
+- Q8: Churches should normally disassociate from one another over incompatible positions on women serving as elders.
+- Q10: For better or worse, over the next 20 years, evangelical churches will become substantially more egalitarian in their leadership roles for men and women.
+- Q11: Women in the church are eligible to teach teenage boys.
 
 Possible consensus-prone items:
 
-- Q5: Complementarian churches often fail to make adequate use of women's spiritual gifts.
-- Q9: Even in complementarian churches, women should have meaningful involvement in major church decision-making.
-- Q12: Churches should evaluate leadership gifts in women with the same seriousness they apply to leadership gifts in men.
+- Q5: Women's spiritual gifts are often underused due to vaguely defined restrictions on roles.
+- Q9: Churches should include women in major decision-making even when final elder authority is male-only.
+- Q12: Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office.
 
-Suggested sharpening before fielding:
+Accepted sharpening before fielding:
 
-- Q5 could become: "Complementarian restrictions on office often cause churches to underuse women's spiritual gifts."
-- Q9 could become: "Complementarian churches should include women in major decision-making even when final elder authority is male-only."
-- Q12 could become: "Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office."
+- Q5 was revised to focus on vaguely defined role restrictions rather than complementarian churches generally.
+- Q8 was revised from "separate from" to "disassociate from" to sharpen the institutional-boundary question.
+- Q9 was revised to remove the complementarian qualifier and test the decision-making claim more directly.
+- Q10 was revised to add "for better or worse" and specify leadership roles for men and women.
+- Q11 was revised to test a concrete boundary case: whether women in the church are eligible to teach teenage boys.
+- Q12 was revised to focus on formal evaluation even when some offices remain unavailable.
 
-Recommendation: fieldable now. Consider sharpening Q5, Q9, and Q12 only if the survey needs more distributional spread.
+Recommendation: fieldable with the accepted owner edits above. No additional topic wording changes are currently recommended before launch.
 
 ## Cross-Topic Recommendation
 

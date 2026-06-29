@@ -26,25 +26,32 @@ Preview of upcoming topics for Week 4:
 
 ## Survey Sections
 
-1. Previous-results encapsulation: Week 3 preliminary results summary and link.
-2. Featured Topic header image immediately before the current-topic introduction line.
-3. One CTS-administered topic: Women in Church Leadership, 12 credence slider items.
-4. Three Week 4 participant-vote-determined independent live items from the Week 3 ballot leaders. Draft placeholders are included pending Week 3 ballot-result review.
-5. A 7-item participant-nominated item ballot for future live items. Draft placeholders are included pending Week 3 suggestion review.
-6. A suggestion text box for future participant-nominated survey items.
-7. A preview of upcoming topics.
+1. Previous-results note and standardized `CTS REPORTS` link.
+2. One-off note about the previous duplicate email reminder bug.
+3. Featured Topic header image immediately before the current-topic introduction line.
+4. One CTS-administered topic: Women in Church Leadership, 12 credence slider items.
+5. Three Week 4 participant-vote-determined independent live items from the Week 3 ballot leaders. Draft placeholders are included pending Week 3 ballot-result review.
+6. A 7-item participant-nominated item ballot for future live items. Draft placeholders are included pending Week 3 suggestion review.
+7. A suggestion text box for future participant-nominated survey items.
+8. A preview of upcoming topics.
 
-## Previous-Results Encapsulation
+## Previous-Results Link And One-Off Note
 
 Text:
 
-Last week's preliminary report is being prepared for Week 3, Pastoral Authority and Accountability. The report will summarize how participants responded to questions about legitimate pastoral authority, accountability safeguards, complaint procedures, spiritual-abuse language, and the difference between biblical submission and unquestioning compliance. The report is preliminary and will be refreshed each Tuesday morning while the survey remains open.
+Our previous weekly surveys have been updated.
 
 SurveyOL link:
 
-Full report: Week 003 Survey Results
+CTS REPORTS
 
-Make `Week 003 Survey Results` an actual rich-text hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/week-003-pastoral-authority-and-accountability/`. Style the linked label as bold, underlined, header-accent colored (`#553e15` in the current styling), and enlarged with `X↑` twice. Do not display the raw URL in participant-facing survey text.
+Make `CTS REPORTS` an actual rich-text hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/`. Style the linked label as bold, underlined, header-accent colored (`#553e15` in the current styling), and enlarged with `X↑` twice. Do not display the raw URL in participant-facing survey text. Use `CTS REPORTS` as the standard participant-facing reports link label in future weekly surveys.
+
+One-off Week 4 note:
+
+Some of you reported duplicate email reminders last week. We apologize for this annoyance and appreciate those of you who provided a heads-up on this issue. We're hoping that bug won't reappear. Thanks.
+
+This email-reminder bug note is a one-off Week 4 operational note and should not be carried forward as standing weekly survey copy.
 
 ## A. CTS-Administered Topic
 
@@ -54,13 +61,13 @@ Topic: Women in Church Leadership
 2. Scripture permits women to serve as elders or overseers in the local church.
 3. Scripture permits women to serve as deacons in the local church.
 4. The New Testament restricts women from exercising final governing authority over men in the local church.
-5. Complementarian restrictions on office often cause churches to underuse women's spiritual gifts.
+5. Women's spiritual gifts are often underused due to vaguely defined restrictions on roles.
 6. Egalitarian interpretations of the relevant biblical texts are exegetically plausible.
 7. A church's position on women serving as elders should be treated as a first-order doctrinal issue.
-8. Churches should normally separate from one another over incompatible positions on women serving as elders.
-9. Complementarian churches should include women in major decision-making even when final elder authority is male-only.
-10. Over the next 20 years, evangelical churches will become substantially more egalitarian in practice.
-11. Churches should clearly define which teaching roles are reserved for elders before restricting women from those roles.
+8. Churches should normally disassociate from one another over incompatible positions on women serving as elders.
+9. Churches should include women in major decision-making even when final elder authority is male-only.
+10. For better or worse, over the next 20 years, evangelical churches will become substantially more egalitarian in their leadership roles for men and women.
+11. Women in the church are eligible to teach teenage boys.
 12. Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office.
 
 ## B. Week 4 Participant-Vote-Determined Independent Items
@@ -118,20 +125,20 @@ Featured topic header placement rule: place the Featured Topic header image afte
 
 SurveyOL topic-introduction style rule: make the main-topic line bold and enlarge it with `X↑` twice. Highlight only the topic name with the header gold background (`#e0a550`) and dark header text (`#553e15`). Keep the response-format line below it bold in black.
 
-After importing Block 1, edit `Week 003 Survey Results` in SurveyOL's rich-text editor so it is an actual hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/week-003-pastoral-authority-and-accountability/`. Style the linked label as bold, underlined, header-accent colored (`#553e15` in the current styling), and enlarged with `X↑` twice. Do not leave a raw report URL visible to participants.
+After importing Block 1, edit `CTS REPORTS` in SurveyOL's rich-text editor so it is an actual hyperlink to `https://christianthoughtsurvey.com/weekly-survey-reports/`. Style the linked label as bold, underlined, header-accent colored (`#553e15` in the current styling), and enlarged with `X↑` twice. Do not leave a raw report URL visible to participants. The duplicate-reminder note in Block 1 is a one-off Week 4 note.
 
 ### Block 1
 
 ```text
 [Text]
-Last week's preliminary report is being prepared for Week 3, Pastoral Authority and Accountability. The report will summarize how participants responded to questions about legitimate pastoral authority, accountability safeguards, complaint procedures, spiritual-abuse language, and the difference between biblical submission and unquestioning compliance. The report is preliminary and will be refreshed each Tuesday morning while the survey remains open.
+Our previous weekly surveys have been updated. CTS REPORTS
 
-Full report: Week 003 Survey Results
+[Text]
+Some of you reported duplicate email reminders last week. We apologize for this annoyance and appreciate those of you who provided a heads-up on this issue. We're hoping that bug won't reappear. Thanks.
 
 [Text]
 ◉ Main topic for the first 12 survey items: Women in Church Leadership.
-
-Default response format for live survey items: 0 = strongly disagree, 50 = unsure/mixed, 100 = strongly agree.
+Response format: 0 = strongly disagree, 50 = unsure/mixed, 100 = strongly agree.
 
 [Slider][Required]
 Scripture permits women to preach to mixed adult congregations in the gathered church.
@@ -150,7 +157,7 @@ The New Testament restricts women from exercising final governing authority over
 
 ```text
 [Slider][Required]
-Complementarian restrictions on office often cause churches to underuse women's spiritual gifts.
+Women's spiritual gifts are often underused due to vaguely defined restrictions on roles.
 
 [Slider][Required]
 Egalitarian interpretations of the relevant biblical texts are exegetically plausible.
@@ -159,16 +166,16 @@ Egalitarian interpretations of the relevant biblical texts are exegetically plau
 A church's position on women serving as elders should be treated as a first-order doctrinal issue.
 
 [Slider][Required]
-Churches should normally separate from one another over incompatible positions on women serving as elders.
+Churches should normally disassociate from one another over incompatible positions on women serving as elders.
 
 [Slider][Required]
-Complementarian churches should include women in major decision-making even when final elder authority is male-only.
+Churches should include women in major decision-making even when final elder authority is male-only.
 
 [Slider][Required]
-Over the next 20 years, evangelical churches will become substantially more egalitarian in practice.
+For better or worse, over the next 20 years, evangelical churches will become substantially more egalitarian in their leadership roles for men and women.
 
 [Slider][Required]
-Churches should clearly define which teaching roles are reserved for elders before restricting women from those roles.
+Women in the church are eligible to teach teenage boys.
 
 [Slider][Required]
 Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office.
