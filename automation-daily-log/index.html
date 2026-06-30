@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>4:45:00 PM EDT</strong>
+      <strong>5:05:00 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,18 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-30T17:05:00-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">5:05:00 PM EDT</span></time>
+<span class="log-status">week-4-send-blocker-diagnosed</span></div></td>
+        <td>Week 4 invitation retry diagnosed SurveyOL email sending as temporarily disabled.<ul>
+        <li>Reopened the Week 4 SurveyOL Email collector and confirmed the live invitation count remained 0.</li>
+        <li>Exposed the SurveyOL Email invitation editor and found the platform banner stating that email sending is temporarily disabled.</li>
+        <li>Confirmed the earlier unsuccessful send acceptance was a SurveyOL send-availability blocker, not a duplicate-audit or recipient-list failure.</li>
+        <li>Updated the CTS runbook, coordination contract, and automation manifest so future sends check the SurveyOL send-enabled gate before retrying a batch.</li>
+      </ul></td>
+        <td>No Week 4 invitations were sent or queued. The Email collector remains ready but SurveyOL email sending is temporarily disabled; 364 eligible contacts remain uninvited and the posted final close date remains Monday, July 20, 2026 until a first production send actually occurs.</td>
+        <td>Retry only after SurveyOL no longer shows the temporary email-sending-disabled banner, then recheck collector settings, regenerate the launch/invitation board, duplicate-audit the exact first batch, and verify the invitation count increases.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-30T16:45:00-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">4:45:00 PM EDT</span></time>
 <span class="log-status">week-4-invitation-batch-blocked</span></div></td>
@@ -412,19 +424,6 @@
       </ul></td>
         <td>100 invitations were queued in this batch, bringing the Week 2 cumulative invitation count to 390. Public-safe post-send totals were 23 completes, 14 opt-outs, and 0 bounces, with an estimated 19 eligible contacts still uninvited. SurveyOL then reached its daily sending limit for June 19, 2026.</td>
         <td>Resume at the next allowed send window if eligible contacts remain; the next guarded batch should be the final Week 2 invitation slice if no new review gate appears.</td>
-      </tr>
-      <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-19T13:40:13-04:00"><span class="recorded-date">2026-06-19</span><span class="recorded-time">1:40:13 PM EDT</span></time>
-<span class="log-status">Week 2 check rerun</span></div></td>
-        <td>Reran the Week 2 invitation check and corrected the stale schedule note that had implied a 2:30 PM trigger.<ul>
-        <li>Regenerated the private Week 2 invitation-scope status board.</li>
-        <li>Reconfirmed the Week 2 placeholder page and the reports index link.</li>
-        <li>Checked CTS ops environment readiness for API-backed suppression hygiene.</li>
-        <li>Confirmed the actual automation schedule remains 11:30 AM Eastern, Wednesday through Saturday.</li>
-        <li>Corrected the stale public-safe 2:30 PM schedule note.</li>
-      </ul></td>
-        <td>No invitations were sent in the manual rerun. The actual remaining blocker is unchanged: `SURVEYOL_API_TOKEN` is still unavailable for API-backed CTS ops hygiene commands. Last known public-safe SurveyOL totals remain 290 invitations, 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited.</td>
-        <td>Before the next batch, restore the SurveyOL API token or use the existing SurveyOL live-extract fallback, then rerun the invitation checks with SurveyOL no-send suppressions as the controlling list.</td>
       </tr>
       </tbody>
     </table>
