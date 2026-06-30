@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-06-30T09:10:39-04:00",
-  "updated_time_et": "9:10:39 AM EDT",
+  "updated_at": "2026-06-30T10:32:12-04:00",
+  "updated_time_et": "10:32:12 AM EDT",
   "entries": [
+    {
+      "date": "2026-06-30",
+      "recorded_at": "2026-06-30T10:32:12-04:00",
+      "recorded_time_et": "10:32:12 AM EDT",
+      "status": "not_due",
+      "summary": "Three-week close check found no active SurveyOL survey due today.",
+      "ran": [
+        "Read the CTS coordination contract and weekly runbook before close-scope action.",
+        "Regenerated the private Week 1 close-scope status board and recorded a fresh not_due close ledger entry.",
+        "Verified Week 1 final close as Wednesday, July 1, 2026 across the public report page, reports index/control board, reporting config, and private final-close ledger.",
+        "Reconfirmed Week 2 final close as Tuesday, July 7, 2026 and Week 3 final close as Tuesday, July 14, 2026 from their first production invitation dates."
+      ],
+      "result": "No SurveyOL collector was closed and no final raw export or final public report was generated. Week 1 is not due until Wednesday, July 1, 2026; Week 2 is not due until Tuesday, July 7, 2026; Week 3 is not due until Tuesday, July 14, 2026.",
+      "next": "Run the July 1 close check for Week 1 before closing or finalizing any collector."
+    },
     {
       "date": "2026-06-30",
       "recorded_at": "2026-06-30T09:10:39-04:00",
