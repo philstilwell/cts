@@ -113,11 +113,12 @@ The encapsulation should be short enough to scan quickly and should include:
 2. The SurveyOL Email collector must be `Open` with `Anonymous Responses` set to `Off` so exports can include email identity for private matching. Close or do not distribute Web Link collectors unless CTS intentionally wants an unmapped public response channel.
 3. Confirm the CTS owner has reviewed the finished weekly survey and explicitly approved the first production invitation batch. Record `surveyol.prelaunch-human-review` in the private automation ledger before any production invitations are sent. This is a hard gate; an internal test send is not a standing requirement.
 4. Confirm the Email collector `Reminder Follow-up` is off before the first production invitation batch, and record `surveyol.reminder-auto-disabled` in the private automation ledger. That ledger record remains a hard gate for later Wednesday-Saturday batches as well, so the invitation-scope board should surface it until all invitations are sent. Do not enable automated reminders as the standing weekly default.
-5. Build the SurveyOL recipient list from the canonical `CTS 2026` participant registry. Include only eligible records with `Name`, `Primary Email Address`, `Participant ID`, and `Email Key`, and exclude records marked `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
-6. Audit the exact CSV that will be imported or used for recipient targeting with `scripts/cts_ops.py audit-email-duplicates --fail-on-duplicates`. Any duplicate normalized email address is a hard stop until corrected.
-7. Export or inspect the live SurveyOL contact table before each invitation batch. If any SurveyOL contact email appears more than once, stop sending until the extra contact records are merged or deleted.
-8. After any SurveyOL invitations exist, export or extract the live Email collector invitation table and audit it with `scripts/cts_ops.py audit-surveyol-invitations --fail-on-duplicates`. Any duplicate normalized invitation email is a hard stop before sending more invitations or sending reminders.
-9. Before sending the exact next batch, compare that batch CSV to the fresh live invitation extract:
+5. Open or expose the SurveyOL Email invitation editor before preparing the final send. Stop if SurveyOL shows "The email sending functionality is temporarily disabled" or if an authenticated save returns `successful:false` without increasing the live `Invitations` count. Record the blocker instead of retrying the same batch; this is a SurveyOL send-availability gate, not a recipient-list defect.
+6. Build the SurveyOL recipient list from the canonical `CTS 2026` participant registry. Include only eligible records with `Name`, `Primary Email Address`, `Participant ID`, and `Email Key`, and exclude records marked `Do Not Email? = Yes`, unsubscribed, opted out, bounced, or otherwise suppressed.
+7. Audit the exact CSV that will be imported or used for recipient targeting with `scripts/cts_ops.py audit-email-duplicates --fail-on-duplicates`. Any duplicate normalized email address is a hard stop until corrected.
+8. Export or inspect the live SurveyOL contact table before each invitation batch. If any SurveyOL contact email appears more than once, stop sending until the extra contact records are merged or deleted.
+9. After any SurveyOL invitations exist, export or extract the live Email collector invitation table and audit it with `scripts/cts_ops.py audit-surveyol-invitations --fail-on-duplicates`. Any duplicate normalized invitation email is a hard stop before sending more invitations or sending reminders.
+10. Before sending the exact next batch, compare that batch CSV to the fresh live invitation extract:
 
 ```bash
 python3 scripts/cts_ops.py audit-batch-against-invitations \
@@ -127,13 +128,13 @@ python3 scripts/cts_ops.py audit-batch-against-invitations \
   --fail-on-blockers
 ```
 
-10. Stop if the batch-vs-live audit finds any planned recipient already present in SurveyOL invitations, any duplicate inside the batch, or any duplicate already in SurveyOL. Rebuild from a fresh extract and resolve SurveyOL rows before sending.
-11. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
-12. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
-13. For a small tail batch, prefer the simplest stable SurveyOL send path only after the batch-vs-live audit passes. If the live contact-table checkbox UI is fragile, row selection opens edit dialogs, or the remaining list is already known from the guarded send audit, use the `Recipient Email(s)` field directly with the verified remaining addresses instead of forcing another checkbox-based selection pass. Record that direct-entry fallback was used.
-14. After each send, re-extract or inspect SurveyOL invitations before the next risky action. If anyone reports multiple copies, record a private blocker and do not send more invitations or reminders until the live duplicate-row audit is clean.
-15. After the first production invitation batch is actually sent, verify that the public page's final close date equals that send date plus 20 days. If the actual send date differs from the planned launch date, correct the public page, reports index, reporting config, and automation ledger before the next public status update.
-16. After the first production invitation batch is actually sent, record or generate the day-12 manual reminder due check:
+11. Stop if the batch-vs-live audit finds any planned recipient already present in SurveyOL invitations, any duplicate inside the batch, or any duplicate already in SurveyOL. Rebuild from a fresh extract and resolve SurveyOL rows before sending.
+12. Include stable private join fields in SurveyOL contact fields when SurveyOL supports them: `Participant ID` and `Email Key`. If SurveyOL does not export contact custom fields, save the exact send-list crosswalk privately for that week.
+13. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
+14. For a small tail batch, prefer the simplest stable SurveyOL send path only after the batch-vs-live audit passes. If the live contact-table checkbox UI is fragile, row selection opens edit dialogs, or the remaining list is already known from the guarded send audit, use the `Recipient Email(s)` field directly with the verified remaining addresses instead of forcing another checkbox-based selection pass. Record that direct-entry fallback was used.
+15. After each send, re-extract or inspect SurveyOL invitations before the next risky action. If anyone reports multiple copies, record a private blocker and do not send more invitations or reminders until the live duplicate-row audit is clean.
+16. After the first production invitation batch is actually sent, verify that the public page's final close date equals that send date plus 20 days. If the actual send date differs from the planned launch date, correct the public page, reports index, reporting config, and automation ledger before the next public status update.
+17. After the first production invitation batch is actually sent, record or generate the day-12 manual reminder due check:
 
 ```bash
 python3 scripts/cts_ops.py surveyol-reminder-due-check \
@@ -142,11 +143,11 @@ python3 scripts/cts_ops.py surveyol-reminder-due-check \
   --output data/private/audits/week-XXX-manual-reminder-due.json
 ```
 
-17. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
+18. After each send, reconcile SurveyOL `Opted Out`, bounced, delivery-problem, and no-send records back into `CTS 2026` and SurveyOL before the next recipient import. A SurveyOL no-send record or a registry `Do Not Email? = Yes` flag is a global CTS email suppression for future survey invitations.
     Do not let older external email-tool notes reopen the invitation gate by accident; record invitation suppression reconciliation against the active SurveyOL plus `CTS 2026` controls unless another dependency has been explicitly restored in `CTS_PROCESS_COORDINATION.md`.
-18. If the suppression CSV was manually reconfirmed or regenerated without changing membership, still refresh its evidence timestamp before rerunning the invitation board so the board reflects the latest review rather than an old embedded `collected_at` date.
-16. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, commit relevant source/public changes to `main`, then run `scripts/publish_static_site.py` with an `--expect-text` from the new log entry so the live public log is verified against the private ledger.
-17. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
+19. If the suppression CSV was manually reconfirmed or regenerated without changing membership, still refresh its evidence timestamp before rerunning the invitation board so the board reflects the latest review rather than an old embedded `collected_at` date.
+20. After each material send or send blocker, update `data/public/automation-daily-log.json` with a public-safe summary, commit relevant source/public changes to `main`, then run `scripts/publish_static_site.py` with an `--expect-text` from the new log entry so the live public log is verified against the private ledger.
+21. Keep live SurveyOL respondent links and design URLs in SurveyOL or private operational notes only. Do not commit them to the public repository.
 
 ## Send Reminders
 

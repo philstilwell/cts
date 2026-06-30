@@ -267,6 +267,24 @@
       "operator_note": "Record this after the production Email collector's Reminder Follow-up setting is verified as Off. Do not use automated 12-day reminders as the weekly default."
     },
     {
+      "id": "surveyol.email-send-enabled",
+      "title": "Email invitation editor is send-enabled",
+      "phase": "SurveyOL launch gate",
+      "required": true,
+      "scopes": ["launch", "invitation", "full-cycle"],
+      "cadence": "Before the first production invitation batch and before later invitation batches.",
+      "evidence": [
+        {"kind": "record", "required": true}
+      ],
+      "covers": [
+        "SurveyOL Email invitation editor does not show a temporary disabled-send banner",
+        "Authenticated send acceptance is expected to increase the live invitation count",
+        "SurveyOL platform send-availability blockers are distinguished from recipient-list defects"
+      ],
+      "redundancy_groups": ["surveyol-state", "human-review-gate", "send-accountability"],
+      "operator_note": "Open or expose the Email invitation editor and record passed only when no temporary-disabled send banner is present. If SurveyOL returns successful:false or the live invitation count does not increase after a send attempt, record blocked and stop retries."
+    },
+    {
       "id": "surveyol.manual-reminder-audit",
       "title": "Manual reminder candidates are invitation-row audited",
       "phase": "Reminder send",

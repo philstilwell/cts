@@ -35,6 +35,7 @@ Before any invitation batch:
 - Confirm the public placeholder exists, is linked from the reports index, and shows the exact final close date as first production invitation date plus 20 days.
 - Confirm `public.final-close-date-posted` is recorded in the private ledger.
 - Confirm SurveyOL Email collector status is `Open`, `Anonymous Responses` is `Off`, and automatic `Reminder Follow-up` is `Off`.
+- Confirm the SurveyOL Email invitation editor itself is send-enabled. If the editor shows "The email sending functionality is temporarily disabled" or the save response returns `successful:false` without increasing the invitation count, record a send blocker and do not retry the same batch until SurveyOL's send-enabled state is restored.
 - Confirm `surveyol.reminder-auto-disabled` is recorded. Do not require the older automatic-reminder configuration ledger gate for recurring invitation batches.
 - Reconcile SurveyOL opt-outs, bounces, delivery problems, no-send rows, and `CTS 2026` do-not-email records into the active suppression controls.
 - Audit the send-list CSV, SurveyOL contacts, and, after invitations already exist, the live SurveyOL invitation rows.
