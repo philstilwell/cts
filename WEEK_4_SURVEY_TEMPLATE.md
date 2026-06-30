@@ -8,7 +8,7 @@ SurveyOL design/preview GUID: store in private operational notes. Do not commit 
 
 Launch target: Tuesday evening, June 30, 2026, after SurveyOL draft review.
 
-Expected first preliminary report: Tuesday morning, July 6, 2026.
+Expected first preliminary report: Tuesday morning, July 7, 2026.
 
 Expected final close: Monday, July 20, 2026, 20 days after first invitation send.
 
@@ -39,7 +39,7 @@ Preview of upcoming topics for Week 4:
 
 Text:
 
-Our previous weekly surveys have been updated.
+Week 1 final results are now posted, and Week 2 and Week 3 preliminary reports remain open for refreshes.
 
 SurveyOL link:
 
@@ -49,7 +49,7 @@ Make `CTS REPORTS` an actual rich-text hyperlink to `https://christianthoughtsur
 
 One-off Week 4 note:
 
-Some of you reported duplicate email reminders last week. We apologize for this annoyance and appreciate those of you who provided a heads-up on this issue. We're hoping that bug won't reappear. Thanks.
+Some of you reported duplicate email reminders last week. We apologize for the annoyance and appreciate those who flagged it. We have adjusted the reminder workflow for this week.
 
 This email-reminder bug note is a one-off Week 4 operational note and should not be carried forward as standing weekly survey copy.
 
@@ -67,7 +67,7 @@ Topic: Women in Church Leadership
 8. Churches should normally disassociate from one another over incompatible positions on women serving as elders.
 9. Churches should include women in major decision-making even when final elder authority is male-only.
 10. For better or worse, over the next 20 years, evangelical churches will become substantially more egalitarian in their leadership roles for men and women.
-11. Women in the church are eligible to teach teenage boys.
+11. Women in the church are eligible to teach teenage boys in regular church discipleship settings.
 12. Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office.
 
 ## B. Week 4 Participant-Vote-Determined Independent Items
@@ -75,7 +75,7 @@ Topic: Women in Church Leadership
 These are the top eligible Week 3 participant ballot leaders after excluding Week 3 ballot items that overlap this week's Women in Church Leadership topic.
 
 13. Christians should prioritize faithful public witness through suffering over seeking political power to advance Christ's kingdom.
-14. Churches should emphasize shared community, service, and belonging as much as individual spiritual maturity.
+14. Churches should emphasize shared community and mutual service as much as individual spiritual maturity.
 15. Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
 
 ## C. Week 4 Participant-Nominated Item Ballot
@@ -92,11 +92,11 @@ Which of these participant-nominated survey items would you most like to see con
 
 Draft ballot items:
 
-1. Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
+1. Churches should teach more explicitly on debt and generosity as discipleship issues.
 2. Baptism should ordinarily precede participation in the Lord's Supper.
 3. A minister's end-times view should significantly shape preaching, discipleship, and public engagement.
 4. Communion should ordinarily be observed weekly.
-5. Pastors should refer congregants to licensed mental health professionals more often than they currently do.
+5. Pastors should be more willing to refer congregants to licensed mental health professionals.
 6. Churches should teach ordinary hospitality as a core practice of discipleship rather than treating it mainly as a private personality preference.
 7. Churches should give more explicit pastoral guidance about singleness and friendship in adult discipleship.
 
@@ -131,10 +131,10 @@ After importing Block 1, edit `CTS REPORTS` in SurveyOL's rich-text editor so it
 
 ```text
 [Text]
-Our previous weekly surveys have been updated. CTS REPORTS
+Week 1 final results are now posted, and Week 2 and Week 3 preliminary reports remain open for refreshes. CTS REPORTS
 
 [Text]
-Some of you reported duplicate email reminders last week. We apologize for this annoyance and appreciate those of you who provided a heads-up on this issue. We're hoping that bug won't reappear. Thanks.
+Some of you reported duplicate email reminders last week. We apologize for the annoyance and appreciate those who flagged it. We have adjusted the reminder workflow for this week.
 
 [Text]
 ◉ Main topic for the first 12 survey items: Women in Church Leadership.
@@ -175,7 +175,7 @@ Churches should include women in major decision-making even when final elder aut
 For better or worse, over the next 20 years, evangelical churches will become substantially more egalitarian in their leadership roles for men and women.
 
 [Slider][Required]
-Women in the church are eligible to teach teenage boys.
+Women in the church are eligible to teach teenage boys in regular church discipleship settings.
 
 [Slider][Required]
 Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office.
@@ -191,18 +191,18 @@ Christians should prioritize faithful public witness through suffering over seek
 
 ```text
 [Slider][Required]
-Churches should emphasize shared community, service, and belonging as much as individual spiritual maturity.
+Churches should emphasize shared community and mutual service as much as individual spiritual maturity.
 
 [Slider][Required]
 Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
 
 [Ranking][Required]
 Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Women in Church Leadership topic. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension.
-Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
+Churches should teach more explicitly on debt and generosity as discipleship issues.
 Baptism should ordinarily precede participation in the Lord's Supper.
 A minister's end-times view should significantly shape preaching, discipleship, and public engagement.
 Communion should ordinarily be observed weekly.
-Pastors should refer congregants to licensed mental health professionals more often than they currently do.
+Pastors should be more willing to refer congregants to licensed mental health professionals.
 Churches should teach ordinary hospitality as a core practice of discipleship rather than treating it mainly as a private personality preference.
 Churches should give more explicit pastoral guidance about singleness and friendship in adult discipleship.
 

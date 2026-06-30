@@ -28,7 +28,7 @@ Default response format: 0 = strongly disagree, 50 = unsure/mixed, 100 = strongl
 8. Churches should normally disassociate from one another over incompatible positions on women serving as elders.
 9. Churches should include women in major decision-making even when final elder authority is male-only.
 10. For better or worse, over the next 20 years, evangelical churches will become substantially more egalitarian in their leadership roles for men and women.
-11. Women in the church are eligible to teach teenage boys.
+11. Women in the church are eligible to teach teenage boys in regular church discipleship settings.
 12. Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office.
 
 ## Independent Live Items
@@ -36,7 +36,7 @@ Default response format: 0 = strongly disagree, 50 = unsure/mixed, 100 = strongl
 These are the top eligible Week 3 participant ballot leaders under Borda-style ranking after excluding the women-in-office item that overlaps the Week 4 CTS-administered topic.
 
 13. Christians should prioritize faithful public witness through suffering over seeking political power to advance Christ's kingdom.
-14. Churches should emphasize shared community, service, and belonging as much as individual spiritual maturity.
+14. Churches should emphasize shared community and mutual service as much as individual spiritual maturity.
 15. Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
 
 Rationale: these items are orthogonal to Women in Church Leadership, avoid immediate duplication with the Week 4 topic, and are credence-slider suitable.
@@ -45,11 +45,11 @@ Rationale: these items are orthogonal to Women in Church Leadership, avoid immed
 
 These seven draft items were reviewed against Week 3 text-box nominations before launch.
 
-1. Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
+1. Churches should teach more explicitly on debt and generosity as discipleship issues.
 2. Baptism should ordinarily precede participation in the Lord's Supper.
 3. A minister's end-times view should significantly shape preaching, discipleship, and public engagement.
 4. Communion should ordinarily be observed weekly.
-5. Pastors should refer congregants to licensed mental health professionals more often than they currently do.
+5. Pastors should be more willing to refer congregants to licensed mental health professionals.
 6. Churches should teach ordinary hospitality as a core practice of discipleship rather than treating it mainly as a private personality preference.
 7. Churches should give more explicit pastoral guidance about singleness and friendship in adult discipleship.
 
