@@ -391,7 +391,7 @@ PAGES = [
           <strong>Next Tuesday refresh</strong>
         </div>
       </div>
-      <div class="survey-lane" style="--progress-width: 59.2%;">
+      <div class="survey-lane complete" style="--progress-width: 80%;">
         <div class="survey-lane-label">
           <a href="{week_1_report_url}">Week 1</a>
           <span>Divorce and Remarriage</span>

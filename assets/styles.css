@@ -565,6 +565,11 @@ h3 {
   background: linear-gradient(90deg, var(--teal-dark), var(--teal), var(--gold));
 }
 
+.survey-lane.complete .survey-stage-track::after {
+  width: 80%;
+  background: var(--teal-dark);
+}
+
 .survey-stage {
   position: relative;
   z-index: 1;
