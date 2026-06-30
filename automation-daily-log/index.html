@@ -85,14 +85,14 @@
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-30T17:05:00-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">5:05:00 PM EDT</span></time>
 <span class="log-status">week-4-send-blocker-diagnosed</span></div></td>
-        <td>Week 4 invitation retry diagnosed SurveyOL email sending as temporarily disabled.<ul>
+        <td>Week 4 invitation retry diagnosed a SurveyOL sender-verification/send-acceptance blocker.<ul>
         <li>Reopened the Week 4 SurveyOL Email collector and confirmed the live invitation count remained 0.</li>
-        <li>Exposed the SurveyOL Email invitation editor and found the platform banner stating that email sending is temporarily disabled.</li>
-        <li>Confirmed the earlier unsuccessful send acceptance was a SurveyOL send-availability blocker, not a duplicate-audit or recipient-list failure.</li>
-        <li>Updated the CTS runbook, coordination contract, and automation manifest so future sends check the SurveyOL send-enabled gate before retrying a batch.</li>
+        <li>Checked the Email invitation editor and confirmed the temporary disabled-send text was hidden template text, not the visible blocker.</li>
+        <li>Verified sender verification returned no confirmation-code path or sender token, and the authenticated save returned unsuccessful without increasing invitations.</li>
+        <li>Updated the CTS runbook, coordination contract, and automation manifest so future sends check sender verification and send acceptance before retrying a batch.</li>
       </ul></td>
-        <td>No Week 4 invitations were sent or queued. The Email collector remains ready but SurveyOL email sending is temporarily disabled; 364 eligible contacts remain uninvited and the posted final close date remains Monday, July 20, 2026 until a first production send actually occurs.</td>
-        <td>Retry only after SurveyOL no longer shows the temporary email-sending-disabled banner, then recheck collector settings, regenerate the launch/invitation board, duplicate-audit the exact first batch, and verify the invitation count increases.</td>
+        <td>No Week 4 invitations were sent or queued. The Email collector remains open, non-anonymous, and reminder-free, but SurveyOL sender verification/send acceptance is blocking invitations; 364 eligible contacts remain uninvited. If the first production send slips past June 30, the posted final close date must be recalculated from the actual first send date before launch is reported complete.</td>
+        <td>Restore or complete SurveyOL sender verification, then recheck collector settings, regenerate the launch/invitation board, duplicate-audit the exact first batch, send once, and verify the invitation count increases.</td>
       </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-30T16:45:00-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">4:45:00 PM EDT</span></time>
