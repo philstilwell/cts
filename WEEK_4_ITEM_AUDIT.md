@@ -5,8 +5,8 @@ Use this note as the Week 4 draft audit required by `WEEKLY_RUNBOOK.md`.
 ## Source
 
 - CTS-administered topic: `CTS 2026 Weekly Topic Bank.md`, topic 4.
-- Independent live items: draft placeholders from the Week 3 participant ballot, pending Week 3 ballot-result review.
-- Participant ballot: draft carryover/seed items pending Week 3 suggestion review.
+- Independent live items: top eligible Week 3 participant ballot results from `data/private/surveyol/week-003.csv`.
+- Participant ballot: one polished Week 3 participant suggestion, Week 3 ballot carryovers not selected for live use, and CTS/AI seed items because fewer than 7 suitable new nominations were available.
 
 ## Fielding Decision
 
@@ -33,21 +33,21 @@ Default response format: 0 = strongly disagree, 50 = unsure/mixed, 100 = strongl
 
 ## Independent Live Items
 
-These three items are draft placeholders. Replace them with the top eligible Week 3 participant ballot leaders after Week 3 ballot results are reviewed.
+These are the top eligible Week 3 participant ballot leaders under Borda-style ranking after excluding the women-in-office item that overlaps the Week 4 CTS-administered topic.
 
 13. Christians should prioritize faithful public witness through suffering over seeking political power to advance Christ's kingdom.
 14. Churches should emphasize shared community, service, and belonging as much as individual spiritual maturity.
-15. Baptism should ordinarily precede participation in the Lord's Supper.
+15. Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
 
-Draft rationale: the items are orthogonal to Women in Church Leadership, avoid immediate duplication with the Week 4 topic, and are credence-slider suitable.
+Rationale: these items are orthogonal to Women in Church Leadership, avoid immediate duplication with the Week 4 topic, and are credence-slider suitable.
 
 ## Week 4 Participant Ballot
 
-These seven draft items should be reviewed against Week 3 text-box nominations before launch.
+These seven draft items were reviewed against Week 3 text-box nominations before launch.
 
-1. Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
-2. Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
-3. Formal church membership is biblically necessary for ordinary Christian discipleship.
+1. Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
+2. Baptism should ordinarily precede participation in the Lord's Supper.
+3. A minister's end-times view should significantly shape preaching, discipleship, and public engagement.
 4. Communion should ordinarily be observed weekly.
 5. Pastors should refer congregants to licensed mental health professionals more often than they currently do.
 6. Churches should explicitly warn members against political idolatry.
@@ -55,10 +55,12 @@ These seven draft items should be reviewed against Week 3 text-box nominations b
 
 ## Exclusions And Notes
 
-- Week 3 ballot items about women in ministry were not used as Week 4 independent draft items because they overlap the Week 4 CTS-administered topic.
-- Week 3 ballot results and Week 3 new text-box suggestions are not yet available in committed private exports. This draft is therefore suitable for SurveyOL setup and owner editing, not final launch.
-- Items 1-2 in the draft ballot are Week 3 ballot carryovers not used as draft Week 4 independent items.
-- Items 3-7 are CTS/AI seed placeholders drawn from later bank themes and rewritten as standalone credence-slider items.
+- Week 3 ballot items about women in ministry were not used as Week 4 independent live items or ballot carryovers because they overlap the Week 4 CTS-administered topic.
+- The Week 3 ballot ranking produced 27 usable ranked ballots. The top raw results were public witness, community/service/belonging, male-only pastoral office, AI discipleship, wealth/debt/generosity, complementarian-pastor fit, and baptism before the Lord's Supper. The male-only pastoral office and complementarian-pastor-fit items were excluded from Week 4 reuse because of topical overlap.
+- Two Week 3 text-box suggestions were reviewed. One was polished into the end-times ballot item. The other was excluded as not usable as a serious credence-slider item.
+- Items 1-2 in the draft ballot are Week 3 ballot carryovers not used as Week 4 independent live items.
+- Item 3 is participant-originated and polished for clarity, neutrality, and credence-slider suitability.
+- Items 4-7 are CTS/AI seed placeholders drawn from later bank themes and rewritten as standalone credence-slider items.
 
 ## SurveyOL QA Notes
 

@@ -46,9 +46,48 @@
     ]
   },
   "report_encapsulation": {
-    "title": "Week 3 report: Pastoral Authority and Accountability",
+    "title": "Week 3 preliminary report: Pastoral Authority and Accountability",
     "url": "https://christianthoughtsurvey.com/weekly-survey-reports/week-003-pastoral-authority-and-accountability/",
-    "text": "The Week 3 report will cover Pastoral Authority and Accountability after the first preliminary results are reviewed. Raw respondent identities and raw free-text suggestions will not be published."
+    "text": "The first Week 3 preliminary report has 27 complete responses. Early patterns show very strong agreement that manipulative or coercive leadership should normally disqualify a pastor, that pastors need meaningful accountability for finances, staff authority, and confidential information, and that churches should distinguish biblical submission from unquestioning compliance. Wider spread appears around whether pastors exercise too little legitimate authority, how often the label spiritual abuse is over-applied, and how much moral counsel pastors should give about members' major life decisions. Raw respondent identities and raw free-text suggestions are not published."
+  },
+  "next_week_ballot_draft": {
+    "items": [
+      {
+        "rank": 1,
+        "text": "Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.",
+        "source": "week_3_ballot_carryover"
+      },
+      {
+        "rank": 2,
+        "text": "Baptism should ordinarily precede participation in the Lord's Supper.",
+        "source": "week_3_ballot_carryover"
+      },
+      {
+        "rank": 3,
+        "text": "A minister's end-times view should significantly shape preaching, discipleship, and public engagement.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 4,
+        "text": "Communion should ordinarily be observed weekly.",
+        "source": "cts_ai_seed"
+      },
+      {
+        "rank": 5,
+        "text": "Pastors should refer congregants to licensed mental health professionals more often than they currently do.",
+        "source": "cts_ai_seed"
+      },
+      {
+        "rank": 6,
+        "text": "Churches should explicitly warn members against political idolatry.",
+        "source": "cts_ai_seed"
+      },
+      {
+        "rank": 7,
+        "text": "Apologetics should be a regular part of church discipleship.",
+        "source": "cts_ai_seed"
+      }
+    ]
   },
   "items": [
     {

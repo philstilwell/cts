@@ -30,8 +30,8 @@ Preview of upcoming topics for Week 4:
 2. One-off note about the previous duplicate email reminder bug.
 3. Featured Topic header image immediately before the current-topic introduction line.
 4. One CTS-administered topic: Women in Church Leadership, 12 credence slider items.
-5. Three Week 4 participant-vote-determined independent live items from the Week 3 ballot leaders. Draft placeholders are included pending Week 3 ballot-result review.
-6. A 7-item participant-nominated item ballot for future live items. Draft placeholders are included pending Week 3 suggestion review.
+5. Three Week 4 participant-vote-determined independent live items from the eligible Week 3 ballot leaders.
+6. A 7-item participant-nominated item ballot for future live items, using one polished Week 3 suggestion, Week 3 carryovers, and CTS/AI seeds.
 7. A suggestion text box for future participant-nominated survey items.
 8. A preview of upcoming topics.
 
@@ -72,11 +72,11 @@ Topic: Women in Church Leadership
 
 ## B. Week 4 Participant-Vote-Determined Independent Items
 
-These draft placeholders are intentionally orthogonal to Women in Church Leadership. Replace them with the top eligible Week 3 participant ballot leaders after Week 3 ballot results are reviewed.
+These are the top eligible Week 3 participant ballot leaders after excluding Week 3 ballot items that overlap this week's Women in Church Leadership topic.
 
 13. Christians should prioritize faithful public witness through suffering over seeking political power to advance Christ's kingdom.
 14. Churches should emphasize shared community, service, and belonging as much as individual spiritual maturity.
-15. Baptism should ordinarily precede participation in the Lord's Supper.
+15. Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
 
 ## C. Week 4 Participant-Nominated Item Ballot
 
@@ -92,9 +92,9 @@ Which of these participant-nominated survey items would you most like to see con
 
 Draft ballot items:
 
-1. Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
-2. Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
-3. Formal church membership is biblically necessary for ordinary Christian discipleship.
+1. Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
+2. Baptism should ordinarily precede participation in the Lord's Supper.
+3. A minister's end-times view should significantly shape preaching, discipleship, and public engagement.
 4. Communion should ordinarily be observed weekly.
 5. Pastors should refer congregants to licensed mental health professionals more often than they currently do.
 6. Churches should explicitly warn members against political idolatry.
@@ -194,13 +194,13 @@ Christians should prioritize faithful public witness through suffering over seek
 Churches should emphasize shared community, service, and belonging as much as individual spiritual maturity.
 
 [Slider][Required]
-Baptism should ordinarily precede participation in the Lord's Supper.
+Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
 
 [Ranking][Required]
 Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Women in Church Leadership topic. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension.
-Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.
 Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.
-Formal church membership is biblically necessary for ordinary Christian discipleship.
+Baptism should ordinarily precede participation in the Lord's Supper.
+A minister's end-times view should significantly shape preaching, discipleship, and public engagement.
 Communion should ordinarily be observed weekly.
 Pastors should refer congregants to licensed mental health professionals more often than they currently do.
 Churches should explicitly warn members against political idolatry.

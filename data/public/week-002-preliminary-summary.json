@@ -1,6 +1,6 @@
 {
   "schema_version": "cts-weekly-summary-v0.2",
-  "generated_at": "2026-06-23T13:06:33.022068+00:00",
+  "generated_at": "2026-06-30T13:09:22.081770+00:00",
   "week": "week-002",
   "title": "CTS 2026 Weekly Survey 2 - Pornography and the Church",
   "topic": "Pornography and the Church",
@@ -29,7 +29,7 @@
     "min_public_subgroup_n": 15,
     "preferred_public_subgroup_n": 20
   },
-  "response_count": 28,
+  "response_count": 36,
   "items": [
     {
       "id": "W002-Q01",
@@ -38,33 +38,33 @@
       "short_label": "Pornography use is more spiritually",
       "text": "Pornography use is more spiritually damaging to churches today than most other hidden sins.",
       "source_column": "Pornography use is more spiritually damaging to churches today than most other hidden sins.",
-      "n": 28,
-      "mean": 63.54,
-      "median": 70.5,
+      "n": 36,
+      "mean": 64.42,
+      "median": 73.0,
       "min": 0.0,
       "max": 100.0,
       "q1": 50.0,
       "q3": 81.5,
       "iqr": 31.5,
-      "standard_deviation": 30.27,
+      "standard_deviation": 29.45,
       "bands": {
-        "low": 6,
-        "middle": 7,
-        "high": 15
+        "low": 8,
+        "middle": 8,
+        "high": 20
       },
       "disagreement_score": 31.5,
       "doubt_dogma": {
-        "non_endpoint_count": 22,
-        "endpoint_count": 6,
+        "non_endpoint_count": 28,
+        "endpoint_count": 8,
         "exact_zero_count": 1,
-        "exact_hundred_count": 5,
-        "ratio": 3.667
+        "exact_hundred_count": 7,
+        "ratio": 3.5
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "low_high_split"
         ]
       },
       "distribution": {
@@ -84,50 +84,50 @@
         "simple_counts": [
           2,
           2,
-          1,
-          1,
+          2,
+          2,
           0,
           3,
+          6,
+          6,
           5,
-          3,
-          5,
-          6
+          8
         ],
         "display_percentages": [
-          7.357,
-          7.464,
-          3.893,
-          3.679,
-          0.429,
-          11.25,
-          18.5,
-          11.786,
-          18.821,
-          21.964
+          5.722,
+          5.889,
+          5.889,
+          5.722,
+          0.417,
+          8.833,
+          17.417,
+          17.583,
+          15.056,
+          22.639
         ],
         "s23_bucket_counts": [
           3.0,
           1.5,
-          1.0,
-          1.0,
+          2.5,
+          1.5,
           1.0,
           3.0,
-          4.0,
           5.0,
+          8.0,
           3.5,
-          8.0
+          11.0
         ],
         "s23_smoothed_percentages": [
-          11.196,
-          5.786,
-          3.839,
-          3.786,
-          4.0,
-          11.25,
-          15.143,
-          18.661,
-          13.893,
-          29.804
+          8.708,
+          4.625,
+          7.194,
+          4.458,
+          3.153,
+          8.833,
+          14.806,
+          22.931,
+          11.306,
+          31.764
         ]
       }
     },
@@ -138,34 +138,32 @@
       "short_label": "In my ministry context pornography",
       "text": "In my ministry context, pornography use among Christian men is more common than most congregations recognize.",
       "source_column": "In my ministry context, pornography use among Christian men is more common than most congregations recognize.",
-      "n": 28,
-      "mean": 80.29,
-      "median": 85.0,
+      "n": 36,
+      "mean": 78.97,
+      "median": 81.0,
       "min": 0.0,
       "max": 100.0,
-      "q1": 74.25,
+      "q1": 71.5,
       "q3": 100.0,
-      "iqr": 25.75,
-      "standard_deviation": 23.43,
+      "iqr": 28.5,
+      "standard_deviation": 21.81,
       "bands": {
         "low": 1,
-        "middle": 4,
-        "high": 23
+        "middle": 6,
+        "high": 29
       },
-      "disagreement_score": 25.75,
+      "disagreement_score": 28.5,
       "doubt_dogma": {
-        "non_endpoint_count": 17,
-        "endpoint_count": 11,
+        "non_endpoint_count": 24,
+        "endpoint_count": 12,
         "exact_zero_count": 1,
-        "exact_hundred_count": 10,
-        "ratio": 1.545
+        "exact_hundred_count": 11,
+        "ratio": 2.0
       },
       "key_tension": {
         "flag": false,
-        "eligible": false,
-        "reasons": [
-          "below_minimum_n"
-        ]
+        "eligible": true,
+        "reasons": []
       },
       "distribution": {
         "cut_points": [
@@ -187,47 +185,47 @@
           0,
           0,
           1,
-          2,
-          2,
-          6,
           3,
-          13
+          3,
+          9,
+          5,
+          14
         ],
         "display_percentages": [
-          3.571,
-          0.107,
+          2.778,
+          0.083,
           0.0,
-          0.107,
-          3.786,
-          7.464,
-          8.0,
-          21.964,
-          12.75,
-          46.75
+          0.083,
+          3.028,
+          8.667,
+          9.333,
+          25.667,
+          15.806,
+          39.306
         ],
         "s23_bucket_counts": [
           1.5,
           0.0,
           0.0,
           0.5,
-          1.0,
-          2.0,
           1.5,
-          6.5,
           3.0,
-          17.5
+          2.5,
+          9.0,
+          5.0,
+          19.0
         ],
         "s23_smoothed_percentages": [
-          5.518,
-          0.161,
-          0.054,
-          1.893,
-          3.839,
-          7.411,
-          6.268,
-          23.696,
-          13.286,
-          64.696
+          4.292,
+          0.125,
+          0.042,
+          1.514,
+          4.458,
+          8.667,
+          7.944,
+          25.625,
+          16.222,
+          54.778
         ]
       }
     },
@@ -238,33 +236,35 @@
       "short_label": "In my ministry context pornography",
       "text": "In my ministry context, pornography use among Christian women is more common than most congregations recognize.",
       "source_column": "In my ministry context, pornography use among Christian women is more common than most congregations recognize.",
-      "n": 28,
-      "mean": 63.86,
-      "median": 75.0,
+      "n": 36,
+      "mean": 63.03,
+      "median": 72.5,
       "min": 0.0,
       "max": 100.0,
-      "q1": 36.5,
+      "q1": 43.0,
       "q3": 92.25,
-      "iqr": 55.75,
-      "standard_deviation": 33.27,
+      "iqr": 49.25,
+      "standard_deviation": 32.62,
       "bands": {
-        "low": 7,
-        "middle": 4,
-        "high": 17
+        "low": 8,
+        "middle": 8,
+        "high": 20
       },
-      "disagreement_score": 55.75,
+      "disagreement_score": 49.25,
       "doubt_dogma": {
-        "non_endpoint_count": 21,
-        "endpoint_count": 7,
-        "exact_zero_count": 1,
-        "exact_hundred_count": 6,
+        "non_endpoint_count": 27,
+        "endpoint_count": 9,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 7,
         "ratio": 3.0
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
         ]
       },
       "distribution": {
@@ -282,52 +282,52 @@
           100
         ],
         "simple_counts": [
-          2,
+          3,
           1,
           4,
           0,
+          3,
+          3,
           2,
-          1,
-          1,
-          6,
+          7,
           2,
-          9
+          11
         ],
         "display_percentages": [
-          7.25,
-          4.214,
-          14.393,
-          0.643,
-          7.25,
-          3.893,
-          4.321,
-          21.75,
+          8.417,
+          3.361,
+          11.194,
+          0.583,
+          8.583,
           8.75,
-          32.357
+          6.389,
+          19.778,
+          7.056,
+          30.722
         ],
         "s23_bucket_counts": [
-          3.0,
+          4.5,
           0.5,
           4.0,
           0.5,
-          2.0,
-          0.5,
-          2.0,
-          6.0,
+          3.5,
+          2.5,
+          2.5,
+          7.0,
           1.5,
-          11.5
+          14.0
         ],
         "s23_smoothed_percentages": [
-          11.089,
-          2.536,
-          14.393,
-          2.429,
-          7.25,
-          2.214,
-          7.839,
-          21.804,
-          7.232,
-          42.464
+          12.917,
+          2.097,
+          11.194,
+          2.014,
+          9.972,
+          7.444,
+          7.736,
+          19.778,
+          5.917,
+          40.181
         ]
       }
     },
@@ -338,33 +338,34 @@
       "short_label": "Persistent pornography use should ordinarily",
       "text": "Persistent pornography use should ordinarily disqualify a pastor from active ministry until repentance and accountability are demonstrably established.",
       "source_column": "Persistent pornography use should ordinarily disqualify a pastor from active ministry until repentance and accountability are demonstrably established.",
-      "n": 28,
-      "mean": 82.96,
-      "median": 100.0,
-      "min": 6.0,
+      "n": 36,
+      "mean": 78.22,
+      "median": 97.5,
+      "min": 0.0,
       "max": 100.0,
-      "q1": 67.5,
+      "q1": 59.0,
       "q3": 100.0,
-      "iqr": 32.5,
-      "standard_deviation": 27.34,
+      "iqr": 41.0,
+      "standard_deviation": 31.08,
       "bands": {
-        "low": 2,
-        "middle": 5,
-        "high": 21
+        "low": 4,
+        "middle": 7,
+        "high": 25
       },
-      "disagreement_score": 32.5,
+      "disagreement_score": 41.0,
       "doubt_dogma": {
-        "non_endpoint_count": 13,
-        "endpoint_count": 15,
-        "exact_zero_count": 0,
-        "exact_hundred_count": 15,
-        "ratio": 0.867
+        "non_endpoint_count": 17,
+        "endpoint_count": 19,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 18,
+        "ratio": 0.895
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "high_iqr",
+          "high_standard_deviation"
         ]
       },
       "distribution": {
@@ -382,52 +383,52 @@
           100
         ],
         "simple_counts": [
-          1,
-          1,
-          0,
-          0,
-          0,
-          3,
           2,
-          1,
+          2,
           0,
-          20
+          0,
+          0,
+          5,
+          2,
+          2,
+          0,
+          23
         ],
         "display_percentages": [
-          3.679,
-          3.679,
-          0.107,
+          5.722,
+          5.722,
+          0.167,
           0.0,
-          0.321,
-          10.929,
-          7.571,
-          3.786,
-          2.25,
-          71.429
+          0.417,
+          14.056,
+          6.139,
+          5.722,
+          2.083,
+          63.889
         ],
         "s23_bucket_counts": [
-          1.5,
-          0.5,
-          0.0,
-          0.0,
-          1.0,
           3.0,
           1.5,
-          0.5,
+          0.0,
+          0.0,
+          2.0,
+          4.0,
+          1.5,
+          1.5,
           1.0,
-          26.5
+          31.0
         ],
         "s23_smoothed_percentages": [
-          5.571,
-          1.946,
-          0.054,
-          0.107,
-          3.893,
-          10.982,
-          5.732,
-          2.054,
-          6.464,
-          97.589
+          8.708,
+          4.417,
+          0.125,
+          0.167,
+          5.889,
+          11.403,
+          4.625,
+          4.375,
+          5.486,
+          88.778
         ]
       }
     },
@@ -438,33 +439,33 @@
       "short_label": "Churches should ask direct but",
       "text": "Churches should ask direct but pastorally careful questions about pornography use when evaluating candidates for leadership.",
       "source_column": "Churches should ask direct but pastorally careful questions about pornography use when evaluating candidates for leadership.",
-      "n": 28,
-      "mean": 80.54,
-      "median": 90.0,
-      "min": 31.0,
+      "n": 36,
+      "mean": 77.86,
+      "median": 89.0,
+      "min": 0.0,
       "max": 100.0,
       "q1": 59.75,
       "q3": 100.0,
       "iqr": 40.25,
-      "standard_deviation": 22.17,
+      "standard_deviation": 26.26,
       "bands": {
-        "low": 1,
-        "middle": 8,
-        "high": 19
+        "low": 3,
+        "middle": 9,
+        "high": 24
       },
       "disagreement_score": 40.25,
       "doubt_dogma": {
-        "non_endpoint_count": 16,
-        "endpoint_count": 12,
-        "exact_zero_count": 0,
-        "exact_hundred_count": 12,
-        "ratio": 1.333
+        "non_endpoint_count": 20,
+        "endpoint_count": 16,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 15,
+        "ratio": 1.25
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "high_iqr"
         ]
       },
       "distribution": {
@@ -482,52 +483,52 @@
           100
         ],
         "simple_counts": [
+          1,
           0,
-          0,
-          0,
+          1,
           1,
           1,
           5,
+          3,
           2,
-          2,
-          2,
-          15
+          4,
+          18
         ],
         "display_percentages": [
-          0.0,
-          0.0,
-          0.107,
-          3.679,
-          4.214,
-          18.179,
-          7.893,
-          7.571,
-          8.964,
-          53.786
+          2.778,
+          0.167,
+          2.861,
+          2.944,
+          3.278,
+          14.222,
+          8.917,
+          6.139,
+          12.778,
+          50.333
         ],
         "s23_bucket_counts": [
+          1.5,
           0.0,
-          0.0,
-          0.0,
+          1.0,
           1.5,
           1.0,
-          5.5,
-          1.5,
+          6.0,
           2.0,
           2.5,
-          20.0
+          4.0,
+          24.5
         ],
         "s23_smoothed_percentages": [
-          0.0,
-          0.0,
-          0.161,
-          5.464,
-          4.321,
-          19.911,
-          6.161,
-          7.571,
-          11.286,
-          73.839
+          4.292,
+          0.208,
+          2.903,
+          4.333,
+          3.403,
+          16.917,
+          6.264,
+          7.444,
+          13.361,
+          70.431
         ]
       }
     },
@@ -538,34 +539,32 @@
       "short_label": "Pornography use is substantially shaping",
       "text": "Pornography use is substantially shaping sexual expectations within Christian marriages.",
       "source_column": "Pornography use is substantially shaping sexual expectations within Christian marriages.",
-      "n": 28,
-      "mean": 75.39,
+      "n": 36,
+      "mean": 76.44,
       "median": 80.0,
       "min": 0.0,
       "max": 100.0,
       "q1": 63.0,
-      "q3": 90.0,
-      "iqr": 27.0,
-      "standard_deviation": 23.5,
+      "q3": 91.75,
+      "iqr": 28.75,
+      "standard_deviation": 22.92,
       "bands": {
         "low": 1,
-        "middle": 7,
-        "high": 20
+        "middle": 9,
+        "high": 26
       },
-      "disagreement_score": 27.0,
+      "disagreement_score": 28.75,
       "doubt_dogma": {
-        "non_endpoint_count": 22,
-        "endpoint_count": 6,
+        "non_endpoint_count": 27,
+        "endpoint_count": 9,
         "exact_zero_count": 1,
-        "exact_hundred_count": 5,
-        "ratio": 3.667
+        "exact_hundred_count": 8,
+        "ratio": 3.0
       },
       "key_tension": {
         "flag": false,
-        "eligible": false,
-        "reasons": [
-          "below_minimum_n"
-        ]
+        "eligible": true,
+        "reasons": []
       },
       "distribution": {
         "cut_points": [
@@ -586,48 +585,48 @@
           0,
           0,
           0,
-          3,
-          2,
-          2,
           4,
+          2,
+          3,
+          6,
           8,
-          8
+          12
         ],
         "display_percentages": [
-          3.571,
-          0.107,
+          2.778,
+          0.083,
           0.0,
-          0.321,
-          10.929,
-          7.679,
-          7.786,
-          15.357,
-          29.857,
-          29.429
+          0.333,
+          11.278,
+          6.139,
+          9.0,
+          17.583,
+          23.722,
+          34.0
         ],
         "s23_bucket_counts": [
           1.5,
           0.0,
           0.0,
-          0.5,
-          3.0,
-          2.0,
-          2.0,
-          5.0,
-          7.5,
-          9.5
+          1.0,
+          3.5,
+          2.5,
+          2.5,
+          7.0,
+          8.0,
+          14.5
         ],
         "s23_smoothed_percentages": [
-          5.518,
-          0.161,
-          0.054,
-          2.107,
-          10.982,
-          7.679,
-          7.893,
-          18.875,
-          28.339,
-          35.75
+          4.292,
+          0.125,
+          0.083,
+          3.069,
+          10.014,
+          7.444,
+          7.736,
+          20.319,
+          24.014,
+          42.153
         ]
       }
     },
@@ -638,33 +637,35 @@
       "short_label": "Churches should avoid presenting accountability",
       "text": "Churches should avoid presenting accountability software as a primary solution for habitual pornography use.",
       "source_column": "Churches should avoid presenting accountability software as a primary solution for habitual pornography use.",
-      "n": 28,
-      "mean": 51.11,
+      "n": 36,
+      "mean": 52.22,
       "median": 50.0,
       "min": 0.0,
       "max": 100.0,
-      "q1": 24.75,
-      "q3": 71.75,
-      "iqr": 47.0,
-      "standard_deviation": 30.87,
+      "q1": 25.75,
+      "q3": 72.0,
+      "iqr": 46.25,
+      "standard_deviation": 30.16,
       "bands": {
-        "low": 10,
-        "middle": 10,
-        "high": 8
+        "low": 11,
+        "middle": 14,
+        "high": 11
       },
-      "disagreement_score": 47.0,
+      "disagreement_score": 46.25,
       "doubt_dogma": {
-        "non_endpoint_count": 22,
-        "endpoint_count": 6,
-        "exact_zero_count": 1,
-        "exact_hundred_count": 5,
-        "ratio": 3.667
+        "non_endpoint_count": 28,
+        "endpoint_count": 8,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 6,
+        "ratio": 3.5
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
         ]
       },
       "distribution": {
@@ -682,52 +683,52 @@
           100
         ],
         "simple_counts": [
-          2,
+          3,
           1,
           7,
           0,
-          3,
-          6,
+          4,
+          9,
           2,
-          0,
           2,
-          5
+          2,
+          6
         ],
         "display_percentages": [
-          7.25,
-          4.536,
-          25.107,
-          1.071,
-          11.357,
-          21.964,
-          7.786,
-          0.429,
-          7.679,
-          18.071
+          8.417,
+          3.611,
+          19.528,
+          0.917,
+          11.861,
+          25.5,
+          6.472,
+          5.889,
+          6.222,
+          16.833
         ],
         "s23_bucket_counts": [
-          2.5,
+          4.0,
           1.0,
           7.0,
-          1.0,
-          3.5,
-          4.5,
-          2.0,
-          0.5,
           1.5,
-          7.5
+          4.5,
+          7.0,
+          2.0,
+          2.5,
+          1.5,
+          9.0
         ],
         "s23_smoothed_percentages": [
-          9.304,
-          4.589,
-          25.214,
-          4.696,
-          13.089,
-          16.661,
-          7.679,
-          2.161,
-          6.214,
-          27.75
+          11.528,
+          3.694,
+          19.653,
+          5.125,
+          13.208,
+          19.986,
+          6.347,
+          7.236,
+          5.125,
+          25.875
         ]
       }
     },
@@ -738,34 +739,32 @@
       "short_label": "Pastors should address pornography from",
       "text": "Pastors should address pornography from the pulpit more often than most churches currently do.",
       "source_column": "Pastors should address pornography from the pulpit more often than most churches currently do.",
-      "n": 28,
-      "mean": 65.86,
-      "median": 67.5,
-      "min": 10.0,
+      "n": 36,
+      "mean": 62.75,
+      "median": 62.5,
+      "min": 0.0,
       "max": 100.0,
       "q1": 50.0,
       "q3": 80.0,
       "iqr": 30.0,
-      "standard_deviation": 22.76,
+      "standard_deviation": 27.09,
       "bands": {
-        "low": 2,
-        "middle": 12,
-        "high": 14
+        "low": 4,
+        "middle": 15,
+        "high": 17
       },
       "disagreement_score": 30.0,
       "doubt_dogma": {
-        "non_endpoint_count": 24,
-        "endpoint_count": 4,
-        "exact_zero_count": 0,
-        "exact_hundred_count": 4,
-        "ratio": 6.0
+        "non_endpoint_count": 28,
+        "endpoint_count": 8,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 6,
+        "ratio": 3.5
       },
       "key_tension": {
         "flag": false,
-        "eligible": false,
-        "reasons": [
-          "below_minimum_n"
-        ]
+        "eligible": true,
+        "reasons": []
       },
       "distribution": {
         "cut_points": [
@@ -782,52 +781,52 @@
           100
         ],
         "simple_counts": [
-          0,
+          2,
           1,
           0,
           2,
-          2,
+          3,
+          7,
           5,
-          4,
           6,
           3,
-          5
+          7
         ],
         "display_percentages": [
-          0.107,
-          3.571,
-          0.321,
-          7.357,
-          7.893,
-          18.5,
-          15.464,
-          22.179,
-          11.893,
-          18.179
+          5.639,
+          2.944,
+          0.25,
+          5.806,
+          9.083,
+          20.111,
+          14.972,
+          17.333,
+          9.417,
+          19.694
         ],
         "s23_bucket_counts": [
-          0.5,
+          3.5,
           0.5,
           0.0,
-          2.5,
-          3.5,
-          4.5,
           3.0,
+          4.5,
+          6.0,
+          4.0,
           6.5,
           2.5,
-          6.5
+          9.5
         ],
         "s23_smoothed_percentages": [
-          1.893,
-          1.839,
-          0.321,
-          9.304,
+          10.056,
+          1.681,
+          0.292,
+          8.708,
           13.25,
-          16.768,
-          11.893,
-          23.804,
-          10.321,
-          24.179
+          17.375,
+          12.153,
+          18.597,
+          8.278,
+          27.389
         ]
       }
     },
@@ -838,33 +837,34 @@
       "short_label": "Churches should treat habitual pornography",
       "text": "Churches should treat habitual pornography use as both moral sin and a behavioral health concern.",
       "source_column": "Churches should treat habitual pornography use as both moral sin and a behavioral health concern.",
-      "n": 28,
-      "mean": 73.04,
-      "median": 89.5,
+      "n": 36,
+      "mean": 74.58,
+      "median": 85.5,
       "min": 0.0,
       "max": 100.0,
-      "q1": 50.0,
+      "q1": 60.0,
       "q3": 100.0,
-      "iqr": 50.0,
-      "standard_deviation": 33.35,
+      "iqr": 40.0,
+      "standard_deviation": 30.27,
       "bands": {
         "low": 5,
-        "middle": 4,
-        "high": 19
+        "middle": 6,
+        "high": 25
       },
-      "disagreement_score": 50.0,
+      "disagreement_score": 40.0,
       "doubt_dogma": {
-        "non_endpoint_count": 13,
-        "endpoint_count": 15,
+        "non_endpoint_count": 19,
+        "endpoint_count": 17,
         "exact_zero_count": 2,
-        "exact_hundred_count": 13,
-        "ratio": 0.867
+        "exact_hundred_count": 15,
+        "ratio": 1.118
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "high_iqr",
+          "high_standard_deviation"
         ]
       },
       "distribution": {
@@ -888,22 +888,22 @@
           2,
           0,
           2,
-          1,
-          4,
-          1,
-          14
+          3,
+          6,
+          3,
+          16
         ],
         "display_percentages": [
-          7.25,
-          3.893,
-          3.893,
-          7.25,
-          0.429,
-          7.25,
-          4.214,
-          14.5,
-          5.5,
-          50.107
+          5.639,
+          3.028,
+          3.028,
+          5.639,
+          0.333,
+          5.806,
+          9.0,
+          17.167,
+          10.167,
+          44.694
         ],
         "s23_bucket_counts": [
           3.0,
@@ -911,23 +911,23 @@
           1.5,
           1.5,
           1.0,
-          1.0,
           2.0,
           3.0,
-          1.5,
-          20.0
+          5.0,
+          3.5,
+          23.0
         ],
         "s23_smoothed_percentages": [
-          11.143,
-          4.054,
-          5.625,
-          5.625,
-          3.839,
-          3.893,
-          7.571,
-          11.089,
-          7.821,
-          73.732
+          8.667,
+          3.153,
+          4.375,
+          4.375,
+          3.069,
+          5.889,
+          8.917,
+          14.431,
+          12.056,
+          66.097
         ]
       }
     },
@@ -938,34 +938,32 @@
       "short_label": "In my ministry context churches",
       "text": "In my ministry context, churches are currently losing more ground than they are gaining against pornography.",
       "source_column": "In my ministry context, churches are currently losing more ground than they are gaining against pornography.",
-      "n": 28,
-      "mean": 65.21,
-      "median": 68.0,
+      "n": 36,
+      "mean": 61.97,
+      "median": 61.5,
       "min": 0.0,
       "max": 100.0,
       "q1": 47.75,
-      "q3": 88.5,
-      "iqr": 40.75,
-      "standard_deviation": 28.16,
+      "q3": 81.25,
+      "iqr": 33.5,
+      "standard_deviation": 27.91,
       "bands": {
-        "low": 2,
-        "middle": 12,
-        "high": 14
+        "low": 4,
+        "middle": 16,
+        "high": 16
       },
-      "disagreement_score": 40.75,
+      "disagreement_score": 33.5,
       "doubt_dogma": {
-        "non_endpoint_count": 20,
-        "endpoint_count": 8,
-        "exact_zero_count": 2,
+        "non_endpoint_count": 27,
+        "endpoint_count": 9,
+        "exact_zero_count": 3,
         "exact_hundred_count": 6,
-        "ratio": 2.5
+        "ratio": 3.0
       },
       "key_tension": {
         "flag": false,
-        "eligible": false,
-        "reasons": [
-          "below_minimum_n"
-        ]
+        "eligible": true,
+        "reasons": []
       },
       "distribution": {
         "cut_points": [
@@ -982,52 +980,52 @@
           100
         ],
         "simple_counts": [
-          2,
-          0,
-          0,
-          1,
-          4,
-          4,
           3,
-          5,
+          0,
+          0,
           2,
+          4,
+          7,
+          4,
+          6,
+          3,
           7
         ],
         "display_percentages": [
-          7.143,
-          0.214,
-          0.107,
-          4.0,
-          14.821,
-          15.036,
-          11.679,
-          18.393,
-          8.429,
-          25.214
+          8.333,
+          0.25,
+          0.167,
+          5.889,
+          11.861,
+          20.111,
+          12.194,
+          17.25,
+          9.417,
+          19.694
         ],
         "s23_bucket_counts": [
-          3.0,
-          0.0,
-          0.0,
-          2.5,
-          3.0,
-          4.0,
-          3.0,
           4.5,
-          2.5,
+          0.0,
+          0.0,
+          3.5,
+          4.0,
+          6.0,
+          4.0,
+          6.0,
+          3.0,
           9.5
         ],
         "s23_smoothed_percentages": [
-          11.036,
-          0.321,
-          0.268,
-          9.25,
-          11.411,
-          14.929,
-          11.625,
-          16.661,
-          10.429,
-          35.214
+          12.875,
+          0.375,
+          0.292,
+          10.056,
+          11.903,
+          17.333,
+          12.111,
+          17.25,
+          9.625,
+          27.431
         ]
       }
     },
@@ -1038,34 +1036,32 @@
       "short_label": "Churches should provide structured pastoral",
       "text": "Churches should provide structured pastoral care for spouses harmed by pornography use even when the user is repentant.",
       "source_column": "Churches should provide structured pastoral care for spouses harmed by pornography use even when the user is repentant.",
-      "n": 28,
-      "mean": 79.54,
-      "median": 87.5,
+      "n": 36,
+      "mean": 76.17,
+      "median": 81.0,
       "min": 0.0,
       "max": 100.0,
-      "q1": 73.75,
+      "q1": 65.75,
       "q3": 100.0,
-      "iqr": 26.25,
-      "standard_deviation": 24.84,
+      "iqr": 34.25,
+      "standard_deviation": 26.56,
       "bands": {
-        "low": 2,
-        "middle": 3,
-        "high": 23
+        "low": 3,
+        "middle": 7,
+        "high": 26
       },
-      "disagreement_score": 26.25,
+      "disagreement_score": 34.25,
       "doubt_dogma": {
-        "non_endpoint_count": 17,
-        "endpoint_count": 11,
-        "exact_zero_count": 1,
-        "exact_hundred_count": 10,
-        "ratio": 1.545
+        "non_endpoint_count": 23,
+        "endpoint_count": 13,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 11,
+        "ratio": 1.769
       },
       "key_tension": {
         "flag": false,
-        "eligible": false,
-        "reasons": [
-          "below_minimum_n"
-        ]
+        "eligible": true,
+        "reasons": []
       },
       "distribution": {
         "cut_points": [
@@ -1082,52 +1078,52 @@
           100
         ],
         "simple_counts": [
-          1,
+          2,
           0,
           1,
           0,
           1,
-          1,
-          1,
+          2,
+          4,
           6,
-          3,
-          14
+          4,
+          16
         ],
         "display_percentages": [
-          3.571,
-          0.214,
-          3.571,
-          0.214,
-          3.679,
-          3.786,
-          4.321,
-          21.857,
-          12.857,
-          50.321
+          5.556,
+          0.25,
+          2.778,
+          0.167,
+          2.944,
+          5.972,
+          11.778,
+          17.333,
+          12.944,
+          44.778
         ],
         "s23_bucket_counts": [
+          3.0,
+          0.0,
+          1.0,
+          0.0,
           1.5,
-          0.0,
-          1.0,
-          0.0,
-          1.0,
-          1.0,
-          2.0,
+          1.5,
+          5.0,
           6.0,
-          3.5,
-          17.5
+          5.0,
+          19.5
         ],
         "s23_smoothed_percentages": [
-          5.518,
-          0.268,
-          3.571,
-          0.214,
-          3.679,
-          3.893,
-          7.893,
-          22.018,
-          15.018,
-          64.75
+          8.583,
+          0.333,
+          2.778,
+          0.208,
+          4.292,
+          4.708,
+          14.514,
+          17.5,
+          16.014,
+          56.208
         ]
       }
     },
@@ -1138,33 +1134,33 @@
       "short_label": "Churches should teach young people",
       "text": "Churches should teach young people about pornography before parents or students report that it is already a problem.",
       "source_column": "Churches should teach young people about pornography before parents or students report that it is already a problem.",
-      "n": 28,
-      "mean": 77.82,
-      "median": 85.5,
+      "n": 36,
+      "mean": 72.78,
+      "median": 76.5,
       "min": 0.0,
       "max": 100.0,
-      "q1": 67.0,
+      "q1": 60.0,
       "q3": 100.0,
-      "iqr": 33.0,
-      "standard_deviation": 26.16,
+      "iqr": 40.0,
+      "standard_deviation": 29.12,
       "bands": {
-        "low": 2,
-        "middle": 5,
-        "high": 21
+        "low": 5,
+        "middle": 6,
+        "high": 25
       },
-      "disagreement_score": 33.0,
+      "disagreement_score": 40.0,
       "doubt_dogma": {
-        "non_endpoint_count": 16,
-        "endpoint_count": 12,
-        "exact_zero_count": 1,
-        "exact_hundred_count": 11,
-        "ratio": 1.333
+        "non_endpoint_count": 22,
+        "endpoint_count": 14,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 12,
+        "ratio": 1.571
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "high_iqr"
         ]
       },
       "distribution": {
@@ -1182,52 +1178,52 @@
           100
         ],
         "simple_counts": [
-          1,
+          2,
           0,
+          2,
           1,
-          0,
           1,
           2,
-          3,
           4,
+          7,
           2,
-          14
+          15
         ],
         "display_percentages": [
-          3.571,
-          0.214,
-          3.571,
-          0.214,
-          3.786,
-          7.571,
-          11.357,
-          14.821,
-          9.071,
-          50.214
+          5.556,
+          0.333,
+          5.639,
+          3.028,
+          3.028,
+          5.972,
+          11.861,
+          19.944,
+          7.389,
+          41.833
         ],
         "s23_bucket_counts": [
-          1.5,
+          3.0,
           0.0,
-          1.0,
-          0.5,
-          1.0,
           2.0,
-          3.5,
-          3.5,
+          1.5,
+          1.0,
           2.5,
-          18.5
+          4.0,
+          6.5,
+          2.5,
+          20.0
         ],
         "s23_smoothed_percentages": [
-          5.518,
-          0.268,
-          3.625,
-          2.0,
-          3.839,
-          7.625,
-          13.089,
-          13.143,
-          11.286,
-          68.321
+          8.583,
+          0.417,
+          5.681,
+          4.417,
+          3.111,
+          7.361,
+          11.861,
+          18.597,
+          9.153,
+          57.431
         ]
       }
     },
@@ -1238,33 +1234,35 @@
       "short_label": "A church should require formal",
       "text": "A church should require formal membership before a person serves in any public ministry role.",
       "source_column": "A church should require formal membership before a person serves in any public ministry role.",
-      "n": 28,
-      "mean": 64.46,
-      "median": 75.0,
+      "n": 36,
+      "mean": 68.11,
+      "median": 79.0,
       "min": 0.0,
       "max": 100.0,
-      "q1": 34.75,
+      "q1": 46.5,
       "q3": 100.0,
-      "iqr": 65.25,
-      "standard_deviation": 35.44,
+      "iqr": 53.5,
+      "standard_deviation": 34.5,
       "bands": {
-        "low": 7,
-        "middle": 6,
-        "high": 15
+        "low": 8,
+        "middle": 7,
+        "high": 21
       },
-      "disagreement_score": 65.25,
+      "disagreement_score": 53.5,
       "doubt_dogma": {
-        "non_endpoint_count": 15,
-        "endpoint_count": 13,
+        "non_endpoint_count": 19,
+        "endpoint_count": 17,
         "exact_zero_count": 3,
-        "exact_hundred_count": 10,
-        "ratio": 1.154
+        "exact_hundred_count": 14,
+        "ratio": 1.118
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
         ]
       },
       "distribution": {
@@ -1283,51 +1281,51 @@
         ],
         "simple_counts": [
           3,
-          1,
+          2,
           1,
           3,
           0,
           3,
-          2,
           3,
-          2,
-          10
+          3,
+          3,
+          15
         ],
         "display_percentages": [
-          10.821,
-          4.0,
-          4.0,
-          10.821,
-          0.643,
-          10.929,
-          7.786,
-          11.143,
-          8.536,
-          35.929
+          8.5,
+          5.889,
+          3.194,
+          8.417,
+          0.5,
+          8.583,
+          8.833,
+          8.833,
+          9.833,
+          41.917
         ],
         "s23_bucket_counts": [
           4.5,
-          1.0,
+          2.0,
           1.5,
           2.5,
           1.5,
-          2.5,
-          1.0,
-          3.5,
+          3.0,
           1.5,
-          15.0
+          4.0,
+          2.5,
+          21.5
         ],
         "s23_smoothed_percentages": [
-          16.661,
-          4.214,
-          5.732,
-          9.25,
-          5.893,
-          9.196,
-          4.214,
-          12.768,
-          7.339,
-          55.339
+          13.042,
+          6.056,
+          4.542,
+          7.194,
+          4.625,
+          8.583,
+          4.75,
+          11.444,
+          9.069,
+          61.722
         ]
       }
     },
@@ -1338,33 +1336,35 @@
       "short_label": "Pastors should normally mention specific",
       "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
       "source_column": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
-      "n": 28,
-      "mean": 57.82,
-      "median": 61.5,
+      "n": 36,
+      "mean": 58.0,
+      "median": 64.0,
       "min": 0.0,
       "max": 100.0,
       "q1": 33.75,
-      "q3": 78.5,
-      "iqr": 44.75,
-      "standard_deviation": 32.06,
+      "q3": 81.0,
+      "iqr": 47.25,
+      "standard_deviation": 33.58,
       "bands": {
-        "low": 7,
-        "middle": 9,
-        "high": 12
+        "low": 9,
+        "middle": 10,
+        "high": 17
       },
-      "disagreement_score": 44.75,
+      "disagreement_score": 47.25,
       "doubt_dogma": {
-        "non_endpoint_count": 20,
-        "endpoint_count": 8,
-        "exact_zero_count": 2,
-        "exact_hundred_count": 6,
-        "ratio": 2.5
+        "non_endpoint_count": 25,
+        "endpoint_count": 11,
+        "exact_zero_count": 4,
+        "exact_hundred_count": 7,
+        "ratio": 2.273
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
         ]
       },
       "distribution": {
@@ -1382,52 +1382,52 @@
           100
         ],
         "simple_counts": [
-          3,
+          5,
           0,
           2,
-          4,
+          5,
           2,
           1,
           4,
-          5,
-          1,
-          6
+          6,
+          3,
+          8
         ],
         "display_percentages": [
-          10.714,
-          0.536,
-          7.571,
-          14.714,
-          7.679,
-          4.214,
-          14.929,
-          18.393,
-          4.75,
-          21.536
+          13.889,
+          0.583,
+          5.972,
+          14.222,
+          6.056,
+          3.278,
+          11.694,
+          17.25,
+          9.5,
+          22.472
         ],
         "s23_bucket_counts": [
-          4.0,
+          7.0,
           1.0,
           2.0,
-          3.0,
+          4.0,
           2.5,
           1.5,
           3.5,
-          5.0,
-          0.5,
-          9.0
+          6.5,
+          2.0,
+          11.5
         ],
         "s23_smoothed_percentages": [
-          14.821,
-          4.214,
-          7.571,
-          11.196,
-          9.411,
-          6.0,
-          13.196,
-          18.286,
-          3.286,
-          33.161
+          20.111,
+          3.528,
+          5.972,
+          11.486,
+          7.403,
+          4.667,
+          10.389,
+          18.514,
+          7.056,
+          33.069
         ]
       }
     },
@@ -1438,33 +1438,35 @@
       "short_label": "Christians should avoid recreational marijuana",
       "text": "Christians should avoid recreational marijuana use even where it is legal.",
       "source_column": "Christians should avoid recreational marijuana use even where it is legal.",
-      "n": 28,
-      "mean": 66.46,
-      "median": 87.5,
+      "n": 36,
+      "mean": 59.92,
+      "median": 72.5,
       "min": 0.0,
       "max": 100.0,
-      "q1": 24.25,
+      "q1": 19.5,
       "q3": 100.0,
-      "iqr": 75.75,
-      "standard_deviation": 39.03,
+      "iqr": 80.5,
+      "standard_deviation": 41.18,
       "bands": {
-        "low": 8,
-        "middle": 3,
-        "high": 17
+        "low": 13,
+        "middle": 4,
+        "high": 19
       },
-      "disagreement_score": 75.75,
+      "disagreement_score": 80.5,
       "doubt_dogma": {
-        "non_endpoint_count": 13,
-        "endpoint_count": 15,
-        "exact_zero_count": 2,
-        "exact_hundred_count": 13,
-        "ratio": 0.867
+        "non_endpoint_count": 16,
+        "endpoint_count": 20,
+        "exact_zero_count": 5,
+        "exact_hundred_count": 15,
+        "ratio": 0.8
       },
       "key_tension": {
-        "flag": false,
-        "eligible": false,
+        "flag": true,
+        "eligible": true,
         "reasons": [
-          "below_minimum_n"
+          "high_iqr",
+          "high_standard_deviation",
+          "low_high_split"
         ]
       },
       "distribution": {
@@ -1482,62 +1484,62 @@
           100
         ],
         "simple_counts": [
+          6,
           3,
-          2,
-          3,
+          4,
           1,
           0,
-          2,
+          3,
           0,
           2,
           1,
-          14
+          16
         ],
         "display_percentages": [
-          10.929,
-          7.786,
-          11.036,
-          3.893,
-          0.321,
-          7.143,
-          0.429,
-          7.25,
-          5.286,
-          50.107
+          16.917,
+          9.167,
+          11.444,
+          3.111,
+          0.333,
+          8.333,
+          0.417,
+          5.639,
+          4.278,
+          44.528
         ],
         "s23_bucket_counts": [
-          4.5,
-          2.0,
-          2.5,
+          9.0,
+          3.0,
+          3.5,
           1.0,
           0.5,
-          1.5,
+          2.5,
           0.5,
           1.5,
           1.5,
-          20.0
+          23.0
         ],
         "s23_smoothed_percentages": [
-          16.768,
-          7.893,
-          9.25,
-          3.893,
-          2.054,
-          5.464,
-          2.107,
-          5.571,
-          7.661,
-          73.732
+          26.0,
+          9.375,
+          10.056,
+          3.111,
+          1.681,
+          7.028,
+          1.722,
+          4.333,
+          6.208,
+          65.931
         ]
       }
     }
   ],
   "participant_nominations": {
-    "suggestions_received": 5,
+    "suggestions_received": 7,
     "raw_suggestions_public": false
   },
   "quality": {
-    "rows_read": 28,
+    "rows_read": 36,
     "missing_item_columns": [],
     "non_numeric_values": [],
     "out_of_range_values": []
@@ -1545,56 +1547,56 @@
   "private_data_excluded": true,
   "ballot": {
     "source_column": "Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Pornography and the Church topic. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension.",
-    "respondents": 28,
+    "respondents": 36,
     "scoring": "Borda count: 7 points for first place through 1 point for seventh place.",
     "items": [
       {
-        "choice": 3,
-        "text": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified.",
-        "score": 134,
-        "rank_count": 28,
+        "choice": 1,
+        "text": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands.",
+        "score": 178,
+        "rank_count": 36,
         "rank": 1
       },
       {
-        "choice": 1,
-        "text": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands.",
-        "score": 131,
-        "rank_count": 28,
+        "choice": 3,
+        "text": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified.",
+        "score": 177,
+        "rank_count": 36,
         "rank": 2
       },
       {
         "choice": 2,
         "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies.",
-        "score": 127,
-        "rank_count": 28,
+        "score": 163,
+        "rank_count": 36,
         "rank": 3
       },
       {
         "choice": 4,
         "text": "Baptism should ordinarily precede participation in the Lord's Supper.",
-        "score": 127,
-        "rank_count": 28,
+        "score": 157,
+        "rank_count": 36,
         "rank": 4
       },
       {
         "choice": 5,
         "text": "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.",
-        "score": 104,
-        "rank_count": 28,
+        "score": 132,
+        "rank_count": 36,
         "rank": 5
       },
       {
         "choice": 6,
         "text": "A church should require formal membership before a person serves in any public ministry role.",
-        "score": 86,
-        "rank_count": 28,
+        "score": 103,
+        "rank_count": 36,
         "rank": 6
       },
       {
         "choice": 7,
         "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation.",
-        "score": 75,
-        "rank_count": 28,
+        "score": 98,
+        "rank_count": 36,
         "rank": 7
       }
     ],
@@ -1642,8 +1644,8 @@
     ]
   },
   "report_encapsulation": {
-    "title": "Week 2 preliminary report: Pornography and the Church",
+    "title": "Week 2 refreshed preliminary report: Pornography and the Church",
     "url": "https://christianthoughtsurvey.com/weekly-survey-reports/week-002-pornography-and-the-church/",
-    "text": "The first Week 2 preliminary report has 28 complete responses. Early patterns show high agreement around pastoral accountability for persistent pornography use, direct leadership screening, pastoral care for harmed spouses, and proactive youth teaching, with wider spread around whether accountability software should be de-emphasized and how strongly churches are losing ground. Raw respondent identities and raw free-text suggestions are not published."
+    "text": "The refreshed Week 2 preliminary report has 36 complete responses. Current patterns show high agreement around pornography's prevalence among Christian men, pastoral accountability for persistent pornography use, direct leadership screening, pastoral care for harmed spouses, and proactive youth teaching, with wider spread around accountability software, marijuana avoidance, and whether churches are losing more ground than they are gaining. Raw respondent identities and raw free-text suggestions are not published."
   }
 }

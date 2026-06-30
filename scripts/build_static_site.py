@@ -18,8 +18,8 @@ SITE_DESCRIPTION = (
 SITE_URL = "https://christianthoughtsurvey.com"
 CSS_VERSION = "20260627-callout-spacing"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
-UPDATED = "June 23, 2026"
-SITEMAP_LASTMOD = "2026-06-23"
+UPDATED = "June 30, 2026"
+SITEMAP_LASTMOD = "2026-06-30"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
@@ -28,7 +28,7 @@ WEEK_3_REPORT_OUTPUT = "weekly-survey-reports/week-003-pastoral-authority-and-ac
 NEWSLETTER_CONFIRMATION_OUTPUT = "email-confirmation/index.html"
 AUTOMATION_DAILY_LOG_OUTPUT = "automation-daily-log/index.html"
 AUTOMATION_DAILY_LOG_DATA = ROOT / "data/public/automation-daily-log.json"
-REPORT_MANAGED_OUTPUTS = {WEEK_1_REPORT_OUTPUT, WEEK_2_REPORT_OUTPUT}
+REPORT_MANAGED_OUTPUTS = {WEEK_1_REPORT_OUTPUT, WEEK_2_REPORT_OUTPUT, WEEK_3_REPORT_OUTPUT}
 OG_IMAGE = f"{SITE_URL}/assets/cts-research-overview.png"
 OG_IMAGE_ALT = "Christian Thought Survey research overview graphic"
 DEFAULT_ROBOTS = "index,follow,max-image-preview:large"
@@ -290,16 +290,16 @@ PAGES = [
     <div>
       <p class="section-label">Newest survey page</p>
       <h2 id="latest-report-heading">Week 3: Pastoral Authority and Accountability</h2>
-      <p>The Week 3 survey is now fielding. The first production invitation batch was queued on Tuesday, June 23, 2026, so the final close date is Tuesday, July 14, 2026, exactly 21 days later.</p>
+      <p>The Week 3 first preliminary report is now posted with 27 complete responses. The first production invitation batch was queued on Tuesday, June 23, 2026, so the final close date is Tuesday, July 14, 2026, exactly 21 days later.</p>
       <div class="button-row">
-        <a class="button" href="{week_3_report_url}">Open Week 3 Placeholder</a>
+        <a class="button" href="{week_3_report_url}">Open Week 3 Report</a>
         <a class="button light" href="{week_2_report_url}">Open Week 2 Report</a>
       </div>
     </div>
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Fielding</dd>
+        <dd>Preliminary report posted</dd>
       </div>
       <div>
         <dt>Survey topic</dt>
@@ -317,12 +317,12 @@ PAGES = [
       <p>This board gives readers a public progress snapshot for each weekly survey: what is open now, what has already been reported, and when to expect the next public update. Participant identities and raw response files are not published.</p>
     </div>
     <div class="survey-timeline-chart" aria-label="Weekly survey status timeline">
-      <div class="survey-lane current" style="--progress-width: 40%;">
+      <div class="survey-lane current" style="--progress-width: 59.2%;">
         <div class="survey-lane-label">
           <a href="{week_3_report_url}">Week 3</a>
           <span>Pastoral Authority and Accountability</span>
         </div>
-        <div class="survey-stage-track" aria-label="Week 3 public placeholder is posted and the first participant invitation batch has been queued.">
+        <div class="survey-stage-track" aria-label="Week 3 first preliminary report is posted and the survey remains open for Tuesday refreshes.">
           <div class="survey-stage done" data-short-label="Page">
             <button class="stage-dot" type="button" aria-describedby="week3-placeholder-info" aria-label="Week 3 placeholder details"></button>
             <span class="stage-info-panel" id="week3-placeholder-info" role="tooltip"><strong>Week 3 placeholder</strong> Public page posted before participant invitations so the report URL and exact final close date are visible.</span>
@@ -333,14 +333,14 @@ PAGES = [
             <span class="stage-info-panel" id="week3-fielding-info" role="tooltip"><strong>Fielding</strong> 377 CTS email invitations have now been queued through Friday, June 26, 2026. All currently eligible Week 3 contacts have been invited.</span>
             <span>Fielding</span>
           </div>
-          <div class="survey-stage pending" data-short-label="Report">
+          <div class="survey-stage done" data-short-label="Report">
             <button class="stage-dot" type="button" aria-describedby="week3-first-report-info" aria-label="Week 3 first report details"></button>
-            <span class="stage-info-panel" id="week3-first-report-info" role="tooltip"><strong>First report</strong> Target first preliminary report: Tuesday, June 30, 2026, after response data is reviewed.</span>
+            <span class="stage-info-panel" id="week3-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 27 complete responses as of the June 30 report.</span>
             <span>First Report</span>
           </div>
-          <div class="survey-stage pending" data-short-label="Refresh">
+          <div class="survey-stage active" data-short-label="Refresh">
             <button class="stage-dot" type="button" aria-describedby="week3-refresh-info" aria-label="Week 3 refresh details"></button>
-            <span class="stage-info-panel" id="week3-refresh-info" role="tooltip"><strong>Refreshes</strong> Preliminary report refreshes are planned each Tuesday morning while the survey remains open.</span>
+            <span class="stage-info-panel" id="week3-refresh-info" role="tooltip"><strong>Refreshes</strong> Current public responses: 27 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Tuesday, July 14, 2026.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
@@ -351,7 +351,7 @@ PAGES = [
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>Next invitation batch</strong>
+          <strong>July 7 refresh</strong>
         </div>
       </div>
       <div class="survey-lane" style="--progress-width: 59.2%;">
@@ -372,12 +372,12 @@ PAGES = [
           </div>
           <div class="survey-stage done" data-short-label="Report">
             <button class="stage-dot" type="button" aria-describedby="week2-first-report-info" aria-label="Week 2 first report details"></button>
-            <span class="stage-info-panel" id="week2-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 28 complete responses as of the June 23 report.</span>
+            <span class="stage-info-panel" id="week2-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 36 complete responses as of the June 30 refresh.</span>
             <span>First Report</span>
           </div>
           <div class="survey-stage active" data-short-label="Refresh">
             <button class="stage-dot" type="button" aria-describedby="week2-refresh-info" aria-label="Week 2 refresh details"></button>
-            <span class="stage-info-panel" id="week2-refresh-info" role="tooltip"><strong>Refreshes</strong> Current public responses: 28 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Tuesday, July 7, 2026. Manual reminders are now in their audited send window.</span>
+            <span class="stage-info-panel" id="week2-refresh-info" role="tooltip"><strong>Refreshes</strong> Current public responses: 36 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Tuesday, July 7, 2026. Manual reminders are now in their audited send window.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
@@ -388,7 +388,7 @@ PAGES = [
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>June 30 refresh</strong>
+          <strong>July 7 refresh</strong>
         </div>
       </div>
       <div class="survey-lane" style="--progress-width: 59.2%;">
@@ -409,12 +409,12 @@ PAGES = [
           </div>
           <div class="survey-stage done" data-short-label="Report">
             <button class="stage-dot" type="button" aria-describedby="week1-first-report-info" aria-label="Week 1 first report details"></button>
-            <span class="stage-info-panel" id="week1-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 44 complete responses as of the June 23 refresh.</span>
+            <span class="stage-info-panel" id="week1-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 58 complete responses as of the June 30 refresh.</span>
             <span>First Report</span>
           </div>
           <div class="survey-stage active" data-short-label="Refresh">
             <button class="stage-dot" type="button" aria-describedby="week1-refresh-info" aria-label="Week 1 refresh details"></button>
-            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshing</strong> Current public responses: 44 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Wednesday, July 1, 2026.</span>
+            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshing</strong> Current public responses: 58 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Wednesday, July 1, 2026.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
@@ -425,7 +425,7 @@ PAGES = [
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>June 30 refresh</strong>
+          <strong>July 1 close check</strong>
         </div>
       </div>
     </div>
