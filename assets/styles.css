@@ -1246,24 +1246,20 @@ h3 {
   font-size: 0.93rem;
 }
 
-.page-week-001-report .article-shell,
-.page-week-002-report .article-shell {
+.weekly-report-page .article-shell {
   width: min(1120px, calc(100% - 32px));
 }
 
-.page-week-001-report,
-.page-week-002-report {
+.weekly-report-page {
   overflow-x: clip;
 }
 
-.page-week-001-report .content-band,
-.page-week-002-report .content-band {
+.weekly-report-page .content-band {
   padding-top: 0;
   padding-bottom: 3rem;
 }
 
-.page-week-001-report .week-report > .report-kicker,
-.page-week-002-report .week-report > .report-kicker {
+.weekly-report-page .week-report > .report-kicker {
   width: 100vw;
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
@@ -1278,92 +1274,74 @@ h3 {
   line-height: 1.38;
 }
 
-.page-week-001-report .week-report > .report-kicker:first-child,
-.page-week-002-report .week-report > .report-kicker:first-child {
+.weekly-report-page .week-report > .report-kicker:first-child {
   border-top: 1px solid #cfe2da;
 }
 
-.page-week-001-report .week-report > .report-kicker + .report-kicker,
-.page-week-002-report .week-report > .report-kicker + .report-kicker {
+.weekly-report-page .week-report > .report-kicker + .report-kicker {
   margin-top: 0;
   background: #eef7f2;
 }
 
-.page-week-001-report .week-report > .report-kicker + :not(.report-kicker),
-.page-week-002-report .week-report > .report-kicker + :not(.report-kicker) {
+.weekly-report-page .week-report > .report-kicker + :not(.report-kicker) {
   margin-top: 1.05rem;
 }
 
-.page-week-001-report .week-report .executive-summary,
-.page-week-002-report .week-report .executive-summary {
+.weekly-report-page .week-report .executive-summary {
   padding: 1rem 1.15rem;
 }
 
-.page-week-001-report .week-report .executive-summary h2,
-.page-week-002-report .week-report .executive-summary h2 {
+.weekly-report-page .week-report .executive-summary h2 {
   line-height: 1.08;
 }
 
-.page-week-001-report .week-report .executive-summary p,
-.page-week-002-report .week-report .executive-summary p {
+.weekly-report-page .week-report .executive-summary p {
   line-height: 1.45;
 }
 
-.page-week-001-report .week-report .executive-summary p + p,
-.page-week-002-report .week-report .executive-summary p + p {
+.weekly-report-page .week-report .executive-summary p + p {
   margin-top: 0.42rem;
 }
 
-.page-week-001-report .week-report .report-grid,
-.page-week-002-report .week-report .report-grid {
+.weekly-report-page .week-report .report-grid {
   gap: 0.75rem;
   margin-top: 0.85rem;
 }
 
-.page-week-001-report .week-report .status-card,
-.page-week-001-report .week-report .report-card,
-.page-week-002-report .week-report .status-card,
-.page-week-002-report .week-report .report-card {
+.weekly-report-page .week-report .status-card,
+.weekly-report-page .week-report .report-card {
   min-height: 112px;
   padding: 0.82rem 0.95rem;
   box-shadow: 0 8px 18px rgba(23, 40, 45, 0.07);
 }
 
-.page-week-001-report .week-report .status-card span,
-.page-week-002-report .week-report .status-card span {
+.weekly-report-page .week-report .status-card span {
   margin-bottom: 0.18rem;
 }
 
-.page-week-001-report .week-report .status-card strong,
-.page-week-001-report .week-report .report-card h3,
-.page-week-002-report .week-report .status-card strong,
-.page-week-002-report .week-report .report-card h3 {
+.weekly-report-page .week-report .status-card strong,
+.weekly-report-page .week-report .report-card h3 {
   font-size: 0.98rem;
 }
 
-.page-week-001-report .week-report .status-card p,
-.page-week-001-report .week-report .report-card p,
-.page-week-002-report .week-report .status-card p,
-.page-week-002-report .week-report .report-card p {
+.weekly-report-page .week-report .status-card p,
+.weekly-report-page .week-report .report-card p {
   margin-top: 0.25rem;
   font-size: 0.88rem;
   line-height: 1.35;
 }
 
-.page-week-001-report .week-report .result-metric,
-.page-week-002-report .week-report .result-metric {
+.weekly-report-page .week-report .result-metric {
   min-height: 108px;
   padding: 0.72rem 0.78rem;
   box-shadow: 0 8px 18px rgba(23, 40, 45, 0.07);
 }
 
-.page-week-001-report .week-report .result-metric p,
-.page-week-002-report .week-report .result-metric p {
+.weekly-report-page .week-report .result-metric p {
   margin-top: 0.35rem;
 }
 
-.page-week-001-report .week-report .report-section,
-.page-week-002-report .week-report .report-section {
+.weekly-report-page .week-report .report-section {
   padding-top: 2rem;
 }
 
