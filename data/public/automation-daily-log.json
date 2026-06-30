@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-06-30T19:02:04-04:00",
-  "updated_time_et": "7:02:04 PM EDT",
+  "updated_at": "2026-06-30T17:30:00-04:00",
+  "updated_time_et": "5:30:00 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-30",
+      "recorded_at": "2026-06-30T17:30:00-04:00",
+      "recorded_time_et": "5:30:00 PM EDT",
+      "status": "week-4-send-retry-blocked",
+      "summary": "Week 4 Safari retry advanced sender verification but SurveyOL still rejected the invitation queue.",
+      "ran": [
+        "Reopened the Week 4 SurveyOL send page in Safari after the account reset and targeted the original non-anonymous Email collector.",
+        "Verified the first 100-recipient private batch still had a clean duplicate audit.",
+        "Confirmed Gmail sender verification now returns a token, but SurveyOL token verification rejects it and invitation saves return unsuccessful.",
+        "Tried 100 and 99 recipient queue attempts; both left the live invitation count at 0. Yahoo sender verification still did not start."
+      ],
+      "result": "No Week 4 invitations were sent or queued. The original Email collector remains at 0 invitations, 0 completes, 0 opt-outs, and 0 bounces. The current blocker is SurveyOL sender-token verification / queue acceptance, not the recipient list.",
+      "next": "Have SurveyOL support repair sender verification or provide a verified sender state, then recheck the collector, close or ignore the accidental anonymous Email #2 collector, rerun the exact batch audit, and send once while verifying the live invitation count increases."
+    },
     {
       "date": "2026-06-30",
       "recorded_at": "2026-06-30T19:02:04-04:00",
@@ -419,36 +434,6 @@
       ],
       "result": "Future weekly surveys should display their exact final close date on the public placeholder page before the first production invitation batch, then preserve that same date through report refreshes and finalization.",
       "next": "For each new weekly survey, record public.final-close-date-posted in the private ledger with the first invitation date, computed final close date, public URL, and commit hash."
-    },
-    {
-      "date": "2026-06-19",
-      "recorded_at": "2026-06-19T16:22:55-04:00",
-      "recorded_time_et": "4:22:55 PM EDT",
-      "status": "Manual reminder process hardened",
-      "summary": "Canonized audited manual reminders for future weekly surveys.",
-      "ran": [
-        "Added the day-12 manual reminder due check to the weekly runbook and launch checklist.",
-        "Added a private launch-gate record for verifying that automatic Email collector reminders are off.",
-        "Updated the Monday preflight, Tuesday launch, and recurring invitation-check automations to require or flag the automatic-reminder-off setting."
-      ],
-      "result": "Future weekly surveys should keep SurveyOL automatic Reminder Follow-up off before the first production invitation batch. Reminder sends should use the separate day-12 manual reminder due check and invitation-row audit.",
-      "next": "For each new weekly survey, record surveyol.reminder-auto-disabled in the private ledger before launch, then run the manual reminder due check after the first invitation date plus 12 days."
-    },
-    {
-      "date": "2026-06-19",
-      "recorded_at": "2026-06-19T14:20:00-04:00",
-      "recorded_time_et": "2:20:00 PM EDT",
-      "status": "Week 2 batch sent",
-      "summary": "Restored SurveyOL access, cleared the invitation gate, and sent the next guarded Week 2 batch.",
-      "ran": [
-        "Regenerated the private Week 2 invitation-scope status board and confirmed all required checks were clear.",
-        "Reconfirmed the Week 2 placeholder page and the reports index link before sending.",
-        "Queued the next guarded SurveyOL Email collector batch of 100 invitations.",
-        "Recorded the batch result and post-send suppression check in the private Week 2 ledger.",
-        "Confirmed the recurring invitation automation remains scheduled for 11:30 AM Eastern, Wednesday through Saturday."
-      ],
-      "result": "100 invitations were queued in this batch, bringing the Week 2 cumulative invitation count to 390. Public-safe post-send totals were 23 completes, 14 opt-outs, and 0 bounces, with an estimated 19 eligible contacts still uninvited. SurveyOL then reached its daily sending limit for June 19, 2026.",
-      "next": "Resume at the next allowed send window if eligible contacts remain; the next guarded batch should be the final Week 2 invitation slice if no new review gate appears."
     }
   ]
 }
