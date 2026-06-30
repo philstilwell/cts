@@ -14,7 +14,7 @@ For topic/item tension preflights, use `TOPIC_BANK_TENSION_REVIEW.md` and `NEXT_
 - Starting 12 days after the first production invitation date, run the manual reminder due check. When it reports due, complete the audited manual reminder workflow instead of enabling automated reminder follow-up.
 - Every week: before any survey-invitation send, remove or suppress from SurveyOL and `CTS 2026` any address that appears on SurveyOL's no-send/unsubscribed list or is otherwise marked do-not-email in the registry.
 - Historical external email-tool unsubscribe evidence should be reflected in `CTS 2026` when known, but the recurring SurveyOL invitation-scope blocker is the current SurveyOL plus `CTS 2026` suppression state unless CTS explicitly reintroduces another active workflow dependency in `CTS_PROCESS_COORDINATION.md` and `automation/weekly-process.json`.
-- Every weekly survey remains open for 3 weeks from its first invitation send. Calculate the final close date as the first production invitation send date plus 21 days, normally a Tuesday for Tuesday evening launches, and post that exact date on the weekly survey's public page before invitations go out. Close the SurveyOL collector after that date, export the final raw results privately, and regenerate the public report as final.
+- Every weekly survey remains open for 3 weeks from its first invitation send. Calculate the final close date as the first production invitation send date plus 20 days, normally a Tuesday for Tuesday evening launches, and post that exact date on the weekly survey's public page before invitations go out. Close the SurveyOL collector after that date, export the final raw results privately, and regenerate the public report as final.
 - Every weekly SurveyOL Email collector should launch with automatic `Reminder Follow-up` off. Send reminders only through a later manual reminder pass after the live invitation table has been exported or extracted, duplicate-audited, and converted into a reminder candidate list.
 - Every new weekly SurveyOL survey should include, near the top, a brief encapsulation of the newest weekly report plus a link to the full report.
 - Every new weekly SurveyOL survey must be reviewed and approved by the CTS owner before the first production invitation batch. This review replaces any standing internal test-send requirement; perform a test send only when the owner explicitly asks for one or when a specific technical uncertainty warrants it.
@@ -49,7 +49,7 @@ Use these scopes:
 - `launch`: required evidence before the first production SurveyOL invitation batch.
 - `invitation`: recurring evidence around Wednesday-Saturday invitation batches, including any launch-time send gate that remains relevant after Tuesday, such as automatic-reminder-off verification and manual reminder audits.
 - `report`: Tuesday report, newsletter, and public status update evidence.
-- `close`: three-week survey close and final-report evidence.
+- `close`: 20-day survey close and final-report evidence.
 - `full-cycle`: complete process coverage and redundancy audit.
 
 The status board answers three operational questions:
@@ -103,7 +103,7 @@ The encapsulation should be short enough to scan quickly and should include:
 9. Add a text box for future participant-nominated survey items.
 10. Add a preview of upcoming topics. The topics for the next three weeks should be featured to allow for mental preparation.
 11. Confirm the full-time ministry participation note appears in the website/contact materials and email copy. Do not add a separate eligibility confirmation item inside the weekly SurveyOL survey unless CTS intentionally reintroduces one.
-12. Create the placeholder public report page before the first SurveyOL invitation batch. The placeholder should use the stable report URL, state that the survey is open, name the topic, identify the expected first-report date, and show the exact final close date calculated as the planned first production invitation date plus 21 days. If the actual first send slips, update the page, reports index, and week config to the corrected close date before reporting the launch complete. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
+12. Create the placeholder public report page before the first SurveyOL invitation batch. The placeholder should use the stable report URL, state that the survey is open, name the topic, identify the expected first-report date, and show the exact final close date calculated as the planned first production invitation date plus 20 days. If the actual first send slips, update the page, reports index, and week config to the corrected close date before reporting the launch complete. Week 1 uses `https://christianthoughtsurvey.com/weekly-survey-reports/week-001-divorce-and-remarriage/`.
 13. Before any full participant send, remove all closed-test wording from the SurveyOL title, intro text, previous-results placeholder, and end-of-survey page.
 14. Present the finished SurveyOL draft or equivalent preview materials for CTS owner review, including the newest-report link, 12 topic items, 3 independent items, 7-item ballot, suggestion box, upcoming-topic preview, invitation copy, collector settings, and final-close-date plan. Record `surveyol.prelaunch-human-review` only after the owner approves the first production batch. Do not require an internal test send unless the owner asks for one.
 
@@ -132,7 +132,7 @@ python3 scripts/cts_ops.py audit-batch-against-invitations \
 12. Send up to 100 invitations per day until all eligible potential participants have been invited for that week's survey. Record each batch count, cumulative sent count, total eligible invitation-list count, and remaining eligible-invitation count; stop when the remaining count reaches zero.
 13. For a small tail batch, prefer the simplest stable SurveyOL send path only after the batch-vs-live audit passes. If the live contact-table checkbox UI is fragile, row selection opens edit dialogs, or the remaining list is already known from the guarded send audit, use the `Recipient Email(s)` field directly with the verified remaining addresses instead of forcing another checkbox-based selection pass. Record that direct-entry fallback was used.
 14. After each send, re-extract or inspect SurveyOL invitations before the next risky action. If anyone reports multiple copies, record a private blocker and do not send more invitations or reminders until the live duplicate-row audit is clean.
-15. After the first production invitation batch is actually sent, verify that the public page's final close date equals that send date plus 21 days. If the actual send date differs from the planned launch date, correct the public page, reports index, reporting config, and automation ledger before the next public status update.
+15. After the first production invitation batch is actually sent, verify that the public page's final close date equals that send date plus 20 days. If the actual send date differs from the planned launch date, correct the public page, reports index, reporting config, and automation ledger before the next public status update.
 16. After the first production invitation batch is actually sent, record or generate the day-12 manual reminder due check:
 
 ```bash
@@ -264,7 +264,7 @@ Before acting on the checklist above, regenerate the relevant automation status 
 - The first 15 live survey items are marked required in SurveyOL.
 - SurveyOL title, descriptive text, previous-results placeholder, and end-of-survey page contain no closed-test language before production send.
 - Previous-results/report references use an actual SurveyOL rich-text link labeled `CTS REPORTS`, with no raw URL visible to participants. The linked label is bold, underlined, header-accent colored (`#553e15` unless the banner palette changes), and enlarged with `X↑` twice.
-- Placeholder public report page exists, is linked from the reports index, shows the exact final close date calculated from the planned first invitation date plus 21 days, and has been pushed before the first production invitation batch.
+- Placeholder public report page exists, is linked from the reports index, shows the exact final close date calculated from the planned first invitation date plus 20 days, and has been pushed before the first production invitation batch.
 - CTS owner has reviewed the finished weekly SurveyOL survey or equivalent preview materials and explicitly approved the first production invitation batch; no internal test send is required unless explicitly requested.
 - Featured Topic header image appears immediately before the `◉ Main topic...` introduction line.
 - The `◉ Main topic...` introduction block is styled in SurveyOL: main-topic line bold and enlarged with `X↑` twice, topic name highlighted with `#e0a550` background and `#553e15` text, and response-format line bold in black.

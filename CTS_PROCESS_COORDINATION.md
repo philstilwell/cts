@@ -32,7 +32,7 @@ Stop before importing contacts, sending SurveyOL invitations, sending reminders,
 Before any invitation batch:
 
 - Regenerate the relevant private status board with `scripts/cts_automation_status.py`.
-- Confirm the public placeholder exists, is linked from the reports index, and shows the exact final close date as first production invitation date plus 21 days.
+- Confirm the public placeholder exists, is linked from the reports index, and shows the exact final close date as first production invitation date plus 20 days.
 - Confirm `public.final-close-date-posted` is recorded in the private ledger.
 - Confirm SurveyOL Email collector status is `Open`, `Anonymous Responses` is `Off`, and automatic `Reminder Follow-up` is `Off`.
 - Confirm `surveyol.reminder-auto-disabled` is recorded. Do not require the older automatic-reminder configuration ledger gate for recurring invitation batches.

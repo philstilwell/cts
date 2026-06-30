@@ -70,7 +70,7 @@
       ],
       "covers": [
         "First production invitation send date captured or planned",
-        "Final close date calculated as first invitation date plus 21 days",
+        "Final close date calculated as first invitation date plus 20 days",
         "Weekly public page shows the exact final close date or a clearly marked final close target before launch",
         "Reports index and refresh notes use the same final close date",
         "Close automation uses the posted final close date"
@@ -463,7 +463,7 @@
       "phase": "Close and finalize",
       "required": true,
       "scopes": ["close", "full-cycle"],
-      "cadence": "After the three-week response window closes.",
+      "cadence": "After the 20-day response window closes.",
       "evidence": [
         {"kind": "record", "required": true}
       ],

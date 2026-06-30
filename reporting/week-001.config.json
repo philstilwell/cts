@@ -5,12 +5,12 @@
   "platform": "CTS",
   "field_dates": {
     "start": "2026-06-10",
-    "end": "2026-07-01",
+    "end": "2026-06-30",
     "first_invitation_sent": "2026-06-10",
-    "final_close": "2026-07-01",
-    "final_close_label": "Wednesday, July 1, 2026",
-    "final_close_rule": "21 days after the first production invitation send",
-    "date_note": "Week 1 launched outside the normal Tuesday cadence; this is the scheduled three-week final close target from the first Week 1 production invitation window."
+    "final_close": "2026-06-30",
+    "final_close_label": "Tuesday, June 30, 2026",
+    "final_close_rule": "20 days after the first production invitation send",
+    "date_note": "Week 1 launched outside the normal Tuesday cadence; this is the scheduled 20-day final close date from the first Week 1 production invitation window."
   },
   "slider_scale": {
     "min": 0,
@@ -89,106 +89,152 @@
       "id": "W001-Q01",
       "number": 1,
       "section": "cts_administered_topic",
-      "source_columns": ["Q1", "In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce."],
+      "source_columns": [
+        "Q1",
+        "In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce."
+      ],
       "text": "In ordinary cases, a spouse's sexual adultery constitutes biblically legitimate grounds for divorce."
     },
     {
       "id": "W001-Q02",
       "number": 2,
       "section": "cts_administered_topic",
-      "source_columns": ["Q2", "In ordinary cases, a spouse's persistent physical abuse constitutes biblically legitimate grounds for divorce even if sexual adultery has not occurred."],
+      "source_columns": [
+        "Q2",
+        "In ordinary cases, a spouse's persistent physical abuse constitutes biblically legitimate grounds for divorce even if sexual adultery has not occurred."
+      ],
       "text": "In ordinary cases, a spouse's persistent physical abuse constitutes biblically legitimate grounds for divorce even if sexual adultery has not occurred."
     },
     {
       "id": "W001-Q03",
       "number": 3,
       "section": "cts_administered_topic",
-      "source_columns": ["Q3", "In ordinary cases, a spouse's severe and persistent emotional or psychological abuse can constitute biblically legitimate grounds for divorce."],
+      "source_columns": [
+        "Q3",
+        "In ordinary cases, a spouse's severe and persistent emotional or psychological abuse can constitute biblically legitimate grounds for divorce."
+      ],
       "text": "In ordinary cases, a spouse's severe and persistent emotional or psychological abuse can constitute biblically legitimate grounds for divorce."
     },
     {
       "id": "W001-Q04",
       "number": 4,
       "section": "cts_administered_topic",
-      "source_columns": ["Q4", "In ordinary cases, willful abandonment by an unbelieving spouse constitutes biblically legitimate grounds for divorce."],
+      "source_columns": [
+        "Q4",
+        "In ordinary cases, willful abandonment by an unbelieving spouse constitutes biblically legitimate grounds for divorce."
+      ],
       "text": "In ordinary cases, willful abandonment by an unbelieving spouse constitutes biblically legitimate grounds for divorce."
     },
     {
       "id": "W001-Q05",
       "number": 5,
       "section": "cts_administered_topic",
-      "source_columns": ["Q5", "In ordinary cases, a spouse's persistent pornography use can become biblically legitimate grounds for divorce."],
+      "source_columns": [
+        "Q5",
+        "In ordinary cases, a spouse's persistent pornography use can become biblically legitimate grounds for divorce."
+      ],
       "text": "In ordinary cases, a spouse's persistent pornography use can become biblically legitimate grounds for divorce."
     },
     {
       "id": "W001-Q06",
       "number": 6,
       "section": "cts_administered_topic",
-      "source_columns": ["Q6", "In ordinary cases, a spouse's romantic but nonsexual infidelity can constitute biblically legitimate grounds for divorce."],
+      "source_columns": [
+        "Q6",
+        "In ordinary cases, a spouse's romantic but nonsexual infidelity can constitute biblically legitimate grounds for divorce."
+      ],
       "text": "In ordinary cases, a spouse's romantic but nonsexual infidelity can constitute biblically legitimate grounds for divorce."
     },
     {
       "id": "W001-Q07",
       "number": 7,
       "section": "cts_administered_topic",
-      "source_columns": ["Q7", "A Christian whose divorce was biblically legitimate is normally free to remarry."],
+      "source_columns": [
+        "Q7",
+        "A Christian whose divorce was biblically legitimate is normally free to remarry."
+      ],
       "text": "A Christian whose divorce was biblically legitimate is normally free to remarry."
     },
     {
       "id": "W001-Q08",
       "number": 8,
       "section": "cts_administered_topic",
-      "source_columns": ["Q8", "Churches should normally require pastoral review before affirming the remarriage of a divorced Christian."],
+      "source_columns": [
+        "Q8",
+        "Churches should normally require pastoral review before affirming the remarriage of a divorced Christian."
+      ],
       "text": "Churches should normally require pastoral review before affirming the remarriage of a divorced Christian."
     },
     {
       "id": "W001-Q09",
       "number": 9,
       "section": "cts_administered_topic",
-      "source_columns": ["Q9", "Churches should use formal discipline when members knowingly pursue a biblically illegitimate divorce."],
+      "source_columns": [
+        "Q9",
+        "Churches should use formal discipline when members knowingly pursue a biblically illegitimate divorce."
+      ],
       "text": "Churches should use formal discipline when members knowingly pursue a biblically illegitimate divorce."
     },
     {
       "id": "W001-Q10",
       "number": 10,
       "section": "cts_administered_topic",
-      "source_columns": ["Q10", "In my ministry context, churches are generally too permissive about divorce and remarriage."],
+      "source_columns": [
+        "Q10",
+        "In my ministry context, churches are generally too permissive about divorce and remarriage."
+      ],
       "text": "In my ministry context, churches are generally too permissive about divorce and remarriage."
     },
     {
       "id": "W001-Q11",
       "number": 11,
       "section": "cts_administered_topic",
-      "source_columns": ["Q11", "Churches should treat immediate physical safety as a priority before pursuing marital reconciliation in abusive marriages."],
+      "source_columns": [
+        "Q11",
+        "Churches should treat immediate physical safety as a priority before pursuing marital reconciliation in abusive marriages."
+      ],
       "text": "Churches should treat immediate physical safety as a priority before pursuing marital reconciliation in abusive marriages."
     },
     {
       "id": "W001-Q12",
       "number": 12,
       "section": "cts_administered_topic",
-      "source_columns": ["Q12", "Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce."],
+      "source_columns": [
+        "Q12",
+        "Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce."
+      ],
       "text": "Pastors should distinguish carefully between ordinary marital conflict and patterns of coercive control when counseling about divorce."
     },
     {
       "id": "W001-Q13",
       "number": 13,
       "section": "participant_vote_seeded",
-      "source_columns": ["Q13", "Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise."],
+      "source_columns": [
+        "Q13",
+        "Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise."
+      ],
       "text": "Pastors should sometimes name specific political movements or parties when warning a congregation about moral compromise."
     },
     {
       "id": "W001-Q14",
       "number": 14,
       "section": "participant_vote_seeded",
-      "source_columns": ["Q14", "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship."],
+      "source_columns": [
+        "Q14",
+        "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship."
+      ],
       "text": "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship."
     },
     {
       "id": "W001-Q15",
       "number": 15,
       "section": "participant_vote_seeded",
-      "source_columns": ["Q15", "Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox."],
+      "source_columns": [
+        "Q15",
+        "Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox."
+      ],
       "text": "Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox."
     }
-  ]
+  ],
+  "report_status": "final"
 }

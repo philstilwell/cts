@@ -5,12 +5,12 @@
   "platform": "CTS",
   "field_dates": {
     "start": "2026-06-16",
-    "end": "2026-07-07",
+    "end": "2026-07-06",
     "first_invitation_sent": "2026-06-16",
     "first_report_target": "2026-06-23",
-    "final_close": "2026-07-07",
-    "final_close_label": "Tuesday, July 7, 2026",
-    "final_close_rule": "21 days after the first production invitation send"
+    "final_close": "2026-07-06",
+    "final_close_label": "Monday, July 6, 2026",
+    "final_close_rule": "20 days after the first production invitation send"
   },
   "slider_scale": {
     "min": 0,
@@ -94,106 +94,152 @@
       "id": "W002-Q01",
       "number": 1,
       "section": "cts_administered_topic",
-      "source_columns": ["Q1", "Pornography use is more spiritually damaging to churches today than most other hidden sins."],
+      "source_columns": [
+        "Q1",
+        "Pornography use is more spiritually damaging to churches today than most other hidden sins."
+      ],
       "text": "Pornography use is more spiritually damaging to churches today than most other hidden sins."
     },
     {
       "id": "W002-Q02",
       "number": 2,
       "section": "cts_administered_topic",
-      "source_columns": ["Q2", "In my ministry context, pornography use among Christian men is more common than most congregations recognize."],
+      "source_columns": [
+        "Q2",
+        "In my ministry context, pornography use among Christian men is more common than most congregations recognize."
+      ],
       "text": "In my ministry context, pornography use among Christian men is more common than most congregations recognize."
     },
     {
       "id": "W002-Q03",
       "number": 3,
       "section": "cts_administered_topic",
-      "source_columns": ["Q3", "In my ministry context, pornography use among Christian women is more common than most congregations recognize."],
+      "source_columns": [
+        "Q3",
+        "In my ministry context, pornography use among Christian women is more common than most congregations recognize."
+      ],
       "text": "In my ministry context, pornography use among Christian women is more common than most congregations recognize."
     },
     {
       "id": "W002-Q04",
       "number": 4,
       "section": "cts_administered_topic",
-      "source_columns": ["Q4", "Persistent pornography use should ordinarily disqualify a pastor from active ministry until repentance and accountability are demonstrably established."],
+      "source_columns": [
+        "Q4",
+        "Persistent pornography use should ordinarily disqualify a pastor from active ministry until repentance and accountability are demonstrably established."
+      ],
       "text": "Persistent pornography use should ordinarily disqualify a pastor from active ministry until repentance and accountability are demonstrably established."
     },
     {
       "id": "W002-Q05",
       "number": 5,
       "section": "cts_administered_topic",
-      "source_columns": ["Q5", "Churches should ask direct but pastorally careful questions about pornography use when evaluating candidates for leadership."],
+      "source_columns": [
+        "Q5",
+        "Churches should ask direct but pastorally careful questions about pornography use when evaluating candidates for leadership."
+      ],
       "text": "Churches should ask direct but pastorally careful questions about pornography use when evaluating candidates for leadership."
     },
     {
       "id": "W002-Q06",
       "number": 6,
       "section": "cts_administered_topic",
-      "source_columns": ["Q6", "Pornography use is substantially shaping sexual expectations within Christian marriages."],
+      "source_columns": [
+        "Q6",
+        "Pornography use is substantially shaping sexual expectations within Christian marriages."
+      ],
       "text": "Pornography use is substantially shaping sexual expectations within Christian marriages."
     },
     {
       "id": "W002-Q07",
       "number": 7,
       "section": "cts_administered_topic",
-      "source_columns": ["Q7", "Churches should avoid presenting accountability software as a primary solution for habitual pornography use."],
+      "source_columns": [
+        "Q7",
+        "Churches should avoid presenting accountability software as a primary solution for habitual pornography use."
+      ],
       "text": "Churches should avoid presenting accountability software as a primary solution for habitual pornography use."
     },
     {
       "id": "W002-Q08",
       "number": 8,
       "section": "cts_administered_topic",
-      "source_columns": ["Q8", "Pastors should address pornography from the pulpit more often than most churches currently do."],
+      "source_columns": [
+        "Q8",
+        "Pastors should address pornography from the pulpit more often than most churches currently do."
+      ],
       "text": "Pastors should address pornography from the pulpit more often than most churches currently do."
     },
     {
       "id": "W002-Q09",
       "number": 9,
       "section": "cts_administered_topic",
-      "source_columns": ["Q9", "Churches should treat habitual pornography use as both moral sin and a behavioral health concern."],
+      "source_columns": [
+        "Q9",
+        "Churches should treat habitual pornography use as both moral sin and a behavioral health concern."
+      ],
       "text": "Churches should treat habitual pornography use as both moral sin and a behavioral health concern."
     },
     {
       "id": "W002-Q10",
       "number": 10,
       "section": "cts_administered_topic",
-      "source_columns": ["Q10", "In my ministry context, churches are currently losing more ground than they are gaining against pornography."],
+      "source_columns": [
+        "Q10",
+        "In my ministry context, churches are currently losing more ground than they are gaining against pornography."
+      ],
       "text": "In my ministry context, churches are currently losing more ground than they are gaining against pornography."
     },
     {
       "id": "W002-Q11",
       "number": 11,
       "section": "cts_administered_topic",
-      "source_columns": ["Q11", "Churches should provide structured pastoral care for spouses harmed by pornography use even when the user is repentant."],
+      "source_columns": [
+        "Q11",
+        "Churches should provide structured pastoral care for spouses harmed by pornography use even when the user is repentant."
+      ],
       "text": "Churches should provide structured pastoral care for spouses harmed by pornography use even when the user is repentant."
     },
     {
       "id": "W002-Q12",
       "number": 12,
       "section": "cts_administered_topic",
-      "source_columns": ["Q12", "Churches should teach young people about pornography before parents or students report that it is already a problem."],
+      "source_columns": [
+        "Q12",
+        "Churches should teach young people about pornography before parents or students report that it is already a problem."
+      ],
       "text": "Churches should teach young people about pornography before parents or students report that it is already a problem."
     },
     {
       "id": "W002-Q13",
       "number": 13,
       "section": "participant_vote_determined",
-      "source_columns": ["Q13", "A church should require formal membership before a person serves in any public ministry role."],
+      "source_columns": [
+        "Q13",
+        "A church should require formal membership before a person serves in any public ministry role."
+      ],
       "text": "A church should require formal membership before a person serves in any public ministry role."
     },
     {
       "id": "W002-Q14",
       "number": 14,
       "section": "participant_vote_determined",
-      "source_columns": ["Q14", "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation."],
+      "source_columns": [
+        "Q14",
+        "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation."
+      ],
       "text": "Pastors should normally mention specific false teachers by name when their teachings are influencing the congregation."
     },
     {
       "id": "W002-Q15",
       "number": 15,
       "section": "participant_vote_determined",
-      "source_columns": ["Q15", "Christians should avoid recreational marijuana use even where it is legal."],
+      "source_columns": [
+        "Q15",
+        "Christians should avoid recreational marijuana use even where it is legal."
+      ],
       "text": "Christians should avoid recreational marijuana use even where it is legal."
     }
-  ]
+  ],
+  "report_status": "preliminary"
 }

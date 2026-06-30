@@ -5,12 +5,12 @@
   "platform": "CTS",
   "field_dates": {
     "start": "2026-06-23",
-    "end": "2026-07-14",
+    "end": "2026-07-13",
     "first_invitation_sent": "2026-06-23",
     "first_report_target": "2026-06-30",
-    "final_close": "2026-07-14",
-    "final_close_label": "Tuesday, July 14, 2026",
-    "final_close_rule": "21 days after the first production invitation send"
+    "final_close": "2026-07-13",
+    "final_close_label": "Monday, July 13, 2026",
+    "final_close_rule": "20 days after the first production invitation send"
   },
   "slider_scale": {
     "min": 0,
@@ -240,5 +240,6 @@
       ],
       "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies."
     }
-  ]
+  ],
+  "report_status": "preliminary"
 }

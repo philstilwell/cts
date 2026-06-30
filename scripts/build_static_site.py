@@ -289,21 +289,21 @@ PAGES = [
   <section class="latest-report-card" aria-labelledby="latest-report-heading">
     <div>
       <p class="section-label">Newest survey page</p>
-      <h2 id="latest-report-heading">Week 3: Pastoral Authority and Accountability</h2>
-      <p>The Week 3 first preliminary report is now posted with 27 complete responses. The first production invitation batch was queued on Tuesday, June 23, 2026, so the final close date is Tuesday, July 14, 2026, exactly 21 days later.</p>
+      <h2 id="latest-report-heading">Week 1 Final: Divorce and Remarriage</h2>
+      <p>The Week 1 final report is now posted with 58 complete responses. Week 2 and Week 3 remain preliminary and open under the 20-day close rule; their posted final close dates are Monday, July 6, 2026 and Monday, July 13, 2026.</p>
       <div class="button-row">
-        <a class="button" href="{week_3_report_url}">Open Week 3 Report</a>
-        <a class="button light" href="{week_2_report_url}">Open Week 2 Report</a>
+        <a class="button" href="{week_1_report_url}">Open Week 1 Final Report</a>
+        <a class="button light" href="{week_3_report_url}">Open Week 3 Preliminary Report</a>
       </div>
     </div>
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Preliminary report posted</dd>
+        <dd>Week 1 final posted; Week 2 and Week 3 preliminary</dd>
       </div>
       <div>
         <dt>Survey topic</dt>
-        <dd>Pastoral Authority and Accountability</dd>
+        <dd>Divorce and Remarriage</dd>
       </div>
     </dl>
   </section>
@@ -340,18 +340,18 @@ PAGES = [
           </div>
           <div class="survey-stage active" data-short-label="Refresh">
             <button class="stage-dot" type="button" aria-describedby="week3-refresh-info" aria-label="Week 3 refresh details"></button>
-            <span class="stage-info-panel" id="week3-refresh-info" role="tooltip"><strong>Refreshes</strong> Current public responses: 27 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Tuesday, July 14, 2026.</span>
+            <span class="stage-info-panel" id="week3-refresh-info" role="tooltip"><strong>Refreshes</strong> Current public responses: 27 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Monday, July 13, 2026.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
             <button class="stage-dot" type="button" aria-describedby="week3-final-info" aria-label="Week 3 final report details"></button>
-            <span class="stage-info-panel" id="week3-final-info" role="tooltip"><strong>Final report</strong> Final close: Tuesday, July 14, 2026, 21 days after the first production invitation send.</span>
+            <span class="stage-info-panel" id="week3-final-info" role="tooltip"><strong>Final report</strong> Final close: Monday, July 13, 2026, 20 days after the first production invitation send.</span>
             <span>Final</span>
           </div>
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>July 7 refresh</strong>
+          <strong>Next Tuesday refresh</strong>
         </div>
       </div>
       <div class="survey-lane" style="--progress-width: 59.2%;">
@@ -367,7 +367,7 @@ PAGES = [
           </div>
           <div class="survey-stage done" data-short-label="Sent">
             <button class="stage-dot" type="button" aria-describedby="week2-fielding-info" aria-label="Week 2 fielding details"></button>
-            <span class="stage-info-panel" id="week2-fielding-info" role="tooltip"><strong>Fielding</strong> 409 CTS email invitations were sent. The survey remains open through Tuesday, July 7, 2026, and the manual reminder window opened on Saturday, June 28, 2026.</span>
+            <span class="stage-info-panel" id="week2-fielding-info" role="tooltip"><strong>Fielding</strong> 409 CTS email invitations were sent. The survey remains open through Monday, July 6, 2026, and the manual reminder window opened on Saturday, June 28, 2026.</span>
             <span>Fielding</span>
           </div>
           <div class="survey-stage done" data-short-label="Report">
@@ -377,18 +377,18 @@ PAGES = [
           </div>
           <div class="survey-stage active" data-short-label="Refresh">
             <button class="stage-dot" type="button" aria-describedby="week2-refresh-info" aria-label="Week 2 refresh details"></button>
-            <span class="stage-info-panel" id="week2-refresh-info" role="tooltip"><strong>Refreshes</strong> Current public responses: 36 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Tuesday, July 7, 2026. Manual reminders are now in their audited send window.</span>
+            <span class="stage-info-panel" id="week2-refresh-info" role="tooltip"><strong>Refreshes</strong> Current public responses: 36 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Monday, July 6, 2026. Manual reminders are now in their audited send window.</span>
             <span>Refreshes</span>
           </div>
           <div class="survey-stage pending" data-short-label="Final">
             <button class="stage-dot" type="button" aria-describedby="week2-final-info" aria-label="Week 2 final report details"></button>
-            <span class="stage-info-panel" id="week2-final-info" role="tooltip"><strong>Final report</strong> Final close: Tuesday, July 7, 2026, 21 days after the first production invitation send. Results will be marked final after the CTS export is reviewed.</span>
+            <span class="stage-info-panel" id="week2-final-info" role="tooltip"><strong>Final report</strong> Final close: Monday, July 6, 2026, 20 days after the first production invitation send. Results will be marked final after the CTS export is reviewed.</span>
             <span>Final</span>
           </div>
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>July 7 refresh</strong>
+          <strong>Next Tuesday refresh</strong>
         </div>
       </div>
       <div class="survey-lane" style="--progress-width: 59.2%;">
@@ -396,7 +396,7 @@ PAGES = [
           <a href="{week_1_report_url}">Week 1</a>
           <span>Divorce and Remarriage</span>
         </div>
-        <div class="survey-stage-track" aria-label="Week 1 has posted preliminary results and is in the refresh period.">
+        <div class="survey-stage-track" aria-label="Week 1 is closed and the final report is posted.">
           <div class="survey-stage done" data-short-label="Page">
             <button class="stage-dot" type="button" aria-describedby="week1-placeholder-info" aria-label="Week 1 placeholder details"></button>
             <span class="stage-info-panel" id="week1-placeholder-info" role="tooltip"><strong>Week 1 placeholder</strong> The Divorce and Remarriage public page was created before invitations were sent, giving readers a stable report URL.</span>
@@ -404,7 +404,7 @@ PAGES = [
           </div>
           <div class="survey-stage done" data-short-label="Sent">
             <button class="stage-dot" type="button" aria-describedby="week1-fielding-info" aria-label="Week 1 fielding details"></button>
-            <span class="stage-info-panel" id="week1-fielding-info" role="tooltip"><strong>Fielding</strong> 409 CTS email invitations were sent. The survey remains open during the three-week response window.</span>
+            <span class="stage-info-panel" id="week1-fielding-info" role="tooltip"><strong>Fielding</strong> 409 CTS email invitations were sent. The survey remains open during the 20-day response window.</span>
             <span>Fielding</span>
           </div>
           <div class="survey-stage done" data-short-label="Report">
@@ -412,20 +412,20 @@ PAGES = [
             <span class="stage-info-panel" id="week1-first-report-info" role="tooltip"><strong>First report posted</strong> Public results currently show 58 complete responses as of the June 30 refresh.</span>
             <span>First Report</span>
           </div>
-          <div class="survey-stage active" data-short-label="Refresh">
+          <div class="survey-stage done" data-short-label="Refresh">
             <button class="stage-dot" type="button" aria-describedby="week1-refresh-info" aria-label="Week 1 refresh details"></button>
-            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshing</strong> Current public responses: 58 complete. The report refreshes each Tuesday morning while the survey remains open, until final close on Wednesday, July 1, 2026.</span>
+            <span class="stage-info-panel" id="week1-refresh-info" role="tooltip"><strong>Refreshes complete</strong> Final public responses: 58 complete. The report was finalized after the SurveyOL Email collector closed on Tuesday, June 30, 2026.</span>
             <span>Refreshes</span>
           </div>
-          <div class="survey-stage pending" data-short-label="Final">
+          <div class="survey-stage done" data-short-label="Final">
             <button class="stage-dot" type="button" aria-describedby="week1-final-info" aria-label="Week 1 final report details"></button>
-            <span class="stage-info-panel" id="week1-final-info" role="tooltip"><strong>Final report</strong> Final close target: Wednesday, July 1, 2026, 21 days after the first Week 1 production invitation window. Final reporting will preserve respondent privacy thresholds.</span>
+            <span class="stage-info-panel" id="week1-final-info" role="tooltip"><strong>Final report</strong> Final close: Tuesday, June 30, 2026, 20 days after the first Week 1 production invitation window. Final reporting will preserve respondent privacy thresholds.</span>
             <span>Final</span>
           </div>
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>July 1 close check</strong>
+          <strong>June 30 final report</strong>
         </div>
       </div>
     </div>
@@ -453,7 +453,7 @@ PAGES = [
       <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
       <p>The cycle is cumulative: participant suggestions submitted in one weekly survey are reviewed by CTS with AI assistance, polished, reduced to a 7-item ballot, ranked by active participants, and the top 3 ranked items become live survey items in the following week's survey. If fewer than 7 suitable participant nominations are available, CTS adds AI-created seed items to complete the ballot.</p>
       <p>The regular rhythm is Tuesday-centered. First preliminary reports and refreshes to still-open preliminary reports are prepared on Tuesday morning, and the next survey's placeholder report page is published before the next CTS survey launches Tuesday evening. Invitations are sent through the CTS email invitation system in daily batches of up to 100 until all eligible participants have been invited.</p>
-      <p>Each weekly survey remains open for three weeks from the first invitation send. The exact final close date is posted on the weekly public page before invitations go out, adjusted if the first send date changes, and reused through report refreshes and finalization. Preliminary reports are refreshed each Tuesday morning until the response window closes, with optional earlier updates when responses materially change, then marked final after the final export is reviewed.</p>
+      <p>Each weekly survey remains open for 20 days from the first invitation send. The exact final close date is posted on the weekly public page before invitations go out, adjusted if the first send date changes, and reused through report refreshes and finalization. Preliminary reports are refreshed each Tuesday morning until the response window closes, with optional earlier updates when responses materially change, then marked final after the final export is reviewed.</p>
       <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
     </div>
   </details>
@@ -481,15 +481,15 @@ PAGES = [
         output=WEEK_1_REPORT_OUTPUT,
         nav_label="Week 1",
         title="Week 1 Report: Divorce and Remarriage",
-        eyebrow="Preliminary results",
+        eyebrow="Final results",
         description=(
-            "Preliminary Week 1 Christian Thought Survey results on Divorce and "
+            "Final Week 1 Christian Thought Survey results on Divorce and "
             "Remarriage, including slider distributions, key tensions, ballot "
             "outcomes, and privacy-safe data notes."
         ),
         content="""
 <div class="wp-content">
-  <p>This is the stable public page for the first revived weekly Christian Thought Survey report. The current full report is managed as a report artifact and should not be overwritten by the generic site builder. As of the June 23, 2026 refresh, the preliminary report showed 44 complete responses from 409 invitations.</p>
+  <p>This is the stable public page for the first revived weekly Christian Thought Survey report. The current full report is managed as a report artifact and should not be overwritten by the generic site builder. As of final close on June 30, 2026, the final report showed 58 complete responses from 409 invitations.</p>
 
   <div class="status-grid">
     <div class="status-card">
@@ -504,8 +504,8 @@ PAGES = [
     </div>
     <div class="status-card">
       <span>Report status</span>
-      <strong>Preliminary results</strong>
-      <p>Public interpretation, charts, ballot results, and data notes are posted and refreshed each Tuesday morning while the survey remains open.</p>
+      <strong>Final results</strong>
+      <p>Public interpretation, charts, ballot results, and data notes are posted from the final reviewed export.</p>
     </div>
   </div>
 
@@ -636,7 +636,7 @@ PAGES = [
 
   <div class="button-row">
     <a class="button light" href="{weekly_url}">Back to report index</a>
-    <a class="button light" href="{week_1_report_url}">Week 1 Preliminary Report</a>
+    <a class="button light" href="{week_1_report_url}">Week 1 Final Report</a>
     <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
   </div>
 </div>
@@ -662,7 +662,7 @@ PAGES = [
     <div class="status-card">
       <span>Status</span>
       <strong>Fielding</strong>
-      <p>The first 100 participant invitations were queued through the CTS SurveyOL email invitation system on Tuesday, June 23, 2026.</p>
+      <p>The Week 1 SurveyOL Email collector was closed on Tuesday, June 30, 2026 under the 20-day close rule.</p>
     </div>
     <div class="status-card">
       <span>Topic</span>
@@ -671,13 +671,13 @@ PAGES = [
     </div>
     <div class="status-card">
       <span>Final close</span>
-      <strong>Tuesday, July 14, 2026</strong>
-      <p>This is 21 days after the planned first production invitation date, Tuesday, June 23, 2026.</p>
+      <strong>Monday, July 13, 2026</strong>
+      <p>This is 20 days after the planned first production invitation date, Tuesday, June 23, 2026.</p>
     </div>
   </div>
 
   <h2>Report plan</h2>
-  <p>The first preliminary report is planned for Tuesday, June 30, 2026, after the first week of response data is exported and reviewed. Preliminary refreshes are planned each Tuesday morning while the survey remains open, and the report will be marked final after the July 14 close and final export review.</p>
+  <p>The first preliminary report is planned for Tuesday, June 30, 2026, after the first week of response data is exported and reviewed. Preliminary refreshes are planned each Tuesday morning while the survey remains open, and the report will be marked final after the July 13 close and final export review.</p>
 
   <h2>Survey structure</h2>
   <ul>

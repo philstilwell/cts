@@ -6,12 +6,12 @@
   "topic": "Pastoral Authority and Accountability",
   "field_dates": {
     "start": "2026-06-23",
-    "end": "2026-07-14",
+    "end": "2026-07-13",
     "first_invitation_sent": "2026-06-23",
     "first_report_target": "2026-06-30",
-    "final_close": "2026-07-14",
-    "final_close_label": "Tuesday, July 14, 2026",
-    "final_close_rule": "21 days after the first production invitation send"
+    "final_close": "2026-07-13",
+    "final_close_label": "Monday, July 13, 2026",
+    "final_close_rule": "20 days after the first production invitation send"
   },
   "platform": "CTS",
   "slider_scale": {
@@ -1645,5 +1645,6 @@
     "title": "Week 3 preliminary report: Pastoral Authority and Accountability",
     "url": "https://christianthoughtsurvey.com/weekly-survey-reports/week-003-pastoral-authority-and-accountability/",
     "text": "The first Week 3 preliminary report has 27 complete responses. Early patterns show very strong agreement that manipulative or coercive leadership should normally disqualify a pastor, that pastors need meaningful accountability for finances, staff authority, and confidential information, and that churches should distinguish biblical submission from unquestioning compliance. Wider spread appears around whether pastors exercise too little legitimate authority, how often the label spiritual abuse is over-applied, and how much moral counsel pastors should give about members' major life decisions. Raw respondent identities and raw free-text suggestions are not published."
-  }
+  },
+  "report_status": "preliminary"
 }

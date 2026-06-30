@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>10:32:12 AM EDT</strong>
+      <strong>4:00:00 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,18 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-30T16:00:00-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">4:00:00 PM EDT</span></time>
+<span class="log-status">published</span></div></td>
+        <td>Week 1 final report published under the 20-day close rule.<ul>
+        <li>Changed the CTS weekly survey final-close rule from 21 days to 20 days for current and future surveys.</li>
+        <li>Closed the Week 1 SurveyOL Email collector after the updated Tuesday, June 30, 2026 final close date arrived.</li>
+        <li>Exported the final Week 1 raw responses privately, verified a complete private identity join, and regenerated the public aggregate summary without respondent identifiers or raw free-text suggestions.</li>
+        <li>Updated Week 1 to final status and aligned Week 2 and Week 3 posted close dates to Monday, July 6, 2026 and Monday, July 13, 2026.</li>
+      </ul></td>
+        <td>Week 1 final public report is posted with 58 complete responses and 47 ranked ballots. Week 2 and Week 3 remain preliminary and open under the 20-day close rule. Raw respondent identifiers, joined identity files, and raw suggestions remain private.</td>
+        <td>Refresh Week 2 and Week 3 on the next Tuesday report cycle, then close each collector only after its posted 20-day final close date arrives.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-30T10:32:12-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">10:32:12 AM EDT</span></time>
 <span class="log-status">not_due</span></div></td>
@@ -413,29 +425,6 @@
       </ul></td>
         <td>100 invitations were queued in this batch, bringing the Week 2 cumulative invitation count to 290. Public-safe post-send totals were 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited. SurveyOL then reached its daily sending limit.</td>
         <td>Resume at the next allowed send window if eligible contacts remain, and keep future public-safe automation log entries in sync with each batch result.</td>
-      </tr>
-      <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-17T13:48:06-04:00"><span class="recorded-date">2026-06-17</span><span class="recorded-time">1:48:06 PM EDT</span></time>
-<span class="log-status">Week 2 batch sent</span></div></td>
-        <td>Queued the next Week 2 invitation batch and tightened the recurring invitation automation.<ul>
-        <li>Sent the second guarded Week 2 invitation batch.</li>
-        <li>Recorded the batch in the private automation ledger.</li>
-        <li>Kept the recurring invitation check at 11:30 AM Eastern, Wednesday through Saturday.</li>
-        <li>Regenerated the private invitation-scope status board after the send.</li>
-      </ul></td>
-        <td>100 invitations were queued in this batch, bringing the Week 2 cumulative sent count to 190. The total eligible invitation-list count was not recorded in the public-safe log at send time. The daily sending limit was reached for today. One opt-out now requires global suppression reconciliation before the next batch.</td>
-        <td>Reconcile the opt-out across CTS 2026 and CTS contacts before another invitation batch is sent. Record the total eligible invitation list size with the next batch.</td>
-      </tr>
-      <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-17T13:10:52-04:00"><span class="recorded-date">2026-06-17</span><span class="recorded-time">1:10:52 PM EDT</span></time>
-<span class="log-status">Status board created</span></div></td>
-        <td>Added the weekly automation coverage manifest, private timestamped status boards, and manual ledger workflow.<ul>
-        <li>Validated the automation coverage manifest.</li>
-        <li>Compiled and tested the status-board CLI.</li>
-        <li>Generated private launch and report status boards.</li>
-      </ul></td>
-        <td>The process now has a daily-friendly way to show which required checks ran, which ones are missing, and which process areas have redundancy.</td>
-        <td>Use the private launch, invitation, report, close, or full-cycle board before each risky action and record guarded steps as they happen.</td>
       </tr>
       </tbody>
     </table>

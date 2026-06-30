@@ -6,12 +6,12 @@
   "topic": "Pornography and the Church",
   "field_dates": {
     "start": "2026-06-16",
-    "end": "2026-07-07",
+    "end": "2026-07-06",
     "first_invitation_sent": "2026-06-16",
     "first_report_target": "2026-06-23",
-    "final_close": "2026-07-07",
-    "final_close_label": "Tuesday, July 7, 2026",
-    "final_close_rule": "21 days after the first production invitation send"
+    "final_close": "2026-07-06",
+    "final_close_label": "Monday, July 6, 2026",
+    "final_close_rule": "20 days after the first production invitation send"
   },
   "platform": "CTS",
   "slider_scale": {
@@ -1647,5 +1647,6 @@
     "title": "Week 2 refreshed preliminary report: Pornography and the Church",
     "url": "https://christianthoughtsurvey.com/weekly-survey-reports/week-002-pornography-and-the-church/",
     "text": "The refreshed Week 2 preliminary report has 36 complete responses. Current patterns show high agreement around pornography's prevalence among Christian men, pastoral accountability for persistent pornography use, direct leadership screening, pastoral care for harmed spouses, and proactive youth teaching, with wider spread around accountability software, marijuana avoidance, and whether churches are losing more ground than they are gaining. Raw respondent identities and raw free-text suggestions are not published."
-  }
+  },
+  "report_status": "preliminary"
 }

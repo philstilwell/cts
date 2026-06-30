@@ -276,6 +276,14 @@ def parse_ranking(value: str) -> list[int]:
     raw = value.strip()
     if not raw:
         return []
+    if "," in raw and "[" not in raw:
+        rankings: list[int] = []
+        for item in raw.split(","):
+            try:
+                rankings.append(int(item.strip()))
+            except ValueError:
+                return []
+        return rankings
     try:
         parsed = json.loads(raw)
     except json.JSONDecodeError:
@@ -368,6 +376,7 @@ def build_summary(config: dict[str, Any], rows: list[dict[str, str]]) -> dict[st
         "week": config.get("week"),
         "title": config.get("title"),
         "topic": config.get("topic"),
+        "report_status": config.get("report_status", "preliminary"),
         "field_dates": config.get("field_dates", {}),
         "platform": config.get("platform", "SurveyOL"),
         "slider_scale": config.get("slider_scale", {"min": 0, "midpoint": 50, "max": 100}),
