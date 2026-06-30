@@ -25,10 +25,11 @@ SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
 WEEK_2_REPORT_OUTPUT = "weekly-survey-reports/week-002-pornography-and-the-church/index.html"
 WEEK_3_REPORT_OUTPUT = "weekly-survey-reports/week-003-pastoral-authority-and-accountability/index.html"
+WEEK_4_REPORT_OUTPUT = "weekly-survey-reports/week-004-women-in-church-leadership/index.html"
 NEWSLETTER_CONFIRMATION_OUTPUT = "email-confirmation/index.html"
 AUTOMATION_DAILY_LOG_OUTPUT = "automation-daily-log/index.html"
 AUTOMATION_DAILY_LOG_DATA = ROOT / "data/public/automation-daily-log.json"
-REPORT_MANAGED_OUTPUTS = {WEEK_1_REPORT_OUTPUT, WEEK_2_REPORT_OUTPUT, WEEK_3_REPORT_OUTPUT}
+REPORT_MANAGED_OUTPUTS = {WEEK_1_REPORT_OUTPUT, WEEK_2_REPORT_OUTPUT, WEEK_3_REPORT_OUTPUT, WEEK_4_REPORT_OUTPUT}
 OG_IMAGE = f"{SITE_URL}/assets/cts-research-overview.png"
 OG_IMAGE_ALT = "Christian Thought Survey research overview graphic"
 DEFAULT_ROBOTS = "index,follow,max-image-preview:large"
@@ -289,20 +290,21 @@ PAGES = [
   <section class="latest-report-card" aria-labelledby="latest-report-heading">
     <div>
       <p class="section-label">Newest survey page</p>
-      <h2 id="latest-report-heading">Week 1 Final: Divorce and Remarriage</h2>
-      <p>The Week 1 final report is now posted with 58 complete responses. Week 2 and Week 3 remain preliminary and open under the 20-day close rule; their posted final close dates are Monday, July 6, 2026 and Monday, July 13, 2026.</p>
+      <h2 id="latest-report-heading">Week 4 Placeholder: Women in Church Leadership</h2>
+      <p>The Week 4 public placeholder is posted before production invitations. Week 4 is planned to remain open through Monday, July 20, 2026, which is 20 days after the Tuesday, June 30, 2026 first production invitation date.</p>
       <div class="button-row">
-        <a class="button" href="{week_1_report_url}">Open Week 1 Final Report</a>
+        <a class="button" href="{week_4_report_url}">Open Week 4 Placeholder</a>
+        <a class="button light" href="{week_1_report_url}">Open Week 1 Final Report</a>
       </div>
     </div>
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Week 1 final posted; Week 2 and Week 3 preliminary</dd>
+        <dd>Week 4 launch pending; Week 1 final posted; Week 2 and Week 3 preliminary</dd>
       </div>
       <div>
         <dt>Survey topic</dt>
-        <dd>Divorce and Remarriage</dd>
+        <dd>Women in Church Leadership</dd>
       </div>
     </dl>
   </section>
@@ -316,6 +318,43 @@ PAGES = [
       <p>This board gives readers a public progress snapshot for each weekly survey: what is open now, what has already been reported, and when to expect the next public update. Participant identities and raw response files are not published.</p>
     </div>
     <div class="survey-timeline-chart" aria-label="Weekly survey status timeline">
+      <div class="survey-lane current" style="--progress-width: 20%;">
+        <div class="survey-lane-label">
+          <a href="{week_4_report_url}">Week 4</a>
+          <span>Women in Church Leadership</span>
+        </div>
+        <div class="survey-stage-track" aria-label="Week 4 placeholder is posted before the first production invitation batch.">
+          <div class="survey-stage done" data-short-label="Page">
+            <button class="stage-dot" type="button" aria-describedby="week4-placeholder-info" aria-label="Week 4 placeholder details"></button>
+            <span class="stage-info-panel" id="week4-placeholder-info" role="tooltip"><strong>Week 4 placeholder</strong> Public page posted before participant invitations so the report URL and exact final close date are visible.</span>
+            <span>Placeholder</span>
+          </div>
+          <div class="survey-stage active" data-short-label="Sent">
+            <button class="stage-dot" type="button" aria-describedby="week4-fielding-info" aria-label="Week 4 fielding details"></button>
+            <span class="stage-info-panel" id="week4-fielding-info" role="tooltip"><strong>Launch pending</strong> The first guarded SurveyOL Email batch is being prepared. Final close is Monday, July 20, 2026.</span>
+            <span>Fielding</span>
+          </div>
+          <div class="survey-stage pending" data-short-label="Report">
+            <button class="stage-dot" type="button" aria-describedby="week4-first-report-info" aria-label="Week 4 first report details"></button>
+            <span class="stage-info-panel" id="week4-first-report-info" role="tooltip"><strong>First report</strong> First preliminary report planned for Tuesday, July 7, 2026.</span>
+            <span>First Report</span>
+          </div>
+          <div class="survey-stage pending" data-short-label="Refresh">
+            <button class="stage-dot" type="button" aria-describedby="week4-refresh-info" aria-label="Week 4 refresh details"></button>
+            <span class="stage-info-panel" id="week4-refresh-info" role="tooltip"><strong>Refreshes</strong> Preliminary report refreshes are planned each Tuesday while the survey remains open.</span>
+            <span>Refreshes</span>
+          </div>
+          <div class="survey-stage pending" data-short-label="Final">
+            <button class="stage-dot" type="button" aria-describedby="week4-final-info" aria-label="Week 4 final report details"></button>
+            <span class="stage-info-panel" id="week4-final-info" role="tooltip"><strong>Final report</strong> Final close: Monday, July 20, 2026, 20 days after the first production invitation send.</span>
+            <span>Final</span>
+          </div>
+        </div>
+        <div class="survey-lane-next">
+          <span>Next</span>
+          <strong>First invitation batch</strong>
+        </div>
+      </div>
       <div class="survey-lane current" style="--progress-width: 59.2%;">
         <div class="survey-lane-label">
           <a href="{week_3_report_url}">Week 3</a>
@@ -692,6 +731,62 @@ PAGES = [
   <div class="button-row">
     <a class="button light" href="{weekly_url}">Back to report index</a>
     <a class="button light" href="{week_2_report_url}">Week 2 Preliminary Report</a>
+    <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
+  </div>
+</div>
+""",
+        in_nav=False,
+    ),
+    Page(
+        key="week-004-report",
+        output=WEEK_4_REPORT_OUTPUT,
+        nav_label="Week 4",
+        title="Week 4 Report Placeholder: Women in Church Leadership",
+        eyebrow="Survey launch",
+        description=(
+            "Stable Week 4 Christian Thought Survey report URL for Women in "
+            "Church Leadership, including the first invitation plan and exact "
+            "final close date."
+        ),
+        content="""
+<div class="wp-content">
+  <p>This is the stable public page for the fourth revived weekly Christian Thought Survey report. The survey is launching through the CTS email invitation system, and this page gives readers the topic, reporting plan, and exact close-date rule without exposing SurveyOL respondent links.</p>
+
+  <div class="status-grid">
+    <div class="status-card">
+      <span>Status</span>
+      <strong>Launching</strong>
+      <p>The first guarded SurveyOL Email invitation batch is planned for Tuesday, June 30, 2026.</p>
+    </div>
+    <div class="status-card">
+      <span>Topic</span>
+      <strong>Women in Church Leadership</strong>
+      <p>12 CTS-administered credence-slider items focus on this topic.</p>
+    </div>
+    <div class="status-card">
+      <span>Final close</span>
+      <strong>Monday, July 20, 2026</strong>
+      <p>This is 20 days after the planned first production invitation date, Tuesday, June 30, 2026.</p>
+    </div>
+  </div>
+
+  <h2>Report plan</h2>
+  <p>The first preliminary report is planned for Tuesday, July 7, 2026, after the first week of response data is exported and reviewed. Preliminary refreshes are planned each Tuesday morning while the survey remains open, and the report will be marked final after the July 20 close and final export review.</p>
+
+  <h2>Survey structure</h2>
+  <ul>
+    <li><strong>12 CTS-administered topic items:</strong> Women in Church Leadership.</li>
+    <li><strong>3 participant-vote-determined items:</strong> independent items selected from the Week 3 participant vote.</li>
+    <li><strong>7-item participant-nominated ballot:</strong> polished ballot items for ranking by active participants.</li>
+    <li><strong>Suggestion box:</strong> future survey-item suggestions, reviewed before any public summary.</li>
+    <li><strong>Upcoming-topic preview:</strong> Doubt, Deconstruction, and Faith Loss; Assurance of Salvation; and Hell, Judgment, and Final Punishment.</li>
+  </ul>
+
+  <p class="callout"><strong>Data note:</strong> Public files will not include email addresses, direct identifiers, respondent-level rows, SurveyOL respondent links, or raw free-text suggestions. Participant attributes may be grouped or suppressed when needed to avoid accidental identification.</p>
+
+  <div class="button-row">
+    <a class="button light" href="{weekly_url}">Back to report index</a>
+    <a class="button light" href="{week_3_report_url}">Week 3 Preliminary Report</a>
     <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
   </div>
 </div>
@@ -1226,6 +1321,7 @@ def sitemap_changefreq(page: Page) -> str:
         "week-001-report": "weekly",
         "week-002-report": "weekly",
         "week-003-report": "weekly",
+        "week-004-report": "weekly",
         "newsletter": "monthly",
         "contact": "monthly",
         "participant-pool": "monthly",
@@ -1244,6 +1340,7 @@ def fill_links(html: str, prefix: str) -> str:
         "week_1_report_url": page_url(prefix, WEEK_1_REPORT_OUTPUT),
         "week_2_report_url": page_url(prefix, WEEK_2_REPORT_OUTPUT),
         "week_3_report_url": page_url(prefix, WEEK_3_REPORT_OUTPUT),
+        "week_4_report_url": page_url(prefix, WEEK_4_REPORT_OUTPUT),
         "participant_pool_url": page_url(prefix, "participant-pool/index.html"),
         "herding_cats_url": page_url(prefix, "herding-cats/index.html"),
         "newsletter_confirmation_url": page_url(prefix, NEWSLETTER_CONFIRMATION_OUTPUT),

@@ -1,0 +1,201 @@
+{
+  "week": "week-004",
+  "title": "CTS 2026 Weekly Survey 4 - Women in Church Leadership",
+  "topic": "Women in Church Leadership",
+  "platform": "CTS",
+  "field_dates": {
+    "start": "2026-06-30",
+    "end": "2026-07-20",
+    "first_invitation_sent": "2026-06-30",
+    "first_report_target": "2026-07-07",
+    "final_close": "2026-07-20",
+    "final_close_label": "Monday, July 20, 2026",
+    "final_close_rule": "20 days after the first production invitation send"
+  },
+  "slider_scale": {
+    "min": 0,
+    "midpoint": 50,
+    "max": 100,
+    "labels": {
+      "0": "strongly disagree",
+      "50": "unsure/mixed",
+      "100": "strongly agree"
+    }
+  },
+  "privacy": {
+    "min_public_item_n": 30,
+    "min_public_subgroup_n": 15,
+    "preferred_public_subgroup_n": 20
+  },
+  "suggestion_columns": [
+    "Suggestion",
+    "Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100."
+  ],
+  "ballot": {
+    "source_columns": [
+      "Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Women in Church Leadership topic. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension."
+    ],
+    "choices": [
+      "Churches should teach more explicitly on debt and generosity as discipleship issues.",
+      "Baptism should ordinarily precede participation in the Lord's Supper.",
+      "A minister's end-times view should significantly shape preaching, discipleship, and public engagement.",
+      "Communion should ordinarily be observed weekly.",
+      "Pastors should be more willing to refer congregants to licensed mental health professionals.",
+      "Churches should teach ordinary hospitality as a core practice of discipleship rather than treating it mainly as a private personality preference.",
+      "Churches should give more explicit pastoral guidance about singleness and friendship in adult discipleship."
+    ]
+  },
+  "items": [
+    {
+      "id": "W004-Q01",
+      "number": 1,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q1",
+        "Scripture permits women to preach to mixed adult congregations in the gathered church."
+      ],
+      "text": "Scripture permits women to preach to mixed adult congregations in the gathered church."
+    },
+    {
+      "id": "W004-Q02",
+      "number": 2,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q2",
+        "Scripture permits women to serve as elders or overseers in the local church."
+      ],
+      "text": "Scripture permits women to serve as elders or overseers in the local church."
+    },
+    {
+      "id": "W004-Q03",
+      "number": 3,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q3",
+        "Scripture permits women to serve as deacons in the local church."
+      ],
+      "text": "Scripture permits women to serve as deacons in the local church."
+    },
+    {
+      "id": "W004-Q04",
+      "number": 4,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q4",
+        "The New Testament restricts women from exercising final governing authority over men in the local church."
+      ],
+      "text": "The New Testament restricts women from exercising final governing authority over men in the local church."
+    },
+    {
+      "id": "W004-Q05",
+      "number": 5,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q5",
+        "Women's spiritual gifts are often underused due to vaguely defined restrictions on roles."
+      ],
+      "text": "Women's spiritual gifts are often underused due to vaguely defined restrictions on roles."
+    },
+    {
+      "id": "W004-Q06",
+      "number": 6,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q6",
+        "Egalitarian interpretations of the relevant biblical texts are exegetically plausible."
+      ],
+      "text": "Egalitarian interpretations of the relevant biblical texts are exegetically plausible."
+    },
+    {
+      "id": "W004-Q07",
+      "number": 7,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q7",
+        "A church's position on women serving as elders should be treated as a first-order doctrinal issue."
+      ],
+      "text": "A church's position on women serving as elders should be treated as a first-order doctrinal issue."
+    },
+    {
+      "id": "W004-Q08",
+      "number": 8,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q8",
+        "Churches should normally disassociate from one another over incompatible positions on women serving as elders."
+      ],
+      "text": "Churches should normally disassociate from one another over incompatible positions on women serving as elders."
+    },
+    {
+      "id": "W004-Q09",
+      "number": 9,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q9",
+        "Churches should include women in major decision-making even when final elder authority is male-only."
+      ],
+      "text": "Churches should include women in major decision-making even when final elder authority is male-only."
+    },
+    {
+      "id": "W004-Q10",
+      "number": 10,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q10",
+        "For better or worse, over the next 20 years, evangelical churches will become substantially more egalitarian in their leadership roles for men and women."
+      ],
+      "text": "For better or worse, over the next 20 years, evangelical churches will become substantially more egalitarian in their leadership roles for men and women."
+    },
+    {
+      "id": "W004-Q11",
+      "number": 11,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q11",
+        "Women in the church are eligible to teach teenage boys in regular church discipleship settings."
+      ],
+      "text": "Women in the church are eligible to teach teenage boys in regular church discipleship settings."
+    },
+    {
+      "id": "W004-Q12",
+      "number": 12,
+      "section": "cts_administered_topic",
+      "source_columns": [
+        "Q12",
+        "Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office."
+      ],
+      "text": "Churches should formally evaluate leadership gifts in women even when those women are not eligible for every leadership office."
+    },
+    {
+      "id": "W004-Q13",
+      "number": 13,
+      "section": "participant_vote_determined",
+      "source_columns": [
+        "Q13",
+        "Christians should prioritize faithful public witness through suffering over seeking political power to advance Christ's kingdom."
+      ],
+      "text": "Christians should prioritize faithful public witness through suffering over seeking political power to advance Christ's kingdom."
+    },
+    {
+      "id": "W004-Q14",
+      "number": 14,
+      "section": "participant_vote_determined",
+      "source_columns": [
+        "Q14",
+        "Churches should emphasize shared community and mutual service as much as individual spiritual maturity."
+      ],
+      "text": "Churches should emphasize shared community and mutual service as much as individual spiritual maturity."
+    },
+    {
+      "id": "W004-Q15",
+      "number": 15,
+      "section": "participant_vote_determined",
+      "source_columns": [
+        "Q15",
+        "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship."
+      ],
+      "text": "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship."
+    }
+  ],
+  "report_status": "placeholder"
+}
