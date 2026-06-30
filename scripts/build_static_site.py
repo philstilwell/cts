@@ -291,7 +291,7 @@ PAGES = [
     <div>
       <p class="section-label">Newest survey page</p>
       <h2 id="latest-report-heading">Week 4 Placeholder: Women in Church Leadership</h2>
-      <p>The Week 4 public placeholder is posted before production invitations. Week 4 is planned to remain open through Monday, July 20, 2026, which is 20 days after the Tuesday, June 30, 2026 first production invitation date.</p>
+      <p>The Week 4 public placeholder is posted before production invitations. Week 4 is open through the CTS email invitation system, but no production invitations have been queued yet. Week 4 is planned to remain open through Monday, July 20, 2026, which is 20 days after the Tuesday, June 30, 2026 first production invitation date.</p>
       <div class="button-row">
         <a class="button" href="{week_4_report_url}">Open Week 4 Placeholder</a>
         <a class="button light" href="{week_1_report_url}">Open Week 1 Final Report</a>
@@ -331,7 +331,7 @@ PAGES = [
           </div>
           <div class="survey-stage active" data-short-label="Sent">
             <button class="stage-dot" type="button" aria-describedby="week4-fielding-info" aria-label="Week 4 fielding details"></button>
-            <span class="stage-info-panel" id="week4-fielding-info" role="tooltip"><strong>Launch pending</strong> The first guarded SurveyOL Email batch is being prepared. Final close is Monday, July 20, 2026.</span>
+            <span class="stage-info-panel" id="week4-fielding-info" role="tooltip"><strong>Launch pending</strong> The first guarded SurveyOL Email batch is blocked until the send gate is restored. Final close target is Monday, July 20, 2026.</span>
             <span>Fielding</span>
           </div>
           <div class="survey-stage pending" data-short-label="Report">
@@ -352,7 +352,7 @@ PAGES = [
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>First invitation batch</strong>
+          <strong>Resolve SurveyOL send gate</strong>
         </div>
       </div>
       <div class="survey-lane current" style="--progress-width: 59.2%;">
