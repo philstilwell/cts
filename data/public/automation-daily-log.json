@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-06-30T17:05:00-04:00",
-  "updated_time_et": "5:05:00 PM EDT",
+  "updated_at": "2026-06-30T19:02:04-04:00",
+  "updated_time_et": "7:02:04 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-30",
+      "recorded_at": "2026-06-30T19:02:04-04:00",
+      "recorded_time_et": "7:02:04 PM EDT",
+      "status": "week-4-launch-blocked",
+      "summary": "Week 4 launch remains blocked by SurveyOL sender verification.",
+      "ran": [
+        "Read the CTS coordination contract, weekly runbook, operations hardening guide, and automation memory before launch action.",
+        "Regenerated the private Week 4 launch-scope status board and verified SurveyOL API readiness.",
+        "Rechecked the Week 4 placeholder URL, reports index/control board, reporting config, posted final close target, reminder-off ledger, send-list audit, contact audit, and private blocker records.",
+        "Updated the public Week 4 placeholder and reports control board to state that the survey is open, invitations are pending, and preliminary results will be recalculated as responses arrive."
+      ],
+      "result": "No SurveyOL invitations were sent or queued in this run. The Week 4 placeholder URL is https://christianthoughtsurvey.com/weekly-survey-reports/week-004-women-in-church-leadership/ and the posted final close target remains Monday, July 20, 2026 under the active 20-day CTS rule. Reminder Follow-up is recorded Off. Batch count sent: 0; eligible invitations remaining: 364; active suppressions applied: 27; review flags encountered: previously reviewed send-list/contact-plan flags plus the unresolved SurveyOL sender-verification/send-acceptance blocker.",
+      "next": "Restore SurveyOL sender verification/send acceptance, then regenerate the launch board, re-audit the exact first batch, send once, verify invitations increased, and recalculate the public close date if the actual first send date slips."
+    },
     {
       "date": "2026-06-30",
       "recorded_at": "2026-06-30T17:05:00-04:00",
