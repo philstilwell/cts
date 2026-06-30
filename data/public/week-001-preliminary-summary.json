@@ -1643,5 +1643,180 @@
         "source": "week_1_ballot_carryover"
       }
     ]
+  },
+  "profile_patterns": {
+    "generated_at": "2026-06-30T16:45:29.162282+00:00",
+    "status": "exploratory_privacy_safe",
+    "axis": {
+      "field": "Denomination Evangelical?",
+      "public_label": "Evangelical profile",
+      "groups": [
+        {
+          "label": "Evangelical",
+          "value": "Yes",
+          "n": 42
+        },
+        {
+          "label": "Non-evangelical",
+          "value": "No",
+          "n": 16
+        }
+      ],
+      "eligible_for_public_reporting": true,
+      "minimum_public_subgroup_n": 15,
+      "preferred_public_subgroup_n": 20
+    },
+    "interpretation_note": "These are exploratory subgroup mean differences from the final Week 1 respondent set. They are descriptive, not causal, and the smaller group barely clears the public minimum.",
+    "items": [
+      {
+        "item_id": "W001-Q09",
+        "number": 9,
+        "text": "Churches should use formal discipline when members knowingly pursue a biblically illegitimate divorce.",
+        "groups": [
+          {
+            "label": "Evangelical",
+            "n": 42,
+            "mean": 76.3
+          },
+          {
+            "label": "Non-evangelical",
+            "n": 16,
+            "mean": 5.9
+          }
+        ],
+        "mean_difference": 70.4
+      },
+      {
+        "item_id": "W001-Q10",
+        "number": 10,
+        "text": "In my ministry context, churches are generally too permissive about divorce and remarriage.",
+        "groups": [
+          {
+            "label": "Evangelical",
+            "n": 42,
+            "mean": 66.3
+          },
+          {
+            "label": "Non-evangelical",
+            "n": 16,
+            "mean": 17.1
+          }
+        ],
+        "mean_difference": 49.2
+      },
+      {
+        "item_id": "W001-Q08",
+        "number": 8,
+        "text": "Churches should normally require pastoral review before affirming the remarriage of a divorced Christian.",
+        "groups": [
+          {
+            "label": "Evangelical",
+            "n": 42,
+            "mean": 80.3
+          },
+          {
+            "label": "Non-evangelical",
+            "n": 16,
+            "mean": 45.4
+          }
+        ],
+        "mean_difference": 34.9
+      },
+      {
+        "item_id": "W001-Q14",
+        "number": 14,
+        "text": "Churches should encourage regular fasting as a normal expectation for mature Christian discipleship.",
+        "groups": [
+          {
+            "label": "Evangelical",
+            "n": 42,
+            "mean": 67.8
+          },
+          {
+            "label": "Non-evangelical",
+            "n": 16,
+            "mean": 35.8
+          }
+        ],
+        "mean_difference": 32.0
+      },
+      {
+        "item_id": "W001-Q15",
+        "number": 15,
+        "text": "Churches should avoid using worship songs from ministries whose leaders teach serious doctrinal error, even when the songs themselves are orthodox.",
+        "groups": [
+          {
+            "label": "Evangelical",
+            "n": 42,
+            "mean": 59.3
+          },
+          {
+            "label": "Non-evangelical",
+            "n": 16,
+            "mean": 37.6
+          }
+        ],
+        "mean_difference": 21.7
+      },
+      {
+        "item_id": "W001-Q05",
+        "number": 5,
+        "text": "In ordinary cases, a spouse's persistent pornography use can become biblically legitimate grounds for divorce.",
+        "groups": [
+          {
+            "label": "Evangelical",
+            "n": 42,
+            "mean": 62.3
+          },
+          {
+            "label": "Non-evangelical",
+            "n": 16,
+            "mean": 79.6
+          }
+        ],
+        "mean_difference": -17.3
+      },
+      {
+        "item_id": "W001-Q03",
+        "number": 3,
+        "text": "In ordinary cases, a spouse's severe and persistent emotional or psychological abuse can constitute biblically legitimate grounds for divorce.",
+        "groups": [
+          {
+            "label": "Evangelical",
+            "n": 42,
+            "mean": 73.7
+          },
+          {
+            "label": "Non-evangelical",
+            "n": 16,
+            "mean": 93.1
+          }
+        ],
+        "mean_difference": -19.4
+      }
+    ],
+    "suppressed_profile_fields": [
+      {
+        "field": "Closest Denomination/Fellowship Affiliation",
+        "reason": "too_sparse_for_public_subgroup_reporting"
+      },
+      {
+        "field": "Gender",
+        "reason": "partial_or_imbalanced_cells"
+      },
+      {
+        "field": "Marital Status (Submitted)",
+        "reason": "partial_or_imbalanced_cells"
+      },
+      {
+        "field": "Race",
+        "reason": "partial_or_imbalanced_cells"
+      },
+      {
+        "field": "Self-Identifies Fundamentalist?",
+        "reason": "partial_or_imbalanced_cells"
+      }
+    ],
+    "private_data_excluded": true
   }
 }
