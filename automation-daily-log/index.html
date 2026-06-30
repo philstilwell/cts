@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>June 30, 2026, 4:15 PM EDT</strong>
+      <strong>4:45:00 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,18 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-30T16:45:00-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">4:45:00 PM EDT</span></time>
+<span class="log-status">week-4-invitation-batch-blocked</span></div></td>
+        <td>Week 4 first invitation batch was prepared but blocked by SurveyOL send acceptance.<ul>
+        <li>Published and live-verified the Week 4 public placeholder with final close Monday, July 20, 2026.</li>
+        <li>Verified the SurveyOL Email collector was open, non-anonymous, and Reminder Follow-up was Off; the default Web Link collector was closed.</li>
+        <li>Built and duplicate-audited the exact private first 100-recipient Week 4 batch before attempting the send.</li>
+        <li>Attempted to queue the first 100 SurveyOL Email invitations, but SurveyOL returned unsuccessful send acceptance and did not increase the invitation count.</li>
+      </ul></td>
+        <td>No Week 4 invitations were sent or queued. Public-safe launch state remains: Email collector ready, 0 invitations, 0 complete responses, 0 opt-outs, and 0 bounces; 364 eligible contacts remain. The posted final close date is Monday, July 20, 2026.</td>
+        <td>Resolve the SurveyOL sender-verification/send-acceptance blocker, then recheck live collector settings and duplicate-audit the first batch again before sending.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-30T16:00:00-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">4:00:00 PM EDT</span></time>
 <span class="log-status">published</span></div></td>
@@ -413,19 +425,6 @@
       </ul></td>
         <td>No invitations were sent in the manual rerun. The actual remaining blocker is unchanged: `SURVEYOL_API_TOKEN` is still unavailable for API-backed CTS ops hygiene commands. Last known public-safe SurveyOL totals remain 290 invitations, 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited.</td>
         <td>Before the next batch, restore the SurveyOL API token or use the existing SurveyOL live-extract fallback, then rerun the invitation checks with SurveyOL no-send suppressions as the controlling list.</td>
-      </tr>
-      <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-18T15:19:53-04:00"><span class="recorded-date">2026-06-18</span><span class="recorded-time">3:19:53 PM EDT</span></time>
-<span class="log-status">Week 2 batch sent</span></div></td>
-        <td>Cleared the remaining invitation gate and sent the next guarded Week 2 batch.<ul>
-        <li>Materialized the canonical SurveyOL contacts and duplicate-audit artifacts from the live authenticated send page.</li>
-        <li>Confirmed the invitation-scope status board was clear before sending.</li>
-        <li>Queued the next guarded SurveyOL Email collector batch of 100 invitations.</li>
-        <li>Recorded the post-send suppression check and remaining-count estimate in the private ledger.</li>
-        <li>Hardened the workflow with a reusable SurveyOL live-extract fallback for future runs.</li>
-      </ul></td>
-        <td>100 invitations were queued in this batch, bringing the Week 2 cumulative invitation count to 290. Public-safe post-send totals were 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited. SurveyOL then reached its daily sending limit.</td>
-        <td>Resume at the next allowed send window if eligible contacts remain, and keep future public-safe automation log entries in sync with each batch result.</td>
       </tr>
       </tbody>
     </table>

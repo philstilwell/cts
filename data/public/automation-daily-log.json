@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-06-30T16:15:00-04:00",
-  "updated_time_et": "June 30, 2026, 4:15 PM EDT",
+  "updated_at": "2026-06-30T16:45:00-04:00",
+  "updated_time_et": "4:45:00 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-30",
+      "recorded_at": "2026-06-30T16:45:00-04:00",
+      "recorded_time_et": "4:45:00 PM EDT",
+      "status": "week-4-invitation-batch-blocked",
+      "summary": "Week 4 first invitation batch was prepared but blocked by SurveyOL send acceptance.",
+      "ran": [
+        "Published and live-verified the Week 4 public placeholder with final close Monday, July 20, 2026.",
+        "Verified the SurveyOL Email collector was open, non-anonymous, and Reminder Follow-up was Off; the default Web Link collector was closed.",
+        "Built and duplicate-audited the exact private first 100-recipient Week 4 batch before attempting the send.",
+        "Attempted to queue the first 100 SurveyOL Email invitations, but SurveyOL returned unsuccessful send acceptance and did not increase the invitation count."
+      ],
+      "result": "No Week 4 invitations were sent or queued. Public-safe launch state remains: Email collector ready, 0 invitations, 0 complete responses, 0 opt-outs, and 0 bounces; 364 eligible contacts remain. The posted final close date is Monday, July 20, 2026.",
+      "next": "Resolve the SurveyOL sender-verification/send-acceptance blocker, then recheck live collector settings and duplicate-audit the first batch again before sending."
+    },
     {
       "date": "2026-06-30",
       "recorded_at": "2026-06-30T16:00:00-04:00",
@@ -165,7 +180,7 @@
       "recorded_at": "2026-06-25T11:35:56-04:00",
       "recorded_time_et": "11:35:56 AM EDT",
       "status": "review_required",
-      "summary": "Week 3 invitation batch remained blocked during today’s guarded check.",
+      "summary": "Week 3 invitation batch remained blocked during today\u2019s guarded check.",
       "ran": [
         "Regenerated the private Week 3 invitation-scope board and refreshed SurveyOL contacts, duplicate audit, Week 3 send-list audit, exact duplicate audit, and dry-run contact sync evidence.",
         "Reconfirmed the Week 3 placeholder page, reports index link, and exact final close date of Monday, July 13, 2026 from the Tuesday, June 23, 2026 first invitation date.",
@@ -420,22 +435,6 @@
       ],
       "result": "No invitations were sent in the manual rerun. The actual remaining blocker is unchanged: `SURVEYOL_API_TOKEN` is still unavailable for API-backed CTS ops hygiene commands. Last known public-safe SurveyOL totals remain 290 invitations, 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited.",
       "next": "Before the next batch, restore the SurveyOL API token or use the existing SurveyOL live-extract fallback, then rerun the invitation checks with SurveyOL no-send suppressions as the controlling list."
-    },
-    {
-      "date": "2026-06-18",
-      "recorded_at": "2026-06-18T15:19:53-04:00",
-      "recorded_time_et": "3:19:53 PM EDT",
-      "status": "Week 2 batch sent",
-      "summary": "Cleared the remaining invitation gate and sent the next guarded Week 2 batch.",
-      "ran": [
-        "Materialized the canonical SurveyOL contacts and duplicate-audit artifacts from the live authenticated send page.",
-        "Confirmed the invitation-scope status board was clear before sending.",
-        "Queued the next guarded SurveyOL Email collector batch of 100 invitations.",
-        "Recorded the post-send suppression check and remaining-count estimate in the private ledger.",
-        "Hardened the workflow with a reusable SurveyOL live-extract fallback for future runs."
-      ],
-      "result": "100 invitations were queued in this batch, bringing the Week 2 cumulative invitation count to 290. Public-safe post-send totals were 21 completes, 8 opt-outs, and 0 bounces, with an estimated 119 eligible contacts still uninvited. SurveyOL then reached its daily sending limit.",
-      "next": "Resume at the next allowed send window if eligible contacts remain, and keep future public-safe automation log entries in sync with each batch result."
     }
   ]
 }
