@@ -174,7 +174,8 @@ def build_patterns(args: argparse.Namespace) -> int:
         "status": "exploratory_privacy_safe",
         "axis": {
             "field": "Denomination Evangelical?",
-            "public_label": "Evangelical profile",
+            "public_label": "Self-identified evangelical profile",
+            "classification_note": "Based on participants' self-identification in their CTS 2026 registry profile.",
             "groups": [
                 {"label": "Evangelical", "value": "Yes", "n": group_counts["Yes"]},
                 {"label": "Non-evangelical", "value": "No", "n": group_counts["No"]},
@@ -185,7 +186,9 @@ def build_patterns(args: argparse.Namespace) -> int:
         },
         "interpretation_note": (
             "These are exploratory subgroup mean differences from the final Week 1 respondent set. "
-            "They are descriptive, not causal, and the smaller group barely clears the public minimum."
+            "The evangelical/non-evangelical categories are based on participants' self-identification, "
+            "not external classification. They are descriptive, not causal, and the smaller group barely "
+            "clears the public minimum."
         ),
         "items": item_patterns,
         "suppressed_profile_fields": [

@@ -1645,11 +1645,12 @@
     ]
   },
   "profile_patterns": {
-    "generated_at": "2026-06-30T16:45:29.162282+00:00",
+    "generated_at": "2026-06-30T16:54:04.096638+00:00",
     "status": "exploratory_privacy_safe",
     "axis": {
       "field": "Denomination Evangelical?",
-      "public_label": "Evangelical profile",
+      "public_label": "Self-identified evangelical profile",
+      "classification_note": "Based on participants' self-identification in their CTS 2026 registry profile.",
       "groups": [
         {
           "label": "Evangelical",
@@ -1666,7 +1667,7 @@
       "minimum_public_subgroup_n": 15,
       "preferred_public_subgroup_n": 20
     },
-    "interpretation_note": "These are exploratory subgroup mean differences from the final Week 1 respondent set. They are descriptive, not causal, and the smaller group barely clears the public minimum.",
+    "interpretation_note": "These are exploratory subgroup mean differences from the final Week 1 respondent set. The evangelical/non-evangelical categories are based on participants' self-identification, not external classification. They are descriptive, not causal, and the smaller group barely clears the public minimum.",
     "items": [
       {
         "item_id": "W001-Q09",
