@@ -10,7 +10,7 @@ Launch target: Tuesday evening, June 23, 2026, after SurveyOL draft review.
 
 Expected first preliminary report: Tuesday morning, June 30, 2026.
 
-Expected final close: Tuesday, July 14, 2026, three weeks after first invitation send.
+Expected final close: Monday, July 13, 2026, 20 days after first invitation send.
 
 Default live-item response format:
 

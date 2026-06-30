@@ -8,9 +8,9 @@ SurveyOL design/preview GUID: store in private operational notes. Do not commit 
 
 Launch target: Tuesday evening, June 30, 2026, after SurveyOL draft review.
 
-Expected first preliminary report: Tuesday morning, July 7, 2026.
+Expected first preliminary report: Tuesday morning, July 6, 2026.
 
-Expected final close: Tuesday, July 21, 2026, three weeks after first invitation send.
+Expected final close: Monday, July 20, 2026, 20 days after first invitation send.
 
 Default live-item response format:
 
