@@ -1,0 +1,1649 @@
+{
+  "schema_version": "cts-weekly-summary-v0.2",
+  "generated_at": "2026-06-30T13:05:31.334179+00:00",
+  "week": "week-003",
+  "title": "CTS 2026 Weekly Survey 3 - Pastoral Authority and Accountability",
+  "topic": "Pastoral Authority and Accountability",
+  "field_dates": {
+    "start": "2026-06-23",
+    "end": "2026-07-14",
+    "first_invitation_sent": "2026-06-23",
+    "first_report_target": "2026-06-30",
+    "final_close": "2026-07-14",
+    "final_close_label": "Tuesday, July 14, 2026",
+    "final_close_rule": "21 days after the first production invitation send"
+  },
+  "platform": "CTS",
+  "slider_scale": {
+    "min": 0,
+    "midpoint": 50,
+    "max": 100,
+    "labels": {
+      "0": "strongly disagree",
+      "50": "unsure/mixed",
+      "100": "strongly agree"
+    }
+  },
+  "privacy": {
+    "min_public_item_n": 30,
+    "min_public_subgroup_n": 15,
+    "preferred_public_subgroup_n": 20
+  },
+  "response_count": 27,
+  "items": [
+    {
+      "id": "W003-Q01",
+      "number": 1,
+      "section": "cts_administered_topic",
+      "short_label": "In many churches pastors exercise",
+      "text": "In many churches, pastors exercise less legitimate spiritual authority than Scripture assigns to church leaders.",
+      "source_column": "In many churches, pastors exercise less legitimate spiritual authority than Scripture assigns to church leaders.",
+      "n": 27,
+      "mean": 50.11,
+      "median": 50.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 25.0,
+      "q3": 76.0,
+      "iqr": 51.0,
+      "standard_deviation": 30.14,
+      "bands": {
+        "low": 9,
+        "middle": 8,
+        "high": 10
+      },
+      "disagreement_score": 51.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 23,
+        "endpoint_count": 4,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 2,
+        "ratio": 5.75
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          2,
+          2,
+          4,
+          3,
+          1,
+          5,
+          0,
+          5,
+          2,
+          3
+        ],
+        "display_percentages": [
+          7.63,
+          8.074,
+          15.37,
+          11.667,
+          4.593,
+          18.63,
+          1.111,
+          18.741,
+          8.296,
+          11.333
+        ],
+        "s23_bucket_counts": [
+          3.5,
+          2.5,
+          3.5,
+          2.5,
+          3.0,
+          3.0,
+          0.5,
+          5.0,
+          2.0,
+          3.5
+        ],
+        "s23_smoothed_percentages": [
+          13.63,
+          10.037,
+          13.519,
+          9.981,
+          11.722,
+          11.5,
+          2.741,
+          18.796,
+          8.352,
+          13.574
+        ]
+      }
+    },
+    {
+      "id": "W003-Q02",
+      "number": 2,
+      "section": "cts_administered_topic",
+      "short_label": "In many churches pastors exercise",
+      "text": "In many churches, pastors exercise more practical authority than their accountability structures can safely support.",
+      "source_column": "In many churches, pastors exercise more practical authority than their accountability structures can safely support.",
+      "n": 27,
+      "mean": 69.96,
+      "median": 73.0,
+      "min": 25.0,
+      "max": 100.0,
+      "q1": 52.5,
+      "q3": 82.5,
+      "iqr": 30.0,
+      "standard_deviation": 20.0,
+      "bands": {
+        "low": 1,
+        "middle": 9,
+        "high": 17
+      },
+      "disagreement_score": 30.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 23,
+        "endpoint_count": 4,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 4,
+        "ratio": 5.75
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          7,
+          2,
+          6,
+          6,
+          4
+        ],
+        "display_percentages": [
+          0.0,
+          0.111,
+          3.815,
+          3.815,
+          0.889,
+          26.148,
+          8.852,
+          23.111,
+          23.333,
+          15.481
+        ],
+        "s23_bucket_counts": [
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          2.5,
+          4.5,
+          2.5,
+          6.0,
+          5.5,
+          6.0
+        ],
+        "s23_smoothed_percentages": [
+          0.0,
+          0.111,
+          3.815,
+          4.093,
+          9.87,
+          17.222,
+          10.426,
+          23.111,
+          21.704,
+          23.5
+        ]
+      }
+    },
+    {
+      "id": "W003-Q03",
+      "number": 3,
+      "section": "cts_administered_topic",
+      "short_label": "A plurality of qualified elders",
+      "text": "A plurality of qualified elders is an important safeguard against pastoral misuse of authority.",
+      "source_column": "A plurality of qualified elders is an important safeguard against pastoral misuse of authority.",
+      "n": 27,
+      "mean": 78.63,
+      "median": 85.0,
+      "min": 10.0,
+      "max": 100.0,
+      "q1": 60.0,
+      "q3": 100.0,
+      "iqr": 40.0,
+      "standard_deviation": 24.74,
+      "bands": {
+        "low": 1,
+        "middle": 7,
+        "high": 19
+      },
+      "disagreement_score": 40.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 15,
+        "endpoint_count": 12,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 12,
+        "ratio": 1.25
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          4,
+          2,
+          5,
+          1,
+          13
+        ],
+        "display_percentages": [
+          0.111,
+          3.704,
+          0.222,
+          3.704,
+          0.556,
+          15.037,
+          8.407,
+          18.852,
+          5.704,
+          48.259
+        ],
+        "s23_bucket_counts": [
+          0.5,
+          0.5,
+          0.0,
+          1.0,
+          1.0,
+          4.0,
+          1.5,
+          4.5,
+          1.0,
+          19.0
+        ],
+        "s23_smoothed_percentages": [
+          1.963,
+          1.907,
+          0.167,
+          3.815,
+          4.259,
+          15.093,
+          6.5,
+          16.944,
+          6.315,
+          72.593
+        ]
+      }
+    },
+    {
+      "id": "W003-Q04",
+      "number": 4,
+      "section": "cts_administered_topic",
+      "short_label": "Congregational voting is an important",
+      "text": "Congregational voting is an important safeguard against pastoral misuse of authority.",
+      "source_column": "Congregational voting is an important safeguard against pastoral misuse of authority.",
+      "n": 27,
+      "mean": 66.19,
+      "median": 75.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 52.0,
+      "q3": 87.5,
+      "iqr": 35.5,
+      "standard_deviation": 30.14,
+      "bands": {
+        "low": 5,
+        "middle": 7,
+        "high": 15
+      },
+      "disagreement_score": 35.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 20,
+        "endpoint_count": 7,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 6,
+        "ratio": 2.857
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          1,
+          2,
+          2,
+          0,
+          0,
+          5,
+          2,
+          4,
+          5,
+          6
+        ],
+        "display_percentages": [
+          3.926,
+          7.741,
+          7.63,
+          0.222,
+          0.556,
+          18.741,
+          8.407,
+          15.593,
+          19.63,
+          22.778
+        ],
+        "s23_bucket_counts": [
+          2.0,
+          1.5,
+          2.0,
+          0.0,
+          0.5,
+          4.5,
+          2.5,
+          3.5,
+          5.0,
+          9.0
+        ],
+        "s23_smoothed_percentages": [
+          7.796,
+          6.0,
+          7.574,
+          0.278,
+          2.352,
+          17.0,
+          10.148,
+          13.796,
+          19.907,
+          34.889
+        ]
+      }
+    },
+    {
+      "id": "W003-Q05",
+      "number": 5,
+      "section": "cts_administered_topic",
+      "short_label": "Pastors should be accountable to",
+      "text": "Pastors should be accountable to some recognized authority outside their own local congregation.",
+      "source_column": "Pastors should be accountable to some recognized authority outside their own local congregation.",
+      "n": 27,
+      "mean": 81.04,
+      "median": 100.0,
+      "min": 5.0,
+      "max": 100.0,
+      "q1": 64.0,
+      "q3": 100.0,
+      "iqr": 36.0,
+      "standard_deviation": 25.85,
+      "bands": {
+        "low": 1,
+        "middle": 7,
+        "high": 19
+      },
+      "disagreement_score": 36.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 13,
+        "endpoint_count": 14,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 14,
+        "ratio": 0.929
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          4,
+          2,
+          1,
+          16
+        ],
+        "display_percentages": [
+          3.704,
+          0.111,
+          0.111,
+          3.815,
+          3.926,
+          4.259,
+          15.148,
+          7.963,
+          5.704,
+          59.37
+        ],
+        "s23_bucket_counts": [
+          1.0,
+          0.0,
+          0.0,
+          1.5,
+          1.0,
+          1.0,
+          3.5,
+          2.5,
+          1.0,
+          22.5
+        ],
+        "s23_smoothed_percentages": [
+          3.815,
+          0.111,
+          0.167,
+          5.667,
+          3.981,
+          4.204,
+          13.352,
+          9.759,
+          6.481,
+          85.944
+        ]
+      }
+    },
+    {
+      "id": "W003-Q06",
+      "number": 6,
+      "section": "cts_administered_topic",
+      "short_label": "A persistent pattern of manipulative",
+      "text": "A persistent pattern of manipulative or coercive leadership should normally disqualify a pastor from office.",
+      "source_column": "A persistent pattern of manipulative or coercive leadership should normally disqualify a pastor from office.",
+      "n": 27,
+      "mean": 95.41,
+      "median": 100.0,
+      "min": 50.0,
+      "max": 100.0,
+      "q1": 100.0,
+      "q3": 100.0,
+      "iqr": 0.0,
+      "standard_deviation": 11.16,
+      "bands": {
+        "low": 0,
+        "middle": 1,
+        "high": 26
+      },
+      "disagreement_score": 0.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 6,
+        "endpoint_count": 21,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 21,
+        "ratio": 0.286
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          2,
+          23
+        ],
+        "display_percentages": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.111,
+          3.704,
+          0.222,
+          3.926,
+          10.074,
+          85.407
+        ],
+        "s23_bucket_counts": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.5,
+          0.0,
+          1.0,
+          2.5,
+          33.0
+        ],
+        "s23_smoothed_percentages": [
+          0.0,
+          0.0,
+          0.0,
+          0.056,
+          1.907,
+          1.907,
+          0.167,
+          3.981,
+          13.037,
+          100.0
+        ]
+      }
+    },
+    {
+      "id": "W003-Q07",
+      "number": 7,
+      "section": "cts_administered_topic",
+      "short_label": "In my ministry context the",
+      "text": "In my ministry context, the label spiritual abuse is sometimes applied to ordinary pastoral disagreement or correction.",
+      "source_column": "In my ministry context, the label spiritual abuse is sometimes applied to ordinary pastoral disagreement or correction.",
+      "n": 27,
+      "mean": 43.26,
+      "median": 50.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 22.0,
+      "q3": 60.0,
+      "iqr": 38.0,
+      "standard_deviation": 27.76,
+      "bands": {
+        "low": 11,
+        "middle": 11,
+        "high": 5
+      },
+      "disagreement_score": 38.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 23,
+        "endpoint_count": 4,
+        "exact_zero_count": 3,
+        "exact_hundred_count": 1,
+        "ratio": 5.75
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          4,
+          2,
+          4,
+          1,
+          1,
+          7,
+          3,
+          3,
+          1,
+          1
+        ],
+        "display_percentages": [
+          15.037,
+          8.296,
+          15.148,
+          4.259,
+          4.593,
+          26.37,
+          12.222,
+          11.556,
+          4.148,
+          3.815
+        ],
+        "s23_bucket_counts": [
+          6.0,
+          2.0,
+          4.0,
+          1.0,
+          2.5,
+          6.0,
+          2.0,
+          3.0,
+          1.0,
+          1.5
+        ],
+        "s23_smoothed_percentages": [
+          23.111,
+          8.519,
+          15.148,
+          4.426,
+          10.037,
+          22.722,
+          8.407,
+          11.444,
+          4.204,
+          5.833
+        ]
+      }
+    },
+    {
+      "id": "W003-Q08",
+      "number": 8,
+      "section": "cts_administered_topic",
+      "short_label": "In my ministry context genuinely",
+      "text": "In my ministry context, genuinely abusive pastoral leadership is more common than churches publicly acknowledge.",
+      "source_column": "In my ministry context, genuinely abusive pastoral leadership is more common than churches publicly acknowledge.",
+      "n": 27,
+      "mean": 53.7,
+      "median": 59.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 30.0,
+      "q3": 74.5,
+      "iqr": 44.5,
+      "standard_deviation": 31.73,
+      "bands": {
+        "low": 9,
+        "middle": 9,
+        "high": 9
+      },
+      "disagreement_score": 44.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 20,
+        "endpoint_count": 7,
+        "exact_zero_count": 2,
+        "exact_hundred_count": 5,
+        "ratio": 2.857
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          3,
+          2,
+          1,
+          3,
+          2,
+          3,
+          5,
+          3,
+          0,
+          5
+        ],
+        "display_percentages": [
+          11.333,
+          7.852,
+          4.259,
+          11.444,
+          8.074,
+          11.889,
+          19.185,
+          11.667,
+          0.889,
+          18.519
+        ],
+        "s23_bucket_counts": [
+          4.0,
+          2.0,
+          2.5,
+          1.5,
+          3.0,
+          3.0,
+          4.0,
+          3.0,
+          0.0,
+          7.5
+        ],
+        "s23_smoothed_percentages": [
+          15.481,
+          8.13,
+          9.648,
+          6.167,
+          11.611,
+          11.889,
+          15.481,
+          11.556,
+          1.167,
+          28.611
+        ]
+      }
+    },
+    {
+      "id": "W003-Q09",
+      "number": 9,
+      "section": "cts_administered_topic",
+      "short_label": "Pastoral authority should include giving",
+      "text": "Pastoral authority should include giving moral counsel about members' major life decisions outside formal church programs.",
+      "source_column": "Pastoral authority should include giving moral counsel about members' major life decisions outside formal church programs.",
+      "n": 27,
+      "mean": 43.22,
+      "median": 40.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 18.5,
+      "q3": 65.0,
+      "iqr": 46.5,
+      "standard_deviation": 30.7,
+      "bands": {
+        "low": 12,
+        "middle": 8,
+        "high": 7
+      },
+      "disagreement_score": 46.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 24,
+        "endpoint_count": 3,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 2,
+        "ratio": 8.0
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          4,
+          3,
+          5,
+          0,
+          2,
+          5,
+          1,
+          1,
+          4,
+          2
+        ],
+        "display_percentages": [
+          15.148,
+          12.111,
+          18.852,
+          0.778,
+          7.963,
+          18.852,
+          4.37,
+          4.259,
+          15.148,
+          7.852
+        ],
+        "s23_bucket_counts": [
+          5.0,
+          2.5,
+          5.0,
+          1.0,
+          2.0,
+          4.5,
+          1.0,
+          1.5,
+          3.0,
+          3.0
+        ],
+        "s23_smoothed_percentages": [
+          19.352,
+          10.37,
+          18.907,
+          4.481,
+          8.019,
+          17.0,
+          4.37,
+          6.0,
+          11.611,
+          11.778
+        ]
+      }
+    },
+    {
+      "id": "W003-Q10",
+      "number": 10,
+      "section": "cts_administered_topic",
+      "short_label": "Churches should publish clear procedures",
+      "text": "Churches should publish clear procedures for bringing complaints against pastors, elders, or other leaders.",
+      "source_column": "Churches should publish clear procedures for bringing complaints against pastors, elders, or other leaders.",
+      "n": 27,
+      "mean": 86.07,
+      "median": 100.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 78.5,
+      "q3": 100.0,
+      "iqr": 21.5,
+      "standard_deviation": 22.99,
+      "bands": {
+        "low": 1,
+        "middle": 4,
+        "high": 22
+      },
+      "disagreement_score": 21.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 11,
+        "endpoint_count": 16,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 15,
+        "ratio": 0.688
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          4,
+          1,
+          3,
+          17
+        ],
+        "display_percentages": [
+          3.704,
+          0.111,
+          0.0,
+          0.111,
+          3.704,
+          0.556,
+          14.926,
+          4.481,
+          13.111,
+          63.296
+        ],
+        "s23_bucket_counts": [
+          1.5,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          4.0,
+          1.0,
+          3.5,
+          24.0
+        ],
+        "s23_smoothed_percentages": [
+          5.722,
+          0.167,
+          0.0,
+          0.111,
+          3.704,
+          0.556,
+          14.926,
+          4.537,
+          15.741,
+          91.944
+        ]
+      }
+    },
+    {
+      "id": "W003-Q11",
+      "number": 11,
+      "section": "cts_administered_topic",
+      "short_label": "Pastors should have meaningful accountability",
+      "text": "Pastors should have meaningful accountability for how they use church finances, staff authority, and confidential information.",
+      "source_column": "Pastors should have meaningful accountability for how they use church finances, staff authority, and confidential information.",
+      "n": 27,
+      "mean": 96.56,
+      "median": 100.0,
+      "min": 40.0,
+      "max": 100.0,
+      "q1": 100.0,
+      "q3": 100.0,
+      "iqr": 0.0,
+      "standard_deviation": 11.92,
+      "bands": {
+        "low": 0,
+        "middle": 1,
+        "high": 26
+      },
+      "disagreement_score": 0.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 5,
+        "endpoint_count": 22,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 22,
+        "ratio": 0.227
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          25
+        ],
+        "display_percentages": [
+          0.0,
+          0.0,
+          0.0,
+          0.111,
+          3.704,
+          0.111,
+          0.0,
+          0.111,
+          6.481,
+          92.704
+        ],
+        "s23_bucket_counts": [
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          1.5,
+          35.5
+        ],
+        "s23_smoothed_percentages": [
+          0.0,
+          0.0,
+          0.056,
+          1.907,
+          1.907,
+          0.056,
+          0.0,
+          0.167,
+          9.5,
+          100.0
+        ]
+      }
+    },
+    {
+      "id": "W003-Q12",
+      "number": 12,
+      "section": "cts_administered_topic",
+      "short_label": "Churches should distinguish between biblical",
+      "text": "Churches should distinguish between biblical submission to leaders and unquestioning compliance with leaders.",
+      "source_column": "Churches should distinguish between biblical submission to leaders and unquestioning compliance with leaders.",
+      "n": 27,
+      "mean": 94.59,
+      "median": 100.0,
+      "min": 55.0,
+      "max": 100.0,
+      "q1": 89.0,
+      "q3": 100.0,
+      "iqr": 11.0,
+      "standard_deviation": 10.07,
+      "bands": {
+        "low": 0,
+        "middle": 1,
+        "high": 26
+      },
+      "disagreement_score": 11.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 9,
+        "endpoint_count": 18,
+        "exact_zero_count": 0,
+        "exact_hundred_count": 18,
+        "ratio": 0.5
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          6,
+          20
+        ],
+        "display_percentages": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.111,
+          3.704,
+          0.111,
+          0.667,
+          24.444,
+          74.741
+        ],
+        "s23_bucket_counts": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.5,
+          6.0,
+          28.5
+        ],
+        "s23_smoothed_percentages": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.111,
+          3.704,
+          0.167,
+          2.519,
+          25.444,
+          100.0
+        ]
+      }
+    },
+    {
+      "id": "W003-Q13",
+      "number": 13,
+      "section": "participant_vote_determined",
+      "short_label": "Women should be permitted to",
+      "text": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified.",
+      "source_column": "Women should be permitted to serve in any church ministry role for which they are spiritually gifted and otherwise qualified.",
+      "n": 27,
+      "mean": 71.04,
+      "median": 100.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 29.5,
+      "q3": 100.0,
+      "iqr": 70.5,
+      "standard_deviation": 42.23,
+      "bands": {
+        "low": 8,
+        "middle": 0,
+        "high": 19
+      },
+      "disagreement_score": 70.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 6,
+        "endpoint_count": 21,
+        "exact_zero_count": 5,
+        "exact_hundred_count": 16,
+        "ratio": 0.286
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          5,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          17
+        ],
+        "display_percentages": [
+          18.63,
+          4.37,
+          3.926,
+          3.815,
+          0.111,
+          0.0,
+          0.111,
+          3.815,
+          5.704,
+          63.074
+        ],
+        "s23_bucket_counts": [
+          7.5,
+          1.0,
+          1.5,
+          0.5,
+          0.0,
+          0.0,
+          0.5,
+          0.5,
+          1.5,
+          24.5
+        ],
+        "s23_smoothed_percentages": [
+          28.722,
+          4.704,
+          5.722,
+          2.019,
+          0.056,
+          0.056,
+          1.907,
+          2.074,
+          8.333,
+          93.63
+        ]
+      }
+    },
+    {
+      "id": "W003-Q14",
+      "number": 14,
+      "section": "participant_vote_determined",
+      "short_label": "Christians are morally obligated to",
+      "text": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands.",
+      "source_column": "Christians are morally obligated to disobey civil laws that require them to violate clear biblical commands.",
+      "n": 27,
+      "mean": 83.78,
+      "median": 100.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 80.0,
+      "q3": 100.0,
+      "iqr": 20.0,
+      "standard_deviation": 27.2,
+      "bands": {
+        "low": 2,
+        "middle": 2,
+        "high": 23
+      },
+      "disagreement_score": 20.0,
+      "doubt_dogma": {
+        "non_endpoint_count": 12,
+        "endpoint_count": 15,
+        "exact_zero_count": 1,
+        "exact_hundred_count": 14,
+        "ratio": 0.8
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          2,
+          3,
+          18
+        ],
+        "display_percentages": [
+          3.815,
+          3.815,
+          0.111,
+          0.111,
+          3.815,
+          3.815,
+          0.333,
+          7.741,
+          13.333,
+          67.0
+        ],
+        "s23_bucket_counts": [
+          2.0,
+          0.5,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          3.0,
+          3.0,
+          24.0
+        ],
+        "s23_smoothed_percentages": [
+          7.685,
+          2.074,
+          0.056,
+          0.111,
+          3.815,
+          3.815,
+          0.444,
+          11.444,
+          14.111,
+          91.889
+        ]
+      }
+    },
+    {
+      "id": "W003-Q15",
+      "number": 15,
+      "section": "participant_vote_determined",
+      "short_label": "Churches should teach explicitly on",
+      "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies.",
+      "source_column": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies.",
+      "n": 27,
+      "mean": 51.37,
+      "median": 50.0,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 22.0,
+      "q3": 91.5,
+      "iqr": 69.5,
+      "standard_deviation": 37.48,
+      "bands": {
+        "low": 10,
+        "middle": 7,
+        "high": 10
+      },
+      "disagreement_score": 69.5,
+      "doubt_dogma": {
+        "non_endpoint_count": 16,
+        "endpoint_count": 11,
+        "exact_zero_count": 5,
+        "exact_hundred_count": 6,
+        "ratio": 1.455
+      },
+      "key_tension": {
+        "flag": false,
+        "eligible": false,
+        "reasons": [
+          "below_minimum_n"
+        ]
+      },
+      "distribution": {
+        "cut_points": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "simple_counts": [
+          5,
+          1,
+          3,
+          2,
+          0,
+          6,
+          0,
+          1,
+          1,
+          8
+        ],
+        "display_percentages": [
+          18.63,
+          4.593,
+          11.444,
+          7.741,
+          0.889,
+          22.222,
+          0.778,
+          3.815,
+          4.704,
+          29.741
+        ],
+        "s23_bucket_counts": [
+          7.5,
+          1.5,
+          3.0,
+          1.5,
+          2.0,
+          4.0,
+          0.5,
+          0.5,
+          1.5,
+          10.5
+        ],
+        "s23_smoothed_percentages": [
+          28.778,
+          6.722,
+          11.444,
+          6.111,
+          8.019,
+          15.093,
+          2.352,
+          2.074,
+          6.778,
+          40.222
+        ]
+      }
+    }
+  ],
+  "participant_nominations": {
+    "suggestions_received": 2,
+    "raw_suggestions_public": false
+  },
+  "quality": {
+    "rows_read": 27,
+    "missing_item_columns": [],
+    "non_numeric_values": [],
+    "out_of_range_values": []
+  },
+  "private_data_excluded": true,
+  "ballot": {
+    "source_column": "Which of these participant-nominated survey items would you most like to see considered for next week's live survey items? Move the items up or down to indicate your preference. These ballot items are intentionally independent from this week's Pastoral Authority and Accountability topic. CTS reviews participant suggestions with AI assistance, polishing them for clarity, neutrality, survey suitability, and likely participant tension.",
+    "respondents": 27,
+    "scoring": "Borda count: 7 points for first place through 1 point for seventh place.",
+    "items": [
+      {
+        "choice": 1,
+        "text": "Christians should prioritize faithful public witness through suffering over seeking political power to advance Christ's kingdom.",
+        "score": 151,
+        "rank_count": 27,
+        "rank": 1
+      },
+      {
+        "choice": 2,
+        "text": "Churches should emphasize shared community, service, and belonging as much as individual spiritual maturity.",
+        "score": 128,
+        "rank_count": 27,
+        "rank": 2
+      },
+      {
+        "choice": 3,
+        "text": "Scripture reserves the pastoral office to qualified men.",
+        "score": 112,
+        "rank_count": 27,
+        "rank": 3
+      },
+      {
+        "choice": 6,
+        "text": "Churches should teach Christians how to use artificial intelligence faithfully and critically as part of contemporary discipleship.",
+        "score": 97,
+        "rank_count": 27,
+        "rank": 4
+      },
+      {
+        "choice": 7,
+        "text": "Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.",
+        "score": 96,
+        "rank_count": 27,
+        "rank": 5
+      },
+      {
+        "choice": 4,
+        "text": "A male pastor who holds egalitarian convictions should normally not serve as pastor in a complementarian church.",
+        "score": 91,
+        "rank_count": 27,
+        "rank": 6
+      },
+      {
+        "choice": 5,
+        "text": "Baptism should ordinarily precede participation in the Lord's Supper.",
+        "score": 81,
+        "rank_count": 27,
+        "rank": 7
+      }
+    ],
+    "quality": {
+      "invalid_values": []
+    }
+  },
+  "next_week_ballot_draft": {
+    "items": [
+      {
+        "rank": 1,
+        "text": "Churches should teach explicitly on how Christians should use wealth, debt, and generosity as discipleship issues.",
+        "source": "week_3_ballot_carryover"
+      },
+      {
+        "rank": 2,
+        "text": "Baptism should ordinarily precede participation in the Lord's Supper.",
+        "source": "week_3_ballot_carryover"
+      },
+      {
+        "rank": 3,
+        "text": "A minister's end-times view should significantly shape preaching, discipleship, and public engagement.",
+        "source": "participant_suggestion"
+      },
+      {
+        "rank": 4,
+        "text": "Communion should ordinarily be observed weekly.",
+        "source": "cts_ai_seed"
+      },
+      {
+        "rank": 5,
+        "text": "Pastors should refer congregants to licensed mental health professionals more often than they currently do.",
+        "source": "cts_ai_seed"
+      },
+      {
+        "rank": 6,
+        "text": "Churches should explicitly warn members against political idolatry.",
+        "source": "cts_ai_seed"
+      },
+      {
+        "rank": 7,
+        "text": "Apologetics should be a regular part of church discipleship.",
+        "source": "cts_ai_seed"
+      }
+    ]
+  },
+  "report_encapsulation": {
+    "title": "Week 3 preliminary report: Pastoral Authority and Accountability",
+    "url": "https://christianthoughtsurvey.com/weekly-survey-reports/week-003-pastoral-authority-and-accountability/",
+    "text": "The first Week 3 preliminary report has 27 complete responses. Early patterns show very strong agreement that manipulative or coercive leadership should normally disqualify a pastor, that pastors need meaningful accountability for finances, staff authority, and confidential information, and that churches should distinguish biblical submission from unquestioning compliance. Wider spread appears around whether pastors exercise too little legitimate authority, how often the label spiritual abuse is over-applied, and how much moral counsel pastors should give about members' major life decisions. Raw respondent identities and raw free-text suggestions are not published."
+  }
+}
