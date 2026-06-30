@@ -17,7 +17,7 @@ Each weekly survey includes a 7-item participant-nominated item ballot.
 3. Use CTS review with AI assistance to polish viable nominations into standalone survey-item statements.
 4. Score the polished items with the rubric below.
 5. Place the top 7 suitable items on the next weekly ballot.
-6. If fewer than 7 suitable participant nominations are available, add AI-created seed items until the ballot has 7 items.
+6. If fewer than 7 suitable participant nominations are available, first use eligible participant-originated carryovers when they are still fresh, orthogonal, and not too recently used as live items; then add AI-created seed items only as needed until the ballot has 7 items.
 7. Active participants rank the 7 ballot items.
 8. The top 3 ranked eligible items become live participant-vote-determined survey items in the following week's survey.
 
@@ -52,7 +52,7 @@ When items are tied for the final ballot slots, prefer the item that:
 
 ## AI-Created Seed Items
 
-Use AI-created seed items only when fewer than 7 suitable participant nominations are available. Seed items should follow the same rubric and should be broad enough to rank against participant-nominated items. Seed items may draw inspiration from the older 200-item CTS survey when useful, but should be rewritten as clear, current, orthogonal items rather than copied mechanically. Keep an internal note identifying which ballot items were participant-originated and which were CTS/AI seed items.
+Use AI-created seed items only when fewer than 7 suitable participant nominations or eligible participant-originated carryovers are available. Seed items should follow the same rubric and should be broad enough to rank against participant-nominated items. Seed items must be sufficiently distinct from the next few planned CTS-administered weekly topics, especially the topics previewed in the current survey, so the optional ballot does not pre-run an upcoming topic block. Seed items may draw inspiration from the older 200-item CTS survey when useful, but should be rewritten as clear, current, orthogonal items rather than copied mechanically. Keep an internal note identifying which ballot items were participant-originated and which were CTS/AI seed items.
 
 ## Audit Trail
 

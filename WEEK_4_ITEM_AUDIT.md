@@ -50,8 +50,8 @@ These seven draft items were reviewed against Week 3 text-box nominations before
 3. A minister's end-times view should significantly shape preaching, discipleship, and public engagement.
 4. Communion should ordinarily be observed weekly.
 5. Pastors should refer congregants to licensed mental health professionals more often than they currently do.
-6. Churches should explicitly warn members against political idolatry.
-7. Apologetics should be a regular part of church discipleship.
+6. Churches should teach ordinary hospitality as a core practice of discipleship rather than treating it mainly as a private personality preference.
+7. Churches should give more explicit pastoral guidance about singleness and friendship in adult discipleship.
 
 ## Exclusions And Notes
 
@@ -60,7 +60,9 @@ These seven draft items were reviewed against Week 3 text-box nominations before
 - Two Week 3 text-box suggestions were reviewed. One was polished into the end-times ballot item. The other was excluded as not usable as a serious credence-slider item.
 - Items 1-2 in the draft ballot are Week 3 ballot carryovers not used as Week 4 independent live items.
 - Item 3 is participant-originated and polished for clarity, neutrality, and credence-slider suitability.
-- Items 4-7 are CTS/AI seed placeholders drawn from later bank themes and rewritten as standalone credence-slider items.
+- Items 4-7 are CTS/AI seed placeholders only because fewer than seven suitable participant-originated or carryover nominations are available.
+- The earlier AI/seed candidates on political idolatry and apologetics were removed from the Week 4 ballot draft. Political idolatry duplicated a later topic-bank item, and apologetics was too close to the upcoming Week 5 topic on Doubt, Deconstruction, and Faith Loss.
+- Replacement AI/seed items were selected to be distinct from the next three planned CTS-administered topics: Doubt, Deconstruction, and Faith Loss; Assurance of Salvation; and Hell, Judgment, and Final Punishment.
 
 ## SurveyOL QA Notes
 

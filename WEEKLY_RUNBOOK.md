@@ -231,9 +231,10 @@ For Week 1, the anonymous Web Link collector was closed on June 10, 2026 and the
 
 1. Rank the participant-nominated ballot results.
 2. Select the top 3 eligible ranked ballot items for the next week's live participant-vote-determined questions.
-3. Clean new text-box nominations into ballot-ready wording using the AI-assisted CTS review rubric: clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance.
-4. Update the preview of upcoming topics from the topic bank before the Tuesday report/newsletter cycle and the Tuesday evening survey launch.
-5. Save the next survey draft before sending any email.
+3. Clean new text-box nominations into ballot-ready wording using the AI-assisted CTS review rubric: clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, tension potential, and pastoral or theological relevance. Use participant suggestions as much as possible: after current viable suggestions, prefer eligible participant-originated carryovers over new AI/seed items when they are not stale, not too recently used live, and still orthogonal.
+4. Use AI-created seed items only for remaining ballot slots. Before using a seed item, compare it against the next few planned CTS-administered topics, especially the topics previewed in the current survey, and replace it if it substantially overlaps those upcoming topic blocks.
+5. Update the preview of upcoming topics from the topic bank before the Tuesday report/newsletter cycle and the Tuesday evening survey launch.
+6. Save the next survey draft before sending any email.
 
 ## Weekly List Hygiene
 

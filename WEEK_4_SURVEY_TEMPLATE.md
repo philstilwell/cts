@@ -97,8 +97,8 @@ Draft ballot items:
 3. A minister's end-times view should significantly shape preaching, discipleship, and public engagement.
 4. Communion should ordinarily be observed weekly.
 5. Pastors should refer congregants to licensed mental health professionals more often than they currently do.
-6. Churches should explicitly warn members against political idolatry.
-7. Apologetics should be a regular part of church discipleship.
+6. Churches should teach ordinary hospitality as a core practice of discipleship rather than treating it mainly as a private personality preference.
+7. Churches should give more explicit pastoral guidance about singleness and friendship in adult discipleship.
 
 ## D. Suggestion Text Box
 
@@ -203,8 +203,8 @@ Baptism should ordinarily precede participation in the Lord's Supper.
 A minister's end-times view should significantly shape preaching, discipleship, and public engagement.
 Communion should ordinarily be observed weekly.
 Pastors should refer congregants to licensed mental health professionals more often than they currently do.
-Churches should explicitly warn members against political idolatry.
-Apologetics should be a regular part of church discipleship.
+Churches should teach ordinary hospitality as a core practice of discipleship rather than treating it mainly as a private personality preference.
+Churches should give more explicit pastoral guidance about singleness and friendship in adult discipleship.
 
 [Comment Box]
 Suggest one or more future CTS survey items. Please write each suggestion as a statement that a participant could rate from 0 to 100.

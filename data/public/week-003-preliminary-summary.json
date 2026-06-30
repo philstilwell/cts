@@ -1,6 +1,6 @@
 {
   "schema_version": "cts-weekly-summary-v0.2",
-  "generated_at": "2026-06-30T13:05:31.334179+00:00",
+  "generated_at": "2026-06-30T14:41:50.357504+00:00",
   "week": "week-003",
   "title": "CTS 2026 Weekly Survey 3 - Pastoral Authority and Accountability",
   "topic": "Pastoral Authority and Accountability",
@@ -1631,12 +1631,12 @@
       },
       {
         "rank": 6,
-        "text": "Churches should explicitly warn members against political idolatry.",
+        "text": "Churches should teach ordinary hospitality as a core practice of discipleship rather than treating it mainly as a private personality preference.",
         "source": "cts_ai_seed"
       },
       {
         "rank": 7,
-        "text": "Apologetics should be a regular part of church discipleship.",
+        "text": "Churches should give more explicit pastoral guidance about singleness and friendship in adult discipleship.",
         "source": "cts_ai_seed"
       }
     ]
