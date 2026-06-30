@@ -141,6 +141,10 @@ The public sparkline is a display of observed 10-bin response percentages with l
 
 Report metadata lists should keep each label and explanation/value together on the same row, using the shared `.report-meta-list` pattern. Place a thin horizontal divider between couplets rather than separating each label and value into stacked blocks.
 
+##### Report Page Width
+
+Every weekly report page should use the canonical report shell class `weekly-report-page` on the `body`, alongside the week-specific body class. This applies the same wide report container used by earlier weekly reports and prevents page-level horizontal scrolling from report tables, metric cards, and full-bleed report-kicker bars.
+
 ### 2. Interactive Item Explorer
 
 This should be embedded inside each weekly report or linked as an expandable section.
