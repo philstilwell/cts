@@ -293,6 +293,7 @@ PAGES = [
       <p>The Week 1 final report is now posted with 58 complete responses. Week 2 and Week 3 remain preliminary and open under the 20-day close rule; their posted final close dates are Monday, July 6, 2026 and Monday, July 13, 2026.</p>
       <div class="button-row">
         <a class="button" href="{week_1_report_url}">Open Week 1 Final Report</a>
+        <a class="button light" href="{week_2_report_url}">Open Week 2 Preliminary Report</a>
         <a class="button light" href="{week_3_report_url}">Open Week 3 Preliminary Report</a>
       </div>
     </div>
