@@ -277,12 +277,13 @@
         {"kind": "record", "required": true}
       ],
       "covers": [
-        "SurveyOL Email invitation editor does not show a temporary disabled-send banner",
+        "SurveyOL Email invitation editor can complete sender verification",
+        "SurveyOL Email invitation editor does not show a visible disabled-send banner",
         "Authenticated send acceptance is expected to increase the live invitation count",
         "SurveyOL platform send-availability blockers are distinguished from recipient-list defects"
       ],
       "redundancy_groups": ["surveyol-state", "human-review-gate", "send-accountability"],
-      "operator_note": "Open or expose the Email invitation editor and record passed only when no temporary-disabled send banner is present. If SurveyOL returns successful:false or the live invitation count does not increase after a send attempt, record blocked and stop retries."
+      "operator_note": "Open or expose the Email invitation editor and record passed only when sender verification yields a confirmation-code path or verified sender token and no visible disabled-send banner is present. If sender verification returns flag:false, SurveyOL returns successful:false, or the live invitation count does not increase after a send attempt, record blocked and stop retries."
     },
     {
       "id": "surveyol.manual-reminder-audit",
