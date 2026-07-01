@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-07-01T12:01:59-04:00",
-  "updated_time_et": "12:01:59 PM EDT",
+  "updated_at": "2026-07-01T14:47:20-04:00",
+  "updated_time_et": "2:47:20 PM EDT",
   "entries": [
+    {
+      "date": "2026-07-01",
+      "recorded_at": "2026-07-01T14:47:20-04:00",
+      "recorded_time_et": "2:47:20 PM EDT",
+      "status": "week-4-email-2-collector-deleted",
+      "summary": "Removed the empty extra Week 4 Email #2 collector after confirming it had never queued invitations.",
+      "ran": [
+        "Reopened the live authenticated SurveyOL Week 4 Send page and rechecked the extra Email #2 collector before any deletion.",
+        "Confirmed Email #2 still showed Invitations 0, Responses 0, and no visible invitation rows, while the original production Email collector remained separate.",
+        "Deleted only the empty Email #2 collector and rechecked the Send page so the original production Email collector remained the sole live email collector."
+      ],
+      "result": "The empty extra Email #2 collector was removed safely. The original Week 4 Email collector remains the only live email collector, and no new invitation activity was created by this cleanup.",
+      "next": "Use only the original Week 4 Email collector for later audited invitation work after the daily limit resets and the live invitation table is rechecked."
+    },
     {
       "date": "2026-07-01",
       "recorded_at": "2026-07-01T14:18:00-04:00",

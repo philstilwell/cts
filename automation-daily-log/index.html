@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>12:01:59 PM EDT</strong>
+      <strong>2:47:20 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,17 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-07-01T14:47:20-04:00"><span class="recorded-date">2026-07-01</span><span class="recorded-time">2:47:20 PM EDT</span></time>
+<span class="log-status">week-4-email-2-collector-deleted</span></div></td>
+        <td>Removed the empty extra Week 4 Email #2 collector after confirming it had never queued invitations.<ul>
+        <li>Reopened the live authenticated SurveyOL Week 4 Send page and rechecked the extra Email #2 collector before any deletion.</li>
+        <li>Confirmed Email #2 still showed Invitations 0, Responses 0, and no visible invitation rows, while the original production Email collector remained separate.</li>
+        <li>Deleted only the empty Email #2 collector and rechecked the Send page so the original production Email collector remained the sole live email collector.</li>
+      </ul></td>
+        <td>The empty extra Email #2 collector was removed safely. The original Week 4 Email collector remains the only live email collector, and no new invitation activity was created by this cleanup.</td>
+        <td>Use only the original Week 4 Email collector for later audited invitation work after the daily limit resets and the live invitation table is rechecked.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-07-01T14:18:00-04:00"><span class="recorded-date">2026-07-01</span><span class="recorded-time">2:18:00 PM EDT</span></time>
 <span class="log-status">week-4-duplicate-check-clear</span></div></td>
