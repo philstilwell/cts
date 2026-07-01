@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>10:03:44 PM EDT</strong>
+      <strong>11:05:20 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,18 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-30T23:05:20-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">11:05:20 PM EDT</span></time>
+<span class="log-status">Week 4 Chrome retry blocked</span></div></td>
+        <td>Retried the Week 4 first invitation gate from Chrome before the Tuesday deadline.<ul>
+        <li>Read the CTS coordination contract and weekly runbook before the send attempt.</li>
+        <li>Verified the original Week 4 Email collector CD17D2E was open, non-anonymous, reminders off, and still at 0 invitations while ignoring Email #2.</li>
+        <li>Reran the exact first-batch duplicate audit; duplicate count remained 0.</li>
+        <li>Requested sender verification for philstilwell@gmail.com in Chrome and confirmed token 073136 was rejected as invalid.</li>
+      </ul></td>
+        <td>No Week 4 invitations were sent. SurveyOL still blocks the first 100-recipient batch because sender token confirmation remains verified:false, with live Invitations still 0.</td>
+        <td>Restore SurveyOL sender verification for philstilwell@gmail.com, then rerun the guarded first-batch send only if the collector still has 0 invitations.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-30T22:03:44-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">10:03:44 PM EDT</span></time>
 <span class="log-status">week-4-chrome-send-retry-blocked</span></div></td>
@@ -413,53 +425,6 @@
       </ul></td>
         <td>Week 3 is not ready for production invitation: no Week 3 survey draft/copy-paste blocks, placeholder report page, reporting config, newest Week 2 report encapsulation, confirmed Week 2 ballot leaders, or Week 3 launch ledger gates are present yet.</td>
         <td>Before launch, publish the Week 3 placeholder with July 13 final close, create the Week 3 draft/config, confirm the Week 2 report/ballot-derived items, and record the automatic-reminder-off and final-close-date gates.</td>
-      </tr>
-      <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-20T16:08:59-04:00"><span class="recorded-date">2026-06-20</span><span class="recorded-time">4:08:59 PM EDT</span></time>
-<span class="log-status">Week 2 final batch sent</span></div></td>
-        <td>Restored the live SurveyOL session and completed the remaining Week 2 invitation slice.<ul>
-        <li>Regenerated the private Week 2 invitation-scope status board and rechecked the public placeholder page, reports index link, July 6, 2026 final close date, and automatic-reminder-off setting.</li>
-        <li>Queued three guarded SurveyOL invitation batches during the authenticated completion run: 14 invitations, then 3 invitations, then a final 2-contact micro-batch.</li>
-        <li>Recorded the completed batch result and post-send suppression check in the private Week 2 ledger.</li>
-      </ul></td>
-        <td>19 invitations were queued on June 20, bringing the Week 2 cumulative invitation count to 409. Public-safe post-send totals were 26 completes, 14 opt-outs, and 0 bounces, with an estimated 0 eligible contacts still uninvited.</td>
-        <td>No further Week 2 invitation batch is pending unless a later audit finds a missed identity mapping or new suppression exception.</td>
-      </tr>
-      <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-20T13:49:42-04:00"><span class="recorded-date">2026-06-20</span><span class="recorded-time">1:49:42 PM EDT</span></time>
-<span class="log-status">Week 2 send blocked</span></div></td>
-        <td>The final Week 2 batch remains blocked by SurveyOL web authentication.<ul>
-        <li>Regenerated the private Week 2 invitation-scope status board.</li>
-        <li>Reconfirmed the Week 2 placeholder page, reports index link, and July 6, 2026 final close date.</li>
-        <li>Verified the SurveyOL automatic-reminder-off gate from the earlier authenticated collector check.</li>
-        <li>Confirmed the SurveyOL API token is still valid for CTS ops exports but not sufficient to restore the live send page session.</li>
-      </ul></td>
-        <td>No invitations were sent in this run. Last known public-safe Week 2 totals remain 390 invitations, 23 completes, 14 opt-outs, and 0 bounces, with an estimated 19 eligible contacts still uninvited.</td>
-        <td>Before another send attempt, restore an authenticated SurveyOL web session for the CTS account, reopen the Week 2 Email collector send page, and then send the final guarded batch if no new review gate appears.</td>
-      </tr>
-      <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-20T11:34:31-04:00"><span class="recorded-date">2026-06-20</span><span class="recorded-time">11:34:31 AM EDT</span></time>
-<span class="log-status">Week 2 send blocked</span></div></td>
-        <td>Held the final Week 2 batch pending SurveyOL reminder-policy verification.<ul>
-        <li>Regenerated the private Week 2 invitation-scope status board.</li>
-        <li>Reconfirmed the Week 2 placeholder page and the reports index link.</li>
-        <li>Rechecked that the public placeholder page, reports index, and reporting config all show the exact final close date of Monday, July 6, 2026.</li>
-        <li>Saved a fresh private SurveyOL snapshot for the active Week 2 survey.</li>
-        <li>Recorded the missing Week 2 launch-gate ledger entries and today&#x27;s reminder-policy blocker.</li>
-      </ul></td>
-        <td>No invitations were sent on June 20, 2026. Last known public-safe Week 2 totals remain 390 invitations, 23 completes, 14 opt-outs, and 0 bounces, with an estimated 19 eligible contacts still uninvited.</td>
-        <td>Verify the SurveyOL Email collector automatic Reminder Follow-up is off, record the automatic-reminder-off gate, then rerun the guarded invitation batch check.</td>
-      </tr>
-      <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-19T16:57:17-04:00"><span class="recorded-date">2026-06-19</span><span class="recorded-time">4:57:17 PM EDT</span></time>
-<span class="log-status">Close-date process hardened</span></div></td>
-        <td>Made the 20-day final close date an explicit launch and reporting requirement.<ul>
-        <li>Updated the weekly runbook so each survey&#x27;s final close date is calculated as the first production invitation date plus 20 days.</li>
-        <li>Added a launch-gate record requiring the final close date to be posted on the weekly public page before invitations go out.</li>
-        <li>Updated the Week 1 and Week 2 public pages, reporting configs, and Reports page status details with exact close dates.</li>
-      </ul></td>
-        <td>Future weekly surveys should display their exact final close date on the public placeholder page before the first production invitation batch, then preserve that same date through report refreshes and finalization.</td>
-        <td>For each new weekly survey, record public.final-close-date-posted in the private ledger with the first invitation date, computed final close date, public URL, and commit hash.</td>
       </tr>
       </tbody>
     </table>
