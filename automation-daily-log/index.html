@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>11:05:20 PM EDT</strong>
+      <strong>11:37:02 AM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,18 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-07-01T11:37:02-04:00"><span class="recorded-date">2026-07-01</span><span class="recorded-time">11:37:02 AM EDT</span></time>
+<span class="log-status">week-4-invitation-check-blocked</span></div></td>
+        <td>Week 4 remains blocked before the first invitation batch because SurveyOL sender verification is still failing.<ul>
+        <li>Read CTS_PROCESS_COORDINATION.md and WEEKLY_RUNBOOK.md before acting.</li>
+        <li>Regenerated the Week 4 invitation status board, refreshed SurveyOL API/account evidence, and rebuilt the guarded contact/send-list audits.</li>
+        <li>Verified the live Week 4 placeholder page and reports index still post the Week 4 URL and Monday, July 20, 2026 close target under the active 20-day CTS rule.</li>
+        <li>Checked the live SurveyOL Send Survey page for the original Email collector CD17D2E and confirmed Status Open, Anonymous Responses Off, Reminder Follow-up Off, and Invitations 0.</li>
+      </ul></td>
+        <td>No Week 4 invitations were sent today. Public-safe counts remain 0 invitations, 0 complete responses, 0 opt-outs, and 0 bounces on the original Email collector; 364 eligible invitations remain after 27 suppressions, and the first guarded batch is still blocked by unresolved SurveyOL sender-verification/send-acceptance failure.</td>
+        <td>Restore SurveyOL sender verification for philstilwell@gmail.com, then update the Week 4 close-date records if the first send date slips and rerun the guarded first-batch send.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-30T23:05:20-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">11:05:20 PM EDT</span></time>
 <span class="log-status">Week 4 Chrome retry blocked</span></div></td>
@@ -414,17 +426,6 @@
       </ul></td>
         <td>No external list changes were applied. SurveyOL contacts export has 404 rows with duplicate_email_count 0. Local/registry evidence covers 8 SurveyOL opt-outs, but latest private send counts record 14 SurveyOL opt-outs.</td>
         <td>Resolve the six missing SurveyOL opt-out identities before any cross-system sync.</td>
-      </tr>
-      <tr>
-        <td><div class="recorded-status"><time datetime="2026-06-22T09:00:00-04:00"><span class="recorded-date">2026-06-22</span><span class="recorded-time">9:00:00 AM EDT</span></time>
-<span class="log-status">Week 3 preflight not ready</span></div></td>
-        <td>Checked the next weekly survey draft inputs and launch gates before the Tuesday launch window.<ul>
-        <li>Reviewed WEEKLY_RUNBOOK.md, PARTICIPANT_NOMINATED_BALLOT_PROTOCOL.md, CTS 2026 Weekly Topic Bank.md, the Week 2 survey template, Week 2 item audit, public report pages, reporting configs, and latest public Week 1 report summary.</li>
-        <li>Generated a private Week 3 launch-scope automation status board.</li>
-        <li>Computed the planned Week 3 final close date as Monday, July 13, 2026, from a planned Tuesday, June 23, 2026 first production invitation date.</li>
-      </ul></td>
-        <td>Week 3 is not ready for production invitation: no Week 3 survey draft/copy-paste blocks, placeholder report page, reporting config, newest Week 2 report encapsulation, confirmed Week 2 ballot leaders, or Week 3 launch ledger gates are present yet.</td>
-        <td>Before launch, publish the Week 3 placeholder with July 13 final close, create the Week 3 draft/config, confirm the Week 2 report/ballot-derived items, and record the automatic-reminder-off and final-close-date gates.</td>
       </tr>
       </tbody>
     </table>
