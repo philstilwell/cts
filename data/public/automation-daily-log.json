@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-06-30T21:05:22-04:00",
-  "updated_time_et": "9:05:22 PM EDT",
+  "updated_at": "2026-06-30T22:03:44-04:00",
+  "updated_time_et": "10:03:44 PM EDT",
   "entries": [
+    {
+      "date": "2026-06-30",
+      "recorded_at": "2026-06-30T22:03:44-04:00",
+      "recorded_time_et": "10:03:44 PM EDT",
+      "status": "week-4-chrome-send-retry-blocked",
+      "summary": "Chrome-only Week 4 retry remains blocked by SurveyOL sender-token verification.",
+      "ran": [
+        "Read the CTS coordination contract and weekly runbook before retrying the Week 4 send gate.",
+        "Used Chrome only and targeted the original non-anonymous Email collector CD17D2E for SurveyOL survey ef39fcbc-7ebb-43ac-b408-b0976c13fbc0.",
+        "Verified the original collector still showed 0 invitations, Open status, Anonymous Responses Off, and Reminder Follow-up Off; Email #2 was ignored.",
+        "Reran the exact private first-batch duplicate audit and verified sender philstilwell@gmail.com through SurveyOL before any recipient submission."
+      ],
+      "result": "No Week 4 invitations were sent or queued. SurveyOL produced sender-verification token 073136, but /account/verifyaccounttoken returned flag:true, signedin:true, verified:false, so the 100-recipient batch was not submitted. Public-safe counts remain 0 invitations, 0 complete responses, 0 opt-outs, and 0 bounces for the original Email collector; 364 eligible invitations remain.",
+      "next": "Restore SurveyOL sender-token verification, then rerun the Chrome send gate once and verify invitations increase to 100."
+    },
     {
       "date": "2026-06-30",
       "recorded_at": "2026-06-30T21:05:22-04:00",
