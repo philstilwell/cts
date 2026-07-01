@@ -4,6 +4,21 @@
   "entries": [
     {
       "date": "2026-07-01",
+      "recorded_at": "2026-07-01T14:18:00-04:00",
+      "recorded_time_et": "2:18:00 PM EDT",
+      "status": "week-4-duplicate-check-clear",
+      "summary": "Checked whether both Week 4 Email collectors sent invitations; no duplicate second batch was found.",
+      "ran": [
+        "Reopened the live authenticated SurveyOL Week 4 Send page and inspected both Email collectors directly.",
+        "Confirmed the shared daily-limit banner appears on both collectors, which can visually resemble a duplicate send state.",
+        "Verified the original non-anonymous Email collector remains the only collector tied to the private 100-row live invitation extract and duplicate-safe audits.",
+        "Verified Email #2 still shows Invitations 0, Responses 0, and no visible invitation rows."
+      ],
+      "result": "No evidence was found that Email #2 sent a second 100-recipient batch. The current duplicate-safe private extract still contains 100 unique Week 4 invitation rows for the original Email collector only, with duplicate_email_count 0 and no already-invited conflicts in the next audited batch preview.",
+      "next": "Keep the duplicate concern closed unless a fresh live invitation extract shows rows under Email #2 or duplicate normalized recipient emails across collectors."
+    },
+    {
+      "date": "2026-07-01",
       "recorded_at": "2026-07-01T12:01:59-04:00",
       "recorded_time_et": "12:01:59 PM EDT",
       "status": "week-4-first-batch-sent",
