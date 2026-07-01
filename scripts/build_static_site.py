@@ -18,7 +18,7 @@ SITE_DESCRIPTION = (
 SITE_URL = "https://christianthoughtsurvey.com"
 CSS_VERSION = "20260627-callout-spacing"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
-UPDATED = "June 30, 2026"
+UPDATED = "July 1, 2026"
 SITEMAP_LASTMOD = "2026-06-30"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
@@ -291,7 +291,7 @@ PAGES = [
     <div>
       <p class="section-label">Newest survey page</p>
       <h2 id="latest-report-heading">Week 4 Placeholder: Women in Church Leadership</h2>
-      <p>The Week 4 public placeholder is posted before production invitations. Week 4 is open through the CTS email invitation system, but no production invitations have been queued yet. Week 4 is planned to remain open through Monday, July 20, 2026, which is 20 days after the Tuesday, June 30, 2026 first production invitation date.</p>
+      <p>The Week 4 public placeholder remains the live report hub while fielding is underway. The first guarded SurveyOL Email invitations were queued on Wednesday, July 1, 2026, SurveyOL reached its daily limit after 100 invitations, and Week 4 is now planned to remain open through Tuesday, July 21, 2026, which is 20 days after the actual first production invitation date.</p>
       <div class="button-row">
         <a class="button" href="{week_4_report_url}">Open Week 4 Placeholder</a>
         <a class="button light" href="{week_1_report_url}">Open Week 1 Final Report</a>
@@ -300,7 +300,7 @@ PAGES = [
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Week 4 launch pending; Week 1 final posted; Week 2 and Week 3 preliminary</dd>
+        <dd>Week 4 fielding after first batch; Week 1 final posted; Week 2 and Week 3 preliminary</dd>
       </div>
       <div>
         <dt>Survey topic</dt>
@@ -331,7 +331,7 @@ PAGES = [
           </div>
           <div class="survey-stage active" data-short-label="Sent">
             <button class="stage-dot" type="button" aria-describedby="week4-fielding-info" aria-label="Week 4 fielding details"></button>
-            <span class="stage-info-panel" id="week4-fielding-info" role="tooltip"><strong>Launch pending</strong> The first guarded SurveyOL Email batch is blocked until the send gate is restored. Final close target is Monday, July 20, 2026.</span>
+            <span class="stage-info-panel" id="week4-fielding-info" role="tooltip"><strong>Fielding</strong> The first guarded SurveyOL Email invitations were queued on Wednesday, July 1, 2026. SurveyOL reached its daily limit after 100 invitations. Final close target is Tuesday, July 21, 2026.</span>
             <span>Fielding</span>
           </div>
           <div class="survey-stage pending" data-short-label="Report">
@@ -346,13 +346,13 @@ PAGES = [
           </div>
           <div class="survey-stage pending" data-short-label="Final">
             <button class="stage-dot" type="button" aria-describedby="week4-final-info" aria-label="Week 4 final report details"></button>
-            <span class="stage-info-panel" id="week4-final-info" role="tooltip"><strong>Final report</strong> Final close: Monday, July 20, 2026, 20 days after the first production invitation send.</span>
+            <span class="stage-info-panel" id="week4-final-info" role="tooltip"><strong>Final report</strong> Final close: Tuesday, July 21, 2026, 20 days after the first production invitation send.</span>
             <span>Final</span>
           </div>
         </div>
         <div class="survey-lane-next">
           <span>Next</span>
-          <strong>Resolve SurveyOL send gate</strong>
+          <strong>Continue after daily limit reset</strong>
         </div>
       </div>
       <div class="survey-lane current" style="--progress-width: 59.2%;">
@@ -750,13 +750,13 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>This is the stable public page for the fourth revived weekly Christian Thought Survey report. The survey is launching through the CTS email invitation system, and this page gives readers the topic, reporting plan, and exact close-date rule without exposing SurveyOL respondent links.</p>
+  <p>This is the stable public page for the fourth revived weekly Christian Thought Survey report. The survey is open through the CTS email invitation system, and this page gives readers the topic, reporting plan, and exact close-date rule without exposing SurveyOL respondent links. Results will be recalculated as responses arrive.</p>
 
   <div class="status-grid">
     <div class="status-card">
       <span>Status</span>
-      <strong>Launching</strong>
-      <p>The first guarded SurveyOL Email invitation batch is planned for Tuesday, June 30, 2026.</p>
+      <strong>Open; first invitations queued</strong>
+      <p>The first guarded SurveyOL Email invitation batches were queued on Wednesday, July 1, 2026. SurveyOL reached its daily sending limit after 100 invitations, and additional audited batches will resume on the next allowed send day.</p>
     </div>
     <div class="status-card">
       <span>Topic</span>
@@ -765,13 +765,13 @@ PAGES = [
     </div>
     <div class="status-card">
       <span>Final close</span>
-      <strong>Monday, July 20, 2026</strong>
-      <p>This is 20 days after the planned first production invitation date, Tuesday, June 30, 2026.</p>
+      <strong>Tuesday, July 21, 2026</strong>
+      <p>This is 20 days after the actual first production invitation date, Wednesday, July 1, 2026.</p>
     </div>
   </div>
 
   <h2>Report plan</h2>
-  <p>The first preliminary report is planned for Tuesday, July 7, 2026, after the first week of response data is exported and reviewed. Preliminary refreshes are planned each Tuesday morning while the survey remains open, and the report will be marked final after the July 20 close and final export review.</p>
+  <p>The first preliminary report is planned for Tuesday, July 7, 2026, after the first week of response data is exported and reviewed. Preliminary results will be recalculated as responses arrive, refreshes are planned each Tuesday morning while the survey remains open, and the report will be marked final after the July 21 close and final export review.</p>
 
   <h2>Survey structure</h2>
   <ul>
