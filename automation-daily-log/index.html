@@ -66,7 +66,7 @@
     </div>
     <div class="status-card">
       <span>Updated</span>
-      <strong>8:03:40 PM EDT</strong>
+      <strong>9:05:22 PM EDT</strong>
       <p>The log is updated only with public-safe automation summaries.</p>
     </div>
   </div>
@@ -82,6 +82,18 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td><div class="recorded-status"><time datetime="2026-06-30T21:05:22-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">9:05:22 PM EDT</span></time>
+<span class="log-status">week-4-chrome-send-retry-blocked</span></div></td>
+        <td>Chrome-only Week 4 retry remains blocked by SurveyOL sender-token verification.<ul>
+        <li>Read the CTS coordination contract and weekly runbook before retrying the Week 4 send gate.</li>
+        <li>Used Chrome only and targeted the original non-anonymous Email collector CD17D2E for SurveyOL survey ef39fcbc-7ebb-43ac-b408-b0976c13fbc0.</li>
+        <li>Verified the original collector still showed 0 invitations, Open status, Anonymous Responses Off, and Reminder Follow-up Off; Email #2 was ignored.</li>
+        <li>Reran the exact private first-batch duplicate audit and verified sender philstilwell@gmail.com through SurveyOL before any recipient submission.</li>
+      </ul></td>
+        <td>No Week 4 invitations were sent or queued. SurveyOL produced sender-verification token 073136, but /account/verifyaccounttoken returned verified:false, so the 100-recipient batch was not submitted. Public-safe counts remain 0 invitations, 0 complete responses, 0 opt-outs, and 0 bounces for the original Email collector; 364 eligible invitations remain.</td>
+        <td>Restore SurveyOL sender-token verification, then rerun the Chrome send gate once and verify invitations increase to 100.</td>
+      </tr>
       <tr>
         <td><div class="recorded-status"><time datetime="2026-06-30T20:03:40-04:00"><span class="recorded-date">2026-06-30</span><span class="recorded-time">8:03:40 PM EDT</span></time>
 <span class="log-status">week-4-chrome-send-retry-blocked</span></div></td>
