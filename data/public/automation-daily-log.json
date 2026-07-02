@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-07-01T14:47:20-04:00",
-  "updated_time_et": "2:47:20 PM EDT",
+  "updated_at": "2026-07-02T11:36:12-04:00",
+  "updated_time_et": "11:36:12 AM EDT",
   "entries": [
+    {
+      "date": "2026-07-02",
+      "recorded_at": "2026-07-02T11:36:12-04:00",
+      "recorded_time_et": "11:36:12 AM EDT",
+      "status": "week-4-invitation-limit-blocked",
+      "summary": "Week 4 stayed blocked because SurveyOL now shows a live sending-limit banner before the next batch.",
+      "ran": [
+        "Read CTS_PROCESS_COORDINATION.md and WEEKLY_RUNBOOK.md before acting and regenerated the private Week 4 invitation-scope status board.",
+        "Verified the public Week 4 placeholder page exists, remains linked from the reports index, and still posts Tuesday, July 21, 2026 as the exact final close date from the Wednesday, July 1, 2026 first production invitation date under the active 20-day CTS rule.",
+        "Reopened the live authenticated SurveyOL Week 4 Send page and confirmed the original Email collector CD17D2E remains Open, Anonymous Responses Off, and Reminder Follow-up Off.",
+        "Extracted a fresh private live invitation table, reran the duplicate-row audit and exact next-batch-vs-live audit, and refreshed the private SurveyOL contacts duplicate audit."
+      ],
+      "result": "No Week 4 invitations were sent on Thursday, July 2, 2026. The live Email collector still shows 100 invitations, 38 opened, 10 clicked through, 5 complete responses, 14 opt-outs, 0 bounces, and 264 eligible participants remaining uninvited. The duplicate-safe live invitation extract still contains 100 unique rows and the next audited batch preview remains conflict-free, but SurveyOL now shows a visible sending-limit banner saying it has reached the account sending limit, so the next batch was not attempted.",
+      "next": "Wait for the SurveyOL sending-limit blocker to clear, then re-open the same Email collector, refresh the live invitation extract, and send the next audited 100-recipient batch only if the banner is gone."
+    },
     {
       "date": "2026-07-01",
       "recorded_at": "2026-07-01T14:47:20-04:00",
