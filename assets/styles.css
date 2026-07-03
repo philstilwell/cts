@@ -1199,6 +1199,48 @@ h3 {
   line-height: 1.2;
 }
 
+.shutdown-notice {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0 0 2rem;
+  padding: 1.6rem;
+  border: 1px solid #ddb9ad;
+  border-left: 6px solid var(--brick);
+  border-radius: 8px;
+  color: var(--ink);
+  background: linear-gradient(135deg, #fff7f4, #fffdf8 72%);
+  box-shadow: 0 16px 34px rgba(23, 40, 45, 0.1);
+}
+
+.shutdown-notice .section-label,
+.shutdown-notice h2,
+.shutdown-notice p {
+  margin: 0;
+}
+
+.shutdown-notice h2 {
+  color: var(--teal-dark);
+  font-size: clamp(1.45rem, 2vw, 2rem);
+}
+
+.shutdown-notice p {
+  max-width: 920px;
+}
+
+.shutdown-notice p:not(.section-label) {
+  color: #384b4f;
+}
+
+.closure-report-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.closure-report-grid a {
+  display: inline-block;
+  margin-top: 0.65rem;
+  font-weight: 750;
+}
+
 .callout,
 .report-kicker {
   padding: 1.25rem 1.35rem;
