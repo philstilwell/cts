@@ -183,7 +183,9 @@ def main() -> int:
             if args.dry_run:
                 print("Dry run complete; gh-pages worktree has changes but was not committed.")
                 return 0
-            print_output(run(["git", "add", *PUBLISH_PATHS], cwd=worktree))
+            print_output(run(["git", "add", "-A", *PUBLISH_PATHS], cwd=worktree))
+            for raw_path in REMOVED_PUBLISH_PATHS:
+                print_output(run(["git", "rm", "-r", "--ignore-unmatch", "--", raw_path], cwd=worktree))
             print_output(run(["git", "commit", "-m", args.message], cwd=worktree))
             print_output(run(["git", "push", args.remote, f"HEAD:{args.branch}"], cwd=worktree))
         finally:
