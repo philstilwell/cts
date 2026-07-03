@@ -12,14 +12,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_NAME = "Christian Thought Survey"
 SITE_DESCRIPTION = (
-    "Weekly Christian research reports for ministers, with credence-slider surveys, "
-    "participant-voted questions, and responsible data releases."
+    "Christian Thought Survey project closure notice, archived weekly reports, "
+    "legacy results, and privacy-safe data-release notes."
 )
 SITE_URL = "https://christianthoughtsurvey.com"
-CSS_VERSION = "20260627-callout-spacing"
+CSS_VERSION = "20260703-project-closure"
 WP_SITE = "https://christianthoughtsurvey.wordpress.com"
-UPDATED = "July 1, 2026"
-SITEMAP_LASTMOD = "2026-06-30"
+UPDATED = "July 3, 2026"
+SITEMAP_LASTMOD = "2026-07-03"
 SURVEYOL_FORM_URL = "https://www.surveyol.com/r/C33E5B3"
 SURVEYOL_EMBED_URL = "https://www.surveyol.com/s2/1BA7FF3"
 WEEK_1_REPORT_OUTPUT = "weekly-survey-reports/week-001-divorce-and-remarriage/index.html"
@@ -35,6 +35,13 @@ OG_IMAGE_ALT = "Christian Thought Survey research overview graphic"
 DEFAULT_ROBOTS = "index,follow,max-image-preview:large"
 THEME_COLOR = "#174d51"
 CLOUDFLARE_ANALYTICS = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"b86c3e7a273f47648ae70f08866f9ec5\"}'></script><!-- End Cloudflare Web Analytics -->"
+CLOSURE_NOTICE = """<section class="shutdown-notice" aria-labelledby="shutdown-notice-heading">
+  <p class="section-label">Project closure</p>
+  <h2 id="shutdown-notice-heading">Christian Thought Survey can no longer continue.</h2>
+  <p>We are deeply sorry to announce that the 2026 weekly project is ending. The email platform we used experienced a bug that caused some participants to receive multiple emails, effectively spamming them. That was never intended, and we deeply apologize for the inconvenience, frustration, and loss of trust this caused.</p>
+  <p>The response from participants made clear that continuing would not be responsible. We are disappointed that we cannot carry the project forward, and we are grateful to everyone who participated, suggested items, read the reports, or otherwise helped up to this point.</p>
+  <p>Existing public reports and archives will remain available, but no further weekly surveys, invitations, reminders, or participation/newsletter requests are planned.</p>
+</section>"""
 WEEKLY_STRUCTURE_LIST = """<ol class="process-list" type="A">
   <li><strong>Last week's results summary and link:</strong> a brief summary and a link to the primary CTS website page containing the previous week's results and reports.</li>
   <li><strong>One CTS-administered topic:</strong> the Featured Topic banner appears immediately before a <strong>◉ Main topic...</strong> introduction line, followed by 12 related survey items from the CTS topic bank.</li>
@@ -154,115 +161,66 @@ PAGES = [
         key="home",
         output="index.html",
         nav_label="Home",
-        title="Christian Thought Survey 2026",
-        eyebrow="Returning in 2026",
+        title="Christian Thought Survey Project Closure",
+        eyebrow="Project closure",
         description=(
-            "Weekly Christian Thought Survey reports for ministers, with "
-            "credence-slider research, participant-voted questions, and responsible "
-            "data releases."
+            "Christian Thought Survey can no longer continue after an email "
+            "platform bug sent participants multiple messages. Existing reports "
+            "and archives remain available."
         ),
         content="""
 <section class="content-band shade report-spotlight-band">
-  <div class="container latest-report">
-    <div class="latest-report-copy">
-      <p class="section-label">Latest weekly report</p>
-      <h2>Week 2: Pornography and the Church</h2>
-      <p class="section-copy">For most visitors, weekly results should be the fastest path through the site. The Week 2 report page now holds its first preliminary aggregate results, posted on June 23, 2026, and will be refreshed each Tuesday while the survey remains open.</p>
-      <div class="report-meta-grid" aria-label="Latest report status">
-        <div class="meta-chip">
-          <span>Status</span>
-          <strong>Preliminary results</strong>
-        </div>
-        <div class="meta-chip">
-          <span>Publication rhythm</span>
-          <strong>Tuesday reports</strong>
-        </div>
-        <div class="meta-chip">
-          <span>Current responses</span>
-          <strong>28 complete</strong>
-        </div>
-        <div class="meta-chip">
-          <span>Topic</span>
-          <strong>Pornography and the Church</strong>
-        </div>
-      </div>
-      <div class="button-row">
-            <a class="button" href="{week_2_report_url}">Open Latest Report</a>
-        <a class="button light" href="{weekly_url}">View All Weekly Reports</a>
-      </div>
-    </div>
-    <aside class="latest-report-aside" aria-label="What the latest report will include">
-      <span class="report-status preliminary">Preliminary</span>
-      <strong>Current snapshot posted</strong>
-      <p>The report includes a summary, key tensions, item-level aggregate distributions, ballot results, and data-release notes.</p>
-    </aside>
+  <div class="container">
+    {closure_notice}
   </div>
 </section>
 
 <section class="content-band">
   <div class="container two-column">
     <div>
-      <p class="section-label">What changes in 2026?</p>
-      <h2>Shorter surveys, faster reports, cleaner data.</h2>
-      <p class="section-copy">The revived project keeps the original CTS concern for precise wording and fine-grained measurement, but changes the rhythm to one focused topic, participant-vote-determined questions, and a continuing participant-generated item pipeline.</p>
+      <p class="section-label">What remains</p>
+      <h2>Reports and archive materials stay available.</h2>
+      <p class="section-copy">The weekly survey effort has ended, but the privacy-safe public materials already posted here remain available for readers who want to review what was completed before the shutdown.</p>
     </div>
     <div class="wp-content">
       <ul>
-        <li><strong>Focused weekly surveys:</strong> each survey begins with one CTS-administered topic and 12 related items.</li>
-        <li><strong>Participant-vote-determined questions:</strong> each survey adds 3 live survey items chosen based on the previous week's participant vote.</li>
-        <li><strong>Credence-based responses:</strong> all survey items use sliders so responses preserve more precision than ordinary agree/disagree choices.</li>
-        <li><strong>Minister-focused panel:</strong> the first invitations will go to prior CTS participants who were willing to be contacted by email.</li>
-        <li><strong>Open reporting:</strong> weekly summaries will be written for public reading, while data releases will be structured for responsible reanalysis.</li>
-        <li><strong>Ongoing item voting:</strong> every weekly survey includes a 7-item AI-polished participant-nominated item ballot and a text box for next-week suggestions.</li>
-        <li><strong>Looking ahead:</strong> every survey features the next three weeks' topics to allow for mental preparation.</li>
+        <li><strong>Existing weekly reports:</strong> the Week 1 final report and available Week 2/3 preliminary snapshots remain posted.</li>
+        <li><strong>Week 4 record:</strong> the placeholder now records that no further fielding or reporting is planned.</li>
+        <li><strong>Legacy archive:</strong> earlier CTS public results and overview links remain gathered in the archive.</li>
+        <li><strong>Privacy notes:</strong> data-release and participant-protection commitments remain available for reference.</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section class="content-band shade">
-  <div class="container two-column">
-    <div>
-      <p class="section-label">Weekly cycle</p>
-      <h2>How the weekly cycle works</h2>
-      <p class="section-copy">The CTS administration supplies the main topic, active participants help choose participant-generated questions, each survey collects suggestions for the next round, and every survey previews upcoming topics for mental preparation.</p>
-    </div>
-    <div class="wp-content">
-      {weekly_structure_list}
-      <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
-      <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
-    </div>
-  </div>
-</section>
-
-<section class="content-band">
   <div class="container">
     <p class="section-label">Site sections</p>
-    <h2>Follow the revived project.</h2>
+    <h2>Review the remaining materials.</h2>
     <div class="path-grid">
       <a class="path-card" href="{weekly_url}">
         <strong>Weekly Survey Reports</strong>
-        <span>Survey structure, publication plan, and the first report index.</span>
+        <span>Existing weekly reports and shutdown notes for the 2026 effort.</span>
       </a>
       <a class="path-card" href="{archive_url}">
         <strong>Previous Results Archive</strong>
         <span>Links to earlier full results, mini-surveys, items, and policy pages.</span>
       </a>
       <a class="path-card" href="{contact_url}">
-        <strong>Contact &amp; Participation</strong>
-        <span>Invitation notes for ministers, topic suggestions, and data questions.</span>
+        <strong>Closure &amp; Contact</strong>
+        <span>Participation requests and update signups are no longer being processed.</span>
       </a>
       <a class="path-card" href="{participant_pool_url}">
         <strong>Participant Pool</strong>
-        <span>How the ministry-focused panel was assembled, why it is useful, and where its limits remain.</span>
+        <span>How the ministry-focused panel was assembled and where its limits remain.</span>
       </a>
       <a class="path-card" href="{herding_cats_url}">
         <strong>Herding Cats</strong>
-        <span>A cheerful note on why theological survey wording makes everyone reach for a red pen.</span>
+        <span>A reflective note on survey wording and the difficulty of the project.</span>
       </a>
       <a class="path-card" href="{newsletter_url}">
-        <strong>Newsletter Signup</strong>
-        <span>Result notices, topic previews, and occasional CTS articles for non-participant readers.</span>
+        <strong>Newsletter Paused</strong>
+        <span>No new newsletter or update requests are planned.</span>
       </a>
       <a class="path-card" href="{privacy_url}">
         <strong>Privacy &amp; Data Release</strong>
@@ -277,39 +235,66 @@ PAGES = [
         key="weekly",
         output="weekly-survey-reports/index.html",
         nav_label="Reports",
-        title="Weekly Survey Reports",
-        eyebrow="Report index",
+        title="Weekly Survey Reports Archive",
+        eyebrow="Reports archive",
         description=(
-            "Browse weekly Christian Thought Survey reports, upcoming topics, "
-            "participant-generated questions, and public data-release notes."
+            "Archived weekly Christian Thought Survey reports and project closure "
+            "notes after the 2026 weekly effort ended."
         ),
         content="""
 <div class="wp-content results-hub">
-  <p>This page is the public hub for weekly Christian Thought Survey results. The newest survey page is featured first, followed by the current weekly survey status lanes and the participant-nominated item rotation.</p>
+  {closure_notice}
+
+  <p>This page now serves as the archive for the completed 2026 weekly survey effort. The posted reports remain available for reference, but no further fielding, invitations, reminders, refreshes, or final reports are planned.</p>
 
   <section class="latest-report-card" aria-labelledby="latest-report-heading">
     <div>
-      <p class="section-label">Newest survey page</p>
-      <h2 id="latest-report-heading">Week 4 Placeholder: Women in Church Leadership</h2>
-      <p>The Week 4 public placeholder remains the live report hub while fielding is underway. The first guarded SurveyOL Email invitations were queued on Wednesday, July 1, 2026, SurveyOL reached its daily limit after 100 invitations, and Week 4 is now planned to remain open through Tuesday, July 21, 2026, which is 20 days after the actual first production invitation date.</p>
+      <p class="section-label">Existing report pages</p>
+      <h2 id="latest-report-heading">Reports remain available as a record of the work completed.</h2>
+      <p>The Week 1 final report and available Week 2/3 preliminary snapshots remain posted. The Week 4 page records that the project closed before further fielding or reporting could continue.</p>
       <div class="button-row">
-        <a class="button" href="{week_4_report_url}">Open Week 4 Placeholder</a>
+        <a class="button" href="{week_2_report_url}">Open Week 2 Snapshot</a>
         <a class="button light" href="{week_1_report_url}">Open Week 1 Final Report</a>
+        <a class="button light" href="{week_3_report_url}">Open Week 3 Snapshot</a>
+        <a class="button light" href="{week_4_report_url}">Open Week 4 Closure Record</a>
       </div>
     </div>
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Week 4 fielding after first batch; Week 1 final posted; Week 2 and Week 3 preliminary</dd>
+        <dd>Project closed; no further survey activity planned</dd>
       </div>
       <div>
-        <dt>Survey topic</dt>
-        <dd>Women in Church Leadership</dd>
+        <dt>Available pages</dt>
+        <dd>Week 1 final; Week 2 and Week 3 preliminary; Week 4 closure record</dd>
       </div>
     </dl>
   </section>
 
-  <section class="survey-control-board" aria-labelledby="survey-control-heading">
+  <section class="report-grid closure-report-grid" aria-label="Archived weekly reports">
+    <section class="report-card">
+      <h3>Week 1 Final Report</h3>
+      <p>Divorce and Remarriage. Final privacy-safe report from 58 complete responses.</p>
+      <a href="{week_1_report_url}">Open Week 1 final report</a>
+    </section>
+    <section class="report-card">
+      <h3>Week 2 Preliminary Snapshot</h3>
+      <p>Pornography and the Church. Preliminary item-level snapshot from the June 30 refresh.</p>
+      <a href="{week_2_report_url}">Open Week 2 snapshot</a>
+    </section>
+    <section class="report-card">
+      <h3>Week 3 Preliminary Snapshot</h3>
+      <p>Pastoral Authority and Accountability. Preliminary item-level snapshot from June 30.</p>
+      <a href="{week_3_report_url}">Open Week 3 snapshot</a>
+    </section>
+    <section class="report-card">
+      <h3>Week 4 Closure Record</h3>
+      <p>Women in Church Leadership. The project closed before further fielding and reporting could continue.</p>
+      <a href="{week_4_report_url}">Open Week 4 closure record</a>
+    </section>
+  </section>
+
+  <section class="survey-control-board" aria-labelledby="survey-control-heading" hidden>
     <div class="section-heading-row">
       <div>
         <p class="section-label">Survey status</p>
@@ -469,7 +454,7 @@ PAGES = [
     </div>
   </section>
 
-  <section class="item-rotation-feature" aria-labelledby="item-rotation-heading">
+  <section class="item-rotation-feature" aria-labelledby="item-rotation-heading" hidden>
     <p class="section-label">Participant-generated questions</p>
     <h2 id="item-rotation-heading">How nominated items rotate into the survey</h2>
     <p>Participant-nominated items move through a rolling three-week pipeline. Participants first submit suggested survey items, eligible nominations are then polished into a ballot for participant voting, and the top 3 voted items become live 0-100 credence-slider survey items in a later weekly survey.</p>
@@ -479,7 +464,7 @@ PAGES = [
     </figure>
   </section>
 
-  <details class="accordion-block">
+  <details class="accordion-block" hidden>
     <summary>
       <span class="accordion-label">Survey structure</span>
       <span class="accordion-title" role="heading" aria-level="2">How the weekly cycle works</span>
@@ -496,6 +481,7 @@ PAGES = [
     </div>
   </details>
 
+  <div hidden>
   <h2>What each report will include</h2>
   <ul>
     <li><strong>Issue:</strong> the weekly CTS-administered topic and the reason it was selected.</li>
@@ -511,6 +497,7 @@ PAGES = [
   </ul>
 
   <p class="callout">Raw data will not include direct email identifiers in public files. Participant attributes may be grouped or suppressed when needed to avoid accidental identification. Free-text suggestions may be edited, grouped, or withheld before publication to protect privacy and keep item wording usable. See the <a href="{privacy_url}">Privacy &amp; Data Release</a> page for the current policy.</p>
+  </div>
 </div>
 """,
     ),
@@ -641,8 +628,8 @@ PAGES = [
         key="week-002-report",
         output=WEEK_2_REPORT_OUTPUT,
         nav_label="Week 2",
-        title="Week 2 Preliminary Results: Pornography and the Church",
-        eyebrow="Preliminary results",
+        title="Week 2 Preliminary Snapshot: Pornography and the Church",
+        eyebrow="Preliminary snapshot",
         description=(
             "Preliminary Week 2 Christian Thought Survey results on Pornography "
             "and the Church, including response count, item-level aggregate "
@@ -650,13 +637,15 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
+  {closure_notice}
+
   <p>This is the stable public page for the second revived weekly Christian Thought Survey report. The current page is managed as a weekly report artifact and should not be overwritten by the generic site builder.</p>
 
   <div class="status-grid">
     <div class="status-card">
       <span>Status</span>
-      <strong>Survey open</strong>
-      <p>Participant invitations are sent through the CTS email invitation system.</p>
+      <strong>Archived preliminary snapshot</strong>
+      <p>No further refreshes, reminders, invitations, or final report are planned.</p>
     </div>
     <div class="status-card">
       <span>Topic</span>
@@ -664,9 +653,9 @@ PAGES = [
       <p>12 CTS-administered credence-slider items focus on this topic.</p>
     </div>
     <div class="status-card">
-      <span>First report</span>
+      <span>Posted snapshot</span>
       <strong>June 23, 2026</strong>
-      <p>The first preliminary report is planned for one week after launch.</p>
+      <p>The preliminary snapshot remains available, but no later refresh is planned.</p>
     </div>
   </div>
 
@@ -685,22 +674,23 @@ PAGES = [
         key="week-003-report",
         output=WEEK_3_REPORT_OUTPUT,
         nav_label="Week 3",
-        title="Week 3 Report Placeholder: Pastoral Authority and Accountability",
-        eyebrow="Survey fielding",
+        title="Week 3 Preliminary Snapshot: Pastoral Authority and Accountability",
+        eyebrow="Preliminary snapshot",
         description=(
-            "Stable Week 3 Christian Thought Survey report URL for Pastoral "
-            "Authority and Accountability, including the first invitation batch "
-            "and exact final close date."
+            "Archived Week 3 Christian Thought Survey preliminary snapshot for "
+            "Pastoral Authority and Accountability."
         ),
         content="""
 <div class="wp-content">
-  <p>This is the stable public page for the third revived weekly Christian Thought Survey report. The survey is now fielding through the CTS email invitation system, and this page gives readers the topic, reporting plan, and exact close-date rule without exposing SurveyOL respondent links.</p>
+  {closure_notice}
+
+  <p>This is the stable public page for the third revived weekly Christian Thought Survey report. The project closed before further refreshes or final reporting could continue.</p>
 
   <div class="status-grid">
     <div class="status-card">
       <span>Status</span>
-      <strong>Fielding</strong>
-      <p>The Week 1 SurveyOL Email collector was closed on Tuesday, June 30, 2026 under the 20-day close rule.</p>
+      <strong>Archived preliminary snapshot</strong>
+      <p>No further refreshes, reminders, invitations, or final report are planned.</p>
     </div>
     <div class="status-card">
       <span>Topic</span>
@@ -708,22 +698,22 @@ PAGES = [
       <p>12 CTS-administered credence-slider items focus on this topic.</p>
     </div>
     <div class="status-card">
-      <span>Final close</span>
-      <strong>Monday, July 13, 2026</strong>
-      <p>This is 20 days after the planned first production invitation date, Tuesday, June 23, 2026.</p>
+      <span>Former schedule</span>
+      <strong>July 13 close target</strong>
+      <p>The original close target is no longer an active reporting deadline.</p>
     </div>
   </div>
 
-  <h2>Report plan</h2>
-  <p>The first preliminary report is planned for Tuesday, June 30, 2026, after the first week of response data is exported and reviewed. Preliminary refreshes are planned each Tuesday morning while the survey remains open, and the report will be marked final after the July 13 close and final export review.</p>
+  <h2>Report status</h2>
+  <p>The available preliminary report remains posted as a privacy-safe snapshot. It should not be read as a final population estimate.</p>
 
   <h2>Survey structure</h2>
   <ul>
     <li><strong>12 CTS-administered topic items:</strong> Pastoral Authority and Accountability.</li>
     <li><strong>3 participant-vote-determined items:</strong> independent items selected from the previous participant vote.</li>
     <li><strong>7-item participant-nominated ballot:</strong> polished ballot items for ranking by active participants.</li>
-    <li><strong>Suggestion box:</strong> future survey-item suggestions, reviewed before any public summary.</li>
-    <li><strong>Upcoming-topic preview:</strong> future topics shown inside the survey for participant context.</li>
+    <li><strong>Suggestion box:</strong> planned future survey-item suggestions, reviewed before any public summary.</li>
+    <li><strong>Upcoming-topic preview:</strong> planned future topics shown inside the survey for participant context.</li>
   </ul>
 
   <p class="callout"><strong>Data note:</strong> Public files will not include email addresses, direct identifiers, respondent-level rows, SurveyOL respondent links, or raw free-text suggestions. Participant attributes may be grouped or suppressed when needed to avoid accidental identification.</p>
@@ -741,22 +731,23 @@ PAGES = [
         key="week-004-report",
         output=WEEK_4_REPORT_OUTPUT,
         nav_label="Week 4",
-        title="Week 4 Report Placeholder: Women in Church Leadership",
-        eyebrow="Survey launch",
+        title="Week 4 Closure Record: Women in Church Leadership",
+        eyebrow="Closure record",
         description=(
-            "Stable Week 4 Christian Thought Survey report URL for Women in "
-            "Church Leadership, including the first invitation plan and exact "
-            "final close date."
+            "Week 4 Christian Thought Survey closure record for Women in Church "
+            "Leadership after the 2026 weekly project ended."
         ),
         content="""
 <div class="wp-content">
-  <p>This is the stable public page for the fourth revived weekly Christian Thought Survey report. The survey is open through the CTS email invitation system, and this page gives readers the topic, reporting plan, and exact close-date rule without exposing SurveyOL respondent links. Results will be recalculated as responses arrive.</p>
+  {closure_notice}
+
+  <p>This is the stable public page for the fourth revived weekly Christian Thought Survey report. The project closed before further fielding or reporting could continue.</p>
 
   <div class="status-grid">
     <div class="status-card">
       <span>Status</span>
-      <strong>Open; first invitations queued</strong>
-      <p>The first guarded SurveyOL Email invitation batches were queued on Wednesday, July 1, 2026. SurveyOL reached its daily sending limit after 100 invitations, and additional audited batches will resume on the next allowed send day.</p>
+      <strong>Closed</strong>
+      <p>No additional SurveyOL email batches, reminders, exports, refreshes, or final report are planned.</p>
     </div>
     <div class="status-card">
       <span>Topic</span>
@@ -764,21 +755,21 @@ PAGES = [
       <p>12 CTS-administered credence-slider items focus on this topic.</p>
     </div>
     <div class="status-card">
-      <span>Final close</span>
-      <strong>Tuesday, July 21, 2026</strong>
-      <p>This is 20 days after the actual first production invitation date, Wednesday, July 1, 2026.</p>
+      <span>Last public status</span>
+      <strong>Closure notice posted</strong>
+      <p>The page now records the shutdown rather than an active fielding plan.</p>
     </div>
   </div>
 
-  <h2>Report plan</h2>
-  <p>The first preliminary report is planned for Tuesday, July 7, 2026, after the first week of response data is exported and reviewed. Preliminary results will be recalculated as responses arrive, refreshes are planned each Tuesday morning while the survey remains open, and the report will be marked final after the July 21 close and final export review.</p>
+  <h2>Report status</h2>
+  <p>No preliminary or final Week 4 report is planned. Existing public pages remain available to document the shutdown and preserve the archive.</p>
 
   <h2>Survey structure</h2>
   <ul>
     <li><strong>12 CTS-administered topic items:</strong> Women in Church Leadership.</li>
     <li><strong>3 participant-vote-determined items:</strong> independent items selected from the Week 3 participant vote.</li>
     <li><strong>7-item participant-nominated ballot:</strong> polished ballot items for ranking by active participants.</li>
-    <li><strong>Suggestion box:</strong> future survey-item suggestions, reviewed before any public summary.</li>
+    <li><strong>Suggestion box:</strong> planned future survey-item suggestions, reviewed before any public summary.</li>
     <li><strong>Upcoming-topic preview:</strong> Doubt, Deconstruction, and Faith Loss; Assurance of Salvation; and Hell, Judgment, and Final Punishment.</li>
   </ul>
 
@@ -807,11 +798,13 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
+  {closure_notice}
+
   <p>The original CTS participant pool was assembled roughly three years before the 2026 weekly project. Participants were selected because they appeared to have meaningful involvement in Christian ministry, and because the project aimed to hear from a range of denominational and regional contexts rather than from one narrow church network.</p>
 
   <p>The pool is also valuable because these participants did more than provide an email address. In the original project, they supplied background information such as ministry role, years in ministry, denominational setting, region, and other profile details, and they participated in an extensive survey of roughly 200 items across a large swath of doctrinal, practical, and sociological issues facing the church today.</p>
 
-  <p>The revived weekly project begins by reaching out first to those earlier participants who were willing to be contacted by email. The participant-quality claims on this page apply most directly to the initial 406 invited participants from that earlier pool. As the panel grows, CTS will do its utmost to invite subsequent participants who meet the same general standard of ministry involvement, seriousness, and breadth.</p>
+  <p>The revived weekly project began by reaching out first to those earlier participants who were willing to be contacted by email. The participant-quality claims on this page apply most directly to the initial invited participants from that earlier pool. The project is now closed, so no further panel growth or participant recruitment is planned.</p>
 
   <p>That means the early weekly results should be read as the views of an intentionally ministry-focused panel, not as an official denominational poll or a statistically random survey of American ministers.</p>
 
@@ -840,12 +833,10 @@ PAGES = [
 
   <p>The earlier profile data also makes future analysis more useful. When privacy thresholds allow, weekly responses can be compared with prior information such as years in ministry, denominational family, region, and earlier patterns of belief across the original 200-item survey.</p>
 
-  <p class="callout"><strong>Important limitation:</strong> Participant quality does not remove sampling limits. Every weekly report should still state the current response count, distinguish preliminary from final results, and avoid subgroup claims unless the number of respondents is large enough to protect privacy and support a responsible comparison.</p>
+  <p class="callout"><strong>Important limitation:</strong> Participant quality does not remove sampling limits. Existing weekly reports should still be read with their posted response counts, preliminary/final status, and privacy thresholds in view.</p>
 
-  <h2>Why the panel can become more valuable</h2>
-  <p>The weekly format gives CTS a chance to strengthen the panel over time. Existing participants can suggest clearer survey items, invite attention to issues the administrator may have missed, and help identify questions that matter to active ministry. Additional ministers can also be invited as the project matures, especially where a tradition, region, or ministry context is underrepresented, while preserving the same basic expectations for ministry participation and thoughtful engagement.</p>
-
-  <p class="callout"><strong>Current ministers are welcome to request consideration.</strong> If you are currently serving in ministry and would like to participate in future CTS weekly surveys, please use the <a href="{contact_url}">Contact &amp; Weekly Survey Participation</a> page to introduce yourself. CTS is especially interested in thoughtful ministers who can help broaden the panel across traditions, regions, and ministry contexts.</p>
+  <h2>What the panel showed</h2>
+  <p>The weekly format was intended to let participants suggest clearer survey items, flag issues the administrator may have missed, and identify questions that matter to active ministry. We are grateful for the participants who helped test that possibility before the project had to close.</p>
 
   <p>The goal is not to claim that CTS participants speak for the whole church. The goal is more modest and, hopefully, more useful: to provide a disciplined window into how a diverse set of ministry-involved Christians think through doctrine, practice, and contemporary church life.</p>
 
@@ -853,7 +844,6 @@ PAGES = [
     <a class="button light" href="{weekly_url}">Current weekly reports</a>
     <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
     <a class="button light" href="{overview_url}">Legacy overview</a>
-    <a class="button light" href="{contact_url}">Request participation</a>
   </div>
 </div>
 """,
@@ -871,6 +861,8 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
+  {closure_notice}
+
   <section class="herding-note" aria-labelledby="herding-note-heading">
     <div>
       <h2 id="herding-note-heading">Survey wording is where the trouble starts.</h2>
@@ -910,7 +902,7 @@ PAGES = [
 
   <section class="herding-tradeoffs" aria-labelledby="herding-tradeoffs-heading">
     <div>
-      <h2 id="herding-tradeoffs-heading">Why the project keeps going anyway</h2>
+      <h2 id="herding-tradeoffs-heading">Why the work was worth trying</h2>
       <p>The goal is not to produce perfect sentences that float above every tradition untouched. Those sentences do not appear to exist, and if they do, they are probably too long for a 0-100 slider.</p>
       <p>The more modest goal is to ask disciplined, transparent, revisable questions that help reveal where thoughtful Christian leaders agree, where they differ, and where the wording itself needs another pass.</p>
     </div>
@@ -922,13 +914,12 @@ PAGES = [
     </ul>
   </section>
 
-  <p class="callout herding-thanks"><strong>Thank you to CTS participants.</strong> Your patience makes the project possible. Thank you for answering imperfect questions carefully, suggesting better wording when something feels off, and accepting that some limitations are built into this kind of work. The survey will never keep everyone perfectly happy, but your understanding helps it become more honest, more useful, and less silly than it otherwise would be.</p>
+  <p class="callout herding-thanks"><strong>Thank you to CTS participants.</strong> Your patience made the project possible. Thank you for answering imperfect questions carefully, suggesting better wording when something felt off, and accepting that some limitations are built into this kind of work.</p>
 
-  <p class="herding-close">CTS welcomes thoughtful correction, better phrasing, and participant-nominated survey items. The aim is not to make every question immune to complaint. The aim is to keep improving the questions while learning something worthwhile together.</p>
+  <p class="herding-close">CTS can no longer collect corrections, better phrasing, or participant-nominated survey items for future weeks, but we remain grateful for the thoughtful help participants offered while the project was active.</p>
 
   <div class="button-row">
-    <a class="button light" href="{weekly_url}">Current weekly reports</a>
-    <a class="button light" href="{contact_url}">Suggest an item</a>
+    <a class="button light" href="{weekly_url}">Existing weekly reports</a>
     <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
   </div>
 </div>
@@ -945,7 +936,7 @@ PAGES = [
 <div class="wp-content">
   <p>The original Christian Thought Survey project produced extensive result reports. Those materials are gathered here as a reference archive for readers who want to revisit the earlier CTS work.</p>
 
-  <p>The current 2026 weekly survey materials now live on the <a href="{weekly_url}">Weekly Survey Reports</a> page so the legacy archive can remain focused on the earlier project.</p>
+  <p>The now-closed 2026 weekly survey materials live on the <a href="{weekly_url}">Weekly Survey Reports</a> page so the legacy archive can remain focused on the earlier project.</p>
 
   <h2>Major results pages</h2>
   <ul>
@@ -973,30 +964,30 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>Christian Thought Survey collects responses from people who are currently or previously engaged in full-time ministry. The project is designed for public reporting, but participant contact information and identifying details should not be exposed in public files.</p>
+  {closure_notice}
+
+  <p>Christian Thought Survey collected responses from people who are currently or previously engaged in full-time ministry. The project was designed for public reporting, but participant contact information and identifying details should not be exposed in public files.</p>
 
   <h2>Contact information</h2>
   <ul>
-    <li>Email addresses are used for survey invitations, reminders, follow-up questions, and opt-out handling.</li>
+    <li>Email addresses were used for survey invitations, reminders, follow-up questions, and opt-out handling while the project was active.</li>
     <li>Email addresses, names, and direct contact details are not included in public results files.</li>
-    <li>Survey participant invitations are managed through the current CTS invitation workflow, and general update requests are kept separate from the weekly survey participant panel.</li>
-    <li>The public contact form may be used to ask for report notices, topic previews, or occasional CTS updates without joining the weekly survey participant panel.</li>
-    <li>Participants may ask CTS to remove them from future invitations or updates.</li>
+    <li>No further survey invitations, reminders, newsletter requests, or participant-update messages are planned.</li>
+    <li>Existing opt-outs and suppression records remain relevant for any cleanup or archival handling.</li>
   </ul>
 
   <h2>Survey responses</h2>
   <ul>
-    <li>Live survey items use 0-100 credence sliders unless a future survey clearly says otherwise.</li>
-    <li>Weekly reports may summarize aggregate results, distribution shapes, and subgroup comparisons when sample size permits.</li>
+    <li>Posted survey items used 0-100 credence sliders.</li>
+    <li>Existing weekly reports may summarize aggregate results, distribution shapes, and subgroup comparisons when sample size permits.</li>
     <li>Subgroups may be combined, suppressed, or withheld when reporting them could make participants identifiable.</li>
   </ul>
 
   <h2>Participant-nominated items</h2>
   <ul>
     <li>Free-text suggestions are treated as administrative inputs, not as public survey responses.</li>
-    <li>Suggestions may be corrected, combined, clarified, shortened, or withheld before appearing on a participant-nominated item ballot.</li>
-    <li>CTS uses AI assistance to polish nominations for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, likely participant tension, and pastoral or theological relevance.</li>
-    <li>Each weekly ballot should contain 7 items. If fewer than 7 suitable participant nominations are available, CTS may add AI-created seed items to complete the ballot.</li>
+    <li>Suggestions may have been corrected, combined, clarified, shortened, or withheld before appearing on a participant-nominated item ballot.</li>
+    <li>CTS used AI assistance to polish nominations for clarity, neutrality, credence-slider suitability, breadth, orthogonality to the weekly topic, novelty, likely participant tension, and pastoral or theological relevance.</li>
     <li>CTS will not intentionally publish a suggestion in a way that identifies the participant who submitted it.</li>
   </ul>
 
@@ -1007,7 +998,7 @@ PAGES = [
     <li>Raw exports should be reviewed before release for accidental identifiers in free-text fields or small subgroups.</li>
   </ul>
 
-  <p class="callout">The practical rule is simple: report results openly, protect participants carefully, and do not publish raw contact information.</p>
+  <p class="callout">The practical rule remains simple: preserve useful public reporting where it already exists, protect participants carefully, and do not publish raw contact information.</p>
 </div>
 """,
     ),
@@ -1023,7 +1014,7 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>This page describes the original long-form Christian Thought Survey project. The current front page now focuses on the 2026 weekly survey format, but the earlier project remains important background for interpreting the archive.</p>
+  <p>This page describes the original long-form Christian Thought Survey project. The front page now carries the 2026 project closure notice, but the earlier project remains important background for interpreting the archive.</p>
 
   <p>The 2022-2024 CTS surveys asked Christian leaders and committed believers to respond to large sets of doctrinal, practical, and sociological items. The project emphasized 0-100 credence responses so participants could register fine-grained levels of agreement rather than choose only from coarse multiple-choice categories.</p>
 
@@ -1035,11 +1026,11 @@ PAGES = [
     <li>Participant reports and public-facing summaries.</li>
   </ul>
 
-  <p>The 2026 project keeps the same concern for precise wording and credence measurement, but the current weekly survey process is documented separately on the <a href="{weekly_url}">Weekly Survey Reports</a> page.</p>
+  <p>The now-closed 2026 weekly project kept the same concern for precise wording and credence measurement. Its remaining materials are documented separately on the <a href="{weekly_url}">Weekly Survey Reports</a> page.</p>
 
   <div class="button-row">
     <a class="button light" href="{archive_url}">Browse the archive</a>
-    <a class="button light" href="{weekly_url}">Current weekly reports</a>
+    <a class="button light" href="{weekly_url}">Existing weekly reports</a>
   </div>
 </div>
 """,
@@ -1048,24 +1039,23 @@ PAGES = [
         key="newsletter",
         output="newsletter/index.html",
         nav_label="Newsletter",
-        title="Newsletter Signup",
-        eyebrow="Updates",
+        title="Newsletter Paused",
+        eyebrow="Updates paused",
         description=(
-            "Sign up for Christian Thought Survey report notices, topic previews, "
-            "and occasional articles without joining the weekly survey participant panel."
+            "Christian Thought Survey newsletter and update requests are paused "
+            "because the 2026 weekly project has closed."
         ),
         content="""
 <div class="wp-content">
-  <p>This signup is for readers who would like Christian Thought Survey result notices, topic previews, and occasional articles, but who are not asking to join the weekly survey participant panel.</p>
+  {closure_notice}
 
-  <p>The weekly survey participant panel is kept separately and is intended for people who are currently or previously engaged in full-time ministry. If that describes you and you want to be considered for survey participation, use the <a href="{contact_url}">Contact &amp; Weekly Survey Participation</a> page instead.</p>
-
-  <p>Use the contact form to ask for report notices, topic previews, or occasional CTS updates. Please include your email address, name, ministry status, and a brief note about why you are interested. For ministry status, a short note such as current full-time ministry, previous full-time ministry, volunteer or lay ministry, or not in ministry is enough. Those details help CTS understand who is following the project without moving update-only readers into the survey participant group.</p>
+  <p>Newsletter and general update requests are no longer being collected. Existing public reports and archive pages remain available from the links below.</p>
 
   <div class="newsletter-signup-panel">
-    <p>Update requests are currently handled through the CTS contact form.</p>
+    <p>No new newsletter, topic-preview, or participation-update requests are planned.</p>
     <div class="button-row">
-      <a class="button" href="{contact_url}">Open Contact Form</a>
+      <a class="button" href="{weekly_url}">View Existing Reports</a>
+      <a class="button light" href="{archive_url}">Browse Archive</a>
     </div>
   </div>
 
@@ -1077,14 +1067,13 @@ PAGES = [
         key="email-confirmation",
         output=NEWSLETTER_CONFIRMATION_OUTPUT,
         nav_label="Confirmation",
-        title="Email Subscription Confirmed",
-        eyebrow="Email subscription",
-        description="Confirmation page for Christian Thought Survey email subscribers.",
+        title="Email Updates Paused",
+        eyebrow="Email updates",
+        description="Christian Thought Survey email updates are paused because the 2026 weekly project has closed.",
         content="""
 <div class="wp-content">
-  <p>Thank you for confirming your subscription to Christian Thought Survey updates.</p>
-  <p>CTS keeps general updates separate from weekly survey participation. Newsletter/update subscribers receive report notices, topic previews, and general CTS announcements. Weekly survey links are sent through the separate CTS Participants audience.</p>
-  <p>CTS weekly surveys are intended for people who are currently or previously engaged in full-time ministry. Participation is optional, and every email should include an unsubscribe option.</p>
+  {closure_notice}
+  <p>Email updates and weekly survey participation are no longer active. Thank you for your interest in the project and for the time readers and participants have already given.</p>
   <div class="button-row">
     <a class="button light" href="{home_url}">Return to the CTS home page</a>
     <a class="button light" href="{weekly_url}">View report index</a>
@@ -1114,38 +1103,118 @@ PAGES = [
         key="contact",
         output="contact/index.html",
         nav_label="Contact",
-        title="Contact &amp; Weekly Survey Participation",
-        eyebrow="Participation",
+        title="Project Closure &amp; Contact",
+        eyebrow="Project closure",
         description=(
-            "Participation details for Christian ministers who want CTS weekly survey "
-            "invitations, future item suggestions, or data and citation follow-up."
+            "Christian Thought Survey participation requests are closed after the "
+            "2026 weekly project ended."
         ),
         content="""
 <div class="wp-content">
-  <p>The 2026 project will begin with prior CTS participants who indicated that email follow-up is welcome. If you are currently or previously engaged in full-time ministry and would like to be considered for later invitations, participant voting, future survey-item suggestions, or data/citation questions, use the form below.</p>
+  {closure_notice}
 
-  <p>This form is the first eligibility and interest request. Potential participants who appear to fit the ministry-participant focus may later receive a separate private profile survey so CTS can collect the same broad participant-background fields used for the 2023 survey pool.</p>
+  <p>The participation request form has been removed from this page because no further weekly survey invitations, participant ballots, topic suggestions, or newsletter/update requests are planned.</p>
 
-  <p>If you are not asking to join the weekly survey participant panel but would like result notices, topic previews, and occasional CTS articles, use the <a href="{newsletter_url}">Newsletter Signup</a> instead.</p>
-
-  <h2>How the weekly cycle works</h2>
-  <p>Each Weekly Survey will include six parts:</p>
-  {weekly_structure_list}
-  <p class="callout"><strong>Participant-nominated ballot rule:</strong> {participant_ballot_note}</p>
-  <p>The regular rhythm is Tuesday-centered: first preliminary reports and refreshes to still-open preliminary reports are prepared Tuesday morning, and the next survey's placeholder report page is published before the next CTS survey launches Tuesday evening. Invitations are sent in daily batches of up to 100 until all eligible participants have been invited.</p>
-  <p class="callout"><strong>Response rule:</strong> {response_rule_note}</p>
-
-  <p class="callout"><strong>Participation note:</strong> CTS weekly survey participation is intended for people who are currently or previously engaged in full-time ministry.</p>
-
-  <div class="surveyol-embed">
-    <iframe title="CTS 2026 Participation Request" src="{surveyol_embed_url}" loading="lazy"></iframe>
+  <div class="status-grid">
+    <div class="status-card">
+      <span>Participation</span>
+      <strong>Closed</strong>
+      <p>No new participant requests or survey-item suggestions are being accepted.</p>
+    </div>
+    <div class="status-card">
+      <span>Invitations</span>
+      <strong>Stopped</strong>
+      <p>No further invitations, reminders, or SurveyOL email batches are planned.</p>
+    </div>
+    <div class="status-card">
+      <span>Reports</span>
+      <strong>Archived</strong>
+      <p>Existing public reports remain available for reference.</p>
+    </div>
   </div>
 
-  <p class="form-note">If the embedded form does not load, <a href="{surveyol_form_url}">open the CTS participation form in a new tab</a>. The same full-time ministry participation note applies.</p>
-  <p class="form-note">Contact information is used for CTS participation and follow-up only. See <a href="{privacy_url}">Privacy &amp; Data Release</a> for the current data handling policy.</p>
+  <div class="button-row">
+    <a class="button light" href="{weekly_url}">View Existing Reports</a>
+    <a class="button light" href="{privacy_url}">Privacy &amp; Data Release</a>
+  </div>
 </div>
 """,
     ),
+]
+
+WEEKLY_ARCHIVE_CONTENT = """
+<div class="wp-content results-hub">
+  {closure_notice}
+
+  <p>This page now serves as the archive for the completed 2026 weekly survey effort. The posted reports remain available for reference, but no further fielding, invitations, reminders, refreshes, or final reports are planned.</p>
+
+  <section class="latest-report-card" aria-labelledby="latest-report-heading">
+    <div>
+      <p class="section-label">Existing report pages</p>
+      <h2 id="latest-report-heading">Reports remain available as a record of the work completed.</h2>
+      <p>The Week 1 final report and available Week 2/3 preliminary snapshots remain posted. The Week 4 page records that the project closed before further fielding or reporting could continue.</p>
+      <div class="button-row">
+        <a class="button" href="{week_2_report_url}">Open Week 2 Snapshot</a>
+        <a class="button light" href="{week_1_report_url}">Open Week 1 Final Report</a>
+        <a class="button light" href="{week_3_report_url}">Open Week 3 Snapshot</a>
+        <a class="button light" href="{week_4_report_url}">Open Week 4 Closure Record</a>
+      </div>
+    </div>
+    <dl class="report-meta-list">
+      <div>
+        <dt>Status</dt>
+        <dd>Project closed; no further survey activity planned</dd>
+      </div>
+      <div>
+        <dt>Available pages</dt>
+        <dd>Week 1 final; Week 2 and Week 3 preliminary; Week 4 closure record</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="report-grid closure-report-grid" aria-label="Archived weekly reports">
+    <section class="report-card">
+      <h3>Week 1 Final Report</h3>
+      <p>Divorce and Remarriage. Final privacy-safe report from 58 complete responses.</p>
+      <a href="{week_1_report_url}">Open Week 1 final report</a>
+    </section>
+    <section class="report-card">
+      <h3>Week 2 Preliminary Snapshot</h3>
+      <p>Pornography and the Church. Preliminary item-level snapshot from the June 30 refresh.</p>
+      <a href="{week_2_report_url}">Open Week 2 snapshot</a>
+    </section>
+    <section class="report-card">
+      <h3>Week 3 Preliminary Snapshot</h3>
+      <p>Pastoral Authority and Accountability. Preliminary item-level snapshot from June 30.</p>
+      <a href="{week_3_report_url}">Open Week 3 snapshot</a>
+    </section>
+    <section class="report-card">
+      <h3>Week 4 Closure Record</h3>
+      <p>Women in Church Leadership. The project closed before further fielding and reporting could continue.</p>
+      <a href="{week_4_report_url}">Open Week 4 closure record</a>
+    </section>
+  </section>
+
+  <p class="callout">Raw data will not include direct email identifiers in public files. Participant attributes may be grouped or suppressed when needed to avoid accidental identification. Free-text suggestions may be edited, grouped, or withheld before publication to protect privacy and keep item wording usable. See the <a href="{privacy_url}">Privacy &amp; Data Release</a> page for the current policy.</p>
+</div>
+"""
+
+PAGES = [
+    Page(
+        key="weekly",
+        output="weekly-survey-reports/index.html",
+        nav_label="Reports",
+        title="Weekly Survey Reports Archive",
+        eyebrow="Reports archive",
+        description=(
+            "Archived weekly Christian Thought Survey reports and project closure "
+            "notes after the 2026 weekly effort ended."
+        ),
+        content=WEEKLY_ARCHIVE_CONTENT,
+    )
+    if page.key == "weekly"
+    else page
+    for page in PAGES
 ]
 
 
@@ -1351,6 +1420,7 @@ def fill_links(html: str, prefix: str) -> str:
         "contact_url": page_url(prefix, "contact/index.html"),
         "surveyol_form_url": SURVEYOL_FORM_URL,
         "surveyol_embed_url": SURVEYOL_EMBED_URL,
+        "closure_notice": CLOSURE_NOTICE,
         "weekly_structure_list": WEEKLY_STRUCTURE_LIST,
         "response_rule_note": RESPONSE_RULE_NOTE,
         "participant_ballot_note": PARTICIPANT_BALLOT_NOTE,
@@ -1434,10 +1504,10 @@ def render_home(page: Page, prefix: str) -> str:
         <div class="hero-copy">
           <p class="eyebrow">{escape(page.eyebrow)}</p>
           <h1 id="page-title">{page.title}</h1>
-          <p class="lede"><strong>Christian Thought Survey is being revived as a weekly research project for Christian ministers.</strong> Each Weekly Survey will begin with last week's results summary and link, then a Featured Topic banner and <strong>◉ Main topic...</strong> introduction before 12 CTS-administered items, 3 participant-vote-determined questions, a 7-item AI-polished participant-nominated item ballot, a suggestion text box, and a preview of upcoming topics.</p>
+          <p class="lede"><strong>Christian Thought Survey can no longer continue in its 2026 weekly form.</strong> A bug in the email platform caused some participants to receive multiple emails. We apologize deeply for the inconvenience and frustration, and we thank everyone who participated up to this point.</p>
           <div class="button-row">
-            <a class="button" href="{page_url(prefix, WEEK_1_REPORT_OUTPUT)}">Latest Weekly Report</a>
-            <a class="button secondary" href="{page_url(prefix, "weekly-survey-reports/index.html")}">All Weekly Reports</a>
+            <a class="button" href="{page_url(prefix, "weekly-survey-reports/index.html")}">View Existing Reports</a>
+            <a class="button secondary" href="{page_url(prefix, "previous-results-archive/index.html")}">Browse Archive</a>
           </div>
         </div>
       </div>
