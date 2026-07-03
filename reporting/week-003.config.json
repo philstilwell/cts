@@ -46,9 +46,9 @@
     ]
   },
   "report_encapsulation": {
-    "title": "Week 3 preliminary report: Pastoral Authority and Accountability",
+    "title": "Week 3 complete available-data report: Pastoral Authority and Accountability",
     "url": "https://christianthoughtsurvey.com/weekly-survey-reports/week-003-pastoral-authority-and-accountability/",
-    "text": "The first Week 3 preliminary report has 27 complete responses. Early patterns show very strong agreement that manipulative or coercive leadership should normally disqualify a pastor, that pastors need meaningful accountability for finances, staff authority, and confidential information, and that churches should distinguish biblical submission from unquestioning compliance. Wider spread appears around whether pastors exercise too little legitimate authority, how often the label spiritual abuse is over-applied, and how much moral counsel pastors should give about members' major life decisions. Raw respondent identities and raw free-text suggestions are not published."
+    "text": "The Week 3 complete available-data report uses all 27 complete participant responses available from the SurveyOL export before project closure. Patterns show very strong agreement that manipulative or coercive leadership should normally disqualify a pastor, that pastors need meaningful accountability for finances, staff authority, and confidential information, and that churches should distinguish biblical submission from unquestioning compliance. Wider spread appears around whether pastors exercise too little legitimate authority, how often the label spiritual abuse is over-applied, and how much moral counsel pastors should give about members' major life decisions. Raw respondent identities and raw free-text suggestions are not published."
   },
   "next_week_ballot_draft": {
     "items": [
@@ -241,5 +241,5 @@
       "text": "Churches should teach explicitly on the moral and pastoral implications of IVF and other assisted reproductive technologies."
     }
   ],
-  "report_status": "preliminary"
+  "report_status": "complete_available_data"
 }

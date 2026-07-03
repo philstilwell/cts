@@ -85,9 +85,9 @@
     ]
   },
   "report_encapsulation": {
-    "title": "Week 2 refreshed preliminary report: Pornography and the Church",
+    "title": "Week 2 complete available-data report: Pornography and the Church",
     "url": "https://christianthoughtsurvey.com/weekly-survey-reports/week-002-pornography-and-the-church/",
-    "text": "The refreshed Week 2 preliminary report has 36 complete responses. Current patterns show high agreement around pornography's prevalence among Christian men, pastoral accountability for persistent pornography use, direct leadership screening, pastoral care for harmed spouses, and proactive youth teaching, with wider spread around accountability software, marijuana avoidance, and whether churches are losing more ground than they are gaining. Raw respondent identities and raw free-text suggestions are not published."
+    "text": "The Week 2 complete available-data report uses all 36 complete participant responses available from the SurveyOL export before project closure. Patterns show high agreement around pornography's prevalence among Christian men, pastoral accountability for persistent pornography use, direct leadership screening, pastoral care for harmed spouses, and proactive youth teaching, with wider spread around accountability software, marijuana avoidance, and whether churches are losing more ground than they are gaining. Raw respondent identities and raw free-text suggestions are not published."
   },
   "items": [
     {
@@ -241,5 +241,5 @@
       "text": "Christians should avoid recreational marijuana use even where it is legal."
     }
   ],
-  "report_status": "preliminary"
+  "report_status": "complete_available_data"
 }

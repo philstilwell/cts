@@ -184,8 +184,7 @@ PAGES = [
     </div>
     <div class="wp-content">
       <ul>
-        <li><strong>Existing weekly reports:</strong> the Week 1 final report and available Week 2/3 preliminary snapshots remain posted.</li>
-        <li><strong>Week 4 record:</strong> the placeholder now records that no further fielding or reporting is planned.</li>
+        <li><strong>Existing weekly reports:</strong> the Week 1 final report and complete available-data Week 2/3 reports remain posted.</li>
         <li><strong>Legacy archive:</strong> earlier CTS public results and overview links remain gathered in the archive.</li>
         <li><strong>Privacy notes:</strong> data-release and participant-protection commitments remain available for reference.</li>
       </ul>
@@ -251,12 +250,11 @@ PAGES = [
     <div>
       <p class="section-label">Existing report pages</p>
       <h2 id="latest-report-heading">Reports remain available as a record of the work completed.</h2>
-      <p>The Week 1 final report and available Week 2/3 preliminary snapshots remain posted. The Week 4 page records that the project closed before further fielding or reporting could continue.</p>
+      <p>The Week 1 final report and complete available-data Week 2/3 reports remain posted. No further weekly survey pages are planned.</p>
       <div class="button-row">
-        <a class="button" href="{week_2_report_url}">Open Week 2 Snapshot</a>
+        <a class="button" href="{week_2_report_url}">Open Week 2 Report</a>
         <a class="button light" href="{week_1_report_url}">Open Week 1 Final Report</a>
-        <a class="button light" href="{week_3_report_url}">Open Week 3 Snapshot</a>
-        <a class="button light" href="{week_4_report_url}">Open Week 4 Closure Record</a>
+        <a class="button light" href="{week_3_report_url}">Open Week 3 Report</a>
       </div>
     </div>
     <dl class="report-meta-list">
@@ -266,7 +264,7 @@ PAGES = [
       </div>
       <div>
         <dt>Available pages</dt>
-        <dd>Week 1 final; Week 2 and Week 3 preliminary; Week 4 closure record</dd>
+        <dd>Week 1 final; Week 2 and Week 3 complete available-data reports</dd>
       </div>
     </dl>
   </section>
@@ -278,19 +276,14 @@ PAGES = [
       <a href="{week_1_report_url}">Open Week 1 final report</a>
     </section>
     <section class="report-card">
-      <h3>Week 2 Preliminary Snapshot</h3>
-      <p>Pornography and the Church. Preliminary item-level snapshot from the June 30 refresh.</p>
-      <a href="{week_2_report_url}">Open Week 2 snapshot</a>
+      <h3>Week 2 Complete Available-Data Report</h3>
+      <p>Pornography and the Church. Aggregate report from all 36 complete available responses.</p>
+      <a href="{week_2_report_url}">Open Week 2 report</a>
     </section>
     <section class="report-card">
-      <h3>Week 3 Preliminary Snapshot</h3>
-      <p>Pastoral Authority and Accountability. Preliminary item-level snapshot from June 30.</p>
-      <a href="{week_3_report_url}">Open Week 3 snapshot</a>
-    </section>
-    <section class="report-card">
-      <h3>Week 4 Closure Record</h3>
-      <p>Women in Church Leadership. The project closed before further fielding and reporting could continue.</p>
-      <a href="{week_4_report_url}">Open Week 4 closure record</a>
+      <h3>Week 3 Complete Available-Data Report</h3>
+      <p>Pastoral Authority and Accountability. Aggregate report from all 27 complete available responses.</p>
+      <a href="{week_3_report_url}">Open Week 3 report</a>
     </section>
   </section>
 
@@ -1152,12 +1145,11 @@ WEEKLY_ARCHIVE_CONTENT = """
     <div>
       <p class="section-label">Existing report pages</p>
       <h2 id="latest-report-heading">Reports remain available as a record of the work completed.</h2>
-      <p>The Week 1 final report and available Week 2/3 preliminary snapshots remain posted. The Week 4 page records that the project closed before further fielding or reporting could continue.</p>
+      <p>The Week 1 final report and complete available-data Week 2/3 reports remain posted. No further weekly survey pages are planned.</p>
       <div class="button-row">
-        <a class="button" href="{week_2_report_url}">Open Week 2 Snapshot</a>
+        <a class="button" href="{week_2_report_url}">Open Week 2 Report</a>
         <a class="button light" href="{week_1_report_url}">Open Week 1 Final Report</a>
-        <a class="button light" href="{week_3_report_url}">Open Week 3 Snapshot</a>
-        <a class="button light" href="{week_4_report_url}">Open Week 4 Closure Record</a>
+        <a class="button light" href="{week_3_report_url}">Open Week 3 Report</a>
       </div>
     </div>
     <dl class="report-meta-list">
@@ -1167,7 +1159,7 @@ WEEKLY_ARCHIVE_CONTENT = """
       </div>
       <div>
         <dt>Available pages</dt>
-        <dd>Week 1 final; Week 2 and Week 3 preliminary; Week 4 closure record</dd>
+        <dd>Week 1 final; Week 2 and Week 3 complete available-data reports</dd>
       </div>
     </dl>
   </section>
@@ -1179,19 +1171,14 @@ WEEKLY_ARCHIVE_CONTENT = """
       <a href="{week_1_report_url}">Open Week 1 final report</a>
     </section>
     <section class="report-card">
-      <h3>Week 2 Preliminary Snapshot</h3>
-      <p>Pornography and the Church. Preliminary item-level snapshot from the June 30 refresh.</p>
-      <a href="{week_2_report_url}">Open Week 2 snapshot</a>
+      <h3>Week 2 Complete Available-Data Report</h3>
+      <p>Pornography and the Church. Aggregate report from all 36 complete available responses.</p>
+      <a href="{week_2_report_url}">Open Week 2 report</a>
     </section>
     <section class="report-card">
-      <h3>Week 3 Preliminary Snapshot</h3>
-      <p>Pastoral Authority and Accountability. Preliminary item-level snapshot from June 30.</p>
-      <a href="{week_3_report_url}">Open Week 3 snapshot</a>
-    </section>
-    <section class="report-card">
-      <h3>Week 4 Closure Record</h3>
-      <p>Women in Church Leadership. The project closed before further fielding and reporting could continue.</p>
-      <a href="{week_4_report_url}">Open Week 4 closure record</a>
+      <h3>Week 3 Complete Available-Data Report</h3>
+      <p>Pastoral Authority and Accountability. Aggregate report from all 27 complete available responses.</p>
+      <a href="{week_3_report_url}">Open Week 3 report</a>
     </section>
   </section>
 
@@ -1216,6 +1203,8 @@ PAGES = [
     else page
     for page in PAGES
 ]
+
+PAGES = [page for page in PAGES if page.key not in {"week-004-report", "automation-log"}]
 
 
 NAV = [(page.key, page.output, page.nav_label) for page in PAGES if page.in_nav]
