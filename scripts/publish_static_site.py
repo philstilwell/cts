@@ -14,12 +14,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BRANCH = "gh-pages"
-DEFAULT_VERIFY_URL = "https://christianthoughtsurvey.com/automation-daily-log/"
+DEFAULT_VERIFY_URL = "https://christianthoughtsurvey.com/"
 PUBLISH_PATHS = (
     "404.html",
     "CNAME",
     "assets",
-    "automation-daily-log",
     "contact",
     "email-confirmation",
     "herding-cats",
@@ -33,6 +32,9 @@ PUBLISH_PATHS = (
     "sitemap.xml",
     "weekly-survey-reports",
     "data/public",
+)
+REMOVED_PUBLISH_PATHS = (
+    "automation-daily-log",
 )
 FORBIDDEN_PUBLISH_PARTS = {
     "data/private",
@@ -71,6 +73,13 @@ def ensure_clean_publish_paths(paths: tuple[str, ...]) -> None:
 
 
 def copy_publish_paths(worktree: Path, paths: tuple[str, ...]) -> None:
+    for raw_path in REMOVED_PUBLISH_PATHS:
+        target = worktree / raw_path
+        if target.exists():
+            if target.is_dir():
+                shutil.rmtree(target)
+            else:
+                target.unlink()
     for raw_path in paths:
         source = ROOT / raw_path
         target = worktree / raw_path
