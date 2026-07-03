@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_NAME = "Christian Thought Survey"
 SITE_DESCRIPTION = (
-    "Christian Thought Survey project closure notice, archived weekly reports, "
+    "Christian Thought Survey weekly survey project closure notice, archived weekly reports, "
     "legacy results, and privacy-safe data-release notes."
 )
 SITE_URL = "https://christianthoughtsurvey.com"
@@ -36,11 +36,11 @@ DEFAULT_ROBOTS = "index,follow,max-image-preview:large"
 THEME_COLOR = "#174d51"
 CLOUDFLARE_ANALYTICS = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"b86c3e7a273f47648ae70f08866f9ec5\"}'></script><!-- End Cloudflare Web Analytics -->"
 CLOSURE_NOTICE = """<section class="shutdown-notice" aria-labelledby="shutdown-notice-heading">
-  <p class="section-label">Project closure</p>
-  <h2 id="shutdown-notice-heading">Christian Thought Survey can no longer continue.</h2>
-  <p>We are deeply sorry to announce that the 2026 weekly project is ending. The email platform we used experienced a bug that caused some participants to receive multiple emails, effectively spamming them. That was never intended, and we deeply apologize for the inconvenience, frustration, and loss of trust this caused.</p>
-  <p>The response from participants made clear that continuing would not be responsible. We are disappointed that we cannot carry the project forward, and we are grateful to everyone who participated, suggested items, read the reports, or otherwise helped up to this point.</p>
-  <p>Existing public reports and archives will remain available, but no further weekly surveys, invitations, reminders, or participation/newsletter requests are planned.</p>
+  <p class="section-label">Weekly survey project closure</p>
+  <h2 id="shutdown-notice-heading">The 2026 weekly survey project is closing.</h2>
+  <p>We are deeply sorry to announce that the 2026 Christian Thought Survey weekly survey project is closing. The email platform we used experienced a bug that caused some participants to receive multiple emails, effectively spamming them. That was never intended, and we deeply apologize for the inconvenience, frustration, and loss of trust this caused.</p>
+  <p>The response from participants made clear that continuing would not be responsible. We are disappointed that we cannot carry the weekly survey project forward, and we are grateful to everyone who participated, suggested items, read the reports, or otherwise helped up to this point.</p>
+  <p>Existing public reports and archives from the weekly survey project will remain available, but no further weekly surveys, invitations, reminders, participant requests, or newsletter requests are planned.</p>
 </section>"""
 WEEKLY_STRUCTURE_LIST = """<ol class="process-list" type="A">
   <li><strong>Last week's results summary and link:</strong> a brief summary and a link to the primary CTS website page containing the previous week's results and reports.</li>
@@ -161,12 +161,12 @@ PAGES = [
         key="home",
         output="index.html",
         nav_label="Home",
-        title="Christian Thought Survey Project Closure",
-        eyebrow="Project closure",
+        title="Christian Thought Survey Weekly Survey Project Closure",
+        eyebrow="Weekly survey project closure",
         description=(
-            "Christian Thought Survey can no longer continue after an email "
-            "platform bug sent participants multiple messages. Existing reports "
-            "and archives remain available."
+            "The 2026 Christian Thought Survey weekly survey project is closing "
+            "after an email platform bug sent participants multiple messages. "
+            "Existing reports and archives remain available."
         ),
         content="""
 <section class="content-band shade report-spotlight-band">
@@ -180,7 +180,7 @@ PAGES = [
     <div>
       <p class="section-label">What remains</p>
       <h2>Reports and archive materials stay available.</h2>
-      <p class="section-copy">The weekly survey effort has ended, but the privacy-safe public materials already posted here remain available for readers who want to review what was completed before the shutdown.</p>
+      <p class="section-copy">The weekly survey project has ended, but the privacy-safe public materials already posted here remain available for readers who want to review what was completed before the closure.</p>
     </div>
     <div class="wp-content">
       <ul>
@@ -199,7 +199,7 @@ PAGES = [
     <div class="path-grid">
       <a class="path-card" href="{weekly_url}">
         <strong>Weekly Survey Reports</strong>
-        <span>Existing weekly reports and shutdown notes for the 2026 effort.</span>
+        <span>Existing weekly reports and closure notes for the 2026 effort.</span>
       </a>
       <a class="path-card" href="{archive_url}">
         <strong>Previous Results Archive</strong>
@@ -237,14 +237,14 @@ PAGES = [
         title="Weekly Survey Reports Archive",
         eyebrow="Reports archive",
         description=(
-            "Archived weekly Christian Thought Survey reports and project closure "
-            "notes after the 2026 weekly effort ended."
+            "Archived weekly Christian Thought Survey reports and weekly survey project closure "
+            "notes after the 2026 weekly survey project ended."
         ),
         content="""
 <div class="wp-content results-hub">
   {closure_notice}
 
-  <p>This page now serves as the archive for the completed 2026 weekly survey effort. The posted reports remain available for reference, but no further fielding, invitations, reminders, refreshes, or final reports are planned.</p>
+  <p>This page now serves as the archive for the completed 2026 weekly survey project. The posted reports remain available for reference, but no further fielding, invitations, reminders, refreshes, or final reports are planned.</p>
 
   <section class="latest-report-card" aria-labelledby="latest-report-heading">
     <div>
@@ -260,7 +260,7 @@ PAGES = [
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Project closed; no further survey activity planned</dd>
+        <dd>Weekly survey project closed; no further survey activity planned</dd>
       </div>
       <div>
         <dt>Available pages</dt>
@@ -677,7 +677,7 @@ PAGES = [
 <div class="wp-content">
   {closure_notice}
 
-  <p>This is the stable public page for the third revived weekly Christian Thought Survey report. The project closed before further refreshes or final reporting could continue.</p>
+  <p>This is the stable public page for the third revived weekly Christian Thought Survey report. The weekly survey project closed before further refreshes or final reporting could continue.</p>
 
   <div class="status-grid">
     <div class="status-card">
@@ -728,13 +728,13 @@ PAGES = [
         eyebrow="Closure record",
         description=(
             "Week 4 Christian Thought Survey closure record for Women in Church "
-            "Leadership after the 2026 weekly project ended."
+            "Leadership after the 2026 weekly survey project ended."
         ),
         content="""
 <div class="wp-content">
   {closure_notice}
 
-  <p>This is the stable public page for the fourth revived weekly Christian Thought Survey report. The project closed before further fielding or reporting could continue.</p>
+  <p>This is the stable public page for the fourth revived weekly Christian Thought Survey report. The weekly survey project closed before further fielding or reporting could continue.</p>
 
   <div class="status-grid">
     <div class="status-card">
@@ -750,12 +750,12 @@ PAGES = [
     <div class="status-card">
       <span>Last public status</span>
       <strong>Closure notice posted</strong>
-      <p>The page now records the shutdown rather than an active fielding plan.</p>
+      <p>The page now records the closure rather than an active fielding plan.</p>
     </div>
   </div>
 
   <h2>Report status</h2>
-  <p>No preliminary or final Week 4 report is planned. Existing public pages remain available to document the shutdown and preserve the archive.</p>
+  <p>No preliminary or final Week 4 report is planned. Existing public pages remain available to document the closure and preserve the archive.</p>
 
   <h2>Survey structure</h2>
   <ul>
@@ -793,11 +793,11 @@ PAGES = [
 <div class="wp-content">
   {closure_notice}
 
-  <p>The original CTS participant pool was assembled roughly three years before the 2026 weekly project. Participants were selected because they appeared to have meaningful involvement in Christian ministry, and because the project aimed to hear from a range of denominational and regional contexts rather than from one narrow church network.</p>
+  <p>The original CTS participant pool was assembled roughly three years before the 2026 weekly survey project. Participants were selected because they appeared to have meaningful involvement in Christian ministry, and because the project aimed to hear from a range of denominational and regional contexts rather than from one narrow church network.</p>
 
   <p>The pool is also valuable because these participants did more than provide an email address. In the original project, they supplied background information such as ministry role, years in ministry, denominational setting, region, and other profile details, and they participated in an extensive survey of roughly 200 items across a large swath of doctrinal, practical, and sociological issues facing the church today.</p>
 
-  <p>The revived weekly project began by reaching out first to those earlier participants who were willing to be contacted by email. The participant-quality claims on this page apply most directly to the initial invited participants from that earlier pool. The project is now closed, so no further panel growth or participant recruitment is planned.</p>
+  <p>The revived weekly survey project began by reaching out first to those earlier participants who were willing to be contacted by email. The participant-quality claims on this page apply most directly to the initial invited participants from that earlier pool. The weekly survey project is now closed, so no further panel growth or participant recruitment is planned.</p>
 
   <p>That means the early weekly results should be read as the views of an intentionally ministry-focused panel, not as an official denominational poll or a statistically random survey of American ministers.</p>
 
@@ -909,7 +909,7 @@ PAGES = [
 
   <p class="callout herding-thanks"><strong>Thank you to CTS participants.</strong> Your patience made the project possible. Thank you for answering imperfect questions carefully, suggesting better wording when something felt off, and accepting that some limitations are built into this kind of work.</p>
 
-  <p class="herding-close">CTS can no longer collect corrections, better phrasing, or participant-nominated survey items for future weeks, but we remain grateful for the thoughtful help participants offered while the project was active.</p>
+  <p class="herding-close">The weekly survey project can no longer collect corrections, better phrasing, or participant-nominated survey items for future weeks, but we remain grateful for the thoughtful help participants offered while it was active.</p>
 
   <div class="button-row">
     <a class="button light" href="{weekly_url}">Existing weekly reports</a>
@@ -963,7 +963,7 @@ PAGES = [
 
   <h2>Contact information</h2>
   <ul>
-    <li>Email addresses were used for survey invitations, reminders, follow-up questions, and opt-out handling while the project was active.</li>
+    <li>Email addresses were used for survey invitations, reminders, follow-up questions, and opt-out handling while the weekly survey project was active.</li>
     <li>Email addresses, names, and direct contact details are not included in public results files.</li>
     <li>No further survey invitations, reminders, newsletter requests, or participant-update messages are planned.</li>
     <li>Existing opt-outs and suppression records remain relevant for any cleanup or archival handling.</li>
@@ -1007,7 +1007,7 @@ PAGES = [
         ),
         content="""
 <div class="wp-content">
-  <p>This page describes the original long-form Christian Thought Survey project. The front page now carries the 2026 project closure notice, but the earlier project remains important background for interpreting the archive.</p>
+  <p>This page describes the original long-form Christian Thought Survey project. The front page now carries the 2026 weekly survey project closure notice, but the earlier project remains important background for interpreting the archive.</p>
 
   <p>The 2022-2024 CTS surveys asked Christian leaders and committed believers to respond to large sets of doctrinal, practical, and sociological items. The project emphasized 0-100 credence responses so participants could register fine-grained levels of agreement rather than choose only from coarse multiple-choice categories.</p>
 
@@ -1019,7 +1019,7 @@ PAGES = [
     <li>Participant reports and public-facing summaries.</li>
   </ul>
 
-  <p>The now-closed 2026 weekly project kept the same concern for precise wording and credence measurement. Its remaining materials are documented separately on the <a href="{weekly_url}">Weekly Survey Reports</a> page.</p>
+  <p>The now-closed 2026 weekly survey project kept the same concern for precise wording and credence measurement. Its remaining materials are documented separately on the <a href="{weekly_url}">Weekly Survey Reports</a> page.</p>
 
   <div class="button-row">
     <a class="button light" href="{archive_url}">Browse the archive</a>
@@ -1036,7 +1036,7 @@ PAGES = [
         eyebrow="Updates paused",
         description=(
             "Christian Thought Survey newsletter and update requests are paused "
-            "because the 2026 weekly project has closed."
+            "because the 2026 weekly survey project has closed."
         ),
         content="""
 <div class="wp-content">
@@ -1062,7 +1062,7 @@ PAGES = [
         nav_label="Confirmation",
         title="Email Updates Paused",
         eyebrow="Email updates",
-        description="Christian Thought Survey email updates are paused because the 2026 weekly project has closed.",
+        description="Christian Thought Survey email updates are paused because the 2026 weekly survey project has closed.",
         content="""
 <div class="wp-content">
   {closure_notice}
@@ -1096,11 +1096,11 @@ PAGES = [
         key="contact",
         output="contact/index.html",
         nav_label="Contact",
-        title="Project Closure &amp; Contact",
-        eyebrow="Project closure",
+        title="Weekly Survey Project Closure &amp; Contact",
+        eyebrow="Weekly survey project closure",
         description=(
             "Christian Thought Survey participation requests are closed after the "
-            "2026 weekly project ended."
+            "2026 weekly survey project ended."
         ),
         content="""
 <div class="wp-content">
@@ -1139,7 +1139,7 @@ WEEKLY_ARCHIVE_CONTENT = """
 <div class="wp-content results-hub">
   {closure_notice}
 
-  <p>This page now serves as the archive for the completed 2026 weekly survey effort. The posted reports remain available for reference, but no further fielding, invitations, reminders, refreshes, or final reports are planned.</p>
+  <p>This page now serves as the archive for the completed 2026 weekly survey project. The posted reports remain available for reference, but no further fielding, invitations, reminders, refreshes, or final reports are planned.</p>
 
   <section class="latest-report-card" aria-labelledby="latest-report-heading">
     <div>
@@ -1155,7 +1155,7 @@ WEEKLY_ARCHIVE_CONTENT = """
     <dl class="report-meta-list">
       <div>
         <dt>Status</dt>
-        <dd>Project closed; no further survey activity planned</dd>
+        <dd>Weekly survey project closed; no further survey activity planned</dd>
       </div>
       <div>
         <dt>Available pages</dt>
@@ -1194,8 +1194,8 @@ PAGES = [
         title="Weekly Survey Reports Archive",
         eyebrow="Reports archive",
         description=(
-            "Archived weekly Christian Thought Survey reports and project closure "
-            "notes after the 2026 weekly effort ended."
+            "Archived weekly Christian Thought Survey reports and weekly survey project closure "
+            "notes after the 2026 weekly survey project ended."
         ),
         content=WEEKLY_ARCHIVE_CONTENT,
     )
@@ -1493,7 +1493,7 @@ def render_home(page: Page, prefix: str) -> str:
         <div class="hero-copy">
           <p class="eyebrow">{escape(page.eyebrow)}</p>
           <h1 id="page-title">{page.title}</h1>
-          <p class="lede"><strong>Christian Thought Survey can no longer continue in its 2026 weekly form.</strong> A bug in the email platform caused some participants to receive multiple emails. We apologize deeply for the inconvenience and frustration, and we thank everyone who participated up to this point.</p>
+          <p class="lede"><strong>We are closing the 2026 Christian Thought Survey weekly survey project.</strong> A bug in the email platform caused some participants to receive multiple emails. We apologize deeply for the inconvenience and frustration, and we thank everyone who participated up to this point.</p>
           <div class="button-row">
             <a class="button" href="{page_url(prefix, "weekly-survey-reports/index.html")}">View Existing Reports</a>
             <a class="button secondary" href="{page_url(prefix, "previous-results-archive/index.html")}">Browse Archive</a>
